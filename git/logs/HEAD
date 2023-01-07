@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 ccc0216473ce5e88d9a806b6cb2f4ce9207b72b5 agneshraok <agneshraok.apps@gmail.com> 1671043274 +0530	commit (initial): First Commit
+ccc0216473ce5e88d9a806b6cb2f4ce9207b72b5 0000000000000000000000000000000000000000 agneshraok <agneshraok.apps@gmail.com> 1671043335 +0530	Branch: renamed refs/heads/main to refs/heads/main
+ccc0216473ce5e88d9a806b6cb2f4ce9207b72b5 ccc0216473ce5e88d9a806b6cb2f4ce9207b72b5 agneshraok <agneshraok.apps@gmail.com> 1671043335 +0530	Branch: renamed refs/heads/main to refs/heads/main
+ccc0216473ce5e88d9a806b6cb2f4ce9207b72b5 9e7a29550af42e7f9b43d9672240f56feddbecdb agneshraok <agneshraok.apps@gmail.com> 1671046184 +0530	commit: Notes for Anaconda added
+9e7a29550af42e7f9b43d9672240f56feddbecdb 791a5c48c42fe993ea20625b76891f9fddd1e2d7 agneshraok <agneshraok.apps@gmail.com> 1671201963 +0530	commit: Back to markdowns because github can't load jupyternotebooks for some crap reason. Reliability is important
