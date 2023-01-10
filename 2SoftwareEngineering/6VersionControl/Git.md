@@ -8,20 +8,21 @@
 ---
 ```bash
 git config --global user.name "your user name"
-
-git config --global user.email "your email id"
 ```
 
+```shell
+git config --global user.email "your email id"
+```
 
 #### Checking :
 ---
 ```bash
 git config --global user.name
-
-git config --global user.email
 ```
 
-  
+```shell
+git config --global user.email
+```
   
   
 
