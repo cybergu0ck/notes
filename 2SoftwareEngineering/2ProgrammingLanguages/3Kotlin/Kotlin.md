@@ -17,7 +17,7 @@ A ___type___ (also called data type) tells Kotlin how you intend to use that dat
 - type provides the set of values that the expression can take.
 - type also defines the operations that can be performed on the data.
 
-Int, Double, String are some data types
+Int, Double, String, Boolean are some data types
 
 ___Type inference___ refers to the ability of the compiler to deduce the type of a value based on the context in which it is used. We can be more verbose and specify the type:
 
@@ -234,3 +234,174 @@ vibe right now is "Incredible".
 */
 ```
 
+### Repetition with while
+---
+The syntax of while loop is
+```kotlin
+while(boolean expression){
+	//code to be repeated
+}
+```
+
+example code:
+```kotlin
+fun condition(i:Int)= i<100
+
+fun main(){
+	var i =10
+	while(condition(i)){
+		print("*")
+		i += 10
+	}
+}
+
+/* Output:
+*********
+*/
+```
+
+The syntax of do-while loop is 
+```kotlin
+do{
+//code to be repeated
+
+}while(condition)
+```
+
+Example:
+```kotlin
+fun main(){
+var i = 1000
+do{
+print("=")
+i += 1
+}while(i<5)
+}
+
+/* Output:
+=
+*/
+```
+The code in the do statement will run once (for sure) and will loop based on the condition in while.
+
+
+### Looping & Ranges
+---
+> The in keyword indicates that you are stepping through values:
+
+The syntax for a for loop is 
+```kotlin
+for (v in values){
+	// Do something with v 
+}
+```
+
+Example
+```kotlin
+fun main() {
+    for (i in 1..3){
+        println("Hey $i")
+    }
+}
+/* Output:
+Hey 1 
+Hey 2 
+Hey 3
+*/
+```
+
+A range is an interval of values defined by a pair of endpoints. 
+
+There are two basic ways to define ranges:
+	1. Using ___..___ syntax includes both bounds in the resulting range.
+	2. ___until___ excludes the end. The output shows that 10 is not part of the range
+
+```kotlin
+fun main() {
+    for (i in 1..5){   //using .. syntax
+        print("$i ")
+    }
+}
+/*Output:
+1 2 3 4 5 
+*/
+```
+
+```kotlin
+fun main() {
+    for (i in 1 until 5){   //using .. syntax
+        print("$i ")
+    }
+}
+/*Output:
+1 2 3 4 
+*/
+```
+
+Using ___downTo___, ___step___,___until___ in ranges in for loop
+- ___downTo___ produces a decreasing range.
+- ___step___ changes the interval. 
+- ___until___ can also be used with step
+
+```kotlin
+fun showRange(r: IntProgression){
+    for (i in r){
+        print("$i ")
+    }
+    print(" // $r") 
+    println()
+}
+
+fun main(){
+    showRange(1..5)
+    showRange(1 until 5)
+    showRange(5 downTo 1)
+    showRange(0..9 step 3)
+    showRange(0 until 9 step 3) 
+    showRange(5 downTo 1 step 2) 
+}
+
+/* Output:
+1 2 3 4 5 // 1..5
+1 2 3 4 // 1..4
+5 4 3 2 1 // 5 downTo 1 step 1
+0 3 6 9 // 0..9 step 3
+0 3 6 // 0..6 step 3
+5 3 1 // 5 downTo 1 step 2
+*/
+```
+
+You can iterate over a range of elements that are whole quantities, like integers and characters, but not floating-point values.
+
+
+> If you simply want to repeat an action a fixed number of times, you may use repeat() instead of a for loop.
+
+```kotlin
+fun main() {
+   repeat(3){
+       println("Hell yeah it is")
+   }
+}
+/* Output:
+Hell yeah it is
+Hell yeah it is
+Hell yeah it is
+*/
+```
+
+
+
+### The in Keyword
+---
+The in keyword tests whether a value is within a range.
+
+```kotlin
+fun main() {
+  var myRange = 1..10
+  print(5 in myRange)
+}
+
+/*
+true
+*/
+```
