@@ -14,31 +14,33 @@ a = 2
 > use built in function ___id()___ which gives the identity of the object.
 
 
-```kotlin
+```python
 a = 1
 print(id(a))
 
 a = 2
 print(id(a))
 
-/*Output :
+"""
+Output :
 2481719961904 
 2481719961936
-*/
+"""
 ```
 In the above code we see that id's are different which means they are referring to different objects.
 
-```kotlin
+```python
 a = 1
 print(id(a))
 
 b = 1
 print(id(b))
 
-/*Output :
+"""
+Output :
 2481719961904 
 2481719961904
-*/
+"""
 ```
 In the above code we see that even if the variables are different, they are actually referring to the same object.
 
@@ -47,11 +49,12 @@ Refer this for more information [python - How do I pass a variable by reference?
 
 
 
-Remember this simplified version on how the way Python treats variables and parameters.
-![[Pasted image 20230112211817.png]]
+Remember this simplified version on how the way Python treats variables and parameters. It doesn't matter if A is mutable or not. If you assign something different to B, _A doesn't change_. If an object is mutable, you can mutate it, sure. But that has nothing to do with assignment directly to a name.
+
+![image](../_assets/passByRefpassByVal.png)
 
 
-```kotlin
+```python
 def passBy(data):
     data = 1000
     print("value of data inside the function scope: ", data)
@@ -62,16 +65,16 @@ print("value of data initially: ", data)
 passBy(data)
 print("value of data finally: ", data)
 
-/*
-Output:
+"""
+Output :
 value of data initially: 1 
 value of data inside the function scope: 1000 
 value of data finally: 1
 
-*/
+"""
 ```
 
-```kotlin
+```python
 def passBy(data):
     data = [1000]
     print("value of data inside the function scope: ", data)
@@ -83,16 +86,16 @@ passBy(data)
 print("value of data finally: ", data)
 
 
-/*
-Output:
+"""
+Output :
 value of data initially: [1] 
 value of data inside the function scope: [1000] 
 value of data finally: [1]
 
-*/
+"""
 ```
 
-```kotlin
+```python
 def passBy(data):
     data.append(1000)    #Inplace
     print("value of data inside the function scope: ", data)
@@ -103,13 +106,57 @@ print("value of data initially: ", data)
 passBy(data)
 print("value of data finally: ", data)
 
-/*
-Output:
+"""
+Output :
 value of data initially: [1] 
 value of data inside the function scope: [1, 1000] 
 value of data finally: [1, 1000]
 
-*/
-
+"""
 ```
 
+> What confuses most people is assignment to a subscription; e.g. `B[0] = 2`, vs. direct assignment, `B = 2`
+
+```python
+class Test:
+    def __init__(self):
+        self.attr = [1,2,3]
+        print(self.attr)
+    
+    def tryin(self)->None :
+        cur = self.attr
+        cur = [100,200,300]   #Direct assignment won't change self.attr
+        print(self.attr)
+
+obj = Test()
+obj.tryin()
+
+"""
+Output :
+[1, 2, 3] 
+[1, 2, 3]
+"""
+```
+
+```python
+class Test:
+    def __init__(self):
+        self.attr = [1,2,3]
+        print(self.attr)
+    
+    def tryin(self)->None :
+        cur = self.attr
+        cur[0] = 100      #Assignment on subscription changes self.attr
+        cur[1] = 200
+        cur[2] = 300 
+        print(self.attr)
+
+obj = Test()
+obj.tryin()
+
+"""
+Output:
+[1, 2, 3] 
+[100, 200, 300]
+"""
+```
