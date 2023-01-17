@@ -115,7 +115,8 @@ value of data finally: [1, 1000]
 """
 ```
 
-> What confuses most people is assignment to a subscription; e.g. `B[0] = 2`, vs. direct assignment, `B = 2`
+> What confuses most people is assignment to a subscription; e.g. `B[0] = 2`, vs. direct assignment, `B = 2`.
+> Refer [Martijn Pieters's comment in Zenadix's answer in this url](https://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference)) 
 
 ```python
 class Test:
