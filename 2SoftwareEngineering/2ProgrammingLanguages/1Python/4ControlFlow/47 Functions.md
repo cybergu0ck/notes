@@ -1,10 +1,12 @@
 
+# Arguments
+---
+
 
 It is also possible to define functions with a variable number of arguments. There are __three forms__, which can be combined.
 
 ### Default Argument Values
 ---
-
 
 ```python
 def greet(name, msg="Good morning!"):
@@ -248,18 +250,7 @@ foo(key1 = 1, key2 = 100, key3 = 18)
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-## Pass by Reference and Pass by value in Python
+# Pass by Reference and Pass by value in Python
 ---
 The problem comes from a misunderstanding of what variables are in Python. If you're used to most traditional languages, you have a mental model of what happens in the following sequence:
 
@@ -420,4 +411,34 @@ Output:
 [1, 2, 3] 
 [100, 200, 300]
 """
+```
+
+
+# Lambda Expressions
+---
+
+
+
+# Docstrings
+---
+
+
+# Function Annotations
+---
+- [Function annotations](https://docs.python.org/3/reference/compound_stmts.html#function) are completely optional metadata information about the types used by user-defined functions (see [**PEP 3107**](https://peps.python.org/pep-3107/) and [**PEP 484**](https://peps.python.org/pep-0484/) for more information).
+	
+-  [Annotations](https://docs.python.org/3/glossary.html#term-function-annotation) are stored in the `__annotations__` attribute of the function as a dictionary and have no effect on any other part of the function.
+
+```python
+def is_present(nums:list[int], target:int) -> bool :
+    """Return True if target present in nums."""
+
+    if target in nums:
+        return True
+    else:
+        return False
+
+print(is_present([1,2,3],0))
+
+#>False
 ```
