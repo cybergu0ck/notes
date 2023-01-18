@@ -113,4 +113,10 @@ To show everything
 tree /f /a
 ```
 
- 
+
+### Find all python installations
+---
+
+```cmd
+dir site.py /s
+```
