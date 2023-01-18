@@ -1,4 +1,3 @@
-# Python Modules
 
 ## Module
 ---
@@ -239,6 +238,7 @@ print(sum(1,2,3))
 ### Relative Imports
 ---
 Just don't use it, refer [stack overflow- how to do relative imports in python](https://stackoverflow.com/questions/72852/how-to-do-relative-imports-in-python)
+
 
 ### Import module from different directory using the sys module
 ---
