@@ -416,12 +416,78 @@ Output:
 
 # Lambda Expressions
 ---
+* Small anonymous functions can be created with the [`lambda`](https://docs.python.org/3/reference/expressions.html#lambda) keyword.
+* They are syntactically restricted to a single expression.
+* Lambda functions can be used wherever function objects are required.
+* Like nested function definitions, lambda functions can reference variables from the containing scope:
+
+```syntax
+lambda arguments : expression
+```
+
+```python
+def get_longer(collection1:list[int], collection2:list[int])->list[int]:
+    if len(collection1) > len(collection2):
+        return collection1
+    else:
+        return collection2
+
+print(get_longer([1,2],[1,2,3,4]))
+
+>[1,2,3,4]
+```
+
+```python
+#can have more than one argument
+get_longer = lambda collection1, collention2: collection1 if len(collection1) > len(collention2) else collention2
+print(get_longer([1,2],[1,2,3,4]))
+
+>[1,2,3,4]
+```
+
+
+```python
+pairs = [(2, 'two'), (3, 'three'),(1, 'one'),  (4, 'four')]
+
+pairs.sort(key = lambda pair:pair[0])
+
+print(pairs)
+
+>>>[(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
+```
+
+
+
+
 
 
 
 # Docstrings
 ---
+Here are some conventions about the content and formatting of documentation strings.
 
+* Here are some conventions about the content and formatting of documentation strings.
+* This line should begin with a capital letter and end with a period.
+* If there are more lines in the documentation string, the second line should be blank, visually separating the summary from the rest of the description. The following lines should be one or more paragraphs describing the object’s calling conventions, its side effects, etc.
+* the first line is generally adjacent to the string’s opening quotes
+
+```python
+def my_function():
+    """Do nothing, but document it.
+
+    No, really, it doesn't do anything.
+    """
+    pass
+
+print(my_function.__doc__)
+
+
+> Do nothing, but document it.
+
+    No, really, it doesn't do anything.
+```
+
+Observe the indentation in the output, to know how it works checkout [4. More Control Flow Tools — Python 3.11.1 documentation](https://docs.python.org/3/tutorial/controlflow.html#documentation-strings)
 
 # Function Annotations
 ---
