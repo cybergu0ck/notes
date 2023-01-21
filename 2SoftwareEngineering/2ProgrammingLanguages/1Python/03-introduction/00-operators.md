@@ -12,12 +12,11 @@
 | << | bitwise Left Shift |
 | >> | bitwise Right Shift |
 
-### Bitwise AND
+### Bitwise AND (&)
 ---
-Decimal 5 is Binary 0101. (5 is 0b0101)
-Decimal 6 is Binary 0110. (6 is 0b0110)
-
-5 & 6 should give 0b0100 which is 4 (Perform AND bit by bit)
+* Decimal 5 is Binary 0101. (5 is 0b0101)
+* Decimal 6 is Binary 0110. (6 is 0b0110)
+* 5 & 6 should give 0b0100 which is 4 (Perform AND bit by bit)
 
 ```python
 print(5 & 6)
@@ -33,12 +32,12 @@ print(bin(5 & 6))
 ```
 
 
-### Bitwise OR
+### Bitwise OR ( | )
 ---
 Exactly same like AND but instead performs OR.
 
 
-### Bitwise NOT
+### Bitwise NOT (~)
 ---
 Invert all the 1's to 0's and 0's to 1's.
 
@@ -67,3 +66,40 @@ Explanation for how it is (-6) in Base 10 is as follows:
 > 
 > ~5 is -6
 
+
+## Bitwise XOR (^)
+---
+Performs XOR operation bitwise.  XOR operation follows : `A ^ B = A * B' + A' * B` and its truth table is shown below
+
+| A    | B | A^ B |
+|---|-- |---|
+|0 | 0 | 0|
+|0 | 1 | 1 |
+| 1| 0| 1| 
+|1| 1| 0|
+
+Illustration:
+5 is 0b0101 and 1 is 0b0001, Performing Bitwise XOR results in 0b0100 which is 4.
+
+```python
+print(5^1)
+
+>4
+```
+
+
+## Bitwise Left Shift (<<)
+---
+Shift the bits in the Left Side (In binary) of the operator by the number (in decimal) present in Right Side of the operator
+
+5 is 0b0101, Hence for `5 << 3` we must shift the bits in binary of 5 by 3 places, gives us 0b_0010_1000 (In Python, underscores are used to group digits without messing with the magnitude of the number). 0b_0010_1000 is 40
+
+```python
+print(5 << 3)
+
+>40
+```
+
+## Bitwise Right Shift
+---
+Same concept as Left Shift but Shift Right Instead.
