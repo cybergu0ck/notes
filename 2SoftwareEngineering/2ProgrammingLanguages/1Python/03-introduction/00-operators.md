@@ -1,7 +1,7 @@
 
 
 ### Bitwise Operators 
----
+
 
 | Symbol | Operator |
 |---|---|
