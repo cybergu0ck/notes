@@ -1,1 +1,13 @@
 
+
+
+## Making Tables
+---
+
+```
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+```
+
