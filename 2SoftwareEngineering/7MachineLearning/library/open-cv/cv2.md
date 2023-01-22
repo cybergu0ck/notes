@@ -47,3 +47,16 @@ This will rotate the image clockwise by 90 degrees.
 cv2.imwrite(path + '\\small-car.png', image)
 ```
 This will write the image to the specified path
+
+
+
+## Getting the shape of an image 
+---
+```python
+dimensions = image.shape  # Not image.shape()
+```
+
+This gives a tuple with 3 items, 
+1. first item is image height
+2. second is image width
+3. number of channels
