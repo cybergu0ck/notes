@@ -42,3 +42,18 @@ static domain_name_servers=<strong>DNS_IP</strong>
 	STATIC_IP : desired static IP address
 	ROUTER_IP : the gateway IP address
 	DNS_IP : the DNS IP address
+
+
+
+# SSH
+---
+
+A common error that I encounter every time i change the ip address but keep the hostname same.
+(basically, everytime I fresh start on with ip I name it batpi but the static ip keeps changing.)
+
+The specific error is as shown here 
+![image](../_assets/ssh-error.png)
+
+Refer [How To Fix the "Warning: Remote Host Identification Has Changed" Error (kinsta.com)](https://kinsta.com/knowledgebase/warning-remote-host-identification-has-changed/), In short clear the txt in known_hosts file present in C:\\Users\\some-name\\.ssh\\
+
+
