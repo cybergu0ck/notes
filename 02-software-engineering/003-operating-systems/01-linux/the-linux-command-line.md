@@ -30,10 +30,10 @@ Table 4-2, commonly used character classes
 Wildcard examples
 | Pattern | Matches |
 | ---| ---|
-|  `g*` |  Any files beginning with "g"   |
-|  `b*.txt`  |   Any files beginning with b, followed by any characters and ending with .txt   |
-| `Data???`    |  Any file beginning with "Data" and followed by exactly 3 characters |
-|   `[abc]*`     |  Any file beginning with a "a" or "b" or "c"   |
+|  g* |  Any files beginning with "g"   |
+|  b*.txt  |   Any files beginning with b, followed by any characters and ending with .txt   |
+| Data???    |  Any file beginning with "Data" and followed by exactly 3 characters |
+|   \[abc]*     |  Any file beginning with a "a" or "b" or "c"   |
 |    BACKUP.\[0-9]\[0-9]\[0-9]     |      Any file beginning with “BACKUP.” followed by exactly three numerals         |
 |    \[\[:upper:]]*     |           Any file beginning with an uppercase letter    | 
 |     \[!\[:digit:]]*    |         Any file not beginning with a numeral      |
@@ -83,10 +83,29 @@ Table 4-4, cp options
 |  -u, --update   | When copying files from one directory to another, only copy files that either don't exist, or are newer than the existing corresponding files, in the destination directory.    |
 |  -v, --verbose   | Display informative messages as the copy is performed.    |
 
+Table 4-5 cp examples
 
-| -a, --archive     | Copy the files and directories and all of their attributes, including ownerships and permissions.  Normally, copies take on the default attributes of the user performing the copy. |
-|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| -i, --interactive | Before overwriting an existing file, prompt the user for confirmation.  If this option is not specified, cp will silently overwrite files.                                          |
-| -r, --recursive   | Recursively copy directories and their contents.  This option (or the -a option) is required when copying directories.                                                              |
-| -u, --update      | When copying files from one directory to another, only copy files that either don't exist,  or are newer than the existing corresponding files, in the destination directory.       |
-| -v, --verbose     | Display informative messages as the copy is performed.                                                                                                                              |
+* Copy file1 to file2,
+	* If file2 exists, contents of file2 is overwritten by contents of file1
+	* If file2 doesn't exist, it is created.
+
+```sh
+cp file1 file2
+```
+
+* Same as above, but user is prompted before overwriting.
+```sh
+cp -i file1 file2
+```
+
+* Copy file1 and file2 to dir1, dir1 must exist for the following command to work
+```sh
+cp file1 file2 dir1
+```
+
+* Copy all files in dir1 to dir2 using wildcard, dir2 must exist!
+```sh
+cp dir1/* dir2
+```
+
+
