@@ -102,6 +102,7 @@ print(x)
 ```
 Jungle
 ```
+  
 
 Using `global` keyword:
 
