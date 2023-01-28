@@ -89,6 +89,7 @@ the vale of x: Logic and has 2339248242416
 the vale of x: Jungle and has 2339253146032
 ```
 
+<br/>
 
 ```python
 x = "Jungle"
@@ -103,6 +104,7 @@ print(x)
 Jungle
 ```
   
+<br/>
 
 Using `global` keyword:
 
@@ -119,6 +121,9 @@ print(x)
 ```
 Logic
 ```
+
+<br/>
+
 Using `nonlocal` kwyword:
 
 ```python
@@ -141,6 +146,8 @@ outer_func()
 ```
 Justin Timberlake
 ```
+
+<br/>
 
 If you can tell the output of the following code without looking at it then gg.
 
@@ -183,6 +190,8 @@ import buitlins
 print(dir(builtins))
 ```
 
+<br/>
+
 Noob error would be 
 ```python
 collection = [1,2,3,4]
@@ -197,6 +206,8 @@ least
 ```
 TypeError: min() takes 0 positional arguments but 1 was given
 ```
+
+<br/>
 
 ```python
 collection = [1,2,3,4] 
