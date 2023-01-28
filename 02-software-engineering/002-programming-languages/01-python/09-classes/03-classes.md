@@ -1,0 +1,171 @@
+
+
+- classes and types are same in Python3.
+
+<br/>
+
+## Class definition syntax
+---
+
+```python
+class ClassName:
+    <statement-1>
+    .
+    .
+    .
+    <statement-N>
+```
+
+When a class definition is entered, a new namespace is created, and used as the local scope — thus, all assignments to local variables go into this new namespace. In particular, function definitions bind the name of the new function here.
+
+<br/>
+
+## Class Objects
+---
+Class objects support two kinds of operations: attribute references and instantiation.
+
+ 1. ***Attribute references*** use the standard syntax used for all attribute references in Python: `obj.name`. Valid attribute names are all the names that were in the class’s namespace when the class object was created. 
+
+    ```python
+    class MyClass:
+        """A simple example class"""
+        i = 12345
+        def f(self):
+            return 'hello world'
+    ```
+
+    * For the above class definition, `MyClass.i` and `MyClass.f` are valid ***attribute references***, returning an integer and a function object, respectively. 
+
+    * Class attributes can also be assigned to, so you can change the value of MyClass.i by assignment. 
+
+    * `__doc__` is also a valid attribute, returning the docstring belonging to the class: "A simple example class".
+
+
+2. ***Class instantiation*** uses function notation.
+    
+    ```python
+    x = MyClass()
+    ```
+
+    * creates a new instance of the class and assigns this object to the local variable x.
+
+    * When a class defines an `__init__()` method (Note that `__init__()` is not mandatory; i.e. a class can be created without it), class instantiation automatically invokes `__init__()` for the newly created class instance. 
+
+       ```python
+       def __init__(self):
+           self.data = []
+
+       ```
+
+<br/>
+
+## Instance Objects
+---
+
+The only operations understood by ***instance objects*** are ***attribute references***. There are two kinds of valid attribute names: ***data attributes*** and ***methods***.
+
+1. ***data attributes*** need not be declared; like local variables, they spring into existence when they are first assigned to. For illustration:
+
+    ```python
+    class Demo:
+        pass
+
+    obj = Demo()
+
+    obj.data_attr = 10
+    print(obj.data_attr)
+
+    #>10
+    ```
+
+2. A ***method*** is a function that “belongs to” an object. (In Python, the term method is not unique to class instances: other object types can have methods as well. For example, list objects have methods called append, insert, remove, sort, and so on.
+
+    * Valid method names of an instance object depend on its class. By definition, all attributes of a class that are function objects define corresponding methods of its instances. 
+    
+    * So in our example, `x.f` is a valid method reference, since `MyClass.f` is a function, but `x.i` is not, since `MyClass.i` is not. 
+    
+        > But `x.f` is not the same thing as `MyClass.f` — it is a method object, not a function object.
+
+<br/>
+
+NOTE:
+
+Data attributes are prioritised over methods. If you have a data attribute and a method with the same name, then it'll give an error when the method is called.
+
+```python
+class Heat:
+    def __init__(self):
+        self.temperature = 96
+
+    def temperature(self):
+        return self.temp
+    
+pan = Heat()
+print(pan.temperature)  #No trouble in accessing data attribute.
+
+#>96
+```
+
+```python
+class Heat:
+    def __init__(self):
+        self.temperature = 96
+
+    def temperature(self):
+        return self.temp
+    
+pan = Heat()
+print(pan.temperature())  # error
+
+#>TypeError: 'int' object is not callable
+```
+
+<br/>
+
+## Method Objects
+---
+
+```python
+class Demo:
+    def foo(self):
+        print("printing foo")
+
+obj = Demo()
+obj.foo()  # This is exactly equvivalent to Demo.foo(obj)
+
+#>printing foo
+```
+
+- the special thing about methods is that the instance object is passed as the first argument of the function. 
+
+- In our example, the call `obj.foo()` is exactly equivalent to `Demo.foo(obj)`. 
+
+- When a non-data attribute of an instance is referenced, the instance’s class is searched. If the name denotes a valid class attribute that is a function object, a method object is created by packing (pointers to) the instance object and the function object just found together in an abstract object: this is the method object. 
+
+- When the method object is called with an argument list, a new argument list is constructed from the instance object and the argument list, and the function object is called with this new argument list.
+
+<br/>
+
+## Class and Instance Variables
+---
+Instance variables are for data unique to each instance and are declared in the constructor.
+
+Class variables are for attributes and methods shared by all instances of the class, hence remain the same for all instances of the class and are declared at the top-level of a class.
+
+```python
+class Dog:
+    kind = "Canine"          # Class variable shared by all instances
+
+    def __init__(self, name):
+        self.name = name    # Instance variable unique to each instance
+    
+ramu = Dog('Ramu')
+tommy = Dog("Tommy")
+
+print('{} is a {}'.format(ramu.name, ramu.kind))
+print('{0} is a {1}'.format(tommy.name, tommy.kind))
+
+#>Ramu is a Canine
+#>Tommy is a Canine
+```
+<br/>
