@@ -27,3 +27,28 @@ print(dir(my_butterfly))
 
 # We can see that the data attributes 'color', 'size' and method 'fly' are present in output of dir()
 ```
+
+<br/>
+
+# `ord()`
+
+ord() returns the ASCII value of the parameter
+
+```python
+ord('A')
+
+#>65
+```
+
+<br/>
+
+# `chr()`
+
+chr() returns the character for the given ASCII number
+
+```python
+chr(65)
+
+#>'A'
+```
+
