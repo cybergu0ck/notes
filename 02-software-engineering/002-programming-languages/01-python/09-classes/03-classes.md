@@ -168,4 +168,91 @@ print('{0} is a {1}'.format(tommy.name, tommy.kind))
 #>Ramu is a Canine
 #>Tommy is a Canine
 ```
+
 <br/>
+<br/>
+<br/>
+
+
+# Class methods, Instance methods and Static methods
+
+### 1. Instance Methods
+
+Instance Method enables to access data and properties unique to each instance.
+
+- Instance method are methods which require an object of its class to be created before it can be called.
+- Instance methods are bound to the Object itself.
+- They are referenced by Reference to the Object itself (self)
+
+<br/>
+<br/>
+
+### 2. Class Methods
+
+A Class Method is used to access or modify the state of the class.
+
+- Class methods are the methods that can be called without creating an object of class. 
+- Class method is a method that is bound to a class rather than its object.
+- They are referenced by the class name itself (cls, as the first parameter)
+
+```python
+class Pet:
+    total_pets = 0
+    def __init__(self, name):
+        self.name = name
+        Pet.total_pets += 1
+
+    @classmethod
+    def get_pet_count(cls):
+        return Pet.total_pets
+
+class Dog(Pet):
+    def __init__(self, name, breed):
+        super().__init__(name)
+        self.breed = breed
+
+my_pet = Pet("Scoobie")
+his_pet = Dog("Brownie", "Pom")
+print(Pet.get_pet_count())  #Note that here we are calling get_pet_count method on the class itself.
+
+#>2
+```
+
+<br/>
+<br/>
+
+### 3. Static Methods
+---
+A static method is a general utility method that performs a task in isolation.
+- Static methods are the methods that can be called without creating an object of class (much like class methods). 
+- Static methods (much like class methods) are methods that are bound to a class rather than its object.
+- They are referenced by the class name itself or reference to the Object of that class.
+
+```python
+class Math:
+
+    @staticmethod
+    def doubler(num):      #No need for "self" nor "cls" parameter.
+        return num*2
+    
+    @staticmethod
+    def printSomethhing():
+        print("Bla Bla Bla")
+
+
+print(Math.doubler(5))  #No need to create an object to access static methods.
+Math.printSomethhing()
+
+
+#>10 
+#>Bla Bla Bla
+```
+
+<br/>
+<br/>
+
+### Difference between Static Method and Class Method
+
+The difference between a static method and a class method is:
+- Static method knows nothing about the class and just deals with the parameters that are passed to it.
+- Class method works with the class since its parameter is always the class itself.
