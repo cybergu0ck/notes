@@ -18,6 +18,8 @@ a = 2
 
 Two different objects can have the same name!
 ```python
+#use built in function id() which gives the identity of the object.
+
 a = 1
 print(id(a))
 
@@ -27,6 +29,10 @@ print(id(a))
 #>1429903638768
 #>1429903638800
 ```
+`1429903638768`
+`1429903638800`
+
+
 
 Conversly, same object can have multiple names!
 ```python

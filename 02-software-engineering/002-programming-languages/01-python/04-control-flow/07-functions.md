@@ -251,56 +251,10 @@ foo(key1 = 1, key2 = 100, key3 = 18)
 
 
 # Pass by Reference and Pass by value in Python
----
-The problem comes from a misunderstanding of what variables are in Python. If you're used to most traditional languages, you have a mental model of what happens in the following sequence:
 
-```python
-a = 1
-a = 2
-```
-
-- You believe that `a` is a memory location that stores the value `1`, then is updated to store the value `2`. That's not how things work in Python. Rather, `a` starts as a reference to an object with the value `1`, then gets reassigned as a reference to an object with the value `2`. Those two objects may continue to coexist even though `a` doesn't refer to the first one anymore; in fact they may be shared by any number of other references within the program. 
-- When you call a function with a parameter, a new reference is created that refers to the object passed in. This is separate from the reference that was used in the function call, so there's no way to update that reference and make it refer to a new object.
-
-> use built in function ___id()___ which gives the identity of the object.
-
-
-```python
-a = 1
-print(id(a))
-
-a = 2
-print(id(a))
-
-"""
-Output :
-2481719961904 
-2481719961936
-"""
-```
-In the above code we see that id's are different which means they are referring to different objects.
-
-```python
-a = 1
-print(id(a))
-
-b = 1
-print(id(b))
-
-"""
-Output :
-2481719961904 
-2481719961904
-"""
-```
-In the above code we see that even if the variables are different, they are actually referring to the same object.
-
-
-Refer this for more information [python - How do I pass a variable by reference? - Stack Overflow](https://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference)
-
-
-
-Remember this simplified version on how the way Python treats variables and parameters. It doesn't matter if A is mutable or not. If you assign something different to B, _A doesn't change_. If an object is mutable, you can mutate it, sure. But that has nothing to do with assignment directly to a name.
+- There is no concept of pass by value and pass by reference in python! (I am guessing)
+- Refer this for more information [python - How do I pass a variable by reference? - Stack Overflow](https://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference)
+- Remember this simplified version on how the way Python treats variables and parameters. It doesn't matter if A is mutable or not. If you assign something different to B, _A doesn't change_. If an object is mutable, you can mutate it, sure. But that has nothing to do with assignment directly to a name.
 
 ![image](../_assets/passByRefpassByVal.png)
 

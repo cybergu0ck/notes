@@ -5,7 +5,7 @@
 <br/>
 
 ## Class definition syntax
----
+
 
 ```python
 class ClassName:
@@ -21,7 +21,7 @@ When a class definition is entered, a new namespace is created, and used as the 
 <br/>
 
 ## Class Objects
----
+
 Class objects support two kinds of operations: attribute references and instantiation.
 
  1. ***Attribute references*** use the standard syntax used for all attribute references in Python: `obj.name`. Valid attribute names are all the names that were in the class’s namespace when the class object was created. 
@@ -60,7 +60,7 @@ Class objects support two kinds of operations: attribute references and instanti
 <br/>
 
 ## Instance Objects
----
+
 
 The only operations understood by ***instance objects*** are ***attribute references***. There are two kinds of valid attribute names: ***data attributes*** and ***methods***.
 
@@ -123,7 +123,7 @@ print(pan.temperature())  # error
 <br/>
 
 ## Method Objects
----
+
 
 ```python
 class Demo:
@@ -147,7 +147,7 @@ obj.foo()  # This is exactly equvivalent to Demo.foo(obj)
 <br/>
 
 ## Class and Instance Variables
----
+
 Instance variables are for data unique to each instance and are declared in the constructor.
 
 Class variables are for attributes and methods shared by all instances of the class, hence remain the same for all instances of the class and are declared at the top-level of a class.
