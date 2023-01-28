@@ -1,4 +1,6 @@
 
+# Encapsulation
+
 - Using OOP in Python, we can restrict access to methods and variables. This prevents data from direct modification which is called encapsulation.
 - The basic idea of Encapsulation is to wrap up both data and methods into one single unit.
 - Encapsulation in other programming languages have public, private and protected members.
