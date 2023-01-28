@@ -82,10 +82,11 @@ def outer_func():
 
 outer_func()
 print(f'the vale of x: {x} and has {id(x)}')
-
-#>the vale of x: Justin Timberlake and has 2339254066176
-#>the vale of x: Logic and has 2339248242416
-#>the vale of x: Jungle and has 2339253146032
+```
+```
+the vale of x: Justin Timberlake and has 2339254066176
+the vale of x: Logic and has 2339248242416
+the vale of x: Jungle and has 2339253146032
 ```
 
 
@@ -97,8 +98,9 @@ def func():
     
 func()
 print(x)
-
-#>Jungle
+```
+```
+Jungle
 ```
 
 Using `global` keyword:
@@ -112,10 +114,10 @@ def func():
     
 func()
 print(x)
-
-#>Logic
 ```
-
+```
+Logic
+```
 Using `nonlocal` kwyword:
 
 ```python
@@ -134,10 +136,10 @@ def outer_func():
     print(x)
 
 outer_func()
-
-#>Justin Timberlake
 ```
-
+```
+Justin Timberlake
+```
 
 If you can tell the output of the following code without looking at it then gg.
 
@@ -164,12 +166,12 @@ def scope_test():
 
 scope_test()
 print("In global scope:", spam)
-
-
-#>After local assignment: test spam
-#>After nonlocal assignment: nonlocal spam
-#>After global assignment: nonlocal spam
-#>In global scope: global spam
+```
+```
+After local assignment: test spam
+After nonlocal assignment: nonlocal spam
+After global assignment: nonlocal spam
+In global scope: global spam
 ```
 
 `Builtins` is the last scope that is searched last. One thing to note here is that if we use the names that are bounded to builtin namespace in our global or enclosing or local scopes then it might lead to errors (when we call builtin functions)
@@ -190,8 +192,9 @@ def min():
 
 least = min(collection)
 least
-
-#>TypeError: min() takes 0 positional arguments but 1 was given
+```
+```
+TypeError: min() takes 0 positional arguments but 1 was given
 ```
 
 ```python
@@ -199,6 +202,7 @@ collection = [1,2,3,4]
 
 min = min(collection)  #DINOT name variables with the name present in builtin namespace.
 print(min)
-
-#>TypeError: min() takes 0 positional arguments but 1 was given
+```
+```
+TypeError: min() takes 0 positional arguments but 1 was given
 ```
