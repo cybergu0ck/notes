@@ -52,3 +52,14 @@ chr(65)
 #>'A'
 ```
 
+<br/>
+
+# `isinstance()`
+
+Function to check if an object is of specific type (or class. as they are same in Python 3)
+
+```python
+isinstance(5, int)
+
+#>True
+```
