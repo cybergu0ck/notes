@@ -7,11 +7,11 @@
 #### Setting up username and password :
 ---
 ```bash
-git config --global user.name "your user name"
+git config --global user.name <user name>
 ```
 
 ```shell
-git config --global user.email "your email id"
+git config --global user.email <user email id>
 ```
 
 #### Checking :
