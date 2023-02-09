@@ -6,18 +6,15 @@ The `venv` module supports creating lightweight “virtual environments”, ea
 ###  Creating a new virtual environment
 
 ---
-```cmd
-python -m venv test_env
-```
+- To create the virtual environment in the directory in which the command is run.
+	```cmd
+	python -m venv <environment_name>
+	```
 
-- my_env is the name of the python virtual environment.
-- The above command creates the virtual environment in the directory in which the command is run.
-- 
-```cmd
-python -m venv test_env D:\PC\Code\My_Project
-```
-
-- The above command show's how to use path for the virtual environment.
+- To create the virtual environment in a specific directory
+	```cmd
+	python -m venv <environment_name> <path>
+	```
 
 
 > The version of python used to create the virtual environment will be the version of python installed in the newly created environment.
