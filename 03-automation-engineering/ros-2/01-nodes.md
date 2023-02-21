@@ -52,7 +52,7 @@ And now if we run `ros2 node list`, we see
 /my_turtle
 ```
 
-However, this is not permanent meaning if we run `ros2 run turtlesim turtlesim_node` again, we can see that the node name is back to '/turtlesim' and not '/my_turtler'.
+However, this is not permanent meaning if we run `ros2 run turtlesim turtlesim_node` again, we can see that the node name is back to '/turtlesim' and not '/my_turtle'.
 
 <br/>
 

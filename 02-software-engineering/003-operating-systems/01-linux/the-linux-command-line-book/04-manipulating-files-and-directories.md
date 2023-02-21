@@ -1,7 +1,4 @@
 
-# 4 Manipulating Files and Directories
----
-
 ## Wildcards
 ---
 Using wildcards (which is also known as ***globbing***) allow you to select filenames based on patterns of characters.
