@@ -177,8 +177,8 @@ When we define a variable without an initializer, the variable is default initia
 
 - To obtain a declaration that is not also a definition, we add the extern keyword and may not provide an explicit initializer:
 	```cpp
-	extern int i; // declares but does not define i int j;
-	int j;	// declares and defines j
+	extern int i; // declares but does not define i.
+	int j;	// declares and defines j.
 	```
  - We can provide an initializer on a variable defined as extern, but doing so overrides the extern.An extern that has an initializer is a definition:
 	```cpp
@@ -195,6 +195,8 @@ When we define a variable without an initializer, the variable is default initia
 <br/>
 
 ## 2.2.3 Identifiers
+
+An identifier is **a sequence of characters used to denote one of the following:** **Object or variable name**.
 
 - Identifiers in C++ can be composed of letters, digits, and the underscore character. 
 - The language imposes no limit on name length. 
@@ -233,11 +235,11 @@ When we define a variable without an initializer, the variable is default initia
 - The same name can refer to different entities in different scopes. 
 - Names are visible from the point where they are declared until the end of the scope in which the declaration appears.
 
-```
-ADVICE:DEFINE VARIABLES WHERE YOU FIRST USE THEM
--------------------------------------------------
+`
+ > ADVICE:DEFINE VARIABLES WHERE YOU FIRST USE THEM
+
 It is usually a good idea to define an object near the point at which the object is first used. Doing so improves readability by making it easy to find the definition of the variable. More importantly, it is often easier to give the variable a useful initial value when the variable is defined close to where it is first used.
-```
+
 
 <br/>
 
@@ -716,6 +718,11 @@ The types we can use in a `constexpr` are known as “literal types” because t
 - Of the types we have used so far, the arithmetic, reference, and pointer types are literal types. 
 - Our Sales_item class and the library IO and string types are not literal types. Hence, we cannot define variables of these types as `constexprs`.
 
+
+
+<br/>
+<br/>
+<br/>
 
 # 2.6 Defining your own data types.
 

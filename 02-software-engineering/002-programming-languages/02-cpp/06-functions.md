@@ -315,3 +315,26 @@ int main(){
 
 ### Explicitly Passing a Size Parameter
 A third approach for array arguments, which is common in C programs and older C++ programs, is to define a second parameter that indicates the size of the array.
+
+
+<br/>
+<br/>
+
+### Array Parameters and const
+
+- Note that all three versions of our print function defined their array parameters as pointers to const. It applies equally to pointers as to references. 
+- When a function does not need write access to the array elements, the array parameter should be a pointer to const 
+- A parameter should be a plain pointer to a `nonconst` type only if the function needs to change element values.
+
+<br/>
+
+### Array Reference Parameters
+
+Just as we can define a variable that is a reference to an array (§ 3.5.1), we can define a parameter that is a reference to an array.
+
+```cpp
+// ok: parameter is a reference to an array; the dimension is part ofthe type 
+void print(int (&arr)[10]) {
+for (auto elem : arr) cout << elem << endl;
+}
+```
