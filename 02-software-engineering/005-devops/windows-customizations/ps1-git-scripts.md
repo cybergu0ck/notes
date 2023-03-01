@@ -1,4 +1,4 @@
-Steps to create a powershell script to sync a local repo
+# Steps to create a powershell script to sync a local repo
 
 - create a txt file with the suitable name
 - Add the commands (For example)
