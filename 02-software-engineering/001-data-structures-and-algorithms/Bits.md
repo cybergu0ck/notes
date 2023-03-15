@@ -15,13 +15,13 @@
 
 Consider a byte,
 
-### Unsigned Bit Notation:
+## Unsigned Bit Notation:
 
 - If a byte can hold 256 values then values 1 to 255 will contain 255 values. zero should be included as 00000000 (binary) is 0 (decimal). Hence, the range of values will be 0-255 (has 256 values)
 
 <br/>
 
-### Signed Bit Notation:
+## Signed Bit Notation:
 
 > ***In a signed bit MSB is used to represent the sign. ***
 - hence there are 7 bits remaining for values. Using the formula 2 ^7 = 128 values can be represented. note that totally 128 positive values (MSB is 0) and 128 negative values can be included (by making the MSB as 1). From 1-127 has 127 values, adding 0 (0:127) we have 128 values. Now -1:-127 we have 127 values we have to include -128 (i.e -11111111) 
