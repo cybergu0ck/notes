@@ -89,13 +89,9 @@ class BinarySearchTree:
 ## Node Insertion
 
 ```python
-class BinarySearchTree:
-    "Binary Search Tree (BST) is a Binary tree where the value of the left children is less than the parent and right child."
-    
-    def __init__(self):
-        self.root = Node()
+#This is a method of class BinarySearchTree.
 
-    def insert(self,new_data):
+def insert(self,new_data):
         new_node = Node(new_data)
         cur = self.root
 
@@ -118,13 +114,56 @@ class BinarySearchTree:
                         cur.right = new_node
                         cur = cur.right.right   #same
                 else:
-                    print("No duplicates")
+                    print("No duplicates")      #raise exceptions here!
 
 ```
 <br/>
 <br/>
 
 ## Node Deletion
+
+```python
+#This is a method of class BinarySearchTree
+#This requires treversal methods (pre_order)
+def delete(self, value):
+        cur = self.root
+        to_be_deleted = None
+        prev_node = None    #prev_node contains the node who's child is to be deleted.
+        flag = None         #flag enables us to decide whether to delete left or right child.
+
+        while cur:
+            if value < cur.val:
+                if cur.left:
+                    prev_node = cur
+                    flag = "left"
+                    cur = cur.left
+
+            elif value > cur.val:
+                if cur.right:
+                    prev_node = cur
+                    flag = "right"
+                    cur = cur.right
+
+            elif value == cur.val :
+                to_be_deleted = cur
+                if flag == "left":
+                    prev_node.left = None
+                if flag == "right" : 
+                    prev_node.right = None
+                if flag == None:
+                    #Meaning we are deleting self.root
+                    self.root = Node()
+                break
+        
+        nodes_after_deleted_node = self.pre_order(to_be_deleted, must_return = "values")
+        nodes_after_deleted_node.pop(0)
+        for value in nodes_after_deleted_node:
+            self.insert(value)
+
+```
+
+
+
 
 <br/>
 <br/>
@@ -135,48 +174,238 @@ class BinarySearchTree:
 
 ### In-Order Traversal
 
+- This is Depth First Search approach and Traversal occurs left -> root -> right
 
-```python
-def in_order(self, root):
-        "DFS, left -> root -> right"
-        cur = root
-        res = []
+    ```python
+    #This is a method of class BinarySearchTree
+    def in_order(self, root = None, must_return = "values"):
+        "in order is DFS hence use a stack, left -> root -> right"
+        #----------------------------------------------------------------------------------
+        #consider self.root as defualt parameter
+        if root == None:
+            cur = self.root         
+        else:
+            cur = root
+        #----------------------------------------------------------------------------------
+        #in-order traversal of an empty tree is [] 
+        if cur == None:
+            return []               
+        
+        #----------------------------------------------------------------------------------
+        #logic
+        nodes = []                  #nodes is a list of Node objects
         stack = []
-
         while True:
             if cur:
                 stack.append(cur)
                 cur = cur.left
-
             elif stack:
                 cur = stack.pop()
-                res.append(cur.val)
+                nodes.append(cur)
                 cur = cur.right
             else:
                 break
-        return res
-```
-<br/>
-
-### Post-Order Traversal
-
+        
+        #----------------------------------------------------------------------------------
+        #returning nodes
+        if must_return == "nodes":
+            return nodes
+        
+        #----------------------------------------------------------------------------------
+        #returning values 
+        elif must_return == "values":
+            values = []                     #values is a list of Node values
+            for node in nodes:
+                values.append(node.val)
+            return values
+        #----------------------------------------------------------------------------------
+    ```
 <br/>
 
 ### Pre- Order Traversal
 
+- This is Depth First Search approach and Traversal occurs root -> left -> right 
+
+    ```python
+    #This is a method of class BinarySearchTree
+    def pre_order(self,root = None, must_return = "values"):
+            "pre order is DFS, root -> left -> right"
+            #----------------------------------------------------------------------------------
+            #consider self.root as defualt parameter
+
+            if root == None:
+                cur = self.root                  
+            else:
+                cur = root
+
+            #----------------------------------------------------------------------------------
+            #preOrder traversal of empty tree is []
+            if cur == None:
+                return []        
+                        
+            #----------------------------------------------------------------------------------
+            #logic
+            stack = [cur]
+            nodes = []                          #nodes is a list of Node objects
+            while stack:
+                cur = stack.pop()
+                nodes.append(cur)               #we are appending the Node objects itself.
+                if cur.right:
+                    stack.append(cur.right)     #Right child must be appended first!
+                if cur.left:
+                    stack.append(cur.left)
+
+            #----------------------------------------------------------------------------------
+            #returning nodes
+
+            if must_return == "nodes":
+                return nodes                    #Return based on the must_return parameter.
+            
+            #----------------------------------------------------------------------------------
+            #returning values
+
+            if must_return == "values":
+                values =[]                          #values is a list of Node values
+                for node in nodes:
+                    values.append(node.val)
+
+                return values
+            #----------------------------------------------------------------------------------
+    ```
+
+<br/>
+
+### Post-Order Traversal
+
+- This is Depth First Search approach and Traversal occurs left -> right -> root
+
+    ```python
+    #This is a method of class BinarySearchTree
+    def post_order(self, root = None, must_return = "values"):
+            "post order is a DFS hence use a stack; left -> right -> root"
+            #----------------------------------------------------------------------------------
+            #consider self.root as defualt parameter
+            if root == None:
+                cur = self.root
+            else:
+                cur = root
+            
+            #----------------------------------------------------------------------------------
+            #postOrder traversal of empty tree is []
+            if cur == None:
+                return []
+            
+            #----------------------------------------------------------------------------------
+            #logic 
+
+            stack = [cur]
+            nodes = []
+
+            while stack:
+                cur = stack.pop()
+                nodes.append(cur)
+                if cur.left:
+                    stack.append(cur.left)          #Left child must be added first!
+                if cur.right:
+                    stack.append(cur.right)
+                
+
+            nodes = nodes[::-1]                     #what we want is actually the reverse!
+
+            #----------------------------------------------------------------------------------
+            #returning nodes 
+            if must_return == "nodes":
+                return nodes
+
+            #----------------------------------------------------------------------------------
+            #returning values 
+            elif must_return == "values":
+                values = []
+                for node in nodes:
+                    values.append(node.val)
+                return values
+
+            #----------------------------------------------------------------------------------
+    ```
 <br/>
 
 ### Level-Order Traversal (BFS)
 
+- This is Breadth First Search approach and traversal occurs level wise.
+
+    ```python
+    def level_order(self, root = None, must_return = "values", return_type = "list(list)"):
+            "level order is a BFS hence use queue."
+            #----------------------------------------------------------------------------------
+            if root == None:
+                cur = self.root                 #consider self.root as defualt parameter
+            else:
+                cur = root
+            #----------------------------------------------------------------------------------
+            if cur == None:
+                return []                       #level order for an empty tree is []
+
+            #----------------------------------------------------------------------------------
+            #logic
+            q = [cur]
+            multi_nodes = []                          #multi_nodes is a list of list of Node objects
+            
+            while q:
+                levels = []
+                for node in q.copy():
+                    levels.append(node)
+                    q.pop(0)
+                multi_nodes.append(levels)
+                for node in multi_nodes[-1]:
+                    if node.left:
+                        q.append(node.left)
+                    if node.right:
+                        q.append(node.right)
+
+            #----------------------------------------------------------------------------------
+            #list(list) means [[], [], [], ...]
+            if return_type == "list(list)":
+
+                if must_return == "nodes":
+                    return multi_nodes
+                
+                elif must_return == "values":
+                    multi_values = []                             #multi_values is a list of list of Node values.
+                    
+                    for node_list in multi_nodes:                 #nodes is of the type [[]]
+                        values_list = []
+                        for node in node_list:
+                            values_list.append(node.val)
+                        multi_values.append(values_list)
+                    return multi_values
+            #----------------------------------------------------------------------------------
+            #list means []
+            elif return_type == "list":
+
+                nodes =[]                         #nodes is a list of Node objects
+                for node_list in multi_nodes:
+                    for node in node_list:
+                        nodes.append(node)
+
+                if must_return == "nodes":
+                    return nodes
+                elif must_return == "values":
+                    values = []                 #values is a list of Node values.
+                    for node in nodes:
+                        values.append(node.val)
+                    return values
+            #----------------------------------------------------------------------------------
+    ```
 
 <br/>
 <br/>
 
 ## Balanced vs UnBalanced Trees
 
+>Make Notes!
 
-
-
+<br/>
+<br/>
 
 
 
