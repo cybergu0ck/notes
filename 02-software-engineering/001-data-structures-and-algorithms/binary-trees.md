@@ -125,6 +125,7 @@ def insert(self,new_data):
 ```python
 #This is a method of class BinarySearchTree
 #This requires treversal methods (pre_order)
+
 def delete(self, value):
         cur = self.root
         to_be_deleted = None
@@ -174,10 +175,11 @@ def delete(self, value):
 
 ### In-Order Traversal
 
-- This is Depth First Search approach and Traversal occurs left -> root -> right
+- This is Depth First Search (DFS) approach and Traversal occurs left -> root -> right
 
     ```python
     #This is a method of class BinarySearchTree
+
     def in_order(self, root = None, must_return = "values"):
         "in order is DFS hence use a stack, left -> root -> right"
         #----------------------------------------------------------------------------------
@@ -224,10 +226,11 @@ def delete(self, value):
 
 ### Pre- Order Traversal
 
-- This is Depth First Search approach and Traversal occurs root -> left -> right 
+- This is Depth First Search (DFS) approach and Traversal occurs root -> left -> right 
 
     ```python
     #This is a method of class BinarySearchTree
+
     def pre_order(self,root = None, must_return = "values"):
             "pre order is DFS, root -> left -> right"
             #----------------------------------------------------------------------------------
@@ -277,10 +280,11 @@ def delete(self, value):
 
 ### Post-Order Traversal
 
-- This is Depth First Search approach and Traversal occurs left -> right -> root
+- This is Depth First Search (DFS) approach and Traversal occurs left -> right -> root
 
     ```python
     #This is a method of class BinarySearchTree
+
     def post_order(self, root = None, must_return = "values"):
             "post order is a DFS hence use a stack; left -> right -> root"
             #----------------------------------------------------------------------------------
@@ -331,11 +335,13 @@ def delete(self, value):
 
 ### Level-Order Traversal (BFS)
 
-- This is Breadth First Search approach and traversal occurs level wise.
+- This is Breadth First Search (BFS) approach and traversal occurs level wise.
 
     ```python
+    #This is a method of class BinarySearchTree
+
     def level_order(self, root = None, must_return = "values", return_type = "list(list)"):
-            "level order is a BFS hence use queue."
+            """level order is a BFS hence use queue."""
             #----------------------------------------------------------------------------------
             if root == None:
                 cur = self.root                 #consider self.root as defualt parameter
