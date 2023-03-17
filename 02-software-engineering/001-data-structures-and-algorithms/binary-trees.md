@@ -12,6 +12,7 @@ A tree is a nonlinear hierarchial data structure that consists of nodes connecte
     - Height is measured from the bottom
     - A has a height of 3
     - I has a height of 0
+- For a tree with height 'h', The maximum number of nodes in the tree is 2^(h+1) -1.
 - ***Depth*** or level of a node is the distance between the root and the node in question.
     - Depth is measured from the top
     - H has a depth of 2
