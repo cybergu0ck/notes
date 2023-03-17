@@ -2,7 +2,7 @@
 | Shortcut  | Binding   |
 |---        |---        |
 | Win + E   | New File Explorer |
-
+| Ctrl + Shift + N | New Folder |
 
 
 
