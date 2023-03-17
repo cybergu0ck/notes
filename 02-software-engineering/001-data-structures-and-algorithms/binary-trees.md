@@ -39,8 +39,9 @@ When a tree has at the most two children, then it’s called ***binary tree***.
 
 
 1. Full Binary Tree : Each node has exactly 0 or 2 children (but never 1).
-1. Complete binary tree :  When all levels except the last one are full with nodes.
-1. Perfect binary tree : When all the levels (including the last one) are full of nodes.
+1. Complete binary tree :  A complete binary tree is a binary tree in which every level of the tree is completely filled, except possibly the last level. In the last level, all nodes are as far left as possible. 
+    - In the below image if the right most gray node in complete binary tree image is considered then It would not be a complete binary tree (as it is not left when possible)
+3. Perfect binary tree : When all the levels (including the last one) are full of nodes.
     - Perfect binary trees have precisely (2^k) - 1 nodes, where k is the last level of the tree (starting with 1).
 
 <br/>
@@ -51,8 +52,8 @@ When a tree has at the most two children, then it’s called ***binary tree***.
 
 These properties are not always mutually exclusive. You can have more than one:
 
-- A perfect tree is always complete and full.
-- A complete tree is not always full. (It's a complete tree even if the grapy node is present)
+- A perfect binary tree is always complete binary tree.
+- A complete tree is not always perfect tree.
 - A full tree is not always complete and perfect.
 
 
