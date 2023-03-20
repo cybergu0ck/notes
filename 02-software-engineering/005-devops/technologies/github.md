@@ -1,6 +1,6 @@
-## Adding links in the same markdown file on github
+## Same-file anchors 
 
-For backlinks (on same file) to work on github, Refer [official github doc](https://gist.github.com/TobiasPalludan/5948533e97d260a04ea47e44ea7cc6b0), if not accessible see below:
+For backlinks (on same file) to work on github, Refer [official github doc](https://gist.github.com/TobiasPalludan/5948533e97d260a04ea47e44ea7cc6b0), else see below:
 
 ```
 [text](#<syntaxed_heading>)
@@ -33,7 +33,7 @@ For more reference [check this stackoverflow thread](https://stackoverflow.com/q
 
 ### Illustration:
 
-To backlink the top most heading of this file [the topmost heading](#Adding-links-in-the-same-markdown-file-on-github)
+To backlink the top most heading of this file [the topmost heading](#samefile-anchors)
 
 <br/>
 <br/>
