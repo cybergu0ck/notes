@@ -1,4 +1,4 @@
-## Same-file anchors 
+## Same-file anchors
 
 For backlinks (on same file) to work on github, Refer [official github doc](https://gist.github.com/TobiasPalludan/5948533e97d260a04ea47e44ea7cc6b0), else see below:
 
