@@ -33,7 +33,7 @@ For more reference [check this stackoverflow thread](https://stackoverflow.com/q
 
 ### Illustration:
 
-To backlink the top most heading of this file [the topmost heading](#samefile-anchors)
+To backlink the top most heading of this file [the top most heading](#same-file-anchors)
 
 <br/>
 <br/>
