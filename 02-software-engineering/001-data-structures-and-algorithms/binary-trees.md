@@ -24,7 +24,7 @@ A tree is a nonlinear hierarchial data structure that consists of nodes connecte
     - its left child is present at 2*i +1.
     - its right child is present at 2*i +2.
  
-- When represented as an array, for any child i in the tree, it's parent is present at ceil(i/2) - 1.
+- When represented as an array, for any child i in the tree, it's parent is present at floor((i-1)/2) or `(i-1)//2`.
 <br/>
 <br/>
 
