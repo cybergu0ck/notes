@@ -34,3 +34,17 @@ For more reference [check this stackoverflow thread](https://stackoverflow.com/q
 ### Illustration:
 
 To backlink the top most heading of this file [the topmost heading](#Adding-links-in-the-same-markdown-file-on-github)
+
+<br/>
+<br/>
+
+
+# Cross-file anchors  
+
+See [official-docs](https://gist.github.com/TobiasPalludan/5948533e97d260a04ea47e44ea7cc6b0) else see below:
+
+- Add filename.md in font of the header link. (i.e. `[text](filename.md#header)`)
+- Use linux's `cd` command if files are present in other directory (i.e. `[text](../prev-folder/filename.md#header)`)
+
+
+
