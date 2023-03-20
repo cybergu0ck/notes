@@ -6,6 +6,7 @@
 ceil(x) in Python returns a ceiling value of x i.e., the smallest integer greater than or equal to x.
 - function is present in the built-in math module.
 
+- check for more [here](#math.floor)
 
 ```python
 import math
