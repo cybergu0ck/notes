@@ -1,6 +1,11 @@
+# Binary Operators
 
+## 
 
-### Bitwise Operators 
+<br/>
+<br/>
+
+## Bitwise Operators 
 
 
 | Symbol | Operator |
@@ -11,6 +16,8 @@
 | ^ | bitwise XOR |
 | << | bitwise Left Shift |
 | >> | bitwise Right Shift |
+
+<br/>
 
 ### Bitwise AND (&)
 ---
@@ -31,11 +38,13 @@ print(bin(5 & 6))
 >0b100
 ```
 
+<br/>
 
 ### Bitwise OR ( | )
 ---
 Exactly same like AND but instead performs OR.
 
+<br/>
 
 ### Bitwise NOT (~)
 ---
@@ -66,6 +75,7 @@ Explanation for how it is (-6) in Base 10 is as follows:
 > 
 > ~5 is -6
 
+<br/>
 
 ## Bitwise XOR (^)
 ---
@@ -87,6 +97,7 @@ print(5^1)
 >4
 ```
 
+<br/>
 
 ## Bitwise Left Shift (<<)
 ---
@@ -99,6 +110,7 @@ print(5 << 3)
 
 >40
 ```
+<br/>
 
 ## Bitwise Right Shift
 ---
