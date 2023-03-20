@@ -1,6 +1,6 @@
 ## Adding links in the same markdown file on github
 
-For backlinks (on same file) to work on github, See below
+For backlinks (on same file) to work on github, Refer [official github doc](https://gist.github.com/TobiasPalludan/5948533e97d260a04ea47e44ea7cc6b0), if not accessible see below:
 
 ```
 [text](#<syntaxed_heading>)
