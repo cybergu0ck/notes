@@ -50,7 +50,4 @@ print(res)
 ```
 <br/>
 
-### `//` operator
 
-- In Python, the // operator is the integer division operator. 
-- It returns the floor of the quotient when one integer is divided by another.
