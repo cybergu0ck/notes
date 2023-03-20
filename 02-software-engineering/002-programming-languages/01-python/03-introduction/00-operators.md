@@ -1,5 +1,19 @@
 # Binary Operators
 
+
+## `//` operator
+
+- In Python, the // operator is the integer division operator. 
+- It returns the [floor](./python-numbers.md#mathfloor()) of the quotient when one integer is divided by another.
+
+```python
+print(3//2)
+print(-3//2)
+
+#>1
+#>-2
+```
+
 ## 
 
 <br/>
