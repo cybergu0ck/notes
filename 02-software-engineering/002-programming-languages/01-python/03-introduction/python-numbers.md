@@ -50,4 +50,4 @@ print(res)
 ```
 <br/>
 
-Check out [`//` operator](00-operators.md#operator)
+Check out [`//` operator](00-operators.md#-operator)
