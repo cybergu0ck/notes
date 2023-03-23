@@ -6,6 +6,7 @@
 | Search in code   | Ctrl + F       |
 | Search and Replace in code   | Ctrl + H      |
 | Multi-cursor  | Alt + Mouse Click      |
+| Go to a specific line | Ctrl + G |
 
 
 
