@@ -77,12 +77,13 @@ print('333'.isdigit())
 
 ## `lstrip()` removes any leading characters
 
-- `lstrip()` can have an optional parameter, which is basically  A set of characters to remove as leading characters.
+- `lstrip()` by default removes any leading (left-hand side) whitespace characters from a string. 
+- It can have an optional parameter, which is basically a set of characters to remove as leading characters.
 - `rstrip()` is similar.
 
 ```python
 initial_message = '    Hey   Hello'
-final_message = initial_message.lstrip()
+final_message = initial_message.lstrip()  #Removes all whitespaces at the begining
 print(final_message)
 
 #>Hey   Hello
@@ -90,11 +91,21 @@ print(final_message)
 
 ```python
 initial_message = '$$$Asap@Rocky'
-final_message = initial_message.lstrip('$A')
+final_message = initial_message.lstrip('$A')  #If $ or A is present in the starting left side, it removes it
 print(final_message)
 
 #>sap@Rocky
 ```
+
+```python
+initial_message = '$$$Asap@Rocky'
+final_message = initial_message.lstrip('s')   #No change as 's' is not present in the leading left
+print(final_message)
+
+#>$$$Asap@Rocky
+```
+
+
 
 ## `count()` method returns the number of times a specified value appears in the string
 

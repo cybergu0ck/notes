@@ -45,7 +45,7 @@ print(5 & 6)
 >4
 ```
 
-We can use the `bin()` to get binary of any decimal number.
+We can use the `bin()` to get binary string of any decimal number.
 ```python
 print(bin(5 & 6))
 
