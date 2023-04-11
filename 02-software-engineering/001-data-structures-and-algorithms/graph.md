@@ -211,26 +211,21 @@ print(graph_with_cycle.breadth_first_search(4))
 ```python
 # Iterative
 
-def depth_first_search(self, source):
-        res = []
-        stack = [source]
-        visited = set()  
-        
-        while stack:
-            cur = stack.pop()       # Remove item from the back of the stack!
-            
-            while cur in visited:   #This while block takes care of cycles, if present in the graph!
-                if stack:
-                    cur = stack.pop()
-                else:
-                    break
-            else:
-                visited.add(cur)
-                res.append(cur)
-                if self.directed_graph[cur]:
-                    for node in self.directed_graph[cur]:
-                        stack.append(node)          # Adding item to the back of the stack!
-        return res
+def dfs(node):
+    res = []
+    stack = [node]
+    visited = set()
+
+    while stack:
+        cur = stack.pop()
+        res.append(cur)
+        visited.add(cur)
+
+        for i in graph[cur]:
+            if i not in visited and i not in stack :  
+                stack.append(i)
+
+    return res
 ```
 
 ```python
