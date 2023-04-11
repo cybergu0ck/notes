@@ -175,27 +175,21 @@ graph_with_cycle = Graph(graph2)
 ```python
 #This is a method of class Graph
 
-def breadth_first_search(self, source):
-        res = []
-        q = [source]
-        visited = set()             #sets are memory efficient, look up is O(1)
+def breadth_first_search(node):
+    visited = set()
+    res = []
+    q = [node] 
 
-        while q:
-            cur = q.pop()           # items are removed from last!
+    while q:
+        cur = q.pop()           #popping from back!
+        res.append(cur)
+        visited.add(cur)
 
-            while cur in visited:   #This while block takes care of cycles, if present in the graph!
-                if q:
-                    cur = q.pop()
-                else:
-                    break
-            else:                   #the code in this else block is executed if the break in above while is not hit! 
-                visited.add(cur)
-                res.append(cur)
-                if self.directed_graph[cur] :
-                    for node in self.directed_graph[cur]:
-                        q.insert(0,node)           #items are added from first!
-        
-        return res
+        for i in self.directed_graph[cur]:
+            if i not in visited:    #takes care of cycles if present
+                q.insert(0, i)      #inserting at front!
+    
+    return res
 ```
 
 ```python
