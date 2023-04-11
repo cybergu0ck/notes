@@ -42,8 +42,8 @@ class Graph:
         directed_graph = defaultdict(list)
 
         for i in undirected_graph:
-            directed_graph[i[0]] += i[1]
-            directed_graph[i[1]] += i[0]
+            directed_graph[i[0]].append(i[1])
+            directed_graph[i[1]].append(i[0])
         
         return directed_graph
 ```
