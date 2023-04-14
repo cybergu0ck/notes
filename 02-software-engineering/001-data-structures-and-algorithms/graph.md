@@ -42,8 +42,8 @@ class Graph:
         directed_graph = defaultdict(list)
 
         for i in undirected_graph:
-            directed_graph[i[0]] += i[1]
-            directed_graph[i[1]] += i[0]
+            directed_graph[i[0]].append(i[1])
+            directed_graph[i[1]].append(i[0])
         
         return directed_graph
 ```
@@ -175,27 +175,21 @@ graph_with_cycle = Graph(graph2)
 ```python
 #This is a method of class Graph
 
-def breadth_first_search(self, source):
-        res = []
-        q = [source]
-        visited = set()             #sets are memory efficient, look up is O(1)
+def breadth_first_search(node):
+    visited = set()
+    res = []
+    q = [node] 
 
-        while q:
-            cur = q.pop()           # items are removed from last!
+    while q:
+        cur = q.pop()           #popping from back!
+        res.append(cur)
+        visited.add(cur)
 
-            while cur in visited:   #This while block takes care of cycles, if present in the graph!
-                if q:
-                    cur = q.pop()
-                else:
-                    break
-            else:                   #the code in this else block is executed if the break in above while is not hit! 
-                visited.add(cur)
-                res.append(cur)
-                if self.directed_graph[cur] :
-                    for node in self.directed_graph[cur]:
-                        q.insert(0,node)           #items are added from first!
-        
-        return res
+        for i in self.directed_graph[cur]:
+            if i not in visited:    #takes care of cycles if present
+                q.insert(0, i)      #inserting at front!
+    
+    return res
 ```
 
 ```python
@@ -217,26 +211,21 @@ print(graph_with_cycle.breadth_first_search(4))
 ```python
 # Iterative
 
-def depth_first_search(self, source):
-        res = []
-        stack = [source]
-        visited = set()  
-        
-        while stack:
-            cur = stack.pop()       # Remove item from the back of the stack!
-            
-            while cur in visited:   #This while block takes care of cycles, if present in the graph!
-                if stack:
-                    cur = stack.pop()
-                else:
-                    break
-            else:
-                visited.add(cur)
-                res.append(cur)
-                if self.directed_graph[cur]:
-                    for node in self.directed_graph[cur]:
-                        stack.append(node)          # Adding item to the back of the stack!
-        return res
+def dfs(node):
+    res = []
+    stack = [node]
+    visited = set()
+
+    while stack:
+        cur = stack.pop()
+        res.append(cur)
+        visited.add(cur)
+
+        for i in graph[cur]:
+            if i not in visited and i not in stack :  
+                stack.append(i)
+
+    return res
 ```
 
 ```python
