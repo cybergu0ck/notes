@@ -129,6 +129,20 @@ deleting a branch is basically deleting the branch label!
 git branch -d <name>
 ```
 <br/>
+<br>
+
+# Renaming a branch
+
+```
+git checkout <branch>
+git branch -m <old name> <new name>
+```
+
+
+<br/>
+<br>
+
+
 
 # Detached head
 
