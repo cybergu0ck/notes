@@ -30,7 +30,7 @@
 | endsWith()| check (returns bool) if the subtring ends with a particular substring.  | myString.startsWith('subString') |
 | indexOf() | Finding the position of a substring in the string | myString.indexOf('subString')  |
 | slice() | Extracting a substring from the string using start and end index | Check Below |
-| substr() | similar to slice() only difference is that the second parameter specifies the length of the extracted part.| |
+| substr() | similar to slice() only difference is that the second parameter specifies the length of the extracted part.| Check Below |
 | substring() | similar to slice() only difference is that start and end values less than 0 are treated as 0 in substring(). | |
 | replace() | Replace one substring inside a string with another substring | Check below |
 
