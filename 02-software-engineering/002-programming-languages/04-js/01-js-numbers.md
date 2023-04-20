@@ -104,6 +104,13 @@ Operator precedence in JavaScript is the same as is taught in math classes in sc
 <br>
 <br>
 
+# Logical Operators
+
+https://javascript.info/logical-operators
+
+<br>
+<br>
+
 # Assignment Operators
 
 | Operator | Name | Description |
