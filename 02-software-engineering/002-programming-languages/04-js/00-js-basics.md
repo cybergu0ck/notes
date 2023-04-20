@@ -11,6 +11,8 @@ There are eight basic data types in js.
 7. `object`
 8. `symobol`
 
+
+- All other datatypes except `object` and `symbol` are *primitive datatypes* because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities.
 - Refer this article for good information [data-types](https://javascript.info/types)
 
 <br>
