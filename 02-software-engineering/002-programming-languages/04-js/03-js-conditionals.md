@@ -55,5 +55,22 @@ console.log(res);
 ```
 
 <br>
+
+### Multiple ?
+
+```js
+let age = 2;
+
+let greeting =  age < 5 ? `Hi baby` :
+                age < 18 ? `Hello!` :
+                age < 100 ? 'Greetings': 
+                'Wow, going strong';
+
+console.log(greeting)
+//Notice how it terminates after a condition is satisfied.
+
+// Hi baby
+```
+<br>
 <br>
 
