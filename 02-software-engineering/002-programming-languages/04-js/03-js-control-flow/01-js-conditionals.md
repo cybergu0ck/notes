@@ -1,10 +1,13 @@
-# If 
+# If Else statement
 
 ```js
 let num = 2;
 
 if (num%2 === 0){
     console.log(`${num} is an even number.`)
+}
+else {
+    console.log(`${num} is an odd number.`)
 }
 
 //2 is an even number.
@@ -13,7 +16,7 @@ if (num%2 === 0){
 <br>
 <br>
 
-# Else if
+# Else if statement
 
 ```js
 let num = 3;
@@ -36,7 +39,7 @@ else if (num%2 !== 0){
 <br>
 <br>
 
-# Switch
+# Switch statement
 
 > Add notes
 

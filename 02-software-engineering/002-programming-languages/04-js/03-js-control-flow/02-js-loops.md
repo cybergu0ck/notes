@@ -1,6 +1,6 @@
 # Looping through a collection
 
-## for...of loop
+## 1.for...of loop
 
 * We can loop through a collection like an array
     ```js
@@ -18,7 +18,7 @@
 
 <br>
 
-## map
+## 2.map
 
 * `map()` is used to do something to each item in a collection and create a new collection containing the changed items.
 
@@ -41,7 +41,7 @@
 
 <br>
 
-## filter
+## 3.filter
 
 * We can use `filter()` to test each item in a collection, and create a new collection containing only items that match:
 
@@ -99,25 +99,25 @@
 
 * `continue` is used to skip an iteration in the ongoing loop.
 
-```js
-//log fruits except lemon
-const fruits = ['mangoes','bananas', 'lemon', 'berries'];
+    ```js
+    //log fruits except lemon
+    const fruits = ['mangoes','bananas', 'lemon', 'berries'];
 
-function containsLemon(arr){
-    for (const item of arr){
-        if (item === 'lemon'){
-            continue;
+    function containsLemon(arr){
+        for (const item of arr){
+            if (item === 'lemon'){
+                continue;
+            }
+            console.log(item);
+            }
         }
-        console.log(item);
-        }
-    }
 
-containsLemon(fruits);
+    containsLemon(fruits);
 
-//mangoes
-//bananas
-//berries
-```
+    //mangoes
+    //bananas
+    //berries
+    ```
 
 <br>
 <br>

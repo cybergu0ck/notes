@@ -112,7 +112,7 @@ console.log(fruits);
 <br>
 <br>
 
-# Modify elements in array
+# Modifying elements in array
 
 - Modifying elements using index
 
