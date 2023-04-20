@@ -74,3 +74,10 @@ console.log(greeting)
 <br>
 <br>
 
+# Reference
+
+- https://javascript.info/comparison
+- https://javascript.info/logical-operators
+- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals
+- https://javascript.info/ifelse
+- https://www.digitalocean.com/community/tutorials/how-to-use-the-switch-statement-in-javascript
