@@ -76,7 +76,7 @@
     #>abcd^e-fgh*+^*+i-
     ```
 
-* Watch this [video](https://www.youtube.com/watch?v=kKSENzdu7bE&list=PL1XjRDnU2tOjIgT7L1pzc-un9M78SkcWh&index=50 ){:target="_blank"} to understand the logic in converting infix expression to postfix expression.
+* Watch this [video](https://external.ink?to=//www.youtube.com/watch?v=kKSENzdu7bE&list=PL1XjRDnU2tOjIgT7L1pzc-un9M78SkcWh&index=50 ) to understand the logic in converting infix expression to postfix expression.
 
-* Watch this [video](https://www.youtube.com/watch?v=ymG0zxuC__I){:target="_blank"} to code the function to convert infix to postfix expression (where '^' and '(' ')' are included.)
+* Watch this [video](https://external.ink?to=//www.youtube.com/watch?v=ymG0zxuC__I) to code the function to convert infix to postfix expression (where '^' and '(' ')' are included.)
 
