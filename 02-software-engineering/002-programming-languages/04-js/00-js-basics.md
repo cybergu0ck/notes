@@ -14,6 +14,12 @@ There are eight basic data types in js.
 - Refer this article for good information [data-types](https://javascript.info/types)
 
 <br>
+
+## Boolean
+
+- *Falsy values*: when used in conditionals, the values 0, "", null, undefined, NaN all become False.
+- *Truthy values*: all other values become true.
+
 <br>
 
 # Creating Variables in js
