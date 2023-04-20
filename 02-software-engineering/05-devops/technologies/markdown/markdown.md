@@ -91,10 +91,16 @@
 
 # Adding links
 
-```syntax
-[description here](url)
-```
+* Standard url 
+    ```
+    [description here](url)
+    ```
 
+* To open link in new tab
+
+    ```
+    [description](url){:target="_blank"}
+    ```
 <br/>
 <br/>
 
