@@ -111,7 +111,7 @@ textBox.addEventListener('keydown', (event) => console.log(`You pressed "${event
 textBox.addEventListener('keydown', event => console.log(`You pressed "${event.key}".`));
 
 ```
-
+* If we have no parameters for the function then we have to use `() => {code};`
 
 <br>
 <br>
