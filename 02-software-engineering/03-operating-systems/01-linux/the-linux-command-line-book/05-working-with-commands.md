@@ -9,6 +9,7 @@ A command can be one of four different things:
 4. __An alias__. Commands that we can define ourselves, built from other commands.
 
 <br/>
+<br/>
 
 # Display a command's type using `type`
 
@@ -16,16 +17,14 @@ A command can be one of four different things:
 type <command>
 ```
 
-Some Examples: 
-- 
+* Some Examples: 
+
 	```bash
 	type cd
 	```
-
 	```
 	cd is a shell builtin
 	```
-- 
 	```bash
 	type ls
 	```
@@ -34,17 +33,16 @@ Some Examples:
 	ls is aliased to `ls --color=auto'
 	```
 
-
+<br/>
 <br/>
 
-# Display an executable's location
+# Display an executable's location using `which`
 
 ```bash
 which <executable>
 ```
 
-Some Examples: 
-- 
+* Some Examples: 
 	```bash
 	which ls
 	```
@@ -57,8 +55,9 @@ Some Examples:
 
 
 <br/>
+<br/>
 
-# Getting a command's documentation
+# Getting a command's documentation 
 
 <br/>
 
