@@ -1,6 +1,11 @@
-<br>
-<br>
+# Some common troubleshooting
 
-# Flexbox
+## By default `<body>` comes with some margin
 
-It gives us a way to arrange items into rows and columns.
+- To remove it use
+
+  ```css
+  body {
+    margin: 0;
+  }
+  ```
