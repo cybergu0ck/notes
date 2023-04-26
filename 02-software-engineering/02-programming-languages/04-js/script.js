@@ -1,7 +1,11 @@
+class User {
+  name = "john";
 
-const myString = "This is a wonderful game."
+  sayHi() {
+    alert("HI");
+  }
+}
 
+let user = new User();
 
-console.log(myString.slice(10,20)); 
-
-//500
+console.log(user.name);

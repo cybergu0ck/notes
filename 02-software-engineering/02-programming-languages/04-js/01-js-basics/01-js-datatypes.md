@@ -1,3 +1,46 @@
+# Variables
+
+- A variable is a “named storage” for data and are defined using the `let` keyword.
+
+  ```js
+  let message; //declaration
+  message = "Hello"; //assignment
+  ```
+
+- declaration and assignment can be made in one line, obviously.
+- We can declare multiple variables in one line, however it is not recommended.
+
+  ```js
+  let user = 'john', age = 25, message = "hello';
+  ```
+
+<br>
+
+## Variable naming
+
+- There are two limitations on variable names in JavaScript:
+
+  1. The name must contain only letters, digits, or the symbols $ and \_.
+  1. The first character must not be a digit.
+
+- When the name contains multiple words, **camelCase** is commonly used.
+
+- There is a list of [reserved words](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords), which cannot be used as variable names because they are used by the language itself.
+
+<br>
+<br>
+
+# Constants
+
+- constants cannot be reassigned and are declared using thr `const` keyword.
+
+  ```js
+  const projectName = "SpookyFox';
+  ```
+
+<br>
+<br>
+
 # Data Types
 
 There are eight basic data types in js.
@@ -9,23 +52,17 @@ There are eight basic data types in js.
 5. `null`
 6. `undefined`
 7. `object`
-8. `symobol`
+8. `symbol`
 
-
-- All other datatypes except `object` and `symbol` are *primitive datatypes* because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities.
+- All other datatypes except `object` are _primitive datatypes_ because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities.
 - Refer this article for good information [data-types](https://javascript.info/types)
 
 <br>
 
 ## Boolean
 
-- *Falsy values*: when used in conditionals, the values 0, "", null, undefined, NaN all become False.
-- *Truthy values*: all other values become true.
+- _Falsy values_: when used in conditionals, the values 0, "", null, undefined, NaN all become False.
+- _Truthy values_: all other values become true.
 
 <br>
-
-# Creating Variables in js
-
-1. using `let`, has block scope and can be modified later on.
-2. using `const`, has block scope and cannot be modified later on.
-3. using `var`, has gloabl scope and don't use this.
+<br>
