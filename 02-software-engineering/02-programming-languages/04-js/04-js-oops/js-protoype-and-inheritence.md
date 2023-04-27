@@ -8,7 +8,9 @@ let car = {};
 //let car = new Object();
 ```
 
-> Add image 1
+![image](../_assets/proto1.jpg)
+
+<br>
 
 - Every function has a `prototype` property (prototype here refers to F.protoype, which is a regular property of a function F, it should not be confused with the term _prototype_ which is the heading of this )
 - When an object is created, the `prototype` property (F.prototype) of the constructor is set as the value of `[[Prototype]] `of the object.
@@ -110,7 +112,7 @@ let car = {};
 
 <br>
 
-> Add Image 2
+![image](../_assets/proto2.jpg)
 
 <br>
 <br>
@@ -199,7 +201,7 @@ let car = {};
 
   <br>
 
-> Add image 3
+![image](../_assets/proto3.jpg)
 
 - js starts looking for the property/method in the object itself, if it can't find it checks the object's prototype and object's prototype's prototype... and so on until null or until it finds the property/method.
 

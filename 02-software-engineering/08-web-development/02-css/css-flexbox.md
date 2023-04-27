@@ -1,3 +1,5 @@
+# FlexBox
+
 - Flexbox is a way to arrange items into rows or columns. These items will flex (i.e. grow or shrink) based on some simple rules that you can define.
 
 - Some of these properties belong on the **flex container**, while some go on the **flex items**.
@@ -175,6 +177,12 @@
 
 <br>
 
+> **_Main axis is always the `flex-direction` axis and Cross axis is the other axis_** , i.e. for flex-direction:row, main axis is row and cross axis is column and for flex-direction:column, main axis is column and cross axis is row
+
+<br>
+
+<br>
+
 ## `justify-content`
 
 - `justify-content: start`
@@ -251,6 +259,8 @@
   }
   ```
 
+  ![image](./_assets/flex12.png)
+
 - `align-items:end`
 
   ```css
@@ -260,6 +270,8 @@
     align-items: end;
   }
   ```
+
+  ![image](./_assets/flex13.png)
 
 - `align-items:center`
 
@@ -271,21 +283,38 @@
   }
   ```
 
-- `align-items:space-between`
+  ![image](./_assets/flex14.png)
+
+- `align-items:space-between` and `align-items:space-around` do not make any sense
+
+<br>
+<br>
+
+# Gap
+
+- `gap` property **given for the parent flex container** will set the gap between children flex items.
+
+* horizontally
+
+  ```js
+  div.container {
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+  }
+  ```
+
+  ![image](./_assets/flex15.png)
+
+* vertically
 
   ```css
   div.container {
     display: flex;
     padding: 10px;
-    align-items: space-between;
+    flex-direction: column;
+    gap: 20px;
   }
   ```
 
-- `align-items:space-around`
-  ```css
-  div.container {
-    display: flex;
-    padding: 10px;
-    align-items: space-around;
-  }
-  ```
+  ![image](./_assets/flex16.png)
