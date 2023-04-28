@@ -3,7 +3,7 @@
 <br>
 <br>
 
-# Literals and Properties
+# Creating Objects using Literals
 
 - An object can be created with figure brackets {…} with an optional list of **properties**. A property is a _“key: value” pair_, where key is a string (also called a “property name”), and value can be anything.
 
@@ -14,15 +14,15 @@
   let user = {}; // "object literal" syntax
   ```
 
-- Creating objects with properties (key:value pairs).
+- Creating objects with **Object Literal Syntax**.
 
-      ```js
-      let user = {     // an object
-      name: "John",  // by key "name" store value "John"
-      age: 30        // by key "age" store value 30
-      "likes chocolates" : false //mult-word properties must be enclosed with ""
-      };
-      ```
+  ```js
+  let user = {     // an object
+  name: "John",  // by key "name" store value "John"
+  age: 30        // by key "age" store value 30
+  "likes chocolates" : false //mult-word properties must be enclosed with ""
+  };
+  ```
 
   <br>
 
@@ -36,9 +36,9 @@
 
 - Setting multiword properties using quotes and square brackets:
 
-      ```js
-      user["likes birds"] = true;
-      ```
+  ```js
+  user["likes birds"] = true;
+  ```
 
   <br>
 
@@ -68,9 +68,37 @@
 
 - deleting multiword properties:
 
-      ```js
-      delete user["likes birds"];
-      ```
+  ```js
+  delete user["likes birds"];
+  ```
+
+<br>
+<br>
+
+# Creating objects using Constructors
+
+- Constructors are functions, we can create objects by calling the constructors with the `new` keyword.
+
+  ```js
+  //constructor definition
+
+  function Player(name, marker) {
+    this.name = name;
+    this.marker = marker;
+
+    this.sayName = function () {
+      console.log(name);
+    };
+  }
+
+  //calling the constructor
+
+  const player1 = new Player("steve", "X");
+  player1.sayName(); //logs 'steve'
+
+  const player2 = new Player("rogers", "X");
+  player2.sayName(); //logs 'rogers'
+  ```
 
   <br>
   <br>
@@ -128,10 +156,10 @@ Propery names (the key's) of Objects have no limitations (language reserved keyw
 
 - Reading a non-existing property just returns `undefined`.
 
-      ```js
-      let user = { name: "John", age: 30 };
-      console.log("age" in user);  //true
-      ```
+  ```js
+  let user = { name: "John", age: 30 };
+  console.log("age" in user); //true
+  ```
 
   <br>
   <br>
@@ -159,26 +187,46 @@ Propery names (the key's) of Objects have no limitations (language reserved keyw
 <br>
 <br>
 
-# constructors
+# Object references and copying
 
-- A better way to create objects using functions.
+One of the fundamental differences of objects versus primitives is that objects are stored and copied **_“by reference”_**, whereas primitive values: strings, numbers, booleans, etc – are always copied **_“as a whole value”_**.
+
+<br>
+
+## Illustration
+
+- From the snippet below, we have two independent variables, each one storing the string "Hello!".
+  ```js
+  let message = "Hello!";
+  let phrase = message;
+  ```
+
+> Add image
+
+- **_A variable assigned to an object stores not the object itself, but its “address in memory” – in other words “a reference” to it._**
 
   ```js
-  //constructor definition
-  function Player(name, marker) {
-    //properties
-    this.name = name;
-    this.marker = marker;
-    //method
-    this.sayName = function () {
-      console.log(name);
-    };
-  }
-
-  //calling the constructor
-  const player1 = new Player("steve", "X");
-  player1.sayName(); //logs 'steve'
-
-  const player2 = new Player("rogers", "X");
-  player2.sayName(); //logs 'rogers'
+  let user = {
+    name: "John",
+  };
   ```
+
+* The object is stored somewhere in memory while the `user` variable has a 'reference" to it.
+
+* **_When an object variable is copied, the reference is copied, but the object itself is not duplicated._**
+
+  ```js
+  let user = { name: "John" };
+  let admin = user; // copy the reference
+  ```
+
+> add image
+
+```js
+let user = { name: "John" };
+let admin = user;
+admin.name = "Pete"; // changed by the "admin" reference
+alert(user.name); // 'Pete', changes are seen from the "user" reference
+```
+
+> Fill Notes
