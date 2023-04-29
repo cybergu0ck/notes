@@ -49,6 +49,8 @@ console.log(myGuy.sayHello()); // steve says Hello.
 * In the above code, we can see that we donot have the access to the constant `secret`. However, we have access to the gotSecret function (which has access to `secret` because of **_closure_**)
 * We can create private variables, constants and functions using closure.
 
+* To understand the crux of this and the lexical environment, head over to [javascript.info](https://javascript.info/closure)
+
 <br>
 <br>
 
