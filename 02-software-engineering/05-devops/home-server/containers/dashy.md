@@ -11,7 +11,7 @@
    ```
    docker run -d \
    -p 8080:80 \
-   -v /opt/dashy/config/conf.yml:/app/public/conf.yml \
+   -v /custom/path/conf.yml:/app/public/conf.yml \
    --name dashboard \
    --restart=always \
    lissy93/dashy:arm64v8

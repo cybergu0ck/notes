@@ -12,7 +12,7 @@
 2. Make a directory for the share
 
    ```
-   mkdir /home/{user}/samba-share
+   mkdir /home/{user}/{samba-share}
    ```
 
 3. Edit the smb.conf file
@@ -26,7 +26,7 @@
   ```
   [sambashare]
       comment = Samba on Ubuntu
-      path = /home/username/sambashare
+      path = /home/user/sambashare
       read only = no
       browsable = yes
   ```
