@@ -1,0 +1,24 @@
+docker run -d \
+ --name jellyfin \
+ --user uid:gid \
+ --net=host \
+ --volume /home/bat/containers/jellyfin/config:/config \ 
+ --volume /home/bat/containers/jellyfin/cache:/cache \ 
+ --mount type=bind,source=/home/bat/containers/jellyfin/media,target=/media \
+ --restart=unless-stopped \
+ jellyfin/jellyfin
+
+
+
+docker run -d \
+ --name jellyfin \
+ --user uid:gid \
+ --net=host \
+ --volume /home/bat/containers/jellyfin/config:/config  \ # Alternatively --volume jellyfin-config:/config
+ --volume /home/bat/containers/jellyfin/cache:/cache \ # Alternatively --volume jellyfin-cache:/cache
+ --mount type=bind,source=/home/bat/containers/jellyfin/media,target=/media \
+ --restart=unless-stopped \
+ jellyfin/jellyfin
+
+
+docker run -d --name jellyfin --user 1000:1000 -p 8096:8096 -p 8920:8920  --volume /home/bat/containers/jellyfin/config:/config --volume /home/bat/containers/jellyfin/cache:/cache  --mount type=bind,source=/home/bat/containers/jellyfin/media,target=/media --restart=unless-stopped jellyfin/jellyfin
