@@ -1,5 +1,16 @@
-let a = 7; //or let a = "7"
-let b = "6";
-let res = a - b;
-console.log(res); //1
-console.log(typeof res); //number
+let data = `[
+  {
+    "name": "Kyle",
+    "age": 10
+  },
+  {
+    "name": "John",
+    "age": 99
+  }
+]
+`;
+
+let json_obj = JSON.parse(data);
+
+console.log(json_obj); //[ { name: 'Kyle', age: 10 }, { name: 'John', age: 99 } ]
+console.log(typeof json_obj); //object
