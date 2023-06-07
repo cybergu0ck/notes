@@ -8,4 +8,4 @@
 | Multi-cursor               | Alt + Mouse Click     |
 | Go to a specific line      | Ctrl + G              |
 | Single Line Comment        | Ctrl + /              |
-| multiline comment          | Shift + Alt + A       |
+| multiline comment          | Ctrl + Shift + /      |
