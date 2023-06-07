@@ -1,3 +1,15 @@
+# Keyboard Shortcuts
+
+| Description | Key binding |
+| ---| ---|
+| Delete All Breakpoints | `Ctrl + Shift + F9` | 
+
+
+
+
+
+
+
 # How to toggle between solution view and Folder view in VS
 
 - Look at the top answer in [stack overflow](https://stackoverflow.com/questions/54997800/solution-explorer-opens-in-folders-view)
@@ -7,7 +19,7 @@
 
 # Remove all Breakpoints
 
-- `Ctrl + Shift + F9`
+- 
 
 <br>
 <br>

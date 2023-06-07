@@ -5,6 +5,8 @@
 | Copy Paste a line          | Shift + Alt + Up/Down |
 | Search in code             | Ctrl + F              |
 | Search and Replace in code | Ctrl + H              |
-| Multi-cursor               | Alt + Mouse Click     |
+|Selected Multi-cursor               | Alt + Mouse Click     |
+| Continous Multi-cursor     | Alt + Shift + Mouse Click |
 | Go to a specific line      | Ctrl + G              |
-| multiline comment          | Shift + Alt + A       |
+| Toggle Single Line Comment  | Ctrl + /              |
+| Toggle BLock comment          | Ctrl + Shift + /      |
