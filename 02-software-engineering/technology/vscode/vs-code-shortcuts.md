@@ -7,5 +7,5 @@
 | Search and Replace in code | Ctrl + H              |
 | Multi-cursor               | Alt + Mouse Click     |
 | Go to a specific line      | Ctrl + G              |
-| Single Line Comment        | Ctrl + /              |
-| multiline comment          | Ctrl + Shift + /      |
+| Toggle Single Line Comment  | Ctrl + /              |
+| Toggle BLock comment          | Ctrl + Shift + /      |
