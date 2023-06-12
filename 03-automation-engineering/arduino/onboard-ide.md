@@ -1,4 +1,4 @@
-# Blinking onboard IDE
+# Blinking onboard LED
 
 ```ino
 void setup() {
