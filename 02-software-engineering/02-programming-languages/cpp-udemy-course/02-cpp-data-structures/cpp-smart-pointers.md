@@ -218,3 +218,50 @@
   ```
 
 * The fix for the problem faced above is using a weak reference for any one of the class attribute. (As shown in the comment above)
+
+<br>
+<br>
+
+# Custom Deleter
+
+- C++ smart pointers allows custom deleters, with which we can perform more than just destroying the object on the heap.
+- This can be acheived using function or lambdas (other methods must also be there)
+
+## Using a function
+
+- We write a function with a parameter being a raw pointer to the smart pointer and then when we instantiate the smart pointer, we pass the custom deleter.
+
+  ```cpp
+  #include <iostream>
+  #include <memory>
+  using namespace std;
+
+  class Test {
+      int data;
+  public:
+      Test(int data=0)//constructor
+      {
+          this->data = data;
+          cout << "Test object with the data value of " << this->data << " has been instatiated " << endl;
+      }
+      ~Test() {}	//destructor
+
+  };
+
+  void my_custom_deleter(Test* ptr)
+  {
+      cout << "my_custom_deleter function is run" << endl;
+      delete ptr;
+  }
+
+  int main()
+  {
+      std::shared_ptr<Test> s_ptr{new Test{69}, my_custom_deleter};
+  }
+
+
+  //Test object with the data value of 69 has been instatiated
+  //my_custom_deleter function is run
+  ```
+
+* We can do the same using lambda functions!
