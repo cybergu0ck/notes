@@ -1,7 +1,15 @@
+# Comments in SQL
+
+- single line comments using `-- comment`
+- multiline comments using `/* comment */`
+
+<br>
+<br>
+
 # Creating Database
 
 ```sql
-CREATE  DATABASE record_company;
+create  database record_company;
 ```
 
 <br>
@@ -10,7 +18,7 @@ CREATE  DATABASE record_company;
 # Delete Database
 
 ```sql
-DROP DATABASE record_company;
+drop database record_company;
 ```
 
 <br>
@@ -19,7 +27,7 @@ DROP DATABASE record_company;
 # Using the Databse
 
 ```sql
-USE record_company;
+use record_company;
 ```
 
 <br>
@@ -27,75 +35,90 @@ USE record_company;
 
 # Create Tables
 
-```sql
-CREATE TABLE bands(
-    column1 INT
-    column2 VARCHAR
+```
+create table <name>(
+    <col name> <data type>,
+    <col name> <data type>,
+    <col name> <data type>,...
 );
 ```
 
 ```sql
-create  database record_company;
-use record_company;
-
-create table bands(
- id int not null auto_increment,
- name varchar(255) not null,
- primary key (id)
+create table toys (
+  toy_name varchar(100),
+  colour   varchar(10),
+  price    int
 );
+```
 
-create table albums(
-	id int not null auto_increment,
-    name varchar(255) not null,
-    release_year int,
-    band_id int not null,
-    primary key (id),
-    foreign key (band_id) references bands(id)
-);
+<br>
+<br>
 
-insert into bands (name)
-values ('iron maiden');
-
-insert into bands (name)
-values ('deuce'),('avenged sevenfold'), ('ankor');
-
-select * from bands;  	-- selects every column and every row from bands
-
-select name from bands;	-- queries the name column and all the rows
-
-select id as 'ID', name as 'Band Name' from bands;	-- queries the required but modifies the titles temporarily
-
-select * from bands order by name;		-- orders in ascending order by name column values
-select * from bands order by name desc;	-- orders in descending order by name column values
-
-
-
-insert into albums(name, release_year, band_id)
-values ('The Number of the beasts', 1985, 1),
-		('Power slave', 2018, 1 ),
-        ('Nightmare', 2018, 2),
-        ('Nightmare', 2010, 3),
-        ('test album', NULL,3);
-
-insert into albums(name, release_year, band_id)
-values ("delete", NULL, 1);
-
-select id from albums where name = "delete";
-
-delete from albums where id = 11;
-
-select * from albums;
-
-select distinct name from albums;
-
-update albums
-set release_year = 1982 where id =6;
-
-select * from albums where release_year < 2000;
-
-select * from albums where name like '%er%';
-
-
-
+# Inserting values into a table
 
 ```
+insert into <table> values (<colum value>, <colum value>,... )
+```
+
+```sql
+insert into toys values ( 'Sir Stripypants', 'red', 0.01 );
+insert into toys values ( 'Miss Smelly_bottom', 'blue', 6.00 );
+insert into toys values ( 'Cuteasaurus', 'blue', 17.22 );
+insert into toys values ( 'Mr Bunnykins', 'red', 14.22 );
+insert into toys values ( 'Baby Turtle', 'green', null );
+```
+
+<br>
+<br>
+
+# Selecting Rows
+
+- To get all rows for specified columns.
+
+  ```
+  select <needed> from <table>
+  ```
+
+  ```sql
+  select * from toys  -- select all colums
+  select colour, price from toys --select only colour and price colums
+  ```
+
+* Filtering rows to get specific rows
+
+  ```
+  select <column> from <table> where <criteria>
+  ```
+
+  ```sql
+  select * from toys where toy_name='Sir Stripypants';  --gets all columns for rows with the given criteria
+  ```
+
+* `and` and `or` can be used to combine the criteria
+
+  ```sql
+  select * from toys where toy_name='Sir Stripypants' or colour = 'green';
+  ```
+
+  > <br>
+  > Order of Precedence:  <br>
+  > AND has higher priority than OR. So if you include both in a where clause, the order you place them affects the results. <br>
+  > <br>
+
+  ```sql
+  select * from toys
+  where  toy_name = 'Mr Bunnykins' or toy_name = 'Baby Turtle'
+  and    colour = 'green';
+
+  -- toy_name = 'Mr Bunnykins' or (toy_name = 'Baby Turtle' and    colour = 'green')
+  ```
+
+  ```sql
+  select * from toys
+  where  colour = 'green'
+  and    toy_name = 'Mr Bunnykins' or toy_name = 'Baby Turtle';
+
+  -- (colour = 'green' and    toy_name = 'Mr Bunnykins') or toy_name = 'Baby Turtle'
+  ```
+
+* To avoid confusion in queries combining AND with OR, use parentheses. The database processes conditions inside the brackets first.
