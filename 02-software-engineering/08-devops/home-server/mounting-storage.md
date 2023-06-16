@@ -123,5 +123,5 @@
 * It is not "unmount" but it is "umount"
 
   ```
-  sudo unmount <disk identifier>
+  sudo umount <disk identifier>
   ```
