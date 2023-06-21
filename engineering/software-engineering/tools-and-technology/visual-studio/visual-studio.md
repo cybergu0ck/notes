@@ -1,14 +1,8 @@
 # Keyboard Shortcuts
 
-| Description | Key binding |
-| ---| ---|
-| Delete All Breakpoints | `Ctrl + Shift + F9` | 
-
-
-
-
-
-
+| Description            | Key binding         |
+| ---------------------- | ------------------- |
+| Delete All Breakpoints | `Ctrl + Shift + F9` |
 
 # How to toggle between solution view and Folder view in VS
 
@@ -19,7 +13,7 @@
 
 # Remove all Breakpoints
 
-- 
+-
 
 <br>
 <br>
@@ -35,3 +29,20 @@
 - Then find Configuration Properties > C/C++ > Advanced > Disable Specific warning
 - Make sure to enable _Inherit from parent or project details option_
 - Enter only the warning number!
+
+<br>
+<br>
+
+# Keyboard customization
+
+- Done in Tools > Options > Environment > Keyboard.
+- Make sure to use the new shortcut in "Text Editor" and not "Global"
+
+* Set the follwing (These bindings perform the same action in my code editors)
+
+  | Command                    | Binding                  |
+  | -------------------------- | ------------------------ |
+  | Edit.MoveSelectedLinesDown | Alt + Down Arrow         |
+  | Edit.Duplicate             | Alt + Shift + Down Arrow |
+  | Edit.ToggleLineComment     | Ctrl + /                 |
+  | Edit.ToggleBlockComment    | Ctrl + Shift + /         |
