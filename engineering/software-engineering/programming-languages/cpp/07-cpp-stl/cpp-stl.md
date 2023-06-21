@@ -176,3 +176,40 @@
       display(p1, p2);        //Curly Moey
   }
   ```
+
+<br>
+<br>
+<br>
+
+# Generic programming with class templates
+
+- It is similar to template functions
+
+  ```cpp
+  #include <iostream>
+  #include <string>
+
+  template <typename T>
+
+  class Item
+  {
+  private:
+    std::string name;
+    T value;  //this can be of any type as long as it supports the methods and operations
+  public:
+    Item(std::string name_value, T value_value) : name{ name_value }, value{ value_value } {};
+    std::string get_name() { return name; }
+    T get_value() { return value; }
+  };
+
+  int main()
+  {
+    Item<int> first{ "first", 10 };		//we must specify the template type, here it is the second argument 10, an int
+    std::cout << first.get_value() << std::endl;		//10
+
+    Item <Item<std::string>> item_in_item{"item_name", { "inner_item_name", "inner_item_value" }};
+    std::cout << item_in_item.get_name() << std::endl;		//inner_name
+    std::cout << item_in_item.get_value().get_name() << std::endl;	//inner_item_name
+    std::cout << item_in_item.get_value().get_value() << std::endl;	//inner_item_value
+  }
+  ```
