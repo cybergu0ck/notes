@@ -117,3 +117,11 @@
 <br>
 <br>
 <br>
+
+# Unmounting a disk
+
+* It is not "unmount" but it is "umount"
+
+  ```
+  sudo umount <disk identifier>
+  ```
