@@ -1,39 +1,3 @@
-> <br> C++ is a general-purpose programming language that supports procedural, object-oriented, and generic programming. <br> > <br>
-
-<br>
-<br>
-
-# Procedural Programming
-
-- procedural programming is basically a collection of functions, where data (usually declared seperately) are manipulated.
-- limitations:
-  - functions need to know the structure of data, if structure of the data is changed, then the function must also change for it to work.
-  - as programs get large, it is difficult to understand, maintain, reuse, debug, extend.
-
-<br>
-<br>
-
-# Object Oriented Programming
-
-- Object-oriented programming (OOP) is a programming paradigm that uses "objects" – data structures consisting of data fields and methods together with their interactions – to design applications and computer programs.
-- OOP in C++ is based on the concept of classes. A class is a blueprint for an object. It defines the data that an object will hold and the methods that an object will have.
-- When you create an object, you are creating an instance of a class. The object will have its own copy of the data that is defined in the class, and it will be able to call the methods that are defined in the class.
-
-- Advantages
-  _ Abstraction : Abstraction is a process of hiding the implementation details of a system from the user, and only the functional details will be available to the user end.
-  _ Encapsulation: Encapsulation is a method of wrapping up the data and code acting on the data into a single unit.
-  _ Inheritence : Creating new classes by using the code present in already defined classes, extending the data.
-  _ Polymorpism : Polymorphism is the ability to use the same code to operate on different types of objects. This makes the code more flexible.
-  <br>
-
-- Limitations:
-  - OOP is not a panacea, it will bad code even worse XD
-  - complicated design
-  - slower and larger in size
-
-<br>
-<br>
-
 # Classes and Objects
 
 - Classes are user defined datatypes that act as a blueprints from which objects are created.
@@ -192,7 +156,7 @@
 
 - member methods can be implemented in two ways:
 
-  1. can be implemented inside the class declaration. (implicitely inline)
+  1. can be implemented inside the class declaration (implicitely inline), It is ideal to have all the declaration in header file and the definitions compiled into object files. Hence this approach is bad.
 
      ```cpp
      class Account {
@@ -228,6 +192,22 @@
          return balance;
      }
      ```
+
+<br>
+
+- All member functions of a class follow only _C++ naming convention_. We use naming conventions (extern "C") to provide backward compatibility foe C users. classes (specifically member functions of the classes) makes no sense for C users and hence the reason.
+
+* Raw names generated in asm files for member functions:
+
+  | syntax    | meaning                                                                                         |
+  | --------- | ----------------------------------------------------------------------------------------------- |
+  | ?input@CA | 'input' is a member function of class CA                                                        |
+  | Q         | Indicates the access-specifier [Q means public], whether 'public' (or) 'private' (or) protected |
+  | A         | Indicates whether the method is a const method or non-const method ['A' means non-const method] |
+  | E         | Indicates the calling convention employed [E means it is using the def. calling convention]     |
+  | X         | return type is void                                                                             |
+  | X         | input to the function is also void                                                              |
+  | Z         | Z is the de-limiting character.                                                                 |
 
 <br>
 <br>
@@ -314,42 +294,53 @@
 
 # Constructors
 
-- constructor is a special member function that is invoked during object creation and hence we can use it for initialization.
-- constructors must have the same name as the class.
-- no return type is specified for constructors.
-- constructors can be overloaded.
+- Constructor is a special member function that is invoked (automatically) whenever an object is created.
+- Constructors are mostly used for initialisating data members but can perform anything the programmer desires.
+- Constructors must have the same name as the class.
+- Constructors do not have any return type associated.
+- Constructors can be overloaded.
 
-  ```cpp
-  #include <iostream>
+<br>
 
-  class Player {
-  private:
-      int health{ 100 };
-      int xp{ 0 };
+> Common misconceptions about constructors debunked
+>
+> - constructors donot create objects
+> - constructors donot initialise objects (programmer has to do that)
+> - It is misconception that compiler generates a constructor if we donot provide (can be verified using asm files)
 
-  public:
-      std::string name;
+<br>
 
-      //overloaded constructors
-      Player() {
-          std::cout << "constructor without any parameters is called for " << name << std::endl;
-      }
+```cpp
+#include <iostream>
 
-      Player(std::string name) {
-          std::cout << "constructor with name parameter is called for " << name << std::endl;
-      }
-  };
+class Player {
+private:
+    int health{ 100 };
+    int xp{ 0 };
+
+public:
+    std::string name;
+
+    //overloaded constructors
+    Player() {
+        std::cout << "constructor without any parameters is called for " << name << std::endl;
+    }
+
+    Player(std::string name) {
+        std::cout << "constructor with name parameter is called for " << name << std::endl;
+    }
+};
 
 
-  int main()
-  {
-      Player superman{ "Kent Clark" };
-      Player* player_ptr = new Player("Shaktiman");  //constructor for the Player object will be called
-  }
+int main()
+{
+    Player superman{ "Kent Clark" };
+    Player* player_ptr = new Player("Shaktiman");  //constructor for the Player object will be called
+}
 
-  //constructor with name parameter is called for Kent Clark
-  //constructor with name parameter is called for Shaktiman
-  ```
+//constructor with name parameter is called for Kent Clark
+//constructor with name parameter is called for Shaktiman
+```
 
 <br>
 <br>
@@ -357,58 +348,65 @@
 # Destructors
 
 - Destructors are also special kind of member function that is invoked automatically when the object is destroyed.
+- Destructors are generally used to perform cleanup operations but can perform anything the programmer desires.
 - Destructors have the same name as the class preceded by a tilde symbol (~)
 - Destructors have no return type and no parameters.
 - There can be only 1 destructor for a class hence it cannot be overloaded unlike constructors.
-- They are used to release memory and stuff.
 
-  ```cpp
-  class Player {
-  private:
-      int health{ 100 };
-      int xp{ 0 };
+<br>
 
-  public:
-      std::string name;
+> <br>
+> <br>  It is a misconception that a destructor destroys objects!
 
-      //overloaded constructors
-      Player() {
-      }
+<br>
 
-      Player(std::string arg) {
-          name = arg;
-      }
+```cpp
+class Player {
+private:
+    int health{ 100 };
+    int xp{ 0 };
 
-      //Destructor
-      ~Player() {
-          std::cout << "Desctructor called for " << name << std::endl;
-      }
-  };
+public:
+    std::string name;
 
-  int main()
-  {
-      {
-          Player first_player{ "batman" };
-      }
-      //desctructor will be called for batman as soon as the block scope ends i.e. here!
+    //overloaded constructors
+    Player() {
+    }
 
-      {
-          Player second_player{ "superman" };
-          Player third_player{ "ironman" };
-          Player fourth_player{ "cap america" };
-      }
-      //Notice the order of destrctor called!
+    Player(std::string arg) {
+        name = arg;
+    }
 
-      Player* player_ptr = new Player("Shaktiman");
-    delete player_ptr;			//destructor for the player object is called
-  }
+    //Destructor
+    ~Player() {
+        std::cout << "Desctructor called for " << name << std::endl;
+    }
+};
 
-  //Desctructor called for batman
-  //Desctructor called for cap america
-  //Desctructor called for ironman
-  //Desctructor called for superman
-  //Desctructor called for Shaktiman
-  ```
+int main()
+{
+    {
+        Player first_player{ "batman" };
+    }
+    //desctructor will be called for batman as soon as the block scope ends i.e. here!
+
+    {
+        Player second_player{ "superman" };
+        Player third_player{ "ironman" };
+        Player fourth_player{ "cap america" };
+    }
+    //Notice the order of destrctor called!
+
+    Player* player_ptr = new Player("Shaktiman");
+  delete player_ptr;			//destructor for the player object is called
+}
+
+//Desctructor called for batman
+//Desctructor called for cap america
+//Desctructor called for ironman
+//Desctructor called for superman
+//Desctructor called for Shaktiman
+```
 
 <br>
 <br>
@@ -445,12 +443,14 @@
 
 # Constructor initialiser list
 
-- In the following code, we are actuallu assigning the values to the data members inside the constructor and not technically initialising.
+- The business logic of constructor is always assignment and not initialisation. (check out the difference between them in 01-introduction.md)
+
+* In the following code, we are actually assigning the values to the data members inside the constructor and not technically initialising.
 
   ```cpp
   class Player {
   private:
-      int health;     //initialisation is done here
+      int health;
       int xp;
 
   public:
@@ -469,7 +469,26 @@
   }
   ```
 
-- To initialise the datamembers using constructors (see the constructor definition below). The order in which the parameters are initilaised is the order in which they are written in the class and not the paramter initialisation list in the constructor definition.
+* When a Player object is created, it invokes the constructor. In the prolog phase of the constructor, the data memebers (whose size in known as type is known to the compiler) initialises them with garbage values. Then in the business logic of the constructor, they are assigned the given values.
+
+  ```cpp
+  //proof
+  class MyClass
+  {
+      const int a;
+
+  public:
+      MyClass(int);
+  };
+
+  MyClass::MyClass(int x)
+  {
+      a = x;		//error because it is trying to assign to a const object (initialised with garbage)
+  }
+  ```
+
+* We can initialise the data members using constructor initialiser list, this will initialise the data members in the prolog phase itself. (check out the meaning of initialise in 01-introduction.md).
+* The order in which the parameters are initilaised is the order in which they are written in the class and not the paramter initialisation list in the constructor definition.
 
   ```cpp
   class Player {
@@ -559,8 +578,15 @@ Delegated constructors in C++ are a feature introduced in C++11 that allow a con
 # Copy Constructors
 
 - A copy constructor in C++ is a special constructor that is used to create a new object that is an exact copy of an existing object. The copy constructor is called implicitly whenever a new object is created from an existing object of the same type.
-- copy constructors are called when objects are passed into functions as parameters, because pass by value is default in C++.
-- If we donot specify the copy constructor, the compiler calls a default copy constructor.
+
+  ```cpp
+  MyClass obj1{1,2};  //2 args constructor is likely called
+  MyClass obj2{obj1}; //copy constructor is called
+  ```
+
+- copy constructors are called when objects are passed into functions as parameters, because pass by value is the default case in C++.
+- If we donot specify the copy constructor, the compiler generates and calls a default copy constructor. This compiler generated copy constructor performs member wise copy.
+- A copy constructor takes a single object of its kind as a parameter by reference.
 - It is good practice :
   - To define copy constructor when our class has raw pointer members.
   - provide the copy constructor with a const reference parameter.
@@ -934,10 +960,9 @@ Delegated constructors in C++ are a feature introduced in C++11 that allow a con
 
 # `this` pointer
 
-- `this` is a reserved keyword.
 - It is a pointer to the object and hence contains the address of the object.
-- It can be only used in the scope of the class.
-- We can use it to access members and methods and much more.
+- `this` is a reserved keyword.
+- It can be only used in the scope of the class (local scope) and hence resides in the stack.
 
 ```cpp
 void Account::set_balance(double bal)
@@ -945,6 +970,26 @@ void Account::set_balance(double bal)
     balance = bal; //   this->balance = bal; behind the scenes!
 }
 ```
+
+<br>
+
+- The invoked member functions donot know which object is invoking it. `this` is actually a hidden formal paramter in member functions. `this` acts as a link field between the objects and the member functions of the class.
+- It is a const pointer of the class type.
+
+  ```cpp
+  class MyClass
+  {
+      int a;
+
+  public:
+      void foo();		//under the hood: foo(MyClass* const this)
+  };
+
+  void MyClass::foo()
+  {
+      //does nothing
+  }
+  ```
 
 <br>
 

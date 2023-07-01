@@ -25,22 +25,27 @@
 <br>
 <br>
 
-# C++ Build Process
+# C++ is a strongly typed language
 
-- Program : It's like a recipe! full of instructions.
-- Programming Language : Source code, High level (understable to humans)
-- Binary : Object code, Low Level (understandable to computers)
-- Compiler : Translates High level source code to Low level Object code.
-- Linker : Links our object code with other object code (of libraries) and creates an executable program.
-- Syntax : The rules that must be followed when writing programs in specific programming languages
+A strongly typed language is a programming language in which variables have specific types, and the type of a variable is enforced at compile-time. In a strongly typed language, the type of a variable must be explicitly declared or inferred, and the language's type system ensures that operations and assignments are performed only between compatible types.
 
 <br>
 <br>
 
-# Preprocessor
+# C ++ is a structured programming language
+
+Structured programming refers to a programming paradigm that emphasizes the use of structured control flow constructs and modular code organization. An important thing here when we call a function the control will branch to that function and after finishing it, the control automatically comes back to the initial point.
+
+<br>
+<br>
+
+# Build Process
+
+## Preprocessor
 
 - A preprocessor is a program that processes the source code before the compiler sees it.
-- It strips all the comments from the source file and replaces each comment with a single space. Then it looks for preprocessor directives and executes them.
+- It strips all the comments from the source file and replaces each comment with a single space.
+- Then it looks for preprocessor directives and performs plain text substitution.
 - The preprocessor doesn't understand C++ (that is the job of the compiler), It simply get's the source code ready for compilation.
 
 - Preprocessor directive are lines in the source code that begin with a #. Here are some:
@@ -61,6 +66,40 @@
 
 * For example the #include preprocessor directive replaces that line with the code that is present in the file (referred by the #include preprocessor directive)
 * It supports conditional compilation, preprocessor directives can be used to execute OS or platform specific code.
+
+<br>
+<br>
+
+## Compiler
+
+- The C++ compiler checks for the syntax and translates the source code to object code (obj file, binary code) and this process is called compilation.
+- In the case of a multi-file program, each file is compiled individually into object file.
+
+* The object file contains the compiled code and some metadata but lacks information about other symbols (functions, variables) defined in other source files.
+  <br>
+  <br>
+
+## Linker
+
+- After compilation, the linker links together all the object files and any library files (.lib, compiled binary code). It combines the object files, libraries, and necessary runtime components to create a stand-alone executable (.exe, binary code)
+- When using external libraries, the declaration for the code is present in the header files (h file, text files) and the definitions are compiled library files (lib file, binary code)
+
+* Essentially the linker performs **symbol resolution** (The linker resolves references to symbols (functions, variables) across different object files. If a symbol is referenced in one source file but defined in another, the linker connects the references to their corresponding definitions.) and **library linking** (Libraries are precompiled collections of object files that provide additional functionality. The linker can include necessary libraries to resolve dependencies. Libraries can be either static (linked directly into the executable) or dynamic/shared (loaded at runtime).)
+
+<br>
+<br>
+
+> Why is the exe not OS agnostic even though it is binary code? <br> <br> Every executable file has _header info_, which holds certain details with regard to the platform on which the exe was built. ex:
+>
+> - Was built on 16-bit=, 32-bit etc.. ADDRESSING SYSTEM ?
+> - Was built on Intel family CPU or some other ?
+> - When the EXE is being launched, which function must be first invoked, what is its address ? <br>
+
+<br>
+
+> <br>
+> Hence the exe comprises of the header info, the compiled object code along with the compiled library code. <br>
+> <br>
 
 <br>
 <br>
@@ -99,6 +138,150 @@
         return 0;
     }
     ```
+
+<br>
+<br>
+
+# About Memory
+
+When the exe occupies the process memory (RAM), it organises itself into 4 categories:
+
+<br>
+
+## 1. Code Segment
+
+- It is the area of process memory that holds all code instructions.
+- The data on the code segment has the lifetime of the exe.
+
+* The code segment occupies fixed memory size and is not flexible.
+
+<br>
+
+## 2. Data Segment
+
+- It is the area of process memory where all **global** variables, **static** variables and **physical** consts (Literals) reside.
+- The data on the data segment has the lifetime of the exe.
+
+* The data segment occupies fixed memory size and is not flexible.
+
+<br>
+
+## 3. Stack
+
+- It is the area of process memory where all function's **local** variables and activation records [function stack-frame] reside.
+- The data on the stack has the lifetime of the function.
+- The memory occupied by the stack is varible in size and is flexible.
+
+<br>
+
+## 4. Heap
+
+- It is the area of process memory that is used for dynamic memory allocation.
+- The lifetime of the data on the heap is controlled by the programmer.
+- The memory occupied by the heap is varible in size and is flexible.
+
+<br>
+<br>
+
+# Activation Records (function stack frame)
+
+In C++, whenever a function is called and it is handled in a 3 step process: prolog, business-logic and epilog.
+
+<br>
+
+## Prolog
+
+- Upon a function execution, A stack-frame will be created on the stack area of the process. This stack-frame is likely to hold all the formal parameters of the said function if any.
+
+  ```
+            |     |  <--stackpointer
+  0xHH..   |-----|  <--basepointer     [main function stack ]
+  ```
+
+- In the exe (binary), the prolog instructions are generated by the compiler itself.
+
+<br>
+
+## Business Logic
+
+- It is the logic or code present inside the function, written by the programmer
+
+  ```
+          |  para2 |  <--stackpointer
+          |  para1 |
+          |--------|  <--basepointer  [called function stack ]
+          | 0xHH.. |
+  0xHH..  |--------|                  [main function stack ]
+  ```
+
+<br>
+
+## Epilog
+
+- Unwinding of the stack, opposite of prolog
+
+  ```
+          |  para2 |
+          |  para1 |
+          |--------|                     [called function stack ]
+          | 0xHH.. |  <--stackpointer
+  0xHH..  |--------|  <--basepointer     [main function stack ]
+  ```
+
+<br>
+<br>
+
+# Calling Convention
+
+- A set of rules that govern the state of activation record or function stack-frame.
+- Any language that supports the concept of functions or procedures will have its own set of rules engaging this aspect.
+
+<br>
+
+## Pascal Calling Convention (`__pascal` calling convention)
+
+- The pushing of the arguments onto the activation record is done from LEFT-TO-RIGHT order.
+- The de-allocation of the **called** function activation record is the responsibility of the **called** himself.
+- Supports fixed-parameter design only.
+
+<br>
+
+## C Calling Convention (`__cdecl` calling convention)
+
+- The pushing of the arguments onto the activation record is done from RIGHT-TO-LEFT order.
+- The de-allocation of the **called** function's activation record is the responsibility of the **callee** and not the **called**.
+- Supports both fixed-parameter design as well as variable parameter design.
+
+<br>
+
+## Standard Call Calling Convention ( `__stdcall` calling convention)
+
+- The pushing of the arguments onto the activation record is done from RIGHT-TO-LEFT order. [ borrowed from __cdecl ]
+- The de-allocation of the CALLED function activation record is the responsibility of the CALLED himself. [ borrowed from __pascal ]
+- Supports fixed-parameter design only. [ borrowed from __pascal ]
+
+<br>
+<br>
+
+> <br> If we want to support C users as a C++ developpers, we must use C calling convention! <br> <br>
+
+<br>
+<br>
+
+# Initialisation vs Assignment in C++
+
+- Initialisation is when the value is bound to the varibale when it is created.
+- Assignment is overriding the value (garbage or any existing value) of a varibale by a new value.
+
+```cpp
+int main()
+{
+	int a{ 0 };		//initialisation: 0 is stored in a as soon as a is created
+
+	int b;			//b has some garbage value
+	b = 10;			//assignment: b now stores 10 instead of the garbage value
+}
+```
 
 <br>
 <br>

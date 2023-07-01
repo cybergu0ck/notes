@@ -21,8 +21,8 @@
 
   ```
   char* ptr1 {};		//null pointer, points to nothing
-	int* ptr2{ nullptr }; //null pointer, points to nothing
-	int* ptr3{ &num1 };	//pointer to an int, points to num1 
+  int* ptr2{ nullptr }; //null pointer, points to nothing
+  int* ptr3{ &num1 };	//pointer to an int, points to num1
   ```
 
 <br>
@@ -225,7 +225,7 @@
 
 # `const` and pointers
 
-* There are several ways to qualify pointers using `const`.
+- There are several ways to qualify pointers using `const`.
   1. pointers to constants
   1. constant pointers
   1. constant pointers to constants
@@ -234,8 +234,8 @@
 
 ### 1. pointers to constants
 
-* The data pointed to by the pointers is constant and connot be changed however the pointer itself can change and point to something else.
-
+- If the pointer is to point to a constant type, then the pointer must be const qualified (this is pointer to constant and not const pointers)
+- Here, The data pointed to by the pointers is constant and connot be changed however the pointer itself can change and point to something else.
 
   ```cpp
   int main()
@@ -248,7 +248,8 @@
     cout << *ptr << endl;
   }
   ```
-* We can const qualify varibales uisng pointers
+
+- We can const qualify varibales uisng pointers
 
   ```cpp
   int main()
@@ -263,14 +264,14 @@
 
 ### 2. const pointers
 
-* the data pointed to by the pointer can be changed but the pointer itself cannot.
+- the data pointed to by the pointer can be changed but the pointer itself cannot.
 
   ```cpp
   int main()
   {
     int num1 = 10;
     int* const ptr{ &num1 }; //const pointer to an int
-    
+
     ptr = nullptr; //error
   }
   ```
@@ -279,7 +280,7 @@
 
 ### 3. constant pointers to constants
 
-* The data pointed to by the pointer as well as the pointer itself cannot change.
+- The data pointed to by the pointer as well as the pointer itself cannot change.
 
   ```cpp
   int main()
@@ -296,9 +297,9 @@
 
 # Passing pointers to functions (Pass by reference)
 
-* pass by reference can be done by using pointer parameters.
-* The function paramter is a pointer.
-* the argument can be a pointer or address of a variable.
+- pass by reference can be done by using pointer parameters.
+- The function paramter is a pointer.
+- the argument can be a pointer or address of a variable.
 
   ```cpp
   void double_data(int* int_ptr);
@@ -307,7 +308,7 @@
   {
     int value{ 10 };
     int* ptr{ &value };
-	  double_data(ptr);  //or double_data(&value);
+    double_data(ptr);  //or double_data(&value);
     cout << value << endl;	//20
   }
 
@@ -321,7 +322,7 @@
 
 # Returning a pointer from a function
 
-* The return type of a function can be a pointer.
+- The return type of a function can be a pointer.
 
   ```cpp
   int* largest(int* int_ptr1, int* int_ptr2);
@@ -343,13 +344,13 @@
   }
   ```
 
-* Never return pointer to local varibales in a function!
+- Never return pointer to local varibales in a function!
 
   ```cpp
   vector <int>* never_do(int* int_ptr1, int* int_ptr2) {
     vector <int> local_variable(5);  //vector of size = 5 and all are 0's
     vector <int>* ptr{ &local_variable };
-    return ptr;					//NEVER DO THIS 
+    return ptr;					//NEVER DO THIS
     //return &local_variable	//OR THIS
   }
   ```
@@ -361,7 +362,7 @@
 
 ## Uninitialised pointers
 
-* Modern IDE will throw an error and prevent this (which is a good thing)
+- Modern IDE will throw an error and prevent this (which is a good thing)
 
   ```cpp
   int main()
@@ -376,21 +377,20 @@
 
 ## Dangling pointers
 
-* dangling pointers are created when a pointer points to a memory that is invalid (or no longer valid)
-* When a function returns a pointer to a local varible, it's a dangling pointer.
-* When two pointers point to the same data and one of the pointer releases the data with delete, the other pointer now access the released data (can be invalid), resulting in dangling pointers.
+- dangling pointers are created when a pointer points to a memory that is invalid (or no longer valid)
+- When a function returns a pointer to a local varible, it's a dangling pointer.
+- When two pointers point to the same data and one of the pointer releases the data with delete, the other pointer now access the released data (can be invalid), resulting in dangling pointers.
 
 <br>
 
 ## Not checking if `new` failed
 
-* An exception is thrown if `new` fails to allocate memory on the heap.
-* If exceotion handling is not done here, it'll point to nullptr and dereferencing a null ptr can make the program crash.
+- An exception is thrown if `new` fails to allocate memory on the heap.
+- If exceotion handling is not done here, it'll point to nullptr and dereferencing a null ptr can make the program crash.
 
 <br>
 
 ## Memory Leaks
 
-* memory leaks occur when we forget to release the allocated heap memory using `delete`.
-* it can also occur if we loose the pointer to the allocated heap memory (say reassigning the pointer), now we have no way to access or release that allocated heap memory, which is still considered in-use by C++.
-  
+- memory leaks occur when we forget to release the allocated heap memory using `delete`.
+- it can also occur if we loose the pointer to the allocated heap memory (say reassigning the pointer), now we have no way to access or release that allocated heap memory, which is still considered in-use by C++.

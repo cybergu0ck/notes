@@ -87,23 +87,107 @@
 # Generic Programming with Function Templates
 
 - C++ templates are like blueprints and the compiler generates the appropriate functions/class from the templates.
+- A function template is useful, when the business logic (code inside the function) remains the same, irrespective of the input data-type.
+- Example showcasing the use of function templates.
 
-- This illustration shows the use of templates, we can create a single function using template instead of creating the same function to support different types. In this example, since < is used within the function, all types that support < can be used as Template type T.
+  ```cpp
+  #include <iostream>
+
+  template <typename T1, typename T2>
+
+  void Add(T1 x, T2 y)
+  {
+    std::cout << x << " + " << y << " = " <<  x+y << std::endl;
+  }
+
+  int main()
+  {
+    Add(10, 20);		//int parameters
+    Add(1.1f, 1.1f);	//float parameters
+    Add(1, 1.2);		//An int and a double
+  }
+
+
+  //10 + 20 = 30
+  //1.1 + 1.1 = 2.2
+  //1 + 1.2 = 2.2
+  ```
+
+<br>
+
+> Confusion reagrding using templates vs function overloading <br> <br>
+> A function template must be preffered, when the business logic remains the same, irrespective of the input data-type and function overloading must be preffered, when the business-logic of the function keeps changing, with change in input-datatype.
+
+<br>
+
+- When the template is used, the appropriate code is instantiated and it is this code that goes into the binary and not the template code itself. Hence the code with tempaltes must be shared as text files i.e. cpp and h files and not obj or lib file. (this is evident in stl library)
+
+* We can specialise the function template for a particular type. In the following code, Add function template is specialised for char data types.
 
   ```cpp
   #include <iostream>
 
   template <typename T>
-
-  T min(T a, T b)
+  void Add(T x, T y)
   {
-      return (a < b) ? a : b;  //return a if a < b else return b
+    T res;
+    res = x + y;
+    std:: cout << x << " + " << y << " = " << res << std::endl;
+  }
+
+  template<>
+  void Add(char x, char y)
+  {
+    std::cout << "cannot add characters" << std::endl;
   }
 
   int main()
   {
-      std::cout << min<int>(10, 2) << std::endl;  //we can explicitely mention the type
-      std::cout << min(2.5, 5.5) << std::endl;    //the compiler is also smart enough to figure it out
+    Add('x', 'y');		//will call the specialised function template
+  }
+
+  //cannot add characters
+  ```
+
+* Explicit instantiation of function templates
+
+  ```cpp
+  #include <iostream>
+
+  template <typename T1, typename T2, typename T3>
+
+  T3 Add(T1 x, T2 y)
+  {
+    T3 res = x + y;
+    return res;
+  }
+
+  int main()
+  {
+
+    std::cout << Add<float, int, float>(1.2, 5) << std::endl;
+  }
+
+  //6.2
+  ```
+
+* If we are dealing with code where the return type of function template is typename, it is good discipline to maintain the order, i.e. keep the typename that would be used for return type in first place (see code) so that we have to explicitely mention only one type, the return type.
+
+  ```cpp
+  #include <iostream>
+  using namespace std;
+
+  template < typename T1, typename T2, typename T3>
+  T1 Add(T2 x, T3 y)
+  {
+    return x + y;
+  }
+
+  int main()
+  {
+    float result1;
+    result1 = Add<float>(50.5, 50); //explicit instantiation with the discipline
+    cout << result1 << endl;
   }
   ```
 

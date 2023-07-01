@@ -170,14 +170,12 @@ There are three types of inheritance in C++:
   - Base class overloaded assignment operators
   - Base class friend functions
 
-* However,the derived class constructors, destructors and overloaded assignment operators can invoke the base-class versions.
-
 <br>
 <br>
 
-# Passing arguments to base class constructors
+# Illustration for concept clarity
 
-- `Derived() :Base{}, doubled_value{ 0 } ` in the below code executes the no args constructor of Base class (this sets the `value` attribute of Base class, which is now a attribute of Derived class aswell to 0) and then it'll initialise the `doubled_value` attribute to 0.
+- Consider the following class declaration to understand constructors in the context of inheritance.
 
   ```cpp
   #include <iostream>
@@ -185,50 +183,302 @@ There are three types of inheritance in C++:
 
   class Base
   {
-      int value;
   public:
-      Base() :value{ 0 } {
-          cout << "constructor of base class with no args" << endl;
+      int value;
+      int doubled_value;
+      Base() :value{ 0 } , doubled_value{0}{
+          //default constructor
+          cout << "default constructor of base class with no args" << endl;
       }
 
-      Base(int x) : value{ x } {
-          cout << "constructor of base class with an int arg" << endl;
+      Base(int val) : value{ val }, doubled_value{ val*2 }  {
+          //overloaded constructor
+          cout << "overloaded constructor of base class with an int arg" << endl;
       }
   };
 
 
   class Derived : public Base
   {
-      int doubled_value;
-
   public:
-      Derived() :Base{}, doubled_value{ 0 } {
-          cout << "constructor of derived class with no args" << endl;
+      int trippled_value;
+      Derived() :trippled_value{ 0 } {
+          //default constructor
+          cout << "default constructor of derived class with no args" << endl;
       }
 
-      Derived(int x) : Base{ x }, doubled_value{ x * 2 } {
-          cout << "constructor of derived class with one arg" << endl;
+      Derived(int val) : trippled_value{ val * 3 } {
+          //overloaded constructor
+          cout << "overloaded constructor of derived class with one arg" << endl;
       }
   };
+  ```
+
+* Now if we create a Derived Object with no arguments, then the compiler will first call the default constructor (no args) of the Base class and then the default constructor (no args) of the Derived class as shown here
+
+  ```cpp
+  int main()
+  {
+      Derived dobj;
+      cout << dobj.trippled_value << endl;
+      cout << dobj.doubled_value << endl;
+      cout << dobj.value << endl;
+  }
+  //default constructor of base class with no args
+  //default constructor of derived class with no args
+  //0
+  //0
+  //0
+  ```
+
+* When we create a Derived object with an argument, the defualt constructor (no args) of Base class is called first (NOT the overloaded constructor of Base class) and then the overloaded class constructor of Derived Class is executed as shown here:
+
+  ```cpp
+  int main()
+  {
+      Derived dobj(30);
+      cout << dobj.trippled_value << endl;
+      cout << dobj.doubled_value << endl;
+      cout << dobj.value << endl;
+
+  }
+
+  //default constructor of base class with no args
+  //overloaded constructor of derived class with one arg
+  //90
+  //0
+  //0
+  ```
+
+<br>
+
+## Invoking Overloaded Base Class Constructors
+
+- However,the derived class constructors, destructors and overloaded assignment operators can invoke the base-class versions and arguments can also be passed.
+
+- Here we are invoking the overloaded constructor of Base class in the overloaded constructor of Derived class, As always the Base part is executed before the Derived Part.
+
+  ```cpp
+  /*
+  modified (invoking Base class from derived calss) class definiton
+
+  Derived(int val) : Base{val}, trippled_value{ val * 3 } {
+      //overloaded constructor
+      cout << "overloaded constructor of derived class with one arg" << endl;
+  }
+  */
 
 
   int main()
   {
-          Base base_obj1;
-          Base base_obj2{ 100 };
-
-          Derived derived_obj1;
-          Derived derived_obj2{ 200 };
+      Derived dobj(30);
+      cout << dobj.trippled_value << endl;
+      cout << dobj.doubled_value << endl;
+      cout << dobj.value << endl;
 
   }
 
-
-  /*
-  constructor of base class with no args
-  constructor of base class with an int arg
-  constructor of base class with no args
-  constructor of derived class with no args
-  constructor of base class with an int arg
-  constructor of derived class with one arg
-  */
+  //overloaded constructor of base class with an int arg
+  //overloaded constructor of derived class with one arg
+  //90
+  //60
+  //30
   ```
+
+<br>
+<br>
+
+# Copy/Move constructors and overloaded assignment operator in context of inheritance
+
+- Consider the following class definition for the illustration
+
+  ```cpp
+  #include <iostream>
+  using namespace std;
+
+  class Base
+  {
+  public:
+      int value;
+      int doubled_value;
+      Base() :value{ 0 } , doubled_value{0}{
+          //default constructor
+          cout << "default constructor of base class with no args" << endl;
+      }
+
+      Base(int val) : value{ val }, doubled_value{ val*2 }  {
+          //overloaded constructor
+          cout << "overloaded constructor of base class with an int arg" << endl;
+      }
+
+      Base(const Base& other) :value{ other.value }, doubled_value{ other.doubled_value }{
+          //copy constructor
+          cout << "copy constructor of base class" << endl;
+      }
+
+      Base& operator = (const Base& rhs) {
+          cout << "overloaded copy assignment of base class" << endl;
+          //overloaded copy assigment operator
+          if (this == &rhs) {
+              return *this;
+          }
+          value = rhs.value;
+          doubled_value = rhs.doubled_value;
+          return *this;
+      }
+  };
+
+
+  class Derived : public Base
+  {
+  public:
+      int trippled_value;
+      Derived() :trippled_value{ 0 } {
+          //default constructor
+          cout << "default constructor of derived class with no args" << endl;
+      }
+
+      Derived(int val) : Base{val} , trippled_value { val * 3 } {
+          //overloaded constructor
+          cout << "overloaded constructor of derived class with one arg" << endl;
+      }
+
+      Derived(const Derived& other) : Derived{other.value} {
+          //copy constructor
+          cout << "copy constructor of derived class" << endl;
+      }
+
+      Derived& operator=(const Derived& rhs) {
+          cout << "overloaded copy assignment of derived class" << endl;
+          //overloaded copy assignment operator
+          if (this == &rhs) {
+              return *this;
+          }
+          trippled_value = rhs.trippled_value;
+          return *this;
+      }
+  };
+  ```
+
+* Consider the case of copy constructor
+
+  ```cpp
+  int main()
+  {
+      Derived obj(30);
+      cout << obj.value << endl;          //30
+      cout << obj.doubled_value << endl;  //60
+      cout << obj.trippled_value << endl; //90
+
+
+      Derived obj2{ obj };        //copy constructor
+      cout << obj2.value << endl;
+      cout << obj2.doubled_value << endl;
+      cout << obj2.trippled_value << endl;
+  }
+
+  //overloaded constructor of base class with an int arg
+  //overloaded constructor of derived class with one arg
+  //30
+  //60
+  //90
+
+  //overloaded constructor of base class with an int arg
+  //overloaded constructor of derived class with one arg
+  //copy constructor of derived class
+  //30
+  //60
+  //90
+  ```
+
+* Now consider the case of overloaded assignment operator
+
+  ```cpp
+  int main()
+  {
+      Derived obj(30);
+      cout << obj.value << endl;          //30
+      cout << obj.doubled_value << endl;  //60
+      cout << obj.trippled_value << endl; //90
+
+
+      Derived obj2{ obj };        //copy constructor
+      cout << obj2.value << endl;
+      cout << obj2.doubled_value << endl;
+      cout << obj2.trippled_value << endl;
+
+
+      obj = obj2;  //overloaded copy assignment
+      cout << obj.value << endl;          //30
+      cout << obj.doubled_value << endl;  //60
+      cout << obj.trippled_value << endl; //90
+  }
+
+  //overloaded constructor of base class with an int arg
+  //overloaded constructor of derived class with one arg
+  //30
+  //60
+  //90
+
+  //overloaded constructor of base class with an int arg
+  //overloaded constructor of derived class with one arg
+  //copy constructor of derived class
+  //30
+  //60
+  //90
+
+  //overloaded copy assignment of derived class
+  //30
+  //60
+  //90
+  ```
+
+<br>
+<br>
+
+# Redefining Base Class Methods
+
+- Derived classes can not only invoke Base class methods but also override or redefine base class methods.
+
+  ```cpp
+  #pragma once
+  #include <iostream>
+  using namespace std;
+
+  class Account {
+
+  public:
+      double balance;
+      Account() :balance{ 0 }
+      {
+      }
+      void deposit(double amount)
+      {
+          balance += amount;
+      }
+  };
+
+  class SavingsAccount : public Account {
+  public:
+      void deposit(double amount)
+      {
+          amount += (amount * 0.1);
+          Account::deposit(amount);
+      }
+  };
+
+  int main()
+  {
+      SavingsAccount mine;
+      mine.deposit(100);
+      cout << mine.balance << endl;		//110 because deposite of SavingsAccount class is executed
+  }
+  ```
+
+<br>
+<br>
+
+# Multiple Inheritance
+
+> Haven't studied this, from what I have heard it's better to avoid this XD <br>
+> <br>

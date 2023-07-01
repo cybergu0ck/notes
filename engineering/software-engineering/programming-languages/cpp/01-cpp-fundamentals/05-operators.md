@@ -7,6 +7,14 @@
 <br>
 <br>
 
+# Address of Operator (&)
+
+- & is used as Address of Operator when
+- When & is used as the "address-of" operator, as in &variable, it returns a pointer to the memory address of the variable. The resulting data type is a pointer type.
+
+<br>
+<br>
+
 # Arithmetic Operators
 
 | Operator | Operation          |
