@@ -1,33 +1,3 @@
-# STL
-
-- A library of powerful, reusable, adaptable, generic classes and functions.
-- It is implemented using C++ templates.
-- It implements common data structures and algorithms.
-- STL has 3 main components:
-
-  1. **Containers** : Collection of objects or primitive types (array, vector, deque, stack, set, map etc).
-
-     - Types of containers provided by STL are:
-       1. Sequence containers : array, vector, list, forward_list, deque
-       1. Associative containers : set, multi set, map, multi map
-       1. Container adapters : stack, queue, priority queue
-
-  1. **Algorithms** : Functions for processing sequences of elements from containers. (find, max, count, accumulate, sort etc)
-
-  1. **Iterators** : Generate sequences of elements from containers. (forward, reverse, by value, by reference, constant etc)
-
-     - Types of iterators provided by STL
-
-       1. Input iterators : from the container to the program.
-       1. Output iterators : from the program to the container.
-       1. Forward iterators : Navigate one item at a time in one direction.
-       1. Bi-directional iterators : Navigate one item at a time both directions.
-       1. Random access iterators : Directly access a container item.
-
-<br>
-<br>
-<br>
-
 # Generic Programming with macros
 
 - This is not a good practice but must be known to deal with legacy C++ code (a lot of it is out there)
@@ -227,73 +197,202 @@
   }
   ```
 
-* Another example with overloading << operators
-
-  ```cpp
-  #include <iostream>
-  #include <string>
-
-  template <typename T1, typename T2>
-
-  void display(T1 a, T2 b)
-  {
-      std::cout << a << " " << b << std::endl;
-  }
-
-  struct Person
-  {
-      std::string name;
-      int age;
-  };
-
-  //overloadin the << operator (hence it is kept outside the Person class)
-  std::ostream& operator<<(std::ostream& os, const Person& p)
-  {
-      os << p.name;
-      return os;
-  }
-
-  int main()
-  {
-      Person p1{ "Curly", 19};
-      Person p2{ "Moey", 25 };
-      display(p1, p2);        //Curly Moey
-  }
-  ```
-
 <br>
 <br>
 <br>
 
 # Generic programming with class templates
 
-- It is similar to template functions
+- We can use templates to create class objects. The syntax can be difficult to remember, so keep reviewing:
 
   ```cpp
   #include <iostream>
-  #include <string>
 
-  template <typename T>
-
-  class Item
+  template <typename T=int>
+  class MyClass
   {
-  private:
-    std::string name;
-    T value;  //this can be of any type as long as it supports the methods and operations
+    T a;
   public:
-    Item(std::string name_value, T value_value) : name{ name_value }, value{ value_value } {};
-    std::string get_name() { return name; }
-    T get_value() { return value; }
+    MyClass(T);
+    void add_one();
   };
+
+  template <typename T> MyClass<T>::MyClass(T x) : a{ x }
+  {
+    //check out the syntax for defining the functions outside the decalration!
+  }
+
+  template <typename T> void MyClass<T>::add_one()
+  {
+    std::cout << "The data attribute " << a  << " is of type " << typeid(T).name() << ". Adding 1 results in " << a + 1 << std::endl;
+  }
+
 
   int main()
   {
-    Item<int> first{ "first", 10 };		//we must specify the template type, here it is the second argument 10, an int
-    std::cout << first.get_value() << std::endl;		//10
+    MyClass<double> obj1{ 69.69 };
+    obj1.add_one();
 
-    Item <Item<std::string>> item_in_item{"item_name", { "inner_item_name", "inner_item_value" }};
-    std::cout << item_in_item.get_name() << std::endl;		//inner_name
-    std::cout << item_in_item.get_value().get_name() << std::endl;	//inner_item_name
-    std::cout << item_in_item.get_value().get_value() << std::endl;	//inner_item_value
+    MyClass<> obj2{ 21 };	//int is default, see the template declaration line at the top
+    obj2.add_one();
+
+    MyClass obj3{ 12.4f };	//C++17 standard
+    obj3.add_one();
+
+  }
+
+  //The data attribute 69.69 is of type double.Adding 1 results in 70.69
+  //The data attribute 21 is of type int.Adding 1 results in 22
+  //The data attribute 12.4 is of type float.Adding 1 results in 13.4
+  ```
+
+* We can specalise a member function for a specific data type like we did with function templates.
+
+  ```cpp
+  #include <iostream>
+
+  template <typename T=int>
+  class MyClass
+  {
+    T a;
+  public:
+    MyClass(T);
+    void add_one();
+  };
+
+  template <typename T> MyClass<T>::MyClass(T x) : a{ x }
+  {
+    //check out the syntax for defining the functions outside the decalration!
+  }
+
+  template <typename T> void MyClass<T>::add_one()
+  {
+    std::cout << "The data attribute " << a  << " is of type " << typeid(T).name() << ". Adding 1 results in " << a + 1 << std::endl;
+  }
+
+
+  //specialised member function for char type
+  template<> void MyClass<char>::add_one()
+  {
+    std::cout << " Cannot use this method for char type" << std::endl;
+  }
+
+
+  int main()
+  {
+    MyClass<double> obj1{ 69.69 };
+    obj1.add_one();
+
+    MyClass<char> obj2{ 'x' };
+    obj2.add_one();
+
+  }
+
+  //The data attribute 69.69 is of type double.Adding 1 results in 70.69
+  //Cannot use this method for char type
+  ```
+
+* We can specialise the entire class for a specific data type. Note the block comment in the code.
+
+  ```cpp
+  #include <iostream>
+
+  template <typename T=int>
+  class MyClass
+  {
+    T a;
+  public:
+    MyClass(T);
+    void add_one();
+  };
+
+  template <typename T> MyClass<T>::MyClass(T x) : a{ x }
+  {
+    //check out the syntax for defining the functions outside the decalration!
+  }
+
+  template <typename T> void MyClass<T>::add_one()
+  {
+    std::cout << "The data attribute " << a  << " is of type " << typeid(T).name() << ". Adding 1 results in " << a + 1 << std::endl;
+  }
+
+  /*
+  - The entire class can be specialised for a specific data type.
+  - This class template can have entirely new data attributes and member functions. (It's like an new class)
+  - Creating a seperate new class doesn't make sense as we need the above class to support a data type.
+  - The definition and declaration must be inside the class itself.
+  */
+
+  template <>
+  class MyClass<char>
+  {
+    char c;
+  public:
+    MyClass(char x) : c{ x }
+    {
+      //definition and declartion must be inside this class only when specialising entire class!
+    }
+
+    void specialised_foo()
+    {
+      std::cout << "specialised foo called" << std::endl;
+    }
+  };
+
+
+  int main()
+  {
+    MyClass<double> obj1{ 69.69 };
+    obj1.add_one();
+
+    MyClass<char> obj2{ 'x' };
+    obj2.specialised_foo();
+
+  }
+
+  //The data attribute 69.69 is of type double.Adding 1 results in 70.69
+  //specialised foo called
+  ```
+
+* We can forbid the class template to support a given type. In traditional C++, it is done by making the constructor in the specialised class as private. With Modern C++, we can use the delete keyword.
+
+  ```cpp
+  #include <iostream>
+
+  template <typename T=int>
+  class MyClass
+  {
+    T a;
+  public:
+    MyClass(T);
+    void add_one();
+  };
+
+  template <typename T> MyClass<T>::MyClass(T x) : a{ x }
+  {
+    //check out the syntax for defining the functions outside the decalration!
+  }
+
+  template <typename T> void MyClass<T>::add_one()
+  {
+    std::cout << "The data attribute " << a  << " is of type " << typeid(T).name() << ". Adding 1 results in " << a + 1 << std::endl;
+  }
+
+
+  template <>
+  class MyClass<char>
+  {
+    char c;
+  public:
+    MyClass() = delete;   //This is Modern C++
+  };
+
+
+  int main()
+  {
+    MyClass<double> obj1{ 69.69 };
+    obj1.add_one();
+
+    //MyClass<char> obj2{ 'x' };	//error
   }
   ```
