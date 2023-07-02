@@ -1,7 +1,26 @@
 # Dynamic Memory Allocation
 
-- In C++, there are two types of memory: stack memory and heap memory. Stack memory is used for static memory allocation and heap memory is used for dynamic memory allocation.
+Dynamic memory allocation refers to the process of allocating memory at runtime, rather than at compile time.
 
+<br>
+<br>
+
+# Dynamic Memory Allocation in C vs C++
+
+- The difference is listed here
+  | C | C++ |
+  | ------- | --------------------------------- |
+  | malloc | new , new(nothrow), placement new |
+  | calloc | new[ ] |
+  | realloc | - |
+  | free | delete, delete[ ] |
+
+<br>
+
+- It is efficient to use malloc and free (over new and delete) to allocate and deallocate dynamic memory for standard types and C structs.
+- It is ideal to use new and delete (over malloc and free) to allocate and deallocate dynamic memory for class objects and C++ structs as they will implicitely call the constructor and destructor (respectively) if any.
+
+<br>
 <br>
 
 ## Allocating heap memory using new keyword
@@ -46,7 +65,7 @@
 
 # Returning dynamically allocated memory from a function
 
-* This can be done but it should be freed up after use!
+- Note that returning a pointer type is returned as a rvalue.
 
   ```cpp
   int* create_array(int size, int default_value);
@@ -59,7 +78,7 @@
 
 
   int* create_array(int size, int default_value = 0) {
-    
+
     int* new_storage = new int[size];
 
     for (int i{ 0 }; i < size; i++) {

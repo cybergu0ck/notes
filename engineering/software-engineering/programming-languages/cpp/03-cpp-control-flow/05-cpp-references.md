@@ -229,13 +229,23 @@
 
   int main()
   {
-    num = indirect() +10; //can be used in expressions
+    num = indirect() + 10; //can be used in expressions
     std::cout << num << std::endl;
 
-    indirect() = 10; //error, rvalue cannot be assigned
+    //indirect() = 10; //error, rvalue cannot be assigned
+
+
+    //The following code can be used to check if something is lvalue or rvalue (However this is from GPT3)
+    if (std::is_lvalue_reference<decltype(indirect())>::value) {
+      std::cout << "The returned type is an lvalue\n";
+    }
+    else {
+      std::cout << "The returned type is is an rvalue\n";
+    }
   }
 
   //15
+  //The returned type is is an rvalue
   ```
 
 * A function with return type of a pointer (to a data type) is returned as rvalue.
@@ -248,17 +258,27 @@
 
   int* indirect()
   {
-    return &num;
+      return &num;
   }
 
   int main()
   {
-    indirect() = &another; //error, indirect() returns pointer as rvalue
-    *indirect() = 10; //dereferencing the pointer gives lvalue
-    std::cout << num;
+      //indirect() = &another; //error, indirect() returns pointer as rvalue
+      *indirect() = 10; //dereferencing the pointer gives lvalue
+      std::cout << num <<std::endl;
+
+
+      //The following code can be used to check if something is lvalue or rvalue (However this is from GPT3)
+      if (std::is_lvalue_reference<decltype(indirect())>::value) {
+          std::cout << "The returned type is an lvalue\n";
+      }
+      else {
+          std::cout << "The returned type is an rvalue\n";
+      }
   }
 
   //10
+  //The returned type is an rvalue
   ```
 
 <br>
@@ -283,7 +303,16 @@
   {
     indirect() = 10;    //here
     std::cout << num << std::endl;
+
+      //The following code can be used to check if something is lvalue or rvalue (However this is from GPT3)
+      if (std::is_lvalue_reference<decltype(indirect())>::value) {
+          std::cout << "The returned type is an lvalue\n";
+      }
+      else {
+          std::cout << "The returned type is an rvalue\n";
+      }
   }
 
   //10
+  //The returned type is an lvalue
   ```
