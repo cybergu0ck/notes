@@ -1,48 +1,63 @@
-# Keyboard Shortcuts
+# Accessing the memory viewer panel
 
-| Description            | Key binding         |
-| ---------------------- | ------------------- |
-| Delete All Breakpoints | `Ctrl + Shift + F9` |
+- Insert breakpoints and run debugging.
+- It can be found under Debug > Windows > Memory
+- To see the value in a memory address, insert the address (hex notation, with prefix 0x)
 
-# How to toggle between solution view and Folder view in VS
+<br>
 
-- Look at the top answer in [stack overflow](https://stackoverflow.com/questions/54997800/solution-explorer-opens-in-folders-view)
+### Illustrations
+
+- Viewing int values in memory
+
+  ```cpp
+  int main()
+  {
+      int num = 100;
+      cout << &num << endl;   //00CFFB00
+      cout << "This is a dummy expression so that debugger stays here while I view memory." << endl;
+  }
+  ```
+
+  ![image](../_assets/mem1.png)
+
+  - In the memory view if we input 0x00CFFB0 (the address we got from cout), we can see that the value **64** is present, 64 is the hexadecimal here and it is 100 in decimal.
+  - We can also observe that since int takes up 4 bytes of memory, we see that 3 bytes beside **64** are 00. i.e. 64 00 00 00.
 
 <br>
 <br>
 
-# Remove all Breakpoints
+- Viewing string values.
 
--
+  ```cpp
+  int main()
+  {
+      string name = "Stevie";
+      cout << &name << endl;   //006FF87C
+      cout << "This is a dummy expression so that debugger stays here while I view memory." << endl;
+  }
+  ```
 
-<br>
-<br>
+  ![](../_assets/mem2.png)
 
-# Disable specific warning
-
-- Can be done in multiple ways.
-
-## Using the VS IDE and solution explorer
-
-- Open the properties page by Project > Properties >
-- Make sure to select the correct Configuration (Debug, Release) and correct Platform (Win32, x64...)
-- Then find Configuration Properties > C/C++ > Advanced > Disable Specific warning
-- Make sure to enable _Inherit from parent or project details option_
-- Enter only the warning number!
+  - After entering the memory address of name, we can see "Stevie" on the right side of the memory panel.
 
 <br>
 <br>
 
-# Keyboard customization
+- Viewing pointer values (address) in the memory
 
-- Done in Tools > Options > Environment > Keyboard.
-- Make sure to use the new shortcut in "Text Editor" and not "Global"
+  ```cpp
+  int main()
+  {
+      int num = 100;
+      int* ptr = &num;
+      cout << ptr << endl;  //00AFF7D0
+      cout << &ptr << endl; //00AFF7C4
+      cout << "This is a dummy expression so that debugger stays here while I view memory." << endl;
+  }
+  ```
 
-* Set the follwing (These bindings perform the same action in my code editors)
+- ![](../_assets/mem3.png)
 
-  | Command                    | Binding                  |
-  | -------------------------- | ------------------------ |
-  | Edit.MoveSelectedLinesDown | Alt + Down Arrow         |
-  | Edit.Duplicate             | Alt + Shift + Down Arrow |
-  | Edit.ToggleLineComment     | Ctrl + /                 |
-  | Edit.ToggleBlockComment    | Ctrl + Shift + /         |
+  - If we observe the value stored in the address of the pointer ptr (0x00AFF7C4), we see the address of _num_ but kinda backwards (d0 f7 af 00), not aware more than this!
