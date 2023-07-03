@@ -139,7 +139,7 @@
     }
   };
 
-  int MyClass::a;			//Initialised to zero by default
+  int MyClass::a;			//Initialised to zero by default, This can be done in the source file (in case of h and cpp files)
   //int MyClass::a =10;	//Custom Initialisation
 
   int main()

@@ -299,3 +299,86 @@ void Account::set_balance(double bal)
   ```
 
 * The above problem can be solved by making the x,y attributes as `mutable` like `mutable int x,y;` in the class declaration
+
+<br>
+<br>
+
+# Seperating Specification from Implementation (Update this section of the notes)
+
+- We can seperate the class specification (declaration) from the implementation using header files
+  - .h file for class declaration
+  - .cpp file for the class implementation
+
+<br>
+
+- Consider the following header file that contains the declaration
+
+  ```h
+  //account.h
+
+  #pragma once
+
+  class Account {
+  private:
+      double balance;
+  public:
+      double get_balance();
+      void set_balance(double);
+  };
+  ```
+
+- the following source file contains the implementation
+
+  ```cpp
+  //account.cpp
+
+  #include <iostream>
+  #include "account.h"   //include the header!
+  using namespace std;
+
+
+  void Account::set_balance(double bal) {
+      balance = bal;
+  }
+
+  double Account::get_balance() {
+      return balance;
+  }
+
+
+  int main()
+  {
+      Account mine;
+      mine.set_balance(100);
+      cout << mine.get_balance() << endl;
+  }
+  ```
+
+<br>
+
+## Include Guards
+
+- without include guards, the compiler will see the declaration everytime the header file is included in a file. (this is an error)
+- there are two kinds:
+
+  1. using `ifndef` directive preprocessor
+
+     ```h
+     #ifndef _ACCOUNT_H_  //this can be any unique name
+     #define _ACCOUNT_H_
+
+     //account class declaration
+
+     #endif
+     ```
+
+  1. using `pragma` directive preprocessor
+
+     ```h
+     #pragma once
+
+     //account class declaration
+     ```
+
+<br>
+<br>

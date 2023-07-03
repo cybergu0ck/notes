@@ -316,16 +316,19 @@
 # Copy Constructors
 
 - A constructor that takes a single object of its own kind as a parameter by reference is called a copy constructor.
-- Copy constructors are needed when a new object under construction is being initialized with an object of its own kind.
-- Copy constructors are also called when objects are passed into functions as parameters, because pass by value is the default case in C++.
-
+- Copy constructors are needed when a new object under construction is being initialized with an existing object .
+- Copy constructors are called when objects are passed into functions as parameters, because by default objects are passed by value.
 - If there is no copy constructor defined in the class and the class objects happens to copy construct objects, then the compiler would assume a copy constructor which will perform member-to-member copy (bitwise copy) and will also be inlined.
-
-* It is good practice to provide the copy constructor with a const reference parameter.
+- It is good practice to provide the copy constructor with a const reference parameter.
 
 <br>
 
-- Illustration of copy construction
+## Shallow Copy Constructor
+
+- Shallow copy is member to member copy, meaning all the data attributes of the object is just copied into the new one.
+- If the class has raw pointers then the shallow copy constructor is not ideal as it leads to memory leaks and dangling pointers!
+
+* Illustration of copy constructor performing shallow copy
 
   ```cpp
   #include <iostream>
@@ -372,7 +375,7 @@
   //copy constructor called by anonymous
   ```
 
-- We can write the copy constructor using delegated constructor like:
+* We can write the copy constructor using delegated constructor like:
 
   ```cpp
   MyClass::MyClass(const MyClass& source) : MyClass{source.a, source.b}
@@ -382,6 +385,214 @@
   ```
 
 > Is this bad as it will increase the number of function calls? DOUBT
+
+<br>
+
+## Deep Copy Constructor
+
+- This image shows why shallow copy is bad when a class has pointer data attributes.
+
+  ```cpp
+  #include <iostream>
+
+  class MyClass {
+      int* ptr;
+  public:
+      MyClass(int value=0){
+          ptr = new int;
+          *ptr = value;
+      }
+
+      MyClass(const MyClass& source) : ptr{ source.ptr } {
+          //this is performing shallow copy as it is mearly copying the data attributes.
+      }
+      ~MyClass()
+      {
+          delete ptr;
+      }
+  };
+
+  int main()
+  {
+      MyClass obj1;
+      MyClass obj2{ obj1 };
+  }
+
+  //run time error
+  ```
+
+> Add Image
+
+- Illustration of copy constructor performing deep copy.
+
+  ```cpp
+  #include <iostream>
+
+  class MyClass {
+      int* ptr;
+  public:
+      MyClass(int value=0){
+          ptr = new int;
+          *ptr = value;
+      }
+
+      MyClass(const MyClass& source) :MyClass{*(source.ptr)} {
+          //this is performing deep copy as it is creating a new heap instance
+      }
+      ~MyClass()
+      {
+          delete ptr;
+      }
+  };
+
+  int main()
+  {
+      MyClass obj1;
+      MyClass obj2{ obj1 };
+  }
+
+  //no errors
+  ```
+
+<br>
+
+- We can write the above copy constructor without using the delegated constuctor as follows:
+
+  ```cpp
+  MyClass(const MyClass& source)
+  {
+      ptr = new int;
+      *ptr = *source.ptr
+  }
+  ```
+
+<br>
+<br>
+
+# Move constructors (Update this section of notes)
+
+> checkout the notes for l values, r values, l value references and r value references. <br>
+
+<br>
+
+- If we donot define a move constructor, the compiler will use the copy constructor instead! this results in lot of memory when dealing with large amounts if data.
+- Move constructors moves an object instead of copying it. It copies the address of the resource from source to the current object and nulls out the pointer in the source pointer.
+- This can be a significant performance improvement.
+- Move constructors are called when an object is created from a temporary object (**r values**).
+
+* The definition for move constructor is similar to that of copy construtor. `const` is removed becuase we have to null the source pointer and r value references are used in parameters instead of l value references.
+
+  ```cpp
+  type(const type &source);   //copy constructor definition
+  type(type &&source);        //move constructor definiton
+  ```
+
+* The following code doesn't have a move constructor defined, hence the compiler will use the copy constructor instead when class objects are created to pass into functions. This is not memory efficient.
+
+  ```cpp
+  #include <iostream>
+  #include <vector>
+  using namespace std;
+
+  class Player {
+
+  public:
+      std::string name;   //string
+      int* xp;            //raw pointer
+      Player(string name_value = "None", int xp_val =0); //constructor prototype (notice we have used default values)
+      Player(const Player& source);           // copy constructor prototype
+
+  };
+
+  //constructor definition
+  Player::Player(string name_value, int xp_val) : name{ name_value }
+  {
+      xp = new int;
+      *xp = xp_val;
+      //initialises the name  and xp attribute
+  }
+
+  //copy constructor definition (must perform deep copy as raw pointer is present in class)
+  Player::Player(const Player& source) : Player{ source.name, *source.xp }
+  {
+      cout << "copy constructor is called for : " << source.name << endl;
+  }
+
+
+  int main()
+  {
+      vector <Player> vec;
+      vec.push_back(Player{ "hero" });  //These Player objects are temporary objects i.e. r values
+      vec.push_back(Player{ "bad_guy" });
+  }
+
+  /*
+  copy constructor is called for : hero
+  copy constructor is called for : bad_guy
+  copy constructor is called for : hero
+
+  here the hero copy constructor is called more than once because of vector behaviour
+  */
+
+  ```
+
+<br>
+
+- Since the objects being passed into functions are r value (temporary), we can make it efficient by defining a move constructor which will override the copy constructor.
+- We must use `noexcept` in function prototype and definiton in visual studio, for unkown reason.
+
+  ```cpp
+  #include <iostream>
+  #include <vector>
+  using namespace std;
+
+  class Player {
+
+  public:
+      std::string name;   //string
+      int* xp;            //raw pointer
+      Player(string name_value = "None", int xp_val =0); //constructor prototype (notice we have used default values)
+      Player(const Player& source);           // copy constructor prototype
+      Player(Player&& source)noexcept;                // move constructor prototype
+
+  };
+
+  //constructor definition
+  Player::Player(string name_value, int xp_val) : name{ name_value }
+  {
+      xp = new int;
+      *xp = xp_val;
+      //initialises the name  and xp attribute
+  }
+
+  //copy constructor definition (must perform deep copy as raw pointer is present in class)
+  Player::Player(const Player& source) : Player{ source.name, *source.xp }
+  {
+      cout << "copy constructor is called for : " << source.name << endl;
+  }
+
+
+  //move constructor definition (must null the source raw pointer as raw pointers is present in the class)
+  Player::Player(Player&& source)noexcept : Player{ source.name, *source.xp }
+  {
+      source.xp = nullptr;
+      cout << "move constructor is called for : " << source.name << endl;
+  }
+
+
+  int main()
+  {
+      vector <Player> vec;
+      vec.push_back(Player{ "hero" });  //These Player objects are temporary objects i.e. r values
+      vec.push_back(Player{ "bad_guy" });
+  }
+
+  /*
+  move constructor is called for : hero
+  move constructor is called for : bad_guy
+  move constructor is called for : hero
+  */
+  ```
 
 <br>
 <br>
