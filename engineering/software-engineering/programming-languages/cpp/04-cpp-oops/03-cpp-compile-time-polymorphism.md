@@ -5,6 +5,24 @@ Polymorphism is the ability to use the same code to operate on different types o
 <br>
 <br>
 
+# Types of polymorphism in C++
+
+- C++ supports two types of polymorphism.
+  1. Compile Type / Early Binding / Static Binding
+  2. Run Time / Late Binding / Dynamic Binding
+
+<br>
+<br>
+
+# Compile Time Polymorphism/ Early Binding / Static Binding
+
+- Compile time polymorphism occurs before the program is run i.e. during the compilation.
+- This is the default case in C++.
+- Function overloading and operator overloading are examples.
+
+<br>
+<br>
+
 # Naming Convention
 
 ## C++ naming convention

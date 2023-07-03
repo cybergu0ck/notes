@@ -1,30 +1,72 @@
-# Inheritence
+# Inheritance
 
-Inheritance is a powerful feature of object-oriented programming that allows us to create new classes from existing classes. The new class, called the derived class, inherits the properties and behaviors of the existing class, called the base class. This allows us to reuse code and reduce the amount of code we need to write.
+- Creating new classes by using the code present in already defined classes, extending the data.
+- Inheritance facilitates **_IS-A relationship_**, A Derived object IS A Base object.
+
+* The construction of an derived class object will always be the sum of the sizes of all non-static data members of the base class and the sum size of all non-static data members of the derived class. It does not matter which access specifier we are using at the time of inheritance.
+* The Derived Class has all the data members of the Base class and Access Specifiers deals with only access to those data.
+
+<br>
+<br>
+
+# Base Class and Derived Class
+
+## Base Class
+
+- The class being extended or inherited from.
+- Base Classes are also known as Parent Class or Super Class.
+
+<br>
+
+## Derived Class
+
+- The class being created by inheriting attributes and methods from the base class.
+- Derived Classes are also known as Child Class or Sub Class.
+
+<br>
+<br>
+
+# Types of Inheritance
+
+## Based on the Base Class
 
 - It is **Single Inheritence** if a new class is created from another 'single' class.
 - It is **Multiple Inheritence** if a new class is created from two or more other classes.
 
-There are three types of inheritance in C++:
+<br>
+<br>
 
-1. Public inheritance: The derived class inherits all the public members of the base class. (Establishes a "is a" relationship)
-1. Protected inheritance: The derived class inherits all the public and protected members of the base class. (Establishes "has a" relationship)
-1. Private inheritance: The derived class inherits all the private members of the base class. (Establishes "has a" relationship)
+## Based on the access specifiers
+
+Different behaviour of inheritance is facilitated using the access specifiers in C++.
+
+### Private Inheritance
+
+- syntax: `class Derived : private Base`
+- The base class private members are not accessible in the derived class.
+- The protected and public members of the base, if any are accessible in the derived class as 'private' members.
 
 <br>
 
-## Base Class / Parent Class / Super Class
+### Protected Inheritance
 
-- The class being extended or inherited from.
-
-<br>
-
-## Derived Class / Child Class / Sub Class
-
-- The class being created by inheriting attributes and methods from the base class.
+- syntax: `class Derived : protected Base`
+- The base class private members are not accessible in the derived class.
+- The protected and public members of the base, if any are accessible in the derived class as 'protected' members.
 
 <br>
+
+### Public Inheritance
+
+- syntax: `class Derived : public Base`
+- The base class private members are not accessible in the derived class.
+- The protected members of the base, if any are accessible in the derived class as 'protected' members.
+- The public members of the base, if any are accessible in the derived class as 'public' members.
+
 <br>
+<br>
+
+# Implementation
 
 - The syntax for inheritance is as shown below
 
@@ -288,6 +330,77 @@ There are three types of inheritance in C++:
 <br>
 <br>
 
+# Compiler generating constructors
+
+## In the context of Inheritance
+
+- If the derived class doesnt have any constructor and the base class has one, then the compiler will generate one for the derived class.
+
+  ```cpp
+  #include <iostream>
+  using namespace std;
+
+  class Base {
+      int i;
+  public:
+      Base() :i{ 0 } {
+          cout << "Base class default constructor called" << endl;
+      }
+  };
+
+  class Derived : public Base {
+  public:
+      //no constructors for derived class, yet the compiler will generate one as base has one
+  };
+
+  int main()
+  {
+      Derived obj;
+  }
+
+  //Base class default constructor called
+  ```
+
+<br>
+
+## In the context of containment
+
+- If the derived class has a Base class object as a data attribute, The compiler will generate a constructor if we have not defined one.
+
+  ```cpp
+  #include <iostream>
+  using namespace std;
+
+  class Base {
+      int i;
+  public:
+      Base() :i{ 0 } {
+          cout << "Base class default constructor called" << endl;
+      }
+  };
+
+  class Derived : public Base {
+      Base b;	//Derived HAS-A Base (containment)
+  public:
+      //no constructors for derived class, yet the compiler will generate one
+  };
+
+  int main()
+  {
+      Derived obj;
+  }
+
+  //Base class default constructor called
+  //Base class default constructor called
+  ```
+
+<br>
+
+## In the context of Hybrid Inheritance
+
+<br>
+<br>
+
 # Copy/Move constructors and overloaded assignment operator in context of inheritance
 
 - Consider the following class definition for the illustration
@@ -480,5 +593,4 @@ There are three types of inheritance in C++:
 
 # Multiple Inheritance
 
-> Haven't studied this, from what I have heard it's better to avoid this XD <br>
-> <br>
+> Haven't studied this, from what I have heard it's better to avoid this XD <br> > <br>
