@@ -30,7 +30,7 @@
 
   class Derived: public Base {
   public:
-      virtual void say_hello()
+      void say_hello()
       {
           cout << "Hello, I am a Derived class object " << endl;
       }
@@ -73,23 +73,13 @@
       {
           cout << "Hello, I am a Base class object " << endl;
       }
-
-      ~Base()
-      {
-          cout << "Base class destructor" << endl;
-      }
   };
 
-  class Derived: public Base {
+  class Derived : public Base {
   public:
-      virtual void say_hello()
+      virtual void say_hello()        //won't be overriden as
       {
           cout << "Hello, I am a Derived class object " << endl;
-      }
-
-      ~Derived()
-      {
-          cout << "Derived class destructor" << endl;
       }
   };
 
@@ -106,11 +96,8 @@
       delete d_ptr;
   }
 
-
   //Hello, I am a Base class object
   //Hello, I am a Base class object
-  //Base class destructor
-  //Base class destructor
   ```
 
 <br>
@@ -141,14 +128,14 @@
       }
   };
 
-  class Derived: public Base {
+  class Derived : public Base {
   public:
-      virtual void say_hello()
+      void say_hello()
       {
           cout << "Hello, I am a Derived class object " << endl;
       }
 
-      virtual ~Derived()
+      ~Derived()
       {
           cout << "Derived class destructor" << endl;
       }
@@ -201,12 +188,12 @@
 
   class Derived: public Base {
   public:
-      virtual void say_hello() override
+      void say_hello() override
       {
           cout << "Hello, I am a Derived class object " << endl;
       }
 
-      virtual ~Derived()
+       ~Derived()
       {
           cout << "Derived class destructor" << endl;
       }
@@ -318,7 +305,10 @@
 - A pure virtual function is a virtual function that is used to make a class abstract, is declared using the virtual keyword and '=0' in the end.
 
   ```cpp
-  virtual void function() =0; // pure virtual function declaration
+  class IShape {
+  public:
+        virtual void draw() = 0; //pure virtual function (derived classes must and should override)
+    };
   ```
 
 * _The virtual functions in the derived classes must be overidden using the `override` keyword else those derived classes will also be abstract._
@@ -326,6 +316,10 @@
 <br>
 
 > An abstract class is typically used when we want to define a common interface or behavior that derived classes must implement. <br> <br> This concept is also used when it doesn't make sense to have implementation in base class but we need implementation in concrete class. for example we can have an abstract class called Shape with pure virtual function like draw, the implementation for draw in the abstract Shape class doesn't make sense but say concrete classes derived from abstract Shape like Circle, Square etc need implementation for draw function.
+
+<br>
+
+> "Program to Abstraction and not Implementation"
 
 <br>
 
