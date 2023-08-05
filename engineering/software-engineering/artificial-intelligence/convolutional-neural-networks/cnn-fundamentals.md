@@ -22,6 +22,7 @@
 
   ![image](./_assets/1.1.png)
   ![image](./_assets/1.2.png)
+  ![image](./_assets/1.3.png)
 
 <br>
 
@@ -46,10 +47,19 @@
 ## Padding
 
 - _Padding refers to the process of adding extra surrounding pixels (zero or non zero values) to the input data before applying the convolution operation._
+
+  ![image for padding](./_assets/2.1.png)
+
 - Convolution can be performed with padding, known as **valid convolution** or without padding, known as **same convolution**.
-- Why do we need padding?
-  1. Every time the convolution is performed, we observe that the size of the convolved image is decreasing. Performing convolution many times would result in an image which is very small in size. (padding solves this, we get the convolved image of same size)
-  2. If we see carefully, we see that the pixels in the middle of the image are used many times by the filter for convolution when compared to boundary pixels, which are used only once.
+
+<br>
+
+### Why do we need padding?
+
+1. Every time the convolution is performed, we observe that the size of the convolved image is decreasing. Performing convolution many times would result in an image which is very small in size. (padding solves this, we get the convolved image of same size)
+2. If we see carefully, we see that the pixels in the middle of the image are used many times by the filter for convolution when compared to boundary pixels, which are used only once.
+
+   ![image for padding](./_assets/2.2.png)
 
 > add the image with the equation showing the padding size based on the size of the filter
 
@@ -92,11 +102,13 @@
 
 - Images we deal are generally RGB which contain 3 channels.
 
-> <br>
-> - The number of channels in the filter must equal to number of channels in the image.  <br> 
-> - The output image after convolution of RBG images (3 channel) with 3 channel filter will result in a 1 channel image (and not 3 channel!) <br> <br>
+- _The number of channels in the filter must equal to number of channels in the image._
+  ![image for conv over volume](./_assets/3.1.png)
+  ![image for conv over volume](./_assets/3.2.png)
 
-> Add image for illustration
+- The output image after convolution of RBG images (3 channel) with 3 channel filter will result in a 1 channel image (and not 3 channel!)
+
+  ![image for conv over volume](./_assets/3.3.png)
 
 <br>
 <br>
@@ -104,7 +116,10 @@
 
 # Convolution with multiple filters
 
-- When performed with multiple filters, the resulting convolved images are stacked. Hence if a RGB image is convolved with two 3 channel filters then the output convolved image will have 2 channels (1 for each filter).
+- The convolved images (from multiple filters) are stacked together to form a single image with as many channels as the number of filters used for convolution.
+
+  ![image](./_assets/4.1.png)
+  ![image](./_assets/4.2.png)
 
 - The equations, including the number of channels will be
 
@@ -114,18 +129,29 @@
 <br>
 <br>
 
-# One Layer of Convolution Network
+# Convolutional Neural Network with Single Layer
 
-> Add the image and illustration
+- After convolution operation is performed, a bias term (I am guessing a matrix with all elements equal to bias) is added to the convoled matrix.
 
-### Q
+  ![image](./_assets/5.1.png)
 
-- If we have 10 filters that are 3*3*3 in one layer of a neural network, how many parameters does that layer have.
+- Then a non linear operation (like ReLu) is performed for each convolved image
 
-  - The number of features = number of filters = 10
-  - The number of parameters = ( number of cells in the filter (including all channel) + bias ) * number of filters = ((3*3*3) + 1) * 10 = 280 paramters.
+  ![image](./_assets/5.2.png)
 
-- Notice that the number of paramters is not dependent on the dimensions of the input image but only the dimensions and the number of filters. Hence a 64*64*3 image will have the same number of parameters when the same filters are used on say a 1080*1080*3 image.
+- Finally all the convolved images (from each filter) is stacked.
+
+  ![image](./_assets/5.3.png)
+
+<br>
+<br>
+
+#### Question : If we have 10 filters that are 3\*3\*3 in one layer of a neural network, how many parameters does that layer have.
+
+- The number of features = number of filters = 10
+- The number of parameters = ( number of cells in the filter (including all channel) + bias ) \* number of filters = ((3\*3\*3) + 1) \* 10 = 280 paramters.
+
+> <br> Notice that the number of paramters is not dependent on the dimensions of the input image but only the dimensions and the number of filters. Hence a 64*64*3 image will have the same number of parameters when the same filters are used on say a 1080\*1080\*3 image. <br> <br>
 
 <br>
 <br>
@@ -133,10 +159,28 @@
 
 # Pooling layers
 
-> Add image and illustration
+- Pooling is an opeartion, the fashion of perorming is exactly similar to that of convolution (sliding filter technique) However, there is no values in the filter (because it doesn't perform the math operation like convolution) and simply outputs the max/min/average value in the overlaped window. Hence the formulas for calculating the dimensions is very similar to that of convolution.
 
-- Note that there are no parameters to train in the pooling layers, we set the hyperparameters and they are fixed.
+- In the following image, a max pooling operation is performed using a filter of size 2 and stride = 1.
+  ![image](./_assets/7.png)
 
-```
+- Pooling is performed to help computation by decreasing the size of the image and capture important features.
 
-```
+> <br> 
+> - The trainable paramters in pooling layer is zero. <br> - The hyperparameters for pooling layers are set once and they remain the same for every propogation and epcoh. <br> <br>
+
+<br>
+<br>
+<br>
+
+# Simple Convolutional Neural Network
+
+- The following image shows a simple convolutional neural network, try to understand the dimensions of the images as it goes through each layer of filters. The number of layers in the follwing illustrative CNN is three. (It is important to note that at the end of the CNN, an ANN will be present along with the Fully Connected layers)
+
+  ![image](./_assets/6.png)
+
+> Add Flattened, FC, dense layers to the above. Also include pooling layers
+
+<br>
+<br>
+<br>
