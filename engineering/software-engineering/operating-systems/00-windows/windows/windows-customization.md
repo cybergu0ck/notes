@@ -37,3 +37,15 @@
 <br>
 <br>
 <br>
+
+# Set the default startup location in git bash terminal
+
+- Refer this ![website](https://www.shellhacks.com/git-bash-change-default-directory/)
+- Basically,
+  - Open the properties of the git bash shortcut.
+  - Change the "Start in" option. The default will be `%HOMEDRIVE%%HOMEPATH%`
+  - Remove the `--cd-to-home` from the Target field.
+
+<br>
+<br>
+<br>
