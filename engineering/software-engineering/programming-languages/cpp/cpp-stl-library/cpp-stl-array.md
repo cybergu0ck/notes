@@ -30,7 +30,7 @@
 
 # useful functions
 
-## using [ ] to index values
+## using [ ] to get the value at the index
 
 - This does not perform bounce checking. Hence when an index out of bound is used the code will compile fine but fail at run time.
 
@@ -49,7 +49,7 @@
 <br>
 <br>
 
-## at()
+## at() to get the value at the index
 
 - Get the value for the specified index. This method will perform bounce checking! i.e. raises an exception at compile time itself.
 

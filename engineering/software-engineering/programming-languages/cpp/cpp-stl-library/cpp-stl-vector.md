@@ -165,5 +165,31 @@
 
 ## insert()
 
+    ```cpp
+    #include <iostream>
+    #include <vector>
+    #include <algorithm>
+
+    void display(std::vector<int> vec) {
+        std::for_each(vec.begin(), vec.end(), [](int value) {std::cout << value << " "; });		//for_each is a stl algorithm
+        std::cout << std::endl;
+    }
+
+    int main() {
+        std::vector<int> vec1{ 1,2,3,4,5,6,7 };
+        std::vector<int> vec2{ 100,200,300 };
+
+        auto iter = std::find(vec1.begin(), vec1.end(), 5);	//finds the value 5 and returns an iterator
+        if (iter != vec1.end()) {
+            vec1.insert(iter, vec2.begin(), vec2.end());
+        }
+
+        display(vec1);
+    }
+
+
+    //1 2 3 4 100 200 300 5 6 7
+    ```
+
 <br>
 <br>
