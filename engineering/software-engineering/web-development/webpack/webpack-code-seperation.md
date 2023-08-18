@@ -22,4 +22,19 @@
   }
   ```
 
+* Configure the build process by creating a `webpack.config.js` file.
+
+  ```js
+  const path = require("path");
+
+  module.exports = {
+    mode: "development",
+    entry: path.resolve(__dirname, "script.js"),
+    output: {
+      path: path.resolve(__dirname, "dist"),
+      filename: "bundle.js",
+    },
+  };
+  ```
+
 - Now, we can build the code using `npm run build`.
