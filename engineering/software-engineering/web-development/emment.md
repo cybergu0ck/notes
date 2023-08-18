@@ -15,7 +15,7 @@
 <br>
 
 - To create script tags,
-
+  ``
   ```
   script[src="<name>"]
   ```
