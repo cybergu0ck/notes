@@ -1,6 +1,10 @@
+# Python Lists
+
 - Lists are mutable.
 - Lists items can be of different data types.
 
+<br/>
+<br/>
 <br/>
 
 # Creating Lists
@@ -12,6 +16,8 @@ print(myList)
 #>[1, 'all', {'a': 1}, ('a', 'b', 1)]
 ```
 
+<br/>
+<br/>
 <br/>
 
 # Inserting Items
@@ -35,6 +41,10 @@ print(myList)
 
   #>[1, 2, 3, 4, 5, 6, 7]
   ```
+
+<br/>
+<br/>
+<br/>
 
 # Accessing Items
 
@@ -69,16 +79,17 @@ print(myList)
 
 - Accesing last item using `pop()`
 
-  ````python
+  ```python
   myList = [1, 'all', {'a':1}, ('a','b',1)]
   lastItem = myList.pop()
   print(lastItem)
 
-      #>('a', 'b', 1)
-      ```
+  #>('a', 'b', 1)
+  ```
 
-  <br/>
-  ````
+<br/>
+<br/>
+<br/>
 
 # Deleting List Items
 
@@ -115,15 +126,16 @@ print(myList)
 
 - `clear()` : to clear the entire list.
 
-      ```python
-      myList = [1,2,3,4,5,6]
-      myList.clear()
-      print(myList)
+  ```python
+  myList = [1,2,3,4,5,6]
+  myList.clear()
+  print(myList)
+  #>[]
+  ```
 
-      #>[]
-      ```
-
-  <br/>
+<br/>
+<br/>
+<br/>
 
 # Sorting Lists
 
@@ -147,6 +159,8 @@ print(myList)
   #>[1, 2, 3, 4, 5, 6]
   ```
 
+<br/>
+<br/>
 <br/>
 
 # Unpacking List
@@ -175,6 +189,8 @@ for i,j,k in myList:
 #>a b c
 ```
 
+<br/>
+<br/>
 <br/>
 
 # List Comphrehension
@@ -242,6 +258,8 @@ orint(res)
 #>['Raze', 'Raze']
 ```
 
+<br/>
+<br/>
 <br/>
 
 # list Methods
