@@ -195,18 +195,24 @@ for i,j,k in myList:
 
 # List Comphrehension
 
-```
-variable = [expression for condition]
-```
+- The template for list comprehension is:
 
-```python
-var = [x for x in range(10)]
-print(var)
+  ```
+  new_list = [new_item for item in list]    #no conditions
+  new_list = [new_item for item in list if condition]   #if condition only
+  new_list = [new_item if condition else another_item for item in list ]   #if else condition
+  ```
 
-#>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-```
+* An example of a simple list comprehension. (no condition)
 
-- Using only if inside comphrension, single if statement should follow for statement
+  ```python
+  var = [x for x in range(10)]
+  print(var)
+
+  #>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  ```
+
+- An example of a list comprehension with if condition. _The if statement should follow the for statement._
 
   ```python
   evenNums = [x for x in range(5) if x%2 ==0]
@@ -215,7 +221,7 @@ print(var)
   #>[0, 2, 4]
   ```
 
-- Using if else inside comphrensions,**_if else should lead the for statement_**
+- An example of a list comprehension with if-else condition. _The if-else statement should lead the for statement._
 
   ```python
   evenNums = [x if x%2 ==0 else 'Odd' for x in range(5)]
@@ -224,39 +230,39 @@ print(var)
   #>[0, 'Odd', 2, 'Odd', 4]
   ```
 
-## An example of a Complex list comprehension
+* An example of a complex nested list comprehension.
 
-```python
-#The conventional way
+  ```python
+  #The conventional way
 
-keyPlayers = ['Raze', 'Viper']
-teamCombinations = [['Omen','KillJoy','Neon'],['Raze', 'Breach'], ['Raze','Reyna']]
+  keyPlayers = ['Raze', 'Viper']
+  teamCombinations = [['Omen','KillJoy','Neon'],['Raze', 'Breach'], ['Raze','Reyna']]
 
-res = []
+  res = []
 
-for team in teamCombinations:
-    for player in team:
-        if player in keyPlayers:
-            res.append(player)
+  for team in teamCombinations:
+      for player in team:
+          if player in keyPlayers:
+              res.append(player)
 
-print(res)
+  print(res)
 
-#>['Raze', 'Raze']
-```
+  #>['Raze', 'Raze']
+  ```
 
-```python
-# The same thing using list comprehension
+  ```python
+  # The same thing using list comprehension
 
-keyPlayers = ['Raze', 'Viper']
-teamCombinations = [['Omen','KillJoy','Neon'],['Raze', 'Breach'], ['Raze','Reyna']]
+  keyPlayers = ['Raze', 'Viper']
+  teamCombinations = [['Omen','KillJoy','Neon'],['Raze', 'Breach'], ['Raze','Reyna']]
 
-res = [player for team in teamCombinations for player in team  if player in keyPlayers]
-orint(res)
+  res = [player for team in teamCombinations for player in team  if player in keyPlayers]
+  orint(res)
 
-# See that the order of for statements is similar to the conventional way!
+  # See that the order of for statements is similar to the conventional way!
 
-#>['Raze', 'Raze']
-```
+  #>['Raze', 'Raze']
+  ```
 
 <br/>
 <br/>
