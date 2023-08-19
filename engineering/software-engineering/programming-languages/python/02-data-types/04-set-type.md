@@ -1,29 +1,32 @@
-1. Sets are one among the 4 built in datatypes to store  collection of data. (other 3 are tuple, list, dict)
+# Python set
+
+1. Sets are one among the 4 built in datatypes to store collection of data. (other 3 are tuple, list, dict)
 1. Sets are mutable.
 1. Sets are unordered (No index).
 1. Sets contain unique items, hence no duplicates.
 1. Sets can have items of different datatypes, but those datatypes must be hashable.
 
-
 # Creating sets
 
 - Using curly braces
-    ```python
-    a = 10
-    mySet = {100,'abc',a}
-    print(mySet)
 
-    #>{10, 100, 'abc'}
-    ```
+  ```python
+  a = 10
+  mySet = {100,'abc',a}
+  print(mySet)
+
+  #>{10, 100, 'abc'}
+  ```
 
 - Using set() function
-    ```python
-    mySet2 = set({1, 'abs'})
-    print(mySet2)
+  ```python
+  mySet2 = set({1, 'abs'})
+  print(mySet2)
 
-    #>{1, 'abs'}
-    ```
-<br/>
+      #>{1, 'abs'}
+      ```
+
+  <br/>
 
 # Meaning of Hashable
 
@@ -39,13 +42,15 @@ print(not_a_set)
 
 #> TypeError: unhashable type: 'list'
 ```
+
 <br/>
 
 # Accesing items from a set
+
 Cannot be accesed using index as they are unordered.
 
 ```python
-# Type casting 
+# Type casting
 
 mySet = {100,'abc',None}
 print(list(mySet)[0])
@@ -54,7 +59,7 @@ print(list(mySet)[0])
 ```
 
 ```python
-# can directly check is item in present in set or not. 
+# can directly check is item in present in set or not.
 mySet = {100,'abc',None}
 print(100 in mySet)
 
