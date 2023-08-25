@@ -59,6 +59,8 @@
   ```sql
   select * from   toys
   inner  join bricks on toy_id = brick_id;
+  -- join bricks on toy_id = brick_id; --same as above!
+
   ```
 
   ![innerjoin](./_assets/inner-join.png)
@@ -126,3 +128,29 @@ full join bricks on toy_id = brick_id;
 ```
 
 ![innerjoin](./_assets/outer-full.png)
+
+<br>
+<br>
+<br>
+
+# Filtering Joins
+
+- Suppose the usecase needed all the rows from the toys table and only those rows from the brick table that have matching brick_id and color as green.
+- If we use a `WHERE` clause after the join, it'll convert the outer join to an inner join. (As seen in subsequent code)
+
+  ```sql
+  select * from toys
+  left join bricks on toy_id = brick_id
+  where toy_colour = 'green';
+  ```
+
+  ![image](./_assets/filter-join1.png)
+
+* For the above usecase, the filtering criteria for the outer joined table must be in the join clause itself.
+
+  ```sql
+  select * from toys
+  left join bricks on toy_id = brick_id and toy_colour = 'green';
+  ```
+
+  ![image](./_assets/filter-join2.png)
