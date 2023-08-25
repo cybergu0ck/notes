@@ -1,5 +1,7 @@
 # `dir()`
 
+---
+
 Without arguments, return the list of _names in the current local scope_. With an argument, attempt to return a list of valid attributes for that object. (i.e. returns all attributes and methods of the specified object, without the values)
 
 The default [`dir()`](https://docs.python.org/3/library/functions.html#dir "dir") mechanism behaves differently with different types of objects, as it attempts to produce the most relevant, rather than complete, information:
@@ -67,6 +69,23 @@ isinstance(5, int)
 
 #>True
 ```
+
+<br/>
+<br/>
+<br/>
+
+# `Counter()`
+
+- The Counter class in Python is a part of the collections module and is used to count the occurrences of elements in a collection, typically in a list, tuple, or any iterable. It creates a dictionary-like object where elements from the collection are treated as keys, and their counts are stored as values.
+
+  ```py
+  from collections import Counter
+
+  s = 'aaab'
+  print(Counter(s))
+
+  #>Counter({'a': 3, 'b': 1})
+  ```
 
 <br/>
 <br/>
