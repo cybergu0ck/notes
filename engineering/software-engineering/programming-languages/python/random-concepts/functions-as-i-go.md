@@ -1,14 +1,12 @@
-
-
 # `dir()`
----
-Without arguments, return the list of *names in the current local scope*. With an argument, attempt to return a list of valid attributes for that object. (i.e. returns all attributes and methods of the specified object, without the values)
+
+Without arguments, return the list of _names in the current local scope_. With an argument, attempt to return a list of valid attributes for that object. (i.e. returns all attributes and methods of the specified object, without the values)
 
 The default [`dir()`](https://docs.python.org/3/library/functions.html#dir "dir") mechanism behaves differently with different types of objects, as it attempts to produce the most relevant, rather than complete, information:
 
--   If the object is a module object, the list contains the names of the module’s attributes.
--   If the object is a type or class object, the list contains the names of its attributes, and recursively of the attributes of its bases.
--   Otherwise, the list contains the object’s attributes’ names, the names of its class’s attributes, and recursively of the attributes of its class’s base classes.
+- If the object is a module object, the list contains the names of the module’s attributes.
+- If the object is a type or class object, the list contains the names of its attributes, and recursively of the attributes of its bases.
+- Otherwise, the list contains the object’s attributes’ names, the names of its class’s attributes, and recursively of the attributes of its class’s base classes.
 
 ```python
 class Butterfly:
@@ -29,6 +27,8 @@ print(dir(my_butterfly))
 ```
 
 <br/>
+<br/>
+<br/>
 
 # `ord()`
 
@@ -40,6 +40,8 @@ ord('A')
 #>65
 ```
 
+<br/>
+<br/>
 <br/>
 
 # `chr()`
@@ -53,6 +55,8 @@ chr(65)
 ```
 
 <br/>
+<br/>
+<br/>
 
 # `isinstance()`
 
@@ -62,4 +66,21 @@ Function to check if an object is of specific type (or class. as they are same i
 isinstance(5, int)
 
 #>True
+```
+
+<br/>
+<br/>
+<br/>
+
+# `divmod()`
+
+divmod() is a built-in Python function that takes two arguments and returns a tuple containing the quotient and remainder of their division.
+
+```py
+x = 17
+y = 5
+quotient, remainder = divmod(x, y)
+print(quotient, remainder)
+
+#>3 2
 ```
