@@ -86,3 +86,20 @@ isinstance(5, int)
 
   #>Counter({'a': 3, 'b': 1})
   ```
+
+<br/>
+<br/>
+<br/>
+
+# `divmod()`
+
+divmod() is a built-in Python function that takes two arguments and returns a tuple containing the quotient and remainder of their division.
+
+```py
+x = 17
+y = 5
+quotient, remainder = divmod(x, y)
+print(quotient, remainder)
+
+#>3 2
+```
