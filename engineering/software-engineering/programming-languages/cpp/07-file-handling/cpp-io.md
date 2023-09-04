@@ -163,6 +163,55 @@
 
 - We can set the field width which will apply an allignment(space on left by default) only for the consecutive element (not all the subsequent elements)
 
+  ```cpp
+  #include <iostream>
+  #include <iomanip>
+  #include <string>
+
+  int main() {
+    std::string greeting{ "Hello" };
+    float number{ 99 };
+    std::cout << std::setw(10) << greeting << number << std::endl; //greeting will have a field width of 10
+  }
+
+  //1234567890
+  //     Hello99
+  ```
+
+* We can align items
+
+  ```cpp
+  #include <iostream>
+  #include <iomanip>
+  #include <string>
+
+  int main() {
+    std::string greeting{ "Hello" };
+    float number{ 99 };
+    std::cout << std::setw(10) << std::left << greeting << number << std::endl;	//greeting occupies field width of 10 and is left justified
+  }
+
+  //1234567890
+  //Hello     99
+  ```
+
+* `setfill` can be used to fill in the spaces in the field width. It only applies when the field width is applied using `setw`.
+
+  ```cpp
+  #include <iostream>
+  #include <iomanip>
+  #include <string>
+
+  int main() {
+    std::string greeting{ "Hello" };
+    float number{ 99 };
+    std::cout << std::setfill('-') << std::setw(10) << greeting << std::setw(10) <<  number << std::endl;	//greeting occupies field width of 10 and is left justified
+  }
+
+  //1234567890
+  //-----Hello--------99
+  ```
+
 <br>
 <br>
 <br>
@@ -298,3 +347,37 @@
   ```cpp
   file.close()
   ```
+
+<br>
+<br>
+
+## Illustration
+
+```cpp
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <fstream>
+
+int main() {
+	std::fstream outfile{ "./my_file.txt" };
+	//outfile.open("my_file.txt");
+	//If both the above 2 lines are used, it means we are trying to open the file twice and we can't see the output!
+	if (outfile.is_open()) {
+		std::cout << "opening file..." << std::endl;
+
+		//user input
+		std::string user_input;
+		std::cout << "What do you want to write to the file : ";
+		std::getline(std::cin, user_input);
+		std::cout << "you wrote: " << user_input;
+
+		//write to file
+		outfile << user_input << std::endl;
+	}
+	else {
+		std::cout << "cannot open file..." << std::endl;
+	}
+	outfile.close();
+}
+```
