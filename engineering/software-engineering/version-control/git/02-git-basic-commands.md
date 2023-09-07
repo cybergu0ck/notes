@@ -1,4 +1,4 @@
-From here on, everything will be explained using practical illustration! 
+From here on, everything will be explained using practical illustration!
 
 - Consider the project of movie rating website (kinda like IMDB).
 - The project directory is MovieDB
@@ -11,6 +11,7 @@ From here on, everything will be explained using practical illustration!
 ```bash
 git init
 ```
+
 ```
 $ git init
 Initialized empty Git repository in /home/coder/moviedb/.git/
@@ -88,22 +89,33 @@ $ git commit -m "created moviedb.py"
 ```
 
 <br>
+
+## Ammending previous commit message
+
+- Use the following command, make changes in the commit message and close the file.
+  ```bash
+  git commit --amend
+  ```
+
+<br>
 <br>
 
 # View Log
 
-The project's commit history can be viewed using 
+The project's commit history can be viewed using
 
 ```
 git log --oneline --graph
 ```
+
 ```
-$ git log --oneline 
+$ git log --oneline
 f9a6285 (HEAD -> master) created moviedb.py
 ```
 
-In the above output, 
+In the above output,
+
 - the first string is the partial SHA-1 hash [Refer Git ID](../01-git-fundamentals.md##git-id/-sha-1-/-hash-/-object-id-/-checksum)
 - the HEAD and master in the paranthesis is the reference [Refer References]()
 
->Check backlinks for github 
+> Check backlinks for github
