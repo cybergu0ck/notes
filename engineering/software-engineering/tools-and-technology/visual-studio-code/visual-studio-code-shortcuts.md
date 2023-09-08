@@ -16,6 +16,8 @@
   | Toggle Block Comment                             | Ctrl + Shift + /          |
   | View:Open Previous Recently Used Editor in Group | Ctrl + Tab                |
   | Remove All Breakpoints                           | Ctrl + Shift + F9         |
+  | Toggle Primary Side Bar (Left Bar)               | Ctrl + B                  |
+  | Toggle Pannel (Bottom, terminal...)              | Ctrl + J                  |
 
 <br>
 <br>
