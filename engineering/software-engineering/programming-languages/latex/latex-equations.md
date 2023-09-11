@@ -1,4 +1,4 @@
-# Eqauions
+# Equations
 
 - An example code showing the syntax to write equations.
 
@@ -18,7 +18,7 @@
 <br>
 <br>
 
-# Equaitons with glossaries
+# Equations with glossaries
 
 - The crude way I do is
 
