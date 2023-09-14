@@ -46,9 +46,9 @@ git commit -m "commit message goes here"
 <br>
 <br>
 
-## Ammending previous commit message
+## Ammending previous commits
 
-- Use the following command, make changes in the commit message and close the file.
+- Use the following command, make changes in the commit message and close the file. See undoing changes file to ammend commit itself.
   ```bash
   git commit --amend
   ```

@@ -96,3 +96,5 @@ It is used to view the detailed information about a specific git object (commit,
 <br>
 <br>
 <br>
+
+## Git Reflog
