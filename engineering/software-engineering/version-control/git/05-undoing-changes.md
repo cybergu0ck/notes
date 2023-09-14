@@ -62,7 +62,7 @@ It is a process where git moves the branch pointer (ex: HEAD) to a different com
 
 ![hard](./_assets/hardreset.gif)
 
-```
+```bash
 git reset --hard <hash>
 ```
 
@@ -78,7 +78,7 @@ Reverting is a process of undoing changes done in a previous commit without modi
 
 ![revert](./_assets/revert.gif)
 
-```
+```bash
 git revert <hash>
 ```
 
