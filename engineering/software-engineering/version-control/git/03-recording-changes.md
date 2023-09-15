@@ -7,7 +7,7 @@
 
 The status of the repo can be checked by checking the state of the files. use:
 
-```
+```bash
 git status
 ```
 
@@ -25,8 +25,6 @@ A file can be in different state in VCS.
 1. Ignored : Ignored files are files that match patterns specified in a .gitignore file.
 
 <br>
-
-<br>
 <br>
 
 ## Staging the changes
@@ -34,7 +32,7 @@ A file can be in different state in VCS.
 - Staging refers to the process of adding the changes in the working directory to the staging area, to include these updates in the next commit.
 - The following command is used
 
-  ```
+  ```bash
   git add <file/directory>
   ```
 
@@ -43,7 +41,7 @@ A file can be in different state in VCS.
 
 ## Commiting the changes
 
-```
+```bash
 git commit -m "commit message goes here"
 ```
 
@@ -68,7 +66,7 @@ git commit -m "commit message goes here"
 
 ### Creating a light weight tag
 
-```
+```bash
 git tag <tagname> [commit]
 ```
 

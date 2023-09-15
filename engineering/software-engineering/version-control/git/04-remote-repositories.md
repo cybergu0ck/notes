@@ -11,7 +11,7 @@
 
 - We can do this by using
 
-  ```
+  ```bash
   git remote add <name> <remote-repo-url>
   ```
 
@@ -25,7 +25,7 @@
 
 Once a remote repo is connected to the local repo, it's details can be checked using
 
-```
+```bash
 git remote --verbose
 ```
 
@@ -54,7 +54,7 @@ git pull fetches and merges the updates from the remote repo.
 
 - To list the remote branches, use:
 
-  ```
+  ```bash
   git branch -r
   ```
 

@@ -9,13 +9,13 @@ The changes in this context are unstaged. Follow these steps:
 
 1. Discard the changes in working directory for all tracked files. It will revert the working directory to match the previous commit.
 
-   ```
+   ```bash
    git checkout .
    ```
 
 1. The above command will not delete the changes, it will make them untracked. To delete them use :
 
-   ```
+   ```bash
    git clean -f
    ```
 
@@ -51,7 +51,7 @@ The following command allows us to make changes to the commit message. add or re
 
   1. The following command will open the text editor set in git config.
 
-  ```
+  ```bash
   git commit --amend
   ```
 
@@ -65,7 +65,7 @@ The following command allows us to make changes to the commit message. add or re
 1. Stage those files
 1. Use the command, opens the editor, give new commit message and save.
 
-   ```
+   ```bash
    git commit --amend
    ```
 
@@ -78,7 +78,7 @@ It is a process where git moves the branch pointer (ex: HEAD) to a different com
 
 ![soft](./_assets/softreset.gif)
 
-```
+```bash
 git reset --soft <hash>
 ```
 
@@ -126,19 +126,19 @@ Follow these steps:
 
 1. Get the hash of the deleted branch's last commit. It will be shown when we delete a branch using `git branch -D <branch-name>`, else use:
 
-   ```
+   ```bash
    git reflog
    ```
 
 1. Checkout tp that hash, the HEAD will now be in detached state.
 
-   ```
+   ```bash
    git checkout <hash>
    ```
 
 1. Create a new branch (with the old name) at that hash
 
-   ```
+   ```bash
    git checkout -b <branch-name>
    ```
 
@@ -153,7 +153,7 @@ Follow these steps:
 
 1. Use the reset command.
 
-   ```
+   ```bash
    git reset --merge <hash>
    ```
 
@@ -165,13 +165,13 @@ If the merge is pushed into the remote repo and there are commits done in the re
 
 1. Pull the latest changes of that branch.
 
-   ```
+   ```bash
    git pull <remote-name><branch-name>
    ```
 
 1. Create a new branch to undo the merge
 
-   ```
+   ```bash
    git switch -c <new-branch-name>
    ```
 
@@ -179,20 +179,20 @@ If the merge is pushed into the remote repo and there are commits done in the re
 
 1. Use the revert command and revert to a hash before the commit.
 
-   ```
+   ```bash
    git revert <hash-before-merge>
    ```
 
 1. If there is any merge conflict, resolve it by remove the changes introduced by the merge.
 1. Complete the revert by committing, use appropritate commit message always.
 
-   ```
+   ```bash
    git commit -m "reverted the change introduced by merge"
    ```
 
 1. Push this branch to remote
 
-   ```
+   ```bash
    git push <remote-name><new-branch-name>
    ```
 

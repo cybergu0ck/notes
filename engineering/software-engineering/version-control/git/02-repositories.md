@@ -53,7 +53,7 @@ There are 3 areas in a git version controlled project directory.
 - Once it is initialised, it keeps track of all the current files (if present) and all the future files (as and when we modify) in that directory
 - To initialise a git repo locally,
 
-  ```
+  ```bash
   git init
   ```
 
@@ -63,7 +63,7 @@ There are 3 areas in a git version controlled project directory.
 
 - cloning is a process of creating a git repo locally from an existing remote repo.
 
-  ```
+  ```bash
   git clone <remote repo url> <directory>
   ```
 

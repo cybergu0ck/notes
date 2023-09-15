@@ -74,13 +74,13 @@ Follow these steps when merge conflict occurs:
 
 1. Launch the mergetool using the git command:
 
-   ```
+   ```bash
    git mergetool
    ```
 
 2. Resolve the conflict in the merge tool editor and save (Ctrl + S) the tab.
 3. Finish the merging by commiting.
-   ```
+   ```bash
    git commit -m "appropriate commit message"
    ```
 
@@ -92,12 +92,12 @@ Follow these steps when merge conflict occurs:
 
 1. Resolve the merge conflict manually.
 1. Stage the appropriate files.
-   ```
+   ```bash
    git add <file(s)>
    ```
 1. Finish the merging by commiting.
 
-   ```
+   ```bash
    git commit -m "appropriate commit message"
    ```
 
@@ -107,7 +107,7 @@ Follow these steps when merge conflict occurs:
 ## Abort a merge
 
 - Ongoing merge process can be aborted using this command.
-  ```
+  ```bash
   git merge --abort
   ```
 

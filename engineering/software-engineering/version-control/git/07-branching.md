@@ -9,7 +9,7 @@ Branching allows multiple lines of development to coexist independently, making 
 
 ## Creating branch
 
-```
+```bash
 git branch <branch-name>
 ```
 
@@ -19,12 +19,12 @@ git branch <branch-name>
 ## Viewing branches
 
 - To view the list of all branches.
-  ```
+  ```bash
   git branch
   ```
 - In the context of remote repo, the above command only shows only the local branches. To show all the branches (including the branches in the remote repo), use:
 
-  ```
+  ```bash
   git branch --all
   ```
 
@@ -37,13 +37,13 @@ git branch <branch-name>
 
 - To switch to branch, use the following command with the name of the branch to be switched to.
 
-  ```
+  ```bash
   git switch <branch-name-to-switch-to>
   ```
 
 - Create and switch to that new branch using one command.
 
-  ```
+  ```bash
   git switch -c <branch-name>
   ```
 

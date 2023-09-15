@@ -15,25 +15,25 @@ It is used to view the commit history of a git repo.
 
 - Use the following command.
 
-  ```
+  ```bash
   git log
   ```
 
 * By default git log shows the logs for the current branch. Viweing the logs for a specific branch can be done using,
 
-  ```
+  ```bash
   git log <branch-name>
   ```
 
 * Viewing the history of a specific file
 
-  ```
+  ```bash
   git log <file-path>
   ```
 
 * Some common flags used along with this command are
 
-  ```
+  ```bash
   git log --oneline --graph --all
   ```
 
@@ -45,25 +45,25 @@ It is used to view the detailed information about a specific git object (commit,
 
 - To view details of a commit
 
-  ```
+  ```bash
   git show <commit-hash>
   ```
 
 - To list all the files that were touched in a commit
 
-  ```
+  ```bash
   git show --pretty="" --name-only <commit-hash>
   ```
 
 - To output all commits in the range.
 
-  ```
+  ```bash
   git show <commit-hash-1>...<commit-hash-2>
   ```
 
 - To view the details of a tag
 
-  ```
+  ```bash
   git show tag
   ```
 
@@ -80,13 +80,13 @@ It is used to list the chronological record of all the updates(merges, resets, r
 
 - To see reflog of current branch, use:
 
-  ```
+  ```bash
   git reflog
   ```
 
 - To see reflog for a particular branch, use:
 
-  ```
+  ```bash
   git reflog <branch-name>
   ```
 
@@ -100,19 +100,19 @@ It is used to list the chronological record of all the updates(merges, resets, r
 
 - To see the changes between the working directory and the last commit, use the following command. This will open VS code as a new tab accoriding to config file.
 
-  ```
+  ```bash
   git difftool -y
   ```
 
 - To see the changes between the staging area and the last commit, use:
 
-  ```
+  ```bash
   git difftool --staged -y
   ```
 
 - To see the changes between two commits.
 
-  ```
+  ```bash
   git difftool <commit-hash-1> <commit-hash-2>
   ```
 
