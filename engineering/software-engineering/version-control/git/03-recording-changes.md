@@ -49,7 +49,7 @@ git commit -m "commit message goes here"
 
 ### Ammending previous commits
 
-> See undoing changes notes
+View [in undoing changes notes](06-undoing-changes.md#ammend-commit).
 
 <br>
 <br>

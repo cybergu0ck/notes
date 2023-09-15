@@ -51,9 +51,7 @@ Follow these steps to rebase a current branch (ex: feature) to target branch (ex
    git rebase <target-branch> #git rebase main
    ```
 
-1. If any merge conflicts occur, resolve them like resolving any other merge conflict.
-
-> See merge notes below
+1. If any merge conflicts occur, resolve them like resolving any other merge conflict (Below in this note).
 
 <br>
 <br>
@@ -116,7 +114,7 @@ Follow these steps when merge conflict occurs:
 
 ## Undoing a merge
 
-> See this in undoing notes
+View [in undoing changes notes](06-undoing-changes.md#undoing-a-merge).
 
 <br>
 <br>
