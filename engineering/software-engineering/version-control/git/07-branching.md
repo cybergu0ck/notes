@@ -78,6 +78,8 @@ git branch -m <old-branch-name> <new-branch-name>
 
 ## Undoing a branch delete
 
+View [undoing a branch delete](06-undoing-changes.md#undoing-a-branch-delete)
+
 > See this in undoing notes
 
 <br>
