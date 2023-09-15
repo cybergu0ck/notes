@@ -4,14 +4,16 @@ Merging refers to the process of incorporating the changes made in one branch in
 
 - Being in the branch where another branch has to be merged, The following command must be used with the name of the branch to be merged into the current branch.
 
-```
-git merge <branch-name> #the mentioned branch will be merged into the current branch
-```
+  ```
+  git merge <branch-name> #the mentioned branch will be merged into the current branch
+  ```
 
 <br>
 <br>
 
 ## Types of merges
+
+<br>
 
 ### Fast Forward Merge
 
@@ -34,6 +36,24 @@ git merge <branch-name> #the mentioned branch will be merged into the current br
 ![noff](./_assets/rebase.gif)
 
 <br>
+
+Follow these steps to rebase a current branch (ex: feature) to target branch (ex: main):
+
+1. Make sure to be in the branch that needs to be rebased to the target branch.
+
+   ```bash
+   git switch <current-branch-name> #git switch feature1.2
+   ```
+
+1. Use the following command to rebase the current branch to the target branch.
+
+   ```bash
+   git rebase <target-branch> #git rebase main
+   ```
+
+1. If any merge conflicts occur, resolve them like resolving any other merge conflict.
+
+> See merge notes below
 
 <br>
 <br>

@@ -1,6 +1,7 @@
 # Undoing changes in git
 
 <br>
+<br>
 
 ## Discarding changes in working directory
 

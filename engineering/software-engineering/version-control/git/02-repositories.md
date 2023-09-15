@@ -5,7 +5,9 @@ A Git repository is a directory or folder that contains a collection of files an
 <br>
 <br>
 
-## Project folder on local machine (called as Local Repo)
+## Types of repos
+
+### Project folder on local machine (called as Local Repo)
 
 There are 3 areas in a git version controlled project directory.
 
@@ -26,28 +28,26 @@ There are 3 areas in a git version controlled project directory.
 
 <br>
 
-> Sometimes the project directory on the local machine is itself called the local repository, it doesn't change how git works under the hood! <br>
-> <br>
+> Sometimes the project directory on the local machine is itself called the local repository, it doesn't change how git works under the hood! <br> > <br>
 
 <br/>
 <br/>
 
-## Remote Repository
+### Remote Repository
 
 - A remote repository is a copy of the repository that is stored on a remote server, such as a code hosting service like GitHub, GitLab, or Bitbucket.
 - A remote repository generally doesn't have staging area and working tree as .git directory is not present.
 
 <br/>
 <br/>
-<br/>
 
-# Creating Repositories
+## Creating Repositories
 
 - Git repo's can be created in many ways.
 
 <br>
 
-## Initialising a git repo
+### Initialising a git repo
 
 - A git repo can be initialised on the locally (local machine) aswell as remotely (GitHub etc)
 - Once it is initialised, it keeps track of all the current files (if present) and all the future files (as and when we modify) in that directory
@@ -58,9 +58,8 @@ There are 3 areas in a git version controlled project directory.
   ```
 
 <br>
-<br>
 
-## Clone an existing remote repo
+### Clone an existing remote repo
 
 - cloning is a process of creating a git repo locally from an existing remote repo.
 
@@ -69,9 +68,8 @@ There are 3 areas in a git version controlled project directory.
   ```
 
 <br>
-<br>
 
-## Forking an existing remote repo
+### Forking an existing remote repo
 
 - It refers to the process of creating a copy of a repository, known as the "_fork_," from one user's account or organization to another user's account or organization.
 - It is used extensively in open source development. Contributors can fork a project, make improvements or fixes in their forked repository, and then submit PRs (Pull Requests) to the original project to have their changes reviewed and potentially merged.
@@ -83,6 +81,5 @@ There are 3 areas in a git version controlled project directory.
 > Fork is not a git command (or concept). it's a concept and a feature provided by Git hosting platforms like GitHub, GitLab, and Bitbucket. These platforms offer a web-based interface for managing Git repositories and collaboration, and one of the key features they provide is the ability to fork repositories. <br>
 > <br>
 
-<br>
 <br>
 <br>

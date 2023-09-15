@@ -6,9 +6,8 @@ Git is a distributed version control system (VCS) that is widely used for softwa
 
 <br/>
 <br/>
-<br/>
 
-# Understanding Commit
+## Understanding Commit
 
 - We initialise a git repo inside our project directory and start working on our codebase.
 - We add the progress (files that are created/deleted/modified) to the staging area.
@@ -16,9 +15,8 @@ Git is a distributed version control system (VCS) that is widely used for softwa
 - git stores all the commits so that we can access the project's progress (or status) at any point in time!
 
 <br/>
-<br/>
 
-## Git ID / SHA-1 / Hash / Object ID / Checksum
+### Git ID / SHA-1 / Hash / Object ID / Checksum
 
 - SHA-1 (moving on we'll stick to this) is a 40 character hex string generated for a specific commit, it acts as a unique identifier used to track and reference a specific snapshot of code changes in a Git repository.
 - SHA-1 is the result of mathematical operation of Secure Hash Algorithm-1 based on the modifications in a file.
@@ -40,7 +38,7 @@ Git is a distributed version control system (VCS) that is widely used for softwa
 <br>
 <br>
 
-# DAG
+## DAG
 
 - Git history is stored in the form of Directed Acyclic Graph (DAG) where commits are represented as nodes and edges point to the parent commit
 - A DAG is a directed graph (edges have directions) with no cycles!
@@ -50,9 +48,8 @@ Git is a distributed version control system (VCS) that is widely used for softwa
 
 <br>
 <br>
-<br>
 
-# Reference
+## Reference
 
 - A reference is a userfriendly name that points to either a commit SHA-1 hash or another reference.
 - The reference is called a symbolic reference it points to another reference.
@@ -70,9 +67,8 @@ Git is a distributed version control system (VCS) that is widely used for softwa
 
 <br>
 <br>
-<br>
 
-# Git Command Syntax
+## Git Command Syntax
 
 ```bash
 git <command> <--flags> <arguments>
@@ -87,9 +83,8 @@ git <command> <--flags> <arguments>
 
 <br/>
 <br/>
-<br/>
 
-# Git Help
+## Git Help
 
 - Use the following command to get help for a particular command.
 
@@ -113,9 +108,8 @@ git <command> <--flags> <arguments>
 
 <br/>
 <br/>
-<br/>
 
-# Configuring git
+## Configuring git
 
 ```
 git config [--local | --global | --system] <key> [<value>]
@@ -133,6 +127,5 @@ git config [--local | --global | --system] <key> [<value>]
 | 2. Set up email            | `git config --global user.email <email>`   |             |
 | 3. Read/ Check credentials | `git config user.name (or user.email)`     |
 
-<br/>
 <br/>
 <br/>

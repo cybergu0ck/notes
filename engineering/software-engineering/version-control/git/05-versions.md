@@ -1,6 +1,7 @@
 # Git Versions
 
 <br>
+<br>
 
 ## Viewing Git History
 
@@ -91,9 +92,8 @@ It is used to list the chronological record of all the updates(merges, resets, r
 
 <br>
 <br>
-<br>
 
-# Inspecting changes
+## Inspecting changes
 
 - Using an external difftool is ideal. VS code as difftool is nice. Check customizations file to set it up.
 - The following commands will work without difftool by using the command `diff` instead of `difftool`.
@@ -116,6 +116,5 @@ It is used to list the chronological record of all the updates(merges, resets, r
   git difftool <commit-hash-1> <commit-hash-2>
   ```
 
-<br>
 <br>
 <br>

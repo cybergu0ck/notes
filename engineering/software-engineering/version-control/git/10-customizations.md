@@ -1,6 +1,7 @@
 # Customizations
 
 <br>
+<br>
 
 ## git config
 

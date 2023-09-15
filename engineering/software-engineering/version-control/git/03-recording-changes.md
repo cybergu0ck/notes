@@ -1,8 +1,21 @@
 # Git Recording changes
 
-# The status
+<br>
+<br>
 
-The status of the repo can be checked by checking the state of the files. A file can be in different state in VCS.
+## Vewing changes
+
+The status of the repo can be checked by checking the state of the files. use:
+
+```
+git status
+```
+
+<br>
+
+### States of a file
+
+A file can be in different state in VCS.
 
 1. Untracked : An untracked file is a file that is not yet recognized by Git. It means Git is not monitoring changes to this file. Untracked files are typically new files, renamed files etc that haven't been added to the staging area or committed yet.
 1. Tracked: A tracked file is a file that is recognized by git.
@@ -12,19 +25,11 @@ The status of the repo can be checked by checking the state of the files. A file
 1. Ignored : Ignored files are files that match patterns specified in a .gitignore file.
 
 <br>
-<br>
-
-## Checking the status
-
-```
-git status
-```
 
 <br>
 <br>
-<br>
 
-# Staging the changes
+## Staging the changes
 
 - Staging refers to the process of adding the changes in the working directory to the staging area, to include these updates in the next commit.
 - The following command is used
@@ -35,26 +40,23 @@ git status
 
 <br>
 <br>
-<br>
 
-# Commiting the changes
+## Commiting the changes
 
 ```
 git commit -m "commit message goes here"
 ```
 
 <br>
-<br>
 
-## Ammending previous commits
+### Ammending previous commits
 
 > See undoing changes notes
 
 <br>
 <br>
-<br>
 
-# Tag
+## Tags
 
 - A tag is a reference/label attached to a specific commit.
 - There are 2 types of tags:
@@ -63,9 +65,8 @@ git commit -m "commit message goes here"
 - Like other references we can use tags instead of SHA-1 values in git commands.
 
 <br>
-<br>
 
-## Creating a light weight tag
+### Creating a light weight tag
 
 ```
 git tag <tagname> [commit]
@@ -83,9 +84,8 @@ f9a6285 created moviedb.py
 ```
 
 <br>
-<br>
 
-## Viewing tags
+### Viewing tags
 
 | Operation                     | Syntax           | Explanation |
 | ----------------------------- | ---------------- | ----------- |
@@ -94,6 +94,5 @@ f9a6285 created moviedb.py
 
 > Check documentation to create an annotated tag!
 
-<br>
 <br>
 <br>

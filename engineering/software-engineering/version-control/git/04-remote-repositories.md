@@ -1,5 +1,8 @@
 # Remote Repo
 
+<br>
+<br>
+
 ## Connecting to remote repo
 
 - Connecting a local git repo to a remote repo provides lot of benefits.
@@ -47,7 +50,7 @@ git pull fetches and merges the updates from the remote repo.
 <br>
 <br>
 
-# Working with remote branches
+## Working with remote branches
 
 - To list the remote branches, use:
 
