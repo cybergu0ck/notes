@@ -77,6 +77,18 @@ It is used to list the chronological record of all the updates(merges, resets, r
 - Reflog stands for "Reference Logs".
 - This information is particularly useful for recovering lost commits, branches, or other changes that may have been accidentally deleted or overwritten.
 
+- To see reflog of current branch, use:
+
+  ```
+  git reflog
+  ```
+
+- To see reflog for a particular branch, use:
+
+  ```
+  git reflog <branch-name>
+  ```
+
 <br>
 <br>
 <br>
