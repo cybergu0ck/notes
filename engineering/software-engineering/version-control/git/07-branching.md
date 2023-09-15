@@ -50,6 +50,15 @@ git branch <branch-name>
 <br>
 <br>
 
+## Renaming branches
+
+```bash
+git branch -m <old-branch-name> <new-branch-name>
+```
+
+<br>
+<br>
+
 ## Deleting branches
 
 - Local branches can be deleted using:
