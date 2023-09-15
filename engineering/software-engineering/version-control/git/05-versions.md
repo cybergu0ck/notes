@@ -67,6 +67,17 @@ It is used to view the detailed information about a specific git object (commit,
   ```
 
 <br>
+
+### `git reflog`
+
+It is used to list the chronological record of all the updates(merges, resets, reverts, commits etc) to Git references (branches and tags) in a repository.
+
+![reflog](./_assets/reflog.gif)
+
+- Reflog stands for "Reference Logs".
+- This information is particularly useful for recovering lost commits, branches, or other changes that may have been accidentally deleted or overwritten.
+
+<br>
 <br>
 <br>
 
@@ -96,5 +107,3 @@ It is used to view the detailed information about a specific git object (commit,
 <br>
 <br>
 <br>
-
-## Git Reflog

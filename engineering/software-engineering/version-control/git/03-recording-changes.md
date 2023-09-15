@@ -4,7 +4,7 @@
 
 The status of the repo can be checked by checking the state of the files. A file can be in different state in VCS.
 
-1. Untracked : An untracked file is a file that is not yet recognized by Git. It means Git is not monitoring changes to this file. Untracked files are typically new files that haven't been added to the staging area or committed yet.
+1. Untracked : An untracked file is a file that is not yet recognized by Git. It means Git is not monitoring changes to this file. Untracked files are typically new files, renamed files etc that haven't been added to the staging area or committed yet.
 1. Tracked: A tracked file is a file that is recognized by git.
    1. Staged : A staged file is a modified file that has been marked for inclusion in the next commit. These changes are in the staging area.
    1. Modified : A modified file is a file that was previously committed but has been changed since the last commit.
@@ -48,10 +48,7 @@ git commit -m "commit message goes here"
 
 ## Ammending previous commits
 
-- Use the following command, make changes in the commit message and close the file. See undoing changes file to ammend commit itself.
-  ```bash
-  git commit --amend
-  ```
+> See undoing changes notes
 
 <br>
 <br>

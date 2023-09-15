@@ -52,10 +52,28 @@ git branch <branch-name>
 
 ## Deleting branches
 
-```
-git branch -d <name>
-```
+- Local branches can be deleted using:
+
+  ```bash
+  git branch -d <branch-name>
+  ```
+
+- Remote branches can be deleted using:
+
+  ```bash
+  git push <remote-name> --delete <branch-name> #git push origin --delete bugfix1.2
+  ```
 
 <br>
 <br>
+
+## Undoing a branch delete
+
+> See this in undoing notes
+
 <br>
+<br>
+
+## Working with remote branches
+
+> See this in remote repo notes

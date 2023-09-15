@@ -96,14 +96,7 @@ Follow these steps when merge conflict occurs:
 
 ## Undoing a merge
 
-Follow these steps:
-
-1. Find the commit hash before the merge, use `git log` or `git reflog`.
-
-1. Use the reset command.
-   ```
-   git reset --merge <hash>
-   ```
+> See this in undoing notes
 
 <br>
 <br>

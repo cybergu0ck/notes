@@ -61,6 +61,8 @@ git pull fetches and merges the updates from the remote repo.
   git checkout -b <local-branch-name> <remote_name>/<remote-branch-name> # git checkout -b bugfix1.2 origin/bugfix1.2
   ```
 
+  - Note that the name of the local branch and the remote branch in the above case must be same, else a new branch will be created in remote repo when the changes are pushed.
+
 - To push update to the remote branch
 
   ```bash
@@ -71,6 +73,12 @@ git pull fetches and merges the updates from the remote repo.
 
   ```bash
   git pull <remote-name> <local-branch-name> #git pull origin bugfix1.2
+  ```
+
+- To delete a remote branch on the remote repo, use:
+
+  ```bash
+  git push <remote-name> --delete <branch-name> #git push origin --delete bugfix1.2
   ```
 
 <br>
