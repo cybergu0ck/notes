@@ -230,3 +230,25 @@ alert(user.name); // 'Pete', changes are seen from the "user" reference
 ```
 
 > Fill Notes
+
+<br>
+<br>
+
+## Object Destructuring
+
+It is feature of extracting (unpacking) values from objects and assigning them to variables with the same name as the object's properties.
+
+```js
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+};
+
+// Using object destructuring to extract values
+const { firstName, lastName, age } = person;
+
+console.log(firstName); // "John"
+console.log(lastName); // "Doe"
+console.log(age); // 30
+```
