@@ -1,6 +1,9 @@
 # HTML Text Fundamentals
 
-# Paragraph
+<br>
+<br>
+
+## Paragraph
 
 - In HTML, each paragraph has to be wrapped in a `<p>` element.
 
@@ -10,9 +13,8 @@
 
 <br>
 <br>
-<br>
 
-# Headings
+## Headings
 
 - Headings are wrapped in a heading element.There are six heading elements: h1, h2, h3, h4, h5, and h6. Each element represents a different level of content in the document.
 
@@ -45,14 +47,12 @@
 
 <br>
 <br>
+
+## Lists using `<ul>`, `<ol>`, `<li>`
+
 <br>
 
-# Lists
-
-<br>
-<br>
-
-## Unordererd
+### Unordererd
 
 - Unordered lists are wrapped around `<ul>` element and individual items are wrapped in `<li>`.
 
@@ -68,9 +68,8 @@
   ![ul](./_assets/ul1.png)
 
 <br>
-<br>
 
-## Ordererd
+### Ordererd
 
 - Unordered lists are wrapped around `<ol>` element and individual items are wrapped in `<li>`.
 
@@ -86,9 +85,8 @@
   ![ul](./_assets/ol1.png)
 
 <br>
-<br>
 
-## Nested Lists
+### Nested Lists
 
 - We can nest the list.
 
@@ -113,16 +111,14 @@
 
 <br>
 <br>
-<br>
 
-# Emphasis
+## Emphasis
 
 We can italicize and make bold by nesting the following elements.
 
 <br>
-<br>
 
-## italicize
+### italicize using `<em>`
 
 - Emphasis can be highlighted using `<em>` tag. It italices the text.
 
@@ -133,9 +129,8 @@ We can italicize and make bold by nesting the following elements.
   ![ul](./_assets/emphasis1.png)
 
 <br>
-<br>
 
-## Bold
+### Bold using `<strong>`
 
 - Text can be made bold using `<strong>` tag.
 
@@ -149,8 +144,7 @@ We can italicize and make bold by nesting the following elements.
 
 <br>
 <br>
-<br>
 
-# Advanced text formatting
+## Advanced text formatting
 
 - Refer [mdn web docs](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
