@@ -40,26 +40,60 @@ django-admin startproject <name of the project>
   django-admin startproject django-project
   ```
 
-Now, it'll have a directory created with the name "django_project" with the files as follows:
+<br>
+<br>
+
+## Directory Structure
+
+The directory structure after we create a new django project will be like:
+
+```bash
+C:.
+└───learning-django   # directory on the machine (DO NOT consider as root of django project)
+    ├───django-env    # directory created while creating python virtual environment
+    └───django_proj   # root directory of the django project
+        │   manage.py       # Command-line utility for managing the project
+        │
+        ├───django_proj     # Django project settings and configuration
+        │       asgi.py         # ASGI application entry point (for ASGI servers); Asynchronous Server Gateway Interface
+        │       settings.py     # Project settings (database, apps, middleware, etc.)
+        │       urls.py         # URL routing configuration
+        │       wsgi.py         # WSGI application entry point (for WSGI servers);  Web Server Gateway Interface
+        │       __init__.py     # Indicates that the files in the folder are part of a Python package.
+        |
+        ├───app1            # Django app
+        │   │   admin.py        # Admin configurations for the app
+        │   │   apps.py         # App-specific configuration
+        │   │   models.py       # Database models for the app
+        │   │   tests.py        # Unit tests for the app
+        │   │   views.py        # Views and view functions for the app
+        │   │   __init__.py
+        │   │
+        │   └───migrations      # Database migrations
+        │           __init__.py
+        │
+        │
+        ├───media           # User-uploaded media files (e.g., user avatars)
+        |
+        ├───static          # Static files (CSS, JavaScript, images, etc.)
+        |   └───app1
+        |
+        └───templates       # HTML templates
+            └───app1            # App-specific templates
+```
+
+<br>
+<br>
+
+## Running a local server
 
 ```
-D:.
-│   manage.py
-│
-└───django_project
-        asgi.py
-        settings.py
-        urls.py
-        wsgi.py
-        __init__.py
+python manage.py runserver
 ```
 
-- asgi.py allows for an optional Asynchronous Server Gateway Interface to be run.
-- settings.py controls our Django project’s overall settings.
-- urls.py tells Django which pages to build in response to a browser or URL request.
-- wsgi.py stands for Web Server Gateway Interface which helps Django serve our eventual web pages.
-- **init**.py indicates that the files in the folder are part of a Python package. Without this file, we cannot import files from another directory which we will be doing a lot of in Django!
+It runs a local server at http://127.0.0.1:8000 which is `localhost:8000` and we should see this page :
 
-- The manage.py file is not part of `django_project` but is used to execute various Django commands such as running the local web server or creating a new app.
+![image](./_assets/localhost.png)
 
+<br/>
 <br/>
