@@ -1,57 +1,83 @@
+# Venv Python Module
+
 The `venv` module supports creating lightweight “virtual environments”, each with their own independent set of Python packages installed.
 
 [official documentation]([venv — Creation of virtual environments — Python 3.11.1 documentation](https://docs.python.org/3/library/venv.html))
 
+<br>
+<br>
 
-###  Creating a new virtual environment
+##  Creating a new virtual environment
 
 ---
+
 - To create the virtual environment in the directory in which the command is run.
-	```cmd
-	python -m venv <environment_name>
-	```
+
+  ```cmd
+  python -m venv <environment_name>
+  ```
 
 - To create the virtual environment in a specific directory
-	```cmd
-	python -m venv <environment_name> <path>
-	```
-
+  ```cmd
+  python -m venv <environment_name> <path>
+  ```
 
 > The version of python used to create the virtual environment will be the version of python installed in the newly created environment.
 
 > If diff version of python is to be installed, use virtual_env !
 
-  
+ <br> 
+ <br>
 
-### Check the Virtual environment using **dir**
+## Check the Virtual environment using **dir**
+
 ---
+
 ![image](./_assets/confirmvenv.png)
 We can see that test_env directory is formed!
 
-### To activate the environment
----
-```cmd
-test_env\Scripts\activate.bat
-```
+<br>
+<br>
 
+## To activate the environment
+
+- Using powershell, use the following command.
+
+  ```cmd
+  test_env\Scripts\activate.bat
+  ```
+
+- If the venv environment is already created non-bash shell, the use this command:
+
+  ```bash
+  source <venv_name>/Scripts/activate
+  ```
+
+<br>
+<br>
   
-### To deactivate the environment
----
+## To deactivate the environment
+
 ```cmd
 deactivate
 ```
 
-### To delete the enironment
----
+<br>
+<br>
+
+## To delete the enironment
+
 ```cmd
 rmdir test_env /s
 ```
 
 - Basically delete the environment directory and it’s subdirectories.
 
+<br>
+<br>
 
-### Creating Requirements.txt File
----
+## Creating Requirements.txt File
+
 requirements.txt is **a file listing all the dependencies for a specific Python project**.
 
 - To get the list of all dependencies in the virtual environment, use the following command and copy the contents to a txt file and name it requirements.txt
@@ -60,51 +86,53 @@ requirements.txt is **a file listing all the dependencies for a specific Python
 pip freeze
 ```
 
-
 ![image](./_assets/pipfreeze.png)
 
+<br>
+<br>
 
-### Installing packages using requirements.txt
+## Installing packages using requirements.txt
+
 ---
+
 ```cmd
 pip install -r <path of requirements.txt>
 ```
 
+<br>
+<br>
 
-### Good Practice
+## Good Practice
+
 ---
 
 > It is ideal  to keep the environment folder free of other files because an environment is something which can be created and destroyed.
- 
-Avoid the following directory structure for projects:
 
+Avoid the following directory structure for projects:
 
 - ->MyProject
 
-        -> MyProject_env1
+-> MyProject_env1
 
-            -> Code
+-> Code
 
-            -> Assets
+-> Assets
 
-            -> Documentation
-
-  
+-> Documentation
 
 Follow the following directory structure:
 
-  
-
 - -> MyProject
 
-        -> MyProject_env1
+-> MyProject_env1
 
-        -> Code Base
+-> Code Base
 
-        -> Assets
+-> Assets
 
-        -> Documentation
-
-  
+-> Documentation
 
 > Donot use source control (git) on environment folder. if you want to share, send the requirement.txt file and ask your peer to reproduce the results by creating his own environment.
+
+<br>
+<br>

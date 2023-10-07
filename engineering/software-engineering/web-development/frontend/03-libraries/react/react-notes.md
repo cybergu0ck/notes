@@ -210,6 +210,13 @@ export function MyApp() {
 
 ## State
 
+"State" refers to an internal data structure that allows a component to store and manage data that can change over time.
+
+It enables components to re-render and update their user interfaces in response to changes in the data.
+
+<br>
+<br>
+
 ## useState hook
 
 - It is a hook that facilitates to define the state in a functional component.
