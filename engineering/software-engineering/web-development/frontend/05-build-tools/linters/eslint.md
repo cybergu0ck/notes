@@ -94,4 +94,4 @@ Rules can be found in eslintrc file. If it's in JSON format, then add the rules 
 ## References
 
 - [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-linting) about linting and formatting.
-- Follow this [documentation](https://www.digitalocean.com/community/tutorials/linting-and-formatting-with-eslint-in-vs-code).
+- Follow this [documentation](https://www.digitalocean.com/community/tutorials/linting-and-formatting-with-eslint-in-vs-code) for setting up ESLint.
