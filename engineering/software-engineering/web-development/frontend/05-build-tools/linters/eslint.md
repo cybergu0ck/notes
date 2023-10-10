@@ -3,14 +3,14 @@
 Linters are tools that scan code for bugs and errors, check for subjective, stylisitic preferences and report any errors that they find.
 
 - ESLint is one among the linter tools.
-- It is ideal and preferred to setup eslint local to the projects (instead of global setup), check references.
+- It is ideal and preferred to setup ESLint local to the projects (instead of global setup), check references.
 
 <br>
 <br>
 
 ## ESLint setup for VSCode (Not Globally)
 
-1. Initialise the javacript project, this will create the pacakge.json file.
+1. Make sure the javscript project is initialised. If not, use:
 
    ```bash
    npm init --yes
@@ -46,7 +46,7 @@ Linters are tools that scan code for bugs and errors, check for subjective, styl
 
 ### Formatting manually using script
 
-1. In package.json, under "scripts" add the following:
+1. In `package.json`, under "scripts" add the following:
 
    ```json
    {
@@ -65,7 +65,7 @@ Linters are tools that scan code for bugs and errors, check for subjective, styl
 ### Formatting on save
 
 1. Using command palette, open **Preferences: Open Workspace Settings (JSON)**
-2. Write the following to settings.json file that will be opened.
+2. Write the following to `settings.json` file that will be opened.
 
    ```json
    {
@@ -81,7 +81,7 @@ Linters are tools that scan code for bugs and errors, check for subjective, styl
 
 ## Customizing ESLint rules
 
-Rules can be found in eslintrc file. If it's in JSON format, then add the rules as shown here:
+Rules can be found in `eslintrc` file. If it's in JSON format, then add the rules as shown here:
 
 ```json
 {
@@ -96,4 +96,4 @@ Rules can be found in eslintrc file. If it's in JSON format, then add the rules 
 
 - [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-linting) about linting and formatting.
 - Follow this [documentation](https://www.digitalocean.com/community/tutorials/linting-and-formatting-with-eslint-in-vs-code) for setting up ESLint.
-- [Downsides](https://stackoverflow.com/questions/66694306/any-downsides-to-installing-eslint-globally) of setting eslint globally.
+- [Downsides](https://stackoverflow.com/questions/66694306/any-downsides-to-installing-eslint-globally) of setting ESLint globally.
