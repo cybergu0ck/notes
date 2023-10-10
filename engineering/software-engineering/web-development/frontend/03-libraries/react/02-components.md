@@ -243,40 +243,91 @@ export function MyApp() {
 
 ### Function as props
 
-```jsx
-function MyButton({
-  color = "Green",
-  fontSize = "15px",
-  text = "defaultClick",
-  handleClick,
-}) {
-  //storing all the properties as an object
-  const buttonStyle = {
-    color: color,
-    fontSize: fontSize + "px",
-  };
+- Functions can be passed as references which will be called by the component.
 
-  return (
-    <button style={buttonStyle} onClick={handleClick}>
-      {text}
-    </button>
-  );
-}
+  ```jsx
+  function MyButton({
+    color = "Green",
+    fontSize = "15px",
+    text = "defaultClick",
+    handleClick,
+  }) {
+    //storing all the properties as an object
+    const buttonStyle = {
+      color: color,
+      fontSize: fontSize + "px",
+    };
 
-export function MyApp() {
-  function ClickEvent() {
-    console.log("Clicked.");
+    return (
+      <button style={buttonStyle} onClick={handleClick}>
+        {text}
+      </button>
+    );
   }
 
-  return (
-    <>
-      <MyButton
-        color="Red"
-        fontSize="15"
-        text="Click Here"
-        handleClick={ClickEvent}
-      />
-    </>
-  );
-}
-```
+  export function MyApp() {
+    /* Arrow functions are preferred over the below type.
+    function ClickEvent() {
+      function innerFunc() {
+        console.log("click event registered.");
+      }
+      return innerFunc(); //We need to call innerFunc as we need to log when the ClickEvent function is called.
+    }
+    */
+
+    const ClickEvent = () => {
+      console.log("click event registered.");
+    };
+
+    return (
+      <>
+        <MyButton
+          color="Red"
+          fontSize="15"
+          text="Click Here"
+          handleClick={ClickEvent}
+        />
+      </>
+    );
+  }
+  ```
+
+- Passing functions with arguments
+
+  ```jsx
+  function MyButton({
+    color = "Green",
+    fontSize = "15px",
+    text = "defaultClick",
+    handleClick,
+  }) {
+    //storing all the properties as an object
+    const buttonStyle = {
+      color: color,
+      fontSize: fontSize + "px",
+    };
+
+    return (
+      <button style={buttonStyle} onClick={handleClick}>
+        {text}
+      </button>
+    );
+  }
+
+  export function MyApp() {
+    const ClickEvent = (color) => () => {
+      console.log(`${color} has clicked.`);
+    };
+
+    return (
+      <>
+        <MyButton
+          color="Red"
+          fontSize="15"
+          text="Click Here"
+          handleClick={ClickEvent("red")} //ClickEvent("red") will return the function object, ClickEvent("red")() will log the statement.
+        />
+      </>
+    );
+  }
+  ```
