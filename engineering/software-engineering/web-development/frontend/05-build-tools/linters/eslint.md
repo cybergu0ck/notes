@@ -3,11 +3,12 @@
 Linters are tools that scan code for bugs and errors, check for subjective, stylisitic preferences and report any errors that they find.
 
 - ESLint is one among the linter tools.
+- It is ideal and preferred to setup eslint local to the projects (instead of global setup), check references.
 
 <br>
 <br>
 
-## ESLint setup for VSCode
+## ESLint setup for VSCode (Not Globally)
 
 1. Initialise the javacript project, this will create the pacakge.json file.
 
@@ -95,3 +96,4 @@ Rules can be found in eslintrc file. If it's in JSON format, then add the rules 
 
 - [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-linting) about linting and formatting.
 - Follow this [documentation](https://www.digitalocean.com/community/tutorials/linting-and-formatting-with-eslint-in-vs-code) for setting up ESLint.
+- [Downsides](https://stackoverflow.com/questions/66694306/any-downsides-to-installing-eslint-globally) of setting eslint globally.
