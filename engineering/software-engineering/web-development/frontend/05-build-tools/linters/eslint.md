@@ -39,7 +39,7 @@ Linters are tools that scan code for bugs and errors, check for subjective, styl
 <br>
 <br>
 
-# Triggering Formatting
+## Triggering Formatting
 
 <br>
 
