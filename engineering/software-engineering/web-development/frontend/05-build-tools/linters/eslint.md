@@ -7,41 +7,7 @@ Linters are tools that scan code for bugs and errors, check for subjective, styl
 <br>
 <br>
 
-## Setting up ESLint for VS Code Editor
-
-The following steps are to integrate the ESLint with VSCode (NOT TO SETUP ESLINT FOR A PROJECT).
-
-1.  Install the ESLint VSCode extension.
-2.  Enable Formatting on save to automatically fix syntax and formatting issues,
-
-    - Using command palette, open **Preferences: Open Workspace Settings (JSON)**
-    - Write the following to settings.json file that will be opened.
-
-      ```
-      {
-          "editor.codeActionsOnSave": {
-              "source.fixAll.eslint": true
-          },
-          "eslint.validate": ["javascript"]
-      }
-      ```
-
-3.  Customise ESLint rules
-
-    - Open up the `.eslintrc.json` file.
-    - Add rules in the key named "rules"
-
-      ```json
-      {
-        //...
-        "rules": { "no-console": "off" }
-      }
-      ```
-
-<br>
-<br>
-
-## Setup ESLint (for a project)
+## ESLint setup for VSCode
 
 1. Initialise the javacript project, this will create the pacakge.json file.
 
@@ -66,13 +32,18 @@ The following steps are to integrate the ESLint with VSCode (NOT TO SETUP ESLINT
    npm init @eslint/config
    ```
 
-4. Answer the prompts.
+4. Answer the prompts according to the project.
+
+5. Make sure ESLint extension is installed in VSCode so that error highlighting starts to kick in the code editor.
+
+<br>
+<br>
+
+# Triggering Formatting
 
 <br>
 
-### Creating the ESLint script
-
-We can use this script to trigger the linting process.
+### Formatting manually using script
 
 1. In package.json, under "scripts" add the following:
 
@@ -89,9 +60,38 @@ We can use this script to trigger the linting process.
    ```
 
 <br>
+
+### Formatting on save
+
+1. Using command palette, open **Preferences: Open Workspace Settings (JSON)**
+2. Write the following to settings.json file that will be opened.
+
+   ```json
+   {
+     "editor.codeActionsOnSave": {
+       "source.fixAll.eslint": true
+     },
+     "eslint.validate": ["javascript"]
+   }
+   ```
+
+<br>
 <br>
 
-## Refrences
+## Customizing ESLint rules
+
+Rules can be found in eslintrc file. If it's in JSON format, then add the rules as shown here:
+
+```json
+{
+  "rules": { "no-console": "off" }
+}
+```
+
+<br>
+<br>
+
+## References
 
 - [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-linting) about linting and formatting.
 - Follow this [documentation](https://www.digitalocean.com/community/tutorials/linting-and-formatting-with-eslint-in-vs-code).
