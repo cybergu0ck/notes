@@ -1,22 +1,29 @@
 # React
 
-- React is a library and technically not a framework.
-- React is non opinionated, meaning there is no force to follow any specific design patterns, structure or logic.
+React is a front-end library that is used to build web applications.
 
-- A function that returns a jsx and whose name starts with a capital letter is a component.
-
-<br>
-<br>
-
-## Library vs Framework
-
-- Both library and framework are reuable code written by developers.
-- What distinguishes them is a term called _"Inversion of control"_. When using a library, the dev is in charge of the flow of the application (when and where to call the library). When using a framework, the framework is in charge of the flow.
+- **React is based on Components.** Components are building blocks of UI in react.
+- **React is Declarative.** We tell it what a component should look like using JSX.
+- **React is State-driven.** React **_"reacts"_** to state changes by re-rendering the UI.
+- **React is a Library** and not Framework as it is only the "view" layer. checkout [Difference between a framework and a library ](../front-end-frameworks.md#framework-vs-library)
+- **React is Non-opinionated**, meaning there is no force to follow any specific design patterns, structure or logic.
 
 <br>
 <br>
 
 ## Creating a React app
+
+<br>
+
+### Using create-react-app
+
+```bash
+npx create-react-app@5 <app-name>
+```
+
+<br>
+
+### Using Vite
 
 ```bash
 npm create vite@latest <app-name> -- --template react -y
@@ -39,3 +46,10 @@ npm create vite@latest <app-name> -- --template react -y
   ```bash
   npm run dev
   ```
+
+<br>
+<br>
+
+## References
+
+- Official [react](https://react.dev/) webpage for API references.
