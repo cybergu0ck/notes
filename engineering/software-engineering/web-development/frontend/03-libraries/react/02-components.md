@@ -17,6 +17,8 @@ function MyButton() {
 ```
 
 - React components can be class components or functional components, the former is depricated and is not prefered.
+- The name of the function must always start with a capital letter.
+- Components must be pure in terms of props and state. See [immutability of props](./03.props.md#immutability-of-props)
 
 <br>
 <br>
@@ -27,44 +29,54 @@ JSX is a syntax extension for javascript that allows HTML-like markup inside jav
 
 - JSX is syntactic sugar for react `createElement` function.
 - JSX compiles down to plain javascript objects.
-- Rules to follow when using JSX
 
-  1. **_Return a single root element._** If multiple elements are to be returned in a component then wrap them in a `<div>` or react fragment i.e. `<></>`.
-  2. **_Close all tags._** Self closing html tags must also be explicitly closed.
+<br>
 
-     ```html
-     <!-- This is an input tag in HTML, it is self closing -->
-     <input type="text" />
-     ```
+### Rules for writing JSX
 
-     ```jsx
-     //This is an input tag in JSX, we must self close it.
-     <input type="text" />
-     ```
+1. **_Return a single root element._** If multiple elements are to be returned in a component then wrap them in a `<div>` or react fragment i.e. `<></>`.
+2. **_Close all tags._** Self closing html tags must also be explicitly closed.
 
-  3. **_camelCase most things._** JSX turns into Javascript, hence we cannot use dash or reserved keywords. Example: use strokeWidth instead of stroke-width.
+   ```html
+   <!-- This is an input tag in HTML, it is self closing -->
+   <input type="text" />
+   ```
 
-     ```html
-     <circle
-       class="myCircles"
-       cx="50"
-       cy="50"
-       r="40"
-       fill="blue"
-       stroke-width="2"
-     />
-     ```
+   ```jsx
+   //This is an input tag in JSX, we must self close it.
+   <input type="text" />
+   ```
 
-     ```jsx
-     <circle
-       className="myCircles" //Notice class is invalid in JSX
-       cx="50"
-       cy="50"
-       r="40"
-       fill="blue"
-       strokeWidth="2"
-     />
-     ```
+3. **_camelCase most things._** JSX turns into Javascript, hence we cannot use dash or reserved keywords.
+
+   - class is reserved keyword in javascript, hence we use className in JSX.
+   - Example: use strokeWidth instead of stroke-width.
+
+   ```html
+   <circle
+     class="myCircles"
+     cx="50"
+     cy="50"
+     r="40"
+     fill="blue"
+     stroke-width="2"
+   />
+   ```
+
+   ```jsx
+   <circle
+     className="myCircles" //Notice class is invalid in JSX
+     cx="50"
+     cy="50"
+     r="40"
+     fill="blue"
+     strokeWidth="2"
+   />
+   ```
+
+<br>
+
+### Using javascript within JSX
 
 - Javacript can be used inside JSX with the help of curly braces.
 
@@ -75,39 +87,94 @@ JSX is a syntax extension for javascript that allows HTML-like markup inside jav
   }
   ```
 
-- Passing javascript object using double curly braces. Generally used in inline CSS styles in JSX.
+- Statements (if/else, for, switch) are not allowed within JSX!
 
-  ```jsx
-  export function MyApp() {
+```js
+function Footer() {
+  const hour = new Date().getHours();
+  const openHour = 12;
+  const closeHour = 22;
+  const isOpen = hour >= openHour && hour <= closeHour;
+
+  return (
+    <footer>
+      {
+        if(!isOpen)
+          return ( <p> We're currently closed</p>)
+      }
+    </footer>
+  )
+```
+
+- We can use it outside JSX in the javascript, like:
+
+  ```js
+  function Footer() {
+    const hour = new Date().getHours();
+    const openHour = 12;
+    const closeHour = 22;
+    const isOpen = hour >= openHour && hour <= closeHour;
+
+    if (!isOpen) return <p>We're currently closed.</p>;
+
     return (
-      <div
-        style={{
-          backgroundColor: "red",
-          color: "yellow",
-        }}
-      >
-        <MyButton></MyButton>
-      </div>
+      <footer className="footer">
+        <div className="order">
+          <p>We're open until {closeHour}:00. Come visit us or order online.</p>
+          <button className="btn">Order</button>
+        </div>
+      </footer>
     );
   }
+
+  //This is for illustration only, this is bad code as the footer will not be generated in the early return!
   ```
 
-  ```jsx
-  //Same code but note that we are not using double curly braces explicitely
-  export function MyApp() {
-    const divStyle = {
-      backgroundColor: "red",
-      color: "yellow",
-    };
-    return (
-      <div style={divStyle}>
-        <MyButton></MyButton>
-      </div>
-    );
-  }
-  ```
+<br>
+
+### Using inline CSS within JSX
+
+Traditionally, we use `script: "<style attributes>"` but in JSX we have to wrap our CSS object with curly braces (hence double curlies).
+
+```jsx
+export function MyApp() {
+  return (
+    <div
+      style={{
+        backgroundColor: "red",
+        color: "yellow",
+      }}
+    >
+      <MyButton></MyButton>
+    </div>
+  );
+}
+```
+
+```jsx
+//Same code but note that we are not using double curly braces explicitely
+export function MyApp() {
+  const divStyle = {
+    backgroundColor: "red",
+    color: "yellow",
+  };
+  return (
+    <div style={divStyle}>
+      <MyButton></MyButton>
+    </div>
+  );
+}
+```
 
 - Checkout [official docs](https://react.dev/learn/javascript-in-jsx-with-curly-braces#using-curly-braces-a-window-into-the-javascript-world) to understand the usage of curlies in JSX.
+
+<br>
+<br>
+
+## Seperation of concerns
+
+- Traditionally, a web application is seperated by **_one technology per file_**. We seperate HTML, CSS and Javascript into different files although they are tightly coupled.
+- With react, a web application is seperated by **_one component per file_**. We seperate the Components into different files which have JSX (HTML, CSS and Javascript) in them, which are also tightly coupled.
 
 <br>
 <br>
@@ -120,214 +187,3 @@ JSX is a syntax extension for javascript that allows HTML-like markup inside jav
 
 <br>
 <br>
-
-## Props
-
-In React, "props" is short for "properties," and it's a mechanism for passing data from a parent component to a child component.
-
-```jsx
-//MyApp.jsx
-
-function MyButton(props) {
-  //storing all the properties as an object
-  const buttonStyle = {
-    color: props.color,
-    fontSize: props.fontSize + "px",
-  };
-
-  return <button style={buttonStyle}> {props.text}</button>;
-}
-
-export function MyApp() {
-  return <MyButton color="red" fontSize="15" text="Click Here" />;
-}
-```
-
-```jsx
-//main.jsx
-
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { MyApp } from "./MyApp.jsx";
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <MyApp />
-  </React.StrictMode>
-);
-```
-
-<br>
-
-### Prop Destructuring
-
-Props destructuring is essentially object destructuring from JavaScript applied to the props object passed to a React functional component.
-
-```jsx
-function MyButton({ color, fontSize, text }) {
-  //storing all the properties as an object
-  const buttonStyle = {
-    color: color,
-    fontSize: fontSize + "px",
-  };
-
-  return <button style={buttonStyle}> {text}</button>;
-}
-
-export function MyApp() {
-  return <MyButton color="Red" fontSize="15" text="Click Here" />;
-}
-```
-
-<br>
-
-### Default Props
-
-Default props is a way to specify default values for the props of a component.
-
-```jsx
-function MyButton({ color, fontSize, text }) {
-  //storing all the properties as an object
-  const buttonStyle = {
-    color: color,
-    fontSize: fontSize + "px",
-  };
-
-  return <button style={buttonStyle}> {text}</button>;
-}
-
-MyButton.defaultProps = {
-  color: "Green",
-  fontSize: "15px",
-  text: "defaultClick",
-};
-
-export function MyApp() {
-  return (
-    <>
-      <MyButton color="Red" fontSize="15" text="Click Here" />
-      <MyButton />
-    </>
-  );
-}
-```
-
-- We can combine default props and prop destructuring as follows:
-
-  ```jsx
-  function MyButton({
-    color = "Green",
-    fontSize = "15px",
-    text = "defaultClick",
-  }) {
-    //storing all the properties as an object
-    const buttonStyle = {
-      color: color,
-      fontSize: fontSize + "px",
-    };
-
-    return <button style={buttonStyle}> {text}</button>;
-  }
-
-  export function MyApp() {
-    return (
-      <>
-        <MyButton color="Red" fontSize="15" text="Click Here" />
-        <MyButton />
-      </>
-    );
-  }
-  ```
-
-<br>
-
-### Function as props
-
-- Functions can be passed as references which will be called by the component.
-
-  ```jsx
-  function MyButton({
-    color = "Green",
-    fontSize = "15px",
-    text = "defaultClick",
-    handleClick,
-  }) {
-    //storing all the properties as an object
-    const buttonStyle = {
-      color: color,
-      fontSize: fontSize + "px",
-    };
-
-    return (
-      <button style={buttonStyle} onClick={handleClick}>
-        {text}
-      </button>
-    );
-  }
-
-  export function MyApp() {
-    /* Arrow functions are preferred over the below type.
-    function ClickEvent() {
-      function innerFunc() {
-        console.log("click event registered.");
-      }
-      return innerFunc(); //We need to call innerFunc as we need to log when the ClickEvent function is called.
-    }
-    */
-
-    const ClickEvent = () => {
-      console.log("click event registered.");
-    };
-
-    return (
-      <>
-        <MyButton
-          color="Red"
-          fontSize="15"
-          text="Click Here"
-          handleClick={ClickEvent}
-        />
-      </>
-    );
-  }
-  ```
-
-- Passing functions with arguments
-
-  ```jsx
-  function MyButton({
-    color = "Green",
-    fontSize = "15px",
-    text = "defaultClick",
-    handleClick,
-  }) {
-    //storing all the properties as an object
-    const buttonStyle = {
-      color: color,
-      fontSize: fontSize + "px",
-    };
-
-    return (
-      <button style={buttonStyle} onClick={handleClick}>
-        {text}
-      </button>
-    );
-  }
-
-  export function MyApp() {
-    const ClickEvent = (color) => () => {
-      console.log(`${color} has clicked.`);
-    };
-
-    return (
-      <>
-        <MyButton
-          color="Red"
-          fontSize="15"
-          text="Click Here"
-          handleClick={ClickEvent("red")} //ClickEvent("red") will return the function object, ClickEvent("red")() will log the statement.
-        />
-      </>
-    );
-  }
-  ```
