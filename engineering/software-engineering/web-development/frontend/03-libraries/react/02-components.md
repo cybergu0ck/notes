@@ -76,7 +76,7 @@ JSX is a syntax extension for javascript that allows HTML-like markup inside jav
 
 <br>
 
-### Using javascript within JSX
+### Using javascript in JSX
 
 - Javacript can be used inside JSX with the help of curly braces.
 
@@ -89,22 +89,24 @@ JSX is a syntax extension for javascript that allows HTML-like markup inside jav
 
 - Statements (if/else, for, switch) are not allowed within JSX!
 
-```js
-function Footer() {
-  const hour = new Date().getHours();
-  const openHour = 12;
-  const closeHour = 22;
-  const isOpen = hour >= openHour && hour <= closeHour;
+  ```js
+  //ERROR
+  function Footer() {
+    const hour = new Date().getHours();
+    const openHour = 12;
+    const closeHour = 22;
+    const isOpen = hour >= openHour && hour <= closeHour;
 
-  return (
-    <footer>
-      {
-        if(!isOpen)
-          return ( <p> We're currently closed</p>)
-      }
-    </footer>
-  )
-```
+    return (
+      <footer>
+        {
+          if(!isOpen)
+            return ( <p> We're currently closed</p>)
+        }
+      </footer>
+    )
+  //ERROR
+  ```
 
 - We can use it outside JSX in the javascript, like:
 
@@ -132,7 +134,7 @@ function Footer() {
 
 <br>
 
-### Using inline CSS within JSX
+### Using inline CSS in JSX
 
 Traditionally, we use `script: "<style attributes>"` but in JSX we have to wrap our CSS object with curly braces (hence double curlies).
 
@@ -169,6 +171,48 @@ export function MyApp() {
 - Checkout [official docs](https://react.dev/learn/javascript-in-jsx-with-curly-braces#using-curly-braces-a-window-into-the-javascript-world) to understand the usage of curlies in JSX.
 
 <br>
+
+### Setting classes conditionally in JSX
+
+- Based on the prop we need to set the class using [template literals](../../../../programming-languages/javascript/01-js-fundamentals/js-features/template-literals.md#template-literals).
+  and [conditional ternary opertor](../../../../programming-languages/javascript/03-js-control-flow/01-js-conditionals.md#ternary-conditional-operator)
+
+  ```js
+  function MyApp({ abnormal }) {
+    return <div className={`${abnormal ? "abnormal" : "normal"}`}></div>;
+  }
+  ```
+
+- Setting multiple classes ("status" and "normal" in this code) for the same element.
+
+  ```js
+  function MyApp() {
+    return <div className="status normal"></div>;
+  }
+  ```
+
+- Setting multiple classes for the same element, conditionally.
+  ```js
+  function MyApp({ abnormal }) {
+    return <div className={`status ${abnormal ? "abnormal" : "normal"}`}></div>;
+  }
+  ```
+
+<br>
+
+### Setting text conditionally in JSX
+
+```js
+function MyApp({ isSoldOut }) {
+  return (
+    <p>
+      {isSoldOut ? "the items are sold out" : " Select authentic items here. "}
+    </p>
+  );
+}
+```
+
+<br>
 <br>
 
 ## Seperation of concerns
@@ -187,3 +231,33 @@ export function MyApp() {
 
 <br>
 <br>
+
+## React fragment
+
+- When we wrap multiple elements with a div element, that div element will be present in the DOM.
+- When we wrap multiple elements with a react fragment, the react fragment will not be present in the DOM, it will look like the multiple elements are not wrapped at all in the DOM.
+
+  ```js
+  function App() {
+    return (
+      <>
+        <h1>Authetic Header</h1>
+        <p>lorem epsum salz..</p>
+      </>
+    );
+  }
+  ```
+
+- If we want to use key's for react fragments,
+
+  ```js
+  //Make sure to import React!
+  function App() {
+    return (
+      <React.Fragment key="value">
+        <h1>Authetic Header</h1>
+        <p>lorem epsum salz..</p>
+      </React.Fragment>
+    );
+  }
+  ```
