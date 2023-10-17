@@ -1,6 +1,6 @@
 # Components
 
-React enables to break the UI into independent reusable chunks called _components_.
+_"components" are independent reusable building blocks that enables up to compose the UI._
 
 <br>
 <br>
@@ -25,7 +25,7 @@ function MyButton() {
 
 ## JSX
 
-JSX is a syntax extension for javascript that allows HTML-like markup inside javascript file.
+_"JSX" is a syntax extension for javascript that allows HTML-like markup inside javascript file._
 
 - JSX is syntactic sugar for react `createElement` function.
 - JSX compiles down to plain javascript objects.
