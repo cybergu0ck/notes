@@ -261,3 +261,24 @@ function MyApp({ isSoldOut }) {
     );
   }
   ```
+
+<br>
+<br>
+
+## Guidelines for splitting the UI into components
+
+- A large component containing a lot of elements or components wrapped inside is bad. Similar is the case of having a lot of very small sized components.
+
+- Code components such that they follow:
+
+  1. Logical Seperation of content/layout.
+  2. Reusability.
+  3. Minimal Responsibilty (if not single responsibility).
+  4. Personal Coding Style.
+
+- Name the components according to what it does or displays.
+- Longer names are okay.
+- When in doubt, start with a big component and then split into smaller components when necessary.
+
+<br>
+<br>
