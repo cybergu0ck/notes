@@ -1,11 +1,14 @@
 # Components
 
-_"components" are independent reusable building blocks that enables up to compose the UI._
+_***"components"*** are blueprints for creating independent reusable building blocks that enables up to compose the UI._
+
+- Components are defined using class-based components or function components in React.
+- Components describe what the UI should look like and how it should behave.
 
 <br>
 <br>
 
-## Creating react components (Functional components)
+## Functional Components
 
 They are as easy as creating javascript funcitons returning JSX.
 
@@ -23,194 +26,23 @@ function MyButton() {
 <br>
 <br>
 
-## JSX
+## Component Instances
 
-_"JSX" is a syntax extension for javascript that allows HTML-like markup inside javascript file._
+_***"Component instances"*** are specific occurrences or instantiation of a React components within the application._
 
-- JSX is syntactic sugar for react `createElement` function.
-- JSX compiles down to plain javascript objects.
-
-<br>
-
-### Rules for writing JSX
-
-1. **_Return a single root element._** If multiple elements are to be returned in a component then wrap them in a `<div>` or react fragment i.e. `<></>`.
-2. **_Close all tags._** Self closing html tags must also be explicitly closed.
-
-   ```html
-   <!-- This is an input tag in HTML, it is self closing -->
-   <input type="text" />
-   ```
-
-   ```jsx
-   //This is an input tag in JSX, we must self close it.
-   <input type="text" />
-   ```
-
-3. **_camelCase most things._** JSX turns into Javascript, hence we cannot use dash or reserved keywords.
-
-   - class is reserved keyword in javascript, hence we use className in JSX.
-   - Example: use strokeWidth instead of stroke-width.
-
-   ```html
-   <circle
-     class="myCircles"
-     cx="50"
-     cy="50"
-     r="40"
-     fill="blue"
-     stroke-width="2"
-   />
-   ```
-
-   ```jsx
-   <circle
-     className="myCircles" //Notice class is invalid in JSX
-     cx="50"
-     cy="50"
-     r="40"
-     fill="blue"
-     strokeWidth="2"
-   />
-   ```
+- Component instances are what actually get rendered and displayed in your application.
+- It is created from a component and represents a single, independent unit in your user interface.
+- Each component instance can have its own set of props and state, making it unique and self-contained.
 
 <br>
-
-### Using javascript in JSX
-
-- Javacript can be used inside JSX with the help of curly braces.
-
-  ```jsx
-  function MyButton() {
-    const btnTitle = "Click";
-    return <button>{btnTitle}</button>;
-  }
-  ```
-
-- Statements (if/else, for, switch) are not allowed within JSX!
-
-  ```js
-  //ERROR
-  function Footer() {
-    const hour = new Date().getHours();
-    const openHour = 12;
-    const closeHour = 22;
-    const isOpen = hour >= openHour && hour <= closeHour;
-
-    return (
-      <footer>
-        {
-          if(!isOpen)
-            return ( <p> We're currently closed</p>)
-        }
-      </footer>
-    )
-  //ERROR
-  ```
-
-- We can use it outside JSX in the javascript, like:
-
-  ```js
-  function Footer() {
-    const hour = new Date().getHours();
-    const openHour = 12;
-    const closeHour = 22;
-    const isOpen = hour >= openHour && hour <= closeHour;
-
-    if (!isOpen) return <p>We're currently closed.</p>;
-
-    return (
-      <footer className="footer">
-        <div className="order">
-          <p>We're open until {closeHour}:00. Come visit us or order online.</p>
-          <button className="btn">Order</button>
-        </div>
-      </footer>
-    );
-  }
-
-  //This is for illustration only, this is bad code as the footer will not be generated in the early return!
-  ```
-
 <br>
 
-### Using inline CSS in JSX
+## React Element
 
-Traditionally, we use `script: "<style attributes>"` but in JSX we have to wrap our CSS object with curly braces (hence double curlies).
+_A "***React element***" is a plain JavaScript object that represents a description of what is to be rendered on the screen._
 
-```jsx
-export function MyApp() {
-  return (
-    <div
-      style={{
-        backgroundColor: "red",
-        color: "yellow",
-      }}
-    >
-      <MyButton></MyButton>
-    </div>
-  );
-}
-```
-
-```jsx
-//Same code but note that we are not using double curly braces explicitely
-export function MyApp() {
-  const divStyle = {
-    backgroundColor: "red",
-    color: "yellow",
-  };
-  return (
-    <div style={divStyle}>
-      <MyButton></MyButton>
-    </div>
-  );
-}
-```
-
-- Checkout [official docs](https://react.dev/learn/javascript-in-jsx-with-curly-braces#using-curly-braces-a-window-into-the-javascript-world) to understand the usage of curlies in JSX.
-
-<br>
-
-### Setting classes conditionally in JSX
-
-- Based on the prop we need to set the class using [template literals](../../../../programming-languages/javascript/01-js-fundamentals/js-features/template-literals.md#template-literals).
-  and [conditional ternary opertor](../../../../programming-languages/javascript/03-js-control-flow/01-js-conditionals.md#ternary-conditional-operator)
-
-  ```js
-  function MyApp({ abnormal }) {
-    return <div className={`${abnormal ? "abnormal" : "normal"}`}></div>;
-  }
-  ```
-
-- Setting multiple classes ("status" and "normal" in this code) for the same element.
-
-  ```js
-  function MyApp() {
-    return <div className="status normal"></div>;
-  }
-  ```
-
-- Setting multiple classes for the same element, conditionally.
-  ```js
-  function MyApp({ abnormal }) {
-    return <div className={`status ${abnormal ? "abnormal" : "normal"}`}></div>;
-  }
-  ```
-
-<br>
-
-### Setting text conditionally in JSX
-
-```js
-function MyApp({ isSoldOut }) {
-  return (
-    <p>
-      {isSoldOut ? "the items are sold out" : " Select authentic items here. "}
-    </p>
-  );
-}
-```
+- Component Instances (specifically the JSX) are converted to react elements using the `React.createElement()` function.
+- It is this react element that will be converted to actual DOM elements in the html.
 
 <br>
 <br>
@@ -219,48 +51,6 @@ function MyApp({ isSoldOut }) {
 
 - Traditionally, a web application is seperated by **_one technology per file_**. We seperate HTML, CSS and Javascript into different files although they are tightly coupled.
 - With react, a web application is seperated by **_one component per file_**. We seperate the Components into different files which have JSX (HTML, CSS and Javascript) in them, which are also tightly coupled.
-
-<br>
-<br>
-
-## Keys
-
-- keys are unique identifiers, something like id attribute in html.
-- As long as keys remain consistent and unique, React can handle the DOM effectively and efficiently.
-- It is important to define keys when creating react components.
-
-<br>
-<br>
-
-## React fragment
-
-- When we wrap multiple elements with a div element, that div element will be present in the DOM.
-- When we wrap multiple elements with a react fragment, the react fragment will not be present in the DOM, it will look like the multiple elements are not wrapped at all in the DOM.
-
-  ```js
-  function App() {
-    return (
-      <>
-        <h1>Authetic Header</h1>
-        <p>lorem epsum salz..</p>
-      </>
-    );
-  }
-  ```
-
-- If we want to use key's for react fragments,
-
-  ```js
-  //Make sure to import React!
-  function App() {
-    return (
-      <React.Fragment key="value">
-        <h1>Authetic Header</h1>
-        <p>lorem epsum salz..</p>
-      </React.Fragment>
-    );
-  }
-  ```
 
 <br>
 <br>
