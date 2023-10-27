@@ -1,38 +1,40 @@
-# Components
+# React Components
 
-_***"components"*** are blueprints for creating independent reusable building blocks that enables up to compose the UI._
+<br>
 
-- Components are defined using class-based components or function components in React.
+## Component
+
+_**"Component"** is a blueprint for creating independent reusable building blocks that enables the composition of UI._
+
 - Components describe what the UI should look like and how it should behave.
+- Components can be class-based components or functional components.
+- Class based components are depricating and are not preferred.
 
 <br>
-<br>
 
-## Functional Components
+### Functional Component
 
-They are as easy as creating javascript funcitons returning JSX.
+_"**Functional Component**" is a javascript function that return JSX._
 
 ```jsx
 function MyButton() {
-  return <button>Click Me</button>;
+  return <button>Click Me</button>; //This is JSX!
 }
-// Remember to export them (if needed) using default export or named export.
 ```
 
-- React components can be class components or functional components, the former is depricated and is not prefered.
 - The name of the function must always start with a capital letter.
 - Components must be pure in terms of props and state. See [immutability of props](./03.props.md#immutability-of-props)
 
 <br>
 <br>
 
-## Component Instances
+## Component Instance
 
-_***"Component instances"*** are specific occurrences or instantiation of a React components within the application._
+_***"Component instance"*** is a specific occurrence or instantiation of a component._
 
-- Component instances are what actually get rendered and displayed in your application.
-- It is created from a component and represents a single, independent unit in your user interface.
-- Each component instance can have its own set of props and state, making it unique and self-contained.
+- Component is the blueprint and component instance is an instance of the component that is created from that blueprint.
+- However "_component_" and "_component instance_" are used interchangebly.
+- Each component instance can have its own set of props and state, making it self-contained.
 
 <br>
 <br>
@@ -47,28 +49,32 @@ _A "***React element***" is a plain JavaScript object that represents a descript
 <br>
 <br>
 
-## Seperation of concerns
+## Guidelines for creating components
+
+- Code components such that they follow:
+
+  <ol type="1">
+    <li>Logical Seperation of content/layout.</li>
+    <li>Reusability.</li>
+    <li>Minimal Responsibilty (if not single responsibility).</li>
+    <li>Personal Coding Style.</li>
+  </ol>
+
+- Name the components according to what it does or displays.
+- Longer names are okay.
+- When in doubt, start with a big component and then split into smaller components when necessary.
+- A large component containing a lot of elements or components wrapped inside is bad.
+- Similar is the case of having a lot of very small sized components.
+
+<br>
+
+### Seperation of concerns
 
 - Traditionally, a web application is seperated by **_one technology per file_**. We seperate HTML, CSS and Javascript into different files although they are tightly coupled.
 - With react, a web application is seperated by **_one component per file_**. We seperate the Components into different files which have JSX (HTML, CSS and Javascript) in them, which are also tightly coupled.
 
 <br>
-<br>
 
-## Guidelines for splitting the UI into components
+---
 
-- A large component containing a lot of elements or components wrapped inside is bad. Similar is the case of having a lot of very small sized components.
-
-- Code components such that they follow:
-
-  1. Logical Seperation of content/layout.
-  2. Reusability.
-  3. Minimal Responsibilty (if not single responsibility).
-  4. Personal Coding Style.
-
-- Name the components according to what it does or displays.
-- Longer names are okay.
-- When in doubt, start with a big component and then split into smaller components when necessary.
-
-<br>
 <br>
