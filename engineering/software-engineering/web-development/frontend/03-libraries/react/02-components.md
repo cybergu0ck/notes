@@ -23,7 +23,7 @@ function MyButton() {
 ```
 
 - The name of the function must always start with a capital letter.
-- Components must be pure in terms of props and state. See [immutability of props](./03.props.md#immutability-of-props)
+- Components must be pure in terms of props and state. See [immutability of props](04.props.md#immutability-of-props)
 
 <br>
 <br>
