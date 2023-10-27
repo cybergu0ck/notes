@@ -189,3 +189,87 @@ _"**Key**" with a unique value makes the React component unique._
 
   //Remaining code...
   ```
+
+<br>
+<br>
+
+## Batching of State Updates
+
+_"**Batching**" is a process of bundling multiple state updates into a single update._
+
+- Batching improves performance by preventing unnecessary re-renders.
+
+- Understand the following code,
+
+  ```jsx
+  import { useState } from "react";
+
+  export default function App() {
+    const [state1, setState1] = useState(1);
+    const [state2, setState2] = useState(true);
+    const [state3, setState3] = useState("default");
+
+    console.log("RENDER");
+
+    function handleClick() {
+      setState1(2);
+      setState2(false);
+      setState3("changed");
+    }
+
+    return (
+      <div>
+        <button onClick={handleClick}>Change State</button>
+        <p>
+          state1 is {state1}, state2 is {`${state2}`} and state3 is {state3}
+        </p>
+      </div>
+    );
+  }
+  ```
+
+  - There is a log statement that logs everytime the component renders.
+  - There are 3 states that are updated when the button is clicked.
+  - However the component is rendered only once when the button is clicked and not thrice because of batching, This can be seen in console.
+  - Totally the component is rendered twice, one initial render and one re-render. (`React.StrictMode` is disabled!)
+
+    ![cl](./_assets/cl1.png)
+
+- Automatic bathcing of event handlers is a feature of react 17, react 18 automatically batched event handlers, timeouts, promises, native events.
+
+<br>
+<br>
+
+## Asynchronous nature of state updates
+
+```jsx
+import { useState } from "react";
+
+export default function App() {
+  const [text, setText] = useState("default");
+
+  console.log("RENDER");
+
+  function handleClick() {
+    setText("changed");
+    console.log(text);
+  }
+
+  return (
+    <div>
+      <button onClick={handleClick}>Change text</button>
+      <p>state is {text}</p>
+    </div>
+  );
+}
+```
+
+- There is a state called `text`
+- In the handleClick event handler function, we are changing the state and logging it right away.
+- However when we click the button, we see the previous value of `text` i.e. _"default"_ in the console and the updated value i.e. _"changed"_ on the screen.
+
+  ![b2](./_assets/b2.png)
+  ![cl2](./_assets/cl2.png)
+
+- This is because of the asynchronous nature of rendering, the state is not updated as soon as we use setState function. It has to undergo rendering, reconciliation and DOM updation.
+- When the control is at console statement, the value of the state in the fibre tree is still "default", then the control flows and the component is rendered (virtual DOM is created), in the reconciliation process the fibre tree is updated with the new value of the state and that is updatd on the DOM.
