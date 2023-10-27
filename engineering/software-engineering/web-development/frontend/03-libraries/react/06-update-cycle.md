@@ -1,4 +1,15 @@
-# 1. Rendering
+# React's Update Cycle
+
+React updates the the actual DOM by following these steps in order:
+
+1. Rendering
+2. Reconciliation
+3. Commiting
+
+<br>
+<br>
+
+## 1. Rendering
 
 _"**Rendering**" is the process of creating a virtual DOM._
 
@@ -11,9 +22,8 @@ _"**Rendering**" is the process of creating a virtual DOM._
   - This is because react doesn't know whether children will be affected or not, hence it re-renders all the children components.
 
 <br>
-<br>
 
-## Virtual DOM
+### Virtual DOM
 
 _The "**Virtual DOM**" is a lightweight, in-memory representation of the Real DOM._
 
@@ -21,9 +31,8 @@ _The "**Virtual DOM**" is a lightweight, in-memory representation of the Real DO
 - Virtual DOM is a JavaScript object.
 
 <br>
-<br>
 
-## Triggering renders
+### Triggering renders
 
 Rendering occurs in 2 situations:
 
@@ -40,32 +49,31 @@ Rendering occurs in 2 situations:
 <br>
 <br>
 
-# 2. Reconciliation
+## 2. Reconciliation
 
-Reconcillation is the process of preparing the list of updates for the DOM by comparing the old and the new Virtual DOM in order to reflect the latest state changes.
+_"**Reconcillation**" is the process of preparing the list of updates for the DOM by comparing the old and the new Virtual DOM in order to reflect the latest state changes._
 
 - Reconciler is the what performs the reconcillation.
 - Fibre is the name of the reconciler in react.
 
 <br>
-<br>
 
-## Diffing
+### Diffing
 
-It is algorithm that determines the differences between the old and the new Virtual DOM.
+_"**Diffing**" is algorithm that determines the differences between the old and the new Virtual DOM._
 
 - Diffing is a specific part of the reconciliation process.
 
 <br>
 
-### Diffing Rules
+#### Diffing Rules
 
 1. Two elements of different types will produce different trees.
 2. Elements with stable key prop stay the same across renders.
 
 <br>
 
-### Diffing Concept Clarity
+#### Diffing Concept Clarity
 
 In the diffing process, while react compares the elements in the current virtual DOM with the previous one, if it finds
 
@@ -155,18 +163,19 @@ In the diffing process, while react compares the elements in the current virtual
 <br>
 <br>
 
-# 3. Updating the Actual DOM
+## 3. Commiting
 
-The updates from the reconciliation process is used to update the actual DOM.
+_"**Commiting**" is the process of updating the actual DOM in react's terminology._
 
+- The updates from the reconciliation process is used to update the actual DOM.
 - `ReactDOM` is the part of react library that handles all the code that is used for this process.
 
 <br>
 <br>
 
-## Keys
+## Key
 
-_"**Key**" with a unique value makes the React component unique._
+_"**Key**" is a special prop, with a unique value it makes the component unique._
 
 - Adding a key for the Content component in the above code will make the component instanes unique and the state is now reset as we change the tabs (re-renders)
 
@@ -198,44 +207,45 @@ _"**Key**" with a unique value makes the React component unique._
 _"**Batching**" is a process of bundling multiple state updates into a single update._
 
 - Batching improves performance by preventing unnecessary re-renders.
-
-- Understand the following code,
-
-  ```jsx
-  import { useState } from "react";
-
-  export default function App() {
-    const [state1, setState1] = useState(1);
-    const [state2, setState2] = useState(true);
-    const [state3, setState3] = useState("default");
-
-    console.log("RENDER");
-
-    function handleClick() {
-      setState1(2);
-      setState2(false);
-      setState3("changed");
-    }
-
-    return (
-      <div>
-        <button onClick={handleClick}>Change State</button>
-        <p>
-          state1 is {state1}, state2 is {`${state2}`} and state3 is {state3}
-        </p>
-      </div>
-    );
-  }
-  ```
-
-  - There is a log statement that logs everytime the component renders.
-  - There are 3 states that are updated when the button is clicked.
-  - However the component is rendered only once when the button is clicked and not thrice because of batching, This can be seen in console.
-  - Totally the component is rendered twice, one initial render and one re-render. (`React.StrictMode` is disabled!)
-
-    ![cl](./_assets/cl1.png)
-
 - Automatic bathcing of event handlers is a feature of react 17, react 18 automatically batched event handlers, timeouts, promises, native events.
+
+<br>
+
+### Batching Concept Clarity
+
+```jsx
+import { useState } from "react";
+
+export default function App() {
+  const [state1, setState1] = useState(1);
+  const [state2, setState2] = useState(true);
+  const [state3, setState3] = useState("default");
+
+  console.log("RENDER");
+
+  function handleClick() {
+    setState1(2);
+    setState2(false);
+    setState3("changed");
+  }
+
+  return (
+    <div>
+      <button onClick={handleClick}>Change State</button>
+      <p>
+        state1 is {state1}, state2 is {`${state2}`} and state3 is {state3}
+      </p>
+    </div>
+  );
+}
+```
+
+- There is a log statement that logs everytime the component renders.
+- There are 3 states that are updated when the button is clicked.
+- However the component is rendered only once when the button is clicked and not thrice because of batching, This can be seen in console.
+- Totally the component is rendered twice, one initial render and one re-render. (`React.StrictMode` is disabled!)
+
+  ![cl](./_assets/cl1.png)
 
 <br>
 <br>
