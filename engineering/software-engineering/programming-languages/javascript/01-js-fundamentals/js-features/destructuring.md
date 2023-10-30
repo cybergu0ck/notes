@@ -42,7 +42,7 @@ console.log(f2);
 
 ## Object Destructing
 
-we use curly beaces along with the names of the properties of the object we are destructuring.
+we use curly braces along with the names of the properties of the object we are destructuring.
 
 ```js
 const myObject = {
@@ -97,6 +97,25 @@ console.log(secondProp);
 
   // 1
   // new value
+  ```
+
+- We can perform assignment whilst destructuring.
+
+  ```js
+  const myObject = {
+    firstProp: 1,
+    secondProp: 2,
+    thirdProp: 3,
+    fourthProp: 4,
+  };
+
+  const { firstProp: first, secondProp: second } = myObject;
+
+  console.log(first);
+  console.log(second);
+
+  //1
+  //2
   ```
 
 - Destructuring is commonly used in function parameters.
