@@ -3,11 +3,10 @@
 ```js
 let num = 2;
 
-if (num%2 === 0){
-    console.log(`${num} is an even number.`)
-}
-else {
-    console.log(`${num} is an odd number.`)
+if (num % 2 === 0) {
+  console.log(`${num} is an even number.`);
+} else {
+  console.log(`${num} is an odd number.`);
 }
 
 //2 is an even number.
@@ -21,11 +20,10 @@ else {
 ```js
 let num = 3;
 
-if (num%2 === 0){
-    console.log(`${num} is an even number.`)
-}
-else if (num%2 !== 0){
-    console.log(`${num} is an odd number.`)
+if (num % 2 === 0) {
+  console.log(`${num} is an even number.`);
+} else if (num % 2 !== 0) {
+  console.log(`${num} is an odd number.`);
 }
 
 //3 is an odd number.
@@ -46,12 +44,12 @@ else if (num%2 !== 0){
 <br>
 <br>
 
-
-# Using the ternary operator for if-else
+# Ternary conditional operator
 
 ```js
 let num = 10;
-let res = num%2 === 0 ? `${num} is an even number.`: `${num} is an odd number.`;
+let res =
+  num % 2 === 0 ? `${num} is an even number.` : `${num} is an odd number.`;
 console.log(res);
 
 //10 is an even number.
@@ -59,21 +57,26 @@ console.log(res);
 
 <br>
 
-### Multiple ?
+### Multiple Ternary conditional operators
 
 ```js
 let age = 2;
 
-let greeting =  age < 5 ? `Hi baby` :
-                age < 18 ? `Hello!` :
-                age < 100 ? 'Greetings': 
-                'Wow, going strong';
+let greeting =
+  age < 5
+    ? `Hi baby`
+    : age < 18
+    ? `Hello!`
+    : age < 100
+    ? "Greetings"
+    : "Wow, going strong";
 
-console.log(greeting)
+console.log(greeting);
 //Notice how it terminates after a condition is satisfied.
 
 // Hi baby
 ```
+
 <br>
 <br>
 
