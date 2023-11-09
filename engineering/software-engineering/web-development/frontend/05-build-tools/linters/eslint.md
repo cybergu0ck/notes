@@ -90,6 +90,23 @@ Rules can be found in `eslintrc` file. If it's in JSON format, then add the rule
 ```
 
 <br>
+
+### Disabling props validation during linting in react
+
+- Add the following to .eslintrc file in the root directory of project.
+
+  ```bashrc
+  {
+  "plugins": [
+     "react"
+  ],
+  "rules": {
+     "react/prop-types": 0
+  }
+  }
+  ```
+
+<br>
 <br>
 
 ## References
