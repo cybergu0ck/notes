@@ -14,17 +14,19 @@ _"**State**" refers to an internal data structure that allows a component to sto
 _"**Hook**" is a special function that allows addition of stateful logic to functional components._
 
 - They are called "hooks" because they allow developers to "hook into" React state and lifecycle features from functional components, which were traditionally stateless.
+- Never update the state manually. React will never know if the state is updated other than the setState function.
 
 <br>
 
 ### Rules for utilizing hooks.
 
-1. Hooks can only be called from the top level of a functional component. i.e. In the scope of the react component.
+1. Hooks must always be called in the same order.
 
-   - Hooks can’t be called from inside loops or conditions.
+   - Hence we can't use hooks indside conditional statements, loops.
+   - As such it is ideal to place the hook at the top level of a functional component.
+
+1. Hooks must be called from react functions.
    - They can't be called from functions inside react component.
-
-2. Never update the state manually. React will never know if the state is updated other than the setState function.
 
 <br>
 <br>
