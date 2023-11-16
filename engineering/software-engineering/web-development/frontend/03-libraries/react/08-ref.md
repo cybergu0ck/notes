@@ -48,6 +48,10 @@ _A "**ref**" is a way to reference a React components and DOM elements._
 <br>
 <br>
 
+#TODO - Add usecases here, setting focus, keeping track of number of state changes.
+
+<br>
+<br>
 ## Difference between State and Ref
 
 | State                              | Ref                                      |
