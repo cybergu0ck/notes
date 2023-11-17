@@ -190,26 +190,6 @@ A set of rules that govern the state of activation record or function stack-fram
 <br>
 <br>
 
-# Initialisation vs Assignment in C++
-
-_**Initialisation** is when the value is bound to the varibale when it is created._
-
-_**Assignment** is overriding the value (garbage or any existing value) of a varibale by a new value._
-
-```cpp
-int main()
-{
-	int a{ 0 };		//initialisation: 0 is stored in a as soon as a is created
-
-	int b;			//b has some garbage value
-	b = 10;			//assignment: b now stores 10 instead of the garbage value
-}
-```
-
-<br>
-<br>
-<br>
-
 # Namespaces
 
 _**Namespace** is a declarative region that provides a way to organize code into logical groups and avoid naming conflicts._

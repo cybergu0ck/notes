@@ -1,4 +1,8 @@
-# Assigment Operator (=)
+# Operators
+
+<br>
+
+## Assigment Operator (=)
 
 - An `lvalue` (locator value) represents an object that occupies some identifiable location in memory (i.e. has an address).
 - `rvalues` are defined by exclusion. Every expression is either an lvalue or an rvalue, so, an rvalue is an expression that does not represent an object occupying some identifiable location in memory.
@@ -7,7 +11,25 @@
 <br>
 <br>
 
-# Address of Operator (&)
+## Compound Assignment Operators
+
+| Operator | Example     | Meaning          |
+| -------- | ----------- | ---------------- |
+| +=       | lhs += rhs  | lhs = lhs + rhs  |
+| -=       | lhs -= rhs  | lhs = lhs - rhs  |
+| \*=      | lhs \*= rhs | lhs = lhs \* rhs |
+| /=       | lhs /= rhs  | lhs = lhs / rhs  |
+| %=       | lhs %= rhs  | lhs = lhs % rhs  |
+| >>=      | lhs >>= rhs | lhs = lhs >> rhs |
+| <<=      | lhs <<= rhs | lhs = lhs << rhs |
+| &=       | lhs &= rhs  | lhs = lhs & rhs  |
+| ^=       | lhs ^= rhs  | lhs = lhs ^ rhs  |
+| \|=      | lhs \|= rhs | lhs = lhs \| rhs |
+
+<br>
+<br>
+
+## Address of Operator (&)
 
 - & is used as Address of Operator when
 - When & is used as the "address-of" operator, as in &variable, it returns a pointer to the memory address of the variable. The resulting data type is a pointer type.
@@ -15,7 +37,7 @@
 <br>
 <br>
 
-# Arithmetic Operators
+## Arithmetic Operators
 
 | Operator | Operation          |
 | -------- | ------------------ |
@@ -28,14 +50,50 @@
 <br>
 <br>
 
-# Increment (++) and Decrement (--) Operators
+## Relational Operators
 
-- Increases or decreases the value by 1.
-- Can be used with integers, floats and pointers.
+Relational operators result to bool types.
 
-## prefix
+| Operator | Operation                    |
+| -------- | ---------------------------- |
+| ==       | Equal to                     |
+| !=       | Not equal to                 |
+| >        | Greater than                 |
+| >=       | Greater than or equal to     |
+| <        | Less than                    |
+| <=       | Less than or equal to        |
+| <=>      | three way comaprison (C++20) |
 
-- does the increment/decrement first and then the assignment
+<br>
+<br>
+
+## Logical Operators
+
+Logical operators result to bool types.
+
+| Operator    | Operation   |
+| ----------- | ----------- |
+| not (!)     | negation    |
+| and (&&)    | logical and |
+| or ( \|\| ) | logical or  |
+
+<br>
+<br>
+
+## Bitwise Operators
+
+> Complete this
+
+<br>
+<br>
+
+## Increment (++) and Decrement (--) Operators
+
+Increases or decreases the value by 1.
+
+### prefix
+
+- Does the increment/decrement first and then the assignment
 
   ```cpp
   int main()
@@ -50,7 +108,7 @@
 
 <br>
 
-## postfix
+### postfix
 
 - Does the assignment first and then the increment/decrement.
 
@@ -82,116 +140,11 @@
 
 <br>
 <br>
-
-# Type conversions (Coersions)
-
-- Higher types are the types that can hold larger values.
-- Lower types are the types with less size.
-- _Lower types can be converted to higher types as lowertype can fit in the size of higher type._
-- example : short and char types are always converted to ints
-
-* Promotion : Conversion to a higher type, generally occurs in math expressions.
-
-  ```cpp
-  int main()
-  {
-      int num1 = 1;
-      double num2 = 2.5;
-      cout << num1 + num2; //3.5
-      return 0;
-  }
-  ```
-
-* Demotion : Converion to a lower type, generally occurs in assignments.
-
-  ```cpp
-  int main()
-  {
-      int num {0};
-      num = 100.2
-      cout << num;    //100
-      return 0;
-  }
-  ```
-
-<br>
-
-## Explicit type casting
-
-- `static_cast <type>` is used to cast something to `type`.
-
-<br>
-<br>
-
-# Equality Operators
-
-| Operator | Operation    |
-| -------- | ------------ |
-| ==       | Equal to     |
-| !=       | Not equal to |
-
-- 10 == 10.0 will result in true.
-- 10 == 9.999999999 will also result in true.
-
-<br>
-<br>
-
-# Relational Operators
-
-- relational operators result to bool types.
-
-  | Operator | Operation                    |
-  | -------- | ---------------------------- |
-  | >        | Greater than                 |
-  | >=       | Greater than or equal to     |
-  | <        | Less than                    |
-  | <=       | Less than or equal to        |
-  | <=>      | three way comaprison (C++20) |
-
-<br>
-<br>
-
-# Logical Operators
-
-- logical operators result to bool types.
-
-  | Operator    | Operation   |
-  | ----------- | ----------- |
-  | not (!)     | negation    |
-  | and (&&)    | logical and |
-  | or ( \|\| ) | logical or  |
-
-<br>
-<br>
-
-# Bitwise Operators
-
-> Complete this
-
-<br>
-<br>
-
-# Compound Assignment Operators
-
-| Operator | Example     | Meaning          |
-| -------- | ----------- | ---------------- |
-| +=       | lhs += rhs  | lhs = lhs + rhs  |
-| -=       | lhs -= rhs  | lhs = lhs - rhs  |
-| \*=      | lhs \*= rhs | lhs = lhs \* rhs |
-| /=       | lhs /= rhs  | lhs = lhs / rhs  |
-| %=       | lhs %= rhs  | lhs = lhs % rhs  |
-| >>=      | lhs >>= rhs | lhs = lhs >> rhs |
-| <<=      | lhs <<= rhs | lhs = lhs << rhs |
-| &=       | lhs &= rhs  | lhs = lhs & rhs  |
-| ^=       | lhs ^= rhs  | lhs = lhs ^ rhs  |
-| \|=      | lhs \|= rhs | lhs = lhs \| rhs |
-
-<br>
 <br>
 
 # Operator Precedence
 
-- The precendence is tabulated from higher (top ones) to lower (bottom ones)
+The precendence is tabulated from higher (top ones) to lower (bottom ones)
 
 | Operator                               | Associativity |
 | -------------------------------------- | ------------- |
@@ -208,3 +161,7 @@
 | &&                                     | left to right |
 | \|\|                                   | left to right |
 | = op= ?:                               | right to left |
+
+<br>
+<br>
+<br>
