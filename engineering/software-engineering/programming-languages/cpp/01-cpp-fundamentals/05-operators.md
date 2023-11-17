@@ -72,8 +72,10 @@
   int main()
   {
       int num = 1;
-      int another = ++num + 10; // num = num + 1 and then another = num + 10; Hence another is 12
-      int new_num = num++ + 10; // new_num = num + 10 and then num = num + 1; Hence new_num is 11
+      int another = ++num + 10; // num = num + 1 and then another = num + 10;
+      std::cout << another << std::endl; //12
+      int new_num = num++ + 10; // new_num = num + 10 and then num = num + 1;
+      std::cout << new_num << std::endl;  //12
       return 0;
   }
   ```
