@@ -1,4 +1,8 @@
-# lvalue
+# References
+
+<br>
+
+## lvalue
 
 - An lvalue refers to an expression that identifies a specific object or variable in memory.
 - Hence, lvalues are addressable and modifiable/assignable.
@@ -16,7 +20,7 @@
 <br>
 <br>
 
-# rvalue
+## rvalue
 
 - An rvalue refers to an expression that produces a temporary or intermediate value. (Anything that is not a lvalue is a rvalue)
 - Hence, rvalues are not addressable and non-modifiable/non-assignable.
@@ -39,7 +43,7 @@
 <br>
 <br>
 
-# lvalue reference (&)
+## lvalue reference (&)
 
 - Introduced in earlier versions of C++.
 - Binds to lvalues (addressable objects or storage locations).
@@ -143,9 +147,8 @@
   ```
 
 <br>
-<br>
 
-## const correctness with lvalue references
+### const correctness with lvalue references
 
 - a lvalue reference to a const datatype must also be const.
 
@@ -161,7 +164,7 @@
 <br>
 <br>
 
-# rvalue reference (&&)
+## rvalue reference (&&)
 
 - Introduced in C++11 and later.
 - Binds to rvalues (temporary values or expressions without persistent memory locations).
@@ -212,7 +215,9 @@
 <br>
 <br>
 
-# Function returning rvalue
+## lvalue and rvalue with functions
+
+### Function returning rvalue
 
 - When a function returns by value (i.e., not a reference), the return value is treated as an rvalue.
 - The returned rvalue can be used in expressions but cannot be directly modified.
@@ -282,9 +287,8 @@
   ```
 
 <br>
-<br>
 
-# Function returning lvalue
+### Function returning lvalue
 
 - Functions with return type with reference returns lvalue.
 - Returning an lvalue reference from a function allows the caller to use the returned value as an lvalue and potentially modify it.
