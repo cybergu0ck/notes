@@ -1,4 +1,9 @@
-# if statement
+# Conditional Branching
+
+<br>
+<br>
+
+## If
 
 ```cpp
 if (expr){
@@ -19,10 +24,10 @@ if (expr){
   }
   ```
 
-  <br>
-  <br>
+<br>
+<br>
 
-# if else construct
+## If Else
 
 ```cpp
 if (expr){
@@ -36,7 +41,7 @@ else {
 <br>
 <br>
 
-# if - else if - else contruct
+## If - Else If - Else
 
 ```cpp
 
@@ -50,3 +55,8 @@ else{
     //code here is executed if none of the above blocks are executed.
 }
 ```
+
+<br>
+<br>
+
+## Switch

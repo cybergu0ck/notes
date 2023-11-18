@@ -160,18 +160,6 @@ When the exe occupies the process memory (RAM), it organises itself into 4 categ
 <br>
 <br>
 
-# Activation Records (function stack frame)
-
-In C++, whenever a function is called and it is handled in a 3 step process: prolog, business-logic and epilog.
-
-![acti](../_assets/activation-record.png)
-
-- The prolog instructions are written by the compiler and will be present in the exe.
-
-<br>
-<br>
-<br>
-
 # Calling Convention
 
 A set of rules that govern the state of activation record or function stack-frame.Any language that supports the concept of functions or procedures will have its own set of rules engaging this aspect.

@@ -5,7 +5,7 @@ Dynamic memory allocation refers to the process of allocating memory at runtime,
 <br>
 <br>
 
-# Dynamic Memory Allocation in C vs C++
+## Dynamic Memory Allocation in C vs C++
 
 - The difference is listed here
   | C | C++ |
@@ -63,7 +63,7 @@ Dynamic memory allocation refers to the process of allocating memory at runtime,
 <br>
 <br>
 
-# Returning dynamically allocated memory from a function
+## Returning dynamically allocated memory from a function
 
 - Note that returning a pointer type is returned as a rvalue.
 

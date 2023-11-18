@@ -1,8 +1,11 @@
 # Encapsulation
 
-- Encapsulation is a method of wrapping up the data and code acting on the data into a single unit.
+_**Encapsulation** is a method of wrapping up the data and code acting on the data into a single unit._
 
-## C structs
+<br>
+<br>
+
+## C Structs
 
 - C follows **function centric approach** and lays more emphasis on functions and cares less for the data.
 - In the C programming language, a struct is a user-defined data type that allows you to group related variables of different types into a single entity.

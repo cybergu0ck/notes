@@ -1,8 +1,8 @@
-> <br> C++ is a general-purpose programming language that supports procedural, object-oriented, and generic programming. <br> <br>
+# Programming Paradigms
 
 <br>
 
-# Procedural Programming
+## Procedural Programming
 
 - procedural programming is basically a collection of functions, where data (usually declared seperately) are manipulated.
 - limitations:
@@ -12,7 +12,7 @@
 <br>
 <br>
 
-# Object Oriented Programming
+## Object Oriented Programming
 
 - Object-oriented programming (OOP) is a programming paradigm that uses "objects" – data structures consisting of data fields and methods together with their interactions – to design applications and computer programs.
 - OOP in C++ is based on the concept of classes. A class is a blueprint for an object. It defines the data that an object will hold and the methods that an object will have.
@@ -35,11 +35,37 @@
 <br>
 <br>
 
-# Generic Programming
+## Generic Programming
 
 - Generic programming is a programming paradigm that focuses on writing code that is reusable across different data types. It allows you to create algorithms and data structures that can operate on a variety of types without the need for separate implementations for each type.
 
 - Templates are the primary mechanism for achieving generic programming in C++. Function templates and class templates allow you to write code that can work with different types by using template parameters.
 
+<br>
+<br>
+<br>
+
+# Websites ranking programming langauages
+
+- [TIOBE index](https://www.tiobe.com/tiobe-index/)
+- [PYPL ranking](https://pypl.github.io/PYPL.html)
+- [IEEE spectrum ranking](https://spectrum.ieee.org/top-programming-languages-2022)
+- [Redmonk ranking](https://redmonk.com/sogrady/2022/10/20/language-rankings-6-22/)
+
+<br>
+<br>
+<br>
+
+# Developer-Consumer Approach
+
+_The approach of developing code with the consumer in mind._
+
+- Developer is the entity that facilitates the code.
+- Consumer is the entity that uses the code.
+- It is important that the developper exposes only meaningful and useful code to the consumer while abstracting most of the implementation.
+
+- In C++, the header files (text files) are exposed to the consumer of the C++ library. The C++ library developper must facilitate all the necessary data in the header files while hiding away the implementation in library files (.lib).
+
+<br>
 <br>
 <br>
