@@ -1,23 +1,31 @@
-# Enumerations
+# Enumeration
 
-- A enumeration is a user defined type that models a set of constant integral values.
+_**Enumeration** is a user defined type that consists of a set of named integral constants._
+
 - Using enumerations increases readability and decreases logical errors.
-- The structure of an enumeration is as follows:
-
-  ```
-  enum-key enum-name : enumerator-type {};
-  ```
-
-  - enum-key defines the scope of the enumeration.
-  - enum-name is the optional name of the enumeraion.
-  - enumerator-type can be ommitted as the compiler is capable of deducing it.
-  - the enumerators are listed inside { }.
 
 <br>
 <br>
+
+## Enumeration Syntax
+
+```
+enum name : type {};
+```
+
+- "enum" is a keyword.
+- "name" is the optional name of the enumeraion.
+- "type" can be ommitted as the compiler is capable of deducing it.
+- the enumerators are listed inside { }.
+
+<br>
 <br>
 
-# Initialisation of enumerators
+#TODO - Complete this revamp
+
+## Initialisation of enumerators
+
+Enumerations can be implicitely or explicitely initialised as shown here.
 
 ## Implicit Initalization
 
