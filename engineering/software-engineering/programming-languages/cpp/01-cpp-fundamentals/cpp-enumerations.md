@@ -21,188 +21,87 @@ enum name : type {};
 <br>
 <br>
 
-#TODO - Complete this revamp
-
 ## Initialisation of enumerators
 
 Enumerations can be implicitely or explicitely initialised as shown here.
 
-## Implicit Initalization
+```cpp
+#include<iostream>
 
-- The compiler will initialise the enumerators
+enum {Red, Green, Blue};  // Implicit Initialisation => Red=0, Green=1, Blue=2
+enum {Normal=400, Critical=653};  //Explicit Initialisation => Normal=400, Critical=653
+enum {Slow=10, Decent, Fast};  //Implicit-Explicit Initalisation => Slow=10, Decent=11, Fast=12
 
-  ```cpp
-  #include <iostream>
-
-  enum {Red, Green, Blue};
-
-  int main() {
-      int my_color;
-      my_color = Green;
-      std::cout << my_color << std::endl; //1
-  }
-
-  //Red is initialised to 0 and Blue is initialised to 2
-  ```
+int main(){
+    std::cout << Green << "\n";     //1
+    std::cout << Critical << "\n";  //653
+    std::cout << Decent << "\n";    //11
+}
+```
 
 <br>
 <br>
 
-## Explicit Initialisation
+## Type Safety of Enumerations
 
-- We intialise the enumerators explicitely
+### Un-Named Enumeration
 
-  ```cpp
-  #include <iostream>
+Un-named enumerations are anonymous. They are not type-safe.
 
-  enum {Red=1, Green=3, Blue=5};
+```cpp
+#include<iostream>
 
-  int main() {
-      int my_color;
-      my_color = Green;
-      std::cout << my_color << std::endl; //3
-  }
-  ```
+enum {Red, Green, Blue};
+
+int main(){
+    int my_color = Red;
+    std::cout << my_color << "\n";  //0
+    my_color = 100;                 //This is allowed by the compiler as the type of my_color is "int"
+    std::cout << my_color << "\n";  //100
+
+}
+```
+
+<br>
+
+### Named Enumeration
+
+Named enumerations are type safe.
+
+```cpp
+#include<iostream>
+
+enum Color{Red, Green, Blue};
+
+int main(){
+    Color my_color = Red;
+    std::cout << my_color << "\n";  //0
+    my_color = 2;  //a value of type "int" cannot be assigned to an entity of type "Color"
+}
+```
 
 <br>
 <br>
 
-## Implicit/Exlicit Initialisation
+## Scoping of Enumerations
 
-- The compiler will increment the explicitely intialised integral value by 1 for subsequent enumerators.
+### Unscoped Enumeration
 
-  ```cpp
-  #include <iostream>
+If enumerations are unscoped, any other variable or enum in that scope (global) cannot have the same name as any of the enumerators.
 
-  enum {Red=10, Green, Blue};
+```cpp
+#include<iostream>
 
-  int main() {
-      int my_color;
-      my_color = Green;
-      std::cout << my_color << std::endl; //11
-  }
-  ```
+enum Color{Red, Green, Blue};
 
-<br>
-<br>
-<br>
- 
-# Enumeration names
+float Green{56.6};  //error: 'float Green" redeclared...
 
-- Enumeration names provide type safety. On the contrary, enumeration defined without names are anonymous and provide no type safety.
+int main(){
+    std::cout << Green << "\n";
+}
+```
 
-* Anonymously defined enumeration with no type safety.
-
-  ```cpp
-  #include <iostream>
-
-  enum {Red, Green, Blue};
-
-  int main() {
-      int my_color;
-      my_color = Green; //valid
-      my_color = 100; //also valid
-  }
-  ```
-
-* enumerations with type safety
-
-  ```cpp
-  #include <iostream>
-
-  enum Color {Red, Green, Blue};
-
-  int main() {
-      Color my_color;
-      my_color = Green; //valid
-      my_color = 100; //error (type safety)
-  }
-  ```
-
-<br>
-<br>
-<br>
-
-# Unscoped enumeration
-
-- Run the following code and try to understand the usefullness. (Input a number such as 0, 1,..)
-
-  ```cpp
-  #include <iostream>
-
-  enum State {engine_failure, inclement_weather, nominal, unknown};
-  enum Sequence {Abort, Hold, Launch};
-
-
-  //overloading the stream extraction operator to allow user to enter a state of State enumeration
-  std::istream& operator>>(std::istream &is, State& state)
-  {
-    std::underlying_type_t<State> user_input;	//user_input will be a number so we can write this as "int user_input;"
-    is >> user_input;
-
-    switch (user_input) {
-    case engine_failure:
-    case inclement_weather:
-    case nominal:
-    case unknown:
-      state = State(user_input);
-      break;
-    default:
-      std::cout << "Invalid Launch State" << std::endl;
-      state = unknown;
-    }
-    return is;
-  }
-
-  //overloading the stream insertion operator to insert the string representation of the sequence
-  std::ostream& operator<< (std::ostream& os, const Sequence& sequence) {
-    switch (sequence) {
-    case Abort:
-      os << "Abort";
-      break;
-    case Hold:
-      os << "Hold";
-      break;
-    case Launch:
-      os << "Launch";
-      break;
-    }
-    return os;
-  }
-
-  void initiate(Sequence sequence) {
-    std::cout << "Initiate " << sequence << " sequence!" << std::endl;  //uses overloaded << operator
-  }
-
-  int main() {
-    State state;
-    std::cout << "Enter Launch state: ";
-    std::cin >> state;
-
-    switch (state) {
-    case engine_failure:
-    case unknown:
-      initiate(Abort);
-      break;
-    case inclement_weather:
-      initiate(Hold);
-      break;
-    case nominal:
-      initiate(Launch);
-      break;
-    }
-  }
-  ```
-
-<br>
-<br>
-<br>
-
-# Scoped enumeration
-
-## Need
-
-- The following is permitted by the compiler as both "Beluga" and "Hammerhead" have integral value of 1 but it is a potential logical error.
+- It also facilitates buggy code with logical errors.
 
   ```cpp
   #include <iostream>
@@ -220,30 +119,40 @@ Enumerations can be implicitely or explicitely initialised as shown here.
   //A beluga whale is equvivalent to a hammerhead shark.
   ```
 
-* Without scoped enumerations we cannot have same names in different enumerations.
+<br>
+
+### Scoped Enumeration
+
+Enumerations with the class/struct keyword are scoped enumerations.
+
+```cpp
+#include<iostream>
+
+enum class Color{Red, Green, Blue};
+
+int main(){
+    Color my_color= Color::Green;
+}
+```
+
+- Scoped enumerations faciliate the usage of same names for different variables.
 
   ```cpp
-  #include <iostream>
+  #include<iostream>
 
-  enum Whale{Blue, Beluga, Gray};
-  enum Shark{Greatwhite, Hammerhead, Bull, Blue};
+  enum class Color{Red, Green, Blue};
 
-  int main() {
+  float Green{56.6};
+
+  int main(){
+      std::cout << Green << "\n"; //56.6
   }
-
-  //Error; Redefinition
   ```
 
-<br>
-<br>
-
-## Scoping enumerations using class or struct keyword
-
-- Scoping is done as follows,
+- Scoped enumerations lack implicit conversions!
 
   ```cpp
   enum class Whale{Blue, Beluga, Gray};
-  enum class Shark{Greatwhite, Hammerhead, Bull, Blue};
 
   int main() {
     int my_whale{ Whale::Beluga };		//error; implicit converison is not possible
@@ -251,9 +160,7 @@ Enumerations can be implicitely or explicitely initialised as shown here.
   }
   ```
 
-* Scoped enumerations work similar to unscoped enumerations, except for the obvious scope resolution that must be used scoped enumerations lack implicit conversions!
-
-* It prevents logical errors
+- It prevents logical errors.
 
   ```cpp
   #include <iostream>
