@@ -1,3 +1,29 @@
+# Hook
+
+_"**Hook**" is a special function that allows addition of stateful logic to functional components._
+
+- They are called "hooks" because they allow developers to "hook into" React state and lifecycle features from functional components, which were traditionally stateless.
+- Never update the state manually. React will never know if the state is updated other than the setState function.
+
+<br>
+<br>
+
+### Rules for utilizing hooks.
+
+1. Hooks must always be called in the same order.
+
+   - Hence we can't use hooks indside conditional statements, loops.
+   - As such it is ideal to place the hook at the top level of a functional component.
+   - Moreover hooks are used by their order numbers and not by their names in react.
+     ![image](./_assets/hook-numbering.png)
+   - It is a good practice to place the return statement after all the hooks in the code.
+
+2. Hooks must be called from react functions.
+   - They can't be called from functions inside react component.
+
+<br>
+<br>
+
 # State
 
 _"**State**" refers to an internal data structure that allows a component to store and manage data that can change over time._
@@ -9,62 +35,81 @@ _"**State**" refers to an internal data structure that allows a component to sto
 <br>
 <br>
 
-## Hook
+## Creating state
 
-_"**Hook**" is a special function that allows addition of stateful logic to functional components._
+State in a functional component is created using the **useState** hook
 
-- They are called "hooks" because they allow developers to "hook into" React state and lifecycle features from functional components, which were traditionally stateless.
-- Never update the state manually. React will never know if the state is updated other than the setState function.
+```jsx
+const [stateValue, setStateValue] = useState(initialValue);
+```
+
+- It takes in an initial value as a parameter and returns an array with two elements.
+- The two elements are [destructured](../../../../programming-languages/javascript/01-js-fundamentals/js-features/destructuring.md#array-destructuring) to get:
+
+  1. The current state value.
+  2. A function to update the state value.
+
+<br>
+
+### A. Creating state using data
+
+The following is an example code illustrating the use of state using useState hook.
+
+```js
+import { useState } from "react";
+
+export function Counter() {
+  const [count, setCount] = useState(0); //Initial value of count is set to 0.
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+  };
+
+  return (
+    <div>
+      <button onClick={decrement}>-</button>
+      <p>Current Count = {count}</p>
+      <button onClick={increment}>+</button>
+    </div>
+  );
+}
+```
 
 <br>
 
-### Rules for utilizing hooks.
+### B. Lazy Evaluation (Creating state using a callback)
 
-1. Hooks must always be called in the same order.
+We can set the state using a callback function.
 
-   - Hence we can't use hooks indside conditional statements, loops.
-   - As such it is ideal to place the hook at the top level of a functional component.
-
-1. Hooks must be called from react functions.
-   - They can't be called from functions inside react component.
-
-<br>
-<br>
-
-## `useState` hook
-
-- _**useState** hook is a hook that facilitates defining the state in a functional component._
+- The callback must not take any parameters.
+- Here, we store the value of state1 in local storage and update it every time state1 changes. When the component mounts (Initially), state2 is gets the value from the localstorage using the callback function. Hence state2 has persistence when the page is refreshed.
 
   ```jsx
-  const [stateValue, setStateValue] = useState(initialValue);
-  ```
+  import { useEffect, useState } from "react";
 
-  - It takes in an initial value as a parameter and returns an array with two elements.
-  - The two elements are [destructured](../../../../programming-languages/javascript/01-js-fundamentals/js-features/destructuring.md#array-destructuring) to get:
-    1. The current state value.
-    2. A function to update the state value.
+  export default function App() {
+    const [state1, setState1] = useState(false);
 
-- The following is an example code illustrating the use of state using useState hook.
+    //Setting state2 using the value returned by the callback function
+    const [state2, setState2] = useState(function () {
+      const fromLS = localStorage.getItem("state1");
+      return fromLS;
+    });
 
-  ```js
-  import { useState } from "react";
+    useEffect(() => {
+      localStorage.setItem("state1", JSON.stringify(state1));
+    }, [state1]);
 
-  export function Counter() {
-    const [count, setCount] = useState(0); //Initial value of count is set to 0.
-
-    const increment = () => {
-      setCount(count + 1);
-    };
-
-    const decrement = () => {
-      setCount(count - 1);
-    };
+    console.log(state2);
 
     return (
       <div>
-        <button onClick={decrement}>-</button>
-        <p>Current Count = {count}</p>
-        <button onClick={increment}>+</button>
+        <p>This is the App</p>
+        <button>Change State</button>
       </div>
     );
   }
@@ -72,9 +117,57 @@ _"**Hook**" is a special function that allows addition of stateful logic to func
 
 <br>
 
-### Updating a state based on current state
+### `useState` runs only once!
 
-- React will not update the state twice for the following code. _The setCount method is asynchronous, meaning react will not update the state immediately!_ Hence the state will have the same value second time aswell.
+It is crucial to know that useState is run only once when the component is mounted.
+
+```jsx
+import { useState } from "react";
+
+export default function App() {
+  const [state1, setState1] = useState(false);
+  const [state2, setState2] = useState(state1); //Using state1 to set state2
+
+  function handleClick() {
+    setState1(true);
+  }
+
+  console.log(state2);
+
+  return (
+    <div>
+      <p>This is the App</p>
+      <button onClick={handleClick}>Change State</button>
+    </div>
+  );
+}
+```
+
+- When the page is loaded is logs false and then when the button is clicked, state1 is changed hence the entire component is re-rendered, However state2 doesn't get the updated value of state1. (See console log).
+  ![img](./_assets/cl3.png)
+
+<br>
+<br>
+
+## Updating state
+
+- State is immutable and it must be updated using the setter function only.
+- Never mutate arrays or objects, always build new arrays or objects during state updates.
+
+<br>
+
+### state updates are asynchronous!
+
+- The code here doesn't log the updated value of count as the state is not updated right away.
+
+  ```js
+  const increment = () => {
+    setCount(count + 1);
+    console.log(count); //logs old value of count
+  };
+  ```
+
+- The code here updates the count only once because the value of count is not updated when the control reaches the second setCount method.
 
   ```js
   const increment = () => {
@@ -83,13 +176,46 @@ _"**Hook**" is a special function that allows addition of stateful logic to func
   };
   ```
 
-- A better way would be to adhere to the below syntax when updating a state based on the current state.
+<br>
+
+### Using callback to update state
+
+- Using a callback to set the state is ideal as it gives access the the latest value of the state.
 
   ```js
   const increment = () => {
     setCount((count) => count + 1); //Better than setCount(count + 1);
   };
   ```
+
+<br>
+<br>
+
+## Derived State
+
+In cases where we are setting a state based on another state, see if this can be avoided using a derived state. Now state2 being a variable is initialised with the updated value of state1 on every render.
+
+```jsx
+import { useState } from "react";
+
+export default function App() {
+  const [state1, setState1] = useState(false);
+  const state2 = state1; //state2 is now a derived state
+
+  function handleClick() {
+    setState1(true);
+  }
+
+  console.log(state2);
+
+  return (
+    <div>
+      <p>This is the App</p>
+      <button onClick={handleClick}>Change State</button>
+    </div>
+  );
+}
+```
 
 <br>
 <br>

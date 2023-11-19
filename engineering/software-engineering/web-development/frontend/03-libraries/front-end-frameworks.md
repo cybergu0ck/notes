@@ -21,6 +21,7 @@ It is the idea that most of the requirements are provided as ready-to-use compon
 ---
 
 <br>
+<br>
 
 ## Front-end Framework
 
@@ -76,3 +77,11 @@ An interactive webpage is all about handling the data and displaying the webpage
 ---
 
 <br>
+<br>
+
+# Single Page Application
+
+_A **Single Page Application (SPA)** is a web application that interacts with the user by dynamically rewriting the current page, rather than loading entire new pages from the server._
+
+- SPA are executed entirely on the client.
+- The page is never reloaded.
