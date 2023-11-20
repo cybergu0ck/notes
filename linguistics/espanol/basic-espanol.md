@@ -28,9 +28,14 @@
 
 | English          | Espanol       |
 | ---------------- | ------------- |
+| Yes              | Si            |
+| No               | No            |
 | Hello            | Hola          |
 | Good Bye         | Adios         |
 | Thank you        | Gracias       |
 | Nice to meet you | Mucho gusto   |
 | Good Morning     | Buenos Dias   |
 | Good Night       | Buenos Noches |
+| Pardon Me        | Perdon        |
+| You are welcome  | De nada       |
+| I am sorry       | Lo siento     |

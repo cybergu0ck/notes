@@ -9,6 +9,7 @@
   | Markdown: Open Preview                           | Ctrl + Shift + V          |
   | Move Line Up/Down                                | Alt + Up/Down             |
   | Copy Line Up                                     | Alt + Shift + Up/Down     |
+  | Select Entire Line                               | Ctrl + L                  |
   | Find                                             | Ctrl + F                  |
   | Replace                                          | Ctrl + H                  |
   | Go to a Line                                     | Ctrl + G                  |
