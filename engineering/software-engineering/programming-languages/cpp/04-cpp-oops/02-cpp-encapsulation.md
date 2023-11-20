@@ -7,34 +7,34 @@ _**Encapsulation** is a method of wrapping up the data and code acting on the da
 
 ## C Structs
 
-- C follows **function centric approach** and lays more emphasis on functions and cares less for the data.
-- In the C programming language, a struct is a user-defined data type that allows you to group related variables of different types into a single entity.
+_A **struct** in C is a user-defined data type that facilitates grouping of related vairables of different types as a single entity._
 
-  ```cpp
-  struct Person {
-      char name[50];
-      int age;
-      float height;
-  };
+```cpp
+struct Person {
+    char name[50];
+    int age;
+    float height;
+};
 
-  int main() {
-      struct Person person1;      //struct keyword must be used here
+int main() {
+    struct Person person1;      //struct keyword must be used here
 
-      strcpy(person1.name, "John Doe");
-      person1.age = 25;
-      person1.height = 1.75;
+    strcpy(person1.name, "John Doe");
+    person1.age = 25;
+    person1.height = 1.75;
 
-      printf("Name: %s\n", person1.name);
-      printf("Age: %d\n", person1.age);
-      printf("Height: %.2f\n", person1.height);
+    printf("Name: %s\n", person1.name);
+    printf("Age: %d\n", person1.age);
+    printf("Height: %.2f\n", person1.height);
 
-      return 0;
-  }
-  ```
+    return 0;
+}
+```
 
 <br>
 
-- Disadvantage of this approach is that the compiler wont be able to check for missuse of data. See the following illustration.
+- C follows **function centric approach** and lays more emphasis on functions and cares less for the data.
+- Disadvantage of C structs is that the compiler wont be able to check for missuse of data.
 
   ```c
   struct Employee
@@ -61,55 +61,83 @@ _**Encapsulation** is a method of wrapping up the data and code acting on the da
 <br>
 <br>
 
-# C++ structs (extended structs) / Encapsulation
+## C++ structs (Extended Structs)
 
+_A **struct** in C++ is a user-defined data type that facilitates grouping of related functions along with the related vairables of different types as a single entity._
+
+```cpp
+#include <iostream>
+
+struct Employee
+{
+private:  //supports access specifier, it is "public" by default
+    float salary;
+
+    void get_bonus()
+    {
+        std::cout << "gets a bonus" << std::endl;
+    }
+};
+```
+
+- C++ provides Encapsulation through extended structs.
 - C++ follows a **data centric approach** and lays more emphasis on data and cares less for functions.
-- C++ structs allows the functions (that acts on the struct data) along with the data as it's members. (This is **Encapsulation**)
-
-  ```cpp
-  #include <iostream>
-
-  struct Employee
-  {
-  private:
-      float salary;
-
-      void get_bonus()
-      {
-          std::cout << "gets a bonus" << std::endl;
-      }
-  };
-  ```
 
 <br>
 <br>
 
-# Acess Modifiers
+### Acess Modifiers
 
 - C++ provides three kinds of access modifiers:
 
-  1. public : accessible anywhere
-  2. private : accessible only by members or friends of the class.
-  3. protected : accessible by members of the class and members of derived class.(not accesible by objects of base and derived classes!)
+    <ol type="1">
+        <li>public : accessible anywhere</li>
+        <li>private : accessible only by members or friends of the class.</li>
+        <li>protected : accessible by members of the class and members of derived class.(not accesible by objects of base and derived classes!)</li>
+    </ol>
 
-* The member methods in the class declaration always has access to to the member attributes!
-
-<br>
-
-## Differences between C structs and C++ structs
-
-| C struct                                                                                                           | C++ struct                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| Can only have variables as its member                                                                              | Can have both variables as well as functions as its member                                                                    |
-| No variable of the struct plan can be qualified with an extended qualifier like 'const', 'static', 'volatile' etc. | Any member can be qualified with the extended qualifiers, like 'const', 'static' & 'volatile' if need be.                     |
-| Does not provide support for access-specifiers, by default all members are 'public'.                               | Provides support for 3 different access-specifiers, like private, public and protected. By default, all members are 'private' |
+- The member methods in the class declaration always has access to to the member attributes!
 
 <br>
+
+### Differences between C structs and C++ structs
+
+| C struct                                                                                                           | C++ struct                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| Can only have variables as its member                                                                              | Can have both variables as well as functions as its member                                                                   |
+| No variable of the struct plan can be qualified with an extended qualifier like 'const', 'static', 'volatile' etc. | Any member can be qualified with the extended qualifiers, like 'const', 'static' & 'volatile' if need be.                    |
+| Does not provide support for access-specifiers, by default all members are 'public'.                               | Provides support for 3 different access-specifiers, like private, public and protected. By default, all members are 'public' |
+
+<br>
 <br>
 
-# C++ Object Model / Bjarne Model
+## Class
 
-The BJARNE model states, when an object gets created,
+_A **Class** in C++ is a user-defined data type that facilitates grouping of related functions along with the related vairables of different types as a single entity._
+
+```cpp
+#include <iostream>
+
+class Employee
+{
+    //private by default
+    float salary;
+
+    void get_bonus()
+    {
+        std::cout << "gets a bonus" << std::endl;
+    }
+};
+```
+
+- Class is exactly similar to C++ structs except that the default access specifier is private. If the access speicifer is explicitely mentioned in all classes then the C++ code will work if we replace "class" by "struct".
+
+<br>
+<br>
+
+## C++ Object Model (Bjarne Model)
+
+According to the Bjarne model, when an object is created,
 
 - The object only represents the data members physically.
 - The member functions are a single-copy on the code-segment (part of process memory) and is logically connected to all instances of the extended struct or class plan.
@@ -117,8 +145,6 @@ The BJARNE model states, when an object gets created,
 <br>
 
 - Hence, The size of an object is influenced only by the number of **non-static** data members of the struct/class plan, Functions are common to all the objects of the struct/class kind.
-- static data members occupy data segment part of the process memory.
-- illustration of calculating the size of a class object, see notes on #pragma pack().
 
   ```cpp
   #include <iostream>
@@ -145,40 +171,14 @@ The BJARNE model states, when an object gets created,
   //Employee object occupies 5 bytes
   ```
 
-<br>
-<br>
-
-# Class
-
-- By default C++ structs (extended structs) have public access specifier. To distinguish between a C struct and C++ struct, `class` keyword was introduced. In a class, if no access specifier is stated, the compiler would assume `private` as default.
-
-  ```cpp
-  #include <iostream>
-
-  class Employee
-  {
-      //private by default
-      float salary;
-
-      void get_bonus()
-      {
-          std::cout << "gets a bonus" << std::endl;
-      }
-  };
-  ```
-
-<br>
-
-> <br> If the access specifiers are explicitely mentioned for all the data members (attributes and member functions), then C++ code will work if we replace all `class` keyword with `struct` keyword. <br> <br>
+- Refer [process memory](../01-cpp-fundamentals/01-introduction.md#c-memory) and [padding](../01-cpp-fundamentals/cpp-random.md#padding), to understand about #pragma.
 
 <br>
 <br>
 
-# `this` pointer
+## `this` pointer
 
-- It is a pointer to the object and hence contains the address of the object.
-- `this` is a reserved keyword.
-- It can be only used in the scope of the class (local scope) and hence resides in the stack.
+_**"this"** is a reserved keyword for a pointer to the object of the class._
 
 ```cpp
 void Account::set_balance(double bal)
@@ -186,6 +186,8 @@ void Account::set_balance(double bal)
     balance = bal; //   this->balance = bal; behind the scenes!
 }
 ```
+
+- It can be only used in the scope of the class (local scope) and hence resides in the stack.
 
 <br>
 
@@ -248,11 +250,13 @@ void Account::set_balance(double bal)
 <br>
 <br>
 
-# `mutable` keyword
+## `mutable` keyword
 
-- In C++, the `mutable` keyword is used to modify the behavior of a non-static data member of a class. When a data member is declared as mutable, it indicates that the member can be modified even within a const-qualified member function.
+_`mutable` keyword is used to modify the behavior of a non-static data member of a class. When a data member is declared as mutable, it indicates that the member can be modified even within a const-qualified member function._
 
-* Consider this illustration where we can create resizable gui screens and also fixed terminal by making the Screen object as const. However even in the terminal obj we need the cursor to move but the below code doesnt facilitate this. _const object can call const qualified member function only_ (keep this in mind, review const correctness)
+<br>
+
+- Consider this illustration where we can create resizable gui screens and also fixed terminal by making the Screen object as const. However even in the terminal obj we need the cursor to move but the below code doesnt facilitate this. _const object can call const qualified member function only_ (keep this in mind, review const correctness)
 
   ```cpp
   #include <iostream>
@@ -301,12 +305,12 @@ void Account::set_balance(double bal)
   }
   ```
 
-* The above problem can be solved by making the x,y attributes as `mutable` like `mutable int x,y;` in the class declaration
+- The above problem can be solved by making the x,y attributes as `mutable` like `mutable int x,y;` in the class declaration
 
 <br>
 <br>
 
-# Seperating Specification from Implementation (Update this section of the notes)
+## Seperation of Declaration and Implementation
 
 - We can seperate the class specification (declaration) from the implementation using header files
   - .h file for class declaration
@@ -357,31 +361,4 @@ void Account::set_balance(double bal)
   }
   ```
 
-<br>
-
-## Include Guards
-
-- without include guards, the compiler will see the declaration everytime the header file is included in a file. (this is an error)
-- there are two kinds:
-
-  1. using `ifndef` directive preprocessor
-
-     ```h
-     #ifndef _ACCOUNT_H_  //this can be any unique name
-     #define _ACCOUNT_H_
-
-     //account class declaration
-
-     #endif
-     ```
-
-  1. using `pragma` directive preprocessor
-
-     ```h
-     #pragma once
-
-     //account class declaration
-     ```
-
-<br>
 <br>
