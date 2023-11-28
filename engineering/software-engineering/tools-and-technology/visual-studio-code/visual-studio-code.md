@@ -9,3 +9,8 @@
 
 <br>
 <br>
+
+## Setting custom font size for the Integrated Terminal
+
+1. Open settings.JSON using command Pallete (Ctrl + Shift + P)
+2. Add the line `"terminal.integrated.fontSize": 25,` with the desired font size.
