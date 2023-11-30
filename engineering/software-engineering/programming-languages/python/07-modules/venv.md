@@ -1,62 +1,52 @@
-# Venv Python Module
+# Venv
 
-The `venv` module supports creating lightweight “virtual environments”, each with their own independent set of Python packages installed.
-
-[official documentation]([venv — Creation of virtual environments — Python 3.11.1 documentation](https://docs.python.org/3/library/venv.html))
+_The venv module supports creating lightweight “virtual environments”, each with their own independent set of Python packages installed._
 
 <br>
 <br>
 
-##  Creating a new virtual environment
+##  Creating the virtual environment
 
----
+- Use the following commmand to create the virtual environment, `<path>` is optional.
 
-- To create the virtual environment in the directory in which the command is run.
-
-  ```cmd
-  python -m venv <environment_name>
-  ```
-
-- To create the virtual environment in a specific directory
-  ```cmd
+  ```bash
   python -m venv <environment_name> <path>
   ```
 
-> The version of python used to create the virtual environment will be the version of python installed in the newly created environment.
+- Some pointers about venv:
 
-> If diff version of python is to be installed, use virtual_env !
+  - The version of python used to create the virtual environment will be the version of python installed in the newly created environment.
+  - If diff version of python is to be installed, use virtual_env !
 
- <br> 
- <br>
-
-## Check the Virtual environment using **dir**
-
----
-
-![image](./_assets/confirmvenv.png)
-We can see that test_env directory is formed!
+  - The internal directories of the created venv will be based on the type of shell used (bash, cmd, powershell etc)
 
 <br>
 <br>
 
-## To activate the environment
+## Activate the virtual environment
 
-- Using powershell, use the following command.
+- Use the following command for a venv created using a bash/zsh shell:
 
-  ```cmd
-  test_env\Scripts\activate.bat
+  ```zsh
+  source env/bin/activate
   ```
 
-- If the venv environment is already created non-bash shell, the use this command:
+- Use the following command for a venv created using a cmd:
 
-  ```bash
-  source <venv_name>/Scripts/activate
+  ```zsh
+  env\Scripts\actiavte
+  ```
+
+- Use the following command for a venv created using a powershell:
+
+  ```zsh
+  env\Scripts\activate.bat
   ```
 
 <br>
 <br>
   
-## To deactivate the environment
+## Deactivate the virtual environment
 
 ```cmd
 deactivate
@@ -65,74 +55,49 @@ deactivate
 <br>
 <br>
 
-## To delete the enironment
-
-```cmd
-rmdir test_env /s
-```
+## Delete the virtual environment
 
 - Basically delete the environment directory and it’s subdirectories.
 
 <br>
 <br>
 
-## Creating Requirements.txt File
+## requirements.txt
 
-requirements.txt is **a file listing all the dependencies for a specific Python project**.
-
-- To get the list of all dependencies in the virtual environment, use the following command and copy the contents to a txt file and name it requirements.txt
-
-```cmd
-pip freeze
-```
-
-![image](./_assets/pipfreeze.png)
-
-<br>
-<br>
-
-## Installing packages using requirements.txt
-
----
-
-```cmd
-pip install -r <path of requirements.txt>
-```
+Refer [requirements.txt](../../../tools-and-technology/pip/pip.md#requirementstxt)
 
 <br>
 <br>
 
 ## Good Practice
 
----
+1.  It is ideal  to keep the environment folder free of other files because an environment is something which can be created and destroyed.
 
-> It is ideal  to keep the environment folder free of other files because an environment is something which can be created and destroyed.
+    - Avoid the following directory structure for projects:
 
-Avoid the following directory structure for projects:
+      ```
+      my-project
+        - my-proj-env
+          - code
+          - assets
+          - documentation
+      ```
 
-- ->MyProject
+    - Follow the following directory structure:
 
--> MyProject_env1
+      ```
+      my-project
+        - my-proj-env
+        - code
+        - assets
+        - documentation
+      ```
 
--> Code
-
--> Assets
-
--> Documentation
-
-Follow the following directory structure:
-
-- -> MyProject
-
--> MyProject_env1
-
--> Code Base
-
--> Assets
-
--> Documentation
-
-> Donot use source control (git) on environment folder. if you want to share, send the requirement.txt file and ask your peer to reproduce the results by creating his own environment.
+2.  Donot use source control (git) on environment folder. if you want to share, send the requirement.txt file and ask your peer to reproduce the results by creating his own environment.
 
 <br>
 <br>
+
+## References
+
+[venv — Creation of virtual environments — Python 3.11.1 documentation](https://docs.python.org/3/library/venv.html)
