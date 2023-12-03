@@ -12,6 +12,8 @@
 [user]
 	name = <name>
 	email = <email>
+[init]
+    defaultBranch = main
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
