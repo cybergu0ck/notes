@@ -1,1 +1,0 @@
-# My Coding Environment Setup

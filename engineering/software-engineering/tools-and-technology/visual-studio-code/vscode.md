@@ -1,4 +1,7 @@
-# Visual Studio Code
+# VS Code
+
+<br>
+<br>
 
 ## Setting default shell for integrated terminal
 

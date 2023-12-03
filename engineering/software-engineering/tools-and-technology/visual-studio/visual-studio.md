@@ -1,4 +1,9 @@
-# Accessing the memory viewer panel
+# Visual Studio
+
+<br>
+<br>
+
+## Memory viewer panel
 
 - Insert breakpoints and run debugging.
 - It can be found under Debug > Windows > Memory
@@ -43,7 +48,6 @@
   - After entering the memory address of name, we can see "Stevie" on the right side of the memory panel.
 
 <br>
-<br>
 
 - Viewing pointer values (address) in the memory
 
@@ -58,6 +62,6 @@
   }
   ```
 
-- ![](../_assets/mem3.png)
+  ![](../_assets/mem3.png)
 
   - If we observe the value stored in the address of the pointer ptr (0x00AFF7C4), we see the address of _num_ but kinda backwards (d0 f7 af 00), not aware more than this!

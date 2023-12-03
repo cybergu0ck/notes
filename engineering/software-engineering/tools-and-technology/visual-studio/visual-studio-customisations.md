@@ -1,4 +1,4 @@
-# Custom Key Bindings
+# Visual Studio Customisations
 
 - Tools > Options > Environment > Keyboard
 - Make sure to use the new shortcut in "Text Editor" and not "Global"

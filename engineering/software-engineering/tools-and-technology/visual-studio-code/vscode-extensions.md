@@ -1,4 +1,9 @@
-# Prettier
+# VSCode Extensions
+
+<br>
+<br>
+
+## Prettier
 
 To set up prettier:
 

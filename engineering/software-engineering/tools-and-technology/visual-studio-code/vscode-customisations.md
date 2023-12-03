@@ -1,4 +1,4 @@
-# Custom Shortcuts
+# VS Code Customisations
 
 - Set these keybindings for all code editors (Shortcuts with mouse clicks are not modifiable)
 
