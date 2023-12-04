@@ -1,8 +1,15 @@
 # Exports
 
+<br>
+<br>
+
 ## Named Exports
 
-**_Named Exports_** is a way to export specific variables, functions, or classes form a module so that they can be imported and used in other modules.
+**_Named Export_** is a way to export specific variables, functions, or classes form a module so that they can be imported and used in other modules.
+
+<br>
+
+### Syntax for exporting named export
 
 ```js
 // modulea.js
@@ -12,6 +19,10 @@ export function myFunction() {
 }
 ```
 
+<br>
+
+### Syntax for importing named export
+
 ```js
 // moduleb.js
 import { myVariable, myFunction } from "./modulea.js";
@@ -19,7 +30,11 @@ console.log(myVariable); // 42
 console.log(myFunction()); // Hello, World!
 ```
 
-#### Running the above on node
+<br>
+
+### Running on node
+
+#TODO - Move this section to node notes later
 
 - Initialise the node project, make sure the above js files are housed in this!
 
@@ -47,7 +62,7 @@ console.log(myFunction()); // Hello, World!
 
 <br>
 
-#### Running the above on browser
+### Running on browser
 
 - Use the following syntax in the html file that includes the script
 
@@ -59,3 +74,28 @@ console.log(myFunction()); // Hello, World!
 <br>
 
 ## Defeault Exports
+
+_Default Export is a way to export a single variable or a function, or a class form a module so it they can be imported and used in other modules._
+
+<br>
+
+### Syntax for exporting default export
+
+```js
+// modulea.js
+function myFunction() {
+  return "Hello, World!";
+}
+
+export default myFunction;
+```
+
+<br>
+
+### Syntax for importing default export
+
+```js
+import myFunction from "./modulea.js";
+
+console.log(myFunction());
+```
