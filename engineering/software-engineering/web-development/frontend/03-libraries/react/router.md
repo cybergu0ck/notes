@@ -184,7 +184,8 @@ function AppPage() {
           <NavLink to="tab2">Tab 2</NavLink>
         </li>
       </ul>
-      <Outlet></Outlet>
+      <Outlet></Outlet>{" "}
+      {/* This is where the child routes will be rendererd. */}
     </div>
   );
 }
