@@ -133,6 +133,22 @@ export default App;
 - Using an anchor tag `<a>` for linking reloads the entire page but Link and NavLink doesn't.
 
 <br>
+
+### `to` prop
+
+- A Link component with the `to` prop leading with a '/' will not append to the existing root url. For illustration, assume the current URL is root/home/app and then the following link is accessed, now the url will be root/login.
+
+  ```
+  <Link to="/login">
+  ```
+
+- A Link component with the `to` prop without any '/' will append to the existing url. Considering the previous illustration, now when the following link is accessed, the url will be root/home/app/login.
+
+  ```
+  <Link to="/login">
+  ```
+
+<br>
 <br>
 
 ## Nested Routes
@@ -195,3 +211,89 @@ export default AppPage;
 
 - The `Outlet` component is used to define where child routes should be rendered within a parent route. In our case, the child routes (tab1 and tab2) will be rendered in the AppPage.
 - The location is set to the `Route` with the `index` prop whenever the children path's are not used. (Basically the default for the parent of the nested routes)
+
+<br>
+<br>
+
+## Route with parameters
+
+Parameters in the route are placeholders in the URL that capture values and make them accessible to the components.
+
+```jsx
+<Router>
+  <Route path="cities/:city_id" element={MyComponent} />
+</Router>
+```
+
+- Generally the parameter will be the value of a variable or a state in which case the state is being stored in the URL.
+
+<br>
+
+### Setting the parameters
+
+We can set the parameters using the Link component and it's `to` prop.
+
+```jsx
+//id here can be any variable
+<Link to={${id}}>{/* children components goes here*/}</Link>
+```
+
+- When we are in the route "cities" and we click the element having the above link, the url becomes "cities/{value of the variable "id"}".
+- This will match the Route having the path "cities/:city_id" and the corresponding element will be loaded.
+
+<br>
+
+### Accessing the parameters
+
+The `useParams` function facilitates the access to the parameters from the current route.
+
+```jsx
+import { useParams } from "react-router-dom";
+const { city_id } = useParams(); //Here city_id will have the value of the variable "id"
+```
+
+<br>
+<br>
+
+## Route with Queries
+
+Queries are set in the Link component's to prop.
+
+```jsx
+//position is a variable
+
+<Link
+  className={styles.cityItem}
+  to={`cities?lat=${position.lat}&{position.lng}`}
+></Link>
+```
+
+- When the element with the above link is clicked, The Router tries to match the Route containing ".../cities" and then loads the element corresponding to that route.
+- It also appends the above queries in the URL. It looks something like:
+
+  ```
+  http://localhost:5173/app/cities?lat=38.727881642324164&lng=-9.140900099907554
+  ```
+
+- The usefullness of queries is that we save some data directly in the URL hence when the URL is shared, the data is also shared, which means that the webpage will be loaded to exact state when it is shared.
+
+<br>
+
+### Accessing and Setting the queries
+
+```jsx
+import { useSearchParams } from "react-router-dom";
+const [searchParams, setSearchParams] = useSearchParams();
+```
+
+- The queries in the active url can be accessed by calling the get method on the searchParams object with the name of the query as the parameter.
+
+  ```jsx
+  const lat = searchParams.get("lat");
+  ```
+
+- The queries can be set by passing a new object containing the values for the queries as a parameter to the setSearchParams function.
+
+  ```jsx
+  setSearch({ lat: 23, lng: 50 });
+  ```
