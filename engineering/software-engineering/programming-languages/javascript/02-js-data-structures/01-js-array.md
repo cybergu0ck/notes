@@ -373,10 +373,15 @@ console.log(evenNums);
 
 ## Array's `reduce` method
 
-It is used to reduce the elements of an array to a single value by iterating through the elements and applying the specific callback function to accumulate.
+**It reduces the elements of an array to a single value by iterating over each element of the array, applying a provided function that is defined, and accumulating the result.**
 
-- It's better to checkout online explanations for this concept until notes is updated.
-- An example of reduce method.
+- The syntax:
+
+  ```
+  array.reduce(callback[, initialValue]);
+  ```
+
+- A simple example:
 
   ```js
   const book1 = {
@@ -401,13 +406,51 @@ It is used to reduce the elements of an array to a single value by iterating thr
   books = [book1, book2, book3];
 
   const grandTotalPages = books.reduce(
-    (accumulator, books) => accumulator + books.pages,
-    0
+    (accumulator, books) => accumulator + books.pages, //callback
+    0 //initial value
   );
 
   console.log(grandTotalPages);
 
   //448
+  ```
+
+- A more complex example:
+
+  ```js
+  const book1 = {
+    author: "paulo coelho",
+    title: "alchemist",
+  };
+  const book2 = {
+    author: "scott adams",
+    title: "gilberts principle",
+  };
+  const book3 = {
+    author: "ernst hemmingway",
+    title: "the old man and the sea",
+  };
+  const book4 = {
+    author: "paulo coelho",
+    title: "Piligrimage",
+  };
+
+  books = [book1, book2, book3, book4];
+
+  const booksWithUniqueauthors = books.reduce((acc, curr) => {
+    if (acc.filter((b) => b["author"] === curr.author).length !== 0) return acc;
+    else return [...acc, curr];
+  }, []);
+
+  console.log(booksWithUniqueauthors);
+
+  /*
+  [
+    { author: 'paulo coelho', title: 'alchemist' },
+    { author: 'scott adams', title: 'gilberts principle' },
+    { author: 'ernst hemmingway', title: 'the old man and the sea' }
+  ]
+  */
   ```
 
 <br>
