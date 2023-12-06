@@ -91,7 +91,7 @@ Rules can be found in `eslintrc` file. If it's in JSON format, then add the rule
 
 <br>
 
-### Disabling props validation during linting in react
+### Disabling props validation during linting for react
 
 - Add the following to .eslintrc file in the root directory of project.
 
@@ -103,6 +103,16 @@ Rules can be found in `eslintrc` file. If it's in JSON format, then add the rule
   "rules": {
      "react/prop-types": 0
   }
+  }
+  ```
+
+- To enforce this setting globally in VS code, add the following in the settings.json file of VS Code.
+
+  ```json
+  "eslint.options": {
+     "rules": {
+        "react/prop-types": "off"
+     }
   }
   ```
 
