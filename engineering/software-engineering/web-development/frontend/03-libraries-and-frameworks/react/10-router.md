@@ -297,3 +297,111 @@ const [searchParams, setSearchParams] = useSearchParams();
   ```jsx
   setSearch({ lat: 23, lng: 50 });
   ```
+
+<br>
+<br>
+
+## Programmatic Navigation
+
+<br>
+
+### Imperative Method
+
+This is acheived using `useNavigate` hook from the "react-router-dom".
+
+```jsx
+import { useNavigate } from "react-router-dom";
+const navigate = useNavigate(); //navigate is a function that is to be used to redirect the url.
+```
+
+- Here when the component is clicked the url will be routed to ".../form".
+
+  ```jsx
+  <Button
+    onClick={() => {
+      navigate("form");
+    }}
+  />
+  ```
+
+- Navigating backwards :
+
+  ```jsx
+  <Button
+    onClick={() => {
+      navigate(-1);
+    }}
+  />
+  ```
+
+<br>
+
+### Declarative Method
+
+This is acheived by using `Navigate` component from the "react-router-dom".
+
+- Here, when the url lands on "app", It displays Tab1 component because of the Route component having the `index` prop. However it is important to observe that the url is not directed to "app/tab1".
+
+  ```jsx
+  import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+  import AppPage from "./pages/AppPage";
+  import Login from "../src/pages/Login";
+  import Pricing from "../src/pages/Pricing";
+  import HomePage from "./pages/HomePage";
+  import Tab1 from "./pages/Tab1";
+  import Tab2 from "./pages/Tab2";
+
+  function App() {
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage></HomePage>}></Route>
+          <Route path="login" element={<Login></Login>}></Route>
+          <Route path="pricing" element={<Pricing></Pricing>}></Route>
+          <Route path="app" element={<AppPage></AppPage>}>
+            <Route index element={<Tab1></Tab1>}></Route>
+            <Route path="tab1" element={<Tab1></Tab1>}></Route>
+            <Route path="tab2" element={<Tab2></Tab2>}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    );
+  }
+
+  export default App;
+  ```
+
+- Here, the `Navigate` component redirects the route itself. Hence changing the url with it.
+
+  ```jsx
+  import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+  import AppPage from "./pages/AppPage";
+  import Login from "../src/pages/Login";
+  import Pricing from "../src/pages/Pricing";
+  import HomePage from "./pages/HomePage";
+  import Tab1 from "./pages/Tab1";
+  import Tab2 from "./pages/Tab2";
+
+  function App() {
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage></HomePage>}></Route>
+          <Route path="login" element={<Login></Login>}></Route>
+          <Route path="pricing" element={<Pricing></Pricing>}></Route>
+          <Route path="app" element={<AppPage></AppPage>}>
+            <Route index element={<Navigate to="tab1"></Navigate>}></Route>
+            <Route path="tab1" element={<Tab1></Tab1>}></Route>
+            <Route path="tab2" element={<Tab2></Tab2>}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    );
+  }
+
+  export default App;
+  ```
+
+- Without the `replace` prop in the `Navigate` component, navigating backward is not possible. [The `replace` prop, when set to true, replaces the current entry in the navigation history with the new location. This means that the current entry will be removed from the history stack, and navigating back will not go to the replaced entry.]
+
+<br>

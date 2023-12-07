@@ -106,16 +106,6 @@ Rules can be found in `eslintrc` file. If it's in JSON format, then add the rule
   }
   ```
 
-- To enforce this setting globally in VS code, add the following in the settings.json file of VS Code.
-
-  ```json
-  "eslint.options": {
-     "rules": {
-        "react/prop-types": "off"
-     }
-  }
-  ```
-
 <br>
 <br>
 
