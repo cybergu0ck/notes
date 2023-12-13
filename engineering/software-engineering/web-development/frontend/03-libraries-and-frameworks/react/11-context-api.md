@@ -142,3 +142,6 @@ const contextValueObj = useContext(NumberContext);
   ```
 
 - The Context API in React eliminates prop drilling, providing a cleaner code structure. In the example, values needed for `Widget` and `Footer` are directly accessed from the context, avoiding the need to pass them through every intermediate component (ex: `MainContent`). This enhances code simplicity and modularity.
+
+<br>
+<br>
