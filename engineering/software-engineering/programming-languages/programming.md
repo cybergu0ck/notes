@@ -69,3 +69,15 @@ _The approach of developing code with the consumer in mind._
 <br>
 <br>
 <br>
+
+## Difference between Error and Exception
+
+_An error in general refers to any deviation from the expected or intended behavior of a program that can happen either during compile time or run time._
+
+- Errors needs to be fixed.
+
+<br>
+
+_Errors detected during execution (Run Time) are called exceptions and are not unconditionally fatal._
+
+- Exceptions can be handled.
