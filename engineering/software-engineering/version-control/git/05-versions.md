@@ -116,5 +116,11 @@ It is used to list the chronological record of all the updates(merges, resets, r
   git difftool <commit-hash-1> <commit-hash-2>
   ```
 
+- To see the changes of a particular file among the modified files.
+
+  ```
+  git difftool <file(path)>
+  ```
+
 <br>
 <br>
