@@ -1,6 +1,6 @@
 # Git Fundamentals
 
-Git is a distributed version control system (VCS) that is widely used for software development and collaboration.
+**_Git is a distributed version control system (VCS) that is widely used for software development and collaboration._**
 
 - git is a distributed VCS while github is a PaaS (Platform as a service) for VCS.
 
@@ -9,36 +9,39 @@ Git is a distributed version control system (VCS) that is widely used for softwa
 
 ## Understanding Commit
 
-- We initialise a git repo inside our project directory and start working on our codebase.
-- We add the progress (files that are created/deleted/modified) to the staging area.
-- We commit the progress, **_A commit is a snapshot of the files_** with their data at that specific point in time!
-- git stores all the commits so that we can access the project's progress (or status) at any point in time!
+**_Commits are lightweight snapshots of the project._**
+
+- Once git is initialised in our project, we can store the commits with the progress of the project and switch (access) between them very fast.
 
 <br/>
 
-### Git ID / SHA-1 / Hash / Object ID / Checksum
+### Git SHA-1
 
-- SHA-1 (moving on we'll stick to this) is a 40 character hex string generated for a specific commit, it acts as a unique identifier used to track and reference a specific snapshot of code changes in a Git repository.
+**_SHA-1 is a 40 character hex string generated for a specific commit, it acts as a unique identifier used to track and reference a specific snapshot of code changes in a Git repository._**
+
+- Git ID, SHA-1, Hash, Object ID and checksum all refer the same concept.
 - SHA-1 is the result of mathematical operation of Secure Hash Algorithm-1 based on the modifications in a file.
 - Statistically no two unique files have same SHA-1 value.
 - SHA-1 is designed to Avalanche, meaning a small change in file content results in drastic change in SHA-1.
 
 <br>
-
-- Internally git uses objects to store 4 types of things:
-
-  1. **Commit object** : A small text file contating commit user info, commit message, a reference to commit's parent('s) and a reference to the root tree of the project.
-
-  2. **Annotated tag** : A reference to a specific commit
-
-  3. **Tree**: Directories and filenames in the project
-
-  4. **Blob**: The content of a file in the project.
-
-<br>
 <br>
 
-## DAG
+## Datastructures in git
+
+Internally git uses objects to store 4 types of things:
+
+1. **Commit object** : A small text file contating commit user info, commit message, a reference to commit's parent('s) and a reference to the root tree of the project.
+
+2. **Annotated tag** : A reference to a specific commit
+
+3. **Tree**: Directories and filenames in the project
+
+4. **Blob**: The content of a file in the project.
+
+<br>
+
+### DAG
 
 - Git history is stored in the form of Directed Acyclic Graph (DAG) where commits are represented as nodes and edges point to the parent commit
 - A DAG is a directed graph (edges have directions) with no cycles!
@@ -51,19 +54,41 @@ Git is a distributed version control system (VCS) that is widely used for softwa
 
 ## Reference
 
-- A reference is a userfriendly name that points to either a commit SHA-1 hash or another reference.
-- The reference is called a symbolic reference it points to another reference.
+**_A reference is a userfriendly name that points to either a commit SHA-1 hash or another reference._**
 
-- In the output of the `git log --oneline`, the **HEAD** and the **master** are references.
+- The reference is called a _symbolic reference_ it points to another reference.
+- HEAD, master, main etc are references. (See `git log --oneline`)
 
   ```
   $ git log --oneline
   f9a6285 (HEAD -> master) created moviedb.py
   ```
 
-- We can use the reference instead of the current SHA-1 hash in all git commands.
-- "HEAD" refers to a symbolic reference that points to the currently checked-out commit in a repository.
+- We can use the reference instead of SHA-1 hash in all git commands.
+
 - ~ or ~1 is used to refer the parent of current commit. ~~ or ~2 refers to the parent's parent of the current commit
+
+<br>
+
+### HEAD
+
+**_HEAD refers to a symbolic reference that points to the currently checked-out commit in a repository._**
+
+- Generally HEAD will be pointing to the current branch.
+
+  ![head1](./_assets/head1.png)
+
+- The HEAD is said to be detached when it is pointing to a commit directly instead of a branch.
+  ![head1](./_assets/head2.png)
+
+<br>
+
+### Relative References
+
+**_Relative References are typically references to references specified in a way relative to the current commit or branch._**
+
+- Moving upward one commit at a time using `^`. (Example: HEAD^, HEAD^^)
+- Moving upward a number of commits at a time using `~<number>`. (Example: HEAD ~3)
 
 <br>
 <br>

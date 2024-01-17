@@ -1,17 +1,30 @@
 # Operators
 
 <br>
+<br>
 
-## Assigment Operator (=)
+## Arithmetic Operators
+
+| Operator | Operation          |
+| -------- | ------------------ |
+| +        | Addition           |
+| -        | Subtraction        |
+| \        | Divison            |
+| \*       | Multiplication     |
+| %        | Modulo (remainder) |
+
+<br>
+<br>
+
+## Assigment Operators
 
 - An `lvalue` (locator value) represents an object that occupies some identifiable location in memory (i.e. has an address).
 - `rvalues` are defined by exclusion. Every expression is either an lvalue or an rvalue, so, an rvalue is an expression that does not represent an object occupying some identifiable location in memory.
   - R-value: r-value” refers to data value that is stored at some address in memory. A r-value is an expression, that can’t have a value assigned to it, which means r-value can appear on right but not on left hand side of an assignment operator(=).
 
 <br>
-<br>
 
-## Compound Assignment Operators
+### Compound Assignment Operators
 
 | Operator | Example     | Meaning          |
 | -------- | ----------- | ---------------- |
@@ -29,28 +42,7 @@
 <br>
 <br>
 
-## Address of Operator (&)
-
-- & is used as Address of Operator when
-- When & is used as the "address-of" operator, as in &variable, it returns a pointer to the memory address of the variable. The resulting data type is a pointer type.
-
-<br>
-<br>
-
-## Arithmetic Operators
-
-| Operator | Operation          |
-| -------- | ------------------ |
-| +        | Addition           |
-| -        | Subtraction        |
-| \        | Divison            |
-| \*       | Multiplication     |
-| %        | Modulo (remainder) |
-
-<br>
-<br>
-
-## Relational Operators
+## Relational Operators (Comparsion Operators)
 
 Relational operators result to bool types.
 
@@ -67,27 +59,7 @@ Relational operators result to bool types.
 <br>
 <br>
 
-## Logical Operators
-
-Logical operators result to bool types.
-
-| Operator    | Operation   |
-| ----------- | ----------- |
-| not (!)     | negation    |
-| and (&&)    | logical and |
-| or ( \|\| ) | logical or  |
-
-<br>
-<br>
-
-## Bitwise Operators
-
-> Complete this
-
-<br>
-<br>
-
-## Increment (++) and Decrement (--) Operators
+## Increment and Decrement Operators
 
 Increases or decreases the value by 1.
 
@@ -140,6 +112,33 @@ Increases or decreases the value by 1.
 
 <br>
 <br>
+
+## Logical Operators
+
+Logical operators result to bool types.
+
+| Operator    | Operation   |
+| ----------- | ----------- |
+| not (!)     | negation    |
+| and (&&)    | logical and |
+| or ( \|\| ) | logical or  |
+
+<br>
+<br>
+
+## Bitwise Operators
+
+<!-- TODO : Complete this part -->
+
+<br>
+<br>
+
+## Address of Operator (&)
+
+- & is used as Address of Operator when
+- When & is used as the "address-of" operator, as in &variable, it returns a pointer to the memory address of the variable. The resulting data type is a pointer type.
+
+<br>
 <br>
 
 # Operator Precedence
@@ -162,6 +161,5 @@ The precendence is tabulated from higher (top ones) to lower (bottom ones)
 | \|\|                                   | left to right |
 | = op= ?:                               | right to left |
 
-<br>
 <br>
 <br>

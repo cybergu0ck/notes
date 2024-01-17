@@ -72,7 +72,15 @@ The following command allows us to make changes to the commit message. add or re
 <br>
 <br>
 
-## Soft Reset
+## Reset
+
+**_Reset commands faciliate undoing of changes by rewriting (modifying) history especially when working alone_**
+
+- Reset commands should not be used when working with remote repos. In such cases, Revert command is suggested.
+
+<br>
+
+### Soft Reset
 
 It is a process where git moves the branch pointer (ex: HEAD) to a different commit while keeping the changes intact (working directory and staging area).
 
@@ -86,9 +94,8 @@ git reset --soft <hash>
 - Any changes made after the soft reset that need to be recorded must be done via a new commit. This new commit will advance the HEAD with a new hash.
 
 <br>
-<br>
 
-## Hard Reset
+### Hard Reset
 
 It is a process where git moves the branch pointer (ex: HEAD) to a different commit while discarding all the changes in working directory and staging area.
 
@@ -106,13 +113,15 @@ git reset --hard <hash>
 
 ## Revert
 
-Reverting is a process of undoing changes done in a previous commit without modifying the history of the branch. Unlike resetting, revert adds a new commit containing the updated changes without moving the branch pointer.
+**_Revert command facilitates undoing of changes without rewriting (modifying) the history._**
 
-![revert](./_assets/revert.gif)
+- Unlike resetting, revert adds a new commit containing the updated changes (that undo's the changes).
 
-```bash
-git revert <hash>
-```
+  ![revert](./_assets/revert.gif)
+
+  ```bash
+  git revert <hash>
+  ```
 
 - In the above gif illustrates a case where the index.js file that was introduced in the commit hash ec5be wasn't needed, Hence `git revert ec5be` is used, index.js is deleted and this change is staged and commited.
 - This is particularly useful when working in a collaborative environment where you want to keep a record of why and when certain changes were reverted.
@@ -130,7 +139,7 @@ Follow these steps:
    git reflog
    ```
 
-1. Checkout tp that hash, the HEAD will now be in detached state.
+1. Checkout to that hash, the HEAD will now be in detached state.
 
    ```bash
    git checkout <hash>

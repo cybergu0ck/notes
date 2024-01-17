@@ -65,6 +65,7 @@ const contextValueObj = useContext(NumberContext);
   //#NOTE: 1. Creating the Context
   const NumberContext = createContext();
 
+  //#NOTE: 2. Providing value to the context (see NumberContext.Provider)
   function App() {
     const [number, setNumber] = useState(0);
 
@@ -74,15 +75,14 @@ const contextValueObj = useContext(NumberContext);
     return (
       <>
         <Header></Header>
-        {"//NOTE: Providing the value to the Context "}
         <NumberContext.Provider
           value={{
             number: number,
             onClick: handleIncr,
           }}
         >
-          <MainContent number={number} onClick={handleIncr}></MainContent>
-          <Footer number={number}></Footer>
+          <MainContent></MainContent>
+          <Footer></Footer>
         </NumberContext.Provider>
       </>
     );
@@ -133,15 +133,116 @@ const contextValueObj = useContext(NumberContext);
 - The component tree for the above code is:
 
   ```
+
   App
   ├── Header
-  ├── Context.Provider
-  │   └── MainContent
-  │         └── Widget
-  └── Footer
+  └── Context.Provider
+      ├── MainContent
+      │     └── Widget
+      └── Footer
+
   ```
 
 - The Context API in React eliminates prop drilling, providing a cleaner code structure. In the example, values needed for `Widget` and `Footer` are directly accessed from the context, avoiding the need to pass them through every intermediate component (ex: `MainContent`). This enhances code simplicity and modularity.
 
 <br>
 <br>
+
+- Creating components to abstract the above context creation and consumption.
+
+  ```jsx
+  //NumberProvider.jsx
+
+  import { createContext, useState, useContext } from "react";
+
+  //#NOTE: 1. Creating the Context
+  const NumberContext = createContext();
+
+  //#NOTE: 2. Providing value to the context (see NumberContext.Provider)
+  function NumberProvider({ children }) {
+    const [number, setNumber] = useState(0);
+
+    function handleIncr() {
+      setNumber((number) => number + 1);
+    }
+
+    return (
+      <NumberContext.Provider
+        value={{
+          number: number,
+          onClick: handleIncr,
+        }}
+      >
+        {children}
+      </NumberContext.Provider>
+    );
+  }
+
+  //This is an Abstraction to encapsulate the useContext()
+  function useNumber() {
+    const context = useContext(NumberContext);
+    return context;
+  }
+
+  export { NumberProvider, useNumber };
+  ```
+
+  ```jsx
+  // App.jsx
+
+  import { createContext, useState, useContext } from "react";
+  import { NumberProvider, useNumber } from "./NumberProvider";
+
+  function App() {
+    return (
+      <>
+        <Header></Header>
+        <NumberProvider>
+          <MainContent></MainContent>
+          <Footer></Footer>
+        </NumberProvider>
+      </>
+    );
+  }
+
+  function Header() {
+    return (
+      <div>
+        <h1>Keep Incrementing</h1>
+      </div>
+    );
+  }
+
+  function MainContent() {
+    return (
+      <div>
+        <Widget></Widget>
+      </div>
+    );
+  }
+
+  function Widget() {
+    //NOTE: 3. Consuming the Context
+    const contextValueObj = useNumber();
+    const { number, onClick } = contextValueObj;
+
+    return (
+      <div style={{ display: "flex" }}>
+        <p>{number}</p>
+        <button onClick={onClick}>+</button>
+      </div>
+    );
+  }
+
+  function Footer() {
+    const { number } = useNumber();
+
+    return (
+      <div>
+        <h3>You pressed the increment button {number} many times.</h3>
+      </div>
+    );
+  }
+
+  export default App;
+  ```

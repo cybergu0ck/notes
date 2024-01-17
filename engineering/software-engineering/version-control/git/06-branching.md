@@ -89,3 +89,9 @@ View [in remote repositories notes](04-remote-repositories.md#working-with-remot
 
 <br>
 <br>
+
+## Cherrypicking
+
+**_Cherrypicking refers to selecting and applying specific commits from one branch to another._**
+
+![cherry](./_assets/cherrypick.gif)
