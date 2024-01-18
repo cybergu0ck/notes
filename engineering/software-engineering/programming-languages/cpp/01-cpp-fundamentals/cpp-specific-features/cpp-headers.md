@@ -17,27 +17,32 @@
 
 ## Include Guards
 
-- without include guards, the compiler will see the declaration everytime the header file is included in a file. (this is an error)
-- there are two kinds:
+- without include guards, the compiler will see the declaration everytime the header file is included in source files. (this is an error)
 
-  1. using `ifndef` directive preprocessor
+  ```h
+  #ifndef _ANY_MACRO_H_  //this can be any unique name
+  #define _ANY_MACRO_H_
 
-     ```h
-     #ifndef _ACCOUNT_H_  //this can be any unique name
-     #define _ACCOUNT_H_
+  //Declarations
 
-     //account class declaration
+  #endif
+  ```
 
-     #endif
-     ```
-
-  1. using `pragma` directive preprocessor
-
-     ```h
-     #pragma once
-
-     //account class declaration
-     ```
+  - `#ifndef` are include guards.
+  - Include guards check wether the macro (_ANY_MACRO_H_ in this the above code)is defined. If it's not defined, it defines ir and includes the content of the header file. If it's already defined (due to previous inclusion), the content is skipped.
+  - The [pragma directive preprocessor](#pragma-directive-preprocessor) can also be used.
 
 <br>
 <br>
+
+## Pragma Directive Preprocessor
+
+`pragma` is a compiler-specific directive that tells the preprocessor to include the file only once.
+
+```h
+#pragma once
+
+//Declaration
+```
+
+- While widely supported, it might not be supported by all compilers.
