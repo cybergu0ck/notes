@@ -147,31 +147,3 @@
 
 <br>
 <br>
-<br>
-
-# Include Guards
-
-- without include guards, the compiler will see the declaration everytime the header file is included in a file. (this is an error)
-- there are two kinds:
-
-  1. using `ifndef` directive preprocessor
-
-     ```h
-     #ifndef _ACCOUNT_H_  //this can be any unique name
-     #define _ACCOUNT_H_
-
-     //account class declaration
-
-     #endif
-     ```
-
-  1. using `pragma` directive preprocessor
-
-     ```h
-     #pragma once
-
-     //account class declaration
-     ```
-
-<br>
-<br>

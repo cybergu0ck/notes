@@ -312,7 +312,7 @@ _`mutable` keyword is used to modify the behavior of a non-static data member of
 
 ## Seperation of Declaration and Implementation
 
-- We can seperate the class specification (declaration) from the implementation using header files
+- We can seperate the class specification (declaration) from the implementation using header files.
   - .h file for class declaration
   - .cpp file for the class implementation
 
@@ -361,4 +361,5 @@ _`mutable` keyword is used to modify the behavior of a non-static data member of
   }
   ```
 
+<br>
 <br>
