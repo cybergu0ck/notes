@@ -39,7 +39,7 @@ return_type function_name(type parameter...){
 
 _**Function prototype** tells the compiler all it needs to know about a function._
 
-- The compiler must know the function details before it is called, becuase it must know if the number of arguments and it's types are mathcing that of the parameter list.
+- The compiler must know the function details before it is called, becuase it must know if the number of arguments and it's types are matching that of the parameter list.
 
   ```cpp
   int main()
