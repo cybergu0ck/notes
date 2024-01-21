@@ -34,7 +34,7 @@ int main() {
 <br>
 
 - C follows **function centric approach** and lays more emphasis on functions and cares less for the data.
-- Disadvantage of C structs is that the compiler wont be able to check for missuse of data.
+- Disadvantage of C structs is that all the data is public and hence can be missused.
 
   ```c
   struct Employee
@@ -51,10 +51,7 @@ int main() {
   {
       struct Employee e1;
       struct Student s1;
-
-      //code to set the salary and marks for both struct
-
-      s1.marks = e1.salary;  //this may be gross miss-use of data that the compiler will allow!
+      s1.marks = e1.salary;  //there is no way to not allow this in C!
   }
   ```
 
