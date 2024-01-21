@@ -150,9 +150,9 @@ _When arguments are **passed by value**, the copy of the actual arguments is pas
 
 ### Pass by Reference
 
-_When arguments are **passed by reference**, the memory location of the arguments are passed to the function._
+_When arguments are **passed by reference**, the actual argument is passed to the function, via a reference._
 
-- In C++, when we pass arguments by reference, it is passed by reference.
+- In C++, when we pass arguments by reference, they are passed as reference.
 - Here, the formal parameters are aliases for the actual parameters.
 - When we modify the parameter that is passed by reference, we are modifying the original argument.
 
