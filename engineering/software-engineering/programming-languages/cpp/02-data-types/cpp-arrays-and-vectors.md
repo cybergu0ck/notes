@@ -170,6 +170,19 @@ Characteristics of arrays are:
 ## Vector methods
 
 1. `push_back()` : to append elements to the vector.
+2. `size()` : The number of elements in the vector.
+
+   ```cpp
+   #include <iostream>
+   #include <vector>
+
+   int main(){
+       std::vector <int> my_vec{1,2,3};
+       std::cout << my_vec.size() << std::endl;
+   }
+
+   //3
+   ```
 
 <br>
 <br>
