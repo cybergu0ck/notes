@@ -48,6 +48,10 @@ git pull fetches and merges the updates from the remote repo.
 ![pull](./_assets/pull.gif)
 
 <br>
+
+When working with multiple branches, git pull will fetch changes from the remote repository for all branches but it will only merge the changes into the currently checked-out branch.
+
+<br>
 <br>
 
 ## Working with remote branches
