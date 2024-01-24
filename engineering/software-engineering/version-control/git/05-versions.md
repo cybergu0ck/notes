@@ -110,7 +110,7 @@ It is used to list the chronological record of all the updates(merges, resets, r
   git difftool --staged -y
   ```
 
-- To see the changes between two commits.
+- To see the changes in `commit-hash-2` compared to `commit-hash-1`.
 
   ```bash
   git difftool <commit-hash-1> <commit-hash-2>
