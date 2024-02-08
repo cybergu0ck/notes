@@ -7,11 +7,27 @@
 <br/>
 <br/>
 
-## Understanding Commit
+## Git Command Syntax
 
-**_Commits are lightweight snapshots of the project._**
+```bash
+git <command> <--flags> <arguments>
+```
 
-- Once git is initialised in our project, we can store the commits with the progress of the project and switch (access) between them very fast.
+- flags are also called as switches or options.
+
+- Examples:
+  - `git status`, here status is a command.
+  - `git log --oneline`, here log is a command and --oneline is a flag.
+  - `git add file.txt`, here add is a command and file.txt is an argument.
+
+<br/>
+<br/>
+
+## Git Commit
+
+**_Commits are "lightweight" snapshots of the project._**
+
+- Once git is initialised in our project, we can store the commits with the progress of the project and switch (access) between them "very fast".
 
 <br/>
 
@@ -19,7 +35,7 @@
 
 **_SHA-1 is a 40 character hex string generated for a specific commit, it acts as a unique identifier used to track and reference a specific snapshot of code changes in a Git repository._**
 
-- Git ID, SHA-1, Hash, Object ID and checksum all refer the same concept.
+- Git ID, SHA-1, Hash, Object ID and checksum all refer the same thing.
 - SHA-1 is the result of mathematical operation of Secure Hash Algorithm-1 based on the modifications in a file.
 - Statistically no two unique files have same SHA-1 value.
 - SHA-1 is designed to Avalanche, meaning a small change in file content results in drastic change in SHA-1.
@@ -27,17 +43,17 @@
 <br>
 <br>
 
-## Datastructures in git
+## Datastructures in Git
 
-Internally git uses objects to store 4 types of things:
+Internally git uses many datastructures to store data, primarily:
 
 1. **Commit object** : A small text file contating commit user info, commit message, a reference to commit's parent('s) and a reference to the root tree of the project.
 
-2. **Annotated tag** : A reference to a specific commit
+2. **Tag Object** : A reference to a specific commit.
 
-3. **Tree**: Directories and filenames in the project
+3. **Tree Object**: Directories and filenames in the project.
 
-4. **Blob**: The content of a file in the project.
+4. **Blob Object**: The content of a file in the project.
 
 <br>
 
@@ -93,18 +109,23 @@ Internally git uses objects to store 4 types of things:
 <br>
 <br>
 
-## Git Command Syntax
+## Configuring Git
 
-```bash
-git <command> <--flags> <arguments>
+```
+git config [--local | --global | --system] <key> [<value>]
 ```
 
-- flags are also called as switches or options.
+- `--local` flag or no flag applies only to the current repository
+- `--global` flag applies to every repo that one uses on his computer
+- `--system` flag applies to every repo for all users on the comouter
 
-- Examples:
-  - `git status`, here status is a command.
-  - `git log --oneline`, here log is a command and --oneline is a flag.
-  - `git add file.txt`, here add is a command and file.txt is an argument.
+<br/>
+
+| Operation                  | Syntax                                     | Explanation |
+| -------------------------- | ------------------------------------------ | ----------- |
+| 1. Set up username         | `git config --global user.name <username>` |             |
+| 2. Set up email            | `git config --global user.email <email>`   |             |
+| 3. Read/ Check credentials | `git config user.name (or user.email)`     |
 
 <br/>
 <br/>
@@ -130,27 +151,6 @@ git <command> <--flags> <arguments>
   - [<>] means optional placeholders.
   - () are used for grouping to improve clarity.
   - ... means that multiple occurances are possible.
-
-<br/>
-<br/>
-
-## Configuring git
-
-```
-git config [--local | --global | --system] <key> [<value>]
-```
-
-- `--local` flag or no flag applies only to the current repository
-- `--global` flag applies to every repo that one uses on his computer
-- `--system` flag applies to every repo for all users on the comouter
-
-<br/>
-
-| Operation                  | Syntax                                     | Explanation |
-| -------------------------- | ------------------------------------------ | ----------- |
-| 1. Set up username         | `git config --global user.name <username>` |             |
-| 2. Set up email            | `git config --global user.email <email>`   |             |
-| 3. Read/ Check credentials | `git config user.name (or user.email)`     |
 
 <br/>
 <br/>
