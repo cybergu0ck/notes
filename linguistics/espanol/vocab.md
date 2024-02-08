@@ -19,20 +19,35 @@
 <br>
 <br>
 
+## Family
+
+| English      | Espanol    |
+| ------------ | ---------- |
+| Father       | Padre      |
+| Mother       | Madre      |
+| Grand Father | Abuelo     |
+| Grand Mother | Abuela     |
+| Son          | Hijo (eho) |
+| Daughter     | Hija (eha) |
+| Brother      | Harmano    |
+| Sister       | Harmana    |
+| Husband      | Espaso     |
+| Wife         | Espasa     |
+
+<br>
+<br>
+
 ## Travel Related
 
 | English      | Espanol      |
 | ------------ | ------------ |
 | The Suitcase | La Maleta    |
 | Bathroom     | Bano         |
-| The Table    | La Mesa      |
 | The People   | La personas  |
 | Supermarket  | Supermarcado |
 | Airport      | Airporte     |
 | Bank         | Banco        |
 | Street       | Calle        |
-| The Cup      | La Taza      |
-| A glass      | Un vasso     |
 
 <br>
 <br>
@@ -56,6 +71,30 @@
 <br>
 <br>
 
+## Things
+
+| Ingles    | Espanol   |
+| --------- | --------- |
+| Phone     | Telefono  |
+| Cup       | Taza      |
+| Glass     | Vaso      |
+| Bicycle   | Bicicleta |
+| Car       | Carro     |
+| The Table | La Mesa   |
+
+<br>
+<br>
+
+## Animals
+
+| Ingles | Espanol |
+| ------ | ------- |
+| Cat    | Gato    |
+| Dog    | Perro   |
+
+<br>
+<br>
+
 ## Spanish Sentences
 
 | Espanol                                 | English                               |
@@ -72,3 +111,7 @@
 | Un jugo de naranga?                     | An oragange juice                     |
 | Un cafe con azucar                      | A coffee with sugar                   |
 | Sin leche, por favor                    | Without milk, please                  |
+| Yo vivo aqui                            | I live here                           |
+| El tienes un carro                      | He has a car                          |
+| Tu tienes un gato?                      | Do you have a cat?                    |
+| Yo no vivo en Francia                   | I do not live in France               |

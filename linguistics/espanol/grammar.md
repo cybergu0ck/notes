@@ -1,13 +1,13 @@
 ## Basic
 
-| English          | Espanol |
-| ---------------- | ------- |
-| I                | Yo      |
-| You              | Tu      |
-| He               | El      |
-| She              | Ella    |
-| They (masculine) | Ellos   |
-| They (feminine)  | Ellas   |
+| English          | Espanol     |
+| ---------------- | ----------- |
+| I                | Yo          |
+| You              | Tu          |
+| He               | El          |
+| She              | Ella (ejja) |
+| They (masculine) | Ellos       |
+| They (feminine)  | Ellas       |
 
 <br>
 <br>
@@ -19,17 +19,24 @@
 | I/You/He drink | Yo/Tu/El bebo/bebes/bebe |
 | I/You/He eat   | Yo/Tu/El como/comes/come |
 | I/You speak    | Yo/Tu Hablo/Hablas       |
-| Need           | Tengo                    |
+| Have           | Tengo                    |
+| You have       | Tienes                   |
+| Need           | Necessito                |
+| Live           | Vivo                     |
 
 <br>
 <br>
 
 ## Adjectives
 
-| English | Espanol                   |
-| ------- | ------------------------- |
-| Closed  | Cerrado (M)/ Cerrada (F)  |
-| Open    | Abierto (M) / Abierta (F) |
+| English     | Espanol                   |
+| ----------- | ------------------------- |
+| Closed      | Cerrado (M)/ Cerrada (F)  |
+| Open        | Abierto (M) / Abierta (F) |
+| Interesting | interesante               |
+| Elegant     | Elegante                  |
+| Pretty      | Bonita                    |
+| Big         | Grande                    |
 
 <br>
 <br>
@@ -38,7 +45,11 @@
 
 | English | Espanol |
 | ------- | ------- |
-| For     | para    |
+| For     | Para    |
 | With    | Con     |
 | Without | Sin     |
 | Of      | De      |
+| Or      | O       |
+| And     | Y (ee)  |
+| Very    | Muy     |
+| In      | En      |
