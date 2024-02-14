@@ -81,3 +81,45 @@ _An error in general refers to any deviation from the expected or intended behav
 _Errors detected during execution (Run Time) are called exceptions and are not unconditionally fatal._
 
 - Exceptions can be handled.
+
+<br>
+<br>
+<br>
+
+# Naming conventions
+
+<br>
+<br>
+
+## Hungarian Notation
+
+Naming convention where a prefix is included mostly indicating the variable's data type.
+
+- Examples are "icount", "fvalue" etc.
+
+<br>
+<br>
+
+## Camel Case
+
+Naming convention where compound words are joined together and each word's initial letter, except for the first one, is capitalised.
+
+- Examples are "camelCase", "totalAmount", "firstName" etc.
+
+<br>
+<br>
+
+## Pascal Case
+
+Naming convention where compound words are joined together and each word's initial letter, even for the first one, is capitalised.
+
+- Examples are "PascalCase", "TotalAmount", "FirstName" etc.
+
+<br>
+<br>
+
+## Snake Case
+
+Naming convention where compound words are joined together using underscores and typically lower case is used.
+
+- Examples are "snake_case", "total_amount", "first_name" etc.
