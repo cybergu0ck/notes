@@ -7,15 +7,28 @@ Facilates the positioning of widgets in terms of rows and columns.
 <br>
 <br>
 
+## Constraining the Size of the Layouts
+
+By default, layouts will resize according to their parent widget. However, a fixed size policy can be set for the layout to prevent it from resizing when its parent widget is resized.
+
+```cpp
+layout->setSizeConstraint(QLayout::SetFixedSize);
+```
+
+![image](./_assets/qlayout-constrain.png)
+
+<br>
+<br>
+
 ## Spacing in QGridLayout
 
-- Use `setColumnMinimumWidth` and `setRowMinimumHeight` for row and column spacing.
+Use `setColumnMinimumWidth` and `setRowMinimumHeight` for row and column spacing.
 
-  ```cpp
-  void QGridLayout::setColumnMinimumWidth(int column, int minSize);
-  ```
+```cpp
+void QGridLayout::setColumnMinimumWidth(int column, int minSize);
+```
 
-  ![image](./_assets/qgrid-2.png)
+![image](./_assets/qgrid-2.png)
 
 <br>
 <br>
