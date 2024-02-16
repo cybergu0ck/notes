@@ -1,8 +1,10 @@
 # Header Files
 
-**_Header files are files that typically contain declarations of functions, classes, variables, and other constructs, without providing the actual implementation._**
+**_Header files are files that typically contain declarations of including function prototypes, class definitions, constants, and type definitions; without providing the actual implementation._**
 
-<br>
+- They have .h file extension.
+- They provide an interface to the functionality implemented in source files.
+
 <br>
 
 ## Need for header files

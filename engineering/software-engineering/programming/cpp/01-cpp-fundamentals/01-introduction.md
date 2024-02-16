@@ -35,26 +35,39 @@ Structured programming refers to a programming paradigm that emphasizes the use 
 
 # Build Process
 
+[Header files](./cpp-specific-features/cpp-headers.md) typically contain declarations, including function prototypes, class definitions, constants, and type definitions.
+
+Source files contain the actual implementations of the functions and classes declared in header files.
+
+<br>
+
 ![build](../_assets/build-process.png)
 
 <br>
 <br>
 
-## Preprocessor
+## 1. Preprocessing
 
-Some crucial tasks handled are:
+**_Preprocessing is the process of handling preprocessor directives and generating an expanded version of the source code._**
 
-- It strips all the comments from the source file and replaces each comment with a single space.
-- Then it looks for preprocessor directives and performs plain text substitution.
+- Preprocessing is carried out by a preprocessor and it's tasks are:
+
+  1. It strips all the comments from the source file and replaces each comment with a single space.
+
+  2. Then it looks for preprocessor directives and performs plain text substitution.
 
 <br>
 
 ### Preprocessor Directive
 
-Preprocessor directive are lines in the source code that begin with a #.
+**_A preprocessor directive is a command in the source code that instructs the preprocessor to perform specific actions before the compilation process._**
 
-- For example the #include preprocessor directive replaces that line with the code that is present in the file (referred by the #include preprocessor directive)
-- It supports conditional compilation, preprocessor directives can be used to execute OS or platform specific code.
+- Preprocessor directive begin with a #.
+
+- The `#include` directive replaces that line with the code that is present in the file (referrred by the directive, generally a header file)
+- The `#define` directive performs macro substituition.
+- It supports conditional compilation, preprocessor directives can be used to execute OS or platform specific code (using `#ifdef`, `#ifndef`, `#endif`, etc.).
+
 - Some of the preprocessor directives are:
 
   ```cpp
@@ -74,32 +87,53 @@ Preprocessor directive are lines in the source code that begin with a #.
 <br>
 <br>
 
-## Compiler
+## 2. Compilation
 
-Compiler checks for C++ syntax and translates the source code to object code.
+**_Compilation is the process of converting the source code (cpp files) to the machine code (obj files)._**
 
-- In the case of a multi-file program, each file is compiled individually into object files.
-- It is important to note that the object files donot necessarily contain all the required code, for instance an object file might call a declared function whose implementation might be present in some other object file. The compiler doesn't raise any error for this!
+- Technically the source code is converted to assembly instructions using an **assembler**, which is then translated to object code.
 
-<br>
+- A single source file (including the h files that it includes) is called a **translation unit**.
+- Compiler checks for C++ syntax and translates the source code to object code.
 
-### Assembler
-
-During the compilation process the program called assembler converts the source code to assembly instructions which are later translated to object files.
+- Each source file is compiled individually into an object file. Hence, a single object file may not contain all the necessary code, meaning the object file can contain code without implementation for it (beacause of declarations) and the implementation will be present in some other object file.
 
 <br>
 <br>
 
-## Linker
+## 3. Linking
 
-Linker links together all the object files to create an executable.
+**_Linking is the process of combining object files and libraries to produce a single executable file or a shared library._**
 
-Primary tasks are:
-
-- Symbol Resolution : If a symbol is referenced in one source file but defined in another, the linker connects the references to their corresponding definitions.
-- Library Linking : Libraries will most likely have the declarations in header .h files and implementations in library .lib files. Linker resolves library dependencies statically (linked directly into the exe) or dynamically (loaded at runtime).
+- **Symbol Resolution :** If a symbol is referenced in one object file but defined in another object file or a library, the linker connects the references to their corresponding definitions.
 
 The executable file is OS specific even though it is binary code. This is because of the header info present in the binary which contains OS related data like build platform, system architecture, CPU etc.
+
+<br>
+
+## Library Linking
+
+Libraries can be liked wither statically or dynamically.
+
+#### Static Linking of libraries
+
+**_Static linking is the process of linking a static library, where the symbols are resolved and linked at compile time, into the executable itself._**
+
+- A static library is a precompiled object code (It contains the implementations of the library).
+- They have .lib file extension in windows and .a (archive file) in linux.
+- The executable derived after static linking contains all the necessary code.
+- Other programs (executables) cannot share the static library because they need to be linked at compile time, to the executable itself.
+
+<br>
+
+#### Dynamic Linking of libraries
+
+**_Dynamic linking is the process of linking a dynamic library, where the symbols are resolved and linked at run time, when the dynamic library is loaded to the memory._**
+
+- A dynamic library is also a precompiled object code (It contains the implementations of the library).
+- They have .dll (dynamic link library) file extension in windows and .so (shared object) in linux.
+- The executable derived after dynamic linking doesnt contain the implementations for the code used from the library.
+- This allows multiple programs (executables) to share a single copy of the dynamic library because they are linked at runtime, when they are loaded in memory.
 
 <br>
 <br>
