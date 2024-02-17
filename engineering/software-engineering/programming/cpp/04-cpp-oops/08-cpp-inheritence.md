@@ -1,76 +1,12 @@
 # Inheritance
 
-- Creating new classes by using the code present in already defined classes, extending the data.
-- Inheritance facilitates **_IS-A relationship_**, A Derived object IS A Base object.
+**_Inheritance is the mechanism by which a class can acquire properties and behaviors from another class._**
 
-* The construction of an derived class object will always be the sum of the sizes of all non-static data members of the base class and the sum size of all non-static data members of the derived class. It does not matter which access specifier we are using at the time of inheritance.
-* The Derived Class has all the data members of the Base class and Access Specifiers deals with only access to those data.
+- **Base Class** is the class from which other classes inherit properties and behaviors. They are also known as Super Class or Parent Class.
+- **Derived Class** is the class that inherits properties and behaviors from a base class and can also extend or modify them. They are also called as Sub Class or Child Class.
+- Inheritance facilitates **_IS-A relationship_**, A Derived class IS A Base class.
 
-<br>
-<br>
-
-# Base Class and Derived Class
-
-## Base Class
-
-- The class being extended or inherited from.
-- Base Classes are also known as Parent Class or Super Class.
-
-<br>
-
-## Derived Class
-
-- The class being created by inheriting attributes and methods from the base class.
-- Derived Classes are also known as Child Class or Sub Class.
-
-<br>
-<br>
-
-# Types of Inheritance
-
-## Based on the Base Class
-
-- It is **Single Inheritence** if a new class is created from another 'single' class.
-- It is **Multiple Inheritence** if a new class is created from two or more other classes.
-
-<br>
-<br>
-
-## Based on the access specifiers
-
-Different behaviour of inheritance is facilitated using the access specifiers in C++.
-
-### Private Inheritance
-
-- syntax: `class Derived : private Base`
-- The base class private members are not accessible in the derived class.
-- The protected and public members of the base, if any are accessible in the derived class as 'private' members.
-
-<br>
-
-### Protected Inheritance
-
-- syntax: `class Derived : protected Base`
-- The base class private members are not accessible in the derived class.
-- The protected and public members of the base, if any are accessible in the derived class as 'protected' members.
-
-<br>
-
-### Public Inheritance
-
-- syntax: `class Derived : public Base`
-- The base class private members are not accessible in the derived class.
-- The protected members of the base, if any are accessible in the derived class as 'protected' members.
-- The public members of the base, if any are accessible in the derived class as 'public' members.
-
-<br>
-<br>
-
-# Implementation
-
-- The syntax for inheritance is as shown below
-
-* access specifiers can be public, private and protected. If no access specifier is defined then by default private is considered.
+- The syntax for inheritance is as shown, The access specifiers can be public, private and protected. _If no access specifier is defined then by default private is considered._
 
   ```cpp
   #include <iostream>
@@ -79,77 +15,50 @@ Different behaviour of inheritance is facilitated using the access specifiers in
       // Base class members
   };
 
-  class Derived : access_specifier Base {
+  class Derived : access_specifier Base {   //private by default
       // Derived class members
   };
   ```
 
-* Illustration on which members are accessible
+<br>
 
-  ```cpp
-  #include <iostream>
-  using namespace std;
+Some Important points about Inheritance:
 
-  class Base
-  {
-  public:
-      int public_var{ 101 };
-      void public_func() {
-          cout << "this is a public function" << endl;
-      }
-  protected:
-      int protected_var{ 102 };
-      void protected_func() {
-          cout << "this is a protected function" << endl;
-      }
-  private:
-      int private_var{ 103 };
-      void private_func() {
-          cout << "this is a private function" << endl;
-      }
-  };
-
-
-  class Derived : public Base
-  {
-  public:
-      void accessing_parent_protected() {
-          protected_func();
-          cout << protected_var << endl;
-      }
-
-      //has error
-      void accessing_parent_private() {
-          private_func();					//error
-          cout << private_var << endl;	//error
-      }
-  };
-
-
-  int main()
-  {
-      Base base_obj;
-      cout << base_obj.public_var << endl;  //ok,101
-      base_obj.public_func();	//ok,this is a public function
-
-      cout << base_obj.protected_var << endl; //error
-      base_obj.protected_func();	//error
-
-      cout << base_obj.private_var << endl; //error
-      base_obj.private_func();	//error
-
-
-      Derived derived_obj;
-
-      cout << derived_obj.public_var << endl;
-      derived_obj.accessing_parent_protected();  //ok
-  }
-  ```
+- Inheritance can be Single or Multiple based on the number of classes it inherits from.
+- Inheritance can be public, protected and private based on the access specifier.
+- The construction of an derived class object will always be the sum of the sizes of all non-static data members of the base class and the sum size of all non-static data members of the derived class. It does not matter which access specifier we are using at the time of inheritance, _the access specifier deals with only access to those data_.
 
 <br>
 <br>
 
-# Constructors and Destructors with Inheritence
+## Public Inheritance
+
+1. All public and protected members of the base class, if any are accessible in the derived class as 'public' and 'protected' respectively.
+1. Private members of the base class remain inaccessible in the derived class, for all types of inheritance.
+
+<br>
+<br>
+
+## Protected Inheritance
+
+1. The public and protected members of the base class, if any are accessible in the derived class as 'protected' members.
+   - The Derived class and it's derived classes can access these members.
+2. Private members of the base class remain inaccessible in the derived class, for all types of inheritance.
+
+<br>
+<br>
+
+## Private Inheritance
+
+1. The public and protected members of the base class, if any are accessible in the derived class as 'private' members.
+   - Only the Derived class can access these members, any class deriving from it won't have access.
+2. Private members of the base class remain inaccessible in the derived class, for all types of inheritance.
+
+<br>
+<br>
+<br>
+
+# Constructors and Destructors in the context of Inheritence
 
 - When a derived object is created the base class constructor executes first and then the derived class constructor executes.
 - When a derived object is destroyed, the derived class destructor executes then the base class destructor executes, each destructor should free resources allocated in it's own constructors.
@@ -157,33 +66,26 @@ Different behaviour of inheritance is facilitated using the access specifiers in
   ```cpp
   #include <iostream>
   using namespace std;
-
   class Base
   {
   public:
       Base() {
           cout << "constructor of base class is executing..." << endl;
   }
-
       ~Base() {
           cout << "destructor of base class is executing..." << endl;
       }
   };
-
-
   class Derived : public Base
   {
   public:
       Derived() {
           cout << "constructor of derived class is executing..." << endl;
       }
-
       ~Derived() {
           cout << "destructor of derived class is executing..." << endl;
       }
   };
-
-
   int main()
   {
       {
@@ -193,8 +95,6 @@ Different behaviour of inheritance is facilitated using the access specifiers in
           Derived derived_obj;
       }
   }
-
-
   /*
   constructor of base class is executing...
   destructor of base class is executing...
@@ -205,12 +105,14 @@ Different behaviour of inheritance is facilitated using the access specifiers in
   */
   ```
 
-* A derived class doesn't inherit
+- A derived class doesn't inherit
 
   - Base class constructor
   - Base class destructor
   - Base class overloaded assignment operators
   - Base class friend functions
+
+- If
 
 <br>
 <br>
