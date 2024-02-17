@@ -159,8 +159,22 @@ specifically positive numbers being $0  \text{ to } (2^{n-1} -1)$ and negative n
 <br>
 <br>
 
-# Adders
+## Adders
 
-- Half Adder : designed to add two bits
-- Full-adder: designed to add three bits
-- Adder: designed to add two n-bit numbers
+<br>
+
+### Half Adder
+
+![img](./_assets/halfadder.png)
+
+<br>
+
+### Full Adder
+
+![img](./_assets/fulladder.png)
+
+<br>
+
+### Adder (Add 16)
+
+![img](./_assets/adder.png)
