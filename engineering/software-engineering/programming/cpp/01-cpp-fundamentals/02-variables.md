@@ -41,6 +41,19 @@ _**Initialisation** is when the value is bound to the variable when it is declar
   ```
 
 <br>
+
+### Default Initializatoion
+
+When a variable is defined without an initializer, it is default initialised.
+
+- For built-in types,
+  - If the variable is defined outside any function, it is initialised to zero.
+  - If the variable is defined inside the function, it is uninitialised with undefined value.
+- For user-defined types,
+  - Most classes lets objects to be defined without explicit initializers.
+  - Some classes require that every object be explicitly initialized.
+
+<br>
 <br>
 
 ## Variable Assignment
