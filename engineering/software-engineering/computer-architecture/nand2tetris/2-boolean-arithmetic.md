@@ -178,3 +178,5 @@ specifically positive numbers being $0  \text{ to } (2^{n-1} -1)$ and negative n
 ### Adder (Add 16)
 
 ![img](./_assets/adder.png)
+
+//TODO - Writ HDL for all these and add illustrations to implement
