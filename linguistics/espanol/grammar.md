@@ -19,10 +19,11 @@
 | I/You/He drink | Yo/Tu/El bebo/bebes/bebe |
 | I/You/He eat   | Yo/Tu/El como/comes/come |
 | I/You speak    | Yo/Tu Hablo/Hablas       |
-| Have           | Tengo                    |
+| I Have         | Yo Tengo                 |
 | You have       | Tienes                   |
-| Need           | Necessito                |
-| Live           | Vivo                     |
+| I Need         | Yo Necessito             |
+| I Live         | Yo Vivo                  |
+| I want to      | Yo quiero                |
 
 <br>
 <br>
