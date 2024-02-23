@@ -11,10 +11,6 @@
         <li> Products: Concrete class implementations of the abstract products defined by the interface. </li>
     </ol>
 
-
-<br>
-<br>
-
 - The UML diagram for the pattern :
 
   ![img](./_assets/abstract-factory-uml.png)
