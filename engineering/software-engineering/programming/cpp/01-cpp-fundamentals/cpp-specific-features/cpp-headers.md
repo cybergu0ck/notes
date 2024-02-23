@@ -6,6 +6,7 @@
 - They provide an interface to the functionality implemented in source files.
 
 <br>
+<br>
 
 ## Need for header files
 
@@ -17,34 +18,57 @@
 <br>
 <br>
 
-## Include Guards
+## Preventing multiple inclusion 
 
-- without include guards, the compiler will see the declaration everytime the header file is included in source files. (this is an error)
+- When a header is included more than once in the same transalation unit, It may lead to
+  * Compilation error because of multiple definition.
+  * Longer compilation time.
+  * Polution of namespace.
 
-  ```h
-  #ifndef _ANY_MACRO_H_  //this can be any unique name
-  #define _ANY_MACRO_H_
+- We can prevent multiple inclusion of the header file *in the same translation unit* in several ways.
 
-  //Declarations
 
-  #endif
-  ```
+<br>
+
+### Include Guards
+
+```h
+#ifndef ANY_MACRO_H  //this can be any unique name
+#define ANY_MACRO_H
+//Declarations
+#endif //ANY_MACRO_H
+```
 
   - `#ifndef` are include guards.
-  - Include guards check wether the macro (_ANY_MACRO_H_ in this the above code)is defined. If it's not defined, it defines ir and includes the content of the header file. If it's already defined (due to previous inclusion), the content is skipped.
-  - The [pragma directive preprocessor](#pragma-directive-preprocessor) can also be used.
+  - Include guards check wether the macro (ANY_MACRO_H in this the above code)is defined. If it's not defined, it defines ir and includes the content of the header file. If it's already defined (due to previous inclusion), the content is skipped.
+
 
 <br>
-<br>
 
-## Pragma Directive Preprocessor
-
-`pragma` is a compiler-specific directive that tells the preprocessor to include the file only once.
+### Pragma Directive Preprocessor
 
 ```h
 #pragma once
-
 //Declaration
 ```
 
+- `pragma` is a compiler-specific directive that tells the preprocessor to include the file only once.
+
 - While widely supported, it might not be supported by all compilers.
+
+<br>
+
+Note that the above mentioned ways donot prevent inclusion of header files in different transalation units. 
+
+
+
+<br>
+<br>
+ 
+## Dependency in header
+
+It is ideal to keep dependencies very less in header files. Instead of including the dependency (`#include <other header>`) directly in the header file, it is ideal to do that in the relevant source file and use forward declarations in the header if needed.
+
+- The illustration describes the reason for the above statement. If header with lot of dependencies is included in other headers, then for every change in any one of the parent header will trigger chain of compilation for all the headers, having dependecies in the source file would solve this problem as source files are not included by other files and any change in the parent dependencies would trigger compilation of the source file itself and would'nt propogate.
+  
+  ![image](../../_assets/chain-recomp.png)
