@@ -15,11 +15,9 @@
 <br>
 <br>
 
-//TODO - Replace the draw.io files
-
 - The UML diagram for the pattern :
 
-  ![img](./_assets/abstract-factory1.png)
+  ![img](./_assets/abstract-factory-uml.png)
 
 - Applicability:
 
@@ -45,7 +43,7 @@
 
 - The UML diagram for an example
 
-  ![img](./_assets/abstract-factory2.png)
+  ![img](./_assets/abstract-factory-illus.png)
 
 - `ILabel` : Abstract class defines the interface for labels, ensuring consistent interaction and behavior across UIs.
 - `IButton` : Abstract class defines the interface for buttons,ensuring consistent interaction and behavior across UIs.
