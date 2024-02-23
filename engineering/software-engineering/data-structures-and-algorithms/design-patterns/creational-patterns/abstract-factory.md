@@ -1,123 +1,170 @@
 # Abstract Factory Pattern
 
-//TODO - Add the basic details like definition of this pattern, what is products and what is concretefactory
 
-- The UML diagram
+
+**_The Abstract Factory design pattern is a creational pattern that helps you create families of related objects without specifying their concrete classes._**
+
+- Key Components are as follows :
+    <ol type="1">
+        <li>  Abstract Factory: An interface defining the operations creating each product in the family. </li>
+        <li> Concrete Factories: Implementations of the Abstract Factory that create specific concrete products related to their family.</li>
+        <li> Products: Concrete class implementations of the abstract products defined by the interface. </li>
+    </ol>
+
+
+<br>
+<br>
+
+//TODO - Replace the draw.io files
+
+- The UML diagram for the pattern :
 
   ![img](./_assets/abstract-factory1.png)
+
+- Applicability:
+
+  - A system should be independent of how its products are created, composed, and represented
+  - A system should be configured with one of multiple families of products
+  - A family of related product objects is designed to be used together, and you need to enforce this constraint.
+
+- Advantages :
+
+  - Client is Independent as it is isolated from product implementation. (Decoupling client and implementation logic)
+  - Class library of products,are revealed just by their interfaces, not their implementations.
+  - Supports new Family (Given it has the name number and type of products in it)
+  - Promotes consistency among products.
+
+- Consequences :
+  - Creates lot of classes in the process, thus hindering code readability.
+  - Supporting new kinds of products is difficult.
+
+<br>
+<br>
+
+## Illustration
 
 - The UML diagram for an example
 
   ![img](./_assets/abstract-factory2.png)
 
-//TODO - Write these up so as to understand
-
-- Applicability:
-
-  - a system should be independent of how its products are created, composed, and represented
-  - a system should be configured with one of multiple families of products
-  - a family of related product objects is designed to be used together, and you need to enforce this constraint.
-  - you want to provide a class library of products, and you want to reveal just their interfaces, not their implementations.
-
-- Consequences :
-
-  - It Isolates Concrete Classes.
-  - It makes exchanging product families easy.
-  - Promotes consistency amond products.
-  - Supporting new kinds of products is difficult.
-
-- The C++ code
+- `ILabel` : Abstract class defines the interface for labels, ensuring consistent interaction and behavior across UIs.
+- `IButton` : Abstract class defines the interface for buttons,ensuring consistent interaction and behavior across UIs.
+- `IWidgetFactory` : Abstract class defines the interface for the WidgetFactory, which will create the UI respective widgets.
 
   ```cpp
   #include <iostream>
 
-  //This is Abstract class for Input Box________________________
-  class IInputBox {
+  //This is Abstract class for Label
+  class ILabel {
   public:
-      virtual IInputBox* getInputBox() = 0;
+      virtual void showText() = 0;
   };
 
-  //Concrete class of Input Box for Login UI
-  class LoginInputBox : public IInputBox {
-      LoginInputBox* getInputBox() {
-          std::cout << "Input Box of Login UI" << std::endl;
-          return this;    //Imagine it returns a widget
+  //Concrete class of ILabel, for Login UI
+  class LoginLabel : public ILabel {
+      void showText() override {
+          std::cout << "Already a user? Click to log in" << std::endl;
       }
   };
 
-  //Concrete class of Input Box for Signup UI
-  class SignupInputBox : public IInputBox {
-      SignupInputBox* getInputBox() {
-          std::cout << "Input Box of Signup UI" << std::endl;
-          return this;    //Imagine it returns a widget
+  //Concrete class of ILabel, for Signup UI
+  class SignupLabel : public ILabel {
+      void showText() override {
+          std::cout << "Not a user? Click to sign up" << std::endl;
       }
   };
 
 
-  //Abstract class for Submit Button___________________________
-  class ISubmitButton {
+  //Abstract class for Button
+  class IButton {
   public:
-      virtual ISubmitButton* getSubmitButton() = 0;
+      virtual void click() = 0;
   };
 
-  //Concrete class of Submit Button for Login UI
-  class LoginSubmitButton : public ISubmitButton {
-      LoginSubmitButton* getSubmitButton() {
-          std::cout << "Submit Button of Login UI" << std::endl;
-          return this;    //Imagine it returns a widget
+  //Concrete class of IButton, for Login UI
+  class LoginButton : public IButton {
+      void click() override {
+          std::cout << "Login Button is clicked." << std::endl;
       }
   };
 
-  //Concrete class of Submit Button for Signup UI
-  class SignupSubmitButton : public ISubmitButton {
-      SignupSubmitButton* getSubmitButton() {
-          std::cout << "Submit Button of Signup UI" << std::endl;
-          return this;    //Imagine it returns a widget
+  //Concrete class of IButton, for Signup UI
+  class SignupButton : public IButton {
+      void click() override {
+          std::cout << "Signup Button is clicked" << std::endl;
       }
   };
 
 
-  //This is Abstract Factory_________________________________
+  //This is Abstract Factory
   class IWidgetFactory {
   public:
-      virtual IInputBox* createInputBox() = 0;
-      virtual ISubmitButton* createSubmitButton() = 0;
+      virtual ILabel* createLabel() = 0;
+      virtual IButton* createButton() = 0;
   };
 
   //This is Concrete Factory
-  class LoginWidgetFactory : public IWidgetFactory{
+  class LoginWidgetFactory : public IWidgetFactory {
   public:
-      IInputBox* createInputBox() {
-          IInputBox* input_box_widget = new LoginInputBox();
-          return input_box_widget->getInputBox();
+      ILabel* createLabel() {
+          return new LoginLabel();
       }
-      ISubmitButton* createSubmitButton() {
-          ISubmitButton* submit_btn_widget = new LoginSubmitButton();
-          return submit_btn_widget->getSubmitButton();
+      IButton* createButton() {
+          return new LoginButton();
       }
   };
 
   //This is Concrete Factory
-  class SignupWidgetFactory : public IWidgetFactory{
+  class SignupWidgetFactory : public IWidgetFactory {
   public:
-      IInputBox* createInputBox() {
-          IInputBox* input_box_widget = new SignupInputBox();
-          return input_box_widget->getInputBox();
+      ILabel* createLabel() {
+          return new SignupLabel();
       }
-      ISubmitButton* createSubmitButton() {
-          ISubmitButton* submit_btn_widget = new SignupSubmitButton();
-          return submit_btn_widget->getSubmitButton();
+      IButton* createButton() {
+          return new SignupButton();
       }
   };
 
 
-  //This is client code_____________________________
-  int main(){
-      LoginWidgetFactory my_login_ui = LoginWidgetFactory(); //Say client wants to render Login UI Widgets
-      my_login_ui.createInputBox();
-      my_login_ui.createSubmitButton();
+  int main() {
+      //Assuming the client wants to render Login UI now; It has a label and a button;
+      IWidgetFactory* login_widget_factory = new LoginWidgetFactory();
+
+      ILabel* login_label = login_widget_factory->createLabel();
+      IButton* login_btn = login_widget_factory->createButton();
+
+      login_label->showText();
+      login_btn->click();
   }
 
-  //Input Box of Login UI
-  // Submit Button of Login UI
+  //Already a user ? Click to log in
+  //Login Button is clicked.
   ```
+
+- Applicability :
+
+  - Client must configure either of two _Families_ of UI, Login UI and Signup UI which have two _Products_, Label and Button.
+  - Family of related products are designed to work together.
+
+- Advantages :
+
+  - Client is independent as it is isolated from the type of products (i.e. widgets: label and button) created.
+  - Products are facilitated as interfaces and implementation is not exposed.
+  - We can support a new family (say a Logout UI), by creating a new concrete widget factory. (given the new family also has the same number and type of products)
+
+- Disadvantages :
+
+  - Creates lot of classes, Thus hindering code readability.
+  - Supporting new products with the same code is not possible because we have to modify the `IWidgetFactory`. The idea of creating new abstract class for the new product will not work, because we have to now modify the `IWidgetFactory` class, if we make the creation of new product as pure virtual function, then the already existing `LoginWidgetFactory` and `SignupWidgetFactory` will break. If we make the creation of the new product as plain virtual function, then we have to write implementation for it, which we cannot.
+
+      <br>
+
+    ```cpp
+    //say we created Ipopup and LogoutPopup
+    class IWidgetFactory {
+    public:
+        virtual ILabel* createLabel() = 0;
+        virtual IButton* createButton() = 0;
+        virtual IPopup* createPopUp(){} // We cannot provide implementation here as we cannot return the IPopup*.
+    };
+    ```
