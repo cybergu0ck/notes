@@ -1,8 +1,6 @@
 # Abstract Factory Pattern
 
-
-
-**_The Abstract Factory design pattern is a creational pattern that helps you create families of related objects without specifying their concrete classes._**
+**_The Abstract Factory design pattern is a creational pattern that helps creation of families of related objects without specifying their concrete classes._**
 
 - Key Components are as follows :
     <ol type="1">
