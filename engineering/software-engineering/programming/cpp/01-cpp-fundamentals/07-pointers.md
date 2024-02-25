@@ -234,7 +234,6 @@ _**Dereferencing** means accessing the data the pointer is pointing to._
   ```
 
 <br>
-<br>
 
 ### Returning a pointer from a function
 
@@ -260,15 +259,91 @@ _**Dereferencing** means accessing the data the pointer is pointing to._
   }
   ```
 
-- Never return pointer to local varibales in a function!
+<br>
+
+### Returning a pointer to a local variable on the stack
+
+- Returning a pointer to a local variable on the stack will lead to bugs. In the following code `foo` returns a pointer to int variable `num`, which is created on the stack. when the scope of `foo` ends, the stack is frees the memory holding the value of num. This doesn't mean the value will be changed instantly but implies that it can change (see the output of first cout statement). Hence `ptr` and `my_ptr` will point to a memory address that is freed and accessing invalid memory has undefined behaviour.
 
   ```cpp
-  vector <int>* never_do(int* int_ptr1, int* int_ptr2) {
-    vector <int> local_variable(5);  //vector of size = 5 and all are 0's
-    vector <int>* ptr{ &local_variable };
-    return ptr;					//NEVER DO THIS
-    //return &local_variable	//OR THIS
+  #include <iostream>
+
+  int* foo() {
+    int num{ 20 };	//Local variable on the stack
+    int* ptr = &num;
+    return ptr;		//Returning a pointer to a local variable on the stack
   }
+
+  void boo() {
+    int num2{ 60 };
+  }
+
+  int main() {
+    int* my_ptr = foo();
+    std::cout << *my_ptr << std::endl;
+    boo();
+    std::cout << *my_ptr << std::endl;
+  }
+
+  //20
+  //32759
+  ```
+
+<br>
+
+### Returning a pointer to a local variable on the heap
+
+It is better to create the local variable on the heap if a pointer to any local variable has to be returned from a function. However, _dev should take care of cleaning up the heap memory._
+
+- Following code is an example of how not to free up heap memory.
+
+  ```cpp
+  #include <iostream>
+
+  int* foo() {
+    int* ptr = new int(20);
+    delete ptr;
+    return ptr;		//Returning an uninitialised pointer
+  }
+
+  void boo() {
+    int num2{ 60 };
+  }
+
+  int main() {
+    int* my_ptr = foo();
+    std::cout << *my_ptr << std::endl;
+    boo();
+    std::cout << *my_ptr << std::endl;
+  }
+
+  //crash
+  ```
+
+- In the following code my_ptr in the caller scope and ptr in the calle scope simply hold the same address i.e. the address to a int variable created on the heap. Deleting any one pointer will free up that memory. Also, it is to be notes that deleting both will lead to error.
+
+  ```cpp
+  #include <iostream>
+
+  int* foo() {
+    int* ptr = new int(20);
+    return ptr;
+  }
+
+  void boo() {
+    int num2{ 60 };
+  }
+
+  int main() {
+    int* my_ptr = foo();
+    std::cout << *my_ptr << std::endl;
+    boo();
+    std::cout << *my_ptr << std::endl;
+    delete my_ptr;	//deleting my_ptr is same as deleting ptr!
+  }
+
+  //20
+  //20
   ```
 
 <br>
