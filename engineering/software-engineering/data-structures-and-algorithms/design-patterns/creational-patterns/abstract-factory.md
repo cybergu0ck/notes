@@ -82,7 +82,7 @@ public:
 
 class LoginUI : public I_UI {
 public:
-    LoginUI() :login_button{nullptr}, login_label{nullptr}{}
+    LoginUI() :login_button{ nullptr }, login_label{ nullptr } {}
     ~LoginUI() {
         delete login_label;
         delete login_button;
@@ -132,10 +132,11 @@ public:
     }
     ~App() {
         delete login_ui;
+        delete login_factory;
     }
 protected:
     I_UI* login_ui;
-
+    LoginUIFactory* login_factory;
     I_UI* createUI(I_UIFactory* factory) {
         I_UI* ui = factory->makeUI();
         I_Label* label = factory->makeLabel();
@@ -146,7 +147,7 @@ protected:
     }
 
     void createLoginUI() {
-        LoginUIFactory* login_factory = new LoginUIFactory();
+        login_factory = new LoginUIFactory();
         login_ui = createUI(login_factory);     //Use of the factory!
     }
 };
