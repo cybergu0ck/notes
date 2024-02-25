@@ -2,161 +2,225 @@
 
 **_The Abstract Factory design pattern is a creational pattern that helps creation of families of related objects without specifying their concrete classes._**
 
-- Key Components are as follows :
-    <ol type="1">
-        <li>  Abstract Factory: An interface defining the operations creating each product in the family. </li>
-        <li> Concrete Factories: Implementations of the Abstract Factory that create specific concrete products related to their family.</li>
-        <li> Products: Concrete class implementations of the abstract products defined by the interface. </li>
-    </ol>
+<br>
 
-- The UML diagram for the pattern :
+![img](./_assets/abstract-factory-uml.png)
 
-  ![img](./_assets/abstract-factory-uml.png)
+### Components
 
-- Applicability:
+1. **Products** are designed using abstract classes for interface and concrete classes for implementation.
 
-  - A system should be independent of how its products are created, composed, and represented
-  - A system should be configured with one of multiple families of products
-  - A family of related product objects is designed to be used together, and you need to enforce this constraint.
+2. **Families** of products are created using Factories. Abstract factory serves as an interface and each concrete factory _"makes"_ products for the specific family it represents.
 
-- Advantages :
+3. **Client** uses a concrete factory via the abstract factory.
 
-  - Client is Independent as it is isolated from product implementation. (Decoupling client and implementation logic)
-  - Class library of products,are revealed just by their interfaces, not their implementations.
-  - Supports new Family (Given it has the name number and type of products in it)
-  - Promotes consistency among products.
+<br>
 
-- Consequences :
-  - Creates lot of classes in the process, thus hindering code readability.
-  - Supporting new kinds of products is difficult.
+### Applicability
+
+1. This pattern is helpful to design _"families of related products that are to work together"_.
+2. This pattern is helpful in usecases where client is independent of how its products are created, composed, and represented.
+
+<br>
+
+### Benefits
+
+1. Client is independent as it is isolated from the type of products created.
+2. Flexibility to modify existing implementation.
+3. Flexibility to add a new families without breaking existing code. (_Given the new family also contains equal number of products as before_)
+
+<br>
+
+### Consequences
+
+1. Decreases code readability due to added complexity.
+1. Although there is flexibility to add new families, However there is no flexibilty to add new products as it breaks existing code.
 
 <br>
 <br>
 
 ## Illustration
 
-- The UML diagram for an example
+![img](./_assets/abstract-factory-illus.png)
 
-  ![img](./_assets/abstract-factory-illus.png)
+```cpp
+#include <iostream>
 
-- `ILabel` : Abstract class defines the interface for labels, ensuring consistent interaction and behavior across UIs.
-- `IButton` : Abstract class defines the interface for buttons,ensuring consistent interaction and behavior across UIs.
-- `IWidgetFactory` : Abstract class defines the interface for the WidgetFactory, which will create the UI respective widgets.
+//Abstract Products
+class I_Label {
+public:
+    virtual void setText(std::string text) = 0;
+};
 
-  ```cpp
-  #include <iostream>
+class I_Button {
+public:
+    virtual void setSize(int size) = 0;
+};
 
-  //This is Abstract class for Label
-  class ILabel {
-  public:
-      virtual void showText() = 0;
-  };
+class I_UI {
+public:
+    virtual void addLabel(I_Label* label) = 0;
+    virtual void addButton(I_Button* btn) = 0;
+};
 
-  //Concrete class of ILabel, for Login UI
-  class LoginLabel : public ILabel {
-      void showText() override {
-          std::cout << "Already a user? Click to log in" << std::endl;
-      }
-  };
+//Concrete Products
+class LoginLabel : public I_Label {
+public:
+    void setText(std::string text) override {
+        //Implemention for setting the text for the label
+    }
+};
 
-  //Concrete class of ILabel, for Signup UI
-  class SignupLabel : public ILabel {
-      void showText() override {
-          std::cout << "Not a user? Click to sign up" << std::endl;
-      }
-  };
+class LoginButton : public I_Button {
+public:
+    void setSize(int size) override {
+        //Implementation for event handler for the button click
+    }
+};
 
+class LoginUI : public I_UI {
+public:
+    LoginUI() :login_button{nullptr}, login_label{nullptr}{}
+    ~LoginUI() {
+        delete login_label;
+        delete login_button;
+    }
+    void addLabel(I_Label* label) override {
+        login_label = label;
+    }
+    void addButton(I_Button* btn) override {
+        login_button = btn;
+    }
+protected:
+    I_Label* login_label;
+    I_Button* login_button;
+};
 
-  //Abstract class for Button
-  class IButton {
-  public:
-      virtual void click() = 0;
-  };
+//Abstract Factory
+class I_UIFactory {
+public:
+    virtual I_UI* makeUI() = 0;
+    virtual I_Label* makeLabel() = 0;
+    virtual I_Button* makeButton() = 0;
+};
 
-  //Concrete class of IButton, for Login UI
-  class LoginButton : public IButton {
-      void click() override {
-          std::cout << "Login Button is clicked." << std::endl;
-      }
-  };
+//Concrete Factory
+class LoginUIFactory : public I_UIFactory {
+public:
+    LoginUI* makeUI() {
+        return new LoginUI();
+    }
+    LoginLabel* makeLabel() {
+        LoginLabel* label = new LoginLabel();
+        label->setText("Existing User?");
+        return label;
+    }
+    I_Button* makeButton() {
+        LoginButton* btn = new LoginButton();
+        btn->setSize(5);
+        return btn;
+    }
+};
 
-  //Concrete class of IButton, for Signup UI
-  class SignupButton : public IButton {
-      void click() override {
-          std::cout << "Signup Button is clicked" << std::endl;
-      }
-  };
+//Client
+class App {
+public:
+    App() {
+        createLoginUI();
+    }
+    ~App() {
+        delete login_ui;
+    }
+protected:
+    I_UI* login_ui;
 
+    I_UI* createUI(I_UIFactory* factory) {
+        I_UI* ui = factory->makeUI();
+        I_Label* label = factory->makeLabel();
+        I_Button* button = factory->makeButton();
+        ui->addLabel(label);
+        ui->addButton(button);
+        return ui;
+    }
 
-  //This is Abstract Factory
-  class IWidgetFactory {
-  public:
-      virtual ILabel* createLabel() = 0;
-      virtual IButton* createButton() = 0;
-  };
+    void createLoginUI() {
+        LoginUIFactory* login_factory = new LoginUIFactory();
+        login_ui = createUI(login_factory);     //Use of the factory!
+    }
+};
 
-  //This is Concrete Factory
-  class LoginWidgetFactory : public IWidgetFactory {
-  public:
-      ILabel* createLabel() {
-          return new LoginLabel();
-      }
-      IButton* createButton() {
-          return new LoginButton();
-      }
-  };
+int main() {
+    App my_app = App();
+}
+```
 
-  //This is Concrete Factory
-  class SignupWidgetFactory : public IWidgetFactory {
-  public:
-      ILabel* createLabel() {
-          return new SignupLabel();
-      }
-      IButton* createButton() {
-          return new SignupButton();
-      }
-  };
+<br>
 
+### Classes
 
-  int main() {
-      //Assuming the client wants to render Login UI now; It has a label and a button;
-      IWidgetFactory* login_widget_factory = new LoginWidgetFactory();
+1. label, button and ui are products.
 
-      ILabel* login_label = login_widget_factory->createLabel();
-      IButton* login_btn = login_widget_factory->createButton();
+   - `I_Label`, `I_Button` and `I_UI` are abstract classes of the products that serves an interface for the concrete implementations.
+   - `LoginLabel`, `LoginButton` and `LoginUI` are the concrete products of a same family i.e. "Login". They have public methods which may be used in the implementations of methods in the concrete factory.
 
-      login_label->showText();
-      login_btn->click();
-  }
+2. LoginFactory makes the products for the "Login" family.
 
-  //Already a user ? Click to log in
-  //Login Button is clicked.
-  ```
+   - `I_UIFactory` is an abstract factory that serves as an interface for the concrete implementation of the factories. All the methods in this class are mostly pure virtual functions. Generally, they donot take any parameters aswell.
+   - `LoginUIFactory` is a concrete factory. The methods "make" each product as required. (Uses the public metods of the products)
 
-- Applicability :
+3. App is the client
+   - `App` is a client class. It has a method to create different UI's by using appropriate factory.
 
-  - Client must configure either of two _Families_ of UI, Login UI and Signup UI which have two _Products_, Label and Button.
-  - Family of related products are designed to work together.
+- Note that classes containing pointers as members most likely has constructors and destructors to initialise and clean up.
 
-- Advantages :
+<br>
 
-  - Client is independent as it is isolated from the type of products (i.e. widgets: label and button) created.
-  - Products are facilitated as interfaces and implementation is not exposed.
-  - We can support a new family (say a Logout UI), by creating a new concrete widget factory. (given the new family also has the same number and type of products)
+### Applicability
 
-- Disadvantages :
+1. This pattern is helpful to design a _"families of related products that are to work together"_.
 
-  - Creates lot of classes, Thus hindering code readability.
-  - Supporting new products with the same code is not possible because we have to modify the `IWidgetFactory`. The idea of creating new abstract class for the new product will not work, because we have to now modify the `IWidgetFactory` class, if we make the creation of new product as pure virtual function, then the already existing `LoginWidgetFactory` and `SignupWidgetFactory` will break. If we make the creation of the new product as plain virtual function, then we have to write implementation for it, which we cannot.
+   - In this illlustration, the products are UI, Label and Button and the family is "Login".
 
-      <br>
+2. This pattern is helpful in usecases where client is independent of how its products are created, composed, and represented.
+   - Client code just calls the make methods of the factory object and doesn't know how the product is created, composed or represented.
 
-    ```cpp
-    //say we created Ipopup and LogoutPopup
-    class IWidgetFactory {
-    public:
-        virtual ILabel* createLabel() = 0;
-        virtual IButton* createButton() = 0;
-        virtual IPopup* createPopUp(){} // We cannot provide implementation here as we cannot return the IPopup*.
-    };
-    ```
+<br>
+
+### Benefits
+
+1. Client is independent as it is isolated from the type of products created.
+
+   - The client code contains abstract classes in the type definitions. Hence, the client code is isolated from concrete classes of products. Basically client code should not contain any reference to concrete classes other than the factory.
+
+2. Flexibility to modify existing implementation.
+
+   - Each product has an abstract base class serving as an interface.
+   - Product's implementations are encapsulted as products are exposed only via interfaces.
+
+3. Flexibility to add a new families without breaking existing code. (_Given the new family also contains equal number of products as before_)
+   - Adding a new family is as easy as creating the concrete classes for all the products and creating a concrete factory class. The client code has only interface definitions, hence passing this new factory would work in the exiting code.
+
+<br>
+
+### Consequences
+
+1. Decreases code readability due to added complexity.
+
+   - Lot of classes are created.
+
+1. Although there is flexibility to add new families, However there is no flexibilty to add new products as it breaks existing code.
+
+   - Addition of new product means modification of the abstract base factory class `I_UIFactory`, in our case.
+
+     - If we make the creation of new product as pure virtual function, then the already existing concrete factory class `LoginUIFactory`, in our case will break.
+     - We cannot make the creation of the new product as empty virtual function because we need to write implementation to satisfy the return type and we cannot do that.
+
+   ```cpp
+   //say we created Ipopup and LogoutPopup
+   class I_UIFactory {
+   public:
+       virtual ILabel* createLabel() = 0;
+       virtual IButton* createButton() = 0;
+       virtual IPopup* createPopUp(){} // We cannot provide implementation here as we cannot return the IPopup*.
+   };
+   ```
