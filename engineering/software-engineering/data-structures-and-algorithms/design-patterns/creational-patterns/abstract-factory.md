@@ -159,7 +159,7 @@ int main() {
 
 <br>
 
-### Classes
+### Illustration about components
 
 1. label, button and ui are products.
 
@@ -178,7 +178,7 @@ int main() {
 
 <br>
 
-### Applicability
+### Illustration about Applicability
 
 1. This pattern is helpful to design a _"families of related products that are to work together"_.
 
@@ -189,7 +189,7 @@ int main() {
 
 <br>
 
-### Benefits
+### Illustration about Benefits
 
 1. Encapsulation of implementations of the products.
 
@@ -203,7 +203,7 @@ int main() {
 
 <br>
 
-### Consequences
+### Illustration about Consequences
 
 1. Decreases code readability due to added complexity.
 

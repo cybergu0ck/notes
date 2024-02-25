@@ -6,9 +6,7 @@
 
 ![img](./_assets/builder-uml.png)
 
-<br>
-
-## Components
+### Components
 
 1. Product is the complex object that takes quite a number of steps to construct it. The product most likely constitutes of parts that make it up.
 
@@ -149,7 +147,7 @@ int main() {
 
 <br>
 
-### Components
+### Illustration about Components
 
 1. Product is the complex object that takes quite a number of steps to construct it. The product most likely constitutes of parts that make it up.
 
@@ -165,7 +163,7 @@ int main() {
 
 <br>
 
-### Applicability
+### Illustration about Applicability
 
 1. This pattern is useful for creating complex objects where the client is independent of the constituent parts and the assembly process that make up the complex object.
 
@@ -177,7 +175,7 @@ int main() {
 
 <br>
 
-### Benefits
+### Illustration about Benefits
 
 Beyond its applicability to the above outlined use cases, the pattern offers:
 
@@ -186,7 +184,7 @@ Beyond its applicability to the above outlined use cases, the pattern offers:
 
 <br>
 
-### Consequences
+### Illustration about Consequences
 
 1. Requires careful consideration and validation mechanisms to ensure product integrity as technically there is no actual interface!
 
