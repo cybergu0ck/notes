@@ -25,7 +25,9 @@
 
 ### Benefits
 
-1. Client is independent as it is isolated from the type of products created.
+Beyond its applicability to the above outlined use cases, the pattern offers:
+
+1. Encapsulation of implementations of the products.
 2. Flexibility to modify existing implementation.
 3. Flexibility to add a new families without breaking existing code. (_Given the new family also contains equal number of products as before_)
 
@@ -181,16 +183,14 @@ int main() {
 
    - In this illlustration, the products are UI, Label and Button and the family is "Login".
 
-2. This pattern is helpful in usecases where client is independent of how its products are created, composed, and represented.
-   - Client code just calls the make methods of the factory object and doesn't know how the product is created, composed or represented.
+2. This pattern is helpful in usecases where client is independent of how its products are created, composed, and represented. (Another way of saying this: Client is isolated from the type of porducts created)
+   - Client code doesn't contain any references to concrete classes (other than instantiation of the concrete factory), it contains the abstract classes in the type definitions and just calls the _"make"_ methods of the factory object. Hence doesn't know how the product is created, composed or represented.
 
 <br>
 
 ### Benefits
 
-1. Client is independent as it is isolated from the type of products created.
-
-   - The client code contains abstract classes in the type definitions. Hence, the client code is isolated from concrete classes of products. Basically client code should not contain any reference to concrete classes other than the factory.
+1. Encapsulation of implementations of the products.
 
 2. Flexibility to modify existing implementation.
 
