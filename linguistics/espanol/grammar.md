@@ -1,4 +1,4 @@
-## Basic
+## Pronouns
 
 | English          | Espanol     |
 | ---------------- | ----------- |
@@ -8,6 +8,8 @@
 | She              | Ella (ejja) |
 | They (masculine) | Ellos       |
 | They (feminine)  | Ellas       |
+| This             | Este        |
+| That             | Ese         |
 
 <br>
 <br>
@@ -38,6 +40,9 @@
 | Elegant     | Elegante                  |
 | Pretty      | Bonita                    |
 | Big         | Grande                    |
+| Expensive   | Caro                      |
+| Cheap       | Barato                    |
+| Different   | Differente                |
 
 <br>
 <br>
