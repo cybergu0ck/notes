@@ -73,14 +73,18 @@
 
 ## Things
 
-| Ingles    | Espanol   |
-| --------- | --------- |
-| Phone     | Telefono  |
-| Cup       | Taza      |
-| Glass     | Vaso      |
-| Bicycle   | Bicicleta |
-| Car       | Carro     |
-| The Table | La Mesa   |
+| Ingles      | Espanol   |
+| ----------- | --------- |
+| Phone       | Telefono  |
+| Cup         | Taza      |
+| Glass       | Vaso      |
+| Bicycle     | Bicicleta |
+| Car         | Carro     |
+| The Table   | La Mesa   |
+| The Clothes | La ropa   |
+| The shop    | La Tienda |
+| The shirt   | La Camisa |
+| A chaqueta  | La Jacket |
 
 <br>
 <br>
@@ -91,6 +95,16 @@
 | ------ | ------- |
 | Cat    | Gato    |
 | Dog    | Perro   |
+
+<br>
+<br>
+
+## Colors
+
+| Ingles | Espanol |
+| ------ | ------- |
+| Blue   | Azul    |
+| Green  | Verde   |
 
 <br>
 <br>
