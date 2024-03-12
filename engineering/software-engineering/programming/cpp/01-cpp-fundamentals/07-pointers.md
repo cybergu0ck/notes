@@ -147,7 +147,7 @@ int main() {
 
 <br>
 
-### pointers to constants
+### Pointers to Constants
 
 - If the pointer is to point to a constant type, then the pointer must be const qualified (this is pointer to constant and not const pointers)
 - Here, The data pointed to by the pointers is constant and connot be changed however the pointer itself can change and point to something else.
@@ -177,7 +177,7 @@ int main() {
 
 <br>
 
-### const pointers
+### Constant Pointers
 
 - the data pointed to by the pointer can be changed but the pointer itself cannot.
 
@@ -193,7 +193,7 @@ int main() {
 
 <br>
 
-### constant pointers to constants
+### Constant Pointers to Constants
 
 - The data pointed to by the pointer as well as the pointer itself cannot change.
 
@@ -425,9 +425,9 @@ It is better to create the variable on the heap if a pointer to such a variable 
 <br>
 <br>
 
-## Common Pitfalls with pointers
+## Common Pointer Pitfalls
 
-### Uninitialised pointers
+### Uninitialised Pointers
 
 - Modern IDE will throw an error and prevent this (which is a good thing)
 
@@ -442,7 +442,7 @@ It is better to create the variable on the heap if a pointer to such a variable 
 
 <br>
 
-### Dangling pointers
+### Dangling Pointers
 
 - dangling pointers are created when a pointer points to a memory that is invalid (or no longer valid)
 - When a function returns a pointer to a local varible, it's a dangling pointer.
@@ -510,7 +510,7 @@ Pointer arithmetic only makes sense with raw arrays.
 
   - p1 and p2+3 point to the same address! <br> <br>
 
-  ![](../_assets/p1.png)
+  <!-- ![](../_assets/p1.png) -->
 
   - In the above image showing memory, we can see hex 0a (decimal 10) at 0x0135FA38 and we can see 0x0135FA2C containing hex 14 (decimal 20) at 3rd memory block behind.
 
@@ -559,3 +559,9 @@ Pointer arithmetic only makes sense with raw arrays.
 
 <br>
 <br>
+
+//TODO - Add a seperate section probably in basics of pointers about pointer to a variable created on the stack and for a variable created on the heap. Also add about delete keyword.
+
+//TODO - Add images from the begining (for basics section)
+
+//TODO - Revamp pointer pitfalls and backlink it with the notes on pointer parameter errors (written in that section) and remove the redundancy on that topic
