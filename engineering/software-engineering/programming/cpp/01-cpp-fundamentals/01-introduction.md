@@ -1,4 +1,6 @@
-# Evolution of C++
+# Introduction
+
+## Evolution of C++
 
 C++ before C++11 standard is called **Classical C++** and post C++11 standard is called **Modern C++**.
 
@@ -16,24 +18,21 @@ C++ before C++11 standard is called **Classical C++** and post C++11 standard is
 
 <br>
 <br>
-<br>
 
-# Nature of C++
+## Nature of C++
 
-### C++ is a strongly typed language
+C++ is a strongly typed language
 
-A strongly typed language is a programming language in which variables have specific types, and the type of a variable is enforced at compile-time. In a strongly typed language, the type of a variable must be explicitly declared or inferred, and the language's type system ensures that operations and assignments are performed only between compatible types.
+- A strongly typed language is a programming language in which variables have specific types, and the type of a variable is enforced at compile-time. In a strongly typed language, the type of a variable must be explicitly declared or inferred, and the language's type system ensures that operations and assignments are performed only between compatible types.
 
-<br>
+C ++ is a structured programming language
 
-### C ++ is a structured programming language
-
-Structured programming refers to a programming paradigm that emphasizes the use of structured control flow constructs and modular code organization. An important thing here when we call a function the control will branch to that function and after finishing it, the control automatically comes back to the initial point.
+- Structured programming refers to a programming paradigm that emphasizes the use of structured control flow constructs and modular code organization. An important thing here when we call a function the control will branch to that function and after finishing it, the control automatically comes back to the initial point.
 
 <br>
 <br>
 
-# Build Process
+## Build Process
 
 [Header files](./cpp-specific-features/cpp-headers.md) typically contain declarations, including function prototypes, class definitions, constants, and type definitions.
 
@@ -46,7 +45,7 @@ Source files contain the actual implementations of the functions and classes dec
 <br>
 <br>
 
-## 1. Preprocessing
+### Preprocessing
 
 **_Preprocessing is the process of handling preprocessor directives and generating an expanded version of the source code._**
 
@@ -58,7 +57,7 @@ Source files contain the actual implementations of the functions and classes dec
 
 <br>
 
-### Preprocessor Directive
+#### Preprocessor Directive
 
 **_A preprocessor directive is a command in the source code that instructs the preprocessor to perform specific actions before the compilation process._**
 
@@ -87,7 +86,7 @@ Source files contain the actual implementations of the functions and classes dec
 <br>
 <br>
 
-## 2. Compilation
+### Compilation
 
 **_Compilation is the process of converting the source code (cpp files) to the machine code (obj files)._**
 
@@ -101,7 +100,7 @@ Source files contain the actual implementations of the functions and classes dec
 <br>
 <br>
 
-## 3. Linking
+### Linking
 
 **_Linking is the process of combining object files and libraries to produce a single executable file or a shared library._**
 
@@ -111,7 +110,7 @@ The executable file is OS specific even though it is binary code. This is becaus
 
 <br>
 
-## Library Linking
+### Library Linking
 
 Libraries can be liked wither statically or dynamically.
 
@@ -139,7 +138,7 @@ Libraries can be liked wither statically or dynamically.
 <br>
 <br>
 
-# Comments
+## Comments
 
 - In C++, the preprocessor strips out the comments hence the compiler never sees them.
 - Single line comments using //
@@ -149,7 +148,7 @@ Libraries can be liked wither statically or dynamically.
 <br>
 <br>
 
-# `main` function
+## `main` function
 
 - Every C++ program must have only 1 `main` function, which is the starting point of the program execution.
 - A C++ program can have many files and the `main` fucntion must be present in one of the file.
@@ -177,7 +176,7 @@ Libraries can be liked wither statically or dynamically.
 <br>
 <br>
 
-# C++ Memory
+## C++ Memory
 
 When the exe occupies the process memory (RAM), it organises itself into 4 categories:
 
@@ -194,7 +193,7 @@ When the exe occupies the process memory (RAM), it organises itself into 4 categ
 <br>
 <br>
 
-# Calling Convention
+## Calling Convention
 
 A set of rules that govern the state of activation record or function stack-frame.Any language that supports the concept of functions or procedures will have its own set of rules engaging this aspect.
 
@@ -212,7 +211,7 @@ A set of rules that govern the state of activation record or function stack-fram
 <br>
 <br>
 
-# Namespaces
+## Namespaces
 
 _**Namespace** is a declarative region that provides a way to organize code into logical groups and avoid naming conflicts._
 
@@ -227,7 +226,7 @@ using std::cout; //This is a qualified using namespace where we use only select 
 <br>
 <br>
 
-# Running C++ on command line
+## Running C++ on command line
 
 - Make sure to be in the directort containing the cpp file.
 - The following command will result in the executable with default name as a.exe

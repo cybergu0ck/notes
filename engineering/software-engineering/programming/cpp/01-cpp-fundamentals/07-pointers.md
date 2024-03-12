@@ -2,12 +2,14 @@
 
 _**Pointers** are variables that store the memory addresses of other variables._
 
-- They have a memory location where they are bound too, they have a value (an adress of a variable) and they have a type (the type of the variable that the pointer points to)
-
 <br>
 <br>
 
-## Declaring Pointers
+## Basics of Pointers
+
+<br>
+
+### Declaring Pointers
 
 - Pointers are declared as follows:
 
@@ -15,100 +17,59 @@ _**Pointers** are variables that store the memory addresses of other variables._
   type *pointer_name;
   ```
 
-* Uninitialised pointer contain garbage data and can point anywhere, Hence **always initialise pointers**.
+- The type of the pointer variable is the type of the variable that it points to.
+
+- `type* pointer_name` and `type *pointer_name` are both valid ways to declare a pointer variable, the latter is more clearer and avoids confusion.
+
+  ```cpp
+  int* p1, p2; //p1 is a pointer to an int and p2 is an int!
+  double *ptr1, *ptr2; // both are pointers to double
+  ```
 
 <br>
-<br>
 
-## Initialising Pointers
+### Initialising Pointers
 
-- Initialising a pointer to zero or nullptr (C++11) means the pointer is pointing to nowhere.
+- Uninitialised pointer contain garbage data and can point anywhere, Hence **always initialise pointers**.
+- Initialising a pointer to zero or nullptr (C++11) means the pointer is _pointing to nowhere_.
 - pointers can be initialised as follows:
 
-  ```
+  ```cpp
   char* ptr1 {};		//null pointer, points to nothing
   int* ptr2{ nullptr }; //null pointer, points to nothing
   int* ptr3{ &num1 };	//pointer to an int, points to num1
   ```
 
 <br>
-<br>
 
-## Storing address in pointers
+### Pointers and Addresses
 
-- We can store an address of a varible (make the pointer point to that variable)
+There are two addresses with regards to pointers, one is the address of the pointer variable itself and the other is the memory address that is stored as value of the pointer variable. _Pointer points to the memory address that it holds as values._
 
-  ```cpp
-  int main()
-  {
-      int num = 100;
-      int* num_ptr = &num;
+```cpp
+#include <iostream>
 
-      cout << "The address of num is " << &num << endl;  //00BAFC3C
-      cout << "num_ptr's value is " << num_ptr << endl;  //00BAFC3C
+int main() {
+	int num{ 10 };
+	int* ptr{ &num };
 
-  }
-  ```
+	std::cout << "The address of ptr is : " << &ptr << "\n";
+	std::cout << "The value of ptr is : " << ptr << "\n";	//This is the address of the num variable
+	std::cout << "The value of ptr is : " << &num << "\n";
+}
 
-- pointer to a pointer
-
-  ```cpp
-  int num = 10;
-  int * ptr = &num;
-  // int * ptr = &ptr  // a value of type int** cannot be used to initialize an entity of type int*
-  int ** ptr_ptr = &ptr;
-  ```
+//The address of ptr is : 0000006A4A4FFA68
+//The value of ptr is : 0000006A4A4FFA44
+//The value of ptr is : 0000006A4A4FFA44
+```
 
 <br>
-<br>
 
-## Accessing Address of the pointer
-
-- pointer's address should not be confused with it's value! pointer's value is the address of the variable that it points to.
-
-* & is the address operator and can be used to get the address of any variable.
-
-  ```cpp
-  int main()
-  {
-      int* p;
-      cout << "The address of the pointer p is : " << &p << endl;
-  }
-
-  //The address of the pointer p is : 010FF974
-  ```
-
-<br>
-<br>
-
-## `sizeof` operator on pointers
-
-- sizeof operator, when used on pointers is not referring to the size of what the pointer is pointing to.
-- all pointers in a program have the same size (that is the size of the address that they store)
-
-  ```cpp
-  int main()
-  {
-      int num = 10;
-      long long bigger_num = 1000;
-
-      int* p1 = &num;
-      long long* p2 = &bigger_num;
-
-      cout << sizeof p1 << endl; //4 (means 4 bytes)
-      cout << sizeof p2 << endl; //4
-
-  }
-  ```
-
-<br>
-<br>
-
-## Dereferencing the Pointer
+### Dereferencing Pointers
 
 _**Dereferencing** means accessing the data the pointer is pointing to._
 
-- Note that \* is used both in pointer declaration and also in pointer dereferencing! Once a pointer is declared then \* used on that pointer is for dereferencing.
+- Note that \* is used both in pointer declaration and also in pointer dereferencing! When \* is used in a variable declaration, it signifies the creation of a pointer variable. When \* is used as an operator in an expression, it is called the "dereference" operator.
 
   ```cpp
   int main()
@@ -121,7 +82,7 @@ _**Dereferencing** means accessing the data the pointer is pointing to._
   //num (using pointer deferencing) is 100
   ```
 
-* when \* is used on the left side of the equation, it becomes lvalue (location value). Hence in the below code, \* num_ptr refers to the address of the num_ptr and hence we can modify the data in whatever pointer points to.
+* When \* is used on the left side of the equation, it becomes lvalue (location value). Hence in the below code, \* num_ptr refers to the address of the num_ptr and hence we can modify the data in whatever pointer points to.
 
   ```cpp
   int main()
@@ -135,14 +96,54 @@ _**Dereferencing** means accessing the data the pointer is pointing to._
   ```
 
 <br>
+
+### Pointers to Pointers
+
+Pointers can point to other pointers (which can intern point to pointers). This is not a good practice.
+
+```cpp
+int num = 10;
+int * ptr = &num;
+// int * ptr = &ptr  // a value of type int** cannot be used to initialize an entity of type int*
+int ** ptr_ptr = &ptr;
+```
+
 <br>
 
-## `const` and pointers
+### Size of Pointers
 
-- There are several ways to qualify pointers using `const`.
-  1. pointers to constants
-  1. constant pointers
-  1. constant pointers to constants
+All pointers in a program have the same size as they essentially only store memory addresses.
+
+```cpp
+#include <iostream>
+
+int main() {
+	int int_var{ 10 };
+	std::string string_var = "hello";
+	char char_var = 't';
+
+	int* int_ptr{&int_var};
+	std::string* string_ptr{&string_var};
+	char* char_ptr{&char_var};
+
+	std::cout << sizeof int_ptr << "\n";
+	std::cout << sizeof string_ptr << "\n";
+	std::cout << sizeof char_ptr << "\n";
+}
+
+//8
+//8
+//8
+```
+
+- In C++, the size of a pointer variable is determined by the underlying architecture and compiler used to compile the program.
+  - On 32-bit systems, pointers are usually 4 bytes in size.
+  - On 64-bit systems, pointers are typically 8 bytes in size.
+
+<br>
+<br>
+
+## Const correctness with pointers
 
 <br>
 
@@ -209,61 +210,136 @@ _**Dereferencing** means accessing the data the pointer is pointing to._
 <br>
 <br>
 
-## Pointers with functions
-
-### Passing pointers to functions (Pass by reference)
-
-- pass by reference can be done by using pointer parameters.
-- The function paramter is a pointer.
-- the argument can be a pointer or address of a variable.
-
-  ```cpp
-  void double_data(int* int_ptr);
-
-  int main()
-  {
-    int value{ 10 };
-    int* ptr{ &value };
-    double_data(ptr);  //or double_data(&value);
-    cout << value << endl;	//20
-  }
-
-  void double_data(int* int_ptr) {
-    *int_ptr *= 2; // *int_ptr = *int_ptr * 2;
-  }
-  ```
+## Pointer Parameters
 
 <br>
 
-### Returning a pointer from a function
+### Passing pointers by value
 
-- The return type of a function can be a pointer.
+This is illustration of passing a pointer to a local variable created on the stack by value. We can pass either the memory address of the appropriate variable or the pointer itself.
+
+- At the end of `foo`'s scope, the memory holding the value of `num_ptr` (not the memory it is pointing to) is released by the stack as it is created on the stack.
+- At the end of `main`'s scope, the memory holding the value of `ptr` and the address it points to i.e. `num` are released by the stack as both of them are created on the stack.
 
   ```cpp
-  int* largest(int* int_ptr1, int* int_ptr2);
+  #include <iostream>
 
-  int main()
-  {
-    int a{ 100 }, b{ 200 };
-    int* ptr_largest = largest(&a, &b);
-    cout << *ptr_largest << endl;	//200
+  void foo(int* num_ptr) {
+      std::cout << "of num_ptr in foo is : " << &num_ptr << ", It's value is: " << num_ptr << " and the dereferenced value is: " << *num_ptr << "\n";
   }
 
-  int* largest(int* int_ptr1, int* int_ptr2) {
-    if (*int_ptr1 >= *int_ptr2) {
-      return int_ptr1;
-    }
-    else {
-      return int_ptr2;
-    }
+  int main() {
+      int num{10};
+      int* ptr{ &num };
+      std::cout << "The address of ptr in main is :  " << &ptr << ", It's value is: " << ptr << " and the dereferenced value is: " << *ptr << "\n";
+
+      foo(&num);  //We can pass the memory address
+      foo(ptr);   //We can pass the pointer
+      return 0;
   }
+
+  //The address of ptr in main is :  : 00000007264FFA38, It's value is: 00000007264FFA14 and the dereferenced value is: 10
+  //The address of num_ptr in foo is : 00000007264FF9F0, It's value is: 00000007264FFA14 and the dereferenced value is: 10
+  //The address of num_ptr in foo is : 00000007264FF9F0, It's value is: 00000007264FFA14 and the dereferenced value is: 10
   ```
+
+  ![img](../_assets/p1.png)
+
+<br>
+
+This illustrates passing the pointer to a variable created on the heap by value.
+
+- Since the `num_ptr` points to a variable created on the heap, we must make sure to release it after use. It can be done either in `foo` or in `main`, but not in both because when it is done for the first time, the memory pointed by the pointer is released and if we delete it again, it would be releasing unallocated memory, which is an error.
+
+- At the end of `foo`'s scope, the memory holding the value of `num_ptr` is released by the stack as it is created on the stack. Since we are freeing up the memory pointed to by num_ptr using delete, the memory of the variable created on the heap (i.e. `num`) is also released.
+
+- Back in `main`'s scope we can see that the memory of the heap variable has been released (dereferencing has yielded garbage value) and when `main`'s scope ends, the memory holding the value of `ptr` (not the memory pointed to by `ptr`) is released by the stack as it is created on the stack.
+
+  ```cpp
+  #include <iostream>
+
+  void foo(int* num_ptr) {
+      std::cout << "The address of num_ptr in foo is : " << &num_ptr << ", It's value is: " << num_ptr << " and the dereferenced value is: " << *num_ptr << "\n";
+      delete num_ptr;
+  }
+
+  int main() {
+      int* ptr = new int(10);
+      std::cout << "The address of ptr in main is :  " << &ptr << ", It's value is: " << ptr << " and the dereferenced value is: " << *ptr << "\n";
+      foo(ptr);   //We can pass the pointer
+      std::cout << "The address of ptr in main is :  " << &ptr << ", It's value is: " << ptr << " and the dereferenced value is: " << *ptr << "\n";
+
+      //delete ptr;  This is double deletion as it is already deleted in foo
+      return 0;
+  }
+
+  //The address of ptr in main is : 000000E11C8FFAE8, It's value is: 000001ED7CE6ADA0 and the dereferenced value is: 10
+  //The address of num_ptr in foo is : 000000E11C8FFAC0, It's value is: 000001ED7CE6ADA0 and the dereferenced value is: 10
+  //The address of ptr in main is : 000000E11C8FFAE8, It's value is: 000001ED7CE6ADA0 and the dereferenced value is: -572662307
+  ```
+
+  ![img](../_assets/p2.png)
+
+<br>
+
+### Passing pointers by reference
+
+This is illustration of passing a pointer to a local variable created on the stack by reference.
+
+```cpp
+#include <iostream>
+
+void foo(int*&num_ptr) {
+    std::cout << "The address of num_ptr in foo is : " << &num_ptr << ", It's value is: " << num_ptr << " and the dereferenced value is: " << *num_ptr << "\n";
+}
+
+int main() {
+    int num{ 10 };
+    int* ptr{ &num };
+    std::cout << "The address of ptr in main is :  " << &ptr << ", It's value is: " << ptr << " and the dereferenced value is: " << *ptr << "\n";
+
+    //foo(&num);  //We cannot pass the memory address
+    foo(ptr);   //We can pass the pointer
+    return 0;
+}
+
+//The address of ptr in main is : 0000007450DCF748, It's value is: 0000007450DCF724 and the dereferenced value is: 10
+//The address of num_ptr in foo is : 0000007450DCF748, It's value is: 0000007450DCF724 and the dereferenced value is: 10
+```
+
+<br>
+<br>
+
+## Pointer Return Types
+
+C++ functions can return pointers.
+
+```cpp
+int* largest(int* int_ptr1, int* int_ptr2);
+
+int main(){
+  int a{ 100 }, b{ 200 };
+  int* ptr_largest = largest(&a, &b);
+  cout << *ptr_largest << endl;	//200
+}
+
+int* largest(int* int_ptr1, int* int_ptr2) {
+  if (*int_ptr1 >= *int_ptr2) {
+    return int_ptr1;
+  }
+  else {
+    return int_ptr2;
+  }
+}
+```
 
 <br>
 
 ### Returning a pointer to a local variable on the stack
 
-- Returning a pointer to a local variable on the stack will lead to bugs. In the following code `foo` returns a pointer to int variable `num`, which is created on the stack. when the scope of `foo` ends, the stack is frees the memory holding the value of num. This doesn't mean the value will be changed instantly but implies that it can change (see the output of first cout statement). Hence `ptr` and `my_ptr` will point to a memory address that is freed and accessing invalid memory has undefined behaviour.
+Returning a pointer to a local variable created on the stack leads to bugs and is flagged as error by some compilers (Microsoft's Visual Studio)
+
+- In the following code `foo` returns a pointer to int variable `num`, which is created on the stack. When the scope of `foo` ends, the stack frees the memory holding the value of num. This doesn't mean the value will be changed instantly but implies that it can change (see the output of first cout statement). Hence `ptr` and `my_ptr` will point to a memory address that is freed and accessing uninitalised memory has undefined behaviour.
 
   ```cpp
   #include <iostream>
@@ -291,9 +367,9 @@ _**Dereferencing** means accessing the data the pointer is pointing to._
 
 <br>
 
-### Returning a pointer to a local variable on the heap
+### Returning a pointer to a variable on the heap
 
-It is better to create the local variable on the heap if a pointer to any local variable has to be returned from a function. However, _dev should take care of cleaning up the heap memory._
+It is better to create the variable on the heap if a pointer to such a variable has to be returned from a function. However, _dev should take care of cleaning up the heap memory._
 
 - Following code is an example of how not to free up heap memory.
 

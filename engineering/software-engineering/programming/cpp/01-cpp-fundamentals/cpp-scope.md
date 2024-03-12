@@ -2,17 +2,44 @@
 
 _**Scope** is the region in the program where a name is visible._
 
-- There are 3 types of scopes in C++:
+<br>
+<br>
 
-    <ol type="1">
-        <li><strong>Global scope:</strong> This is the outermost scope in a program. Variables declared in the global scope are visible to all other scopes in the program.</li>
-        <li><strong>Function scope:</strong> This is the scope of a function. Variables declared within a function are only visible within that function.</li>
-        <li><strong>Block scope:</strong> This is the scope of a block of code ({//block}). Variables declared within a block of code are only visible within that block of code.
-    - function parameters have block scope.</li>
-
-    </ol>
+## Type of Scopes
 
 <br>
+
+### Global Scope
+
+Global scope is the outer most scope in a program.
+
+- Variables declared in this scope are visible to all other scopes in the program.
+- Variables declared in this scope have the lifetime of the executable.
+
+- When working on a multi-file codebase in C++, the variables declared outside classes and functions are visible in that translational unit only. To access them from other translational units, [`extern`](./09-storage-class-specifiers.md#extern-specifier) must be used.
+
+<br>
+
+### Block Scope
+
+Block scope is the local scope of a block of code.
+
+- Variables declared in this scope are visible only within that block.
+- Variables declared in this scope have the lifetime of the block. They are automatically destroyed when the block exits.
+- function blocks, conditional blocks and simple blocks are all block scopes.
+
+<br>
+
+### Class Scope
+
+<br>
+
+### Namespace Scope
+
+<br>
+<br>
+
+## Misc
 
 - with nested blocks inner blocks can 'see' but outer blocks cannot 'see'.
 
@@ -86,3 +113,11 @@ _**Scope** is the region in the program where a name is visible._
 
 <br>
 <br>
+
+## Automatic Object Destruction
+
+- When the scope of the variable ends the memory allocated for that variable is released automatically. This memory is typically managed using the stack.The variable's value becomes undefined once its scope ends, and accessing it after its scope ends leads to undefined behavior.
+
+- When a pointer variable's scope ends, only the pointer itself (i.e., the memory allocated for the pointer variable) is released.
+  - The memory it points to, if allocated on the stack will be automatically released by the stack when it goes out of scope.
+  - The memory it points to, if dynamically allocated will not be automatically released unless explicitly freed using `delete`.
