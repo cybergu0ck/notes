@@ -28,21 +28,6 @@ Block scope is the local scope of a block of code.
 - Variables declared in this scope have the lifetime of the block. They are automatically destroyed when the block exits.
 - function blocks, conditional blocks and simple blocks are all block scopes.
 
-<br>
-
-### Class Scope
-
-<br>
-
-### Namespace Scope
-
-<br>
-<br>
-
-## Misc
-
-- with nested blocks inner blocks can 'see' but outer blocks cannot 'see'.
-
   ```cpp
   int main()
   {
@@ -54,70 +39,58 @@ Block scope is the local scope of a block of code.
   }
   ```
 
-- the name is first searched inside the scope, it starts searching outer scopes only if it is not found in the current scope.
+<br>
 
-  ```cpp
-  int main()
-  {
-      int num = 100;
-      {
-          int num = -45;
-          cout << num << endl;
-      }
-  }
-  //-45
-  ```
+### Class Scope
 
-- gloabl varibles are preserved between function calls and local varibales are not.
+Class scope is the scope within the class.
 
-  ```cpp
-  int global_num{ 10 };
+- Member variables, member functions, and nested classes within a class have class scope.
+- Class scope also applies to static data members and static member functions of a class.
 
-  void doubler() {
-      int local_num{ 10 };
-      global_num *= 2;
-      local_num *= 2;
-      cout << "global num is : " << global_num << " and local num is : " << local_num << endl;
+<br>
 
-  }
+### Namespace Scope
 
-  int main()
-  {
-      doubler();  //global num is : 20 and local num is : 20
-      doubler();  //global num is : 40 and local num is : 20
-  }
-  ```
+Names declared within a namespace have namespace scope.
 
-- using `static`, we can preserve the values and it must be noted that static variables have block scope.
+- Namespaces provide a way to organize code into logical groups and avoid naming conflicts.
+- variables with namespace scope are accessible using the scope resolution operator `::`.
 
-  ```cpp
-  int global_num{ 10 };
+<br>
+<br>
 
-  void doubler() {
-      static int local_num{ 10 };
-      global_num *= 2;
-      local_num *= 2;
-      cout << "global num is : " << global_num << " and local num is : " << local_num << endl;
+## Name Resolution
 
-  }
+The name is first searched inside the scope, it starts searching outer scopes only if it is not found in the current scope.
 
-  int main()
-  {
-      doubler();  //global num is : 20 and local num is : 20
-      doubler();  //global num is : 40 and local num is : 40
-  }
-  ```
-
-> - The static keyword in C++ is used to declare variables, functions, and classes. It has different effects depending on the context in which it is used. (to declare variable, function or class)
-> - When used to declare a variable, the static keyword tells the compiler that the variable should be allocated in static storage. This means that the variable will exist for the lifetime of the program, even after all the objects have been destroyed. Static variables are initialized only once, when the program starts.
+```cpp
+int main(){
+    int num = 100;
+    {
+        int num = -45;
+        cout << num << endl;
+    }
+}
+//-45
+```
 
 <br>
 <br>
 
 ## Automatic Object Destruction
 
+//TODO - Review this notes and update it if needed
+
 - When the scope of the variable ends the memory allocated for that variable is released automatically. This memory is typically managed using the stack.The variable's value becomes undefined once its scope ends, and accessing it after its scope ends leads to undefined behavior.
 
 - When a pointer variable's scope ends, only the pointer itself (i.e., the memory allocated for the pointer variable) is released.
   - The memory it points to, if allocated on the stack will be automatically released by the stack when it goes out of scope.
   - The memory it points to, if dynamically allocated will not be automatically released unless explicitly freed using `delete`.
+
+<br>
+<br>
+
+## References
+
+- Checkout [static](./09-storage-class-specifiers.md#static-specifier) keyword
