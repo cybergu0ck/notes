@@ -43,6 +43,9 @@
 | Expensive   | Caro                      |
 | Cheap       | Barato                    |
 | Different   | Differente                |
+| Favorite    | Favorita                  |
+| Too         | Demasiado                 |
+| Very        | Muy                       |
 
 <br>
 <br>
@@ -57,5 +60,4 @@
 | Of      | De      |
 | Or      | O       |
 | And     | Y (ee)  |
-| Very    | Muy     |
 | In      | En      |
