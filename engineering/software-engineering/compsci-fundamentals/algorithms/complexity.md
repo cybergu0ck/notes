@@ -8,14 +8,14 @@ if y is halving for every step increase in x then the relation would be $y=1/2^x
 
   - If an algorithm halves the input array's size in every successive iteration, the size of the array in each iteration is equal to $N\times{1/2^x}$, where $N$ is the size of the array at every iteration and $x$ is the number of iteration.
   - For illustration (see graph) if the size of input array is 10, after 1st iteration the size will be halved i.e. 5, after 2nd iteration it'll be 2.5, after 3rd iteration it'll be 1.25 and after 3.3 iterations it'll be 1.
-  - ![img](./_assets/reciprocal1.png)
+  - ![algo halving](./_assets/reciprocal1.png)
 
 - However when we are speaking of complexity (specifically time), The quantities are size of the input array itself and the number of iterations.
 
   - If an input array of size N is used in an algorithm that halves it in every iteration, then the number of iterations it takes to reach a point where no more halvings can be made is equal to $\log_2(N)$ [proof](#proof). Hence we say that the time complexity grows logarithmically.
   - For illustration (see graph) if an array of size 10 is used in an algorithm that halves it in every iteration, then it takes $\log_2(10)=3.3$ number of iterations to reach a point where further halving cannot be made further.
 
-    ![img](./_assets/log1.png)
+    ![log time complexity](./_assets/log1.png)
 
 #### proof
 
