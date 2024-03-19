@@ -22,6 +22,9 @@ def insertion_sort(nums):
     return nums
 ```
 
+- The Time Complexity is $O(n^2)$. In the worst case, the inner loop will run as many times as the size of the array.
+- The Space Complexity is $O(1)$. The array manipulation is done in-place.
+
 <br>
 <br>
 
@@ -55,13 +58,19 @@ def merge_sort(nums):
         if j < len(right):
             nums[k:] = right[j:]
 
-
 def apply_merge_sort(nums):
     merge_sort(nums)
     return nums
-
 
 nums = [38, 27, 43, 3, 9, 82, 10]
 print(apply_merge_sort(nums))
 # [3, 9, 10, 27, 38, 43, 82]
 ```
+
+- The Time Complexity is $O(n \log(n))$. The divide and conquer approach scales as $\log(n)$. In the merging step, the subarrays are merged in sorted manner by comparing each element in both the sub arrays, this scales as $O(k+m)$ which is basically $O(n), where k and m are the size of subarrays.$
+- The Space Complexity is $O(n)$. During the merging phase of merge sort, temporary arrays are used to merge sorted sub-arrays back together into larger sorted sub-arrays. In the worst-case scenario, merge sort requires additional memory space to store temporary arrays equal to the size of the original input array.
+
+<br>
+<br>
+
+## Heap Sort

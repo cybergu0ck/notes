@@ -105,7 +105,7 @@ It is a process where git moves the branch pointer (ex: HEAD) to a different com
 git reset --hard <hash>
 ```
 
-- The branch pointer is moved to the mentioned hash.
+- The branch pointer is moved to the mentioned hash. If no hash is given, then the reference HEAD is used by default.
 - Similar to soft reset, Any changes made after the hard reset that need to be recorded must be done via a new commit. This new commit will advance the HEAD with a new hash.
 
 <br>

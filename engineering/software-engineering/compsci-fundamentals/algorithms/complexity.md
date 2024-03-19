@@ -2,12 +2,13 @@
 
 ### Why halving algorithms have logarithmic runtime
 
-if y is halving for every step increase in x then the relation would be $y=1/2^x$ and the curve would look like below. The confusion lies in the quantities we are measuring.
+If y is halving for every step of x then the relation would be $y=1/2^x$, whose graph is an exponentially decaying curve. However we say that an algorithm that uses halving operation has $O(\log(n))$ time complexity. The confusion lies in the quantities we are measuring.
 
-- In the case of the algorithm, The quantities are the size of the input array _for every iteration of the algorithm_ and the number of iterations.
+- In the case of an halving algorithm, The quantities are the size of the input array _for every iteration of the algorithm_ and the number of iterations.
 
   - If an algorithm halves the input array's size in every successive iteration, the size of the array in each iteration is equal to $N\times{1/2^x}$, where $N$ is the size of the array at every iteration and $x$ is the number of iteration.
   - For illustration (see graph) if the size of input array is 10, after 1st iteration the size will be halved i.e. 5, after 2nd iteration it'll be 2.5, after 3rd iteration it'll be 1.25 and after 3.3 iterations it'll be 1.
+  - We get a unique curve for every value of $N$.
     ![algo halving](./_assets/reciprocal1.png)
 
 - However when we are speaking of complexity (specifically time), The quantities are size of the input array itself and the number of iterations.
