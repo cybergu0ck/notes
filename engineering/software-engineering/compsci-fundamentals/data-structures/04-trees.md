@@ -2,7 +2,7 @@
 
 A tree is a nonlinear hierarchial data structure that consists of nodes connected by edges.
 
-![image](../_assets/tree-parts.jpg)
+![image](../assets/tree-parts.jpg)
 
 - **_Node_** : Entity that contains a value and pointers to it's children nodes.
 - **_Edge_** : Link between nodes.
@@ -55,7 +55,7 @@ When a tree has at the most two children, then it’s called **_binary tree_**.
 
 <br/>
 
-![image](../_assets/full-complete-perfect-binary-tree.jpg)
+![image](../assets/full-complete-perfect-binary-tree.jpg)
 
 <br/>
 
