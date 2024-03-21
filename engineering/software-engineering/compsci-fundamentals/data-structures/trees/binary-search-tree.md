@@ -1,4 +1,4 @@
-## Binary Search Tree (BST)
+## Binary Search Tree
 
 BST has at most two nodes (like all binary trees). However, the values are so that the left children value must be less than the parent, and the right children must be higher.
 
