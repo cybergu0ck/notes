@@ -143,7 +143,7 @@ int main() {
 <br>
 <br>
 
-## Const correctness with pointers
+## Const Correctness with pointers
 
 <br>
 
@@ -210,11 +210,11 @@ int main() {
 <br>
 <br>
 
-## Pointer Parameters
+## Pointers as Function Parameters
 
 <br>
 
-### Passing pointers by value
+### Passing Pointers by Value
 
 This is illustration of passing a pointer to a local variable created on the stack by value. We can pass either the memory address of the appropriate variable or the pointer itself.
 
@@ -282,7 +282,7 @@ This illustrates passing the pointer to a variable created on the heap by value.
 
 <br>
 
-### Passing pointers by reference
+### Passing Pointers by Reference
 
 This is illustration of passing a pointer to a local variable created on the stack by reference.
 
@@ -310,7 +310,7 @@ int main() {
 <br>
 <br>
 
-## Pointer Return Types
+## Pointers as Return Types
 
 C++ functions can return pointers.
 

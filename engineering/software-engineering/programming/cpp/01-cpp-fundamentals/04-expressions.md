@@ -23,65 +23,219 @@ _An expression is composed of one or more operands and yields a result when it i
 <br>
 <br>
 
-## lvalue
 
-_An lvalue refers to an expression that yields an object or a function._
+## glvalue
 
-- When objects are used as lvalue, the object's identity (it's location in memory) is being used.
-- lvalues are addressable and modifiable/assignable.
-- lvalues can appear on the left-hand side of an assignment operator (=) because they represent addressable objects.
-- Examples of lvalues include variables, non-const references, and dereferenced pointers.
+*A glvalue is an expression whose evaluation determines the identity of an object or function*
 
-  ```cpp
-  int main()
-  {
-      int num;
-      num = 100; //num is a lvalue
-  }
-  ```
-
-- lvalue can be used in a context where an rvalue is expected.
-
-  ```cpp
-  int main() {
-      int x = 5;
-      int y = 10;
-
-      int z = x + y; // Here, x and y are lvalues, but the expression expects rvalues
-
-      int& ref = x;
-      cout << "Value of ref: " << ref << endl; // Here, ref is an lvalue, but cout expects an rvalue
-
-      return 0;
-  }
-  ```
+- glvalue refers to “generalized” lvalue.
 
 <br>
 <br>
 
 ## rvalue
 
-An rvalue refers to an expression that produces a temporary or intermediate value.
 
-- When objects are used as rvalue, the object's value (it's contents) is being used.
-- Anything that is not a lvalue is a rvalue.
-- rvalues are not addressable and non-modifiable/non-assignable.
-- rvalues can appear on the right-hand side of an assignment operator and cannot be assigned a new value directly.
-- Examples of rvalues include literals (e.g., 5, "hello"), temporary objects, and the results of computations.
+*rvalue is an expression that is either a prvalue or a xvalue.*
 
-- rvalues cannot be used in the context where lvalues are required.
+<br>
+<br>
+
+
+## lvalue
+
+*An lvalue is a glvalue that is not an xvalue.*
+
+- lvalues are addressable.
+- lvalues can be modifiable or non-modifiable.
+- Examples of lvalues include variables, references, and dereferenced pointers.
 
   ```cpp
-  #include <iostream>
+  int main()
+  {
+      int num = 100; //num is a lvalue
+      int *ptr = &num; 
+      *ptr = 200; //referenced pointer is a lvalue
+      int &ref = num; //ref is a lvalue
+  }
+  ```
 
-  int main() {
-      int* ptr2 = &5; // Error: Cannot take the address of an rvalue
-      return 0;
+- Historically, lvalues could be present on the left hand side of the assignment operation. Technically,  Modifiable lvalues can appear on the left hand side of the assignment operator.
+
+  ```cpp
+  int main()
+  {
+	int num{ 100 };
+	num = 200; //num is a modifiable lvalue
+  }
+  ```
+
+  ```cpp
+  int foo()
+  {	
+    int random_number = 69; //assume this is generated reandomly
+    return random_number;
+  }
+
+  int goo()
+  {
+    return 1;
+  }
+
+  int main()
+  { 
+      const int num{ 100 };
+      num = 200; //error: expression must be modifiable lvalue
+      foo = goo;  //error: expression must be modifiable lvalue
+  }
+  ```
+
+
+
+
+
+- lvalue can be used in a context where an rvalue is expected. The process called "lvalue to rvalue conversion" takes place.
+
+  ```cpp
+  int main()
+  {
+    int num{ 100 };
+    int another = num;  //num is an lvalue and can be used on the right hand side
   }
   ```
 
 <br>
 <br>
+
+
+
+
+## prvalue
+
+*A prvalue is an expression that doesnt occupy data storage. Another way to define it is a value that is not associated with an object.*
+
+- prvalues means "pure rvalue".
+- prvalues are not addressable and non modifiable.
+- prvalues cannot be present on the left hand side of an assignment.
+- Examples of prvalues are literals, The result of calling a function whose return type is not a reference. 
+
+  ```cpp
+  int foo()
+  {	
+    int random_number = 69; //assume this is generated reandomly
+    return random_number;
+  }
+
+  //foo() is a prvalue
+  ```
+
+<br>
+<br>
+
+
+## xvalue
+
+A xvalue is a temporary expression that does occupy data storage.
+
+
+
+<br>
+<br>
+
+### Left Hand Side of an assignment operator
+
+
+### Return types (Complete this)
+
+- When a function returns by value (i.e., not a reference), the return value is treated as an rvalue.
+- The returned rvalue can be used in expressions but cannot be directly modified.
+
+  ```cpp
+  #include <iostream>
+
+  int num{ 5 };
+
+  int indirect()
+  {
+    return num;
+  }
+
+  int main()
+  {
+    num = indirect() + 10; //can be used in expressions
+    std::cout << num << std::endl;
+
+    //indirect() = 10; //error, rvalue cannot be assigned
+
+
+    //The following code can be used to check if something is lvalue or rvalue (However this is from GPT3)
+    if (std::is_lvalue_reference<decltype(indirect())>::value) {
+      std::cout << "The returned type is an lvalue\n";
+    }
+    else {
+      std::cout << "The returned type is is an rvalue\n";
+    }
+  }
+
+  //15
+  //The returned type is is an rvalue
+  ```
+
+* A function with return type of a pointer (to a data type) is returned as rvalue.
+
+  ```cpp
+  #include <iostream>
+
+  int num{ 5 };
+  int another{ 20 };
+
+  int* indirect()
+  {
+      return &num;
+  }
+
+  int main()
+  {
+      //indirect() = &another; //error, indirect() returns pointer as rvalue
+      *indirect() = 10; //dereferencing the pointer gives lvalue
+      std::cout << num <<std::endl;
+
+
+      //The following code can be used to check if something is lvalue or rvalue (However this is from GPT3)
+      if (std::is_lvalue_reference<decltype(indirect())>::value) {
+          std::cout << "The returned type is an lvalue\n";
+      }
+      else {
+          std::cout << "The returned type is an rvalue\n";
+      }
+  }
+
+  //10
+  //The returned type is an rvalue
+  ```
+
+<br>
+
+- Function returning an non-const lvalue reference returns a modifiable lvalue.
+
+  ```cpp
+  #include <iostream>
+
+  int& doesNothing(int& number)
+  {
+    return number;
+  }
+
+  int main()
+  {
+    int num{ 100 };
+    doesNothing(num) = 200; //doesNothing() is a modifiable lvalue
+    std::cout << num << "\n";	//200
+  }
+  ```
+
+
+
 
 <br>
 <br>

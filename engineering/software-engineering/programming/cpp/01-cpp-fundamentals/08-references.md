@@ -1,138 +1,178 @@
-# References
+# Lvalue Reference
 
-_A reference defines an alternative name (Alias) for an object._
+_An lvalue reference defines an alternative name (Alias) for an object._
 
-- A reference is not an object. Instead, a reference is just another name for an already existing object.
-- When we define a reference, instead of copying the initializer’s value, we bind the reference to its initializer.
-- Once initialized, a reference remains bound to its initial object. There is no way to rebind a reference to refer to a different object. Hence references must be always initialised.
-
-<br>
 
 <br>
 <br>
 
-## lvalue reference (&)
+## Basics of Lvalue Reference
 
-- Introduced in earlier versions of C++.
-- Binds to lvalues (addressable objects or storage locations).
-- Can extend the lifetime of the object it refers to.
-- Used for aliasing.
+
+- What C++03 calls reference is lvalue reference in Modern C++.
+- lvalue refernces can bind to lvalues, once binded they act as aliases.
+
+  ```cpp
+  int main()
+  {
+    int num{ 100 };
+    int&  ref = num; //num is a lvalue
+    ref = 50; //assigns 50 to num
+    std::cout << num << std::endl;   //50
+    std::cout << ref << std::endl;   //50
+    std::cout << &num << std::endl;	//006BFBAC
+    std::cout << &ref << std::endl; //006BFBAC
+  }
+  ```
+
+- const lvalue references can bind to xvalues, This is because of [temporary materialisation conversion](#temporary-materialisation-conversion) but never to a prvalue. 
+
+
+- lvalues references are not objects!
+
+  ```cpp
+  int main()
+  {
+    int num{ 100 };
+    int&  ref = num; //num is a lvalue
+    std::cout << &num << std::endl;	//006BFBAC
+    std::cout << &ref << std::endl; //006BFBAC //Here &ref simply means &num
+  }
+  ```
+
+- Once an lvalue reference is bound to an lvalue or xvalue, they cannot be binded to any other. Hence they must be initialised when they are created! 
+  ```cpp
+  int main()
+  {
+      int a{ 10 };    
+      int b{ 50 };    
+      int& lref {a} ; 
+      lref = b;	      //assigns a with the value of b
+  }
+  ```
+
+<br>
+<br>
+
+## Const Correctness with Lvalue References
+
+
+- lvalue references to constant lvalues must be const references.
+  ```cpp
+  int main()
+  {
+    const int num{ 100 };
+    const int &ref = num; //Or int const &ref = num; both are same
+  }
+  ```
+
+- const lvalue references can bind to non-const lvalues.
+
+  ```cpp
+  int main()
+  {
+    int num{ 100 };
+    const int &ref = num;
+  }
+  ```
+
+<br>
+<br>
+
+## Lvalue References as Function Parameters
+
+- A non const lvalue reference parameter is used to pass the argument by reference instead of pass by value and the argument is modifiable.
 
   ```cpp
   #include <iostream>
+
+  void doubler(int & number)
+  {	
+    number *= 2;
+  }
+
   int main()
   {
-      int a{ 10 };     // a is a lvalue
-      int& lref {a};   // lref is an lvalue reference
-      lref = 200;      // valid: a is now 200
-
-      std::cout << lref << std::endl;   //200
-      std::cout << a << std::endl;      //200
-      std::cout << &lref << std::endl; //006BFBAC
-      std::cout << &a << std::endl;	//006BFBAC
+    int num{ 100 };
+    doubler(num);
+    std::cout << num; //200
   }
   ```
 
-* Once a reference is bound to a variable, it cannot be binded to a new variable.
 
-  ```cpp
-  int main()
-  {
-      int a{ 10 };     // a is a lvalue
-      int b{ 50 };     // a is a lvalue
-      int& lref {a} ;   // lref is an lvalue reference
-      lref = b;	     //assigns a with the value of b
+- A const lvalue reference parameter is used to pass the argument by reference instead of pass by value and the argument is non-modifiable.
 
-      std::cout << lref << std::endl;   //50
-      std::cout << a << std::endl;      //50
-      std::cout << &lref << std::endl; //006BFBAC
-      std::cout << &a << std::endl;	//006BFBAC
-  }
-  ```
-
-* Used to pass by reference and avoid copying of objects for every function call.
 
   ```cpp
   #include <iostream>
-  using namespace std;
 
-  void foo(int& num)
-  {
-      cout << "The value of parameter num = " << num << " and address is " << &num << endl;
+  void doubler(const int & number)
+  {	
+    number *= 2;	//here
   }
 
   int main()
   {
-      int x{ 10 };
-      cout << "The value of argument x = " << x << " and address is " << &x << endl;
-      foo(x);
-      foo(10);	//error: 100 is a rvalue
-  }
-
-  //The value of argument x = 10 and address is 000000494751F5F4
-  //The value of parameter num = 10 and address is 000000494751F5F4
-  ```
-
-- In a range based for loop, the variable is a copy of the orginal iterable, hence we get the following result:
-
-  ```cpp
-  int main()
-  {
-      vector<string> stooges{ "larry", "moe","curly" };
-
-      for (auto name : stooges) {
-          name = "funny";
-      }
-
-      for (auto name : stooges) {
-          cout << name << endl;
-      }
-  }
-
-  //larry
-  //moe
-  //curly
-  ```
-
-- When we use lvalue references (see inside range based for loop)
-
-  ```cpp
-  int main()
-  {
-      vector<string> stooges{ "larry", "moe","curly" };
-
-      for (auto &name : stooges) {
-          name = "funny";
-      }
-
-      for (auto name : stooges) {
-          cout << name << endl;
-      }
-  }
-  //funny
-  //funny
-  //funny
-  ```
-
-<br>
-
-### const correctness with lvalue references
-
-- a lvalue reference to a const datatype must also be const.
-
-  ```cpp
-  int main()
-  {
-      const int a{ 10 };
-      int& ref1{ a };        //error
-      const int& ref2{ a };  //ok
+    int num{ 100 };
+    doubler(num);  //error: expression must be a modifiable lvalue
+    std::cout << num; 
   }
   ```
+
 
 <br>
 <br>
 
-## rvalue reference (&&)
+## Lvalue References as Return Types
+
+- Function returning an non-const lvalue reference returns a modifiable lvalue.
+
+  ```cpp
+  #include <iostream>
+
+  int& doesNothing(int& number)
+  {
+    return number;
+  }
+
+  int main()
+  {
+    int num{ 100 };
+    doesNothing(num) = 200; //doesNothing() is a modifiable lvalue
+    std::cout << num << "\n";	//200
+  }
+  ```
+
+
+<br>
+<br>
+
+### Temporary Materialisation Conversion (move this to lvalue and rvalue notes)
+
+
+```cpp
+#include <iostream>
+using namespace std;
+
+void foo(const int& num)
+ {
+    cout << "The value of parameter num = " << num << " and address is " << &num << endl;
+ }
+
+int main()
+{
+  int& ref = 10; //error: initial value of reference to non-const must be an lvalue; 10 is a prvalue
+  int const &  ref1 = 100;  //Because of temporary materialisation conversion; prvalue is converted to an xvalue;
+  foo(10); //now 10 is an xvalue
+}
+```
+
+
+<br>
+<br>
+<br>
+
+# Rvalue Reference (Complete this)
 
 - Introduced in C++11 and later.
 - Binds to rvalues (temporary values or expressions without persistent memory locations).
@@ -183,108 +223,8 @@ _A reference defines an alternative name (Alias) for an object._
 <br>
 <br>
 
-## lvalue and rvalue with functions
-
-### Function returning rvalue
-
-- When a function returns by value (i.e., not a reference), the return value is treated as an rvalue.
-- The returned rvalue can be used in expressions but cannot be directly modified.
-
-  ```cpp
-  #include <iostream>
-
-  int num{ 5 };
-
-  int indirect()
-  {
-    return num;
-  }
-
-  int main()
-  {
-    num = indirect() + 10; //can be used in expressions
-    std::cout << num << std::endl;
-
-    //indirect() = 10; //error, rvalue cannot be assigned
 
 
-    //The following code can be used to check if something is lvalue or rvalue (However this is from GPT3)
-    if (std::is_lvalue_reference<decltype(indirect())>::value) {
-      std::cout << "The returned type is an lvalue\n";
-    }
-    else {
-      std::cout << "The returned type is is an rvalue\n";
-    }
-  }
-
-  //15
-  //The returned type is is an rvalue
-  ```
-
-* A function with return type of a pointer (to a data type) is returned as rvalue.
-
-  ```cpp
-  #include <iostream>
-
-  int num{ 5 };
-  int another{ 20 };
-
-  int* indirect()
-  {
-      return &num;
-  }
-
-  int main()
-  {
-      //indirect() = &another; //error, indirect() returns pointer as rvalue
-      *indirect() = 10; //dereferencing the pointer gives lvalue
-      std::cout << num <<std::endl;
 
 
-      //The following code can be used to check if something is lvalue or rvalue (However this is from GPT3)
-      if (std::is_lvalue_reference<decltype(indirect())>::value) {
-          std::cout << "The returned type is an lvalue\n";
-      }
-      else {
-          std::cout << "The returned type is an rvalue\n";
-      }
-  }
 
-  //10
-  //The returned type is an rvalue
-  ```
-
-<br>
-
-### Function returning lvalue
-
-- Functions with return type with reference returns lvalue.
-- Returning an lvalue reference from a function allows the caller to use the returned value as an lvalue and potentially modify it.
-
-  ```cpp
-  #include <iostream>
-
-  int num{ 5 };
-
-  int& indirect()
-  {
-    return num;
-  }
-
-  int main()
-  {
-    indirect() = 10;    //here
-    std::cout << num << std::endl;
-
-      //The following code can be used to check if something is lvalue or rvalue (However this is from GPT3)
-      if (std::is_lvalue_reference<decltype(indirect())>::value) {
-          std::cout << "The returned type is an lvalue\n";
-      }
-      else {
-          std::cout << "The returned type is an rvalue\n";
-      }
-  }
-
-  //10
-  //The returned type is an lvalue
-  ```
