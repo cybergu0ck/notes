@@ -173,38 +173,42 @@ According to the Bjarne model, when an object is created,
 <br>
 <br>
 
-## `this` pointer
+## `this` Pointer
 
-_**"this"** is a reserved keyword for a pointer to the object of the class._
+_`this` is the implicit parameter used by member functions to access the object on which they were called._
 
 ```cpp
-void Account::set_balance(double bal)
+#include <iostream>
+
+class MyClass
 {
-    balance = bal; //   this->balance = bal; behind the scenes!
+public:
+    int getData()
+    {
+        return data;
+    }
+
+    //Under the hood
+    // int getData(MyClass* const this)
+    // {
+    //     return this->data;
+    // }
+
+private:
+	int data{100};
+};
+
+int main()
+{
+	MyClass obj = MyClass();
+	int res = obj.getData();    //obj.getData(&obj)
+	std::cout << res << "\n";
 }
 ```
 
-- It can be only used in the scope of the class (local scope) and hence resides in the stack.
-
-<br>
-
-- The invoked member functions donot know which object is invoking it. `this` is actually a hidden formal paramter in member functions. `this` acts as a link field between the objects and the member functions of the class.
-- It is a const pointer of the class type.
-
-  ```cpp
-  class MyClass
-  {
-      int a;
-
-  public:
-      void foo();		//under the hood: foo(MyClass* const this)
-  };
-
-  void MyClass::foo()
-  {
-      //does nothing
-  }
-  ```
+- When we call a member function, this is initialised with the address of the object on which the function was invoked.
+- `this` is a const pointer as it it is intended to always refer to "this" object.
+- It is illegal for us to define a parameter or a variable named `this`.
 
 <br>
 
@@ -243,6 +247,82 @@ void Account::set_balance(double bal)
       return res;
   }
   ```
+
+<br>
+<br>
+
+## const Member Functions
+
+Member functions that use `const` are called const member functions.
+
+- `const` modifies the type of the implicit [this](#this-pointer) pointer. A `const` following the parameter list indicates that `this` is a pointer to const.s
+
+  ```cpp
+  #include <iostream>
+
+  class MyClass
+  {
+  public:
+      int getData() const
+      {
+          return data;
+      }
+
+      //Under the hood
+      //int getData(const MyClass* const) const
+      //{
+      //   return this->data;
+      //}
+
+  private:
+      int data{100};
+  };
+
+  int main()
+  {
+      const MyClass obj = MyClass();
+      int res = obj.getData();   //obj.getData(const &obj)
+      std::cout << res << "\n";
+  }
+  ```
+
+* For const qualified member functions, since `this` is a constant pointer to a const, the code inside the member function can only perform Read operations and cannot perform Write operations as it would modify the this object.
+
+- const objects, references and pointers to const objects may call only const member functions.
+- non const objects, references and pointers to non const objects can call both const and non const member functions.
+- Constructors and destructors cannot be const qualified.
+
+<br>
+<br>
+
+## Member Functions returning `this` object
+
+```cpp
+#include <iostream>
+
+class MyClass
+{
+public:
+  int data{100};
+
+public:
+  MyClass& getClone()
+  {
+    return *this;
+  }
+};
+
+int main()
+{
+  MyClass first_obj = MyClass();
+  MyClass second_obj = first_obj.getClone();
+  std::cout << first_obj.data << "\n";
+  std::cout << second_obj.data << "\n";
+}
+
+//100
+//100
+```
 
 <br>
 <br>

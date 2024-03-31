@@ -1,44 +1,12 @@
 # References
 
-<br>
+_A reference defines an alternative name (Alias) for an object._
 
-## lvalue
-
-- An lvalue refers to an expression that identifies a specific object or variable in memory.
-- Hence, lvalues are addressable and modifiable/assignable.
-- lvalues can appear on the left-hand side of an assignment operator (=) because they represent addressable objects.
-- Examples of lvalues include variables, non-const references, and dereferenced pointers.
-
-  ```cpp
-  int main()
-  {
-      int num;
-      num = 100; //num is a lvalue
-  }
-  ```
+- A reference is not an object. Instead, a reference is just another name for an already existing object.
+- When we define a reference, instead of copying the initializer’s value, we bind the reference to its initializer.
+- Once initialized, a reference remains bound to its initial object. There is no way to rebind a reference to refer to a different object. Hence references must be always initialised.
 
 <br>
-<br>
-
-## rvalue
-
-- An rvalue refers to an expression that produces a temporary or intermediate value. (Anything that is not a lvalue is a rvalue)
-- Hence, rvalues are not addressable and non-modifiable/non-assignable.
-- rvalues can appear on the right-hand side of an assignment operator but cannot be assigned a new value directly.
-- Examples of rvalues include literals (e.g., 5, "hello"), temporary objects, and the results of computations.
-
-<br>
-
-- rvalues can be assigned to lvalues explicitely
-
-  ```cpp
-  int main()
-  {
-      int x{ 1 }, y{ 0 };
-      y = 100; // a temporary variable (r value) having a value 100 is assigned to y
-      x = x + y;  // a temporary variable (r value) having the value x+y is assigned to x
-  }
-  ```
 
 <br>
 <br>
