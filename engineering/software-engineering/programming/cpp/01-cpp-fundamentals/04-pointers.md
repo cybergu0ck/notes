@@ -7,6 +7,8 @@ _**Pointers** are variables that store the memory addresses of other variables._
 
 ## Basics of Pointers
 
+Pointer is a compound type (i.e. s a type that is defined in terms of another type).
+
 <br>
 
 ### Declaring Pointers
@@ -44,24 +46,26 @@ _**Pointers** are variables that store the memory addresses of other variables._
 
 ### Pointers and Addresses
 
-There are two addresses with regards to pointers, one is the address of the pointer variable itself and the other is the memory address that is stored as value of the pointer variable. _Pointer points to the memory address that it holds as values._
-
 ```cpp
 #include <iostream>
-
 int main() {
-	int num{ 10 };
-	int* ptr{ &num };
-
-	std::cout << "The address of ptr is : " << &ptr << "\n";
-	std::cout << "The value of ptr is : " << ptr << "\n";	//This is the address of the num variable
-	std::cout << "The value of ptr is : " << &num << "\n";
+  int num{ 10 };
+  int* ptr{ &num };
+  std::cout << "The address of ptr is : " << &ptr << "\n";
+  std::cout << "The value of ptr is : " << ptr << "\n";	//This is the address of the num variable
+  std::cout << "The value of ptr is : " << &num << "\n";
 }
-
 //The address of ptr is : 0000006A4A4FFA68
 //The value of ptr is : 0000006A4A4FFA44
 //The value of ptr is : 0000006A4A4FFA44
 ```
+
+There are two addresses with regards to pointers, 
+
+1. The address of the pointer variable itself.
+1. The memory address that is stored as value of the pointer variable. _Pointer points to the memory address that it holds as values._
+
+
 
 <br>
 
@@ -210,17 +214,13 @@ int main() {
 <br>
 <br>
 
-## Pointers as Function Parameters
+## Pointers as Function Arguments
 
 <br>
 
 ### Passing Pointers by Value
 
-This is illustration of passing a pointer to a local variable created on the stack by value. We can pass either the memory address of the appropriate variable or the pointer itself.
-
-- At the end of `foo`'s scope, the memory holding the value of `num_ptr` (not the memory it is pointing to) is released by the stack as it is created on the stack.
-- At the end of `main`'s scope, the memory holding the value of `ptr` and the address it points to i.e. `num` are released by the stack as both of them are created on the stack.
-
+- Passing a pointer to a variable created on the stack by value.
   ```cpp
   #include <iostream>
 
@@ -245,101 +245,67 @@ This is illustration of passing a pointer to a local variable created on the sta
 
   ![img](../_assets/p1.png)
 
-<br>
+- Checkout [passing a pointer to a variable created on the heap by value](../03-cpp-control-flow/04-cpp-dynamic-memory-allocation.md#passing-dynamically-allocated-memory-by-value)
 
-This illustrates passing the pointer to a variable created on the heap by value.
-
-- Since the `num_ptr` points to a variable created on the heap, we must make sure to release it after use. It can be done either in `foo` or in `main`, but not in both because when it is done for the first time, the memory pointed by the pointer is released and if we delete it again, it would be releasing unallocated memory, which is an error.
-
-- At the end of `foo`'s scope, the memory holding the value of `num_ptr` is released by the stack as it is created on the stack. Since we are freeing up the memory pointed to by num_ptr using delete, the memory of the variable created on the heap (i.e. `num`) is also released.
-
-- Back in `main`'s scope we can see that the memory of the heap variable has been released (dereferencing has yielded garbage value) and when `main`'s scope ends, the memory holding the value of `ptr` (not the memory pointed to by `ptr`) is released by the stack as it is created on the stack.
-
-  ```cpp
-  #include <iostream>
-
-  void foo(int* num_ptr) {
-      std::cout << "The address of num_ptr in foo is : " << &num_ptr << ", It's value is: " << num_ptr << " and the dereferenced value is: " << *num_ptr << "\n";
-      delete num_ptr;
-  }
-
-  int main() {
-      int* ptr = new int(10);
-      std::cout << "The address of ptr in main is :  " << &ptr << ", It's value is: " << ptr << " and the dereferenced value is: " << *ptr << "\n";
-      foo(ptr);   //We can pass the pointer
-      std::cout << "The address of ptr in main is :  " << &ptr << ", It's value is: " << ptr << " and the dereferenced value is: " << *ptr << "\n";
-
-      //delete ptr;  This is double deletion as it is already deleted in foo
-      return 0;
-  }
-
-  //The address of ptr in main is : 000000E11C8FFAE8, It's value is: 000001ED7CE6ADA0 and the dereferenced value is: 10
-  //The address of num_ptr in foo is : 000000E11C8FFAC0, It's value is: 000001ED7CE6ADA0 and the dereferenced value is: 10
-  //The address of ptr in main is : 000000E11C8FFAE8, It's value is: 000001ED7CE6ADA0 and the dereferenced value is: -572662307
-  ```
-
-  ![img](../_assets/p2.png)
 
 <br>
 
 ### Passing Pointers by Reference
 
-This is illustration of passing a pointer to a local variable created on the stack by reference.
+- This is illustration of passing a pointer to a local variable created on the stack by reference.
 
-```cpp
-#include <iostream>
+  ```cpp
+  #include <iostream>
 
-void foo(int*&num_ptr) {
-    std::cout << "The address of num_ptr in foo is : " << &num_ptr << ", It's value is: " << num_ptr << " and the dereferenced value is: " << *num_ptr << "\n";
-}
-
-int main() {
-    int num{ 10 };
-    int* ptr{ &num };
-    std::cout << "The address of ptr in main is :  " << &ptr << ", It's value is: " << ptr << " and the dereferenced value is: " << *ptr << "\n";
-
-    //foo(&num);  //We cannot pass the memory address
-    foo(ptr);   //We can pass the pointer
-    return 0;
-}
-
-//The address of ptr in main is : 0000007450DCF748, It's value is: 0000007450DCF724 and the dereferenced value is: 10
-//The address of num_ptr in foo is : 0000007450DCF748, It's value is: 0000007450DCF724 and the dereferenced value is: 10
-```
-
-<br>
-<br>
-
-## Pointers as Return Types
-
-C++ functions can return pointers.
-
-```cpp
-int* largest(int* int_ptr1, int* int_ptr2);
-
-int main(){
-  int a{ 100 }, b{ 200 };
-  int* ptr_largest = largest(&a, &b);
-  cout << *ptr_largest << endl;	//200
-}
-
-int* largest(int* int_ptr1, int* int_ptr2) {
-  if (*int_ptr1 >= *int_ptr2) {
-    return int_ptr1;
+  void foo(int*&num_ptr) {
+      std::cout << "The address of num_ptr in foo is : " << &num_ptr << ", It's value is: " << num_ptr << " and the dereferenced value is: " << *num_ptr << "\n";
   }
-  else {
-    return int_ptr2;
+
+  int main() {
+      int num{ 10 };
+      int* ptr{ &num };
+      std::cout << "The address of ptr in main is :  " << &ptr << ", It's value is: " << ptr << " and the dereferenced value is: " << *ptr << "\n";
+
+      //foo(&num);  //We cannot pass the memory address
+      foo(ptr);   //We can pass the pointer
+      return 0;
   }
-}
-```
+
+  //The address of ptr in main is : 0000007450DCF748, It's value is: 0000007450DCF724 and the dereferenced value is: 10
+  //The address of num_ptr in foo is : 0000007450DCF748, It's value is: 0000007450DCF724 and the dereferenced value is: 10
+  ```
+
+- Checkout [passing a pointer to a variable created on the heap by reference](../03-cpp-control-flow/04-cpp-dynamic-memory-allocation.md#passing-dynamically-allocated-memory-by-reference)
+
 
 <br>
+<br>
 
-### Returning a pointer to a local variable on the stack
+## Pointers as Return Type
 
-Returning a pointer to a local variable created on the stack leads to bugs and is flagged as error by some compilers (Microsoft's Visual Studio)
+- C++ functions can return pointers.
 
-- In the following code `foo` returns a pointer to int variable `num`, which is created on the stack. When the scope of `foo` ends, the stack frees the memory holding the value of num. This doesn't mean the value will be changed instantly but implies that it can change (see the output of first cout statement). Hence `ptr` and `my_ptr` will point to a memory address that is freed and accessing uninitalised memory has undefined behaviour.
+  ```cpp
+  int* largest(int* int_ptr1, int* int_ptr2);
+
+  int main(){
+    int a{ 100 }, b{ 200 };
+    int* ptr_largest = largest(&a, &b);
+    cout << *ptr_largest << endl;	//200
+  }
+
+  int* largest(int* int_ptr1, int* int_ptr2) {
+    if (*int_ptr1 >= *int_ptr2) {
+      return int_ptr1;
+    }
+    else {
+      return int_ptr2;
+    }
+  }
+  ```
+
+- Returning a pointer to a local variable created on the stack leads to undefined behavour and is flagged as error by some compilers (Microsoft's Visual Studio)
+
 
   ```cpp
   #include <iostream>
@@ -362,108 +328,14 @@ Returning a pointer to a local variable created on the stack leads to bugs and i
   }
 
   //20
-  //32759
+  //32759 (this is undefined behaviour)
   ```
 
-<br>
-
-### Returning a pointer to a variable on the heap
-
-It is better to create the variable on the heap if a pointer to such a variable has to be returned from a function. However, _dev should take care of cleaning up the heap memory._
-
-- Following code is an example of how not to free up heap memory.
-
-  ```cpp
-  #include <iostream>
-
-  int* foo() {
-    int* ptr = new int(20);
-    delete ptr;
-    return ptr;		//Returning an uninitialised pointer
-  }
-
-  void boo() {
-    int num2{ 60 };
-  }
-
-  int main() {
-    int* my_ptr = foo();
-    std::cout << *my_ptr << std::endl;
-    boo();
-    std::cout << *my_ptr << std::endl;
-  }
-
-  //crash
-  ```
-
-- In the following code my_ptr in the caller scope and ptr in the calle scope simply hold the same address i.e. the address to a int variable created on the heap. Deleting any one pointer will free up that memory. Also, it is to be notes that deleting both will lead to error.
-
-  ```cpp
-  #include <iostream>
-
-  int* foo() {
-    int* ptr = new int(20);
-    return ptr;
-  }
-
-  void boo() {
-    int num2{ 60 };
-  }
-
-  int main() {
-    int* my_ptr = foo();
-    std::cout << *my_ptr << std::endl;
-    boo();
-    std::cout << *my_ptr << std::endl;
-    delete my_ptr;	//deleting my_ptr is same as deleting ptr!
-  }
-
-  //20
-  //20
-  ```
+- Checkout [returning dynamically allocated memory from a function](../03-cpp-control-flow/04-cpp-dynamic-memory-allocation.md#dynamically-allocated-memory-as-return-type)
 
 <br>
 <br>
 
-## Common Pointer Pitfalls
-
-### Uninitialised Pointers
-
-- Modern IDE will throw an error and prevent this (which is a good thing)
-
-  ```cpp
-  int main()
-  {
-    int* ptr;   //UNINITIALISED!!
-    *ptr = 100;
-    cout << *ptr;
-  }
-  ```
-
-<br>
-
-### Dangling Pointers
-
-- dangling pointers are created when a pointer points to a memory that is invalid (or no longer valid)
-- When a function returns a pointer to a local varible, it's a dangling pointer.
-- When two pointers point to the same data and one of the pointer releases the data with delete, the other pointer now access the released data (can be invalid), resulting in dangling pointers.
-
-<br>
-
-### Not checking if `new` failed
-
-- An exception is thrown if `new` fails to allocate memory on the heap.
-- If exceotion handling is not done here, it'll point to nullptr and dereferencing a null ptr can make the program crash.
-
-<br>
-
-### Memory Leaks
-
-- memory leaks occur when we forget to release the allocated heap memory using `delete`.
-- it can also occur if we loose the pointer to the allocated heap memory (say reassigning the pointer), now we have no way to access or release that allocated heap memory, which is still considered in-use by C++.
-
-<br>
-<br>
 
 ## Pointer Arithmetic
 
@@ -560,8 +432,10 @@ Pointer arithmetic only makes sense with raw arrays.
 <br>
 <br>
 
-//TODO - Add a seperate section probably in basics of pointers about pointer to a variable created on the stack and for a variable created on the heap. Also add about delete keyword.
 
-//TODO - Add images from the begining (for basics section)
+## References
 
-//TODO - Revamp pointer pitfalls and backlink it with the notes on pointer parameter errors (written in that section) and remove the redundancy on that topic
+- Checkout [common pitfalls with dynamically allocated memory](../03-cpp-control-flow/04-cpp-dynamic-memory-allocation.md#common-pitfalls-with-dynmically-allocated-memory)
+
+
+//TODO - Redo all the imgages here and in dynamically allocated memory notes

@@ -79,7 +79,7 @@ _An lvalue reference defines an alternative name (Alias) for an object._
 <br>
 <br>
 
-## Lvalue References as Function Parameters
+## Lvalue References as Function Arguments
 
 - A non const lvalue reference parameter is used to pass the argument by reference instead of pass by value and the argument is modifiable.
 
@@ -123,7 +123,7 @@ _An lvalue reference defines an alternative name (Alias) for an object._
 <br>
 <br>
 
-## Lvalue References as Return Types
+## Lvalue References as Return Type
 
 - Function returning an non-const lvalue reference returns a modifiable lvalue.
 
