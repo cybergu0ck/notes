@@ -25,9 +25,6 @@ _An lvalue reference defines an alternative name (Alias) for an object._
   }
   ```
 
-- const lvalue references can bind to xvalues, This is because of [temporary materialisation conversion](#temporary-materialisation-conversion) but never to a prvalue. 
-
-
 - lvalues references are not objects!
 
   ```cpp
@@ -40,7 +37,7 @@ _An lvalue reference defines an alternative name (Alias) for an object._
   }
   ```
 
-- Once an lvalue reference is bound to an lvalue or xvalue, they cannot be binded to any other. Hence they must be initialised when they are created! 
+- Once an lvalue reference is bound, they cannot be binded again. Hence they must be initialised when they are created! 
   ```cpp
   int main()
   {
@@ -51,13 +48,39 @@ _An lvalue reference defines an alternative name (Alias) for an object._
   }
   ```
 
+- The type of the lvalue reference must match the type of the object to which it refers. Except for two exceptions:
+
+  1. We can bind a lvalue reference to a prvalue using the const qualifier because of [temporary materialisation conversion](./07-expressions.md#temporary-materialisation-conversion-move-this-to-lvalue-and-rvalue-notes).
+
+      ```cpp
+      int main()
+      {
+          int num{ 100 };
+          const int& ref1 = 69; //ok because of temporary materialisation conversion
+          int& ref2 = 42; //Error: Initial value of reference to non const must be lvalue
+          int& ref3 = num * 2; //Error: Initial value of reference to non const must be lvalue
+      }
+      ```
+
+
+
+  1. We can bind a lvalue refernce to a Child class using the type of Base class in the case of inheritance.
+
+
+
+
 <br>
 <br>
 
 ## Const Correctness with Lvalue References
 
+<br>
 
-- lvalue references to constant lvalues must be const references.
+### Reference to const
+
+- Although there is no concept of "constant reference" as reference is not an object, it is commonly okay to refer to "reference to const" as "constant reference".
+
+- lvalue references to constant lvalues must be refernance to const.
   ```cpp
   int main()
   {
@@ -66,15 +89,31 @@ _An lvalue reference defines an alternative name (Alias) for an object._
   }
   ```
 
-- const lvalue references can bind to non-const lvalues.
+- A reference to const cannot be used to bind a non-const one.
+
+  ```cpp
+  #include <iostream>
+
+  int main()
+  {
+    const int num{ 100 };
+    const int& ref = num;
+    int& ano_ref = ref; //error: binding a reference of type "int &" to an initializer of type "const int"
+  }
+  ```
+
+- reference to const can bind to non-const lvalues. Hence, binding a reference to const to an object says nothing about whether the underlying object itself is const.
 
   ```cpp
   int main()
   {
     int num{ 100 };
     const int &ref = num;
+    num = 200; //ok
+    ref = 98; //error
   }
   ```
+
 
 <br>
 <br>
@@ -108,17 +147,16 @@ _An lvalue reference defines an alternative name (Alias) for an object._
 
   void doubler(const int & number)
   {	
-    number *= 2;	//here
+    number *= 2;	//error: expression must be a modifiable lvalue
   }
 
   int main()
   {
     int num{ 100 };
-    doubler(num);  //error: expression must be a modifiable lvalue
+    doubler(num);  //Passing a non const variable is not an error
     std::cout << num; 
   }
   ```
-
 
 <br>
 <br>
@@ -143,41 +181,15 @@ _An lvalue reference defines an alternative name (Alias) for an object._
   }
   ```
 
-
-<br>
-<br>
-
-### Temporary Materialisation Conversion (move this to lvalue and rvalue notes)
-
-
-```cpp
-#include <iostream>
-using namespace std;
-
-void foo(const int& num)
- {
-    cout << "The value of parameter num = " << num << " and address is " << &num << endl;
- }
-
-int main()
-{
-  int& ref = 10; //error: initial value of reference to non-const must be an lvalue; 10 is a prvalue
-  int const &  ref1 = 100;  //Because of temporary materialisation conversion; prvalue is converted to an xvalue;
-  foo(10); //now 10 is an xvalue
-}
-```
-
-
 <br>
 <br>
 <br>
 
-# Rvalue Reference (Complete this)
+# Rvalue Reference 
 
-- Introduced in C++11 and later.
+- Introduced in C++11.
 - Binds to rvalues (temporary values or expressions without persistent memory locations).
-- Typically used to enable move semantics and perfect forwarding.
-- Used for efficient resource transfer and optimization.
+- Used to enable move semantics, perfect forwarding, efficient resource transfer and optimization.
 
   ```cpp
   int main()

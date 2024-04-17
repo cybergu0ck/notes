@@ -18,9 +18,8 @@
 
 ## Assigment Operators
 
-- An `lvalue` (locator value) represents an object that occupies some identifiable location in memory (i.e. has an address).
-- `rvalues` are defined by exclusion. Every expression is either an lvalue or an rvalue, so, an rvalue is an expression that does not represent an object occupying some identifiable location in memory.
-  - R-value: r-value” refers to data value that is stored at some address in memory. A r-value is an expression, that can’t have a value assigned to it, which means r-value can appear on right but not on left hand side of an assignment operator(=).
+- The left hand side of the assignment operator must be a modifiable lvalue.
+- The right hand side of the assignment operator can be either an lvalue or prvalue or an xvalue.
 
 <br>
 

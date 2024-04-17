@@ -60,6 +60,10 @@ int main() {
 //The value of ptr is : 0000006A4A4FFA44
 ```
 
+![image](../_assets/pointer1.png)
+
+
+
 There are two addresses with regards to pointers, 
 
 1. The address of the pointer variable itself.

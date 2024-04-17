@@ -29,6 +29,17 @@ Merging refers to the process of incorporating the changes made in one branch in
 
 ### Squash Merge
 
+Squash merge squashes all the commits from the source branch into one commit in the target branch.
+
+1. Checkout the target branch (the branch to merge into).
+2. Merge the branch using squash option, this will not create any new commit, it simply gets the changes.
+
+   ```bash
+   git merge --squash <branch>
+   ```
+
+3. Commit the changes with an appropraite message.
+
 <br>
 
 ### Rebase

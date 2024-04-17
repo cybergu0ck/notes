@@ -1,128 +1,68 @@
+# Singly Linked List
 
+_A singly linked list is a linear data structure consisting of a sequence of elements called nodes._
 
-```python
+- Uses of Singly Linked Lists are as follows:
+  - Insertion and Deletion at the begining of the list is O(1).
+  - They are memory efficient as they don't need contigous memory like arrays.
+
+<br>
+<br>
+
+## Complexity
+
+| Operation | Time Complexity |
+| --------- | --------------- |
+| Insertion | O(n)            |
+| Deletion  | O(n)            |
+| Search    | O(n)            |
+
+<br>
+<br>
+
+## Implementation
+
+```py
 class Node:
-    def __init__(self, data = None, next = None):
-        self.data = data
+    def __init__(self, value = None, next = None):
+        self.val = value
         self.next = next
 
-
 class LinkedList:
-    def __init__(self):
-        self.root = Node()
-```
+    def __init__(self, root = Node()):
+        self.root = root
 
-<br/>
-
-## Appending
-
-```python
-def append(self, new_data):
-        cur_node = self.root
-        new_node = Node(new_data)
-
-        if cur_node.data == None:
-            self.root = new_node
-            cur_node = self.root
-        
-        else:
-            while(cur_node):
-                if cur_node.next != None:
-                    cur_node = cur_node.next
-                else:
-                    cur_node.next = new_node
-                    break
-```
-
-<br/>
-
-## Show the linked list
-
-```python
-def show(self):
-        cur_node = self.root
+    def printList(self):
+        cur = self.root
         res = []
-        while cur_node:
-            if cur_node.next != None:
-                res.append(cur_node.data)
-                cur_node = cur_node.next
-            else:
-                res.append(cur_node.data)
-                break
-        return res
-```
+        while cur:
+            res.append(cur.val)
+            cur = cur.next
+        print(res)
 
-<br/>
+    def appendNode(self, node):
+        cur = self.root
+        while cur.next:
+            cur = cur.next
+        cur.next = node
 
-## Inserting
+    def removeNode(self, node):
+        cur = self.root
+        if cur == node:
+            self.root = node.next
+        while cur:
+            if(cur.next == node):
+                cur.next = node.next
+            cur = cur.next
 
-```python
-def insert(self, new_data, index):
-        cur_node = self.root
-        cur_index = 0
-        new_node = Node(new_data)
-
-        if cur_index == index:
-            #inserting as first node in the list
-            self.root = new_node
-            self.root.next = cur_node
-
-        else:
-            while cur_index < index-1:
-                if cur_node.next != None:
-                    cur_node = cur_node.next
-                    cur_index += 1
-                else:
-                    print("error")
-                    break
-
-            temp = cur_node.next
-            cur_node.next = new_node
-            new_node.next = temp
-
-```
-
-<br/>
-
-## Poping
-
-```python
-def pop(self):
-        cur_node = self.root
-        prev_node = None
-
-        while cur_node.next:
-            prev_node = cur_node
-            cur_node = cur_node.next
-
-        prev_node.next = None
-```
-
-<br/>
-
-## remove
-
-```python
-def remove(self, index):
-        cur_node = self.root
-        prev_node = None
-        cur_index = 0
-
-        if cur_index == index:
-            if cur_node.next:
-                self.root = cur_node.next
-                cur_node = self.root
-            else:
-                print("error")
-        else:
-            while cur_index != index:
-                if cur_node:
-                    prev_node = cur_node
-                    cur_node = cur_node.next
-                    cur_index += 1
-                else:
-                    print("error")
-                    break
-            temp = cur_node.next
-            prev_node.next = temp
+n1 = Node(1)
+n2 = Node(2)
+n3 = Node(3)
+n4 = Node(4)
+ll = LinkedList(n1)
+ll.appendNode(n2)
+ll.appendNode(n3)
+ll.appendNode(n4)
+ll.removeNode(n3)
+ll.printList()
 ```
