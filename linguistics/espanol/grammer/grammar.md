@@ -3,13 +3,16 @@
 | English          | Espanol     |
 | ---------------- | ----------- |
 | I                | Yo          |
+| I am             | Estoy       |
 | You              | Tu          |
+| Your             | Su          |
 | He               | El          |
 | She              | Ella (ejja) |
 | They (masculine) | Ellos       |
 | They (feminine)  | Ellas       |
 | This             | Este        |
 | That             | Ese         |
+| Is in            | Esta en     |
 
 <br>
 <br>
@@ -26,6 +29,8 @@
 | I Need         | Yo Necessito             |
 | I Live         | Yo Vivo                  |
 | I want to      | Yo quiero                |
+| runs           | corre                    |
+| lets go        | vamos                    |
 
 <br>
 <br>
@@ -44,8 +49,12 @@
 | Cheap       | Barato                    |
 | Different   | Differente                |
 | Favorite    | Favorita                  |
-| Too         | Demasiado                 |
-| Very        | Muy                       |
+| too         | demasiado                 |
+| very        | muy                       |
+| difficult   | difícil                   |
+| sad         | triste                    |
+| towards     | en direccion              |
+| enjoy       | disfrutar                 |
 
 <br>
 <br>
@@ -61,3 +70,12 @@
 | Or      | O       |
 | And     | Y (ee)  |
 | In      | En      |
+
+<br>
+<br>
+
+| English    | Espanol        |
+| ---------- | -------------- |
+| with me    | conmigo        |
+| we are     | estamos        |
+| enjoy your | disfrute de su |

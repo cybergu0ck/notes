@@ -20,3 +20,7 @@
 | The Orange | La Naranja      |
 
 <br>
+
+| English  | Espanol    |
+| -------- | ---------- |
+| Vacation | Vacaciones |
