@@ -19,6 +19,7 @@
   | Remove All Breakpoints                           | Ctrl + Shift + F9         |
   | Toggle Primary Side Bar (Left Bar)               | Ctrl + B                  |
   | Toggle Pannel (Bottom, terminal...)              | Ctrl + J                  |
+  | Delete Line                                      | Ctrl + Shift + K          |
 
-<br>
-<br>
+  <br>
+  <br>
