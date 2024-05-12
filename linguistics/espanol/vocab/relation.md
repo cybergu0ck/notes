@@ -12,3 +12,7 @@
 | Sister       | Harmana    |
 | Husband      | Espaso     |
 | Wife         | Espasa     |
+
+| English       | Espanol         |
+| ------------- | --------------- |
+| The Honeymoon | La luna de miel |
