@@ -1,53 +1,6 @@
 # Heap
 
-A heap is a complete binary tree in which the parent nodes have values greater or lesser (based on wether it is max or min heap respectively) than the values of the children.
-
-### Concept Clarity:
-
-- Look up the definition of a complete binary tree.
-- This is a complete binary tree.
-
-  ```
-            20
-          /    \
-        18      12
-       / \
-      9   7
-
-  ```
-
-- This is a complete binary tree.
-
-  ```
-            20
-          /    \
-        18      12
-       / \     /
-      9   7   1
-
-  ```
-
-- This is a complete binary tree.
-
-  ```
-            20
-          /    \
-        18      12
-       / \     /  \
-      9   7   1    2
-
-  ```
-
-- This is NOT a complete binary tree. As it is not left leaning when possible.
-
-  ```
-            20
-          /    \
-        18      12
-       / \        \
-      9   7        1
-
-  ```
+A heap is a [complete binary tree](./trees/binary-tree.md#complete-binary-tree)  in which the parent nodes have values greater or lesser than the values of the children, based on wether it is max or min heap respectively.
 
 <br/>
 <br/>

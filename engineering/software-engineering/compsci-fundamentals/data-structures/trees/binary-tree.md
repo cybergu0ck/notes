@@ -114,6 +114,52 @@ _A complete binary tree is a type of binary tree in which all levels of the tree
 
 - A complete tree is not always perfect tree.
 
+- This is a complete binary tree.
+
+  ```
+            20
+          /    \
+        18      12
+       / \
+      9   7
+
+  ```
+
+- This is a complete binary tree.
+
+  ```
+            20
+          /    \
+        18      12
+       / \     /
+      9   7   1
+
+  ```
+
+- This is a complete binary tree.
+
+  ```
+            20
+          /    \
+        18      12
+       / \     /  \
+      9   7   1    2
+
+  ```
+
+- This is NOT a complete binary tree. As it is not left leaning when possible.
+
+  ```
+            20
+          /    \
+        18      12
+       / \        \
+      9   7        1
+
+  ```
+
+
+
 <br>
 
 #### Balanced Binary Tree
