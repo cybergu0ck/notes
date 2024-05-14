@@ -1,6 +1,6 @@
 # Heap
 
-A heap is a [complete binary tree](./trees/binary-tree.md#complete-binary-tree)  in which the parent nodes have values greater or lesser than the values of the children, based on wether it is max or min heap respectively.
+A heap is a [complete binary tree](./trees/binary-tree.md####complete-binary-tree)  in which the parent nodes have values greater or lesser than the values of the children, based on wether it is max or min heap respectively.
 
 <br/>
 <br/>
