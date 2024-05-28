@@ -36,6 +36,11 @@ It is used to view the commit history of a git repo.
   ```bash
   git log --oneline --graph --all
   ```
+* To view the commits made by a specific author,
+  
+  ```bash
+  git log --author="<username>"
+  ```
 
 <br>
 
