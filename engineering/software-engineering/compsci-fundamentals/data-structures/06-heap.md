@@ -1,6 +1,5 @@
 # Heap
 
-testing [test](./trees/04-trees.md#types-of-trees)
 A heap is a [complete binary tree](./trees/binary-tree.md#complete-binary-tree)  in which the parent nodes have values greater or lesser than the values of the children, based on wether it is max or min heap respectively.
 
 <br/>
