@@ -3,7 +3,57 @@
 <br>
 <br>
 
-## Setting default shell for integrated terminal
+## VS Code Key Bindings
+
+- Set these keybindings for all code editors (Shortcuts with mouse clicks are not modifiable)
+
+  | Shortcut                                         | Key Binding               |
+  | ------------------------------------------------ | ------------------------- |
+  | Selected Multi-cursor (VS Code Specific)         | Alt + Mouse Click         |
+  | Continous Multi-cursor (VS Code Specific)        | Alt + Shift + Mouse Click |
+  | Markdown: Open Preview                           | Ctrl + Shift + V          |
+  | Move Line Up/Down                                | Alt + Up/Down             |
+  | Copy Line Up                                     | Alt + Shift + Up/Down     |
+  | Add Selection to Find Next Match                 | Ctrl + D                  |
+  | Cursor Undo                                      | Ctrl + U                  |
+  | Select Entire Line                               | Ctrl + L                  |
+  | Find                                             | Ctrl + F                  |
+  | Replace                                          | Ctrl + H                  |
+  | Go to a Line                                     | Ctrl + G                  |
+  | Toggle Line Comment                              | Ctrl + /                  |
+  | Toggle Block Comment                             | Ctrl + Shift + /          |
+  | View:Open Previous Recently Used Editor in Group | Ctrl + Tab                |
+  | Remove All Breakpoints                           | Ctrl + Shift + F9         |
+  | Toggle Primary Side Bar (Left Bar)               | Ctrl + B                  |
+  | Toggle Pannel (Bottom, terminal...)              | Ctrl + J                  |
+  | Delete Line                                      | Ctrl + Shift + K          |
+  | Format Document                                  | Shift + Alt + L           |
+  | Format Selection                                 | Ctrl + K and Ctrl + F     |
+
+  <br>
+  <br>
+
+## Extensions
+
+<br>
+
+### Prettier
+
+To set up prettier:
+
+1. Download the prettier extension.
+2. Head to user settings (can be found by searching on command pallete Shift + Ctrl + P)
+3. Search "Default Formatter" settings and make Prettier as the default formatter.
+4. Search "Format on Save" settings and toggle it on.
+
+<br>
+<br>
+
+## Miscallaneous
+
+<br>
+
+### Setting default shell for integrated terminal
 
 1. Open Terminal ( Ctrl + `)
 1. Click on the drop down present in the top right side beside the name of the shell.
@@ -11,9 +61,11 @@
 1. Select the shell to be made default.
 
 <br>
-<br>
 
-## Setting custom font size for the Integrated Terminal
+### Setting custom font size for the Integrated Terminal
 
 1. Open settings.JSON using command Pallete (Ctrl + Shift + P)
 2. Add the line `"terminal.integrated.fontSize": 25,` with the desired font size.
+
+<br>
+<br>
