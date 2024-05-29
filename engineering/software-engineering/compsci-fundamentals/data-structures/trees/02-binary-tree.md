@@ -1,6 +1,27 @@
 # Binary Tree
 
-_When a tree has at the most two children, then it’s called ***binary tree***._
+_Binary Tree is a Tree where each node can have at most two children._
+
+<br>
+<br>
+
+## Complexity
+
+The asymptotic worst-case complexities are considered here.
+
+- For a Binary Tree with a linear chain of 'n' nodes,
+  | Operation | Time Complexity | Space Complexity |
+  | --------- | --------------- | ---------------- |
+  | Search | O(n) | |
+  | Insertion | O(n) | |
+  | Deletion | O(n) | |
+
+- For a Complete Binary Tree with "n" nodes,
+  | Operation | Time Complexity | Space Complexity |
+  | --------- | --------------- | ---------------- |
+  | Search | O(log(n)) | |
+  | Insertion | O(log(n)) | |
+  | Deletion | O(log(n)) | |
 
 <br>
 <br>
@@ -13,7 +34,7 @@ _When a tree has at the most two children, then it’s called ***binary tree***.
 
 <div style="height: 1px; background-color: #808080;"></div>
 
-The maximum number of nodes at a given height is $2^h$. The maximum number of nodes at a given height can be calculated by summing up all the nodes at previous height's i.e $ 2^h + 2^{h-1} + 2^{h-2} + ... + 1 $. This is a geometric series and the sum of a geometric series is given by the formula:
+The maximum number of nodes at a given height is $2^h$. The maximum number of nodes at a given height can be calculated by summing up all the nodes at previous height's i.e $2^h + 2^{h-1} + 2^{h-2} + ... + 1$. This is a geometric series and the sum of a geometric series is given by the formula:
 
 $$ S = a \left( \frac{1- r^n }{1- r } \right)$$
 
@@ -31,7 +52,7 @@ $$ \text{The maximum number of nodes in the tree} = N = 2^{h+1} -1 $$
 
 <div style="height: 1px; background-color: #808080;"></div>
 
-If $N$ is the maximum number of nodes and $h$ is the height of the tree, from [proof](#maximum-number-of-nodes-for-a-given-height) we know that:
+If $N$ is the maximum number of nodes and $h$ is the height of the tree, we know that ([proof](#maximum-number-of-nodes-for-a-given-height)) :
 
 $$ N = 2^{h+1} -1 $$
 
@@ -100,7 +121,7 @@ _A perfect binary tree is a type of binary tree in which all interior nodes have
 
 ![perfect-binary-tree](./_assets/perfect-binary-tree.png)
 
-- Perfect binary trees have precisely (2^k) - 1 nodes, where k is the last level of the tree (starting with 1).
+- Perfect binary trees have precisely $(2^k) - 1$ nodes, where k is the last level of the tree (starting with 1).
 - Perfect binary tree is a balanced binary tree where every level is filled with the maximum number of nodes possible.
 - A perfect binary tree is always complete binary tree.
 
@@ -125,28 +146,6 @@ _A complete binary tree is a type of binary tree in which all levels of the tree
 
   ```
 
-- This is a complete binary tree.
-
-  ```
-            20
-          /    \
-        18      12
-       / \     /
-      9   7   1
-
-  ```
-
-- This is a complete binary tree.
-
-  ```
-            20
-          /    \
-        18      12
-       / \     /  \
-      9   7   1    2
-
-  ```
-
 - This is NOT a complete binary tree. As it is not left leaning when possible.
 
   ```
@@ -157,8 +156,6 @@ _A complete binary tree is a type of binary tree in which all levels of the tree
       9   7        1
 
   ```
-
-
 
 <br>
 
@@ -171,11 +168,20 @@ _A balanced binary tree is a type of binary tree in which the heights of the lef
 <br>
 <br>
 
-## Binary Tree Traversals
+## Tree Traversal Algorithms
+
+Tree traversal algorithms are the only algorithms relevant to binary tree, algorithms to perform operations like searching, inserting or deleting a node is not relevant to binary tree as there is no criteria unlike that of [binary search tree property](03-binary-search-tree.md#binary-search-tree-property).
 
 <br/>
 
-### In-Order Traversal
+### Implementation
+
+
+
+
+### Implementation for arrays
+
+#### In-Order Traversal
 
 _Inorder traversal is a depth-first tree traversal algorithm that visits the left subtree, then the current node, and finally the right subtree_
 
@@ -220,7 +226,7 @@ print(in_order_traversal(nums))
 
 <br/>
 
-### Pre-Order Traversal
+#### Pre-Order Traversal
 
 _Preorder traversal is a depth-first tree traversal algorithm that visits the current node, then the left subtree, and finally the right subtree._
 
@@ -261,7 +267,7 @@ print(pre_order_traversal(nums))
 
 <br/>
 
-### Post-Order Traversal
+#### Post-Order Traversal
 
 Postorder traversal is a depth-first tree traversal algorithm that visits the left subtree, then the right subtree, and finally the current node.
 
@@ -302,7 +308,7 @@ print(post_order_traversal(nums))
 
 <br/>
 
-### Level-Order Traversal (BFS)
+#### Level-Order Traversal (BFS)
 
 _Level order traversal, also known as breadth-first traversal, visits nodes level by level from left to right, starting from the root level and moving to deeper levels._
 
@@ -342,9 +348,9 @@ print(level_order_traversal(nums))
 <br/>
 <br/>
 
-## Implementation
+### using Class
 
-//TODO - Write the complete class
+//TODO - Write the complete class and give this more significance than the array implementation
 
 ```python
 #This is a method of class BinarySearchTree

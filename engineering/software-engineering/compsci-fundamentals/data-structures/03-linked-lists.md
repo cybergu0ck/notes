@@ -1,8 +1,8 @@
 # Singly Linked List
 
-_A singly linked list is a linear data structure consisting of a sequence of elements called nodes._
+_A linked list is a data structure consisting of nodes where each node contains a value and a reference (or link) to the next node in the sequence._
 
-- Uses of Singly Linked Lists are as follows:
+- Singly linked list are used because of it's advantages:
   - Insertion and Deletion at the begining of the list is O(1).
   - They are memory efficient as they don't need contigous memory like arrays.
 
@@ -11,11 +11,13 @@ _A singly linked list is a linear data structure consisting of a sequence of ele
 
 ## Complexity
 
-| Operation | Time Complexity |
-| --------- | --------------- |
-| Insertion | O(n)            |
-| Deletion  | O(n)            |
-| Search    | O(n)            |
+The asymptotic worst-case complexities are considered here.
+
+| Operation | Time Complexity |Space Complexity |
+| --------- | --------------- |---------------- |
+| Search    | O(n)            |                 |
+| Insertion | O(n)            |                 |
+| Deletion  | O(n)            |                 |
 
 <br>
 <br>
@@ -66,3 +68,12 @@ ll.appendNode(n4)
 ll.removeNode(n3)
 ll.printList()
 ```
+
+<br>
+<br>
+
+## The Runner Technique
+
+This technique uses two pointers, often called as "fast" and "slow" pointers to accomplish many applications in linked lists.
+
+* Finding the middle node in a linked list

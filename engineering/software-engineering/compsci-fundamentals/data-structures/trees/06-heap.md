@@ -1,13 +1,14 @@
 # Heap
 
-A heap is a [complete binary tree](./trees/binary-tree.md#complete-binary-tree)  in which the parent nodes have values greater or lesser than the values of the children, based on wether it is max or min heap respectively.
+_Heap is a [Complete Binary Tree](./trees/binary-tree.md#complete-binary-tree) in which the parent nodes have values greater or lesser than the values of the children, based on wether it is max or min heap respectively._
 
+<br/>
 <br/>
 <br/>
 
 # Max Heap
 
-A max heap is a complete binary tree in which the value of each node is greater than or equal to the values of its children.
+_Max Heap is a [Complete Binary Tree](./trees/binary-tree.md#complete-binary-tree) in which the value of each node is greater than or equal to the values of its children._
 
 - In a max heap, the value of the root node is the largest among all nodes in the heap.
 - When represented as an array: for any node i in the heap,

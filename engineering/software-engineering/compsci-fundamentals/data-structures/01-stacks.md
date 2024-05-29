@@ -5,9 +5,9 @@ A stack is a linear data structure that stores items in a Last-In/First-Out (LIF
 <br>
 <br>
 
-# Implementation
+## Implementation
 
-- stacks can be implemented using lists.
+- Stacks can be implemented using lists.
 
   ```py
   stack = []
@@ -25,7 +25,7 @@ A stack is a linear data structure that stores items in a Last-In/First-Out (LIF
   #>stack after popping :[1, 2]
   ```
 
-* stack can be implemented using Collections.deque (deque is pronounced as 'deck'!)
+* Stack can be implemented using `collections.deque` (deque is pronounced as 'deck'!)
 
   ```py
   from collections import deque
@@ -44,3 +44,6 @@ A stack is a linear data structure that stores items in a Last-In/First-Out (LIF
   #>Queue before popping :deque([100, 200, 300])
   #>Queue after popping :deque([100, 200])
   ```
+
+<br>
+<br>

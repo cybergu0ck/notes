@@ -5,9 +5,9 @@ Queue follows the First In First Out (FIFO) rule - the item that goes in first i
 <br>
 <br>
 
-# Implementation
+## Implementation
 
-- queues can be implemented using lists
+- Queues can be implemented using lists
 
   ```py
   queue = []
@@ -25,7 +25,7 @@ Queue follows the First In First Out (FIFO) rule - the item that goes in first i
   #>Queue after popping :[2, 3]
   ```
 
-* queues can be implemented using Collections.deque using append() and popleft()
+* Queues can be implemented using `collections.deque` using `append()` and `popleft()`.
 
   ```py
   from collections import deque
@@ -44,3 +44,6 @@ Queue follows the First In First Out (FIFO) rule - the item that goes in first i
   #>Queue before popping :deque([100, 200, 300])
   #>Queue after popping :deque([200, 300])
   ```
+
+<br>
+<br>

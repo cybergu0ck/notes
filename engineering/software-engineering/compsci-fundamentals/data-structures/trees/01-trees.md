@@ -1,6 +1,6 @@
 # Tree
 
-_A tree is a nonlinear hierarchial data structure that consists of nodes connected by edges._
+_Tree is a nonlinear hierarchial data structure that consists of nodes connected by edges._
 
 <br>
 <br>
@@ -58,13 +58,6 @@ _A tree is a nonlinear hierarchial data structure that consists of nodes connect
 <br/>
 <br/>
 
-## Balanced vs UnBalanced Trees
-
-> Make Notes!
-
-<br/>
-<br/>
-
-# Reference
+## Reference
 
 https://adrianmejia.com/data-structures-for-beginners-trees-binary-search-tree-tutorial/#.W0_QE_GXQ10.reddit
