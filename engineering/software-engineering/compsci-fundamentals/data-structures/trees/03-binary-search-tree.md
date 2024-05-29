@@ -55,22 +55,6 @@ class BinarySearchTree:
                     print("duplicates are ignored")
                     break
 
-    def in_order_traversal(self, root: Node = None) -> list[float]:
-        res = []
-        cur = self.root if not root else root
-        stack = []
-
-        while True:
-            if cur:
-                stack.append(cur)
-                cur = cur.left
-            elif stack:
-                cur = stack.pop()
-                res.append(cur.value)
-                cur = cur.right
-            else:
-                break
-        return res
 
     def search_node(self, value: float, root: Node = None) -> Node:
         res = None
@@ -184,6 +168,83 @@ class BinarySearchTree:
                 else:
                     to_delete_parent.right = None
 
+    def in_order_traversal(self, root: Node = None) -> list[float]:
+        res = []
+        cur = self.root if not root else root
+        stack = []
+
+        while True:
+            if cur:
+                stack.append(cur)
+                cur = cur.left
+            elif stack:
+                cur = stack.pop()
+                res.append(cur.value)
+                cur = cur.right
+            else:
+                break
+        return res
+
+    def pre_order_traversal(self, root: Node = None) -> list[float]:
+        res = []
+        cur = self.root if not root else root
+        stack = [cur]
+
+        while stack:
+            cur = stack.pop()
+            res.append(cur.value)
+            if cur.right:
+                stack.append(cur.right)
+            if cur.left:
+                stack.append(cur.left)
+        return res
+
+    def post_order_traversal(self, root: Node = None) -> list[float]:
+        res = []
+        cur = self.root if not root else root
+        stack = [cur]
+
+        while stack:
+            cur = stack.pop()
+            res.append(cur.value)
+            if cur.left:
+                stack.append(cur.left)
+            if cur.right:
+                stack.append(cur.right)
+        return res[::-1]
+
+    def level_order_traversal(self, root: Node = None) -> list[float]:
+        res = []
+        cur = self.root if not root else root
+        q = [cur]
+
+        while q:
+            cur = q.pop(0)
+            res.append(cur.value)
+            if cur.left:
+                q.append(cur.left)
+            if cur.right:
+                q.append(cur.right)
+        return res
+
+    def level_order_traversal_diff(self, root: Node = None) -> list[list[Node]]:
+        res = []
+        cur = self.root if not root else root
+        q = [cur]
+
+        while q:
+            level = []
+            for i in range(len(q)):
+                cur = q.pop(0)
+                level.append(cur.value)
+
+                if cur.left:
+                    q.append(cur.left)
+                if cur.right:
+                    q.append(cur.right)
+            res.append(level)
+
+        return res
 ```
 
 <br/>
@@ -396,7 +457,28 @@ def delete_node(self, value: float) -> None:
 
 The traversal algorithms for the binary search tree is same as that of the [binary tree](./02-binary-tree.md#tree-traversal-algorithms).
 
-//TODO - Add the code in the above class implementation
+<br>
+<br>
+
+## Complexity
+
+The asymptotic worst-case complexities are considered here.
+
+- For a Binary Search Tree with a linear chain of 'n' nodes,
+  | Operation | Time Complexity | Space Complexity |
+  | --------- | --------------- | ---------------- |
+  | Search | O(n) | |
+  | Insertion | O(n) | |
+  | Deletion | O(n) | |
+
+- For a Complete Binary Search Tree with "n" nodes,
+  | Operation | Time Complexity | Space Complexity |
+  | --------- | --------------- | ---------------- |
+  | Search | O(log(n)) | |
+  | Insertion | O(log(n)) | |
+  | Deletion | O(log(n)) | |
+
+//TODO - Fill up the above table
 
 <br>
 <br>

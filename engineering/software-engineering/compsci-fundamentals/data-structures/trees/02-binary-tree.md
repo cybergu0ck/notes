@@ -5,27 +5,6 @@ _Binary Tree is a Tree where each node can have at most two children._
 <br>
 <br>
 
-## Complexity
-
-The asymptotic worst-case complexities are considered here.
-
-- For a Binary Tree with a linear chain of 'n' nodes,
-  | Operation | Time Complexity | Space Complexity |
-  | --------- | --------------- | ---------------- |
-  | Search | O(n) | |
-  | Insertion | O(n) | |
-  | Deletion | O(n) | |
-
-- For a Complete Binary Tree with "n" nodes,
-  | Operation | Time Complexity | Space Complexity |
-  | --------- | --------------- | ---------------- |
-  | Search | O(log(n)) | |
-  | Insertion | O(log(n)) | |
-  | Deletion | O(log(n)) | |
-
-<br>
-<br>
-
 ## Equations related to Binary Tree
 
 <br>
@@ -172,35 +151,157 @@ _A balanced binary tree is a type of binary tree in which the heights of the lef
 
 Tree traversal algorithms are the only algorithms relevant to binary tree, algorithms to perform operations like searching, inserting or deleting a node is not relevant to binary tree as there is no criteria unlike that of [binary search tree property](03-binary-search-tree.md#binary-search-tree-property).
 
+![binary-tree](./_assets/perfect-binary-tree.png)
+
+<br>
+
+#### In Order Traversal
+
+_Inorder traversal is a depth-first tree traversal algorithm that visits the left subtree, then the current node, and finally the right subtree_
+
+- In Order Traversal : 4, 2, 5, 1, 6, 3, 7
+
+<br>
+
+#### Pre Order Traversal
+
+_Preorder traversal is a depth-first tree traversal algorithm that visits the current node, then the left subtree, and finally the right subtree._
+
+- Pre Order Traversal : 1, 2, 4, 5, 3, 6, 7
+
+<br>
+
+#### Post Order Traversal
+
+_Postorder traversal is a depth-first tree traversal algorithm that visits the left subtree, then the right subtree, and finally the current node._
+
+- Post Order Traversal : 4, 5, 2, 6, 7, 3, 1
+
+<br>
+
+#### Level Order Traversal
+
+_Level order traversal, also known as breadth-first traversal, visits nodes level by level from left to right, starting from the root level and moving to deeper levels._
+
+- Level Order Traversal : 1, 2, 3, 4, 5, 6, 7
+
+<br>
+
 <br/>
 
 ### Implementation
 
+```py
+class Node:
+    def __init__(self, value: float = None, left: "Node" = None, right: "Node" = None):
+        self.value = value
+        self.left = left
+        self.right = right
 
 
+class BinarySearchTree:
+    def __init__(self):
+        self.root = Node()
 
-### Implementation for arrays
+    def in_order_traversal(self, root: Node = None) -> list[float]:
+        res = []
+        cur = self.root if not root else root
+        stack = []
 
-#### In-Order Traversal
+        while True:
+            if cur:
+                stack.append(cur)
+                cur = cur.left
+            elif stack:
+                cur = stack.pop()
+                res.append(cur.value)
+                cur = cur.right
+            else:
+                break
+        return res
 
-_Inorder traversal is a depth-first tree traversal algorithm that visits the left subtree, then the current node, and finally the right subtree_
+    def pre_order_traversal(self, root: Node = None) -> list[float]:
+        res = []
+        cur = self.root if not root else root
+        stack = [cur]
+
+        while stack:
+            cur = stack.pop()
+            res.append(cur.value)
+            if cur.right:
+                stack.append(cur.right)
+            if cur.left:
+                stack.append(cur.left)
+        return res
+
+    def post_order_traversal(self, root: Node = None) -> list[float]:
+        res = []
+        cur = self.root if not root else root
+        stack = [cur]
+
+        while stack:
+            cur = stack.pop()
+            res.append(cur.value)
+            if cur.left:
+                stack.append(cur.left)
+            if cur.right:
+                stack.append(cur.right)
+        return res[::-1]
+
+    def level_order_traversal(self, root: Node = None) -> list[float]:
+        res = []
+        cur = self.root if not root else root
+        q = [cur]
+
+        while q:
+            cur = q.pop(0)
+            res.append(cur.value)
+            if cur.left:
+                q.append(cur.left)
+            if cur.right:
+                q.append(cur.right)
+        return res
+
+    def level_order_traversal_diff(self, root: Node = None) -> list[list[Node]]:
+        res = []
+        cur = self.root if not root else root
+        q = [cur]
+
+        while q:
+            level = []
+            for i in range(len(q)):
+                cur = q.pop(0)
+                level.append(cur.value)
+
+                if cur.left:
+                    q.append(cur.left)
+                if cur.right:
+                    q.append(cur.right)
+            res.append(level)
+
+        return res
+```
+
+<br>
+
+### Implementation using Arrays
 
 ```py
 # Given a binary tree in array form
-def in_order_traversal(arr):
 
-    def get_left_child_index(parent_index):
+def get_left_child_index(parent_index):
         return 2 * parent_index + 1
 
-    def get_right_child_index(parent_index):
-        return 2 * parent_index + 2
+def get_right_child_index(parent_index):
+    return 2 * parent_index + 2
 
-    def exists(index):
-        if index < len(arr):
-            return True
-        else:
-            return False
+def exists(index):
+    if index < len(arr):
+        return True
+    else:
+        return False
 
+def in_order_traversal(arr):
     res = []
     stack = []
     cur = 0
@@ -217,33 +318,7 @@ def in_order_traversal(arr):
             break
     return res
 
-
-nums = [1, 3, 10, 4, 2, 5]
-print(in_order_traversal(nums))
-
-# [4, 3, 2, 1, 5, 10]
-```
-
-<br/>
-
-#### Pre-Order Traversal
-
-_Preorder traversal is a depth-first tree traversal algorithm that visits the current node, then the left subtree, and finally the right subtree._
-
-```py
 def pre_order_traversal(arr):
-    def get_left_child_index(parent_index):
-        return 2 * parent_index + 1
-
-    def get_right_child_index(parent_index):
-        return 2 * parent_index + 2
-
-    def exists(index):
-        if index < len(arr):
-            return True
-        else:
-            return False
-
     res = []
     stack = [0] if arr else []
 
@@ -258,33 +333,7 @@ def pre_order_traversal(arr):
 
     return res
 
-
-nums = [10, 8, 5, 12, 16, 1]
-print(pre_order_traversal(nums))
-
-# [10, 8, 12, 16, 5, 1]
-```
-
-<br/>
-
-#### Post-Order Traversal
-
-Postorder traversal is a depth-first tree traversal algorithm that visits the left subtree, then the right subtree, and finally the current node.
-
-```py
 def post_order_traversal(arr):
-    def get_left_child_index(parent_index):
-        return 2 * parent_index + 1
-
-    def get_right_child_index(parent_index):
-        return 2 * parent_index + 2
-
-    def exists(index):
-        if index < len(arr):
-            return True
-        else:
-            return False
-
     res = []
     stack = [0] if arr else []
 
@@ -299,33 +348,7 @@ def post_order_traversal(arr):
 
     return res[-1::-1]
 
-
-nums = [10, 8, 5, 12, 16, 1]
-print(post_order_traversal(nums))
-
-# [12, 16, 8, 1, 5, 10]
-```
-
-<br/>
-
-#### Level-Order Traversal (BFS)
-
-_Level order traversal, also known as breadth-first traversal, visits nodes level by level from left to right, starting from the root level and moving to deeper levels._
-
-```py
 def level_order_traversal(arr):
-    def get_left_child_index(parent_index):
-        return 2 * parent_index + 1
-
-    def get_right_child_index(parent_index):
-        return 2 * parent_index + 2
-
-    def exists(index):
-        if index < len(arr):
-            return True
-        else:
-            return False
-
     res = []
     q = [0] if arr else []
 
@@ -337,206 +360,7 @@ def level_order_traversal(arr):
         if exists(get_right_child_index(cur)):
             q.append(get_right_child_index(cur))
     return res
-
-
-nums = [12, 16, 8, 1, 5, 10]
-print(level_order_traversal(nums))
-
-# [12, 16, 8, 1, 5, 10]
 ```
 
 <br/>
 <br/>
-
-### using Class
-
-//TODO - Write the complete class and give this more significance than the array implementation
-
-```python
-#This is a method of class BinarySearchTree
-def in_order(self, root = None, must_return = "values"):
-    "in order is DFS hence use a stack, left -> root ->right"
-    #---------------------------------------------------------------------------------
-    #consider self.root as defualt parameter
-    if root == None:
-        cur = self.root
-    else:
-        cur = root
-    #---------------------------------------------------------------------------------
-    #in-order traversal of an empty tree is []
-    if cur == None:
-        return []
-    #---------------------------------------------------------------------------------
-    #logic
-    nodes = []                  #nodes is a list of Nodeobjects
-    stack = []
-    while True:
-        if cur:
-            stack.append(cur)
-            cur = cur.left
-        elif stack:
-            cur = stack.pop()
-            nodes.append(cur)
-            cur = cur.right
-        else:
-            break
-    #---------------------------------------------------------------------------------
-    #returning nodes
-    if must_return == "nodes":
-        return nodes
-    #---------------------------------------------------------------------------------
-    #returning values
-    elif must_return == "values":
-        values = []                     #values is a listof Node values
-        for node in nodes:
-            values.append(node.val)
-        return values
-    #---------------------------------------------------------------------------------
-```
-
-```python
-#This is a method of class BinarySearchTree
-
-def pre_order(self,root = None, must_return = "values"):
-        "pre order is DFS, root -> left -> right"
-        #----------------------------------------------------------------------------------
-        #consider self.root as defualt parameter
-
-        if root == None:
-            cur = self.root
-        else:
-            cur = root
-
-        #----------------------------------------------------------------------------------
-        #preOrder traversal of empty tree is []
-        if cur == None:
-            return []
-
-        #----------------------------------------------------------------------------------
-        #logic
-        stack = [cur]
-        nodes = []                          #nodes is a list of Node objects
-        while stack:
-            cur = stack.pop()
-            nodes.append(cur)               #we are appending the Node objects itself.
-            if cur.right:
-                stack.append(cur.right)     #Right child must be appended first!
-            if cur.left:
-                stack.append(cur.left)
-
-        #----------------------------------------------------------------------------------
-        #returning nodes
-
-        if must_return == "nodes":
-            return nodes                    #Return based on the must_return parameter.
-
-        #----------------------------------------------------------------------------------
-        #returning values
-
-        if must_return == "values":
-            values =[]                          #values is a list of Node values
-            for node in nodes:
-                values.append(node.val)
-
-            return values
-        #----------------------------------------------------------------------------------
-```
-
-```python
-#This is a method of class BinarySearchTree
-def post_order(self, root = None, must_return = "values"):
-        "post order is a DFS hence use a stack; left ->right -> root"
-        #---------------------------------------------------------------------------------
-        #consider self.root as defualt parameter
-        if root == None:
-            cur = self.root
-        else:
-            cur = root
-        #---------------------------------------------------------------------------------
-        #postOrder traversal of empty tree is []
-        if cur == None:
-            return []
-        #---------------------------------------------------------------------------------
-        #logic
-        stack = [cur]
-        nodes = []
-        while stack:
-            cur = stack.pop()
-            nodes.append(cur)
-            if cur.left:
-                stack.append(cur.left)          #Leftchild must be added first!
-            if cur.right:
-                stack.append(cur.right)
-        nodes = nodes[::-1]                     #what wewant is actually the reverse!
-        #---------------------------------------------------------------------------------
-        #returning nodes
-        if must_return == "nodes":
-            return nodes
-        #---------------------------------------------------------------------------------
-        #returning values
-        elif must_return == "values":
-            values = []
-            for node in nodes:
-                values.append(node.val)
-            return values
-        #---------------------------------------------------------------------------------
-```
-
-```py
-# This is a method of class BinarySearchTree
-
-
-def level_order(self, root=None, must_return="values", return_type="list(list)"):
-    """level order is a BFS hence use queue."""
-    # ----------------------------------------------------------------------------------
-    if root == None:
-        cur = self.root  # consider self.root as defualt parameter
-    else:
-        cur = root
-    # ----------------------------------------------------------------------------------
-    if cur == None:
-        return []  # level order for an empty tree is []
-    # ----------------------------------------------------------------------------------
-    # logic
-    q = [cur]
-    multi_nodes = []  # multi_nodes is a list of list of Node objects
-    while q:
-        levels = []
-        for node in q.copy():
-            levels.append(node)
-            q.pop(0)
-        multi_nodes.append(levels)
-        for node in multi_nodes[-1]:
-            if node.left:
-                q.append(node.left)
-            if node.right:
-                q.append(node.right)
-    # ----------------------------------------------------------------------------------
-    # list(list) means [[], [], [], ...]
-    if return_type == "list(list)":
-        if must_return == "nodes":
-            return multi_nodes
-        elif must_return == "values":
-            multi_values = []  # multi_values is a list of list of Node values.
-            for node_list in multi_nodes:  # nodes is of the type [[]]
-                values_list = []
-                for node in node_list:
-                    values_list.append(node.val)
-                multi_values.append(values_list)
-            return multi_values
-    # ----------------------------------------------------------------------------------
-    # list means []
-    elif return_type == "list":
-        nodes = []  # nodes is a list of Node objects
-        for node_list in multi_nodes:
-            for node in node_list:
-                nodes.append(node)
-        if must_return == "nodes":
-            return nodes
-        elif must_return == "values":
-            values = []  # values is a list of Node values.
-            for node in nodes:
-                values.append(node.val)
-            return values
-    # ----------------------------------------------------------------------------------
-```
