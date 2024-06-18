@@ -54,6 +54,85 @@ View [in undoing changes notes](06-undoing-changes.md#ammend-commit).
 <br>
 <br>
 
+## Stashing the Changes
+
+```bash
+git stash
+```
+
+- The stash command will take uncommitted changes (both staged and unstaged) and saves them away for later use.
+- **_The stash command will not stash untracked files._**
+- To include the untracked files in the stash, use :
+
+  ```bash
+  git stash -u
+  ```
+
+<br>
+
+### Multiple Stashes
+
+Git supports multiple stashes, It stacks the stashes on top of eachother.
+
+- By default it uses the current commit SHA as a stash message.
+
+  ```
+  stash@{1}: WIP on main: bac2a64 added file
+  stash@{2}: WIP on main: bac2a64 added file
+  ```
+
+- `git stash save "<message>"` adds a stash message for our convenience.
+
+  ```
+  stash@{0}: On main: Final Fix, brain says
+  stash@{1}: WIP on main: bac2a64 added file
+  stash@{2}: WIP on main: bac2a64 added file
+  ```
+
+<br>
+
+### View the Stash
+
+```bash
+git stash list
+```
+
+<br>
+
+### Reapplying the Stashed Changes
+
+The `pop` and `apply` git commands are used to apply the stashed changes back to the working directory, The major difference is that after re-applying the changes, `pop` command will remove the changes from the stash while `apply` will keep the changes in the stash.
+
+- To re-apply the latest stashed change, use :
+
+  ```bash
+  git stash pop
+  ```
+
+- To re-apply a specific stashed change, use :
+
+  ```bash
+  git stash pop stash@{<number>}
+  ```
+
+<br>
+
+### Dropping Stashed Changes
+
+- To drop a specific stashed change, use :
+
+  ```bash
+  git stash drop stash@{<number>}
+  ```
+
+- To drop the entire stash, i.e delete all the stashed changes, use :
+
+  ```bash
+  git stash clear
+  ```
+
+<br>
+
 ## Tags
 
 - A tag is a reference/label attached to a specific commit.
