@@ -52,7 +52,7 @@ $$ \text{The height of the tree = h =} floor(log_2(N))$$
 When the tree is represented as an array, for node at index $i$,
 
 $$ \text{Index of left child} = 2\times{i}+1 $$
-  $$ \text{Index of right child} = 2\times{i} +2$$
+$$ \text{Index of right child} = 2\times{i} +2$$
 $$ \text{Index of parent} = floor((i-1)/2)$$
 
 <br/>
