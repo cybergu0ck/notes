@@ -191,6 +191,8 @@ _Level order traversal, also known as breadth-first traversal, visits nodes leve
 
 ### Implementation
 
+All traversal algorithms are $O(n)$ algorithms.
+
 ```py
 class Node:
     def __init__(self, value: float = None, left: "Node" = None, right: "Node" = None):
@@ -205,8 +207,8 @@ class BinarySearchTree:
 
     def in_order_traversal(self, root: Node = None) -> list[float]:
         res = []
-        cur = self.root if not root else root
         stack = []
+        cur = self.root if not root else root
 
         while True:
             if cur:
@@ -280,6 +282,29 @@ class BinarySearchTree:
             res.append(level)
 
         return res
+```
+
+<br>
+<br>
+
+## Refernces
+
+### In Order Traversal wihout Infinite Loop
+
+```py
+def in_order_traversal(self, root: Node = None) -> list[float]:
+    res = []
+    stack = []
+    cur = self.root if not root else root
+    while cur or stack:
+        if cur:
+            stack.append(cur)
+            cur = cur.left
+        else:
+            cur = stack.pop()
+            res.append(cur.value)
+            cur = cur.right
+    return res
 ```
 
 <br>
