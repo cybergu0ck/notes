@@ -56,7 +56,7 @@ class MaxHeap:
         return 2 * parent_index + 2
 
     def parent_index(self, child_index):
-        return child_index // 2
+        return (child_index -1) // 2
 
     def max_heapify(self, index: int = 0) -> None:
         left_index = self.left_child_index(index)
@@ -113,6 +113,7 @@ def max_heapify(self, index: int = 0) -> None:
 ```
 
 - `max_heapify` algorithm will not fix the entire tree as the assumption that it inherently makes is not always true.
+- `max_heapify` has $O(log(N))$ time complexity, as it'll run as many times as the height of the binary tree.
 
 <br/>
 
@@ -129,6 +130,7 @@ def build_max_heap(self, array: list = None) -> None:
 ```
 
 - `build_max_heap` algorithm will fix the entire tree.
+- `build_max_heap` has $O(n*log(N))$ time complexity.
 
 <br/>
 
@@ -198,8 +200,6 @@ A min heap is a complete binary tree in which the value of each node is lesser t
 <br>
 
 # Heap Sort
-
-//TODO - Add the heap sort algorithm
 
 <br>
 <br>
