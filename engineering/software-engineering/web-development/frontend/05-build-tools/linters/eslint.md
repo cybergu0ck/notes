@@ -93,17 +93,33 @@ Rules can be found in `eslintrc` file. If it's in JSON format, then add the rule
 
 ### Disabling props validation during linting for react
 
-- Add the following to .eslintrc file in the root directory of project.
+- Add the following rule to .eslintrc file present in the root directory of project.
 
   ```bashrc
   {
-  "plugins": [
-     "react"
-  ],
-  "rules": {
-     "react/prop-types": 0
+  "rules": {"react/prop-types": 0}
   }
+  ```
+
+<br>
+
+### Supressing warning for unused variables
+
+- Add the following rule to .eslintrc file present in the root directory of project.
+  ```
+  {
+     "no-unused-vars": "off",
   }
+  ```
+
+<br>
+
+### Supressing key prop missing warning
+
+- Add the following rule to .eslintrc file present in the root directory of project.
+
+  ```
+  'react/jsx-key': [1, { checkFragmentShorthand: true }]
   ```
 
 <br>
