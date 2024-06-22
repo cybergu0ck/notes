@@ -1,3 +1,17 @@
+# Single Page Application
+
+A single page application (SPA) is a web application that interacts with the user by dynamically rewriting the current page rather than loading entire new pages from the server.
+
+<br>
+
+## Routing
+
+It is the process of matching different URLs to different UI views (react components)
+
+<br>
+<br>
+<br>
+
 # React Router
 
 _**React Router** is a popular library for handling navigation and routing in React applications._
@@ -128,9 +142,12 @@ export default App;
   export default HomePage;
   ```
 
-- _NavLink is very much like Link, however it adds an "active" class to the rendered element when it's `to` prop mathces the current location._
+- _NavLink is very much like Link, however it adds an "active" class to the rendered element when it's `to` prop mathces the current location._ This class can be used in CSS to specifically highlight the current state.
 
 - Using an anchor tag `<a>` for linking reloads the entire page but Link and NavLink doesn't.
+  ```jsx
+  <a href="/pricing">Pricing</a> <!-- Reloads the page! -->
+  ```
 
 <br>
 
