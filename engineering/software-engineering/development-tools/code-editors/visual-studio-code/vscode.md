@@ -33,6 +33,44 @@
   <br>
   <br>
 
+## Snippets
+
+- The following snippets are used for writing react code.
+  ```
+  {
+    "reactComponent": {
+      "prefix": "rfc",
+      "scope": "javascript,typescript,javascriptreact",
+      "body": [
+      "function ${1:${TM_FILENAME_BASE}}() {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+      ],
+      "description": "React component"
+    },
+    "importCSSModule": {
+      "prefix": "csm",
+      "scope": "javascript,typescript,javascriptreact",
+      "body": ["import styles from './${TM_FILENAME_BASE}.module.css'"],
+      "description": "Import CSS Module as `styles`"
+      },
+    "ClassName with formated string": {
+      "prefix": "cla",
+      "body": [
+          "className = {${1:}}"
+      ],
+      "description": "ClassName with formated string"
+    } ,
+  }
+  ```
+
 ## Extensions
 
 <br>
