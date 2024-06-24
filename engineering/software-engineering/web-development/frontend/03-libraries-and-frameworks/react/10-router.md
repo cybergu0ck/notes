@@ -232,41 +232,127 @@ export default AppPage;
 <br>
 <br>
 
-## Route with parameters
+## Route with Parameters
 
-Parameters in the route are placeholders in the URL that capture values and make them accessible to the components.
+_Parameters are placeholders in the URL that facilitates the state to be stored directly in the URL._
+
+//TODO - Link to the notes on storing state in the URL present in state management.
+
+Consider the following code for the explanation.
 
 ```jsx
-<Router>
-  <Route path="cities/:city_id" element={MyComponent} />
-</Router>
+//App.jsx
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import UserProfile from "./components/UserProfile";
+import AppPage from "./components/AppPage";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage></HomePage>}></Route>
+        <Route path="app" element={<AppPage></AppPage>}></Route>
+        <Route path="app/:user" element={<UserProfile></UserProfile>}></Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
 ```
 
-- Generally the parameter will be the value of a variable or a state in which case the state is being stored in the URL.
+```jsx
+//HomePage.jsx
+
+import { Link } from "react-router-dom";
+
+function HomePage() {
+  return (
+    <Link to="app">
+      <button>Go to App</button>
+    </Link>
+  );
+}
+
+export default HomePage;
+```
+
+```jsx
+//AppPage.jsx
+
+import { Link } from "react-router-dom";
+
+function AppPage() {
+  const user1 = { name: "TerranceHill", role: "Deputy" };
+  const user2 = { name: "BudSpencer", role: "Sherif" };
+
+  return (
+    <div>
+      <Link to={`${user1.name}`}>
+        <button>Terrance Hill</button>
+      </Link>
+      <Link to={`${user2.name}`}>
+        <button>Bud Spencer</button>
+      </Link>
+    </div>
+  );
+}
+
+export default AppPage;
+```
+
+```jsx
+//UserProfile.jsx
+
+import { useParams } from "react-router";
+
+function UserProfile() {
+  const { user } = useParams();
+
+  return (
+    <div>
+      <h1>Name: {user}</h1>
+    </div>
+  );
+}
+
+export default UserProfile;
+```
 
 <br>
 
-### Setting the parameters
+### Setting up the Route
 
-We can set the parameters using the Link component and it's `to` prop.
+The following syntax is used to setup the parameter, here `user` is the name of the parameter.
 
 ```jsx
-//id here can be any variable
-<Link to={${id}}>{/* children components goes here*/}</Link>
+<Route path="/:user" element={<UserProfile></UserProfile>}></Route>
 ```
-
-- When we are in the route "cities" and we click the element having the above link, the url becomes "cities/{value of the variable "id"}".
-- This will match the Route having the path "cities/:city_id" and the corresponding element will be loaded.
 
 <br>
 
-### Accessing the parameters
+### Linking to the Route containg Parameters
+
+The route is linked using the Link component and it's `to` prop. In this code, when the button is cliked, `user1.name` is the value for the parameter `user`. The value of the parameter is appended to the exisiting URL, hence the URL changes from `.../app` to `.../app/<value of the parameter>`. This url will be picked up by the router and the associated component will be loaded (`<UserProfile>` in this case).
+
+```jsx
+<Link to={`${user1.name}`}>
+  <button>Terrance Hill</button>
+</Link>
+```
+
+- It is important that the value for `to` doesn't include `/` as the start.
+
+<br>
+
+### Accessing the Parameters
 
 The `useParams` function facilitates the access to the parameters from the current route.
 
 ```jsx
-import { useParams } from "react-router-dom";
-const { city_id } = useParams(); //Here city_id will have the value of the variable "id"
+const { user } = useParams(); //The name of the variable must be the name of the parameter!
 ```
 
 <br>
@@ -274,25 +360,137 @@ const { city_id } = useParams(); //Here city_id will have the value of the varia
 
 ## Route with Queries
 
-Queries are set in the Link component's to prop.
+_Queries are key-value pairs in the URL that facilitates the state to be stored directly in the URL._
+
+Consider the following code.
 
 ```jsx
-//position is a variable
+//App.jsx
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import UserProfile from "./components/UserProfile";
+import AppPage from "./components/AppPage";
 
-<Link
-  className={styles.cityItem}
-  to={`cities?lat=${position.lat}&{position.lng}`}
-></Link>
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage></HomePage>}></Route>
+        <Route path="app" element={<AppPage></AppPage>}></Route>
+        <Route path="app/:user" element={<UserProfile></UserProfile>}></Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
 ```
 
-- When the element with the above link is clicked, The Router tries to match the Route containing ".../cities" and then loads the element corresponding to that route.
-- It also appends the above queries in the URL. It looks something like:
+```jsx
+//HomePage.jsx
 
-  ```
-  http://localhost:5173/app/cities?lat=38.727881642324164&lng=-9.140900099907554
-  ```
+import { Link } from "react-router-dom";
 
-- The usefullness of queries is that we save some data directly in the URL hence when the URL is shared, the data is also shared, which means that the webpage will be loaded to exact state when it is shared.
+function HomePage() {
+  return (
+    <Link to="app">
+      <button>Go to App</button>
+    </Link>
+  );
+}
+
+export default HomePage;
+```
+
+```jsx
+//AppPage.jsx
+
+import { Link } from "react-router-dom";
+
+function AppPage() {
+  const user1 = { name: "TerranceHill", role: "Deputy" };
+  const user2 = { name: "BudSpencer", role: "Sherif" };
+
+  return (
+    <div>
+      <Link to={`${user1.name}?role=${user1.role}&is_good=${true}`}>
+        <button>Terrance Hill</button>
+      </Link>
+      <Link to={`${user2.name}?role=${user1.role}&is_good=${false}`}>
+        <button>Bud Spencer</button>
+      </Link>
+    </div>
+  );
+}
+
+export default AppPage;
+```
+
+```jsx
+//UserProfile.jsx
+
+import { useParams } from "react-router";
+import { useSearchParams } from "react-router-dom";
+
+function UserProfile() {
+  const { user } = useParams();
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const role = searchParams.get("role");
+  const is_good = searchParams.get("is_good");
+
+  return (
+    <>
+      <div style={{ display: "flex" }}>
+        <div style={{ marginRight: "30px" }}>
+          <h3>Name: {user}</h3>
+          <h3>Role: {role}</h3>
+          <h3>Good: {is_good}</h3>
+        </div>
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Folks present</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{role}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style={{ marginTop: "30px" }}>
+        <button
+          onClick={() => setSearchParams({ role: "Boss", is_good: "Always" })}
+        >
+          Change Role
+        </button>
+      </div>
+    </>
+  );
+}
+
+export default UserProfile;
+```
+
+<br>
+
+### Linking the Query
+
+Queries need not be set in the Route but are directly linked using the following syntax.
+
+```jsx
+<Link to={`${user1.name}?role=${user1.role}&is_good=${true}`}>
+  <button>Terrance Hill</button>
+</Link>
+```
+
+- multiple queries can be used using `&`.
+- Queries can be used without Parameters (unlike the above code).
+- Queries get appended to the existing URL just like parameters.
 
 <br>
 
@@ -306,13 +504,14 @@ const [searchParams, setSearchParams] = useSearchParams();
 - The queries in the active url can be accessed by calling the get method on the searchParams object with the name of the query as the parameter.
 
   ```jsx
-  const lat = searchParams.get("lat");
+  const role = searchParams.get("role");
+  const is_good = searchParams.get("is_good");
   ```
 
 - The queries can be set by passing a new object containing the values for the queries as a parameter to the setSearchParams function.
 
   ```jsx
-  setSearch({ lat: 23, lng: 50 });
+  setSearchParams({ role: "Boss", is_good: "Always" });
   ```
 
 <br>
