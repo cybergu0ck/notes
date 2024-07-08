@@ -37,3 +37,25 @@ Based on the domain of the state:
 | ------------ | --------------------------------------- | ------------------------------------------------------------------------------------------ |
 | UI State     | useState, useReducer, useRef            | context API + useState/useReducer; Redux, Zustand, Recoil etc; React Router                |
 | Remote State | fetch + useEffect + useState/useReducer | context API + useState/useReducer; Redux, Zustand, Recoil etc; React Query; SWR; RTK Query |
+
+<br>
+<br>
+
+## Storing State in URL
+
+URL is an alternative to store the UI state (alternative to useState)
+
+- Advantages of storing state in the URL
+
+  - Offers global avvess to all components in the application.
+  - Facilitates "pass" of data from one page to another.
+  - Facilitates sharing of bookmarks with the exact UI.
+
+- "param" and "query string" are used to store state in the URL.
+
+  ```
+  www.example.com/app/cities/lisbon?lat=38.728&lng=-9.141
+  ```
+
+  - `lisbon` is a param.
+  - `lat` and `lng` are query string.
