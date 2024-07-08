@@ -14,6 +14,7 @@
   | Markdown: Open Preview                           | Ctrl + Shift + V          |
   | Move Line Up/Down                                | Alt + Up/Down             |
   | Copy Line Up                                     | Alt + Shift + Up/Down     |
+  | Go to File                                       | Ctrl + P                  |
   | Add Selection to Find Next Match                 | Ctrl + D                  |
   | Cursor Undo                                      | Ctrl + U                  |
   | Select Entire Line                               | Ctrl + L                  |
