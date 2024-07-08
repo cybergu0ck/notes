@@ -88,6 +88,23 @@ When working with multiple branches, git pull will fetch changes from the remote
   git push <remote-name> --delete <branch-name> #git push origin --delete bugfix1.2
   ```
 
+- To rename a remote branch:
+
+  - Rename the current branch locally:
+    ```
+    git branch -m <new-branch-name>
+    ```
+  - Delete the remote branch containing the old name:
+
+    ```
+    git push <remote-name> --delete <branch-name>
+    ```
+
+  - Reset the upstream branch for the branch containing the new name:
+    ```
+    git push origin -u <new-branch-name>
+    ```
+
 <br>
 
 ### pull options
