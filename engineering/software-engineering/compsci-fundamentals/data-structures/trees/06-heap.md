@@ -11,9 +11,7 @@ _Heap is a [Complete Binary Tree](./trees/binary-tree.md#complete-binary-tree) i
 _Max Heap is a [Complete Binary Tree](./trees/binary-tree.md#complete-binary-tree) in which the value of each node is greater than or equal to the values of its children._
 
 - In a max heap, the value of the root node is the largest among all nodes in the heap.
-- When represented as an array: for any node i in the heap,
-  - its left child is located at 2i + 1.
-  - its right child is located at 2i + 2.
+- As heaps are binary trees (specifically complete binary tree), the positions of the children given the root's position are same as that of [binary trees](02-binary-tree.md#indices-when-represented-as-an-array)
 - Max heaps are often used to implement priority queues, where the element with the highest priority (i.e., the largest key) is always at the front of the queue and can be efficiently accessed and removed.
 
 - Example :
