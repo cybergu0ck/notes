@@ -1,10 +1,11 @@
 # Array Sorting Algorithms
 
-| Algorithm      | Big Omega           | Big Theta           | Big O, Time Complexity | Big O, Space Complexity |
-| -------------- | ------------------- | ------------------- | ---------------------- | ----------------------- |
-| Insertion Sort | $\Omega(n)$         | $\theta(n^2)$       | $O(n^2)$               | $O(1)$                  |
-| Merge Sort     | $\Omega(n \log(n))$ | $\theta(n \log(n))$ | $O(n \log(n))$         | $O(n)$                  |
-| Heap Sort      |                     |                     | $O(n \log(n))$         | $O(1)$                  |
+| Algorithm      | Big Omega (Best Case/Lower Bound) | Big Theta (Average Case/Tight Bound) | Big O, Time Complexity | Big O, Space Complexity |
+| -------------- | --------------------------------- | ------------------------------------ | ---------------------- | ----------------------- |
+| Insertion Sort | $\Omega(n)$                       | $\theta(n^2)$                        | $O(n^2)$               | $O(1)$                  |
+| Merge Sort     | $\Omega(n \log(n))$               | $\theta(n \log(n))$                  | $O(n \log(n))$         | $O(n)$                  |
+| Heap Sort      |                                   |                                      | $O(n \log(n))$         | $O(1)$                  |
+| Quick Sort     | $\Omega(n \log(n))$               | $\Omega(n \log(n))$                  | $O(n^2)$               | $O(1)$                  |
 
 <br>
 <br>
@@ -104,3 +105,30 @@ def heap_sort(array: list[float]) -> None:
 ```
 
 - The time complexity is $O(n*log(n))$. The `build_max_heap` is $O(n)$ and the rest of the code takes $O(n*log(n))$, Overall the time complexity is $O((n) + n*log(n))$, which is $O(n*log(n))$.
+
+<br>
+<br>
+
+## Quick Sort
+
+```py
+def partition(array, start, end):
+    pivot = array[end]
+    j = start - 1
+    for i in range(start, end):
+        if array[i] <= pivot:
+            j += 1
+            array[i], array[j] = array[j], array[i]
+    array[j + 1], array[end] = pivot, array[j + 1]
+    return j + 1
+
+def quick_sort(array, start, end):
+    if start < end:
+        partition_index = partition(array, start, end)
+        quick_sort(array, start, partition_index - 1)
+        quick_sort(array, partition_index + 1, end)
+```
+
+- The worst case time complexity of quick sort is $O(n^2)$. This occurs when the array is sorted, the partions will be unbalanced with $n-1$ items on one side and $0$ items on the other side. The recurrance relation is given as $T(n) = T(n-1) + O(n)$, where $O(n)$ is the time complexity of the `partition` function. This is equvivalent to $O(n^2)$ [proof](./recursion.md#recurrance-relations).
+- The best case and average case time complexity is $O(n log(n))$. This occurs when the partitions are balanced. (Refer the textbook for mathematical proofs)
+- Quick sort sorts the items in place hence there is no additional space required, $O(1)$. However, there is auxilary space consumed in the form of stack frames because of recursion.
