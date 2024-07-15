@@ -1,9 +1,10 @@
 # Array Sorting Algorithms
 
-| Algorithm      | Big Omega           | Big Theta           | Big O          | Big O, Space Complexity |
-| -------------- | ------------------- | ------------------- | -------------- | ----------------------- |
-| Insertion Sort | $\Omega(n)$         | $\theta(n^2)$       | $O(n^2)$       | $O(1)$                  |
-| Merge Sort     | $\Omega(n \log(n))$ | $\theta(n \log(n))$ | $O(n \log(n))$ | $O(n)$                  |
+| Algorithm      | Big Omega           | Big Theta           | Big O, Time Complexity | Big O, Space Complexity |
+| -------------- | ------------------- | ------------------- | ---------------------- | ----------------------- |
+| Insertion Sort | $\Omega(n)$         | $\theta(n^2)$       | $O(n^2)$               | $O(1)$                  |
+| Merge Sort     | $\Omega(n \log(n))$ | $\theta(n \log(n))$ | $O(n \log(n))$         | $O(n)$                  |
+| Heap Sort      |                     |                     | $O(n \log(n))$         | $O(1)$                  |
 
 <br>
 <br>
@@ -74,3 +75,32 @@ print(apply_merge_sort(nums))
 <br>
 
 ## Heap Sort
+
+```py
+def max_heapify(array: list[float], index: int, size: int = None) -> None:
+    size = len(array) if size is None else size
+    left_index = 2 * index + 1
+    right_index = 2 * index + 2
+    largest = index
+    if left_index < size and array[left_index] > array[index]:
+        largest = left_index
+    if right_index < size and array[right_index] > array[largest]:
+        largest = right_index
+    if largest != index:
+        array[index], array[largest] = array[largest], array[index]
+        max_heapify(array, largest, size)
+
+def build_max_heap(array: list[float]) -> None:
+    for i in range(len(array) // 2 - 1, -1, -1):
+        max_heapify(array, i)
+
+def heap_sort(array: list[float]) -> None:
+    build_max_heap(array)
+    size = len(array)
+    for i in range(size - 1, 0, -1):
+        array[0], array[i] = array[i], array[0]
+        size -= 1
+        max_heapify(array, 0, size)
+```
+
+- The time complexity is $O(n*log(n))$. The `build_max_heap` is $O(n)$ and the rest of the code takes $O(n*log(n))$, Overall the time complexity is $O((n) + n*log(n))$, which is $O(n*log(n))$.
