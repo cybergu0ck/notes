@@ -113,7 +113,7 @@ A set of rules that govern the state of activation record or function stack-fram
 _**Namespace** is a declarative region that provides a way to organize code into logical groups and avoid naming conflicts._
 
 ```cpp
-using namespace std; //Use the entire std namespace
+using namespace std; //Use std namespace everywhere in this translation unit
 using std::cout; //This is a qualified using namespace where we use only select names
 ```
 
