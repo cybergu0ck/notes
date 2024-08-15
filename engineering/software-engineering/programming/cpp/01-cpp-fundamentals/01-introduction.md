@@ -35,8 +35,6 @@ C ++ is a structured programming language
 <br>
 <br>
 
-
-
 ## Comments
 
 - In C++, the preprocessor strips out the comments hence the compiler never sees them.
@@ -85,7 +83,7 @@ When the exe occupies the process memory (RAM), it organises itself into 4 categ
 | ------------ | -------------------------------------------------------------- | -------- | ------------------------ |
 | Code Segment | Code Instructions                                              | Fixed    | Lifetime of exe          |
 | Data Segment | Global Variables, Static Variables, Physical consts (literals) | Fixed    | Lifetime of exe          |
-| Stack        | Local Variables, Activation Records (function stack frame)     | Flexible | Lifetime of the function |
+| Stack        | Local Variables, Activation Records (function stack frame)     | Fixed    | Lifetime of the function |
 | Heap         | Used for Dynamic Memory Allocation                             | Flexible | Controlled by dev        |
 
 <br>
