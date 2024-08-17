@@ -24,66 +24,209 @@
 
 # C-style Strings
 
-- They are sequence of characters stored contiguously in memory.
-- They are implemented as an array of characters.
-- Terminated by a null character.
-- Referred to as zero or null terminated strings.
-- Must use the preprocessor directive `#include<cstring>`.
+C style strings are arrays with variables of type char (const char, constexpr char).
 
-- Initialising c-style strings
+- “Hello, world!” in C++ has type `const char[14]`.
+- They are essentially terminated by a null character (`\0`). Hence referred to as zero or null terminated strings and this is the reason for the extra 1 space.
+
+- C style string can be defined as follows:
+
+  ```cpp
+  char str1[8]{};                    // an array of 8 char, indices 0 through 7
+  const char str2[]{ "string" };     // The compiler will allocate the space based on the initialiser
+  constexpr char str3[] { "hello" }; // an array of 6 const char, indices 0 through 5
+  ```
+
+- The concept of [Array Decay](../cpp-arrays-and-vectors.md#array-decay) is applicable here too as C style strings are basically arrays.
 
   ```cpp
   #include <iostream>
-  #include <cctype>
-  #include <cstring>
+  using namespace std;
 
-  int main() {
-      char name[20]{ "Frank" }; //Uninitialised c-style strings contain garbage
-      std::cout << name << std::endl;	//Frank
+  int main()
+  {
+    char word[] = "hello";
+    cout << *word << endl; //h
   }
   ```
 
-* Finding the length of the string using `strlen`. (In Visual Studio strlen_s must be used.)
+<br>
+
+## Outputting C-style String
+
+`std::cout` outputs characters until it encounters the null terminator. (The ostream class has overloaded `<<` operator)
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char word[] = "hello\0there";
+    cout << word << endl; //outputs only hello instead of an address
+}
+```
+
+<br>
+
+## Inputting C-style String
+
+- Prior to C++20, `std::cin >>` rolls would extract as many characters as possible to rolls (stopping at the first non-leading whitespace). Nothing is stopping the user from entering more than 254 characters (either unintentionally, or maliciously). And if that happens, the user’s input will overflow the rolls array and undefined behavior will result.
 
   ```cpp
   #include <iostream>
-  #include <cctype>
-  #include <cstring>
+  using namespace std;
 
-  int main() {
-      char name[20]{ "Frank" };
-      std::cout << strlen(name) << std::endl;	//5
+  int main()
+  {
+      char word[5];
+      cin >> word;  //characters until white space and upto size 5 will be stored in word.
+      cout << word << endl;
   }
   ```
 
-* Copying strings using `strcpy` (In Visual Studio strcpy_s must be used.)
+- In C++20, operator`>>` was changed so that it only works for inputting non-decayed C-style strings. This allows operator`>>` to extract only as many characters as the C-style string’s length will allow, preventing overflow. But this also means you can no longer use operator>> to input to decayed C-style strings.
 
   ```cpp
   #include <iostream>
-  #include <cctype>
-  #include <cstring>
+  using namespace std;
 
-  int main() {
-      char name[20]{ "Frank" };
-      char another_name[20]{};
-      strcpy_s(another_name, name);
-      std::cout << another_name << std::endl;	//Frank
+  int main()
+  {
+      char word[5];
+      cin.get(word, 5); //C++20 //Explicitely specify the size //Safe
+      cout << word << endl;
   }
   ```
 
-* Concatinating strings using `strcat` (In Visual Studio strcat_s must be used.)
+<br>
+
+## Modifying C-style String
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    char str[]{ "string" };
+    std::cout << str << '\n';  //string
+    str[1] = 'p';
+    std::cout << str << '\n';  //spring
+    return 0;
+}
+```
+
+<br>
+
+## Getting the length of an C-style String
+
+- The sizeof operator returns the actual size of the array (including the null terminator i.e 0) and not necessarily the length of the string.
 
   ```cpp
   #include <iostream>
-  #include <cctype>
-  #include <cstring>
+  using namespace std;
 
-  int main() {
-      char name[20]{ "Frank" };
-      strcat_s(name, "ie");
-      std::cout << name << std::endl;	//Frankie
+  int main()
+  {
+      char word1 []{ "abc" };
+      cout << sizeof(word1) << endl;  //4
+      return 0;
   }
   ```
+
+- An alternate solution is to use the `strlen()` function, which lives in the <cstring> header.
+
+  ```cpp
+  #include <iostream>
+  #include <cstring> // for std::strlen
+  using namespace std;
+
+  int main()
+  {
+      char word1 []{ "abc" };
+      cout << strlen(word1) << endl;  //3
+      return 0;
+  }
+  ```
+
+<br>
+
+## Other C-style string manipulating functions
+
+These functions have been inherited by C++ as part of the <cstring> header.
+
+- strlen() -- returns the length of a C-style string
+- strcpy(), strncpy(), strcpy_s() -- overwrites one C-style string with another
+
+  ```cpp
+  #include <iostream>
+  #include <cstring> // for std::strlen
+  using namespace std;
+
+  int main()
+  {
+      char dest[20] = "Hello";
+      char src[] = " World";
+
+      strcpy_s(dest, src); // Now dest contains "World"
+      cout << dest << endl;
+      return 0;
+  }
+  ```
+
+- strcat(), strncat() -- Appends one C-style string to the end of another
+- strcmp(), strncmp() -- Compares two C-style strings (returns 0 if equal)
+
+<br>
+<br>
+
+## Pointer to string literal
+
+- Here, a pointer is used to point to the first character of the string. `const` must be used as string literals are immutable.
+
+  ```cpp
+  const char* word = "hey"; //const is must since C++03
+  ```
+
+  ```cpp
+  #include <iostream>
+  using namespace std;
+
+  int main()
+  {
+    const char* word = "hello";
+    cout << *word << endl; //h
+    cout << *(word+1) << endl; //e
+  }
+  ```
+
+- The ostream class has overloaded `<<` operator to print the const char pointer as a string rather than a raw memory address. Note that cout is an instance of the ostream class.
+
+  ```cpp
+  #include <iostream>
+  using namespace std;
+
+  int main()
+  {
+    const char* word = "hello";
+    cout << word << endl; //outputs "hello" instead of an address
+  }
+  ```
+
+- The `sizeof` operator outputs the size of the pointer and not the size of the actual string.
+
+  ```cpp
+  #include <iostream>
+  using namespace std;
+
+  int main()
+  {
+    const char* word = "hello";
+    cout << sizeof(word); //8
+  }
+  ```
+
+<br>
 
 <br>
 <br>
