@@ -26,6 +26,8 @@ def insertion_sort(nums):
 
 - The Time Complexity is $O(n^2)$. In the worst case, the inner loop will run as many times as the size of the array.
 - The Space Complexity is $O(1)$. The array manipulation is done in-place.
+- Illustration of insertion sort is as shown
+  ![image](./_assets/insertionsort.jpg)
 
 <br>
 <br>
@@ -105,6 +107,10 @@ def heap_sort(array: list[float]) -> None:
 ```
 
 - The time complexity is $O(n*log(n))$. The `build_max_heap` is $O(n)$ and the rest of the code takes $O(n*log(n))$, Overall the time complexity is $O((n) + n*log(n))$, which is $O(n*log(n))$.
+
+- Illustration of insertion sort is as shown
+
+  ![image](./_assets/heapsort.jpg)
 
 <br>
 <br>
