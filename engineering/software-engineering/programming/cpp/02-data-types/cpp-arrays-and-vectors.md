@@ -63,6 +63,73 @@ Characteristics of arrays are:
 <br>
 <br>
 
+## Array Decay
+
+There are 2 problems related to arrays in C (not C++).
+
+1. When array is passed into a function, copying all the elements every time is expensive.
+
+   ```cpp
+   #include <iostream>
+
+   void printElementZero(int arr[1000]) //array of size 1000
+   {
+       std::cout << arr[0];
+   }
+
+   int main()
+   {
+       int x[1000] { 5 }; //array of size 1000
+       printElementZero(x);
+       return 0;
+   }
+   ```
+
+1. We want to be able to write a single function that can accept array arguments of different lengths.
+
+   ```cpp
+   #include <iostream>
+
+   void printElementZero(int arr[1000]) //array of size 1000
+   {
+     std::cout << arr[0];
+   }
+
+   int main()
+   {
+     int x[7] { 5 }; //array of size 7
+     printElementZero(x);
+     return 0;
+   }
+   ```
+
+Therefore, C-style array will be implicitly converted into a pointer to the element type and initialized with the address of the first element (with index 0) under certain circumstances.
+
+1. Passing an array to a function: When you pass an array as an argument to a function, it decays into a pointer to its first element. This means the function receives a pointer, not the entire array.
+
+1. Using the array name in an expression: Except when used with the sizeof operator or the & operator, the array name decays to a pointer to its first element.
+
+- In the following code, The type of the variable `array` is `int[10]`. But when it is used in expressions it decays to a `int *`.
+
+  ```cpp
+  #include <iostream>
+  using namespace std;
+
+  int main()
+  {
+      int arr[10]{ 9, 7, 5, 3, 1 };
+      cout << *arr << endl; //9, arr is decaying here
+
+      auto ptr{ arr }; // evaluation causes arr to decay, type deduction should deduce type int*
+      cout << *ptr << endl; //9
+
+      return 0;
+  }
+  ```
+
+<br>
+<br>
+
 # Multi-dimensional arrays
 
 ## declaring multidimensional arrays
@@ -169,20 +236,151 @@ Characteristics of arrays are:
 
 ## Vector methods
 
-1. `push_back()` : to append elements to the vector.
-2. `size()` : The number of elements in the vector.
+<br>
 
-   ```cpp
-   #include <iostream>
-   #include <vector>
+### Getting the Number of Elements
 
-   int main(){
-       std::vector <int> my_vec{1,2,3};
-       std::cout << my_vec.size() << std::endl;
-   }
+```cpp
+#include <iostream>
+#include <vector>
 
-   //3
-   ```
+int main() {
+    std::vector<int> numbers{1,2};
+    std::cout << numbers.size() << std::endl;
+    return 0;
+}
+
+//2
+```
+
+<br>
+
+### Appending an element
+
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> numbers{1,2};
+    numbers.push_back(3);
+
+    for(int num: numbers){
+        std::cout << num << "\t";
+    }
+
+    return 0;
+}
+
+//1 2 3
+```
+
+<br>
+
+### Inserting an element
+
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> numbers{1,2};
+    numbers.insert(numbers.begin(),0);  //Insert an elment at 0 index
+    numbers.insert(numbers.begin()+1,9);  //Insert an elment at 1 index
+
+    for(int num: numbers){
+        std::cout << num << "\t";
+    }
+    return 0;
+}
+//0	9	1	2
+```
+
+<br>
+
+### Poping the last element
+
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> numbers{1,2,3};
+    numbers.pop_back();
+
+    for(int num:numbers){
+        std::cout << num << "\t";
+    }
+    return 0;
+}
+
+//1	2
+```
+
+<br>
+
+### Removing a specific element
+
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> numbers{1,2,3};
+    numbers.erase(numbers.begin()+1);  //Removes the element at index 1
+
+    for(int num:numbers){
+        std::cout << num << "\t";
+    }
+    return 0;
+}
+// 1	3
+```
+
+<br>
+
+## Clear the vector
+
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> numbers{1,2,3};
+    numbers.clear();  //Removes the element at index 1
+    std::cout << numbers.size() << std::endl;
+    return 0;
+}
+
+//0
+```
+
+<br>
+
+## Swap two vectors
+
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> numbers{1,2,3};
+    std::vector<int> vector{100,200,300};
+    numbers.swap(vector);
+
+    for(int num: numbers){
+        std::cout << num << "\t";
+    }
+    std::cout << "\n";
+    for(int num: vector){
+        std::cout << num << "\t";
+    }
+    return 0;
+}
+
+// 100	200	300
+// 1	2	3
+```
 
 <br>
 <br>
