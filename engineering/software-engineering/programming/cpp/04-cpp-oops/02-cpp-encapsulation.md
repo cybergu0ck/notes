@@ -90,7 +90,7 @@ private:  //supports access specifier, it is "public" by default
     <ol type="1">
         <li>public : accessible anywhere</li>
         <li>private : accessible only by members or friends of the class.</li>
-        <li>protected : accessible by members of the class and members of derived class.(not accesible by objects of base and derived classes!)</li>
+        <li>protected : accessible by members of the class and members of derived class and friends of the class.(not accesible by objects of base and derived classes!)</li>
     </ol>
 
 - The member methods in the class declaration always has access to to the member attributes!
