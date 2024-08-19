@@ -95,3 +95,30 @@ View [in remote repositories notes](04-remote-repositories.md#working-with-remot
 **_Cherrypicking refers to selecting and applying specific commits from one branch to another._**
 
 ![cherry](./_assets/cherrypick.gif)
+
+<br>
+<br>
+
+## Comparing branches
+
+- To compare the commits between two branches.
+
+  - Commits in branch2 that are not in branch1.
+    ```bash
+    git log branch1..branch2
+    ```
+  - Commits in branch1 that are not in branch2.
+    ```bash
+    git log branch2..branch1
+    ```
+
+- To check the differences between two git branches.
+
+  - Changes in branch2 that are not in branch1.
+    ```bash
+    git diff branch1..branch2
+    ```
+  - Changes in branch1 that are not in branch2.
+    ```bash
+    git diff branch2..branch1
+    ```
