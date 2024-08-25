@@ -1,31 +1,97 @@
 # STL Set
 
-- Set is an associative container in C++ that stores a collection of unique, sorted elements.
+```cpp
+#include <set>
+```
 
-* Must include the follwing preprocessor directive to use stl deque.
+<br>
+<br>
 
-  ```cpp
-  #include <set>
-  ```
+## Types of sets
 
-* Illustration of set initialisation
+<br>
 
-  ```cpp
-  #include <iostream>
-  #include <set>
-  #include <algorithm>
+### set
 
-  void display(std::set <int> l) {
-    for (auto item : l) {
-      std::cout << item << " ";
-    }
-  }
+_A set is an associative container that stores unique elements in sorted order._
 
-  int main() {
-    std::set <int> s1{ 3,2,2,1};	//It is not an error to initialise with duplicate entries
-    display(s1);	//1 2 3
-  }
-  ```
+<br>
+
+### unordered_set
+
+_An unordered is an associative container that stores unique elements in un-sorted order._
+
+<br>
+
+### multi_set
+
+_A multiset is an associative container that stores elements (allows duplicates) in sorted order._
+
+<br>
+
+### unordered_multiset
+
+_An unordered_multiset is an associative container that stores elements (allows duplicates) in un-sorted order._
+
+<br>
+<br>
+
+### Time Complexity
+
+| Property                    | ordered variants   | unordered variants |
+| --------------------------- | ------------------ | ------------------ |
+| Ordering                    | increasing order   | no ordering        |
+| Implementation              | Self Balancing BST | Hash Table         |
+| Search Time (worst case)    | $O(log(n))$        | $O(n)$             |
+| Insertion Time (worst case) | $O(log(n))$        | $O(n)$             |
+| Deletion Time (worst case)  | $O(log(n))$        | $O(n)$             |
+
+<br>
+<br>
+
+## Initialisation
+
+```cpp
+#include<iostream>
+#include<set> //Library to be included
+
+int main()
+{
+	std::set<int> set1;           //Empty Set
+	std::set<int> set2 = {1,2,3}; //Normal Initialisation
+	std::set<int> set3{2,3,4};    //Initialiser List
+	std::set<int> set4{set3};     //Copy constructor will be called
+	std::set<int> set5{ std::move(set4) }; //Move constructor will be called
+}
+```
+
+<br>
+<br>
+
+## Set APIs
+
+```cpp
+#include<iostream>
+#include<set> //Library to be included
+
+int main()
+{
+	std::set<int> set2 = {1,2,3}; //Normal Initialisation
+	std::pair<std::set<int>::iterator,bool> res = set2.insert(4); //Returns a pair, first is iterator to element and second is true if inserted, false if already exists.
+	set2.erase(0);  //Removal of an existing element from the set. no errors if the element is not present in the set.
+	set2.clear();   //Empty the set.
+	std::set<int>::iterator it = set2.find(1);	//Returns the iterator to the element with the specified value, end() if not found.
+	int freq = set2.count(1);	//Returns the number of occurances of the given value (0 or 1 for sets)
+	bool is_empty = set2.empty();	//Returns True if set is empty else False
+	set2.size();    //Returns the size of the set
+}
+```
+
+<br>
+<br>
+
+## User Defined classes with Sets
+
 
 * Using user defined classes in sets (Need to know about operator overloading!). Notice how Person with name edision is not in the set as age is considered here and duplication is not allowed.
 
@@ -42,14 +108,20 @@
     friend std::ostream& operator<<(std::ostream& output, Person& obj);
   public:
     Person(std::string p1, int p2) :name{p1}, age{p2} {};
+
+    //Overloading < operator
     bool operator<(const Person& rhs)const {
       return this->age < rhs.age;
     }
+
+    //Overloading == operator
     bool operator==(const Person& rhs)const {
       return (this->name == rhs.name && this->age == rhs.age);
     }
 
   };
+
+  //Overloading << operator
   std::ostream& operator<<(std::ostream& output, Person& obj)
   {
     output << obj.name;
@@ -76,135 +148,3 @@
 <br>
 <br>
 
-# Useful Functions
-
-## insert()
-
-- Elements can be inserted into a set using the insert() method.
-
-  ```cpp
-  #include <iostream>
-  #include <set>
-  #include <algorithm>
-
-  void display(std::set <int> l) {
-      for (auto item : l) {
-          std::cout << item << " ";
-      }
-      std::cout << std::endl;
-  }
-
-  int main() {
-      std::set <int> s1{ 3,2,2,1 };	//It is not an error to initialise with duplicate entries
-      display(s1);	//1 2 3
-      s1.insert(0);
-      display(s1);	//0 1 2 3
-      s1.insert(10);
-      display(s1);	//0 1 2 3 10
-  }
-  ```
-
-- The insert() method returns a std pair with an iterator as first item and a boolean as second, This second
-  value is indicative of wether the insertion was successfull or not (indertion is unsuccessful when duplicate entries are inserted.)
-
-  ```cpp
-  int main() {
-      std::set <int> s1{ 1,2,3};
-      auto result = s1.insert(4);
-      std::cout << *result.first << std::endl;	//4 represents the value of the iterator
-      std::cout << result.second << std::endl;	//1 represents True
-  }
-  ```
-
-<br>
-<br>
-
-## find()
-
-- The value to be found is returned as an iterator.
-
-  ```cpp
-  int main() {
-      std::set <int> s1{ 1,2,3};
-      auto iter = s1.find(2);
-      std::cout << *iter << std::endl;	//2
-  }
-  ```
-
-  <br>
-  <br>
-
-## erase()
-
-- Used to remove an element
-
-  ```cpp
-  #include <iostream>
-  #include <set>
-  #include <algorithm>
-
-  void display(std::set <int> l) {
-      for (auto item : l) {
-          std::cout << item << " ";
-      }
-  }
-
-  int main() {
-      std::set <int> s1{ 1,2,3};
-      auto iter = s1.find(2);
-      s1.erase(iter);
-      display(s1);	//1,3
-  }
-  ```
-
-<br>
-<br>
-
-## count()
-
-- Returns the count of the number of times an element is present in the set, Although this doesn't make sense for a set. It is used to determine
-  if an element is present in the set or not.
-
-      ```cpp
-      int main() {
-          std::set <int> s1{ 1,2,3};
-          std::cout << s1.count(40) << std::endl;	//0, indicating that the element is not present
-      }
-      ```
-
-<br>
-<br>
-
-## empty()
-
-- To check if a set is empty or not.
-
-<br>
-<br>
-
-## clear()
-
-- Used to remove all the elements from the set.
-
-<br>
-<br>
-
-# Types of sets
-
-## multi_set
-
-It is type of set ordered by key but allows duplicate elements.
-
-<br>
-<br>
-
-## unordered_set
-
-It is a type of set which is unordered and doesn't allow duplicate elements
-
-<br>
-<br>
-
-## unordered_multiset
-
-It is type of set that is unordered and allows duplicate elements.
