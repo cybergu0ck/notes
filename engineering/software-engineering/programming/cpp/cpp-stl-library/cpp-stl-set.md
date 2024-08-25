@@ -36,15 +36,24 @@ _An unordered_multiset is an associative container that stores elements (allows 
 <br>
 <br>
 
-### Time Complexity
+### Implementation
 
-| Property                    | ordered variants   | unordered variants |
-| --------------------------- | ------------------ | ------------------ |
-| Ordering                    | increasing order   | no ordering        |
-| Implementation              | Self Balancing BST | Hash Table         |
-| Search Time (worst case)    | $O(log(n))$        | $O(n)$             |
-| Insertion Time (worst case) | $O(log(n))$        | $O(n)$             |
-| Deletion Time (worst case)  | $O(log(n))$        | $O(n)$             |
+| Property       | ordered variants   | unordered variants |
+| -------------- | ------------------ | ------------------ |
+| Implementation | Self Balancing BST | Hash Table         |
+
+<br>
+<br>
+
+### Implementation
+
+| Property                         | ordered variants          | unordered variants |
+| -------------------------------- | ------------------------- | ------------------ |
+| Search Time (avg /worst case)    | $O(log(n))$ / $O(log(n))$ | $O(1)$ / $O(n)$    |
+| Insertion Time (avg /worst case) | $O(log(n))$ / $O(log(n))$ | $O(1)$ / $O(n)$    |
+| Deletion Time (avg /worst case)  | $O(log(n))$ / $O(log(n))$ | $O(1)$ / $O(n)$    |
+
+- The worst case for unordered variants is $O(n)$, when the hash function is poor and causes collisions but this is a rare case.
 
 <br>
 <br>
@@ -92,8 +101,7 @@ int main()
 
 ## User Defined classes with Sets
 
-
-* Using user defined classes in sets (Need to know about operator overloading!). Notice how Person with name edision is not in the set as age is considered here and duplication is not allowed.
+- Using user defined classes in sets (Need to know about operator overloading!). Notice how Person with name edision is not in the set as age is considered here and duplication is not allowed.
 
   ```cpp
   #include <iostream>
@@ -147,4 +155,3 @@ int main()
 <br>
 <br>
 <br>
-
