@@ -1,5 +1,121 @@
 # stl vectors
 
+<br>
+<br>
+
+## Initialization
+
+```cpp
+#include<iostream>
+#include<vector> //Library to be included
+
+int main()
+{
+	std::vector<int> v1;		//Default
+	std::vector<int> v2(5);		// Vector of size 5 with all elements initialized to 0
+	std::vector<int> v3(5, 10);	// Vector of size 5 with all elements initialized to 10
+	std::vector<int> v4 = { 1, 2, 3, 4, 5 };  //Initialiser list
+	std::vector<int> v5(v1);	// Copy Initialisation
+	std::vector<int> v6(std::move(v2)); //Move Initialisation
+}
+```
+
+<br>
+<br>
+
+## Important Methods
+
+```cpp
+#include<iostream>
+#include<vector> //Library to be included
+
+int main()
+{
+	std::vector<int> v = { 1, 2, 3};
+	v.push_back(3);		//Append 2 to the end of the vector
+	v.pop_back();		//Remove the last element in the vector
+	std::cout << v.size() << std::endl;		//Number of elements in the vector
+	std::cout << v.empty() << std::endl;    //True(1) if vector is empty else false(0)
+	std::cout << v.front() << std::endl;    //Get the first element
+	std::cout << v.back() << std::endl;    //Get the last element
+	v.erase(v.begin() + 1);  //Remove the second element having index 1 (zero based index)
+	v.clear();     //Empty the vector
+	v.insert(v.begin(), 5); //Insert 5 at index 0
+	v.insert(v.begin() + 1, 3, 100); //Insert three 100's at index 1
+	v.emplace_back(100);
+}
+```
+
+<br>
+<br>
+
+## Understanding Emplace
+
+```cpp
+#include<iostream>
+#include<vector> //Library to be included
+
+class MyClass {
+public:
+	int number;
+	std::string word;
+
+	MyClass(int p1, std::string p2):number{p1}, word{p2}
+	{
+		std::cout << "constructor was called" << std::endl;
+	}
+	MyClass(const MyClass& source):number{source.number}, word{source.word}
+	{
+		std::cout << "copy constructor was called" << std::endl;
+	}
+	MyClass(const MyClass&& source) noexcept :number{source.number}, word{source.word}
+	{
+		std::cout << "move constructor was called" << std::endl;
+	}
+	~MyClass() {}
+};
+```
+
+```cpp
+int main()
+{
+	std::vector<MyClass> v;
+	MyClass obj = MyClass(1, "a");
+	v.push_back(obj);
+}
+
+//constructor was called
+//copy constructor was called
+```
+
+```cpp
+int main()
+{
+	std::vector<MyClass> v;
+	v.push_back(MyClass(1, "a"));
+}
+
+//constructor was called
+//move constructor was called
+```
+
+```cpp
+
+int main()
+{
+	std::vector<MyClass> v;
+	v.emplace_back(1,"a"); //Pass the paramters to construct the object directly in memory
+}
+
+//constructor was called
+```
+
+<br>
+<br>
+<br>
+
+# Old NOtes
+
 ## Initialising a std::vector
 
 - There are different ways to initialise a vector. The simplest one is as follows:
