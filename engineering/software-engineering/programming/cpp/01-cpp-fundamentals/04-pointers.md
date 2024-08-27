@@ -62,14 +62,10 @@ int main() {
 
 ![image](../_assets/pointer1.png)
 
-
-
-There are two addresses with regards to pointers, 
+There are two addresses with regards to pointers,
 
 1. The address of the pointer variable itself.
 1. The memory address that is stored as value of the pointer variable. _Pointer points to the memory address that it holds as values._
-
-
 
 <br>
 
@@ -225,6 +221,7 @@ int main() {
 ### Passing Pointers by Value
 
 - Passing a pointer to a variable created on the stack by value.
+
   ```cpp
   #include <iostream>
 
@@ -250,7 +247,6 @@ int main() {
   ![img](../_assets/p1.png)
 
 - Checkout [passing a pointer to a variable created on the heap by value](../03-cpp-control-flow/04-cpp-dynamic-memory-allocation.md#passing-dynamically-allocated-memory-by-value)
-
 
 <br>
 
@@ -281,7 +277,6 @@ int main() {
 
 - Checkout [passing a pointer to a variable created on the heap by reference](../03-cpp-control-flow/04-cpp-dynamic-memory-allocation.md#passing-dynamically-allocated-memory-by-reference)
 
-
 <br>
 <br>
 
@@ -309,7 +304,6 @@ int main() {
   ```
 
 - Returning a pointer to a local variable created on the stack leads to undefined behavour and is flagged as error by some compilers (Microsoft's Visual Studio)
-
 
   ```cpp
   #include <iostream>
@@ -339,7 +333,6 @@ int main() {
 
 <br>
 <br>
-
 
 ## Pointer Arithmetic
 
@@ -395,7 +388,7 @@ Pointer arithmetic only makes sense with raw arrays.
 
 ## Pointers and Arrays
 
-- The value of the array name is the first element in the array. (essentially it's a pointer ig)
+- The following is a case of [Array Decay](../02-data-types/cpp-arrays-and-vectors.md#array-decay)
 
   ```cpp
   int arr[5]{ 100,200};
@@ -406,7 +399,7 @@ Pointer arithmetic only makes sense with raw arrays.
 * If we initialise a pointer with the above array, we can see that the value of the pointer is the same as that of the array.
 
   ```cpp
-  int* arr_ptr = arr;   // int* arr_ptr = &arr gives error!
+  int* arr_ptr = arr;   // int* arr_ptr = &arr gives error because type of &arr is int(*)[]
   cout << arr_ptr << endl;   //004FFE8C
   cout << *arr_ptr << endl;  //100
   ```
@@ -436,10 +429,8 @@ Pointer arithmetic only makes sense with raw arrays.
 <br>
 <br>
 
-
 ## References
 
 - Checkout [common pitfalls with dynamically allocated memory](../03-cpp-control-flow/04-cpp-dynamic-memory-allocation.md#common-pitfalls-with-dynmically-allocated-memory)
-
 
 //TODO - Redo all the imgages here and in dynamically allocated memory notes
