@@ -136,6 +136,20 @@ std::string is a class in the Standard Template Library (STL) used to represent 
 <br>
 <br>
 
+## Useful Functions Related to std::string
+
+```cpp
+#include <iostream>
+#include <string>
+int main() {
+    std::string s1{ "abcd" };
+    std::cout << s1.substr(3,2) << std::endl;	//de  //Substring
+
+    std::cout << s1[10] << "\n";  //No bounce checking
+    std::cout << s1.at(10) << "\n";  //bounce checking; throws an error
+}
+```
+
 ## Concatenation
 
 ```cpp
@@ -148,20 +162,6 @@ int main() {
 
     std::string illegal = "hello" + " bye";  //Error as both "hello" and " bye" are C style string and they don't support concatenation
     return 0;
-}
-```
-
-<br>
-<br>
-
-## Useful Functions Related to std::string
-
-```cpp
-#include <iostream>
-#include <string>
-int main() {
-    std::string s1{ "abcd" };
-    std::cout << s1.substr(3,2) << std::endl;	//de  //Substring
 }
 ```
 
