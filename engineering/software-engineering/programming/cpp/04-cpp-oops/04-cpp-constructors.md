@@ -32,6 +32,8 @@
   //constructor is called
   ```
 
+  - The data members of the above class are not initialised here, we should always initialise the data members.
+
 <br>
 
 Some important points about constructors:
@@ -51,13 +53,13 @@ Some important points about constructors:
 class MyClass
 {
 private:
-    int a;
-    double b;
+    int num;
+    int *num_ptr;
 
 public:
-    MyClass();	//default constructor; also known as the no-argument constructor
-    MyClass(int);	//overloaded one arg constructor
-    MyClass(int, double); //overloaded two arg constructor
+    MyClass();	            //default constructor, also known as the no-arg constructor
+    MyClass(int);	        //overloaded one-arg constructor
+    MyClass(int, int);      //overloaded two-arg constructor
 };
 
 MyClass::MyClass()
@@ -70,7 +72,7 @@ MyClass::MyClass(int x)
     std::cout << "overloaded one arg constructor is called" << std::endl;
 }
 
-MyClass::MyClass(int x, double y)
+MyClass::MyClass(int x, int y)
 {
     std::cout << "overloaded two arg constructor is called" << std::endl;
 }
@@ -79,7 +81,7 @@ int main()
 {
     MyClass obj1;				//  obj1.MyClass::MyClass(&obj1);
     MyClass obj2{ 100 };		//  obj1.MyClass::MyClass(&obj1, 100);
-    MyClass obj3{ 100,1.2 };	//  obj1.MyClass::MyClass(&obj1, 100, 1.2);
+    MyClass obj3{ 100,1 };	    //  obj1.MyClass::MyClass(&obj1, 100, 1);
 
 }
 
@@ -93,89 +95,100 @@ int main()
 
 ## Compiler Synthesised Constructors
 
-- The compiler generates a default constructor automatically only if a class declares no constructors.
-
-  ```cpp
-  #include <iostream>
-
-  class MyClass {
-  public:
-      int member;
-  };
-
-  int main() {
-      MyClass object;
-      std::cout << object.member; //will have garbage value
-  }
-
-  //4200987
-  ```
-
-  ```cpp
-  #include <iostream>
-
-  class MyClass {
-  public:
-      int member;
-      MyClass(int num):member{num}{};
-  };
-
-  int main() {
-      MyClass object;
-      std::cout << object.member;
-  }
-
-  //Compiler Error: no default constructor exists for class "MyClass"
-  ```
-
-- If a class has a member that has a class type, and that class doesn't have a default constructor then the compiler is unable to synthesize one. (I'm guessing this is compiler specific)
-
-<br>
-<br>
-
-## Initialisation of members
+The compiler generates a default constructor by itself only if a class declares no constructors.
 
 ```cpp
 #include <iostream>
 
-class MyClass{
-private:
-    int a;
-    double b;
-
+class MyClass {
 public:
-    MyClass(int, double);	//2 arg constructor
+    int member;
+
+    //no constructors are declared. Hence the compiler will synthesize a default constructor.
 };
 
-MyClass::MyClass(int x, double y){
-    a = x;	//This is Assignment and not Initialisation!
-    b = y;	//This is Assignment and not Initialisation!
-    std::cout << "data attribute a = " << a << " and b = " << b << std::endl;
+int main() {
+    MyClass object;
+    std::cout << object.member; //will have garbage value
 }
 
-int main(){
-    MyClass obj{ 1, 2.2 };
-}
-
-//data attribute a = 1 and b = 2.2
+//4200987
 ```
 
-In the above code, we are actually _assigning the values to the data attributes inside the constructor and not technically initialising._ When a MyClass object is created, it invokes the constructor. In the prolog phase of the constructor, the data attributes (whose size in known as type is known to the compiler) initialises them with garbage values. Then in the business logic of the constructor, they are assigned the given values.
+```cpp
+#include <iostream>
+
+class MyClass {
+public:
+    int member;
+    MyClass(int num):member{num}{};
+
+    //default constructor is not declared but one-arg constructor declared.
+};
+
+int main() {
+    MyClass object;
+    std::cout << object.member;
+}
+
+//Compiler Error: no default constructor exists for class "MyClass"
+```
+
+<br>
+<br>
+
+### Initialisation of Class Data Members
+
+```cpp
+#include <iostream>
+
+class MyClass
+{
+public:
+    int num;
+    int *num_ptr;
+
+public:
+    MyClass();	            //default constructor, also known as the no-arg constructor
+};
+
+MyClass::MyClass()
+{
+    std::cout << "default constructor is called" << std::endl;
+
+    num = 0;                //This is not initialisation but assignment
+    num_ptr = new int(0);   //This is not initialisation but assignment
+}
+
+int main()
+{
+    MyClass obj1;
+
+    std::cout << obj1.num << '\n';
+}
+
+//default constructor is called
+//0
+```
+
+- In the above code, we are actually _assigning the values to the data members inside the constructor and not technically initialising._ When a MyClass object is created, it invokes the constructor. In the prolog phase of the constructor, the data members (whose size in known as type is known to the compiler) initialises them with garbage values. Then in the business logic of the constructor, they are assigned the given values.
 
 <br>
 
-### In-class Initialisation
+#### In-class Initialisation
 
 ```cpp
 class MyClass {
 public:
-	int member{10};
+	int num{10};
 };
 ```
 
 <br>
 
-### Constructor initialiser list
+#### Constructor Initialiser List
+
+//TODO - Link the initialisation notes and prolog notes here
 
 - We can initialise the data members using constructor initialiser list, this will initialise the data members in the prolog phase itself. (check out the meaning of initialise in 01-introduction.md).
 - The order in which the parameters are initilaised is the order in which they are written in the class and not the paramter initialisation list in the constructor definition.
@@ -183,85 +196,91 @@ public:
   ```cpp
   #include <iostream>
 
-  class MyClass{
-  private:
-      int a;
-      double b;
+  class MyClass
+  {
+  public:
+      int num;
+      int *num_ptr;
 
   public:
-      MyClass(int, double);	//2 arg constructor
+      MyClass();	            //default constructor, also known as the no-arg constructor
   };
 
-  MyClass::MyClass(int x, double y): a{x}, b{y}{
-      //using constructor initialisation list
+  MyClass::MyClass():num{0}, num_ptr{new int(0)}
+  {
+      std::cout << "default constructor is called" << std::endl;
   }
 
-  int main(){
-      MyClass obj{ 1, 2.2 };
+  int main()
+  {
+      MyClass obj1;
+      std::cout << obj1.num << '\n';
   }
+
+  //default constructor is called
+  //0
   ```
 
 <br>
 <br>
 
-# Delegated constructors
+# Delegated Constructors
 
-- Delegated constructors in C++ are a feature introduced in C++11 that allow a constructor to call another constructor of the same class. This can be useful for reducing code duplication and improving readability.
-
+- Delegated constructors in C++ are a feature introduced in C++11 that allow a constructor to call another constructor of the same class.
 - Instead of initialising the data attributes in every constructor, we can use the constructor that has most args as delegated constructor.
-
-- In the following code, note that the delagted constructor is called first (in prolog phase itself) before the actual constructor is called.
+- This can be useful for reducing code duplication and improving readability but at the cost of performance.
+- _Delegated constructors should not be preffered as it introduces additional function calls_, hence affecting performace.
 
   ```cpp
   #include <iostream>
 
-  class MyClass{
+  class MyClass {
   private:
-      int a;
-      double b;
+      int num;
+      int* num_ptr;
   public:
       MyClass();				//default constructor
       MyClass(int);			//1 arg constructor
-      MyClass(int, double);	//2 arg constructor
+      MyClass(int, int);	    //2 arg constructor
   };
 
-  MyClass::MyClass(int x, double y) : a{ x }, b{ y }{
+  MyClass::MyClass(int x, int y) : num{ x }, num_ptr{ new int(y)}{
       //This overloaded 2 arg constructor will be used for delegated constructors
-      std::cout << "The overloaded 2 arg constructor called; data attribute a = " << a << " and b = " << b << std::endl;
+      std::cout << "The overloaded 2 arg constructor called and the value of num = " << num << std::endl;
   }
 
-  MyClass::MyClass(int x) : MyClass(x, 0){
-      //initialising b  to 0 using delegated constructor, which is already called in prolog phase of this constructor
-      std::cout << "The overloaded 1 arg constructor is called. " << std::endl;
+  MyClass::MyClass(int x) : MyClass(x, 0) {
+      //Initialising num with x and num_ptr to point to an int with value 0 in the prolog phase of this function.
+      std::cout << "The overloaded 1 arg constructor is called and the value of num = " << num << std::endl;
   }
 
-  MyClass::MyClass() : MyClass(0, 0){
-      //initialising both data attributes to 0 using delegated constructor, which is already called in prolog phase of this constructor
+  MyClass::MyClass() : MyClass(0, 0) {
+      //Initialising num with 0 and num_ptr to point to an int with value 0 in the prolog phase of this function.
       std::cout << "default constructor called." << std::endl;
   }
 
-  int main(){
+  int main() {
       MyClass obj1{};
       MyClass obj2{ 1 };
-      MyClass obj3{ 1,1.2 };
+      MyClass obj3{ 10,10 };
   }
 
-  //The overloaded 2 arg constructor called; data attribute a = 0 and b = 0
+  //The overloaded 2 arg constructor called and the value of num = 0
   //default constructor called.
-  //The overloaded 2 arg constructor called; data attribute a = 1 and b = 0
-  //The overloaded 1 arg constructor is called.
-  //The overloaded 2 arg constructor called; data attribute a = 1 and b = 1.2
+  //The overloaded 2 arg constructor called and the value of num = 1
+  //The overloaded 1 arg constructor is called and the value of num = 1
+  //The overloaded 2 arg constructor called and the value of num = 10
   ```
 
-- _Delegated constructors should not be preffered as it introduces additional function calls_, hence affecting performace.
+  - In the above code, note that the delagted constructor is called first (in prolog phase itself) before the actual constructor is called.
 
 <br>
 <br>
 <br>
 
-# Destructors
+# Destructor
 
-**_Destructors is a special kind of member function that is invoked automatically when the object is destroyed._**
+**_Destructor is a special kind of member function that is invoked automatically when the object is destroyed._**
 
 - Destructors are generally used to perform cleanup operations but can perform anything the programmer desires.
 - Destructors have the same name as the class preceded by a tilde symbol (~)
@@ -272,31 +291,39 @@ public:
 
   ```cpp
   #include <iostream>
-  class MyClass
-  {
+
+  class MyClass {
   private:
-      std::string name;
+      int num;
+      int* num_ptr;
   public:
-      MyClass(std::string name);
-      ~MyClass();  //destrcutor declaration
+      MyClass();		//default constructor
+      ~MyClass();     //destructor
   };
 
-  MyClass::MyClass(std::string name) : name{ name }{}
+  MyClass::MyClass() : num{ 0 }, num_ptr{ new int(0)}{
+      std::cout << "The default constructor is called" << std::endl;
+  }
 
   MyClass::~MyClass(){
-      std::cout << "destructor called by " << name << std::endl;
+      std::cout << "The destructor is called" << std::endl;
+
+      delete num_ptr;  //Clean Up
   }
 
-  int main(){
+  int main() {
+      MyClass obj1{};
       {
-          MyClass obj1{ "first_obj" };
-      }		//obj1 calls the destructor here as it's scope ends here
-
-      MyClass obj2{ "second_obj" }; //calls it's destructor when main ends
+          MyClass obj1{};  //Note that variables can have same name in different scopes!
+      }
+      MyClass* obj2 = new MyClass();  //The destructor for this object is never called!
   }
 
-  //destructor called by first_obj
-  //destructor called by second_obj
+  //The default constructor is called
+  //The default constructor is called
+  //The destructor is called
+  //The default constructor is called
+  //The destructor is called
   ```
 
 <br>
@@ -305,97 +332,61 @@ public:
 
 # Copy Constructors
 
-**_Copy constructor is a special type of constructor that initializes a new object as a copy of an existing object of the same class._**
+**_A copy constructor is a constructor which can be called with an argument of the same class type and copies the content of the argument without mutating the argument._**
 
-- It takes a single object of its own kind as parameter by reference.
-- Copy constructors are called when objects are passed into functions as parameters, because by default objects are passed by value.
+- It takes a _single object of its own kind as parameter by reference._
 - If there is no copy constructor defined in the class and the class objects happens to copy construct objects, then the compiler would assume a copy constructor which will perform member-to-member copy (bitwise copy) and will also be inlined.
 - It is good practice to provide the copy constructor with a const reference parameter.
+- Copy constructors are called when:
+  - An existing object is used to initialise a new object.
+  - An object is passed to a function by value.
+  - An object created locally in a function is returned by value. (However, modern compilers might perform Return Value Optimisation and Copy Elision and thus eliminate this copy process.)
+
+//TODO - Link notes to RVO and Copy Elision
 
 <br>
 <br>
 
 ## Shallow Copy Constructor
 
-- Shallow copy is member to member copy, meaning all the data attributes of the object is just copied into the new one.
-
-  ```cpp
-  #include <iostream>
-
-  class MyClass{
-  private:
-      int a;
-      double b;
-      std::string name;
-  public:
-      MyClass(int = 10, double = 2.5, std::string = "anonymous");
-      MyClass(const MyClass& source); //copy constructor declaration
-  };
-
-  MyClass::MyClass(int x, double y, std::string name_val) : a{ x }, b{ y }, name{ name_val }{
-      //notice that we have used default values for parameters
-      std::cout << "three arg overloaded constructor called by " << name << std::endl;
-  }
-
-  MyClass::MyClass(const MyClass& source) : a{ source.a }, b{ source.b }, name{ source.name }{
-      std::cout << "copy constructor called by " << name << std::endl;
-  }
-
-  //global function
-  void tester(MyClass x){
-      //just to show that copy constructor is called when objects are passed into functions!
-  }
-
-  int main(){
-      MyClass obj1{};		//calls the three arg constructor
-      MyClass obj2{ obj1 };  //obj2 calls the copy constructor
-      tester(obj1);			////calls the copy constructor
-  }
-
-  //three arg overloaded constructor called by anonymous
-  //copy constructor called by anonymous
-  //copy constructor called by anonymous
-  ```
-
-- We can write the copy constructor using delegated constructor, but should not be preffered as it introduces an additional function call.
-
-  ```cpp
-  MyClass::MyClass(const MyClass& source) : MyClass{source.a, source.b}{
-      std::cout << "copy constructor called" << std::endl;
-  }
-  ```
-
-- If the class has variables created on the heap then the shallow copy constructor generally lead to dangling pointers!
+- Shallow copy is member to member copy, meaning all the data attributes of the object is just copied to new one.
+- Shallow copy works fine without pointers but when pointers are involved it leads to dangling pointers.
 
   ```cpp
   #include <iostream>
 
   class MyClass {
-      int* ptr;
+  private:
+      int num;
+      int* num_ptr;
   public:
-      MyClass(int value = 0) {
-          ptr = new int;
-          *ptr = value;
-      }
-
-      MyClass(const MyClass& source) : ptr{ source.ptr } {
-          //this is performing shallow copy as it is mearly copying the data attributes.
-      }
-
-      ~MyClass(){
-          delete ptr;
-      }
+      MyClass();		                //default constructor
+      MyClass(const MyClass& source); //copy constructor
+      ~MyClass();                     //destructor
   };
 
-  int main(){
-      MyClass obj1;
-      MyClass obj2{ obj1 };
+  MyClass::MyClass() : num{ 0 }, num_ptr{ new int(0)}{
+      std::cout << "The default constructor is called" << std::endl;
   }
 
-  //run time error
-  ```
+  MyClass::MyClass(const MyClass& source) : num{ source.num }, num_ptr{source.num_ptr}{
+      //this->num_ptr simply points to the same location pointed by source.num_ptr, will create dangling pointers!
+      std::cout << "The copy constructor is called" << std::endl;
+  }
 
-  > Add Image
+  MyClass::~MyClass(){
+      std::cout << "The destructor is called" << std::endl;
+      delete num_ptr;  //Clean Up
+  }
+
+  int main() {
+      MyClass* obj1 = new MyClass();
+      MyClass obj2{ *obj1 };
+      delete obj1;                //This will delete num_ptr of obj1, obj2's num_ptr now points to invalid memory!
+  }
+
+  //Run Time Error
+  ```
 
 <br>
 <br>
@@ -406,171 +397,246 @@ public:
 #include <iostream>
 
 class MyClass {
-    int* ptr;
+private:
+    int num;
+    int* num_ptr;
+
 public:
-    MyClass(int value=0){
-        ptr = new int;
-        *ptr = value;
-    }
-
-    MyClass(const MyClass& source){
-       ptr = new int;   //this is performing deep copy as it is creating a new heap instance
-       *ptr = *source.ptr
-    }
-
-    ~MyClass(){
-        delete ptr;
-    }
+    MyClass();		                //default constructor
+    MyClass(const MyClass& source); //copy constructor
+    ~MyClass();                     //destructor
 };
 
-int main(){
-    MyClass obj1;
-    MyClass obj2{ obj1 };
+MyClass::MyClass() : num{ 0 }, num_ptr{ new int(0)}{
+    std::cout << "The default constructor is called" << std::endl;
 }
 
-//no errors
+MyClass::MyClass(const MyClass& source) : num{ source.num }{
+    std::cout << "The copy constructor is called" << std::endl;
+
+    num_ptr = new int(*source.num_ptr);  //Deep Copy
+}
+
+MyClass::~MyClass(){
+    std::cout << "The destructor is called" << std::endl;
+    delete num_ptr;  //Clean Up
+}
 ```
 
-- We can write the above copy constructor using the delegated constuctor as follows:
+- Initialising an object using an existing object.
 
   ```cpp
-    MyClass(const MyClass& source) :MyClass{*(source.ptr)} {
-    }
+  int main() {
+      MyClass* obj1 = new MyClass();
+      MyClass obj2{ *obj1 };  //same as MyClass obj2 = *obj1;
+      delete obj1;
+  }
+
+  //The default constructor is called //(by obj1)
+  //The copy constructor is called    //(by obj2)
+  //The destructor is called          //(by obj1)
+  //The destructor is called          //(by obj2)
+  ```
+
+- Passing an object by value.
+
+  ```cpp
+  void Foo(MyClass obj_foo){
+      //Just to illustrate copy constructor being called.
+      //The copy constructor is called because the function accepts MyClass by value.
+      //The copy contructor will not be called if the function were to accept MyClass by refernce.
+  }
+
+  int main() {
+      MyClass obj;
+      Foo(obj);
+  }
+
+  //The default constructor is called //(by obj)
+  //The copy constructor is called    //(by obj_foo in Foo)
+  //The destructor is called          //(by obj_foo in Foo)
+  //The destructor is called          //(by obj)
+  ```
+
+- Copy constructor will not be called when passing an object by reference.
+
+  ```cpp
+  void Foo(MyClass& obj_foo){
+      //The copy contructor will not be called if the function were to accept MyClass by refernce.
+  }
+
+  int main() {
+      MyClass obj;
+      Foo(obj);
+  }
+
+  //The default constructor is called (by obj)
+  //The destructor is called          (by obj)
+  ```
+
+- Returning an object from a function by value (Without Return Value Optimisation)
+
+  ```cpp
+  MyClass Goo(){
+      MyClass obj_goo;
+      return obj_goo;
+  }
+
+  int main() {
+      MyClass obj = Goo();
+  }
+
+  //The default constructor is called //(by obj_goo)
+  //The copy constructor is called    //(by obj)
+  //The destructor is called          //(by obj_goo)
+  //The destructor is called          //(by obj)
+  ```
+
+- If the compiler performs Return Value Optimisation then the copy constructor will not be called.
+
+  ```cpp
+  MyClass Goo(){
+      MyClass obj_goo;
+      return obj_goo;
+  }
+
+  int main() {
+      MyClass obj = Goo();  //obj_goo is essentially constructed here itself!
+  }
+
+  // The default constructor is called
+  // The destructor is called
   ```
 
 <br>
 <br>
 <br>
 
-# Move constructors (Update this section of notes)
+# Move Constructors
 
-> checkout the notes for l values, r values, l value references and r value references. <br>
-
-<br>
-
-- If we donot define a move constructor, the compiler will use the copy constructor instead! this results in lot of memory when dealing with large amounts if data.
-- Move constructors moves an object instead of copying it. It copies the address of the resource from source to the current object and nulls out the pointer in the source pointer.
-- This can be a significant performance improvement.
-- Move constructors are called when an object is created from a temporary object (**r values**).
-
-* The definition for move constructor is similar to that of copy construtor. `const` is removed becuase we have to null the source pointer and r value references are used in parameters instead of l value references.
-
-  ```cpp
-  type(const type &source);   //copy constructor definition
-  type(type &&source);        //move constructor definiton
-  ```
-
-* The following code doesn't have a move constructor defined, hence the compiler will use the copy constructor instead when class objects are created to pass into functions. This is not memory efficient.
-
-  ```cpp
-  #include <iostream>
-  #include <vector>
-  using namespace std;
-
-  class Player {
-
-  public:
-      std::string name;   //string
-      int* xp;            //raw pointer
-      Player(string name_value = "None", int xp_val =0); //constructor prototype (notice we have used default values)
-      Player(const Player& source);           // copy constructor prototype
-
-  };
-
-  //constructor definition
-  Player::Player(string name_value, int xp_val) : name{ name_value }
-  {
-      xp = new int;
-      *xp = xp_val;
-      //initialises the name  and xp attribute
-  }
-
-  //copy constructor definition (must perform deep copy as raw pointer is present in class)
-  Player::Player(const Player& source) : Player{ source.name, *source.xp }
-  {
-      cout << "copy constructor is called for : " << source.name << endl;
-  }
-
-
-  int main()
-  {
-      vector <Player> vec;
-      vec.push_back(Player{ "hero" });  //These Player objects are temporary objects i.e. r values
-      vec.push_back(Player{ "bad_guy" });
-  }
-
-  /*
-  copy constructor is called for : hero
-  copy constructor is called for : bad_guy
-  copy constructor is called for : hero
-
-  here the hero copy constructor is called more than once because of vector behaviour
-  */
-
-  ```
+**_A move constructor is a constructor which can be called with an argument of the same class type and copies the content of the argument, possibly mutating the argument._**
 
 <br>
 
-- Since the objects being passed into functions are r value (temporary), we can make it efficient by defining a move constructor which will override the copy constructor.
-- We must use `noexcept` in function prototype and definiton in visual studio, for unkown reason.
+- It takes a _single object of its own kind as parameter by r-value reference._
+- If there is no move constructor defined in the class and then the compiler will use the copy constructors, which can be less efficient when dealing with large objects.
+- Unlike copy constructor, The parameter in the move constructor is not `const` as we need to mutate that object.
+- The `noexcept` keyword has to be used in both the declaration.
+- The move constructor transfers ownership of resources from the source object to the newly constructed object, effectively "stealing" the data. The source object is left in a valid but unspecified state
+- Move constructors are called when:
+  - std::move is used.
+
+```cpp
+#include <iostream>
+#include <vector>
+
+class MyClass {
+public:
+    int num;
+    int* num_ptr;
+public:
+    MyClass();		                    //default constructor
+    MyClass(int, int);		            //two-arg constructor
+    MyClass(const MyClass& source);     //copy constructor
+    MyClass(MyClass&& source) noexcept; // move constructor
+    ~MyClass();                         //destructor
+};
+
+MyClass::MyClass() : num{ 0 }, num_ptr{ new int(0)}{
+    std::cout << "The default constructor is called" << std::endl;
+}
+
+MyClass::MyClass(int x, int y) : num{ x }, num_ptr{ new int(y)}{
+    std::cout << "The two-arg constructor is called" << std::endl;
+}
+
+MyClass::MyClass(const MyClass& source) : num{ source.num }{
+    std::cout << "The copy constructor is called" << std::endl;
+
+    num_ptr = new int(*source.num_ptr);  //Deep Copy
+}
+
+MyClass::MyClass(MyClass&& source) noexcept : num{ source.num }, num_ptr{ source.num_ptr }{
+    std::cout << "The move constructor is called" << std::endl;
+    source.num = 0;             //Leave the original object in a default kind of a state.
+    source.num_ptr = nullptr;   //Null out the source's pointer to avoid double deletion.
+}
+
+MyClass::~MyClass(){
+    std::cout << "The destructor is called" << std::endl;
+    delete num_ptr;  //Clean Up
+}
+```
+
+- Classic illustration of move constructor.
 
   ```cpp
-  #include <iostream>
-  #include <vector>
-  using namespace std;
+  int main() {
+      MyClass obj1{ 10,100 };
+      MyClass obj2 = std::move(obj1);
 
-  class Player {
-
-  public:
-      std::string name;   //string
-      int* xp;            //raw pointer
-      Player(string name_value = "None", int xp_val =0); //constructor prototype (notice we have used default values)
-      Player(const Player& source);           // copy constructor prototype
-      Player(Player&& source)noexcept;                // move constructor prototype
-
-  };
-
-  //constructor definition
-  Player::Player(string name_value, int xp_val) : name{ name_value }
-  {
-      xp = new int;
-      *xp = xp_val;
-      //initialises the name  and xp attribute
+      std::cout << obj1.num << "\n";
+      std::cout << obj2.num << "\n";
   }
 
-  //copy constructor definition (must perform deep copy as raw pointer is present in class)
-  Player::Player(const Player& source) : Player{ source.name, *source.xp }
-  {
-      cout << "copy constructor is called for : " << source.name << endl;
+  //The two - arg constructor is called
+  //The move constructor is called
+  //0
+  //10
+  //The destructor is called
+  //The destructor is called
+  ```
+
+- When an object is instantiated with an r-value, Copy Elision occurs and the move constructor will not be called.
+
+  ```cpp
+  int main() {
+      MyClass obj1{ MyClass()};
   }
 
+  //The default constructor is called
+  //The destructor is called
+  ```
 
-  //move constructor definition (must null the source raw pointer as raw pointers is present in the class)
-  Player::Player(Player&& source)noexcept : Player{ source.name, *source.xp }
-  {
-      source.xp = nullptr;
-      cout << "move constructor is called for : " << source.name << endl;
+- Pushing an r-value to a container.
+
+  ```cpp
+  int main() {
+      std::vector<MyClass> my_vector;
+      my_vector.push_back(MyClass(1, 1));
   }
 
+  //The two-arg constructor is called
+  //The move constructor is called
+  //The destructor is called
+  //The destructor is called
+  ```
 
-  int main()
-  {
-      vector <Player> vec;
-      vec.push_back(Player{ "hero" });  //These Player objects are temporary objects i.e. r values
-      vec.push_back(Player{ "bad_guy" });
+- I want to understand the output here, this is a behaviour of container I feel. //REVIEW - Needs to be understood.
+
+  ```cpp
+  int main() {
+      std::vector<MyClass> my_vector;
+      my_vector.push_back(MyClass(1, 1));
+      my_vector.push_back(MyClass(10, 1));
   }
 
-  /*
-  move constructor is called for : hero
-  move constructor is called for : bad_guy
-  move constructor is called for : hero
-  */
+  //The two - arg constructor is called
+  //The move constructor is called
+  //The destructor is called
+  //The two - arg constructor is called
+  //The move constructor is called
+  //The move constructor is called
+  //The destructor is called
+  //The destructor is called
+  //The destructor is called
+  //The destructor is called
   ```
 
 <br>
 <br>
 
-# `explicit` constructor
+# `explicit` Constructor
 
 - A constructor that is tagged with `explicit` keyword is an explicit constructor, as such it is used to prevent implicit conversions during object construction.
 
