@@ -338,11 +338,12 @@ public:
 - If there is no copy constructor defined in the class and the class objects happens to copy construct objects, then the compiler would assume a copy constructor which will perform member-to-member copy (bitwise copy) and will also be inlined.
 - It is good practice to provide the copy constructor with a const reference parameter.
 - Copy constructors are called when:
+
   - An existing object is used to initialise a new object.
   - An object is passed to a function by value.
-  - An object created locally in a function is returned by value. (However, modern compilers might perform Return Value Optimisation and Copy Elision and thus eliminate this copy process.)
+  - An object created locally in a function is returned by value. (However, modern compilers might perform Return Value Optimisation and [Copy Elision](../01-cpp-fundamentals/cpp-specific-features/cpp-copy-elision.md) and thus eliminate this copy process.)
 
-//TODO - Link notes to RVO and Copy Elision
+- Passing the object by reference in the copy constructor is essential to avoid infinite recursion. If the object is taken by value in the copy constructor then while the copy constructor would be called, it would keep calling itself as the objects are passed by value!
 
 <br>
 <br>
