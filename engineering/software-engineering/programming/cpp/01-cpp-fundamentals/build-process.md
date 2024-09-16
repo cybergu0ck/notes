@@ -11,7 +11,6 @@ Source files contain the actual implementations of the functions and classes dec
 <br>
 <br>
 
-
 ## Preprocessing
 
 **_Preprocessing is the process of handling preprocessor directives and generating an expanded version of the source code._**
@@ -104,3 +103,31 @@ Libraries can be liked wither statically or dynamically.
 <br>
 <br>
 <br>
+
+# Declaration and Defintion
+
+**A declaration is a statement that introduces a name for a variable, function, class, or other entity to the compiler, without necessarily providing the complete details or implementation.**
+
+- It inform the compiler about the existence and type of a function or variable, allowing for type checking and proper linking.
+- Declarations can appear multiple times in different translation units (source files).
+- Example of a declaration.
+
+  ```cpp
+  void myfunc(); //declaration
+  ```
+
+<br>
+
+**A definition is a statement that provides the complete details or implementation of a variable, function, class, or other entity.**
+
+- It allocates memory for variables and provides the actual code for functions.
+- Definitions must appear exactly once across the entire program. _It should not appear in multiple different translation units aswell!_
+- Examples of a declaration.
+
+  ```cpp
+  int number;  // definition, it not only declares the variable a but also allocates storage for it.
+
+  void myfunc() {
+    // Function implementation
+  }
+  ```
