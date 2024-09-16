@@ -58,9 +58,13 @@ int main() {
 <br>
 <br>
 
-## C++ structs (Extended Structs)
+## C++ Structs
 
 _A **struct** in C++ is a user-defined data type that facilitates grouping of related functions along with the related vairables of different types as a single entity._
+
+- C++ structs are called as extended structs.
+- C++ provides Encapsulation through extended structs.
+- C++ follows a **data centric approach** and lays more emphasis on data and cares less for functions.
 
 ```cpp
 #include <iostream>
@@ -76,9 +80,6 @@ private:  //supports access specifier, it is "public" by default
     }
 };
 ```
-
-- C++ provides Encapsulation through extended structs.
-- C++ follows a **data centric approach** and lays more emphasis on data and cares less for functions.
 
 <br>
 <br>
@@ -132,9 +133,9 @@ class Employee
 <br>
 <br>
 
-## C++ Object Model (Bjarne Model)
+## C++ Object Model
 
-According to the Bjarne model, when an object is created,
+According to the C++ Object Model (Bjarne model), when an object is created,
 
 - The object only represents the data members physically.
 - The member functions are a single-copy on the code-segment (part of process memory) and is logically connected to all instances of the extended struct or class plan.
@@ -173,7 +174,7 @@ According to the Bjarne model, when an object is created,
 <br>
 <br>
 
-## `this` Pointer
+## This Pointer
 
 _`this` is the implicit parameter used by member functions to access the object on which they were called._
 
@@ -251,7 +252,7 @@ int main()
 <br>
 <br>
 
-## const Member Functions
+## Const Member Functions
 
 Member functions that use `const` are called const member functions.
 
@@ -295,7 +296,7 @@ Member functions that use `const` are called const member functions.
 <br>
 <br>
 
-## Member Functions returning `this` object
+## Member Functions Returning This Object
 
 ```cpp
 #include <iostream>
@@ -327,7 +328,7 @@ int main()
 <br>
 <br>
 
-## `mutable` keyword
+## Mutable Keywords
 
 _`mutable` keyword is used to modify the behavior of a non-static data member of a class. When a data member is declared as mutable, it indicates that the member can be modified even within a const-qualified member function._
 
