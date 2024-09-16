@@ -224,7 +224,7 @@ public:
 <br>
 <br>
 
-# Delegated Constructors
+## Delegated Constructors
 
 - Delegated constructors in C++ are a feature introduced in C++11 that allow a constructor to call another constructor of the same class.
 - Instead of initialising the data attributes in every constructor, we can use the constructor that has most args as delegated constructor.
@@ -273,6 +273,65 @@ public:
   ```
 
   - In the above code, note that the delagted constructor is called first (in prolog phase itself) before the actual constructor is called.
+
+<br>
+<br>
+
+## Explicit Constructor
+
+- A constructor that is tagged with `explicit` keyword is an explicit constructor, as such it is used to prevent implicit conversions during object construction.
+
+* Illustration to understand implicit conversion. In the following code when x is assigned to obj, the one arg constructor of MyClass assists the compiler for implicitley conversion (we can see it being called in the debugger) and the data attribute is now set to the value of x i.e. 10.
+
+  ```cpp
+  #include <iostream>
+
+  class MyClass
+  {
+  private:
+      int a;
+
+  public:
+      MyClass(int = 1);
+  };
+
+  MyClass::MyClass(int x): a{x}
+  {}
+
+  int main()
+  {
+      int x{ 10 };
+      MyClass obj;
+      obj = x;        //compiler allows this as an implicit conversion is made
+  }
+  ```
+
+> one arg constructors are generally called as conversion constructors as they facilitate implicit conversion. <br> <br>
+
+- We can use `explicit` to avoid this
+
+  ```cpp
+  #include <iostream>
+
+  class MyClass
+  {
+  private:
+      int a;
+
+  public:
+      explicit MyClass(int = 1);
+  };
+
+  MyClass::MyClass(int x): a{x}
+  {}
+
+  int main()
+  {
+      int x{ 10 };
+      MyClass obj;
+      obj = x;        //compiler raises error
+  }
+  ```
 
 <br>
 <br>
@@ -637,61 +696,134 @@ MyClass::~MyClass(){
 <br>
 <br>
 
-# `explicit` Constructor
+# Copy Elision
 
-- A constructor that is tagged with `explicit` keyword is an explicit constructor, as such it is used to prevent implicit conversions during object construction.
+The elision (ommision) of the copy or move constructors is called copy elision.
 
-* Illustration to understand implicit conversion. In the following code when x is assigned to obj, the one arg constructor of MyClass assists the compiler for implicitley conversion (we can see it being called in the debugger) and the data attribute is now set to the value of x i.e. 10.
+- Copy Elision can be applied even if the copy or move constructors have side effects! Meaning that if some code is written when an object is copied or moved and the compiler happens to perform copy elision then that code won't be run at all.
+- Until C++ 17, The compiler can perform either copy elision or use copy or move constructor but since C++ 17 the compiler mandatorily performs copy elision.
+- It is permitted in the following circumstances.
 
-  ```cpp
-  #include <iostream>
+  1. Named Return Value Optimisation.
+  2. Return Value Optimisation.
+  3. Object Instantiation from a Temporary.
+  4. Exception thrown and caught by Value.
 
-  class MyClass
-  {
-  private:
-      int a;
+<br>
 
-  public:
-      MyClass(int = 1);
-  };
-
-  MyClass::MyClass(int x): a{x}
-  {}
-
-  int main()
-  {
-      int x{ 10 };
-      MyClass obj;
-      obj = x;        //compiler allows this as an implicit conversion is made
-  }
-  ```
-
-> one arg constructors are generally called as conversion constructors as they facilitate implicit conversion. <br> <br>
-
-- We can use `explicit` to avoid this
+- Consider the following class.
 
   ```cpp
   #include <iostream>
 
-  class MyClass
-  {
-  private:
-      int a;
-
+  class MyClass {
   public:
-      explicit MyClass(int = 1);
+      int num;
+  public:
+      MyClass();		                    //default constructor
+      MyClass(const MyClass& source);     //copy constructor
+      MyClass(MyClass&& source) noexcept; // move constructor
+      ~MyClass();                         //destructor
   };
 
-  MyClass::MyClass(int x): a{x}
-  {}
-
-  int main()
+  MyClass::MyClass() :num{ 0 }
   {
-      int x{ 10 };
-      MyClass obj;
-      obj = x;        //compiler raises error
+      std::cout << "default constructor called" << "\n";
+  }
+
+  MyClass::MyClass(const MyClass& source):num{source.num}
+  {
+      std::cout << "copy constructor is called " << "\n";
+  }
+
+  MyClass::MyClass(MyClass&& source) noexcept:num{source.num}
+  {
+      std::cout << "move constructor is called " << "\n";
+      source.num = 0;
+  }
+
+  MyClass::~MyClass()
+  {
+      std::cout << "destructor called " << "\n";
   }
   ```
+
+1. Named Return Value Optimisation
+
+   ```cpp
+   MyClass Foo()
+   {
+       MyClass named;
+       return named;       //Returning a named object by value
+   }
+
+   int main()
+   {
+       MyClass obj = Foo();
+   }
+
+   //default constructor called
+   //destructor called
+   ```
+
+2. Return Value Optimisation
+
+   ```cpp
+   MyClass Foo()
+   {
+       return MyClass();   //Returning a temporary object by value
+   }
+
+   int main()
+   {
+       MyClass obj = Foo();
+   }
+
+   //default constructor called
+   //destructor called
+   ```
+
+3. Object Instantiation from a Temporary.
+
+   ```cpp
+   int main()
+   {
+       MyClass obj{ MyClass() };
+   }
+
+   //default constructor called
+   //destructor called
+   ```
+
+4. Exception thrown and caught by Value. (I have not understand this)
+
+   ```cpp
+   MyClass Foo()
+   {
+       MyClass obj;
+       throw obj;
+   }
+
+   int main()
+   {
+       try {
+           Foo();
+       }
+       catch (MyClass obj)
+       {
+       }
+   }
+
+   //default constructor called
+   //move constructor is called
+   //destructor called
+   //copy constructor is called
+   //destructor called
+   //destructor called
+   ```
+
+<br>
+<br>
 
 <!--
 This is from Mr Ganesh's (trainer) notes, Looks contradictory from the standard textbook

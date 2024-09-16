@@ -196,3 +196,7 @@ Polymorphism is the ability to use the same code to operate on different types o
 
 <br>
 <br>
+
+## Run Time Polymorphism
+
+Run time polymorphism is closely tied to [inheritance](./08-cpp-inheritence.md).

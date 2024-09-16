@@ -23,7 +23,7 @@ _An expression is a composition of operands and operators and yields a result wh
 
 ## glvalue
 
-*A glvalue is an expression whose evaluation determines the identity of an object or function*
+_A glvalue is an expression whose evaluation determines the identity of an object or function_
 
 - glvalue refers to “generalized lvalue".
 - gvalue occupy data storage.
@@ -33,7 +33,7 @@ _An expression is a composition of operands and operators and yields a result wh
 
 ## rvalue
 
-*An rvalue is essentially an expression that can be moved in memory.*
+_An rvalue is essentially an expression that can be moved in memory._
 
 <br>
 <br>
@@ -42,7 +42,7 @@ _An expression is a composition of operands and operators and yields a result wh
 
 _An lvalue is an expression not nearing it's end of lifetime and whose evaluation determines the identity of an object or function._
 
-- It is common to define lvalue as *An lvalue is a glvalue that is not an xvalue.*
+- It is common to define lvalue as _An lvalue is a glvalue that is not an xvalue._
 - lvalue is a glvalue but not a rvalue. Hence,
   - lvalues can be accessed in memory.
   - lvalues cannot be moved in memory.
@@ -53,25 +53,25 @@ _An lvalue is an expression not nearing it's end of lifetime and whose evaluatio
   int main()
   {
       int num = 100; //num is a lvalue
-      int *ptr = &num; 
+      int *ptr = &num;
       *ptr = 200; //referenced pointer is a lvalue
       int &ref = num; //ref is a lvalue
   }
   ```
 
-- Historically, lvalues could be present on the left hand side of the assignment operation. Technically,  Modifiable lvalues can appear on the left hand side of the assignment operator.
+- Historically, lvalues could be present on the left hand side of the assignment operation. Technically, Modifiable lvalues can appear on the left hand side of the assignment operator.
 
   ```cpp
   int main()
   {
-	int num{ 100 };
-	num = 200; //num is a modifiable lvalue
+  int num{ 100 };
+  num = 200; //num is a modifiable lvalue
   }
   ```
 
   ```cpp
   int foo()
-  {	
+  {
     int random_number = 69; //assume this is generated reandomly
     return random_number;
   }
@@ -82,7 +82,7 @@ _An lvalue is an expression not nearing it's end of lifetime and whose evaluatio
   }
 
   int main()
-  { 
+  {
       const int num{ 100 };
       num = 200; //error: expression must be modifiable lvalue
       foo = goo;  //error: expression must be modifiable lvalue
@@ -117,10 +117,8 @@ _An lvalue is an expression not nearing it's end of lifetime and whose evaluatio
   }
   ```
 
-
 <br>
 <br>
-
 
 ## prvalue
 
@@ -133,20 +131,20 @@ _An prvalue is an expression whose evaluation doesnt determine the identity of a
 - prvalues cannot be present on the left hand side of an assignment.
 - Examples of prvalues are literals.
 - post
-- A function call or an overloaded operator expression, whose return type is non-reference is a prvalue. 
+- A function call or an overloaded operator expression, whose return type is non-reference is a prvalue.
 
   ```cpp
   #include <iostream>
 
   int doesNothing()
-  {	
+  {
     return 96;;
   }
 
   int main()
   {
     int res = std::move(doesNothing()); //doesNothing() is a prvalue
-  } 
+  }
   ```
 
 - A function call whose return type is a pointer is a prvalue as it is non-reference.
@@ -157,7 +155,7 @@ _An prvalue is an expression whose evaluation doesnt determine the identity of a
   int special{ 100 };
 
   int* getSpecial()
-  {	
+  {
     return &special;
   }
 
@@ -165,7 +163,7 @@ _An prvalue is an expression whose evaluation doesnt determine the identity of a
   {
     getSpecial() = 10; //Error: expression must be modifiable lvalue; getSpecial() is a prvalue
     *getSpecial() = 10; //Valid as derefencing a non-const pointer is a modifiable lvalue
-  } 
+  }
   ```
 
 <br>
@@ -183,7 +181,7 @@ _An xvalue is an expression nearing it's end of lifetime, whose evaluation deter
 <br>
 <br>
 
-### Temporary Materialisation Conversion 
+### Temporary Materialisation Conversion
 
 A prvalue of any complete type T can be converted to an xvalue of the same type T. This conversion initializes a temporary object of type T from the prvalue by evaluating the prvalue with the temporary object as its result object, and produces an xvalue denoting the temporary object.
 
@@ -204,7 +202,6 @@ int main()
 }
 ```
 
-
 <br>
 <br>
 <br>
@@ -214,10 +211,37 @@ int main()
 - A statement is a complete line of code that performs some action.
 - statements are usually terminated with a semicolon and usually contain expressions.
 
-
-
 <br>
 <br>
+<br>
+
+# Declaration and Defintion
+
+**A declaration is a statement that introduces a name for a variable, function, class, or other entity to the compiler, without necessarily providing the complete details or implementation.**
+
+- It inform the compiler about the existence and type of a function or variable, allowing for type checking and proper linking.
+- Declarations can appear multiple times in different translation units (source files).
+- Example of a declaration.
+
+  ```cpp
+  void myfunc(); //declaration
+  ```
+
+<br>
+
+**A definition is a statement that provides the complete details or implementation of a variable, function, class, or other entity.**
+
+- It allocates memory for variables and provides the actual code for functions.
+- Definitions must appear exactly once across the entire program. _It should not appear in multiple different translation units aswell!_
+- Examples of a declaration.
+
+  ```cpp
+  int number;  // definition, it not only declares the variable a but also allocates storage for it.
+
+  void myfunc() {
+    // Function implementation
+  }
+  ```
 
 ## References
 
