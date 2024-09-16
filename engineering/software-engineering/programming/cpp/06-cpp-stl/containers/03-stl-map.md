@@ -30,6 +30,10 @@ int main()
 
 ## Methods
 
+<br>
+
+### Adding Elements
+
 - Adding key-value pairs to a map.
 
   - Using the `[]` operator.
@@ -70,6 +74,8 @@ int main()
     - This method will not overwrite the value if the key already exists.
 
 <br>
+
+### Accessing Elements
 
 - Accessing the elements
 
@@ -119,6 +125,8 @@ int main()
 
 <br>
 
+### Finding Elements
+
 - Finding an element in the map.
 
   ```cpp
@@ -138,98 +146,67 @@ int main()
 
 <br>
 
-- Removing elements
+### Removing Elements
 
-  ```cpp
-  int main()
-  {
-      std::map<int, std::string> myMap{ {1, "a"}, {2, "b"}, {3, "c"} };
-      myMap.erase(1);                 //myMap is {2 : "b", 3 : "c"}
-      myMap.erase(0);                 //No errors, nothing is removed
+```cpp
+int main()
+{
+    std::map<int, std::string> myMap{ {1, "a"}, {2, "b"}, {3, "c"} };
+    myMap.erase(1);                 //myMap is {2 : "b", 3 : "c"}
+    myMap.erase(0);                 //No errors, nothing is removed
 
-      myMap.erase(myMap.begin());     //myMap is {3 : "c"}
-      myMap.erase(myMap.begin()+1);   //Error as map iterators are bidirectional, not random access iterators!
-      myMap.erase(myMap.end());       //Error: Can't erase using out of bound iterators
+    myMap.erase(myMap.begin());     //myMap is {3 : "c"}
+    myMap.erase(myMap.begin()+1);   //Error as map iterators are bidirectional, not random access iterators!
+    myMap.erase(myMap.end());       //Error: Can't erase using out of bound iterators
 
-      myMap.clear();                  //Clears the entire map
-  }
-  ```
-
-<br>
-
-- Get the number of elements
-
-  ```cpp
-  int main()
-  {
-      std::map<int, std::string> myMap;
-      myMap[1] = "a";
-      myMap[2] = "b";
-      myMap[1] = "c";
-
-      std::cout << myMap.size();
-  }
-  //2
-  ```
+    myMap.clear();                  //Clears the entire map
+}
+```
 
 <br>
 
-- Check if the vector is empty
+### Number of Elements
 
-  ```cpp
-  int main()
-  {
-      std::map<int, std::string> myMap;
+```cpp
+int main()
+{
+    std::map<int, std::string> myMap;
+    myMap[1] = "a";
+    myMap[2] = "b";
+    myMap[1] = "c";
 
-      std::cout << myMap.empty();  //returns 1 if the map is empty else returns 0
-  }
-  //1
-  ```
+    std::cout << myMap.size();
+}
+//2
+```
 
 <br>
 
-- Emplacing an elment into the vector. Understand emplacement using the illustration below
+### Emptyness
+
+```cpp
+int main()
+{
+    std::map<int, std::string> myMap;
+
+    std::cout << myMap.empty();  //returns 1 if the map is empty else returns 0
+}
+//1
+```
 
 <br>
 <br>
 
 ## Types of STL Maps
 
-### Map
-
-_An STL map is an associative container that stores key-value pairs with unique keys in a sorted order by key._
-
-- Defined in the `<map>` header.
-
-<br>
-
-### Multi Map
-
-_A multimap is an associative container that stores key-value pairs, allowing multiple values to be associated with the same key (i.e., duplicate keys), in a sorted order by key._
-
-- Defined in the `<map>` header.
-- A `std::map` doesn't contain duplicate keys as it overwrites the value if the key is already present while the `std::multimap` can contain dupliate keys.
+1. **Map** : _An STL map is an associative container that stores key-value pairs with unique keys in a sorted order by key._
+2. **Multi Map** : _A multimap is an associative container that stores key-value pairs, allowing multiple values to be associated with the same key (i.e., duplicate keys), in a sorted order by key._
+3. **Unordered Map** : _An unordered map is an associative container that stores key-value pairs with unique keys without maintaining any specific order of the elements._
+4. **Unordered Multimap** : _An unordered multimap is an associative container that stores key-value pairs, allowing multiple values to be associated with the same key (i.e., duplicate keys) without maintaining any specific order of the elements._
 
 <br>
 
-### Unordered Map
-
-_An unordered map is an associative container that stores key-value pairs with unique keys without maintaining any specific order of the elements._
-
-- Defined in the `<unordered_map>` header.
-
-<br>
-
-### Unordered Multimap
-
-_An unordered multimap is an associative container that stores key-value pairs, allowing multiple values to be associated with the same key (i.e., duplicate keys) without maintaining any specific order of the elements._
-
-- Defined in the `<unordered_map>` header.
-
-<br>
-<br>
-
-## Illustration
+### Illustration
 
 |             | std::map | std::mulitmap | std::unordered_map | std::unordered_multimap |
 | ----------- | -------- | ------------- | ------------------ | ----------------------- |
@@ -238,18 +215,16 @@ _An unordered multimap is an associative container that stores key-value pairs, 
 | Header file | `<map>`  | `<map>`       | `<unordered_map>`  | `unordered_map`         |
 
 <br>
-<br>
 
-## Implementation
+### Implementation Details
 
 |                | std::map       | std::mulitmap  | std::unordered_map | std::unordered_multimap |
 | -------------- | -------------- | -------------- | ------------------ | ----------------------- |
 | Implementation | Red Black Tree | Red Black Tree | Hash Table         | Hash Table              |
 
 <br>
-<br>
 
-## Time Complexities
+### Time Complexities
 
 |           | std::map   | std::mulitmap | std::unordered_map  | std::unordered_multimap |
 | --------- | ---------- | ------------- | ------------------- | ----------------------- |
@@ -260,9 +235,8 @@ _An unordered multimap is an associative container that stores key-value pairs, 
 - For the unordered variants the time complexity is $\theta(1)$ i.e. average case and $O(n)$ i.e. worst case, when the exisiting hash is generated (rare).
 
 <br>
-<br>
 
-## Space Complexities
+### Space Complexities
 
 |     | std::map | std::mulitmap | std::unordered_map | std::unordered_multimap |
 | --- | -------- | ------------- | ------------------ | ----------------------- |

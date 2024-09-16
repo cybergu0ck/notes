@@ -28,27 +28,31 @@ int main()
 
 ## Methods
 
-- Adding an element.
-  - Inserting elements.
+<br>
 
-    ```cpp
-    #include <iostream>
-    #include <set>
+### Adding Elements
 
-    int main()
-    {
-        std::set<int> my_set = { 1,2,3 };
-        my_set.insert(4);
-        my_set.insert({ 5,6,7 });
-        std::pair<std::set<int>::iterator, bool> res = my_set.insert(1);  //Returns a pair, first is iterator to element and second is true if inserted, false if already exists.
-    }
-    //1       2       3       4       5       6       7
-    ```
+- Inserting elements.
 
-    - Emplacing elements.
+  ```cpp
+  #include <iostream>
+  #include <set>
 
+  int main()
+  {
+      std::set<int> my_set = { 1,2,3 };
+      my_set.insert(4);
+      my_set.insert({ 5,6,7 });
+      std::pair<std::set<int>::iterator, bool> res = my_set.insert(1);  //Returns a pair, first is iterator to element and second is true if inserted, false if already exists.
+  }
+  //1       2       3       4       5       6       7
+  ```
 
-- Accessing an element.
+- Emplacing elements.
+
+<br>
+
+### Accessing Elements
 
 ```cpp
 #include <iostream>
@@ -68,52 +72,35 @@ int main()
 }
 ```
 
+<br>
 
+### Finding Elements
 
-- Finding an element.
+<br>
 
-- Removing an element.
+### Removing Elements
 
-- Get the number of elements.
+<br>
 
-- Check if the set is empty.
+### Number of Elements
+
+<br>
+
+### Emptyness
 
 <br>
 <br>
 
 ## Types of STL Sets
 
-<br>
-
-### Set
-
-_A set is an associative container that stores unique elements in sorted order._
-
-<br>
-
-### Multi Set
-
-_A multiset is an associative container that stores elements (allows duplicates) in sorted order._
+1. **Set** : _A set is an associative container that stores unique elements in sorted order._
+2. **Multi Set** : _A multiset is an associative container that stores elements (allows duplicates) in sorted order._
+3. **Unordered Set** : _An unordered is an associative container that stores unique elements in un-sorted order._
+4. **Unordered Multiset** : _An unordered_multiset is an associative container that stores elements (allows duplicates) in un-sorted order._
 
 <br>
 
-### Unordered Set
-
-_An unordered is an associative container that stores unique elements in un-sorted order._
-
-<br>
-
-### Unordered Multiset
-
-_An unordered_multiset is an associative container that stores elements (allows duplicates) in un-sorted order._
-
-<br>
-<br>
-
-<br>
-<br>
-
-## Illustration
+### Illustration
 
 |                 | std::set | std::muliset | std::unordered_set | std::unordered_multset |
 | --------------- | -------- | ------------ | ------------------ | ---------------------- |
@@ -122,18 +109,16 @@ _An unordered_multiset is an associative container that stores elements (allows 
 | Header file     | `<set>`  | `<set>`      | `<unordered_set>`  | `<unordered_set>`      |
 
 <br>
-<br>
 
-## Implementation
+### Implementation
 
 |                | std::set       | std::mulitset  | std::unordered_set | std::unordered_multiset |
 | -------------- | -------------- | -------------- | ------------------ | ----------------------- |
 | Implementation | Red Black Tree | Red Black Tree | Hash Table         | Hash Table              |
 
 <br>
-<br>
 
-## Time Complexities
+### Time Complexities
 
 |           | std::set   | std::mulitset | std::unordered_set  | std::unordered_multiset |
 | --------- | ---------- | ------------- | ------------------- | ----------------------- |
@@ -144,9 +129,8 @@ _An unordered_multiset is an associative container that stores elements (allows 
 - For the unordered variants the time complexity is $\theta(1)$ i.e. average case and $O(n)$ i.e. worst case, when the hash function is poor causing collisions (rare).
 
 <br>
-<br>
 
-## Space Complexities
+### Space Complexities
 
 |     | std::map | std::mulitmap | std::unordered_map | std::unordered_multimap |
 | --- | -------- | ------------- | ------------------ | ----------------------- |

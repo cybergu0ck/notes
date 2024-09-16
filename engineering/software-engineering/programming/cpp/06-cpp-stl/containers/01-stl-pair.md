@@ -29,18 +29,22 @@ int main()
 
 ## Methods
 
-- Reading and Writing the elements of the pair.
+<br>
 
-  ```cpp
-  #include <iostream>
-  #include <utility>
+### Reading and Writing
 
-  int main()
-  {
-      std::pair<int, int> coordinates;
-      coordinates.first = 101;
-      std::cout << coordinates.first << " " << coordinates.second << "\n";
-  }
+Reading and writing elements to the pair.
 
-  //101  0
-  ```
+```cpp
+#include <iostream>
+#include <utility>
+
+int main()
+{
+    std::pair<int, int> coordinates;
+    coordinates.first = 101;
+    std::cout << coordinates.first << " " << coordinates.second << "\n";
+}
+
+//101  0
+```
