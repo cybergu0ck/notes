@@ -58,7 +58,8 @@
 
 <br>
 
-Note that the above mentioned ways donot prevent inclusion of header files in different transalation units.
+- Prefer include guards over pragma preprocessor as it is supported by all compilers.
+- Note that the above mentioned ways donot prevent inclusion of header files in different transalation units. Headers are supposed to be included in different translation units because the code in the transalation units needs the declarations but the [definitons](../build-process.md#declaration-and-defintion) must be present only once in the entire program.
 
 <br>
 <br>
