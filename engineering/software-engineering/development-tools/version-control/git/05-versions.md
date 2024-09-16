@@ -135,4 +135,20 @@ It is used to list the chronological record of all the updates(merges, resets, r
   ```
 
 <br>
+
+### Git Diff Command
+
+- To show only the actual changes between two commits (or branches)
+
+  ```bash
+    git diff main...HEAD
+  ```
+
+- To show only the names of the changed files (not the actual changes) between two commits (or branches)
+
+  ```bash
+    git diff --name-only main...HEAD
+  ```
+
+<br>
 <br>
