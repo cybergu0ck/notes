@@ -18,15 +18,16 @@
 <br>
 <br>
 
-## Preventing multiple inclusion 
+## Preventing Multiple Inclusion
 
 - When a header is included more than once in the same transalation unit, It may lead to
-  * Compilation error because of multiple definition.
-  * Longer compilation time.
-  * Polution of namespace.
 
-- We can prevent multiple inclusion of the header file *in the same translation unit* in several ways.
+  - Compilation error because of multiple definition.
+  - Longer compilation time.
+  - Polution of namespace.
 
+- We can prevent multiple inclusion of the header file _in the same translation unit_ in several ways.
+- Header files would most likely be included in more than one translation unit, this is not a problem unless the header file contains definitions. In which case the [defintion](../build-process.md#declaration-and-defintion) would appear in more than one translation unit, which is an error.
 
 <br>
 
@@ -39,9 +40,8 @@
 #endif //ANY_MACRO_H
 ```
 
-  - `#ifndef` are include guards.
-  - Include guards check wether the macro (ANY_MACRO_H in this the above code)is defined. If it's not defined, it defines ir and includes the content of the header file. If it's already defined (due to previous inclusion), the content is skipped.
-
+- `#ifndef` are include guards.
+- Include guards check wether the macro (ANY_MACRO_H in this the above code)is defined. If it's not defined, it defines ir and includes the content of the header file. If it's already defined (due to previous inclusion), the content is skipped.
 
 <br>
 
@@ -58,9 +58,7 @@
 
 <br>
 
-Note that the above mentioned ways donot prevent inclusion of header files in different transalation units. 
-
-
+Note that the above mentioned ways donot prevent inclusion of header files in different transalation units.
 
 <br>
 <br>
@@ -70,5 +68,5 @@ Note that the above mentioned ways donot prevent inclusion of header files in di
 It is ideal to keep dependencies very less in header files. Instead of including the dependency (`#include <other header>`) directly in the header file, it is ideal to do that in the relevant source file and use forward declarations in the header if needed.
 
 - The illustration describes the reason for the above statement. If header with lot of dependencies is included in other headers, then for every change in any one of the parent header will trigger chain of compilation for all the headers, having dependecies in the source file would solve this problem as source files are not included by other files and any change in the parent dependencies would trigger compilation of the source file itself and would'nt propogate.
-  
+
   ![image](../../_assets/chain-recomp.png)
