@@ -8,34 +8,7 @@
 <br>
 <br>
 
-## Types of sets
 
-<br>
-
-### set
-
-_A set is an associative container that stores unique elements in sorted order._
-
-<br>
-
-### unordered_set
-
-_An unordered is an associative container that stores unique elements in un-sorted order._
-
-<br>
-
-### multi_set
-
-_A multiset is an associative container that stores elements (allows duplicates) in sorted order._
-
-<br>
-
-### unordered_multiset
-
-_An unordered_multiset is an associative container that stores elements (allows duplicates) in un-sorted order._
-
-<br>
-<br>
 
 ### Implementation
 
