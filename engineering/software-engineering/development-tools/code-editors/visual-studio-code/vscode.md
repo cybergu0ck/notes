@@ -108,3 +108,7 @@ To set up prettier:
 
 <br>
 <br>
+
+### Configuring default C++ formatter
+
+- To configure default C++ formatter to use K&R style of braces, follow this [stack overflow](https://stackoverflow.com/questions/45823734/visual-studio-code-formatting-for) thread.
