@@ -112,7 +112,25 @@ String input stream are strings used as streams.
   - `str` is the string where the read line will be stored.
   - `delim` is a optional parameter which indicates the end of line, by default it is newline character (`\n`).
 
-//STUB - Can fill elaborated notes, similar to the above section
+- Example usage of getline function in a while loop
+
+  ```cpp
+  #include <iostream>
+  #include <sstream>
+  #include <string>
+
+  int main() {
+      std::string strs{"hello-hi-bye-kai"};
+      std::string buffer;
+
+      std::istringstream is{strs};
+      while (std::getline(is, buffer, '-')) {
+          std::cout << buffer << "\t\t";
+      }
+
+      return 0;
+  }
+  ```
 
 <br>
 <br>
@@ -129,6 +147,8 @@ Output streams are streams used for writing data.
   - Standard Output Stream (`std::cout`), is an instance of `std::ostream`.
   - String Output Stream (`std::ostringstream`) is a derived class of `std::ostream`.
   - File Output Stream (`sd::ofstream`) is a derived class of `std::ostream`.
+
+//STUB - Can fill elaborated notes, similar to the above section
 
 <br>
 
