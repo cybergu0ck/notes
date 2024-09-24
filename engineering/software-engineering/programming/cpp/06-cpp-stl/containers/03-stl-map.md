@@ -195,6 +195,38 @@ int main()
 ```
 
 <br>
+
+### Equality
+
+- `==` returns true only if the two maps being compared have exactly same keys with exactly same values.
+
+  ```cpp
+  #include <iostream>
+  #include <unordered_map>
+
+  void compare_maps(std::unordered_map<char, int> map1,
+                  std::unordered_map<char, int> map2) {
+      if (map1 == map2) {
+          std::cout << "true" << "\n";
+      } else {
+          std::cout << "false" << '\n';
+      }
+  }
+
+  int main() {
+      std::unordered_map<char, int> map1{{'a', 1}, {'b', 1}};
+      std::unordered_map<char, int> map2{{'a', 1}, {'b', 1}};
+      std::unordered_map<char, int> map3{{'a', 1}, {'b', 10}};
+
+      compare_maps(map1, map2);
+      compare_maps(map1, map3);
+  }
+
+  // true
+  // false
+  ```
+
+<br>
 <br>
 
 ## Types of STL Maps
