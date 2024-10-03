@@ -103,22 +103,85 @@ View [in remote repositories notes](04-remote-repositories.md#working-with-remot
 
 - To compare the commits between two branches.
 
-  - Commits in branch2 that are not in branch1.
+  - The following command shows all the commits exclusive to branch2 when compared with branch1. i,e, commits in branch2 that are not in branch1.
     ```bash
     git log branch1..branch2
     ```
-  - Commits in branch1 that are not in branch2.
+  - The following command shows all the commits exclusive to branch1 when compared with branch2. i,e, commits in branch1 that are not in branch2.
     ```bash
     git log branch2..branch1
     ```
 
 - To check the differences between two git branches.
 
-  - Changes in branch2 that are not in branch1.
+  - The following command shows the difference the differance in branch2 when compared with branch1.
     ```bash
     git diff branch1..branch2
     ```
-  - Changes in branch1 that are not in branch2.
+  - The following command shows the difference the differance in branch1 when compared with branch2.
     ```bash
     git diff branch2..branch1
     ```
+
+<br>
+
+### Illustration
+
+- Assume branch1 has one commit (b60d22, "added text in file.txt in branch1") and the contents of file.txt is as follows:
+
+  ```txt
+  This is change made in branch1
+  ```
+
+- Assume branch2 has one commit (e149c1, "added text in file.txt in branch2") and the contents of file.txt is as follows:
+
+  ```txt
+  This is change made in branch2
+  ```
+
+- The result of the versions of the above command is as shown:
+
+  ```bash
+  git log branch1..branch2
+  ```
+
+  ```
+  e149c1, "added text in file.txt in branch2"
+  ```
+
+  <br>
+  <br>
+
+  ```bash
+  git log branch2..branch1
+  ```
+
+  ```
+  b60d22, "added text in file.txt in branch1"
+  ```
+
+  <br>
+  <br>
+
+  ```bash
+  git diff branch1..branch2
+  ```
+
+  ```
+  <metadata>
+  - This is change made in branch1
+  + This is change made in branch2
+  ```
+
+  <br>
+  <br>
+
+  ```bash
+  git diff branch2..branch1
+  ```
+
+  ```
+  <metadata>
+  - This is change made in branch2
+  + This is change made in branch1
+  ```

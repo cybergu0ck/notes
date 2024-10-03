@@ -265,3 +265,10 @@
   ```
 
 * We can do the same using lambda functions!
+
+<br>
+<br>
+
+## Resources
+
+- Unlike a unique_ptr, the deleter for a shared_ptr is not part of the type. You must pass the deleter to the constructor of the shared_ptr.

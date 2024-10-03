@@ -25,8 +25,8 @@
   | Toggle Block Comment                             | Ctrl + Shift + /          |
   | View:Open Previous Recently Used Editor in Group | Ctrl + Tab                |
   | Remove All Breakpoints                           | Ctrl + Shift + F9         |
-  | Toggle Primary Side Bar (Left Bar)               | Ctrl + B                  |
-  | Toggle Pannel (Bottom, terminal...)              | Ctrl + J                  |
+  | Toggle Primary Side Bar (Left Bar)               | Alt + B                   |
+  | Toggle Pannel (Bottom, terminal...)              | Alt + J                   |
   | Delete Line                                      | Ctrl + Shift + K          |
   | Format Document                                  | Shift + Alt + L           |
   | Format Selection                                 | Ctrl + K and Ctrl + F     |
@@ -108,3 +108,7 @@ To set up prettier:
 
 <br>
 <br>
+
+### Configuring default C++ formatter
+
+- To configure default C++ formatter to use K&R style of braces, follow this [stack overflow](https://stackoverflow.com/questions/45823734/visual-studio-code-formatting-for) thread.
