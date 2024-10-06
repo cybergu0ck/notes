@@ -76,6 +76,24 @@ int main()
 
 ### Finding Elements
 
+```cpp
+#include <iostream>
+#include <set>
+
+int main()
+{
+	std::set<int> my_set = { 1,2,3 };
+
+	std::set<int>::iterator it = my_set.find(2);
+	if (it != my_set.end()){
+		std::cout << "Found the element with value " << *it;
+	}
+	else{
+		std::cout << "Element not found";
+	}
+}
+```
+
 <br>
 
 ### Removing Elements
