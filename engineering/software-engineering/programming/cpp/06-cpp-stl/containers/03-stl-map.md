@@ -227,6 +227,40 @@ int main()
   ```
 
 <br>
+
+### Sorting Elements
+
+- Sorting the map based on values is done using a temporary vector and the sorting algorithm.
+
+  ```cpp
+  #include <iostream>
+  #include <unordered_map>
+  #include <vector>
+  #include <algorithm>
+
+  int main() {
+      std::unordered_map<int, int> freq {{2,3},{1,2}, {3,10}};
+
+      std::vector<std::pair<int, int>> temp_vec;
+      for(const auto& pair:freq){
+      temp_vec.push_back(pair);
+      }
+
+      std::sort(temp_vec.begin(), temp_vec.end(), [](std::pair<int,int> a, auto b){ return a.second < b.second;}); //Use greater than operator to sort the other way.
+
+      for(const auto& pair : temp_vec){
+      std::cout << pair.first << ":" << pair.second << "\n";
+      }
+
+      return 0;
+  }
+
+  // 1:2
+  // 2:3
+  // 3:10
+  ```
+
+<br>
 <br>
 
 ## Types of STL Maps
