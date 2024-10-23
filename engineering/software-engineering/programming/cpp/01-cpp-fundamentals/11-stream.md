@@ -1,6 +1,6 @@
 # Stream
 
-**Stream is an abstraction that represents a source or destination of data.**
+**Stream is an abstraction that represents flow of data.**
 
 - Streams provide a way to perform input and output operations in a consistent manner, regardless of the underlying device (e.g., console, file, string).
 
@@ -26,8 +26,7 @@ Input streams are streams used for reading data.
 
 Standard input stream is used to read data from the standard input, generally a keyboard.
 
-- `std::cin` is an instance of `std::istream` and not a class byitself. Hence use the `#include<iostream>` statment.
-
+- `std::cin` is an instance of `std::istream` and not a class byitself. Hence use the `#include<iostream>` statement.
 - It reads strings until it encounters the first whitespace character.
 
   ```cpp
@@ -67,7 +66,7 @@ String input stream are strings used as streams.
 - This is facilitated by `std::istringstream` class, which is derived from `std::istream` class.
 - The class is declared in `<sstream>` header file.
 
-- Initialisation and extraction.
+- Initialisation and extraction. Note that istringstream objects can't be directly output to the console, they need to be extracted first.
 
   ```cpp
   #include <iostream>
