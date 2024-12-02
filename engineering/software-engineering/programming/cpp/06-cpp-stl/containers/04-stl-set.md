@@ -150,6 +150,6 @@ int main()
 
 ### Space Complexities
 
-|     | std::map | std::mulitmap | std::unordered_map | std::unordered_multimap |
+|     | std::set | std::mulitset | std::unordered_set | std::unordered_multiset |
 | --- | -------- | ------------- | ------------------ | ----------------------- |
 |     | $O(n)$   | $O(n)$        | $O(n)$             | $O(n)$                  |
