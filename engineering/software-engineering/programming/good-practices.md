@@ -145,6 +145,25 @@ Although **_it is better to write functions with single return statements_**, be
 
 <br>
 <br>
+
+## Paths in code
+
+- Keep the OS in mind.
+
+  - The follwing will fail in linux
+
+    ```
+    standard_image["path"] = PATH_TO_ROOT_DIR + "\\assets\\images\\standard.jpeg"
+    ```
+
+  - Instead use a library function
+
+    ```
+    standard_image["path"] = PATH_TO_ROOT_DIR + os.sep + "assets" + os.sep + "images" + os.sep + "standard.jpeg"
+    ```
+
+<br>
+<br>
 <br>
 
 # UI development
