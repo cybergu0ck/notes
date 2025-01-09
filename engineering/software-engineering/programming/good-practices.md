@@ -7,6 +7,38 @@ When unsure where exactly to place a piece of code, **_always consider the name 
 <br>
 <br>
 
+## Enforce Explicity
+
+Whenever there is an otion to explicietly specify something, it is better to do that because more data is always better than less data.
+
+<br>
+
+### Using this keyword in c++
+
+One example is using 'this' keyword explicitely in C++.
+
+```cpp
+class Person {
+private:
+    std::string name;
+
+public:
+    Person(std::string name, int age) {
+        this->name = name; //Better than just using "name"
+    }
+
+    void setName(std::string name) {
+        this->name = name; //Better than just using "name"
+    }
+};
+```
+
+- It makes it clear that the stuff we are using is a member method or a variable.
+- If we need to search the entire class where all of the member functions are called (which could be a valid objectives), we can use "this" as the search phrase. If this approach was not enforced, one would have to search each member function and member method in that code base, which is obviously time-consuming.
+
+<br>
+<br>
+
 ## Single Return vs Multiple Return
 
 The case for function with multiple return statements:
