@@ -6,8 +6,39 @@ _std::string_ is a class that represents a sequence of characters.
 - manages memory automatically unlike c-style strings.
 
 <br>
+<br>
 
-### string literal vs std::string
+## initialisation
+
+```cpp
+// Default initialization
+std::string empty_string; //empty string
+
+// Initializer list initialization (C++11 and later)
+std::string greeting = {"Hello, world!"}; // Note: This creates a std::string from a const char*
+
+// Copy initialization
+std::string name = "John Doe";
+
+// Fill initialization
+std::string stars(10, '*'); // 10 asterisks: "**********"
+
+// Constructing from a C-style string
+const char* c_str = "C-style string";
+std::string from_c_str(c_str);
+
+// Constructing from part of another string
+std::string another_string = "This is a longer string";
+std::string sub_string(another_string, 5, 6); // "is a " (from index 5, length 6)
+
+// Moving from another string (C++11 and later)
+std::string moved_string = std::move(another_string); // another_string is now in a valid but unspecified state.
+```
+
+<br>
+<br>
+
+## string literal vs std::string
 
 c-style strings are null terminated character arrays, while std::string is a class in the standard library.
 
@@ -18,10 +49,6 @@ c-style strings are null terminated character arrays, while std::string is a cla
 <br>
 
 ## methods
-
-<br>
-
-### initialisation
 
 <br>
 
