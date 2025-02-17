@@ -257,6 +257,85 @@ A std::vector is a class that represents a dynamic arrays.
 
 <br>
 
+### sorting
+
+<!-- NOTE  - Use the same notes in the std sorting algorithm notes  -->
+
+1. _void sort(iter begin, iter end, func comp );_
+
+   - sort the elements of the sequence using the comp function.
+
+#### comparator function
+
+- comparator function must include two parameters, say 'a' and 'b'and must return a bool,
+
+  1.  true if 'a' preceeds 'b' in the sorted result.
+  1.  false if 'a' does not preceeds 'b' in the sorted result. (it doesnot necessarily mean 'b' preceeds 'a'!)
+
+- donot develop an understanding that returning true means the sort function would swap 'a' and 'b'. just think in terms of the above point!
+
+- comparator function must follow the rule of _strict weak ordering_, which has the following properties:
+
+  1.  "ireflexivity": comp(a,a) must return false.
+  2.  "assymetry": if comp(a,b) returns true then comp(b,a) must return false.
+  3.  "transitiviy": if comp(a,b) returns true and comp(b,c) returns true then comp(a,c) must also return true.
+
+- if the comparator function doesn't follow the rule of _strict weak ordering_ then the sorting is based on undefined behaviour!
+
+- the comparator function is optional third paramter in sort function, if not provided the default one is used which used `<` function i.e ` return a < b;`
+
+  ```cpp
+  #include <iostream>
+  #include <string>
+  #include <vector>
+  #include <algorithm>
+
+  int main()
+  {
+      std::vector<int> nums {10,5,1};
+      std::sort(nums.begin(), nums.end());
+      for(const auto& num : nums){
+      std::cout << num << '\t';
+      }
+      return 0;
+  }
+
+  //1 5 10
+  ```
+
+- the following is a bad example of using sort function because of the comparator function not following strict weak ordering. "first" should preceed in the sorted order, the other words can be in the same order. the comprator function here returns a false for all other cases not meeting the above cases, i.e. say for "third" and "second" it returns false now for "second" and "third" it also returns false, violating assymtry property of the strict weak ordering rule. thus the output can seem correct, but under the hood the behaviour is undefined, to achieve the requirement, something like `std::stable_partition` should be used.
+
+  ```cpp
+  #include <iostream>
+  #include <string>
+  #include <vector>
+  #include <algorithm>
+
+  int main()
+  {
+      std::vector<std::string> words = {"third", "second", "first"}; //"first" should preceed in the sorted order, the other words can be in the same order!
+
+      std::sort(words.begin(), words.end(), [](auto a, auto b){
+      if(a == "first" && b != "first")
+          return true;
+      else if (a != "first" && b == "first")
+          return false;
+      else
+          return false;  //this violates the assymitry property of the strick weak ordering rule
+      });
+
+      for(const auto& word : words){
+      std::cout << word << "\t";
+      }
+
+      //the output might seem correct but this appraoch to mee the requitement is terribly wrong!
+      return 0;
+  }
+  // first third second
+  ```
+
+<br>
+
 ### miscallaneous
 
 1.  _size_t size()_
