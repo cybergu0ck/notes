@@ -48,6 +48,8 @@ A std::vector is a class that represents a dynamic arrays.
    - returns the object at pos _without bounds checking_.
    - has $O(1)$ time complexity.
 
+<br>
+
 1. _T at(size_t pos)_
 
    - returns the object at pos _with bounds checking_.
