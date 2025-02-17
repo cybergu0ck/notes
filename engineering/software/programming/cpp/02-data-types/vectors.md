@@ -2,6 +2,8 @@
 
 A std::vector is a class that represents a dynamic arrays.
 
+- It is defined in the `<vector>` header.
+
 <br>
 <br>
 
@@ -114,33 +116,98 @@ A std::vector is a class that represents a dynamic arrays.
 
 <br>
 
+1. _void emplace_back(args ...)_
+
+   - to emplace an element means to construct an object directly in the container instead of copying or moving it.
+
+   - understand using the following illustration:
+
+     ```cpp
+     #include<iostream>
+     #include<vector> //Library to be included
+
+     class MyClass {
+     public:
+         int number;
+         std::string word;
+
+         MyClass(int p1, std::string p2):number{p1}, word{p2}
+         {
+             std::cout << "constructor was called" << std::endl;
+         }
+         MyClass(const MyClass& source):number{source.number}, word{source.word}
+         {
+             std::cout << "copy constructor was called" << std::endl;
+         }
+         MyClass(const MyClass&& source) noexcept :number{source.number}, word{source.word}
+         {
+             std::cout << "move constructor was called" << std::endl;
+         }
+         ~MyClass() {}
+     };
+     ```
+
+     ```cpp
+     int main()
+     {
+         std::vector<MyClass> v;
+         MyClass obj = MyClass(1, "a");
+         v.push_back(obj);
+     }
+
+     //constructor was called
+     //copy constructor was called
+     ```
+
+     ```cpp
+     int main()
+     {
+         std::vector<MyClass> v;
+         v.push_back(MyClass(1, "a"));
+     }
+
+     //constructor was called
+     //move constructor was called
+     ```
+
+     ```cpp
+
+     int main()
+     {
+         std::vector<MyClass> v;
+         v.emplace_back(1,"a"); //Pass the paramters to construct the object directly in memory
+     }
+
+     //constructor was called
+     ```
+
 <br>
 
 ### deletion
 
-1. _void pop_back();_
+1.  _void pop_back();_
 
-   - removes the last element from the vector.
-   - doesn't return anything.
-   - has $O(1)$ time complexity.
-   - example:
+- removes the last element from the vector.
+- doesn't return anything.
+- has $O(1)$ time complexity.
+- example:
 
-     ```cpp
-     #include <iostream>
-     #include <vector>
+  ```cpp
+  #include <iostream>
+  #include <vector>
 
-     int main() {
-         std::vector<int> numbers{1,2,3};
-         numbers.pop_back();
+  int main() {
+      std::vector<int> numbers{1,2,3};
+      numbers.pop_back();
 
-         for(int num:numbers){
-             std::cout << num << "\t";
-         }
-         return 0;
-     }
+      for(int num:numbers){
+          std::cout << num << "\t";
+      }
+      return 0;
+  }
 
-     //1	2
-     ```
+  //1	2
+  ```
 
 <br>
 
@@ -196,6 +263,12 @@ A std::vector is a class that represents a dynamic arrays.
 
     - returns the number of objects.
     - has $O(1)$ time complexity.
+
+<br>
+
+1. _bool empty()_
+
+- returns true or 1 if vector is empty else returns false or 0.
 
 <br>
 
