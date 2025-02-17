@@ -2,7 +2,7 @@
 
 _std::string_ is a class that represents a sequence of characters.
 
-- defined in the _<string>_ header.
+- defined in the `<string>` header.
 - manages memory automatically unlike c-style strings.
 
 <br>
