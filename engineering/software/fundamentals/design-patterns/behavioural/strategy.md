@@ -35,7 +35,7 @@ the strategy patterm encapsulates a family of interchangable startegies(algorith
 1. flexibilty to chose a particular strategy at runtime.
 1. facilitates open-close principle (open to extension, close for modification).
 1. isolation of implementation of strategy.
-1. decoupling of client and strategy code. see [decoupling](../../object-oriented-programming/principles.md#decoupling)
+1. loose coupling of client and strategy code. see [coupling](../../object-oriented-programming/principles.md#coupling)
 
 <br>
 <br>
