@@ -3,30 +3,30 @@
 <br>
 <br>
 
-## theory
+## Theory
 
 The Command pattern encapsulates a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.
 
-- basically the command pattern encapsulates a function invocation in an object.
+- Basically the command pattern encapsulates a function invocation in an object.
 
 <br>
 
 ![image](./_assets/command1.png)
 
-<br>
-
-### components
-
-1. invoker : object that initiates the command. controller, handler, sender can be other names for the same.
-1. command : object that encapsulates the receiver's function call, thus binding a receiver to an action.
-1. receiver : object with the actual function that performs the operation, delegated from the command object.
+<!-- TODO - update the above image, use snake case for the methods and add client object -->
 
 <br>
+
+### Components
+
+1. Invoker : object that initiates the command. controller, handler, sender can be other names for the same.
+1. Command : object that encapsulates the receiver's function call, thus binding a receiver to an action.
+1. Receiver : object with the actual function that performs the operation, delegated from the command object.
+
+<br>
 <br>
 
-### applicability
-
-The pattern is helpful in
+### Applicability
 
 1. decoupling invokers and receivers : loose coupling
 1. queuing or logging requests: need to queue commands for later execution, such as a task scheduler.
@@ -34,23 +34,28 @@ The pattern is helpful in
 1. parameterizing objects with operations : need to be able to dynamically select or switch between different operations at runtime, the Command pattern allows you to treat operations as objects.
 
 <br>
-<br>
 
-### advantages
+### Advantages
 
 1. facilitates a way to emulate closures (callbacks) in programming langauges that don't support real closures.
 
 <br>
-<br>
 
-### disadvantages
+### Disadvantages
 
 1. decrease readability and debuggability due to complexity.
 
 <br>
+
+### Implementations
+
+- Needless to say the pattern can be implemented in different ways:
+  - The command object can be injected in the construction of the invoker object itself, thus avoiding the need for a command setter function .
+
+<br>
 <br>
 
-## application 1
+## Application 1
 
 <br>
 
@@ -130,51 +135,55 @@ int main()
 }
 ```
 
-### components
+<br>
 
-1. invoker : instance of `ConfigurableRemote`, it initiates the command in `execute_button_click`.
+### Components
 
-1. command : `ICommand` and `SwitchLightOnCommand` are interface and concrete classes for command object that encapsulates the receiver's function call i.e `switch_on`, thus binding a receiver to an action.
+1. Invoker : instance of `ConfigurableRemote`, it initiates the command in `execute_button_click`.
 
-1. receiver : instances of `Light` containing the actual function `switch_on` that is encapsulated in command's `execute`.
+1. Command : `ICommand` and `SwitchLightOnCommand` are interface and concrete classes for command object that encapsulates the receiver's function call i.e `switch_on`, thus binding a receiver to an action.
+
+1. Receiver : instances of `Light` containing the actual function `switch_on` that is encapsulated in command's `execute`.
 
 <br>
 
 Few points:
 
-- the concrete command class `SwitchLightOnCommand` is composed of an instance of receiver `Light`. `SwitchLightOnCommand` **_has a_** `Light` object.
-- the invoker `Remote` is composed of an instance of `ICommand` interface. `Remote` **_has a_** `ICommand` object.
-- needless to say the pattern can be implemented in different ways:
-  - the invoker might not need to compose the command object instead can be passed as a parameter in `execute_button_click` function or a seperate function can be implemented to set the command, something like `set_command`.
+- The concrete command class `SwitchLightOnCommand` is composed of an instance of receiver `Light`. `SwitchLightOnCommand` **_has a_** `Light` object.
+- The invoker `Remote` is composed of an instance of `ICommand` interface. `Remote` **_has a_** `ICommand` object.
 
 <br>
 
-### applicability
+### Applicability
 
 The invoker `Remote` is decoupled from the receiver `Light` by the `ICommand` interface. This abstraction allows the `Remote` to trigger actions without knowing the specific implementation of those actions. Consequently, commands can be modified without changing the `Remote` class.
 
 <br>
 <br>
 
-### advantages
+### Advantages
 
-as mentioned [above](#advantages)
-
-<br>
-<br>
-
-### disadvantages
-
-as mentioned [above](#disadvantages)
+As mentioned [above](#advantages)
 
 <br>
 <br>
 
-## application 2
+### Disadvantages
+
+As mentioned [above](#disadvantages)
+
+<br>
+<br>
+
+## Application 2
 
 Illustration of undo redo functionality
 
 ![image](./_assets/command3.png)
+
+<!-- TODO - update the above diagram, add client object, rectify the uml lines -->
+
+<br>
 
 ```cpp
 #include <iostream>
@@ -368,42 +377,42 @@ hello
 
 <br>
 
-### components
+### Components
 
-1. invoker : instance of `TextEditor`, it initiates the commands in `execute_insert`, `execute_erase`, `execute_undo` and `execute_redo`.
+1. Invoker : Instance of `TextEditor`, it initiates the commands in `execute_insert`, `execute_erase`, `execute_undo` and `execute_redo`.
 
-1. command : `ICommand` is the interface, `InsertTextCommand` and `EraseTextCommand` are concrete classes that encapsulates the receiver's function call i.e `insert_text` and `erase_text`, thus binding a receiver to an action.
+1. Command : `ICommand` is the interface, `InsertTextCommand` and `EraseTextCommand` are concrete classes that encapsulates the receiver's function call i.e `insert_text` and `erase_text`, thus binding a receiver to an action.
 
-1. receiver : instances of `DisplayBox` containing the actual function `insert_text` and `erase_text`.
+1. Receiver : instances of `DisplayBox` containing the actual function `insert_text` and `erase_text`.
 
 <br>
 
 Few points:
 
-- notice that the command classes donot have a redo funcion, they have only execute and undo.
-- the invoker has the redo function and also stores a sequence of command objects.
-- understand the usage of stack in the context of undo and redo, notice we need two stacks.
+- Notice that the command classes donot have a redo funcion, they have only execute and undo.
+- The invoker has the redo function and also stores a sequence of command objects.
+- Understand the usage of stack in the context of undo and redo, notice we need two stacks.
 - The illustration will work without the second concrete class i.e. `EraseTextCommand`, it is not mandatory to have it and is not a criteria for undo redo functionality!
 
 <br>
 
-### applicability
+### Applicability
 
-undo and redo functionality is seamelesly acheived.
-
-<br>
-<br>
-
-### advantages
-
-as mentioned [above](#advantages)
+Undo and redo functionality is seamelesly acheived.
 
 <br>
 <br>
 
-### disadvantages
+### Advantages
 
-as mentioned [above](#disadvantages)
+As mentioned [above](#advantages)
+
+<br>
+<br>
+
+### Disadvantages
+
+As mentioned [above](#disadvantages)
 
 <br>
 <br>
