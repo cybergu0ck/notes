@@ -1,11 +1,11 @@
-# strategy pattern
+# Strategy Pattern
 
 <br>
 <br>
 
-## theory
+## Theory
 
-the strategy patterm encapsulates a family of interchangable startegies(algorithms) and facilitates the client to select one at runtime.
+The strategy patterm encapsulates a family of interchangable startegies(algorithms) and facilitates the client to select one at runtime.
 
 <br>
 
@@ -13,41 +13,41 @@ the strategy patterm encapsulates a family of interchangable startegies(algorith
 
 <br>
 
-### components
+### Components
 
-1. context : the component that holds the reference to the selected strategy and logic to execute it.
-1. strategy interface : the interface for the family of strategies.
-1. concrete strategy : the component containing specific algorithm.
-1. client : component that chooses the specific concrete strategy and uses the context to execute it.
+1. Context : The component that holds the reference to the selected strategy and logic to execute it.
 
-<br>
-<br>
+1. Strategy : The component containing specific algorithm.
 
-### applicability
+   - Implemented via an interface.
+   - Generally present as a family.
 
-1. choosing a strategy from a family of strategies at runtime.
+1. Client : The component that chooses the specific concrete strategy and uses the context to execute it.
 
 <br>
-<br>
 
-### advantages
+### Applicability
 
-1. flexibilty to chose a particular strategy at runtime.
-1. facilitates open-close principle (open to extension, close for modification).
-1. isolation of implementation of strategy.
-1. loose coupling of client and strategy code. see [coupling](../../object-oriented-programming/principles.md#coupling)
+1. Choosing a strategy from a family of strategies at runtime.
 
 <br>
+
+### Advantages
+
+1. Flexibilty to chose a particular strategy at runtime.
+1. Adheres to [open-close principle](../../object-oriented-programming/principles.md#open-close-principle)
+1. Isolation of implementation of strategy.
+1. Loose coupling of client and strategy code. see [coupling](../../object-oriented-programming/principles.md#coupling)
+
 <br>
 
-### disadvantages
+### Disadvantages
 
-1. client and strategies are not completely decoupled, as the client needs to be aware of the different strategies available to choose the appropriate one.
+1. Client and strategies are not completely decoupled, as the client needs to be aware of the different strategies available to choose the appropriate one.
 
 <br>
-<br>
 
-## application
+## Application
 
 <br>
 
@@ -139,66 +139,53 @@ int main()
 
 <br>
 
-<br>
+### Components
 
-### components
+The family of strategies represents the family of payment systems.
 
-the family of strategies represents the family of payment systems.
-
-1. strategy interface : the interface for the family of strategies.
+1. Strategy : `NetBankSystem` and `CreditCardSystem`, components containing specific algorithm.
 
    - `IPaymentSystem`is the interface for the family of payment systems.
 
-1. concrete strategy : the component containing specific algorithm.
+1. Context : `ShoppingCart` class has a the `payment_processor`, a referance to a payment system via the `IPaymentSystem` interface and `execute_payment` to execute the payment system's `pay` method.
 
-   - `NetBankSystem` and `CreditCardSystem`.
-
-1. context : the component that holds the reference to the selected strategy and logic to execute it.
-
-   - `ShoppingCart` class has a the `payment_processor`, a referance to a payment system via the `IPaymentSystem` interface and `execute_payment` to execute the payment system's `pay` method.
-
-1. client : component that chooses the specific concrete strategy and uses the context to execute it.
-
-   - `main` function selects the appropriate concrete strategy and uses `ShoppingCart` to `execute_payment`.
+1. Client : `main` function selects the appropriate concrete strategy and uses `ShoppingCart` to `execute_payment`.
 
 <br>
-<br>
 
-### applicability
+### Applicability
 
 1. choosing a strategy from a family of strategies at runtime.
 
 <br>
+
+### Advantages
+
+1.  Flexibilty to chose a particular strategy at runtime.
+
+    - The payment system can be chosen by the user at run time.
+
+1.  Adheres to [open-close principle](../../object-oriented-programming/principles.md#open-close-principle).
+
+    - A new payment system can be added to the system without modifying the existing code.
+
+1.  Isolation of implementation of strategy.
+
+    - Neither the context nor the client knows about the implementation details of the strategies.
+
+1.  Decoupling of client and strategy code. see [decoupling](../../object-oriented-programming/principles.md#decoupling)
+
+    - Client is independant from the implementation of the strategies and interacts with it using the interface's `pay` method via context's `execute_payment` method.
+    - Client and strategies are not completely decoupled. see [below](#disadvantages-1)
+
 <br>
 
-### advantages
+### Disadvantages
 
-1.  flexibilty to chose a particular strategy at runtime.
+1. Client needs to be aware of the different strategies available and about choosing the appropriate one.
 
-    - the payment system can be chosen by the user at run time.
-
-1.  facilitates open-close principle (open to extension, close for modification).
-
-    - a new payment system can be added to the system without modifying the existing code.
-
-1.  isolation of implementation of strategy.
-
-    - neither the context nor the client knows about the implementation details of the strategies.
-
-1.  decoupling of client and strategy code. see [decoupling](../../object-oriented-programming/principles.md#decoupling)
-
-    - client is independant from the implementation of the strategies and interacts with it using the interface's `pay` method via context's `execute_payment` method.
-    - client and strategies are not completely decoupled. see [below](#disadvantages-1)
-
-<br>
-<br>
-
-### disadvantages
-
-1. client needs to be aware of the different strategies available and about choosing the appropriate one.
-
-   - in this particular implementation of the system, it is appropriate for `ShoppingCart` to have an instance of `IPaymentSystem` and hence it contains the enum `PAYMENT_MODE`.
-   - nevertheless, client is dependant on the information regarding the number of available payment systems.
+   - In this particular implementation of the system, it is appropriate for `ShoppingCart` to have an instance of `IPaymentSystem` and hence it contains the enum `PAYMENT_MODE`.
+   - Nevertheless, client is dependant on the information regarding the number of available payment systems.
 
 <br>
 <br>
