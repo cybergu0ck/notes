@@ -28,6 +28,15 @@ variableType variableName;
 
 ## Variable Initialization
 
+<!-- TODO
+Need to revamp this part
+
+initiaisation can be categorised as
+    scalars (single values)
+    aggregates (like arrays)
+    classes, add in class notes and add a link here
+ -->
+
 _**Initialisation** is when the value is bound to the variable when it is declared._
 
 - Unitialised variables have random garbage values.
