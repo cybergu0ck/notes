@@ -28,22 +28,23 @@ The Command pattern encapsulates a request as an object, thereby letting you par
 
 ### Applicability
 
-1. decoupling invokers and receivers : loose coupling
-1. queuing or logging requests: need to queue commands for later execution, such as a task scheduler.
-1. undo redo functionality
-1. parameterizing objects with operations : need to be able to dynamically select or switch between different operations at runtime, the Command pattern allows you to treat operations as objects.
+1. Encapsulating method call inside an object.
+1. Undo redo functionality.
+1. Emulate the concept of closure (callback) in langauges that don't support it.
+1. Queuing or logging requests: need to queue commands for later execution, such as a task scheduler.
+1. Parameterizing objects with operations : need to be able to dynamically select or switch between different operations at runtime, the command pattern allows operations to be treated as objects.
 
 <br>
 
 ### Advantages
 
-1. facilitates a way to emulate closures (callbacks) in programming langauges that don't support real closures.
+1. Loose [coupling](../../object-oriented-programming/principles.md#coupling) between invokers and receivers.
 
 <br>
 
 ### Disadvantages
 
-1. decrease readability and debuggability due to complexity.
+1. Decreased readability and debuggability due to complexity.
 
 <br>
 
@@ -156,16 +157,17 @@ Few points:
 
 ### Applicability
 
-The invoker `Remote` is decoupled from the receiver `Light` by the `ICommand` interface. This abstraction allows the `Remote` to trigger actions without knowing the specific implementation of those actions. Consequently, commands can be modified without changing the `Remote` class.
+1. This application shows `switch_on` method encapsulated in `SwitchLightOnCommand` object.
 
 <br>
 <br>
 
 ### Advantages
 
-As mentioned [above](#advantages)
+1. Loose [coupling](../../object-oriented-programming/principles.md#coupling) between invokers and receivers.
 
-<br>
+   - The invoker `Remote` is decoupled from the receiver `Light` by the `ICommand` interface. This abstraction allows the `Remote` to trigger actions without knowing the specific implementation of those actions. Consequently, commands can be modified without changing the `Remote` class.
+
 <br>
 
 ### Disadvantages
@@ -398,7 +400,7 @@ Few points:
 
 ### Applicability
 
-Undo and redo functionality is seamelesly acheived.
+1. This applcation illustrates the undo and redo functionality.
 
 <br>
 <br>
