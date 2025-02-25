@@ -9,7 +9,7 @@ Factory method is a creational pattern that defines an interface for creating an
 
 <br>
 
-![img](./_assets/)
+![img](./_assets/factory-method-1.png)
 
 <br>
 
@@ -19,10 +19,11 @@ Factory method is a creational pattern that defines an interface for creating an
 
    - Implemented via an interface.
 
-1. Factory : The component that creates a family of related products.
+1. Factory : The component that creates the product.
 
    - Implemented via an interface.
-   - Concrete factorties "make" products for the specific family it represents.
+   - Concrete factorties "make" the specific product.
+   - Also known as "creator".
 
 1. Client : client is uses with the factory. The relationship could be [association](../../object-oriented-programming/object-relationships.md#association), [aggregation](../../object-oriented-programming/object-relationships.md#aggregation) or [composition](../../object-oriented-programming/object-relationships.md#composition).
 
@@ -38,7 +39,7 @@ Factory method is a creational pattern that defines an interface for creating an
 
 1. Abstraction of implementation of products.
 
-1. Adheres to [open-close principle](../../object-oriented-programming/principles.md#open-close-principle) in the context of addition of a new family, containing the same kind and number of products.
+1. Adheres to [open-close principle](../../object-oriented-programming/principles.md#open-close-principle) in the context of addition of a new concrete product.
 
 <br>
 
@@ -49,7 +50,7 @@ Factory method is a creational pattern that defines an interface for creating an
 
 ## Application
 
-![img](./_assets)
+![img](./_assets/factory-method-2.png)
 
 <br>
 
@@ -114,14 +115,14 @@ int main(){
 
 ### Components
 
-1. Product : The component created by the factory.
+1. Product : The component created by the factory, `PDFDocument`.
 
-   - Implemented via an interface.
+   - Implemented via an interface, `IDocument`.
 
-1. Factory : The component that creates a family of related products.
+1. Factory : The component that creates the product, `PDFDocumentFactory`.
 
-   - Implemented via an interface.
-   - Concrete factorties "make" products for the specific family it represents.
+   - Implemented via an interface, `IDocumentFactory`.
+   - Concrete factorties "make" the specific product.
 
 1. Client : client is uses with the factory. The relationship could be [association](../../object-oriented-programming/object-relationships.md#association), [aggregation](../../object-oriented-programming/object-relationships.md#aggregation) or [composition](../../object-oriented-programming/object-relationships.md#composition).
 
@@ -137,7 +138,9 @@ int main(){
 
 1. Abstraction of implementation of products.
 
-1. Adheres to [open-close principle](../../object-oriented-programming/principles.md#open-close-principle) in the context of addition of a new family, containing the same kind and number of products.
+   - The implementation of `PDFDocument` is abstracted away from client code as it uses it via the interface `IDocument`.
+
+1. Adheres to [open-close principle](../../object-oriented-programming/principles.md#open-close-principle) in the context of addition of a new concrete product.
 
 <br>
 
