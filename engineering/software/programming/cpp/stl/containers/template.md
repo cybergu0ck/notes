@@ -1,39 +1,39 @@
-# stl maps
+# STL Set
 
-## types
-
-<br>
-<br>
-
-## initialisation
+## Types
 
 <br>
 <br>
 
-## methods
+## Initialisation
+
+<br>
+<br>
+
+## Methods
 
 <br>
 
-### access
+### Access
 
 <br>
 
-### search
+### Search
 
 <br>
 
-### insertion
+### Insertion
 
 <br>
 
-### deletion
+### Deletion
 
 <br>
 
-### modification
+### Modification
 
 <br>
 
-### miscallaneous
+### Miscallaneous
 
 <br>
