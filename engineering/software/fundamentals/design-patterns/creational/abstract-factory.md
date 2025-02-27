@@ -26,13 +26,15 @@ The Abstract factory design pattern is a creational pattern that helps creation 
    - Implemented via an interface.
    - Concrete factorties "make" products for the specific family it represents.
 
-1. Client : client is uses with the factory. The relationship could be [association](../../object-oriented-programming/object-relationships.md#association), [aggregation](../../object-oriented-programming/object-relationships.md#aggregation) or [composition](../../object-oriented-programming/object-relationships.md#composition).
+1. Client : client uses the factory to make products. The relationship could be [association](../../object-oriented-programming/object-relationships.md#association), [aggregation](../../object-oriented-programming/object-relationships.md#aggregation) or [composition](../../object-oriented-programming/object-relationships.md#composition).
 
 <br>
 
 ### Applicability
 
 1. Creation of "families of related product that work together".
+
+   - Unlike [builder](./builder.md) which generally returns the complex product as a whole. Abstract factory "makes" and returns each product.
 
 2. This pattern is helpful in usecases where client is independent of how its products are created, composed, and represented.
 
@@ -52,7 +54,9 @@ The Abstract factory design pattern is a creational pattern that helps creation 
 
    - For this usecase, [builder pattern](./builder.md) would be better choice.
 
-1. Decreased readability and debuggability due to complexity.
+1. Adds more complexity.
+   - Thus decreases readability.
+   - Thus decreases debuggability.
 
 <br>
 <br>
@@ -200,5 +204,12 @@ int main()
 
    - If a new product is the be added, then the interface of the factory must be modified to include a "make" method for the new product, which will break exisiting code.
 
-1. Decreased readability and debuggability due to complexity.
+1. Adds more complexity.
    - Lot of classes are created and might lead to lot of inheritance.
+
+<br>
+<br>
+
+## Abstract factory vs Builder
+
+Checkout the [difference](./builder.md#builder-vs-abstract-factory)
