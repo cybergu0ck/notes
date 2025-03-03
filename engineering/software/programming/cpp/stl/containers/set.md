@@ -138,7 +138,7 @@ Sets do not have `at` or `operator[]` unlike vectors, as elements are not indexe
 
 1. `insert` method has various overloads
 
-   - The time complexity of the basic form of insert is $O(log(n))$
+   - The time complexity of the basic form of insert is $O(1)$ on average and $O(n)$ in the worst case due to hash collisions.
    - Illustration of important form of insertions.
 
      ```cpp
