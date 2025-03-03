@@ -70,7 +70,11 @@ cat > <filename>
 
 <br>
 
-###
+### Printing the number of files in a directory
+
+```bash
+ls -1 | wc -l
+```
 
 <br>
 
