@@ -35,4 +35,4 @@ A strong "owns-a" relationship where contained objects cannot exist without the 
 
 - uml for illustrating relationshis
 
-  ![uml](../uml/_assets/uml-lines.png)
+  ![uml](./uml/_assets/uml-lines.png)

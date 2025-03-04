@@ -32,30 +32,6 @@ print(dir(my_butterfly))
 <br/>
 <br/>
 
-# `ord()`
-
-ord() returns the ASCII value of the parameter
-
-```python
-ord('A')
-
-#>65
-```
-
-<br/>
-<br/>
-<br/>
-
-# `chr()`
-
-chr() returns the character for the given ASCII number
-
-```python
-chr(65)
-
-#>'A'
-```
-
 <br/>
 <br/>
 <br/>

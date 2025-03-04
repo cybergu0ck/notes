@@ -1,4 +1,3 @@
-
 # printing a float with specified number of digits after decimal point
 
 ```python
@@ -25,14 +24,14 @@ print(f"Pi to two decimal places is: {value:{width}.{precision}}")
 
 #>Pi to two decimal places is 3.14
 #>Pi to two decimal places is: 3.14
-#>Pi to two decimal places is:       3.14  
+#>Pi to two decimal places is:       3.14
 ```
 
 <br/>
 
 # string methods
 
-##  `title()` or `capitalize()` converts the first character of the string to upper case.
+## `title()` or `capitalize()` converts the first character of the string to upper case.
 
 ```python
 word = 'john'
@@ -42,6 +41,7 @@ print(word.capitalize())
 ```
 
 ## `lower() `/ `upper()` converts the string to lower case or upper case respectively.
+
 ```python
 word = 'HELLO'
 lowerCaseWord = word.lower()
@@ -51,6 +51,7 @@ print(lowerCaseWord)
 ```
 
 ## `islower()` / `isupper()` returns true if the string characters are in lower case or uppercase respectively.
+
 ```python
 word = 'HeY'
 print(word.isupper())
@@ -58,7 +59,8 @@ print(word.isupper())
 #>False
 ```
 
-##  `isalpha()` returns True if all characters in the string are in the alphabet
+## `isalpha()` returns True if all characters in the string are in the alphabet
+
 ```python
 print('hey Hello'.isalpha())
 
@@ -66,6 +68,7 @@ print('hey Hello'.isalpha())
 ```
 
 ## `isdigit()` returns True if all characters in the string are digits
+
 ```python
 print('333'.isdigit())
 
@@ -77,7 +80,7 @@ print('333'.isdigit())
 
 ## `lstrip()` removes any leading characters
 
-- `lstrip()` by default removes any leading (left-hand side) whitespace characters from a string. 
+- `lstrip()` by default removes any leading (left-hand side) whitespace characters from a string.
 - It can have an optional parameter, which is basically a set of characters to remove as leading characters.
 - `rstrip()` is similar.
 
@@ -105,8 +108,6 @@ print(final_message)
 #>$$$Asap@Rocky
 ```
 
-
-
 ## `count()` method returns the number of times a specified value appears in the string
 
 syntax:
@@ -128,13 +129,13 @@ print(word.count('a'))
 #>2
 
 ```
+
 ```python
 word = '12341'
 print(word.count('1',0,4 ))
 
 #>1
 ```
-
 
 ## `endswith()` method returns True if the string ends with the specified value, otherwise False.
 
@@ -150,6 +151,7 @@ print(txt.endswith('how are you doing'))
 
 #>True
 ```
+
 ```python
 txt = 'Date : 24/12/2022'
 txt.endswith('24',0,9)
@@ -159,7 +161,8 @@ txt.endswith('24',0,9)
 
 ## `find()` method finds the first occurrence of the specified value.
 
-syntax : 
+syntax :
+
 ```
 string.find(value, start, end)
 ```
@@ -174,3 +177,36 @@ print(x)
 
 #>1
 ```
+
+<br>
+<br>
+
+## Character encoding
+
+<br>
+<br>
+
+### `ord()`
+
+ord() returns the ASCII value of the parameter
+
+```python
+ord('A')
+
+#>65
+```
+
+<br/>
+<br/>
+
+### `chr()`
+
+chr() returns the character for the given ASCII number
+
+```python
+chr(65)
+
+#>'A'
+```
+
+<!-- TODO - Refactor this entire notes -->
