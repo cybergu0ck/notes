@@ -109,7 +109,7 @@ stl maps are associative containers that store key value pairs.
 
 ### search
 
-- searching an key in a map is done with the help of algorithm's find function.
+- searching an key in a map is done with `find` method.
 
   ```cpp
   int main()
