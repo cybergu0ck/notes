@@ -238,4 +238,8 @@ Sets do not have `at` or `operator[]` unlike vectors, as elements are not indexe
 
 <br>
 
+1. `bool operator==(set T);`
+
+   - `==` returns true only if the two sets being compared have exactly same number and values of elements.
+
 <br>
