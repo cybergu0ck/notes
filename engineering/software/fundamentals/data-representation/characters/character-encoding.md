@@ -43,3 +43,10 @@ ASCII is a character encoding standard for electronic communication.
 
 - Checkout [ascii in python](../../../programming/python/02-data-types/02-text-type.md#character-encoding).
 - Checkout [ascii in C++](../../../programming/cpp/data-types/characters.md#character-encoding).
+
+<br>
+<br>
+<br>
+<br>
+
+# UTF-8
