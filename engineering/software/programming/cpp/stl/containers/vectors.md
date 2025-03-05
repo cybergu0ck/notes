@@ -1,4 +1,4 @@
-# std::vectors
+# Vectors
 
 A std::vector is a class that represents a dynamic arrays.
 
@@ -7,7 +7,7 @@ A std::vector is a class that represents a dynamic arrays.
 <br>
 <br>
 
-## initialization
+## Initialization
 
 - Different kinds of initialisation :
 
@@ -27,7 +27,7 @@ A std::vector is a class that represents a dynamic arrays.
 <br>
 <br>
 
-## arrays vs std::vetors
+## Arrays vs std::vetors
 
 | array                    | std::vector                  |
 | ------------------------ | ---------------------------- |
@@ -37,27 +37,27 @@ A std::vector is a class that represents a dynamic arrays.
 <br>
 <br>
 
-## methods
+## Methods
 
 <br>
 
-### access
+### Access
 
-1. _T operator[](size_t pos)_
+1. `T operator[](size_t pos)`
 
    - returns the object at pos _without bounds checking_.
    - has $O(1)$ time complexity.
 
 <br>
 
-1. _T at(size_t pos)_
+1. `T at(size_t pos)`
 
    - returns the object at pos _with bounds checking_.
    - has $O(1)$ time complexity.
 
 <br>
 
-### search
+### Search
 
 - searching an element in a vector is done with the help of algorithm's find function.
 - example :
@@ -84,16 +84,16 @@ A std::vector is a class that represents a dynamic arrays.
 
 <br>
 
-### insertion
+### Insertion
 
-1. _void push_back(T obj)_
+1. `void push_back(T obj)`
 
    - append a object obj to _\*this_.
    - has amortised $O(1)$ time complexity, average is $O(1)$ and is $O(n)$ in case of relocation.
 
 <br>
 
-1. _iterator insert(const_iterator pos, T obj);_
+1. `iterator insert(const_iterator pos, T obj);`
 
    - insert obj at pos.
    - has amortised $O(n)$ time complexity, average is $O(n)$ and is $O(n+m)$ in case of relocation.
@@ -118,7 +118,7 @@ A std::vector is a class that represents a dynamic arrays.
 
 <br>
 
-1. _void emplace_back(args ...)_
+1. `void emplace_back(args ...)`
 
    - to emplace an element means to construct an object directly in the container instead of copying or moving it.
 
@@ -185,35 +185,35 @@ A std::vector is a class that represents a dynamic arrays.
 
 <br>
 
-### deletion
+### Deletion
 
-1.  _void pop_back();_
+1.  `void pop_back();`
 
-- removes the last element from the vector.
-- doesn't return anything.
-- has $O(1)$ time complexity.
-- example:
+    - removes the last element from the vector.
+    - doesn't return anything.
+    - has $O(1)$ time complexity.
+    - example:
 
-  ```cpp
-  #include <iostream>
-  #include <vector>
+    ```cpp
+    #include <iostream>
+    #include <vector>
 
-  int main() {
-      std::vector<int> numbers{1,2,3};
-      numbers.pop_back();
+    int main() {
+        std::vector<int> numbers{1,2,3};
+        numbers.pop_back();
 
-      for(int num:numbers){
-          std::cout << num << "\t";
-      }
-      return 0;
-  }
+        for(int num:numbers){
+            std::cout << num << "\t";
+        }
+        return 0;
+    }
 
-  //1	2
-  ```
+    //1	2
+    ```
 
 <br>
 
-1. _iterator erase(const_iterator pos);_
+1. `iterator erase(const_iterator pos);`
 
    - erase the element at pos.
    - returns the iterator.
@@ -246,20 +246,20 @@ A std::vector is a class that represents a dynamic arrays.
 
 <br>
 
-1. _void clear();_
+1. `void clear();`
 
    - erase the entire vector.
    - has $O(n)$ time complexity.
 
 <br>
 
-### modification
+### Modification
 
 - can be done using the access methods in combination with the assignment operator.
 
 <br>
 
-### sorting
+### Sorting
 
 <!-- NOTE  - Use the same notes in the std sorting algorithm notes  -->
 
@@ -267,7 +267,7 @@ A std::vector is a class that represents a dynamic arrays.
 
    - sort the elements of the sequence using the comp function.
 
-#### comparator function
+#### Comparator function
 
 - comparator function must include two parameters, say 'a' and 'b'and must return a bool,
 
@@ -338,22 +338,22 @@ A std::vector is a class that represents a dynamic arrays.
 
 <br>
 
-### miscallaneous
+### Miscallaneous
 
-1.  _size_t size()_
+1.  `size_t size()`
 
     - returns the number of objects.
     - has $O(1)$ time complexity.
 
 <br>
 
-1. _bool empty()_
+1. `bool empty()`
 
 - returns true or 1 if vector is empty else returns false or 0.
 
 <br>
 
-1. _void swap(std::vector<T>& other);_
+1. `void swap(std::vector<T>& other);`
 
    - swap `*this` and other with each other.
    - has $O(1)$ time complexity.
