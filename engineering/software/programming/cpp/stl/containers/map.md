@@ -55,7 +55,7 @@ stl maps are associative containers that store key value pairs.
 
 ### access
 
-1. _T operator[](size_t pos)_
+1. `T operator[](size_t pos)`
 
    - returns the object at pos _without bounds checking_.
    - has $O(1)$ time complexity.
@@ -77,7 +77,7 @@ stl maps are associative containers that store key value pairs.
 
 <br>
 
-1. _T at(size_t pos)_
+1. `T at(size_t pos)`
 
    - returns the object at pos _with bounds checking_.
    - has $O(1)$ time complexity.
@@ -136,7 +136,7 @@ stl maps are associative containers that store key value pairs.
 
 ### deletion
 
-1. _ erase();_
+1. `iterator erase(const_iterator pos);`
 
 ```cpp
 int main()
@@ -239,20 +239,20 @@ int main()
 
 ### miscallaneous
 
-1.  _size_t size()_
+1.  `size_t size()`
 
     - returns the number of objects.
     - has $O(1)$ time complexity.
 
 <br>
 
-1. _bool empty()_
+1. `bool empty()`
 
    - returns true or 1 if vector is empty else returns false or 0.
 
 <br>
 
-1. _bool operator==(map T);_
+1. `bool operator==(map T);`
 
    - `==` returns true only if the two maps being compared have exactly same keys with exactly same values.
 
@@ -283,3 +283,10 @@ int main()
      // true
      // false
      ```
+
+<br>
+
+1. `size_t count(const T& key)`
+
+   - For set and unordered set, it returns 1 if the key exists otherwise returns 0.
+   - For multiset and unordered multiset, it returns the number of elements having the key as the parameter.
