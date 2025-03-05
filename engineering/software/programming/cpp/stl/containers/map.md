@@ -1,11 +1,11 @@
-# stl maps
+# Maps
 
 stl maps are associative containers that store key value pairs.
 
 <br>
 <br>
 
-## types
+## Types
 
 1. **map** : an stl map is an associative container that stores key-value pairs with unique keys in a _sorted order by key._
 2. **multi map** : a multimap is an associative container that stores key-value pairs, allowing multiple values to be associated with the same key (i.e., duplicate keys), in a _sorted order by key._
@@ -23,7 +23,7 @@ stl maps are associative containers that store key value pairs.
 
 <br>
 
-### time complexities
+### Time complexities
 
 |           | std::map   | std::mulitmap | std::unordered_map  | std::unordered_multimap |
 | --------- | ---------- | ------------- | ------------------- | ----------------------- |
@@ -35,7 +35,7 @@ stl maps are associative containers that store key value pairs.
 
 <br>
 
-### space Complexities
+### Space Complexities
 
 |     | std::map | std::mulitmap | std::unordered_map | std::unordered_multimap |
 | --- | -------- | ------------- | ------------------ | ----------------------- |
@@ -44,16 +44,16 @@ stl maps are associative containers that store key value pairs.
 <br>
 <br>
 
-## initialisation
+## Initialisation
 
 <br>
 <br>
 
-## methods
+## Methods
 
 <br>
 
-### access
+### Access
 
 1. `T operator[](size_t pos)`
 
@@ -107,7 +107,7 @@ stl maps are associative containers that store key value pairs.
 
 <br>
 
-### search
+### Search
 
 - searching an key in a map is done with `find` method.
 
@@ -128,13 +128,13 @@ stl maps are associative containers that store key value pairs.
 
 <br>
 
-### insertion
+### Insertion
 
 - if a non exisiting key is used in the operator, it will create a new key in the map with either the given value or a default constructed one.
 
 <br>
 
-### deletion
+### Deletion
 
 1. `iterator erase(const_iterator pos);`
 
@@ -156,11 +156,11 @@ int main()
 <br>
 <br>
 
-### modification
+### Modification
 
 <br>
 
-#### sorting
+#### Sorting
 
 - maps, ordered variants are already sorted!
 
@@ -237,7 +237,7 @@ int main()
 
 <br>
 
-### miscallaneous
+### Miscallaneous
 
 1.  `size_t size()`
 
