@@ -4,11 +4,13 @@ _Tree is a nonlinear hierarchial data structure that consists of nodes connected
 
 <br>
 <br>
+<br>
 
 ## Basics of Tree
 
 ![image](./_assets/tree-parts.jpg)
 
+<br>
 <br>
 
 ### Elements of Tree
@@ -21,6 +23,7 @@ _Tree is a nonlinear hierarchial data structure that consists of nodes connected
 
 1. **_Leaf/Terminal Node_** : A node without children
 
+<br>
 <br>
 
 ### Features of Tree
@@ -38,7 +41,6 @@ _Tree is a nonlinear hierarchial data structure that consists of nodes connected
    - In the above image, the depth of node A is 0, of node H is 2 and node J is 3
 
 <br>
-
 <br>
 <br>
 
@@ -55,6 +57,17 @@ _Tree is a nonlinear hierarchial data structure that consists of nodes connected
 1. AVL Trees
 1. B-Tree
 
+<br/>
+<br/>
+<br/>
+
+## Equations
+
+The maximum number of nodes in a tree with depth of $n$ and each node having $k$ branches is
+
+$$\frac{k^{(n+1)} - 1}{k - 1}$$
+
+<br/>
 <br/>
 <br/>
 
