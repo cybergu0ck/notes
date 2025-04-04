@@ -2,6 +2,7 @@
 
 | Shortcut               | Key Binding          |
 | ---------------------- | -------------------- |
+| Navigate to search bar | Ctrl + L             |
 | New tab                | Ctrl + T             |
 | Close tab              | Ctrl + W             |
 | Reopen Closed tab      | Ctrl + Shift= T      |
