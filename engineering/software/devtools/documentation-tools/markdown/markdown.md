@@ -14,15 +14,9 @@
   ###### Heading 6
   ```
 
-- # Heading 1
-  ## Heading 2
-  ### Heading 3
-  #### Heading 4
-  ##### Heading 5
-  ###### Heading 6
-
 <br/>
 <br/>
+<br>
 
 ## Italic text
 
@@ -34,6 +28,7 @@
 
 <br/>
 <br/>
+<br>
 
 ## Bold text
 
@@ -44,6 +39,7 @@
 
 <br/>
 <br/>
+<br>
 
 ## Hardbreak
 
@@ -59,6 +55,7 @@
 
 <br/>
 <br/>
+<br>
 
 ## Softbreak
 
@@ -71,6 +68,7 @@
 
 <br/>
 <br/>
+<br>
 
 ## Indentation
 
@@ -86,6 +84,7 @@
 
 <br/>
 <br/>
+<br>
 
 ## Adding links
 
@@ -96,6 +95,7 @@
 
 <br/>
 <br/>
+<br>
 
 ## Embedding Images
 
@@ -105,6 +105,7 @@
 
 <br/>
 <br/>
+<br>
 
 ## Unordered lists
 
@@ -121,6 +122,7 @@
 
 <br/>
 <br/>
+<br>
 
 ## Ordered lists
 
@@ -139,6 +141,7 @@
 
 <br/>
 <br/>
+<br>
 
 ## Checkboxes
 
@@ -149,6 +152,7 @@
 
 <br/>
 <br/>
+<br>
 
 ## Code blocks
 
@@ -156,6 +160,7 @@ Enclose multine code in '```'.
 
 <br/>
 <br/>
+<br>
 
 ## Tables
 
@@ -171,6 +176,7 @@ Enclose multine code in '```'.
 
 <br/>
 <br/>
+<br>
 
 ## Quotations
 
@@ -178,6 +184,7 @@ Use '>' for quotes.
 
 <br/>
 <br/>
+<br>
 
 ## LaTeX within Markdown
 
@@ -205,3 +212,13 @@ Use '>' for quotes.
   ```
 
 * Use `$ $` or `$$ $$` to render the LaTeX.
+
+<br>
+<br>
+<br>
+
+## Math equations
+
+- Writing equation that has an if and else condition
+
+$$T(i,j) = \begin{cases} 1 + T(i-1,j-1) & \text{if } \text{text1}[i] == \text{text2}[j], \\ \max(T(i-1,j), T(i,j-1)) & \text{otherwise}. \end{cases}$$
