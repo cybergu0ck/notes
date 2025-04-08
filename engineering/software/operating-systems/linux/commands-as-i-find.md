@@ -94,6 +94,7 @@ ls -1 | wc -l
 
 <br>
 <br>
+<br>
 
 ## Tee
 
@@ -106,8 +107,10 @@ echo ".obsidian" |tee .gitignore
 ```
 
 <br/>
+<br/>
+<br/>
 
-# `cd `
+## `cd `
 
 ```bash
 cd ~/.      # cd into Home Directory (home directory is always fixed)
@@ -116,3 +119,15 @@ cd ./       # cd to current working directory (basically doesn't change director
 cd ./..     # cd one directory up in the file structure
 cd ./../..  # cd two directories up in the file structure
 ```
+
+<br>
+<br>
+<br>
+
+## grep along with ls
+
+- To find files with substring of the full file name.
+
+  ```bash
+  ls | grep "<substring?"
+  ```
