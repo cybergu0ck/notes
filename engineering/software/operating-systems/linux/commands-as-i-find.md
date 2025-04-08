@@ -131,3 +131,13 @@ cd ./../..  # cd two directories up in the file structure
   ```bash
   ls | grep "<substring?"
   ```
+
+<br>
+<br>
+<br>
+
+## Print the number of files in the directory
+
+```bash
+ls | wc -l
+```
