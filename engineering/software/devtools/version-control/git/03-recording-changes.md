@@ -91,12 +91,30 @@ Git supports multiple stashes, It stacks the stashes on top of eachother.
 
 <br>
 
-### View the Stash
+### View the list of stash
 
 ```bash
 git stash list
 ```
 
+<br>
+<br>
+
+### View particular stash
+
+- To view a particular stash in the terminal.
+
+  ```bash
+  git show stash@{<id>}
+  ```
+
+- To view a particular stash using the diff tool.
+
+  ```bash
+  git difftool stash@{<id>}^ stash@{<id>}
+  ```
+
+<br>
 <br>
 
 ### Reapplying the Stashed Changes
