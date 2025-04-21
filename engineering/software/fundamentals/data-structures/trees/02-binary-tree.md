@@ -1,6 +1,6 @@
 # Binary Tree
 
-_Binary Tree is a Tree where each node can have at most two children._
+_Binary Tree is a [tree](./01-trees.md) where each node can have at most two children._
 
 <br>
 <br>
@@ -12,8 +12,6 @@ _Binary Tree is a Tree where each node can have at most two children._
 <br>
 
 ### Maximum number of nodes for a given height
-
-<div style="height: 1px; background-color: #808080;"></div>
 
 The maximum number of nodes at a given height $h$ is $2^h$. The maximum number of nodes at a given height can be calculated by summing up all the nodes at respective height's i.e $2^0 + 2^1 + 2^2 + ... + 2^h$. This is a [geometric series](../../../../../mathematics/algebra/series.md#geometric-series) and the sum of a geometric series is given by the formula:
 
@@ -32,8 +30,6 @@ $$ \text{The maximum number of nodes in the tree} = N = 2^{h+1} -1 $$
 
 ### Height of the tree for number of nodes
 
-<div style="height: 1px; background-color: #808080;"></div>
-
 If $N$ is the maximum number of nodes and $h$ is the height of the tree, we know that ([proof](#maximum-number-of-nodes-for-a-given-height)) :
 
 $$ N = 2^{h+1} -1 $$
@@ -47,10 +43,9 @@ Hence, For a tree with $N$ nodes,
 $$ \text{The height of the tree = h =} floor(log_2(N))$$
 
 <br/>
+<br/>
 
 ### Indices when represented as an array
-
-<div style="height: 1px; background-color: #808080;"></div>
 
 When the tree is represented as an zero indexed array, for node at index $i$,
 
@@ -68,14 +63,14 @@ When the tree is represented as an one indexed array, for node at index $i$,
 
 <br/>
 <br/>
+<br/>
 
 ## Types of Binary Tree
 
 <br>
+<br>
 
 ### Types of Binary Tree based on number of children
-
-<div style="height: 1px; background-color: #808080;"></div>
 
 <br>
 
@@ -157,6 +152,7 @@ _A balanced binary tree is a type of binary tree in which the heights of the lef
 
 <br>
 <br>
+<br>
 
 ## Tree Traversal Algorithms
 
@@ -197,7 +193,6 @@ _Level order traversal, also known as breadth-first traversal, visits nodes leve
 - Level Order Traversal : 1, 2, 3, 4, 5, 6, 7
 
 <br>
-
 <br/>
 
 ### Implementation
@@ -297,8 +292,12 @@ class BinarySearchTree:
 
 <br>
 <br>
+<br>
 
 ## Refernces
+
+<br>
+<br>
 
 ### In Order Traversal wihout Infinite Loop
 
@@ -318,6 +317,7 @@ def in_order_traversal(self, root: Node = None) -> list[float]:
     return res
 ```
 
+<br>
 <br>
 
 ### Implementation using Arrays
