@@ -40,6 +40,13 @@ _Tree is a nonlinear hierarchial data structure that consists of nodes connected
    - Depth of the tree is the number of edges from the root to the deepest leaf. (For the tree, height and depth are same in magnitude)
    - In the above image, the depth of node A is 0, of node H is 2 and node J is 3
 
+1. Level of a tree is same as the depth.
+   - Level starts from zero in these notes.
+   - Zeroth level has depth = 0.
+   - First level has depth = 1 and so on.
+
+- Some might consider the nodes (instead of edges) for depth and level. In that case, the depth (and level) starts from 1 instead of 0. All the formula in these notes need to be adjusted for this.
+
 <br>
 <br>
 <br>
