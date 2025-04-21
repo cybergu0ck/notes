@@ -221,4 +221,18 @@ Use '>' for quotes.
 
 - Writing equation that has an if and else condition
 
-$$T(i,j) = \begin{cases} 1 + T(i-1,j-1) & \text{if } \text{text1}[i] == \text{text2}[j], \\ \max(T(i-1,j), T(i,j-1)) & \text{otherwise}. \end{cases}$$
+  ```
+  $$T(i,j) = \begin{cases} 1 + T(i-1,j-1) & \text{if } \text{text1}[i] == \text{text2}[j], \\ \max(T(i-1,j), T(i,j-1)) & \text{otherwise}. \end{cases}$$
+  ```
+
+  $$T(i,j) = \begin{cases} 1 + T(i-1,j-1) & \text{if } \text{text1}[i] == \text{text2}[j], \\ \max(T(i-1,j), T(i,j-1)) & \text{otherwise}. \end{cases}$$
+
+<br>
+<br>
+<br>
+
+## Adding a line
+
+```
+<div style="height: 1px; background-color: #808080;"></div>
+```
