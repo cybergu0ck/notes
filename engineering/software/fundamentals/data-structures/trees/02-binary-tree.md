@@ -4,16 +4,18 @@ _Binary Tree is a Tree where each node can have at most two children._
 
 <br>
 <br>
+<br>
 
 ## Equations related to Binary Tree
 
+<br>
 <br>
 
 ### Maximum number of nodes for a given height
 
 <div style="height: 1px; background-color: #808080;"></div>
 
-The maximum number of nodes at a given height $h$ is $2^h$. The maximum number of nodes at a given height can be calculated by summing up all the nodes at respective height's i.e $2^0 + 2^1 + 2^2 + ... + 2^h$. This is a geometric series and the sum of a geometric series is given by the formula:
+The maximum number of nodes at a given height $h$ is $2^h$. The maximum number of nodes at a given height can be calculated by summing up all the nodes at respective height's i.e $2^0 + 2^1 + 2^2 + ... + 2^h$. This is a [geometric series](../../../../../mathematics/algebra/series.md#geometric-series) and the sum of a geometric series is given by the formula:
 
 $$ S = a \left( \frac{1- r^n }{1- r } \right)$$
 
@@ -25,6 +27,7 @@ Hence, For a tree with height $h$,
 
 $$ \text{The maximum number of nodes in the tree} = N = 2^{h+1} -1 $$
 
+<br>
 <br>
 
 ### Height of the tree for number of nodes
