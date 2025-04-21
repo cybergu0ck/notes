@@ -98,15 +98,11 @@ _A degenerate binary tree is a type of binary tree in which each parent node has
 
 <br>
 
-#### Perfect Binary Tree
+#### Balanced Binary Tree
 
-_A perfect binary tree is a type of binary tree in which all interior nodes have exactly two children and all leaf nodes are at the same level or depth._
+_A balanced binary tree is a type of binary tree in which the heights of the left and right subtrees of every node differ by at most one._
 
-![perfect-binary-tree](./_assets/perfect-binary-tree.png)
-
-- Perfect binary trees have precisely $2^{h+1} -1$ nodes, where $h$ is the depth of the tree or the last level (considering zero based indexing).
-- Perfect binary tree is a balanced binary tree where every level is filled with the maximum number of nodes possible.
-- A perfect binary tree is always complete binary tree.
+![balanced-binary-tree](./_assets/balanced-binary-tree.png)
 
 <br>
 
@@ -142,11 +138,17 @@ _A complete binary tree is a type of binary tree in which all levels of the tree
 
 <br>
 
-#### Balanced Binary Tree
+#### Perfect Binary Tree
 
-_A balanced binary tree is a type of binary tree in which the heights of the left and right subtrees of every node differ by at most one._
+_A perfect binary tree is a type of binary tree in which all interior nodes have exactly two children and all leaf nodes are at the same level or depth._
 
-![balanced-binary-tree](./_assets/balanced-binary-tree.png)
+![perfect-binary-tree](./_assets/perfect-binary-tree.png)
+
+- Perfect binary trees have precisely $2^{h+1} -1$ nodes, where $h$ is the depth of the tree or the last level (considering zero based indexing).
+- Perfect binary tree is a [balanced binary tree](#balanced-binary-tree) where every level is filled with the maximum number of nodes possible.
+- A perfect binary tree is always [complete binary tree](#complete-binary-tree).
+
+<br>
 
 <br>
 <br>
