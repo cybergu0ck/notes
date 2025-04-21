@@ -11,9 +11,9 @@ _Binary Tree is a [tree](./01-trees.md) where each node can have at most two chi
 <br>
 <br>
 
-### Maximum number of nodes for a given height
+### Maximum number of nodes for a given depth
 
-The maximum number of nodes at a given height $h$ is $2^h$. The maximum number of nodes at a given height can be calculated by summing up all the nodes at respective height's i.e $2^0 + 2^1 + 2^2 + ... + 2^h$. This is a [geometric series](../../../../../mathematics/algebra/series.md#geometric-series) and the sum of a geometric series is given by the formula:
+The maximum number of nodes at a given depth $h$ (zero based, meaning defined in terms of edges.check [depth](./01-trees.md#features-of-tree)) is $2^h$. The maximum number of nodes at a given depth can be calculated by summing up all the nodes at respective depth's i.e $2^0 + 2^1 + 2^2 + ... + 2^h$. This is a [geometric series](../../../../../mathematics/algebra/series.md#geometric-series) and the sum of a geometric series is given by the formula:
 
 $$ S = a \left( \frac{1- r^n }{1- r } \right)$$
 
@@ -21,16 +21,16 @@ In our case, $a = 2^0$, $r = 2$ and $n = h+1$. Therefore,
 
 $$ S = 2^{h+1} -1 $$
 
-Hence, For a tree with height $h$,
+Hence, For a tree with depth $h$,
 
 $$ \text{The maximum number of nodes in the tree} = N = 2^{h+1} -1 $$
 
 <br>
 <br>
 
-### Height of the tree for number of nodes
+### Depth of the tree for number of nodes
 
-If $N$ is the maximum number of nodes and $h$ is the height of the tree, we know that ([proof](#maximum-number-of-nodes-for-a-given-height)) :
+If $N$ is the maximum number of nodes and $h$ is the depth of the tree, we know that ([proof](#maximum-number-of-nodes-for-a-given-depth)) :
 
 $$ N = 2^{h+1} -1 $$
 
@@ -40,7 +40,7 @@ $$ h = \log_2{(N+1)}-1 $$
 
 Hence, For a tree with $N$ nodes,
 
-$$ \text{The height of the tree = h =} floor(log_2(N))$$
+$$ \text{The depth of the tree = h =} floor(log_2(N))$$
 
 <br/>
 <br/>
@@ -95,8 +95,6 @@ _A degenerate binary tree is a type of binary tree in which each parent node has
 <br>
 
 ### Types of Binary Tree based on completion levels
-
-<div style="height: 1px; background-color: #808080;"></div>
 
 <br>
 
