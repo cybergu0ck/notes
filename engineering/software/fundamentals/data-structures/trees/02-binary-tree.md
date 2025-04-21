@@ -104,7 +104,7 @@ _A perfect binary tree is a type of binary tree in which all interior nodes have
 
 ![perfect-binary-tree](./_assets/perfect-binary-tree.png)
 
-- Perfect binary trees have precisely $(2^k) - 1$ nodes, where k is the last level of the tree (starting with 1).
+- Perfect binary trees have precisely $2^{h+1} -1$ nodes, where $h$ is the depth of the tree or the last level (considering zero based indexing).
 - Perfect binary tree is a balanced binary tree where every level is filled with the maximum number of nodes possible.
 - A perfect binary tree is always complete binary tree.
 
