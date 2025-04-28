@@ -141,3 +141,13 @@ cd ./../..  # cd two directories up in the file structure
 ```bash
 ls | wc -l
 ```
+
+<br>
+<br>
+<br>
+
+## Modifying default directory paths
+
+```bash
+nano ~/.config/user-dirs.dirs
+```
