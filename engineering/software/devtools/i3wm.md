@@ -260,3 +260,14 @@
 | Add a program to a specific workspace | Mod + Shift + `<ws-num>` |
 | Switch to a workspace                 | Mod + `<ws-num>`         |
 | To reload config                      | Mod + Shift + R          |
+
+<br>
+<br>
+<br>
+
+## Applications
+
+- "Nemo" for file manager.
+- "i3lock" for system locker.
+- "blueman-manager" for bluetooth manager.
+- "gnome-tweaks" for GNOME settings.
