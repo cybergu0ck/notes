@@ -13,5 +13,5 @@ Follow these steps to get arrow support in gimp.
    - To find the path, open gimp > edit > preferances > folder > scripts section and find the paths.
    - Example `home/user/.config/GIMP/2.10/scripts/`
 1. Restart gimp.
-1. Draw start and end points using the Path tool in gimp.
+1. Draw start and end points using the Path tool from ribbon > Tools in gimp.
 1. Click Tools > Arrow-Set-Size. Make adjustments to the settings if required. Hit OK.
