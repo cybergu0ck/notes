@@ -22,15 +22,17 @@
   #
   # Please see https://i3wm.org/docs/userguide.html for a complete reference!
   #-----------------------------------------------------------------------------------------------------------------
+  # My configuration
+  #-----------------------------------------------------------------------------------------------------------------
 
-  #Set the mod key; Mod4 is Windows key and Mod1 is Alt key
+  #Set the mod key:Mod4 is Windows key and Mod1 is Alt key
   set $mod Mod4
 
-  #Screen management, using secondary screen as primary
+  #Screen management: Use secondary display only
   set $primary eDP-1
   set $secondary HDMI-1-1
-
   exec_always --no-startup-id xrandr --output $primary --off --output $secondary --auto --primary
+
 
   # Workspace management
 
@@ -41,38 +43,28 @@
 
   # Create all 6 workspaces at startup
   exec --no-startup-id i3-msg 'workspace 1' #terminal
-  exec --no-startup-id i3-msg 'workspace 2' #code editor
+  exec --no-startup-id i3-msg 'workspace 2' #work
   exec --no-startup-id i3-msg 'workspace 3' #notes
   exec --no-startup-id i3-msg 'workspace 4' #browser
-  exec --no-startup-id i3-msg 'workspace 5'
-  exec --no-startup-id i3-msg 'workspace 6'
 
-  # Open programs (they will go to the right workspace due to the assign rules)
-  exec --no-startup-id gnome-terminal
-  exec --no-startup-id i3-msg 'workspace 3; exec code -n /home/cybergu0ck/code/notes' #specific instance of vscode in third workspace
+  #Ensure notes sticks to workspace 3
+  for_window [class="^Code$|^code$" title=".*notes.*"] move to workspace 3
+
+
+  # Open programs (they will go to the right workspace according to the assign rules)
+  exec --no-startup-id i3-msg 'workspace 1; exec nemo'
+  exec --no-startup-id i3-msg 'workspace 1; focus right; exec gnome-terminal'
+  exec --no-startup-id code -n /home/cybergu0ck/code/notes
   exec --no-startup-id google-chrome
 
-
-  # Optionally, return to workspace 1 at the end
+  # Return to workspace 1 at the end
   exec --no-startup-id i3-msg 'workspace 1'
 
+  # keybinding to lock screen
+  bindsym $mod+x exec "i3lock -c 000000 --no-unlock-indicator -i ~/pictures/lockscreen.png"
 
-
-  # #Workspaces
-  # set $ws1 "1: terminal"
-  # set $ws2 "2: code"
-  # set $ws3 "3: browser"
-  # set $ws4 "4: notes"
-  # set $ws5 "5: discord"
-  # set $ws6 "6: other"
-
-  # #Assign apps to workspaces
-  # assign      [class="gnome-terminal"]         $ws1
-  # assign      [class="code"]   $ws2
-  # assign      [class="google-chrome"]   $ws3
-  # #for_window  [class="spotify"]         move to workspace $ws4
-
-  # exec --no-startup-id i3-msg "workspace $ws1; workspace $ws2; workspace $ws3; workspace $ws4;  workspace $ws5; workspace $ws6"
+  #Enforce gnome settings specifically for dark theme set using gnome-tweaks
+  exec --no-startup-id /usr/libexec/gsd-xsettings
   #-----------------------------------------------------------------------------------------------------------------
 
   # Font for window titles. Will also be used by the bar unless a different font
