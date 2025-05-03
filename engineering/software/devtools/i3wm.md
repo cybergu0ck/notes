@@ -251,3 +251,15 @@ bar {
         status_command i3status
 }
 ```
+
+<br>
+<br>
+<br>
+
+## Shortcut keys
+
+| Action                                | Keybinding               |
+| ------------------------------------- | ------------------------ |
+| Exit a window                         | Mod + Shift + Q          |
+| Add a program to a specific workspace | Mod + Shift + `<ws-num>` |
+| Switch to a workspace                 | Mod + `<ws-num>`         |
