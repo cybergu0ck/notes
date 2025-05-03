@@ -65,6 +65,10 @@
 
   #Enforce gnome settings specifically for dark theme set using gnome-tweaks
   exec --no-startup-id /usr/libexec/gsd-xsettings
+
+  #Screenshot
+  bindsym $mod+Shift+S  exec flameshot full
+
   #-----------------------------------------------------------------------------------------------------------------
 
   # Font for window titles. Will also be used by the bar unless a different font
