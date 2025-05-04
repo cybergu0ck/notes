@@ -89,3 +89,17 @@ cat > <filename>
 <br>
 <br>
 <br>
+
+## Tee command
+
+The *tee command* reads standard input (stdin) and writes it to both standard output (stdout) and one or more files.
+
+- To write ".obsidian" into .gitignore file,
+
+  ```bash
+  echo ".obsidian" |tee .gitignore
+  ```
+
+<br>
+<br>
+<br>
