@@ -4,10 +4,12 @@
 <br>
 <br>
 
-## Introduction
+## Basics
 
 1. [Kernal and OS]()
 1. [Linux Distributions]() <!-- base distors (debian, redhat, arch..) -->
+1. [Linux Shell]()
+1. [Linux command]()
 
 <br>
 <br>
@@ -16,7 +18,7 @@
 ## Filesystem
 
 1. [Linux Directory Hierarchy]() <!-- /bin, /etc, /home -->
-1. [File Types]() <!-- regular, directory, symlink -->
+1. [Files]() <!-- regular, directory, symlink -->
 1. [Permissions and Ownership]() <!--chmod, chown -->
 1. [Navigation]() <!--cd, ls, pwd, tree -->
 1. [File Operations]() <!--cp, mv, rm, touch, cat -->
