@@ -61,13 +61,3 @@ ls | wc -l
 <br>
 <br>
 <br>
-
-## Modifying default directory paths
-
-```bash
-nano ~/.config/user-dirs.dirs
-```
-
-<br>
-<br>
-<br>
