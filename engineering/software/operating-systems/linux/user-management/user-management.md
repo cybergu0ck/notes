@@ -1,7 +1,9 @@
-
 ## About current users on the system
+
 ---
-Quick way is 
+
+Quick way is
+
 ```bash
 ls -l /home
 ```
@@ -54,9 +56,11 @@ fwupd-refresh:x:112:121:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
 ```
 
 The following command will give the number of lines (Hence number of users) from the /etc/passwd
+
 ```bash
 cat /etc/passwd | wc -l
 ```
+
 ```
 33
 ```
@@ -64,21 +68,26 @@ cat /etc/passwd | wc -l
 <br/>
 
 ## Adding a user
----
-- This command may or may not create a specific home directory for the new user (depends on the distro)
-	```bash
-	sudo useradd <user_name>
-	```
 
-- Adding a user and explicitly creating a home directory 
-	```bash
-	sudo useradd -m <user_name>
-	```
+---
+
+- This command may or may not create a specific home directory for the new user (depends on the distro)
+
+  ```bash
+  sudo useradd <user_name>
+  ```
+
+- Adding a user and explicitly creating a home directory
+  ```bash
+  sudo useradd -m <user_name>
+  ```
 
 <br/>
 
 ## Deleting a user
+
 ---
+
 ```bash
 sudo userdel <user_name>
 ```
@@ -86,26 +95,31 @@ sudo userdel <user_name>
 <br/>
 
 ## Setting user passwords
+
 ---
+
 - For the current user
-	```bash
-	passwd
-	```
+  ```bash
+  passwd
+  ```
 - Setting passwords specific to users (using sudo, we don't even need the current password of the user to set the new one)
+
 ```
 sudo passwd <user_name>
 ```
 
 <br/>
 
-## Switching users 
+## Switching users
+
 ---
+
 - To simply switch the user
-	```bash
-	su <username>
-	```
+  ```bash
+  su <username>
+  ```
 - To switch the user with a separate shell
-	```bash
+  `bash
 	sudo -u <username> <shell>
-	```
-For example `sudo -u dummy bash`
+	`
+  For example `sudo -u dummy bash`

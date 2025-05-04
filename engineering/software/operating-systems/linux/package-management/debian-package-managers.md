@@ -1,10 +1,10 @@
-# Package management
+# Debian pacakage managers
 
 <br>
 <br>
 <br>
 
-## apt
+## Apt
 
 <br>
 <br>
@@ -37,20 +37,5 @@ sudo apt install <package>
 sudo apt remove <package>
 ```
 
-<br>
-<br>
-
-## snap
-
-<br>
-<br>
-
-### Uninstalling a package
-
-```bash
-sudo snap remove <package>
-```
-
-<br>
 <br>
 <br>
