@@ -60,8 +60,50 @@
       cout << &ptr << endl; //00AFF7C4
       cout << "This is a dummy expression so that debugger stays here while I view memory." << endl;
   }
+
+  
   ```
 
   ![](../_assets/mem3.png)
 
   - If we observe the value stored in the address of the pointer ptr (0x00AFF7C4), we see the address of _num_ but kinda backwards (d0 f7 af 00), not aware more than this!
+
+
+<br>
+<br>
+<br>
+
+## C++ project configuration
+
+<br>
+<br>
+
+### Include directories  
+
+* This is a path setting for the compiler. 
+* Directories in which the compiler has to search for include files or header files (.h/.hpp) that are referenced in the source code (ex: #include <header.h>).
+* In visual studio the configuration for this is found in "Configuration Properties > C/C++ > General > Additional Include Directories" and not to be confused with "Configuration Properites > VC++ Directories > Include Directories", which is a legacy settings that affects a wider range of tools (not just the C++ compiler).
+
+<br>
+<br>
+
+### Library directories 
+
+* This is a path setting for the linker.
+* Directories in which the linker has to search for binary files (.lib , .a) during the linking process.
+* In visual studio the configuration for this is found in "Configuration Properties > Linker > General > Additional Library Directories".
+
+<br>
+<br>
+
+### Additional dependencies
+
+* This is a configuration setting for the linker.
+* This is a listing of specific libraries to link to, facilitating the linker with the actual library names to include when resolving symbols in the linking process. (ex: mylib.lib)
+* In visual studio the configuration for this is found in "Configuration Properties > Linker > Input > Additional Dependencies".
+
+<br>
+<br>
+<br>
+
+
