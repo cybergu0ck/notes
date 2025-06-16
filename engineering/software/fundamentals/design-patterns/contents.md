@@ -8,6 +8,7 @@
 1. [Factory method](./creational/factory-method.md)
 1. [Abstract factory](./creational/abstract-factory.md)
 1. [Builder](./creational/builder.md)
+1. [Prototype](./creational/prototype.md)
 
 <br>
 <br>
