@@ -65,6 +65,7 @@ Source files contain the actual implementations of the functions and classes dec
 
 <br>
 <br>
+<br>
 
 ## Linking
 
@@ -75,30 +76,115 @@ Source files contain the actual implementations of the functions and classes dec
 The executable file is OS specific even though it is binary code. This is because of the header info present in the binary which contains OS related data like build platform, system architecture, CPU etc.
 
 <br>
+<br>
+<br>
 
-### Library Linking
+## Library Linking
 
-Libraries can be liked wither statically or dynamically.
+Libraries in C++ can be linked in three ways:
 
-#### Static Linking of libraries
+<br>
+<br>
 
-**_Static linking is the process of linking a static library, where the symbols are resolved and linked at compile time, into the executable itself._**
+### Static Linking
 
-- A static library is a precompiled object code (It contains the implementations of the library).
-- They have .lib file extension in windows and .a (archive file) in linux.
+_It is the process of linking a static library, where the symbols are resolved and linked at build time, into the executable itself._
+
+- A static library is a collection of precompiled object code that contains the implementations of the library.
+- The static library is "static library" (.lib) in windows and "archive file" (.a) in linux.
 - The executable derived after static linking contains all the necessary code.
+
+- The process is
+
+  - Compile the source files into object files (.obj).
+  - Create a static library (.lib)
+  - Link the application with the static library.
+  - Now the code is baked into the exe.
+
+* The static library dev needs to provide the following :
+
+  1. Header files (.h) : These contain declarations and any necessary type definitions.
+  1. Static libary file (.lib) : Collection of precompiled object code.
+
+- Advantages :
+
+  - Slightly faster startup and execution.
+
+- Limitations :
+
+  - Incereased executable (.exe) size.
+  - Harder to update as whole thing must be recompiled.
+
 - Other programs (executables) cannot share the static library because they need to be linked at compile time, to the executable itself.
 
 <br>
+<br>
 
-#### Dynamic Linking of libraries
+### Implicit dynamic linking
 
-**_Dynamic linking is the process of linking a dynamic library, where the symbols are resolved and linked at run time, when the dynamic library is loaded to the memory._**
+_It is the process of linking a dynamic library, where the symbols are resolved and linked at build time using an import library, but the actual code is loaded from the dynamic library by the operating system automatically when the executable starts running._
 
-- A dynamic library is also a precompiled object code (It contains the implementations of the library).
-- They have .dll (dynamic link library) file extension in windows and .so (shared object) in linux.
+- A dynamic library is a collection of precompiled object code that contains the implementations of functions and data, which can be loaded and linked to a program from a separate file, rather than being embedded into the executable.
+- The dynamic library is "dynamic link library" (.dll) in windows and "shared library" (.so) in linux.
+- The import library has the file extesnion `.lib` (not to be confused with static library which also has same file extension. Checkout [types of lib files](#types-of-lib-files)) in windows. In Linux, the import library is not commonly used in the same way as on Windows.
 - The executable derived after dynamic linking doesnt contain the implementations for the code used from the library.
-- This allows multiple programs (executables) to share a single copy of the dynamic library because they are linked at runtime, when they are loaded in memory.
+
+* The process is
+
+  - Compile and create a DLL, produces the `.dll` and `.lib` files.
+  - Link the application with the import library (.lib) and the application knows where to find `.dll` functions at runtime.
+  - At runtime, the OS loads the mylib.dll into memory and connects the symbols.
+
+* The DLL dev needs to provide the following :
+
+  1. Header files (.h) : These contain the function declarations and any necessary type definitions.
+  1. Import library (.lib): This is required for the linker to resolve references to the DLL's exported functions at build time.
+  1. DLL file (.dll): This contains the actual implementation of your functions and must be present at runtime for the application to work.
+
+* Advantages :
+
+  - Smaller exe size.
+  - Easier to upadte as recompilation is not needed.
+
+* Limitations:
+
+  - Requires the dll the be present when the executable is launched.
+  - Slightly slower due to indirection.
+
+* When the application starts, the operating system automatically loads the required DLLs before the program begins execution. If the DLL is missing at startup, the application will fail to launch.
+* DLLs can be shared by different programs (executables) and each executable gets own private copy of the DLL's data sections.
+
+<br>
+<br>
+
+### Explicit dynamic linking
+
+_It is the process of linking a dynamic library, where the library is loaded manually at runtime using system calls (such as LoadLibrary), and the addresses of the required symbols are obtained programmatically (using GetProcAddress) as needed during the execution of the program._
+
+- A dynamic library is a collection of precompiled object code that contains the implementations of functions and data, which can be loaded and linked to a program from a separate file, rather than being embedded into the executable.
+- The dynamic library is "dynamic link library" (.dll) in windows and "shared library" (.so) in linux.
+- The executable derived after dynamic linking doesnt contain the implementations for the code used from the library.
+
+- The DLL dev needs to provide the following :
+
+  1. DLL file (.dll) : This contains the actual implementation of your functions and must be present at runtime so the application can load it using LoadLibrary.
+  1. Header files (.h) {Optional}: These are not strictly required, but they are helpful for users to know the function signatures and types.
+
+  - No need of import libary (.lib).
+
+- If the DLL is missing, the application can handle the error gracefully at runtime.
+- DLLs can be shared by different programs (executables) and each executable gets own private copy of the DLL's data sections.
+
+<br>
+<br>
+
+### Types of lib files
+
+There are two kinds of `.lib` files.
+
+1. Static library : Collection of precompiled object code bundled into a single file used in the case of static linking
+
+1. Import library : A special kind of `.lib` file generated when building a DLL which contains information to help linker resolve symbols to be loaded from the dll at runtime i.e. stubs that point to the dll. Used in implicit dynamic linked libraries.
 
 <br>
 <br>
