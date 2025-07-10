@@ -1,4 +1,8 @@
-# Conventions
+# Good practice
+
+<br>
+<br>
+<br>
 
 ## Responsibility of the Function
 
@@ -6,11 +10,13 @@ When unsure where exactly to place a piece of code, **_always consider the name 
 
 <br>
 <br>
+<br>
 
 ## Enforce Explicity
 
 Whenever there is an otion to explicietly specify something, it is better to do that because more data is always better than less data.
 
+<br>
 <br>
 
 ### Using this keyword in c++
@@ -36,6 +42,7 @@ public:
 - It makes it clear that the stuff we are using is a member method or a variable.
 - If we need to search the entire class where all of the member functions are called (which could be a valid objectives), we can use "this" as the search phrase. If this approach was not enforced, one would have to search each member function and member method in that code base, which is obviously time-consuming.
 
+<br>
 <br>
 <br>
 
@@ -105,6 +112,7 @@ Although **_it is better to write functions with single return statements_**, be
       return res
   ```
 
+<br>
 <br>
 <br>
 
@@ -177,6 +185,7 @@ Although **_it is better to write functions with single return statements_**, be
 
 <br>
 <br>
+<br>
 
 ## Paths in code
 
@@ -198,7 +207,7 @@ Although **_it is better to write functions with single return statements_**, be
 <br>
 <br>
 
-# UI development
+## UI development
 
 It is best to create documentation where the names with respect to code (variable and function names) are included pictorially. This will be really helpful to quickly navigate through the code base.
 
@@ -209,3 +218,23 @@ It is best to create documentation where the names with respect to code (variabl
 <br>
 <br>
 <br>
+
+## Elegantly clever
+
+- Return valid variale among two variables, return None if both are invalid.
+
+  ```py
+  #Long and not-so clever
+  if not a and not b:
+      return None
+  elif not a:
+      return b
+  elif not b:
+      return a
+  ```
+
+  ```py
+  #Elegant and clever
+  if not a or not b: #Enter if either or both variables are None
+      return a or b  #Return valid variable among the two, if exists otherwise return None
+  ```
