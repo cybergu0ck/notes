@@ -44,6 +44,21 @@ public:
 
 <br>
 <br>
+
+### Variable naming
+
+When a variable represents the same concept but in different data types, include the type in the variable name.
+
+- Suffixes are generally preferred over prefixes when indicating data types or specific characteristics in variable names. This is because suffixes tend to read more naturally and make it easier to identify the core concept of the variable first, followed by its distinguishing attribute (such as type or purpose)
+
+```cpp
+//following the same scope
+Variant idVariant = interp->EvalScript(script, res);
+int idInt = idVariant.GetInteger();
+```
+
+<br>
+<br>
 <br>
 
 ## Single Return vs Multiple Return
