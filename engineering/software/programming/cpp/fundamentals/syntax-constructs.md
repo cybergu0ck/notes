@@ -1,4 +1,10 @@
-# Expressions
+# Syntax constructs
+
+<br>
+<br>
+<br>
+
+## Expressions
 
 _An expression is a composition of operands and operators and yields a result when evaluated._
 
@@ -21,7 +27,7 @@ _An expression is a composition of operands and operators and yields a result wh
 <br>
 <br>
 
-## glvalue
+### glvalue
 
 _A glvalue is an expression whose evaluation determines the identity of an object or function_
 
@@ -31,14 +37,14 @@ _A glvalue is an expression whose evaluation determines the identity of an objec
 <br>
 <br>
 
-## rvalue
+### rvalue
 
 _An rvalue is essentially an expression that can be moved in memory._
 
 <br>
 <br>
 
-## lvalue
+### lvalue
 
 _An lvalue is an expression not nearing it's end of lifetime and whose evaluation determines the identity of an object or function._
 
@@ -102,7 +108,7 @@ _An lvalue is an expression not nearing it's end of lifetime and whose evaluatio
 - Function returning an non-const lvalue reference returns a modifiable lvalue.
 
   ```cpp
-  #include <iostream>
+  ##include <iostream>
 
   int& doesNothing(int& number)
   {
@@ -120,7 +126,7 @@ _An lvalue is an expression not nearing it's end of lifetime and whose evaluatio
 <br>
 <br>
 
-## prvalue
+### prvalue
 
 _An prvalue is an expression whose evaluation doesnt determine the identity of an object or function and whose resources can be reused._
 
@@ -134,7 +140,7 @@ _An prvalue is an expression whose evaluation doesnt determine the identity of a
 - A function call or an overloaded operator expression, whose return type is non-reference is a prvalue.
 
   ```cpp
-  #include <iostream>
+  ##include <iostream>
 
   int doesNothing()
   {
@@ -150,7 +156,7 @@ _An prvalue is an expression whose evaluation doesnt determine the identity of a
 - A function call whose return type is a pointer is a prvalue as it is non-reference.
 
   ```cpp
-  #include <iostream>
+  ##include <iostream>
 
   int special{ 100 };
 
@@ -169,7 +175,7 @@ _An prvalue is an expression whose evaluation doesnt determine the identity of a
 <br>
 <br>
 
-## xvalue
+### xvalue
 
 _An xvalue is an expression nearing it's end of lifetime, whose evaluation determines the identity of an object or function and whose resources can be reused._
 
@@ -180,13 +186,14 @@ _An xvalue is an expression nearing it's end of lifetime, whose evaluation deter
 
 <br>
 <br>
+<br>
 
 ### Temporary Materialisation Conversion
 
 A prvalue of any complete type T can be converted to an xvalue of the same type T. This conversion initializes a temporary object of type T from the prvalue by evaluating the prvalue with the temporary object as its result object, and produces an xvalue denoting the temporary object.
 
 ```cpp
-#include <iostream>
+##include <iostream>
 using namespace std;
 
 void foo(const int& num)
@@ -206,7 +213,7 @@ int main()
 <br>
 <br>
 
-# Statements
+## Statements
 
 - A statement is a complete line of code that performs some action.
 - statements are usually terminated with a semicolon and usually contain expressions.
@@ -215,7 +222,7 @@ int main()
 <br>
 <br>
 
-# Declaration and Defintion
+## Declaration and Defintion
 
 **A declaration is a statement that introduces a name for a variable, function, class, or other entity to the compiler, without necessarily providing the complete details or implementation.**
 
@@ -242,7 +249,3 @@ int main()
     // Function implementation
   }
   ```
-
-## References
-
-- The left hand side of an assignment operator must be a modifiable lvalue.

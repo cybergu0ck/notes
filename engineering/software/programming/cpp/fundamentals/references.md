@@ -1,13 +1,17 @@
-# Lvalue Reference
+# References
+
+<br>
+<br>
+<br>
+
+## Lvalue Reference
 
 _An lvalue reference defines an alternative name (Alias) for an object._
 
-
 <br>
 <br>
 
-## Basics of Lvalue Reference
-
+### Basics of Lvalue Reference
 
 - What C++03 calls reference is lvalue reference in Modern C++.
 - lvalue refernces can bind to lvalues, once binded they act as aliases.
@@ -37,13 +41,14 @@ _An lvalue reference defines an alternative name (Alias) for an object._
   }
   ```
 
-- Once an lvalue reference is bound, they cannot be binded again. Hence they must be initialised when they are created! 
+- Once an lvalue reference is bound, they cannot be binded again. Hence they must be initialised when they are created!
+
   ```cpp
   int main()
   {
-      int a{ 10 };    
-      int b{ 50 };    
-      int& lref {a} ; 
+      int a{ 10 };
+      int b{ 50 };
+      int& lref {a} ;
       lref = b;	      //assigns a with the value of b
   }
   ```
@@ -52,35 +57,31 @@ _An lvalue reference defines an alternative name (Alias) for an object._
 
   1. We can bind a lvalue reference to a prvalue using the const qualifier because of [temporary materialisation conversion](./07-expressions.md#temporary-materialisation-conversion-move-this-to-lvalue-and-rvalue-notes).
 
-      ```cpp
-      int main()
-      {
-          int num{ 100 };
-          const int& ref1 = 69; //ok because of temporary materialisation conversion
-          int& ref2 = 42; //Error: Initial value of reference to non const must be lvalue
-          int& ref3 = num * 2; //Error: Initial value of reference to non const must be lvalue
-      }
-      ```
-
-
+     ```cpp
+     int main()
+     {
+         int num{ 100 };
+         const int& ref1 = 69; //ok because of temporary materialisation conversion
+         int& ref2 = 42; //Error: Initial value of reference to non const must be lvalue
+         int& ref3 = num * 2; //Error: Initial value of reference to non const must be lvalue
+     }
+     ```
 
   1. We can bind a lvalue refernce to a Child class using the type of Base class in the case of inheritance.
 
-
-
-
 <br>
 <br>
 
-## Const Correctness with Lvalue References
+### Const Correctness with Lvalue References
 
 <br>
 
-### Reference to const
+#### Reference to const
 
 - Although there is no concept of "constant reference" as reference is not an object, it is commonly okay to refer to "reference to const" as "constant reference".
 
 - lvalue references to constant lvalues must be refernance to const.
+
   ```cpp
   int main()
   {
@@ -114,11 +115,10 @@ _An lvalue reference defines an alternative name (Alias) for an object._
   }
   ```
 
-
 <br>
 <br>
 
-## Lvalue References as Function Arguments
+### Lvalue References as Function Arguments
 
 - A non const lvalue reference parameter is used to pass the argument by reference instead of pass by value and the argument is modifiable.
 
@@ -126,7 +126,7 @@ _An lvalue reference defines an alternative name (Alias) for an object._
   #include <iostream>
 
   void doubler(int & number)
-  {	
+  {
     number *= 2;
   }
 
@@ -138,15 +138,13 @@ _An lvalue reference defines an alternative name (Alias) for an object._
   }
   ```
 
-
 - A const lvalue reference parameter is used to pass the argument by reference instead of pass by value and the argument is non-modifiable.
-
 
   ```cpp
   #include <iostream>
 
   void doubler(const int & number)
-  {	
+  {
     number *= 2;	//error: expression must be a modifiable lvalue
   }
 
@@ -154,14 +152,14 @@ _An lvalue reference defines an alternative name (Alias) for an object._
   {
     int num{ 100 };
     doubler(num);  //Passing a non const variable is not an error
-    std::cout << num; 
+    std::cout << num;
   }
   ```
 
 <br>
 <br>
 
-## Lvalue References as Return Type
+### Lvalue References as Return Type
 
 - Function returning an non-const lvalue reference returns a modifiable lvalue.
 
@@ -185,7 +183,7 @@ _An lvalue reference defines an alternative name (Alias) for an object._
 <br>
 <br>
 
-# Rvalue Reference 
+## Rvalue Reference
 
 - Introduced in C++11.
 - Binds to rvalues (temporary values or expressions without persistent memory locations).
@@ -234,9 +232,3 @@ _An lvalue reference defines an alternative name (Alias) for an object._
 
 <br>
 <br>
-
-
-
-
-
-

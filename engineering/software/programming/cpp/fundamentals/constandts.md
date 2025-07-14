@@ -7,7 +7,7 @@ _**Constants** are variables that connot change their value._
 
 ## Const Qualifier
 
-*`const` qualifier facilitates constants in C++.*
+_`const` qualifier facilitates constants in C++._
 
 - Attempt to modify a const qualified variable is an error.
 
@@ -34,7 +34,6 @@ _**Constants** are variables that connot change their value._
 
 - const variables are local to a file.
 
-
 <br>
 
 ### Const and References
@@ -43,13 +42,12 @@ Checkout [const qualifier with references](./05-references.md#const-correctness-
 
 <br>
 
-### Const and Pointers  
+### Const and Pointers
 
 Checkout [const qualifier with pointers](./04-pointers.md#const-correctness-with-pointers)
 
 <br>
 <br>
-
 
 ## Top Level Const
 
@@ -57,7 +55,6 @@ Checkout [const qualifier with pointers](./04-pointers.md#const-correctness-with
 <br>
 
 ## Constant Expression
-
 
 <br>
 <br>

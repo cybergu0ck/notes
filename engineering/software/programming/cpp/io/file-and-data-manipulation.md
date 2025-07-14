@@ -1,4 +1,10 @@
-# Files, Streams and IO
+# File and Data Manipulation
+
+<br>
+<br>
+<br>
+
+## Files, Streams and IO
 
 - list of header files
 
@@ -31,7 +37,7 @@
 <br>
 <br>
 
-# Manipulating Booleans
+## Manipulating Booleans
 
 - Once the manipulator is set, it is done for all the subsequent lines too.
 
@@ -66,11 +72,11 @@
   }
   ```
 
-  <br>
-  <br>
-  <br>
+<br>
+<br>
+<br>
 
-# Manipulating integers
+## Manipulating integers
 
 - Note that we are manipulating how the data is displayed in the console and not the values stored in the variables!
 - `#include <iostream>` and `#include <iomanip>` must be included for the following illustrations.
@@ -112,7 +118,7 @@
 <br>
 <br>
 
-# Manipulating floating point numbers
+## Manipulating floating point numbers
 
 - By default the console displays floats upto 6 digits (precesion is 6 by default) and rounding always occurs.
 
@@ -159,7 +165,7 @@
 <br>
 <br>
 
-# Modifying allignment
+## Modifying allignment
 
 - We can set the field width which will apply an allignment(space on left by default) only for the consecutive element (not all the subsequent elements)
 
@@ -216,7 +222,7 @@
 <br>
 <br>
 
-# Reading from text file
+## Reading from text file
 
 - It will read characters until whitespace.
 
@@ -261,7 +267,7 @@
 <br>
 <br>
 
-# Writing to files
+## Writing to files
 
 - output files will be created if they are not present, if present they'll be overwritten/truncated (if not explicitely mentioned)
 - Can be opened in text and binary modes.
@@ -351,7 +357,7 @@
 <br>
 <br>
 
-## Illustration
+### Illustration
 
 ```cpp
 #include <iostream>

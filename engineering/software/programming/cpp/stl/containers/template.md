@@ -1,4 +1,4 @@
-# STL Set
+# Template
 
 ## Types
 

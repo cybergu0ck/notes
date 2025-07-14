@@ -2,6 +2,7 @@
 
 <br>
 <br>
+<br>
 
 ## Arithmetic Operators
 
@@ -15,12 +16,14 @@
 
 <br>
 <br>
+<br>
 
 ## Assigment Operators
 
 - The left hand side of the assignment operator must be a modifiable lvalue.
 - The right hand side of the assignment operator can be either an lvalue or prvalue or an xvalue.
 
+<br>
 <br>
 
 ### Compound Assignment Operators
@@ -40,6 +43,7 @@
 
 <br>
 <br>
+<br>
 
 ## Relational Operators (Comparsion Operators)
 
@@ -57,10 +61,14 @@ Relational operators result to bool types.
 
 <br>
 <br>
+<br>
 
 ## Increment and Decrement Operators
 
 Increases or decreases the value by 1.
+
+<br>
+<br>
 
 ### prefix
 
@@ -77,6 +85,7 @@ Increases or decreases the value by 1.
   //2
   ```
 
+<br>
 <br>
 
 ### postfix
@@ -111,6 +120,7 @@ Increases or decreases the value by 1.
 
 <br>
 <br>
+<br>
 
 ## Logical Operators
 
@@ -124,11 +134,13 @@ Logical operators result to bool types.
 
 <br>
 <br>
+<br>
 
 ## Bitwise Operators
 
 <!-- TODO : Complete this part -->
 
+<br>
 <br>
 <br>
 
@@ -139,8 +151,9 @@ Logical operators result to bool types.
 
 <br>
 <br>
+<br>
 
-# Operator Precedence
+## Operator Precedence
 
 The precendence is tabulated from higher (top ones) to lower (bottom ones)
 

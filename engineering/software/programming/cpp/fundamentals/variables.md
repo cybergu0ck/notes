@@ -1,10 +1,11 @@
 # Variables
 
-_**Variables** are abstractions for memory locations in C++._
+Variables are abstractions for memory locations in C++.
 
 - variables have **type** and **value**.
 - variables must be declared before it is used in C++.
 
+<br>
 <br>
 <br>
 
@@ -23,6 +24,7 @@ variableType variableName;
 - Variable names cannot be redeclared.
 - Use either camelCase or snake_case and be consistent with it.
 
+<br>
 <br>
 <br>
 
@@ -50,6 +52,7 @@ _**Initialisation** is when the value is bound to the variable when it is declar
   ```
 
 <br>
+<br>
 
 ### Default Initialization
 
@@ -62,6 +65,7 @@ When a variable is defined without an initializer, it is default initialised.
   - Most classes lets objects to be defined without explicit initializers.
   - Some classes require that every object be explicitly initialized.
 
+<br>
 <br>
 <br>
 
@@ -79,6 +83,7 @@ int main()
 }
 ```
 
+<br>
 <br>
 <br>
 

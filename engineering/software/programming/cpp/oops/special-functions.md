@@ -1,4 +1,10 @@
-# Constructors
+# Special Functions
+
+<br>
+<br>
+<br>
+
+## Constructors
 
 **_Constructor is a special member function of a class that is invoked automatically whenever an object is created._**
 
@@ -45,7 +51,7 @@ Some important points about constructors:
 <br>
 <br>
 
-## Overloaded Constructors
+### Overloaded Constructors
 
 ```cpp
 #include <iostream>
@@ -93,7 +99,7 @@ int main()
 <br>
 <br>
 
-## Compiler Synthesised Constructors
+### Compiler Synthesised Constructors
 
 The compiler generates a default constructor by itself only if a class declares no constructors.
 
@@ -137,7 +143,7 @@ int main() {
 <br>
 <br>
 
-### Initialisation of Class Data Members
+#### Initialisation of Class Data Members
 
 ```cpp
 #include <iostream>
@@ -175,7 +181,7 @@ int main()
 
 <br>
 
-#### In-class Initialisation
+##### In-class Initialisation
 
 ```cpp
 class MyClass {
@@ -186,7 +192,7 @@ public:
 
 <br>
 
-#### Constructor Initialiser List
+##### Constructor Initialiser List
 
 //TODO - Link the initialisation notes and prolog notes here
 
@@ -224,7 +230,7 @@ public:
 <br>
 <br>
 
-## Delegated Constructors
+### Delegated Constructors
 
 - Delegated constructors in C++ are a feature introduced in C++11 that allow a constructor to call another constructor of the same class.
 - Instead of initialising the data attributes in every constructor, we can use the constructor that has most args as delegated constructor.
@@ -277,7 +283,7 @@ public:
 <br>
 <br>
 
-## Explicit Constructor
+### Explicit Constructor
 
 - A constructor that is tagged with `explicit` keyword is an explicit constructor, as such it is used to prevent implicit conversions during object construction.
 
@@ -337,7 +343,7 @@ public:
 <br>
 <br>
 
-# Destructor
+## Destructor
 
 **_Destructor is a special kind of member function that is invoked automatically when the object is destroyed._**
 
@@ -389,7 +395,7 @@ public:
 <br>
 <br>
 
-# Copy Constructors
+## Copy Constructors
 
 **_A copy constructor is a constructor which can be called with an argument of the same class type and copies the content of the argument without mutating the argument._**
 
@@ -407,7 +413,7 @@ public:
 <br>
 <br>
 
-## Shallow Copy Constructor
+### Shallow Copy Constructor
 
 - Shallow copy is member to member copy, meaning all the data attributes of the object is just copied to new one.
 - Shallow copy works fine without pointers but when pointers are involved it leads to dangling pointers.
@@ -451,7 +457,7 @@ public:
 <br>
 <br>
 
-## Deep Copy Constructor
+### Deep Copy Constructor
 
 ```cpp
 #include <iostream>
@@ -572,7 +578,7 @@ MyClass::~MyClass(){
 <br>
 <br>
 
-# Move Constructors
+## Move Constructors
 
 **_A move constructor is a constructor which can be called with an argument of the same class type and copies the content of the argument, possibly mutating the argument._**
 
@@ -694,134 +700,6 @@ MyClass::~MyClass(){
   ```
 
 <br>
-<br>
-
-# Copy Elision
-
-The elision (ommision) of the copy or move constructors is called copy elision.
-
-- Copy Elision can be applied even if the copy or move constructors have side effects! Meaning that if some code is written when an object is copied or moved and the compiler happens to perform copy elision then that code won't be run at all.
-- Until C++ 17, The compiler can perform either copy elision or use copy or move constructor but since C++ 17 the compiler mandatorily performs copy elision.
-- It is permitted in the following circumstances.
-
-  1. Named Return Value Optimisation.
-  2. Return Value Optimisation.
-  3. Object Instantiation from a Temporary.
-  4. Exception thrown and caught by Value.
-
-<br>
-
-- Consider the following class.
-
-  ```cpp
-  #include <iostream>
-
-  class MyClass {
-  public:
-      int num;
-  public:
-      MyClass();		                    //default constructor
-      MyClass(const MyClass& source);     //copy constructor
-      MyClass(MyClass&& source) noexcept; // move constructor
-      ~MyClass();                         //destructor
-  };
-
-  MyClass::MyClass() :num{ 0 }
-  {
-      std::cout << "default constructor called" << "\n";
-  }
-
-  MyClass::MyClass(const MyClass& source):num{source.num}
-  {
-      std::cout << "copy constructor is called " << "\n";
-  }
-
-  MyClass::MyClass(MyClass&& source) noexcept:num{source.num}
-  {
-      std::cout << "move constructor is called " << "\n";
-      source.num = 0;
-  }
-
-  MyClass::~MyClass()
-  {
-      std::cout << "destructor called " << "\n";
-  }
-  ```
-
-1. Named Return Value Optimisation
-
-   ```cpp
-   MyClass Foo()
-   {
-       MyClass named;
-       return named;       //Returning a named object by value
-   }
-
-   int main()
-   {
-       MyClass obj = Foo();
-   }
-
-   //default constructor called
-   //destructor called
-   ```
-
-2. Return Value Optimisation
-
-   ```cpp
-   MyClass Foo()
-   {
-       return MyClass();   //Returning a temporary object by value
-   }
-
-   int main()
-   {
-       MyClass obj = Foo();
-   }
-
-   //default constructor called
-   //destructor called
-   ```
-
-3. Object Instantiation from a Temporary.
-
-   ```cpp
-   int main()
-   {
-       MyClass obj{ MyClass() };
-   }
-
-   //default constructor called
-   //destructor called
-   ```
-
-4. Exception thrown and caught by Value. (I have not understand this)
-
-   ```cpp
-   MyClass Foo()
-   {
-       MyClass obj;
-       throw obj;
-   }
-
-   int main()
-   {
-       try {
-           Foo();
-       }
-       catch (MyClass obj)
-       {
-       }
-   }
-
-   //default constructor called
-   //move constructor is called
-   //destructor called
-   //copy constructor is called
-   //destructor called
-   //destructor called
-   ```
-
 <br>
 <br>
 
