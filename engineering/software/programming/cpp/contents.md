@@ -637,8 +637,6 @@
   - [Reading from string streams](io/stream.md#reading-from-string-streams)
   - [Writing to string streams](io/stream.md#writing-to-string-streams)
 
-- [Depricate](io/stream.md#depricate)
-
 <br>
 <br>
 <br>
