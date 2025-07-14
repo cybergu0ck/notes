@@ -30,6 +30,8 @@
   | Delete Line                                      | Ctrl + Shift + K          |
   | Format Document                                  | Shift + Alt + L           |
   | Format Selection                                 | Ctrl + K and Ctrl + F     |
+  | Fold All                                         | Ctrl + K and Ctrl + 0     |
+  | Expand All                                       | Ctrl + K and Ctrl + J     |
 
   <br>
   <br>
