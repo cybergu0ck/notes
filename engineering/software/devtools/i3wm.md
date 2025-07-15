@@ -275,3 +275,9 @@
 - "i3lock" for system locker.
 - "blueman-manager" for bluetooth manager.
 - "gnome-tweaks" for GNOME settings.
+
+- pavucontrol for controlling audio. Search "Pulse Audio Volume Control" in dmenu.
+
+  ```
+  sudo apt install pavucontrol
+  ```
