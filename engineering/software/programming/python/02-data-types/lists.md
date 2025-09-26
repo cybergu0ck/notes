@@ -230,7 +230,7 @@ for i,j,k in myList:
   #>[0, 'Odd', 2, 'Odd', 4]
   ```
 
-* An example of a complex nested list comprehension.
+* An example of a complex nested list comprehension. The outermost for loop appears furthest to the right in the list comprehension.
 
   ```python
   #The conventional way
