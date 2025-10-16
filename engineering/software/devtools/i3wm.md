@@ -258,12 +258,17 @@
 
 ## Shortcut keys
 
-| Action                                | Keybinding               |
-| ------------------------------------- | ------------------------ |
-| Exit a window                         | Mod + Shift + Q          |
-| Add a program to a specific workspace | Mod + Shift + `<ws-num>` |
-| Switch to a workspace                 | Mod + `<ws-num>`         |
-| To reload config                      | Mod + Shift + R          |
+| Action                       | Keybinding                                                                      |
+| ---------------------------- | ------------------------------------------------------------------------------- |
+| To reload config             | Mod + Shift + r                                                                 |
+| Exit a window                | Mod + Shift + q                                                                 |
+| Move to a specific workspace | Mod + Shift + `<ws-num>`                                                        |
+| Switch to a workspace        | Mod + `<ws-num>`                                                                |
+| Navigating tiles             | Mod + Arrows                                                                    |
+| Resizing tiles               | Mod + r to enter resize mode and then arrow keys (same keybinding to exit mode) |
+| Move tiles                   | Mod + Shift + Arrows                                                            |
+| Enter horizontal tiling mode | Mod + h                                                                         |
+| Enter veritcal tiling mode   | Mod + v                                                                         |
 
 <br>
 <br>
