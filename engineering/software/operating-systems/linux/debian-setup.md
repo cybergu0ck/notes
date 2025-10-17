@@ -91,7 +91,7 @@ Modify the line `HandleLidSwitch=` to `ignore`.
 <br>
 <br>
 
-## Utilities
+## Install utilities
 
 1. Install pulseaudio for volume control.
 
@@ -116,3 +116,11 @@ Modify the line `HandleLidSwitch=` to `ignore`.
    ```
    sudo apt install vlc
    ```
+
+<br>
+<br>
+<br>
+
+## Install vscode
+
+Follow [official docs](https://code.visualstudio.com/docs/setup/linux)
