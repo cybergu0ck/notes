@@ -124,3 +124,44 @@ Modify the line `HandleLidSwitch=` to `ignore`.
 ## Install vscode
 
 Follow [official docs](https://code.visualstudio.com/docs/setup/linux)
+
+<br>
+<br>
+<br>
+
+## Custom service to toggle display on startup
+
+To close the laptop lid and use the external monitor as main display.
+
+* Identify the identifier of external monitor (example: HDMI-1-1) and update the following sh file.
+
+    ```sh
+    #!/bin/bash
+
+    # The script will automatically use secondary monitor and turn off the primary laptop monitor if secondary monitor is connected
+    # Modify the following script with correct names for displays.
+    # Determine the name of the displays (ex eDP-1, HDMI-1-1 etc) using `xrandr` command.
+
+
+    if xrandr | grep "HDMI-1-1 connected"; then
+        echo "HDMI-1-1 is connected. Switching display to HDMI-1-1 and turning off eDP-1."
+        xrandr --output eDP-1 --off --output HDMI-1-1 --auto
+    else
+        echo "HDMI-1-1 is not connected. Enabling eDP-1."
+        xrandr --output eDP-1 --auto 
+    fi
+    ```
+
+* Give execute permissions for the sh file.
+
+    ```
+    sudo chmod +x /path/to/your/script.sh
+    ```
+
+* If i3 is used as desktop environment, the config is updated to run the above script on i3 startup.
+
+* If lightdm display manager is used, then add the script path to the  `display-setup-script=` variable in lightdm.conf file in "/etc/lightdm/"
+
+    ```
+    sudo nano /etc/lightdm/lightdm.conf
+    ```
