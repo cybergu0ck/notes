@@ -26,46 +26,47 @@
 
 Follow this to close the laptop lid and only use the external monitor as main display.
 
-* Identify the identifier of external monitor (example: HDMI-1-1) and update the following sh file.
+- Identify the identifier of external monitor (example: HDMI-1-1) and update the following sh file.
 
-    ```sh
-    #!/bin/bash
+  ```sh
+  #!/bin/bash
 
-    # The script will automatically use secondary monitor and turn off the primary laptop monitor if secondary monitor is connected
-    # Modify the following script with correct names for displays.
-    # Determine the name of the displays (ex eDP-1, HDMI-1-1 etc) using `xrandr` command.
+  # The script will automatically use secondary monitor and turn off the primary laptop monitor if secondary monitor is connected
+  # Modify the following script with correct names for displays.
+  # Determine the name of the displays (ex eDP-1, HDMI-1-1 etc) using `xrandr` command.
 
 
-    if xrandr | grep "HDMI-1-1 connected"; then
-        echo "HDMI-1-1 is connected. Switching display to HDMI-1-1 and turning off eDP-1."
-        xrandr --output eDP-1 --off --output HDMI-1-1 --auto
-    else
-        echo "HDMI-1-1 is not connected. Enabling eDP-1."
-        xrandr --output eDP-1 --auto 
-    fi
+  if xrandr | grep "HDMI-1-1 connected"; then
+      echo "HDMI-1-1 is connected. Switching display to HDMI-1-1 and turning off eDP-1."
+      xrandr --output eDP-1 --off --output HDMI-1-1 --auto
+  else
+      echo "HDMI-1-1 is not connected. Enabling eDP-1."
+      xrandr --output eDP-1 --auto
+  fi
+  ```
+
+- Give execute permissions for the sh file.
+
+  ```
+  sudo chmod +x /path/to/your/script.sh
+  ```
+
+- If display manager is used, which generally kicks in before the the desktop environment, configure the display manager to use the external monitor if it is hooked.
+
+  - If lightdm display manager is used, then add the script path to the `display-setup-script=` variable in lightdm.conf file in "/etc/lightdm/"
+
+    ```
+    sudo nano /etc/lightdm/lightdm.conf
     ```
 
-* Give execute permissions for the sh file.
+- Configure the desktop environemtn to use the external monitor.
+
+  - If i3 is used as desktop environment, the config is updated to run the above script on i3 startup.
+  - The following changes are needed for other desktop environments (better to use the following even with i3). Modify the line `HandleLidSwitch=` to `ignore` in the following file.
 
     ```
-    sudo chmod +x /path/to/your/script.sh
+    sudo nano /etc/systemd/logind.conf
     ```
-
-* If display manager is used, which generally kicks in before the the desktop environment, configure the display manager to use  the external monitor if it is hooked.
-
-    * If lightdm display manager is used, then add the script path to the  `display-setup-script=` variable in lightdm.conf file in "/etc/lightdm/"
-
-        ```
-        sudo nano /etc/lightdm/lightdm.conf
-        ```
-* Configure the desktop environemtn to use the external monitor.
-
-    * If i3 is used as desktop environment, the config is updated to run the above script on i3 startup.
-    * The following changes are needed for other desktop environments (better to use the following even with i3). Modify the line `HandleLidSwitch=` to `ignore` in the following file.
-
-        ```
-        sudo nano /etc/systemd/logind.conf
-        ```
 
 <br>
 <br>
@@ -105,11 +106,9 @@ Follow this to close the laptop lid and only use the external monitor as main di
 
 Follow [official docs](https://code.visualstudio.com/docs/setup/linux)
 
-
 <br>
 <br>
 <br>
-
 
 ## Install programs
 
@@ -155,7 +154,6 @@ Follow [official docs](https://code.visualstudio.com/docs/setup/linux)
 
 ## Stow the dotfiles
 
-
 1. Install stow
 
    ```
@@ -176,11 +174,31 @@ Follow [official docs](https://code.visualstudio.com/docs/setup/linux)
 
 ## Configure lightdm
 
-* Follow [docs](https://wiki.debian.org/LightDM) to configure lightdm.
+- Follow [docs](https://wiki.debian.org/LightDM) to configure lightdm.
 
-* To enable the user list,
+- To enable the user list,
 
-    ```
-    [Seat:*]
-    greeter-hide-users=false
-    ```
+  ```
+  [Seat:*]
+  greeter-hide-users=false
+  ```
+
+<br>
+<br>
+<br>
+
+## Enabling touchpad for i3wm
+
+The laptop's touchpad doesn't work properly with i3wm specifically the double tap. Follow the [website](https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/). Basically execute the following command in the terminal.
+
+```
+sudo mkdir -p /etc/X11/xorg.conf.d && sudo tee <<'EOF' /etc/X11/xorg.conf.d/90-touchpad.conf 1> /dev/null
+Section "InputClass"
+        Identifier "touchpad"
+        MatchIsTouchpad "on"
+        Driver "libinput"
+        Option "Tapping" "on"
+EndSection
+
+EOF
+```
