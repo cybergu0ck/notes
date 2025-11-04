@@ -202,3 +202,13 @@ EndSection
 
 EOF
 ```
+
+<br>
+<br>
+<br>
+
+## Launching volume control panel
+
+```
+pavucontronl
+```
