@@ -49,3 +49,7 @@
 <br>
 <br>
 <br>
+
+# Restore old right click context menu
+
+- Follow [website](<https://learn.microsoft.com/en-us/answers/questions/2287432/(article)-restore-old-right-click-context-menu-in>)
