@@ -166,8 +166,8 @@
 ## [Conditionals](control-flow/conditionals.md#conditional-branching)
 
 - [If](control-flow/conditionals.md#if)
-- [If Else](control-flow/conditionals.md#if-else)
-- [If - Else If - Else](control-flow/conditionals.md#if---else-if---else)
+- [Else if](control-flow/conditionals.md#else-if)
+- [Else](control-flow/conditionals.md#else)
 - [Switch](control-flow/conditionals.md#switch)
 
 <br>

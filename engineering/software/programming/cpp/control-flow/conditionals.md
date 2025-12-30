@@ -27,7 +27,7 @@ if (expr){
 <br>
 <br>
 
-## If Else
+## Else if
 
 ```cpp
 if (expr){
@@ -41,7 +41,7 @@ else {
 <br>
 <br>
 
-## If - Else If - Else
+## Else
 
 ```cpp
 
