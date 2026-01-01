@@ -1,4 +1,10 @@
-# [Variables](fundamentals/variables.md)
+# Fundamentals
+
+<br>
+<br>
+<br>
+
+## [Variables](fundamentals/variables.md)
 
 - [Initialization](fundamentals/variables.md#initialization)
 - [Mutable variables](fundamentals/variables.md#mutable-variables)
@@ -9,9 +15,8 @@
 <br>
 <br>
 <br>
-<br>
 
-# [Datatypes](datatypes/datatypes.md)
+## [Datatypes](datatypes/datatypes.md)
 
 - [Type Inferance](datatypes/datatypes.md#type-inferance)
 - [Explicit Typing](datatypes/datatypes.md#explicit-typing)
@@ -53,6 +58,21 @@
 <br>
 
 ## [Function](control-flow/functions.md#function)
+
+- [Return Value](control-flow/loops.md#return-value)
+  - [Single Expression Function](control-flow/loops.md#single-expression-function)
+- [Function Parameters](control-flow/loops.md#function-parameters)
+
+  - [Variable arguments](control-flow/loops.md#variable-arguments)
+  - [Default arguments](control-flow/loops.md#default-arguments)
+
+- [Extension function](control-flow/loops.md#extension-function)
+
+  <br>
+  <br>
+  <br>
+
+# Object Oriented Programming
 
 <br>
 <br>

@@ -1,22 +1,20 @@
-# Function
-
 _**Function** are reusable logically self-contained code that facilitates modularization of program._
 
-* Code execution begins from `main` function in kotlin.
-- Illustration of a Kotlin function
+- Code execution begins from `main` function in kotlin.
 
+* Illustration of a Kotlin function
 
-    ```kt
-    fun main()
-    {
-        myFunction("Hey", "Fluffy")
-    }
+  ```kt
+  fun main()
+  {
+      myFunction("Hey", "Fluffy")
+  }
 
-    fun myFunction(greeting : String, name : String)
-    {
-        println("$greeting, $name!")
-    }
-    ```
+  fun myFunction(greeting : String, name : String)
+  {
+      println("$greeting, $name!")
+  }
+  ```
 
 <br>
 <br>
@@ -25,33 +23,31 @@ _**Function** are reusable logically self-contained code that facilitates modula
 
 # Return value
 
+- By default kotlin returns `Uint`, it is equivalent to `void` keyword in C++/Java.
 
-* By default kotlin returns `Uint`, it is equivalent to `void` keyword in C++/Java.
+  ```kt
+  fun myFunction(greeting : String, name : String) //myFunction returns Uint type
+  {
+      println("$greeting, $name!")
+  }
+  ```
 
+- Return type must be specified as follows
 
-    ```kt
-    fun myFunction(greeting : String, name : String) //myFunction returns Uint type
-    {
-        println("$greeting, $name!") 
-    }
-    ```
-
-* Return type must be specified as follows
-
-
-    ```kt
-    fun myFunction(greeting : String, name : String) : String
-    {
-        return "$greeting, $name!"
-    }
-    ```
+  ```kt
+  fun myFunction(greeting : String, name : String) : String
+  {
+      return "$greeting, $name!"
+  }
+  ```
 
 <br>
 <br>
 <br>
-<br>
 
-# One line function
+## Single expression function
+
+Assignment opeartor `=` can be used instead of curly braces and explicit return keyword.
 
 ```kt
 fun main()
@@ -104,20 +100,54 @@ fun getMax(vararg numbers: Int) : Int {
 <br>
 <br>
 
-
 ## Default Argument Values
 
 _**Default arguments** are values that are assigned to function parameters if no arguments are passed to the function when it is called._
-
 
 ```kt
 fun main()
 {
     searchFor("coding tutorials")
-}  
+}
 fun searchFor(search : String, searchEngine : String = "Google"){
     println("Searching for $search on $searchEngine")
 }
 ```
 
+<br>
+<br>
+<br>
+<br>
 
+# Extension function
+
+They are functions that add new functionality to existing classes without modifying their source code or using inheritance.
+
+- 'this' keyword refers to the receiver object.
+
+```
+fun ClassName.functionName(parameters): ReturnType {
+    // function body
+    // 'this' refers to the receiver object
+}
+```
+
+```kt
+fun main() {
+    println("Enter a number :")
+    val number: Int = readLine()!!.toInt()
+    if(number.isEven()){
+        println("The number is even")
+    }else{
+        println("The number is odd")
+    }
+}
+
+fun Int.isEven() : Boolean {
+    if(this % 2 == 0){  //Here this refers to the integer which calls isEven
+        return true
+    }else{
+        return false
+    }
+}
+```
