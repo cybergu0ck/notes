@@ -68,12 +68,18 @@
 
 - [Extension function](control-flow/loops.md#extension-function)
 
-  <br>
-  <br>
-  <br>
+<br>
+<br>
+<br>
 
 # Object Oriented Programming
 
-<br>
-<br>
-<br>
+- [Class](oops/class.md)
+  - [Properties](oops/class.md#properties)
+  - [Methods](oops/class.md#methods)
+  - [Init](oops/class.md#init)
+  - [Instantiation](oops/class.md#instantiation)
+- [Inheritance](oops/inheritance.md)
+  - [Super Class](oops/inheritance.md#super-class)
+  - [Visibility Modifiers](oops/class.md#visibility-modifiers)
+  - [Abstract Class](oops/inheritance.md#abstract-class)
