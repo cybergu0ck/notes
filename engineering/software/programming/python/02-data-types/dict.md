@@ -1,11 +1,16 @@
-# Python dict
+`dict` is Python datastructure that stores key value pairs.
 
 - Dicts are mutable
 - Dictionaries are used to store data values in key:value pairs
 - Dictionaries cannot have duplicate keys and the keys must be immutable.
   - Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key.
 
-## Creating Dictionaries
+<br>
+<br>
+<br>
+<br>
+
+# Creating Dictionaries
 
 - Using {}
 
@@ -57,9 +62,18 @@
       #  'Joe': {'ID': '003', 'Salary': 1843, 'Designation': 'Hadoop Developer'}}}
       ```
 
-  <br/>
+<br>
+<br>
+<br>
+<br>
 
-# Inserting items
+# Methods
+
+<br>
+<br>
+<br>
+
+## Inserting items
 
 ```python
 my_dict={'Dave' : '001' , 'Ava': '002' , 'Joe': '003'}
@@ -69,71 +83,82 @@ print(my_dict)
 #>{'Dave': '001', 'Ava': '002', 'Joe': '003', 'Jack': '007'}
 ```
 
-# Accessing Items, keys and values
+<br>
+<br>
+<br>
 
-1.  Accesing items in the dictionary
+## Accessing list of key value pairs
 
-    ```python
-    my_dict={'Dave' : '001' , 'Ava': '002' , 'Joe': '003'}
-    print(type(my_dict.items()))
-    print(my_dict.items())
+```python
+my_dict={'Dave' : '001' , 'Ava': '002' , 'Joe': '003'}
+print(type(my_dict.items()))
+print(my_dict.items())
+#><class 'dict_items'>
+#>dict_items([('Dave', '001'), ('Ava', '002'), ('Joe', '003')])
+```
 
-    #><class 'dict_items'>
-    #>dict_items([('Dave', '001'), ('Ava', '002'), ('Joe', '003')])
-    ```
+- Although it might look like `items()` gives us a `list` object, It is not the case and hence they can't be indexed, They are actually `dict_items` object. To be indexable, we can type cast them into list.
 
-    Although it might look like `items()` gives us a `list` object, It is not the case and hence they can't be indexed, They are actually `dict_items` object. To be indexable, we can type cast them into list.
+  ```python
+  my_dict={'Dave' : '001' , 'Ava': '002' , 'Joe': '003'}
+  list(my_dict.items())[0]
 
-    ```python
-    my_dict={'Dave' : '001' , 'Ava': '002' , 'Joe': '003'}
-    list(my_dict.items())[0]
+  #>('Dave', '001')
+  ```
 
-    #>('Dave', '001')
-    ```
+<br>
+<br>
+<br>
 
-2.  Accesing keys in the dictionary
+## Accessing Keys
 
-    ```python
-    my_dict={'Dave' : '001' , 'Ava': '002' , 'Joe': '003'}
-    print(type(my_dict.keys()))
-    print(my_dict.keys())
+```python
+my_dict={'Dave' : '001' , 'Ava': '002' , 'Joe': '003'}
+print(type(my_dict.keys()))
+print(my_dict.keys())
+#><class 'dict_keys'>
+#>dict_keys(['Dave', 'Ava', 'Joe'])
+```
 
-    #><class 'dict_keys'>
-    #>dict_keys(['Dave', 'Ava', 'Joe'])
-    ```
+<br>
+<br>
+<br>
 
-3.  Accesing values
+## Accessing Values
 
-        ```python
-        # Accesing all the values
-        my_dict={'Dave' : '001' , 'Ava': '002' , 'Joe': '003'}
-        print(type(my_dict.values()))
-        print(my_dict.values())
+- Get list of all the values of the dict.
 
-        #> <class 'dict_values'>
-        #> dict_values(['001', '002', '003'])
-        ```
+  ```python
+  # Accesing all the values
+  my_dict={'Dave' : '001' , 'Ava': '002' , 'Joe': '003'}
+  print(type(my_dict.values()))
+  print(my_dict.values())
+  #> <class 'dict_values'>
+  #> dict_values(['001', '002', '003'])
+  ```
 
-        ```python
-        # Accesing specific value using a key
-        my_dict={'Dave' : '001' , 'Ava': '002' , 'Joe': '003'}
-        someValue = my_dict['Dave']
-        print(someValue)
+- Get specific value for a key.
 
-        #>'001'
-        ```
+  ```python
+  # Accesing specific value using a key
+  my_dict={'Dave' : '001' , 'Ava': '002' , 'Joe': '003'}
+  someValue = my_dict['Dave']
+  print(someValue)
+  #>'001'
+  ```
 
-        ```python
-        # Accesing specific value using get() method
-        my_dict={'Dave' : '001' , 'Ava': '002' , 'Joe': '003'}
-        my_dict.get('Dave')
+  ```python
+  # Accesing specific value using get() method
+  my_dict={'Dave' : '001' , 'Ava': '002' , 'Joe': '003'}
+  my_dict.get('Dave')
+  #>'001'
+  ```
 
-        #>'001'
-        ```
+<br>
+<br>
+<br>
 
-    <br/>
-
-# Deleting items from a dictionary
+## Deleting items from a dictionary
 
 items can be deleted using `del()`, `pop()`, `popitem()`, `clear()`
 
@@ -147,9 +172,11 @@ print(my_dict)
 #>{'Joe':'003'}
 ```
 
-<br/>
+<br>
+<br>
+<br>
 
-# Sorting dicts
+## Sorting dicts
 
 1. Sorting dicts by keys
 
@@ -171,12 +198,18 @@ print(my_dict)
    #>{'y': 25, 'z': 26, 't': 500, 'a': 1000}
    ```
 
+<br>
+<br>
+
 ### Difference between sorted() and sort()
 
 - sorted() is a function and it expects parameters to be passed to it. It creates a new object and must be stored in a variable.
 - sort() is a method and has to be called by an object. It is called in-place.
 
-<br/>
+<br>
+<br>
+<br>
+<br>
 
 # Default Dict
 
@@ -252,37 +285,37 @@ print(freq_dict)
   #>defaultdict(<class 'list'>, {'Annie': ['German', 'English'], 'Dan': ['English'], 'Gwen': ['Spanish', 'Kannada']})
   ```
 
-# Dict methods
+<br>
+<br>
+<br>
 
-## `setdefault()`
+## Default dict methods
 
----
+- Get value if key exists, otherwise insert and return a default value using `setdefault`.
 
-If the key is present in the dict, then setdefault() will return the value of that key, if not present it will return the default value (if provided) else returns None.
+  ```python
+  myDict = {'a':1000, 'z':26}
 
-```python
-myDict = {'a':1000, 'z':26}
+  isPresent = myDict.setdefault('a')
+  print(isPresent)
 
-isPresent = myDict.setdefault('a')
-print(isPresent)
+  #>1000
+  ```
 
-#>1000
-```
+  ```python
+  myDict = {'a':1000, 'z':26}
 
-```python
-myDict = {'a':1000, 'z':26}
+  isPresent = myDict.setdefault('x', 69)
+  print(isPresent)
 
-isPresent = myDict.setdefault('x', 69)
-print(isPresent)
+  #>69
+  ```
 
-#>69
-```
+  ```python
+  myDict = {'a':1000, 'z':26}
 
-```python
-myDict = {'a':1000, 'z':26}
+  isPresent = myDict.setdefault('y')
+  print(isPresent)
 
-isPresent = myDict.setdefault('y')
-print(isPresent)
-
-#>None
-```
+  #>None
+  ```
