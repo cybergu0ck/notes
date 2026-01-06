@@ -67,6 +67,26 @@
 <br>
 <br>
 
+# Criteria for key
+
+In Python, a type can be used as a dictionary key only if it is hashable (immutable).
+
+- Common key types :
+
+  - int, float, bool, complex, str, bytes
+  - tuple
+
+- Types that cannot be used as key:
+
+  - list
+  - dict
+  - set
+
+<br>
+<br>
+<br>
+<br>
+
 # Methods
 
 <br>
