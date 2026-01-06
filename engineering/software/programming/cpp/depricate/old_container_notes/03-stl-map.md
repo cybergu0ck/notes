@@ -1,13 +1,13 @@
-# STL Map
-
 A std::map is an associative STL container that stores key-value pairs in a sorted order by key.
 
 - Defined in the `<map>` header.
 
 <br>
 <br>
+<br>
+<br>
 
-## Initialisation
+# Initialisation
 
 ```cpp
 #include <iostream>
@@ -27,12 +27,16 @@ int main()
 
 <br>
 <br>
-
-## Methods
-
+<br>
 <br>
 
-### Adding Elements
+# Methods
+
+<br>
+<br>
+<br>
+
+## Adding elements
 
 - Adding key-value pairs to a map.
 
@@ -74,8 +78,10 @@ int main()
     - This method will not overwrite the value if the key already exists.
 
 <br>
+<br>
+<br>
 
-### Accessing Elements
+## Accessing elements
 
 - Accessing the elements
 
@@ -124,8 +130,10 @@ int main()
     - If the non-existing key is used with the `at` method, it will throw an `std::out_of_range` exception.
 
 <br>
+<br>
+<br>
 
-### Finding Elements
+## Finding elements
 
 - Finding an element in the map.
 
@@ -145,8 +153,10 @@ int main()
   ```
 
 <br>
+<br>
+<br>
 
-### Removing Elements
+## Removing elements
 
 ```cpp
 int main()
@@ -164,8 +174,10 @@ int main()
 ```
 
 <br>
+<br>
+<br>
 
-### Number of Elements
+## Number of elements
 
 ```cpp
 int main()
@@ -181,8 +193,10 @@ int main()
 ```
 
 <br>
+<br>
+<br>
 
-### Emptyness
+## Emptyness
 
 ```cpp
 int main()
@@ -195,8 +209,10 @@ int main()
 ```
 
 <br>
+<br>
+<br>
 
-### Equality
+## Equality
 
 - `==` returns true only if the two maps being compared have exactly same keys with exactly same values.
 
@@ -227,8 +243,10 @@ int main()
   ```
 
 <br>
+<br>
+<br>
 
-### Sorting Elements
+## Sorting elements
 
 - Sorting the map based on values is done using a temporary vector and the sorting algorithm.
 
@@ -262,8 +280,43 @@ int main()
 
 <br>
 <br>
+<br>
 
-## Types of STL Maps
+## List of map's values
+
+There is not convinient direct method to get a list of all the values of the map. Need to be done manually.
+
+```cpp
+#include <iostream>
+#include <map>
+#include <vector>
+
+int main()
+{
+    std::map<int, char> exampleMap{{1, 'a'}, {2, 'b'}, {3, 'c'}};
+
+    std::vector<char> valuesOfMap;
+    for(const auto& item : exampleMap){
+        valuesOfMap.push_back(item.second);
+    }
+
+    for(const auto& value : valuesOfMap){
+        std::cout << value << '\t';
+    }
+    return 0;
+}
+
+//a b c
+```
+
+- Python's `dict` has `values` method for this.
+
+<br>
+<br>
+<br>
+<br>
+
+# Types of STL Maps
 
 1. **Map** : _An STL map is an associative container that stores key-value pairs with unique keys in a sorted order by key._
 2. **Multi Map** : _A multimap is an associative container that stores key-value pairs, allowing multiple values to be associated with the same key (i.e., duplicate keys), in a sorted order by key._
@@ -271,8 +324,10 @@ int main()
 4. **Unordered Multimap** : _An unordered multimap is an associative container that stores key-value pairs, allowing multiple values to be associated with the same key (i.e., duplicate keys) without maintaining any specific order of the elements._
 
 <br>
+<br>
+<br>
 
-### Illustration
+## Illustration
 
 |             | std::map | std::mulitmap | std::unordered_map | std::unordered_multimap |
 | ----------- | -------- | ------------- | ------------------ | ----------------------- |
@@ -281,16 +336,20 @@ int main()
 | Header file | `<map>`  | `<map>`       | `<unordered_map>`  | `unordered_map`         |
 
 <br>
+<br>
+<br>
 
-### Implementation Details
+## Implementation Details
 
 |                | std::map       | std::mulitmap  | std::unordered_map | std::unordered_multimap |
 | -------------- | -------------- | -------------- | ------------------ | ----------------------- |
 | Implementation | Red Black Tree | Red Black Tree | Hash Table         | Hash Table              |
 
 <br>
+<br>
+<br>
 
-### Time Complexities
+## Time Complexities
 
 |           | std::map   | std::mulitmap | std::unordered_map  | std::unordered_multimap |
 | --------- | ---------- | ------------- | ------------------- | ----------------------- |
@@ -301,8 +360,10 @@ int main()
 - For the unordered variants the time complexity is $\theta(1)$ i.e. average case and $O(n)$ i.e. worst case, when the exisiting hash is generated (rare).
 
 <br>
+<br>
+<br>
 
-### Space Complexities
+## Space Complexities
 
 |     | std::map | std::mulitmap | std::unordered_map | std::unordered_multimap |
 | --- | -------- | ------------- | ------------------ | ----------------------- |
