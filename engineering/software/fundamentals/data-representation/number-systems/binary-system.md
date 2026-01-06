@@ -37,8 +37,6 @@ Unsigned binary numbers represent only non-negative values (zero and positive in
 <br/>
 <br/>
 
-//TODO - Add examples for the following so that the concept can be understood
-
 ### Signed binary numbers
 
 Signed binary numbers can represent both positive and negative values by using a sign bit.
@@ -55,15 +53,30 @@ There are several methods to represent signed numbers:
 
 #### One’s Complement
 
-Negative numbers are bitwise inverted; still has two zeros.
+Negative numbers are bitwise inverted.
+
+- Has two representation for zeros.
 
 <br>
 
 #### Two’s Complement
 
-Negative numbers are represented by inverting bits and adding one; only one zero representation.
+Negative numbers are represented by inverting bits and adding one.
 
+- Only one representation for 0.
 - This is most commonly used to represent signed binary numbers.
+
+- Illustration of conversion of negative integer from decimal to binary system. To get the binary representation for a negative decimal integer: Preform one's compliment by inverting all the bits and then add 1.
+
+  ![image](../number-systems/_assets/decimal-to-binary.jpg)
+
+- Illustration of conversion of negative integer form binary representation to decimal system. To get the decimal representation of a negative integer in binary form : Check that the MSB is 1, perform one's compliment by inverting all the bits and then add 1 to get the magnitude and then include the negative sign.
+
+  ![image](../number-systems/_assets/binary-to-decimal.jpg)
+
+<br>
+
+- Note that two's compliment is it's own reversal. That is to perform reverse of two's compliment, we can simply do two's compliment itself!
 
 <br>
 <br>
