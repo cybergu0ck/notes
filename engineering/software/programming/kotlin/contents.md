@@ -83,3 +83,6 @@
   - [Super Class](oops/inheritance.md#super-class)
   - [Visibility Modifiers](oops/class.md#visibility-modifiers)
   - [Abstract Class](oops/inheritance.md#abstract-class)
+- [Polymorphism](oops/polymorphism.md)
+  - [Function overloading](oops/polymorphism.md#function-overloading)
+  - [Constructors](oops/polymorphism.md#constructors)
