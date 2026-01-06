@@ -1,11 +1,79 @@
-# Maps
-
 stl maps are associative containers that store key value pairs.
 
 <br>
 <br>
+<br>
+<br>
 
-## Types
+# Criteria for key
+
+<br>
+<br>
+<br>
+
+## Criteria for a key in map
+
+1. Must support `<` operator.
+
+   - The comparison must define a strict weak ordering, meaning:
+
+     1. Irreflexivity: a < a must be false
+     1. Asymmetry: If a < b is true, then b < a must be false
+     1. Transitivity: If a < b and b < c, then a < c must be true
+     1. Equivalence transitivity: If a is equivalent to b (neither a < b nor b < a) and b is equivalent to c, then a must be equivalent to c
+
+1. Must be copyable.
+
+   The key type needs a copy constructor since std::map stores copies of keys.
+
+<br>
+
+- std::map uses `std::less<Key>` and implemented using red black trees.
+- Commonly encountered key types :
+  - Fundamental types (int, double, char etc)
+  - pointers
+  - std::shared_ptr<T>, std::unique_ptr<T>
+  - std::string
+  - std::vector<T>
+  - std::array<T, N>
+  - std::deque<T>
+  - std::list<T>
+  - std::set<T>
+  - std::pair<T1, T2>
+  - std::tuple<T...>
+
+<br>
+<br>
+<br>
+
+## Criteria for a key in unordered map
+
+1. Must be hashable.
+
+   - Meaning the key type needs a hash function.
+
+2. Must support equality comparision.
+
+   - Meaning the `==` operator.
+
+3. Must be copyable.
+
+<br>
+
+- `std::unordered_map` uses `std::hash<Key>` and `std::equal_to<Key>` and implemented using hash table.
+
+- Commonly encountered key types :
+  - Fundamental types (int, double, char etc)
+  - pointers
+  - std::shared_ptr<T>, std::unique_ptr<T>
+  - std::string
+
+<br>
+<br>
+<br>
+<br>
+
+# Types
 
 1. **map** : an stl map is an associative container that stores key-value pairs with unique keys in a _sorted order by key._
 2. **multi map** : a multimap is an associative container that stores key-value pairs, allowing multiple values to be associated with the same key (i.e., duplicate keys), in a _sorted order by key._
@@ -22,8 +90,9 @@ stl maps are associative containers that store key value pairs.
 | Implementation | Red Black Tree | Red Black Tree | Hash Table         | Hash Table              |
 
 <br>
+<br>
 
-### Time complexities
+## Time complexities
 
 |           | std::map   | std::mulitmap | std::unordered_map  | std::unordered_multimap |
 | --------- | ---------- | ------------- | ------------------- | ----------------------- |
@@ -34,8 +103,9 @@ stl maps are associative containers that store key value pairs.
 - For the unordered variants the time complexity is $\theta(1)$ i.e. average case and $O(n)$ i.e. worst case (when the exisiting hash is generated, rare).
 
 <br>
+<br>
 
-### Space Complexities
+## Space Complexities
 
 |     | std::map | std::mulitmap | std::unordered_map | std::unordered_multimap |
 | --- | -------- | ------------- | ------------------ | ----------------------- |
@@ -43,17 +113,23 @@ stl maps are associative containers that store key value pairs.
 
 <br>
 <br>
-
-## Initialisation
-
 <br>
 <br>
 
-## Methods
+# Initialisation
 
 <br>
+<br>
+<br>
+<br>
 
-### Access
+# Methods
+
+<br>
+<br>
+<br>
+
+## Access
 
 1. `T operator[](size_t pos)`
 
@@ -104,10 +180,10 @@ stl maps are associative containers that store key value pairs.
      ```
 
 <br>
-
+<br>
 <br>
 
-### Search
+## Search
 
 - searching an key in a map is done with `find` method.
 
@@ -127,14 +203,18 @@ stl maps are associative containers that store key value pairs.
   ```
 
 <br>
+<br>
+<br>
 
-### Insertion
+## Insertion
 
 - if a non exisiting key is used in the operator, it will create a new key in the map with either the given value or a default constructed one.
 
 <br>
+<br>
+<br>
 
-### Deletion
+## Deletion
 
 1. `iterator erase(const_iterator pos);`
 
@@ -155,12 +235,9 @@ int main()
 
 <br>
 <br>
-
-### Modification
-
 <br>
 
-#### Sorting
+## Sorting
 
 - maps, ordered variants are already sorted!
 
@@ -236,8 +313,10 @@ int main()
   - the operator() should be const because it shouldn't modify the comparator object itself during the comparison.
 
 <br>
+<br>
+<br>
 
-### Miscallaneous
+## Get the size
 
 1.  `size_t size()`
 
@@ -245,12 +324,20 @@ int main()
     - has $O(1)$ time complexity.
 
 <br>
+<br>
+<br>
+
+## Check emptyness
 
 1. `bool empty()`
 
    - returns true or 1 if vector is empty else returns false or 0.
 
 <br>
+<br>
+<br>
+
+## Check equality
 
 1. `bool operator==(map T);`
 
@@ -285,6 +372,10 @@ int main()
      ```
 
 <br>
+<br>
+<br>
+
+## Get the count of keys
 
 1. `size_t count(const T& key)`
 
