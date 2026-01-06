@@ -30,6 +30,74 @@ int main()
 <br>
 <br>
 
+# Criteria for key
+
+<br>
+<br>
+<br>
+
+## Criteria for a key in map
+
+1. Must support `<` operator.
+
+   - The comparison must define a strict weak ordering, meaning:
+
+     1. Irreflexivity: a < a must be false
+     1. Asymmetry: If a < b is true, then b < a must be false
+     1. Transitivity: If a < b and b < c, then a < c must be true
+     1. Equivalence transitivity: If a is equivalent to b (neither a < b nor b < a) and b is equivalent to c, then a must be equivalent to c
+
+1. Must be copyable.
+
+   The key type needs a copy constructor since std::map stores copies of keys.
+
+<br>
+
+- std::map uses `std::less<Key>` and implemented using red black trees.
+- Commonly encountered key types :
+  - Fundamental types (int, double, char etc)
+  - pointers
+  - std::shared_ptr<T>, std::unique_ptr<T>
+  - std::string
+  - std::vector<T>
+  - std::array<T, N>
+  - std::deque<T>
+  - std::list<T>
+  - std::set<T>
+  - std::pair<T1, T2>
+  - std::tuple<T...>
+
+<br>
+<br>
+<br>
+
+## Criteria for a key in unordered map
+
+1. Must be hashable.
+
+   - Meaning the key type needs a hash function.
+
+2. Must support equality comparision.
+
+   - Meaning the `==` operator.
+
+3. Must be copyable.
+
+<br>
+
+- `std::unordered_map` uses `std::hash<Key>` and `std::equal_to<Key>` and implemented using hash table.
+
+- Commonly encountered key types :
+  - Fundamental types (int, double, char etc)
+  - pointers
+  - std::shared_ptr<T>, std::unique_ptr<T>
+  - std::string
+
+<br>
+<br>
+<br>
+<br>
+
 # Methods
 
 <br>
