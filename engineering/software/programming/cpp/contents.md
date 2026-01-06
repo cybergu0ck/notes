@@ -504,6 +504,9 @@
 
 ## [Maps](stl/containers/maps.md#maps)
 
+- [Criteria for key](stl/containers/maps.md#criteria-for-key)
+  - [Criteria for key in map](stl/containers/maps.md#criteria-for-key-in-map)
+  - [Criteria for key in unordered map](stl/containers/maps.md#criteria-for-key-in-unordered-map)
 - [Types](stl/containers/maps.md#types)
   - [Time complexities](stl/containers/maps.md#time-complexities)
   - [Space Complexities](stl/containers/maps.md#space-complexities)
@@ -927,6 +930,7 @@
 - [STL Map](depricate/old_container_notes/03-stl-map.md#stl-map)
 
   - [Initialisation](depricate/old_container_notes/03-stl-map.md#initialisation)
+  - [Criteria for key]()
   - [Methods](depricate/old_container_notes/03-stl-map.md#methods)
     - [Adding Elements](depricate/old_container_notes/03-stl-map.md#adding-elements)
     - [Accessing Elements](depricate/old_container_notes/03-stl-map.md#accessing-elements)
