@@ -6,7 +6,9 @@
 
 ## Headings
 
-- The topic name should be the name of the file and should not be used again as `#` Heading.
+- The name of the topic should be the `#` heading.
+
+  - At one point, file names represented the topic and `#` started with sub topics. This is not good if markdown is converted to pdf as filename won't be in the body of the pdf.
 
 - The addition of `#` and the `<br>` should be 5.
   - A single `#` heading should be preceeded by four `<br>`.
