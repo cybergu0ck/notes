@@ -1,11 +1,11 @@
 # Encapsulation
 
-_**Encapsulation** is a method of wrapping up the data and code acting on the data into a single unit._
+Encapsulation is a method of wrapping up the data and code acting on the data into a single unit.
 
 <br>
 <br>
 
-## C Structs
+## C structs
 
 _A **struct** in C is a user-defined data type that facilitates grouping of related vairables of different types as a single entity._
 
@@ -58,13 +58,9 @@ int main() {
 <br>
 <br>
 
-## C++ Structs
+## C++ structs
 
 _A **struct** in C++ is a user-defined data type that facilitates grouping of related functions along with the related vairables of different types as a single entity._
-
-- C++ structs are called as extended structs.
-- C++ provides Encapsulation through extended structs.
-- C++ follows a **data centric approach** and lays more emphasis on data and cares less for functions.
 
 ```cpp
 #include <iostream>
@@ -81,24 +77,33 @@ private:  //supports access specifier, it is "public" by default
 };
 ```
 
+- C++ structs are called as extended structs.
+- C++ provides Encapsulation through extended structs.
+- C++ follows a **data centric approach** and lays more emphasis on data and cares less for functions.
+
+
+
 <br>
 <br>
+<br>
 
-### Acess Modifiers
+## Acess modifiers
 
-- C++ provides three kinds of access modifiers:
+C++ provides three kinds of access modifiers:
 
-    <ol type="1">
-        <li>public : accessible anywhere</li>
-        <li>private : accessible only by members or friends of the class.</li>
-        <li>protected : accessible by members of the class and members of derived class and friends of the class.(not accesible by objects of base and derived classes!)</li>
-    </ol>
+1. public : accessible anywhere
+1. private : accessible only by members or friends of the class.
+1. protected : accessible by members of the class and members of derived class and friends of the class.(not accesible by objects of base and derived classes!)
+
+
 
 - The member methods in the class declaration always has access to to the member attributes!
 
 <br>
+<br>
+<br>
 
-### Differences between C structs and C++ structs
+## Differences between C structs and C++ structs
 
 | C struct                                                                                                           | C++ struct                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -106,6 +111,7 @@ private:  //supports access specifier, it is "public" by default
 | No variable of the struct plan can be qualified with an extended qualifier like 'const', 'static', 'volatile' etc. | Any member can be qualified with the extended qualifiers, like 'const', 'static' & 'volatile' if need be.                    |
 | Does not provide support for access-specifiers, by default all members are 'public'.                               | Provides support for 3 different access-specifiers, like private, public and protected. By default, all members are 'public' |
 
+<br>
 <br>
 <br>
 
@@ -133,7 +139,7 @@ class Employee
 <br>
 <br>
 
-## C++ Object Model
+### C++ Object Model
 
 According to the C++ Object Model (Bjarne model), when an object is created,
 
@@ -174,7 +180,7 @@ According to the C++ Object Model (Bjarne model), when an object is created,
 <br>
 <br>
 
-## This Pointer
+## This pointer
 
 _`this` is the implicit parameter used by member functions to access the object on which they were called._
 
@@ -252,9 +258,14 @@ int main()
 <br>
 <br>
 
-## Const Member Functions
+## Member methods
 
-Member functions that use `const` are called const member functions.
+<br>
+<br>
+
+### Const member methods
+
+Member methods that use `const` are called const member methods.
 
 - `const` modifies the type of the implicit [this](#this-pointer) pointer. A `const` following the parameter list indicates that `this` is a pointer to const.s
 
@@ -296,7 +307,7 @@ Member functions that use `const` are called const member functions.
 <br>
 <br>
 
-## Member Functions Returning This Object
+### Member Functions Returning This Object
 
 ```cpp
 #include <iostream>
@@ -325,6 +336,307 @@ int main()
 //100
 ```
 
+
+<br>
+<br>
+<br>
+
+
+## Constructors
+
+**_Constructor is a special member function of a class that is invoked automatically whenever an object is created._**
+
+- It must have the same name as the class.
+- It does not have any return type associated.
+
+  ```cpp
+  #include <iostream>
+
+  class MyClass
+  {
+  private:
+      int a;
+
+  public:
+      MyClass();	//constructor declaration
+  };
+
+  MyClass::MyClass()
+  {
+      std::cout << "constructor is called" << std::endl;
+  }
+
+  int main()
+  {
+      MyClass obj;	//object created on stack
+      MyClass* obj_ptr = new MyClass; //object created on heap
+  }
+
+  //constructor is called
+  //constructor is called
+  ```
+
+  - The data members of the above class are not initialised here, we should always initialise the data members.
+
+<br>
+
+Some important points about constructors:
+
+- Constructors donot create objects for that class nor initialises class members, the programmer has to initialise them.
+- However they are mostly used for initialisating data members but can perform anything the programmer desires.
+- Constructors can be overloaded.
+
+<br>
+<br>
+
+### Overloaded Constructors
+
+Checkout [notes on cpp polymorphsim](../oops/02-cpp-polymorphism.md#overloaded-constructors).
+
+<br>
+<br>
+
+### Compiler Synthesised Constructors
+
+The compiler generates a default constructor by itself only if a class declares no constructors.
+
+```cpp
+#include <iostream>
+
+class MyClass {
+public:
+    int member;
+
+    //no constructors are declared. Hence the compiler will synthesize a default constructor.
+};
+
+int main() {
+    MyClass object;
+    std::cout << object.member; //will have garbage value
+}
+
+//4200987
+```
+
+```cpp
+#include <iostream>
+
+class MyClass {
+public:
+    int member;
+    MyClass(int num):member{num}{};
+
+    //default constructor is not declared but one-arg constructor declared.
+};
+
+int main() {
+    MyClass object;
+    std::cout << object.member;
+}
+
+//Compiler Error: no default constructor exists for class "MyClass"
+```
+
+<br>
+<br>
+
+#### Initialisation of Class Data Members
+
+```cpp
+#include <iostream>
+
+class MyClass
+{
+public:
+    int num;
+    int *num_ptr;
+
+public:
+    MyClass();	            //default constructor, also known as the no-arg constructor
+};
+
+MyClass::MyClass()
+{
+    std::cout << "default constructor is called" << std::endl;
+
+    num = 0;                //This is not initialisation but assignment
+    num_ptr = new int(0);   //This is not initialisation but assignment
+}
+
+int main()
+{
+    MyClass obj1;
+
+    std::cout << obj1.num << '\n';
+}
+
+//default constructor is called
+//0
+```
+
+- In the above code, we are actually _assigning the values to the data members inside the constructor and not technically initialising._ When a MyClass object is created, it invokes the constructor. In the prolog phase of the constructor, the data members (whose size in known as type is known to the compiler) initialises them with garbage values. Then in the business logic of the constructor, they are assigned the given values.
+
+<br>
+
+##### In-class Initialisation
+
+```cpp
+class MyClass {
+public:
+	int num{10};
+};
+```
+
+<br>
+
+##### Constructor Initialiser List
+
+//TODO - Link the initialisation notes and prolog notes here
+
+- We can initialise the data members using constructor initialiser list, this will initialise the data members in the prolog phase itself. (check out the meaning of initialise in 01-introduction.md).
+- The order in which the parameters are initilaised is the order in which they are written in the class and not the paramter initialisation list in the constructor definition.
+
+  ```cpp
+  #include <iostream>
+
+  class MyClass
+  {
+  public:
+      int num;
+      int *num_ptr;
+
+  public:
+      MyClass();	            //default constructor, also known as the no-arg constructor
+  };
+
+  MyClass::MyClass():num{0}, num_ptr{new int(0)}
+  {
+      std::cout << "default constructor is called" << std::endl;
+  }
+
+  int main()
+  {
+      MyClass obj1;
+      std::cout << obj1.num << '\n';
+  }
+
+  //default constructor is called
+  //0
+  ```
+
+<br>
+<br>
+
+### Delegated Constructors
+
+- Delegated constructors in C++ are a feature introduced in C++11 that allow a constructor to call another constructor of the same class.
+- Instead of initialising the data attributes in every constructor, we can use the constructor that has most args as delegated constructor.
+- This can be useful for reducing code duplication and improving readability but at the cost of performance.
+- _Delegated constructors should not be preffered as it introduces additional function calls_, hence affecting performace.
+
+  ```cpp
+  #include <iostream>
+
+  class MyClass {
+  private:
+      int num;
+      int* num_ptr;
+  public:
+      MyClass();				//default constructor
+      MyClass(int);			//1 arg constructor
+      MyClass(int, int);	    //2 arg constructor
+  };
+
+  MyClass::MyClass(int x, int y) : num{ x }, num_ptr{ new int(y)}{
+      //This overloaded 2 arg constructor will be used for delegated constructors
+      std::cout << "The overloaded 2 arg constructor called and the value of num = " << num << std::endl;
+  }
+
+  MyClass::MyClass(int x) : MyClass(x, 0) {
+      //Initialising num with x and num_ptr to point to an int with value 0 in the prolog phase of this function.
+      std::cout << "The overloaded 1 arg constructor is called and the value of num = " << num << std::endl;
+  }
+
+  MyClass::MyClass() : MyClass(0, 0) {
+      //Initialising num with 0 and num_ptr to point to an int with value 0 in the prolog phase of this function.
+      std::cout << "default constructor called." << std::endl;
+  }
+
+  int main() {
+      MyClass obj1{};
+      MyClass obj2{ 1 };
+      MyClass obj3{ 10,10 };
+  }
+
+  //The overloaded 2 arg constructor called and the value of num = 0
+  //default constructor called.
+  //The overloaded 2 arg constructor called and the value of num = 1
+  //The overloaded 1 arg constructor is called and the value of num = 1
+  //The overloaded 2 arg constructor called and the value of num = 10
+  ```
+
+  - In the above code, note that the delagted constructor is called first (in prolog phase itself) before the actual constructor is called.
+
+<br>
+<br>
+
+### Explicit Constructor
+
+- A constructor that is tagged with `explicit` keyword is an explicit constructor, as such it is used to prevent implicit conversions during object construction.
+
+* Illustration to understand implicit conversion. In the following code when x is assigned to obj, the one arg constructor of MyClass assists the compiler for implicitley conversion (we can see it being called in the debugger) and the data attribute is now set to the value of x i.e. 10.
+
+  ```cpp
+  #include <iostream>
+
+  class MyClass
+  {
+  private:
+      int a;
+
+  public:
+      MyClass(int = 1);
+  };
+
+  MyClass::MyClass(int x): a{x}
+  {}
+
+  int main()
+  {
+      int x{ 10 };
+      MyClass obj;
+      obj = x;        //compiler allows this as an implicit conversion is made
+  }
+  ```
+
+> one arg constructors are generally called as conversion constructors as they facilitate implicit conversion. <br> <br>
+
+- We can use `explicit` to avoid this
+
+  ```cpp
+  #include <iostream>
+
+  class MyClass
+  {
+  private:
+      int a;
+
+  public:
+      explicit MyClass(int = 1);
+  };
+
+  MyClass::MyClass(int x): a{x}
+  {}
+
+  int main()
+  {
+      int x{ 10 };
+      MyClass obj;
+      obj = x;        //compiler raises error
+  }
+  ```
+
+<br>
 <br>
 <br>
 
@@ -385,6 +697,7 @@ _`mutable` keyword is used to modify the behavior of a non-static data member of
 
 - The above problem can be solved by making the x,y attributes as `mutable` like `mutable int x,y;` in the class declaration
 
+<br>
 <br>
 <br>
 

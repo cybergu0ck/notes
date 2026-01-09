@@ -4,199 +4,138 @@ Polymorphism is the ability to use the same code to operate on different types o
 
 <br>
 <br>
+<br>
 
-# Types of Polymorphism in C++
+## Types of Polymorphism in C++
 
 - C++ supports two types of polymorphism.
   1. Compile Type / Early Binding / Static Binding
   2. Run Time / Late Binding / Dynamic Binding
 
+
+
+<br>
 <br>
 <br>
 
-# Compile Time Polymorphism
+## Compile Time Polymorphism
+
+
+Compile-time polymorphism is the ability of a program to use a single name (interface) to represent multiple behaviors, where the exact (implementation) is resolved by the compiler at compile time.
 
 - Compile time polymorphism occurs before the program is run i.e. during the compilation.
-- This is the default case in C++.
-- Function overloading and operator overloading are examples.
 - Compile time polymorphism is also called as early binding or static binding.
+- Few forms of compile time polymorphism are 
+
+    1. Function overloading
+    1. Operator overlaoding
+    1. Templates (parametric polymorphism)
+
+
+### Function overloading
 
 <br>
 <br>
 
-# Naming Convention
+### Overloaded constructors
 
-## C++ Naming Convention
+```cpp
+#include <iostream>
 
-- This is the default naming convention in C++. Here the function names are subjected to name mangling (and are decorated) done by the compiler.
+class MyClass
+{
+private:
+    int num;
+    int *num_ptr;
 
-* We can see this either:
+public:
+    MyClass();	            //default constructor, also known as the no-arg constructor
+    MyClass(int);	        //overloaded one-arg constructor
+    MyClass(int, int);      //overloaded two-arg constructor
+};
 
-  - By generating the assembly files (.asm) [This is for Visual Studio Environment and not for G++ compiler based environments!]
+MyClass::MyClass()
+{
+    std::cout << "default constructor is called" << std::endl;
+}
 
-    - Project Properties > Configuration Properties > C/C++ > Output Files > Set Assembler Output : (/FA)
-    - After compiling, open the asm file that is generated in the VS project folder (x64 > Debug > filename.asm)
-    - use Search (Ctrl + F) and search as follows `Line <line number where function is called>`
+MyClass::MyClass(int x)
+{
+    std::cout << "overloaded one arg constructor is called" << std::endl;
+}
 
-    ```asm
-    ; Line 21
-      call	?fun@@YAXXZ				; fun
-    ```
+MyClass::MyClass(int x, int y)
+{
+    std::cout << "overloaded two arg constructor is called" << std::endl;
+}
 
-  - using `__FUNCDNAME__` and printing it to the console.
-    ```cpp
-    void fun()    //under the hood: extern "C++" void __cdecl fun()
-    {
-      cout << __FUNCDNAME__ << endl;    //?fun@@YAXXZ is printed when fun is called.
-    }
-    ```
+int main()
+{
+    MyClass obj1;				//  obj1.MyClass::MyClass(&obj1);
+    MyClass obj2{ 100 };		//  obj1.MyClass::MyClass(&obj1, 100);
+    MyClass obj3{ 100,1 };	    //  obj1.MyClass::MyClass(&obj1, 100, 1);
 
-<br>
+}
 
-- This is how, C++ supports polymorphic functions! Even though in our text files (.h and .cpp) we see overloaded functions having the same name, This is not true under the hood. C++ compiler will mangle the names and each overloaded function will have unique name.
+//default constructor is called
+//overloaded one arg constructor is called
+//overloaded two arg constructor is called
+```
 
-* Here we see overloaded functions (has same name but different parameters)
-
-  ```cpp
-  #include <iostream>
-
-  void fun()
-  {
-    std::cout << "first fun" << std::endl;
-  }
-
-  void fun(char c)
-  {
-    std::cout << "overloaded fun" << std::endl;
-  }
-
-  int main()
-  {
-    fun();		//this is line 16
-    fun('x');	//this is line 17
-  }
-  ```
-
-* Compiling and search the line numbers in the asm files we ca see the the unique decorated names.
-
-  ```asm
-  ; Line 15
-    call	?fun@@YAXXZ				; fun
-  ; Line 16
-    mov	cl, 120					; 00000078H
-    call	?fun@@YAXD@Z				; fun
-  ```
 
 <br>
 <br>
+<br>
 
-## Raw names and understanding decorated names
+
+## Polymorphic internals
 
 <br>
 
-- In order to decorate the compiler uses 'raw-names'.
+### Virtual method table
 
-* `typeid(char).raw_name()` is the syntax to cout raw name of char data type.
+The "vtable" is a static lookup table created by the compiler for every class that contains at least one [virtual function](../oops/05-cpp-inheritence.md#virtual-functions).
 
-* The raw names for the primitive data types are as follows:
-
-  | primitive name         | raw name |
-  | ---------------------- | -------- |
-  | raw name for char is   | .D       |
-  | raw name for int is    | .H       |
-  | raw name for float is  | .M       |
-  | raw name for double is | .N       |
-  | raw name for bool is   | .\_N     |
-  | raw name for void is   | .X       |
-
-- Undersanding the decorated global functions (like: ?fun@@YAXXZ)
-
-  | syntax | meaning                                                                                           |
-  | ------ | ------------------------------------------------------------------------------------------------- |
-  | ?fun   | starts with a standard '?' followed by the original function name                                 |
-  | @@     | stringizing operator, that clubs 2 strings [ the original name and the compiler generated string] |
-  | Y      | starts with 'Y' for all global functions                                                          |
-  | A      | calling convention indicator, 'A' indicates it is using the default calling convention            |
-  | X      | return-type indicator, returns 'void'                                                             |
-  | X      | input(s) indicator, input is 'void'                                                               |
-  | Z      | ends with 'Z' for all functions                                                                   |
-
-<br>
-
-- All member functions of a class follow **only** _C++ naming convention_. We use naming conventions (extern "C") to provide backward compatibility foe C users. classes (specifically member functions of the classes) makes no sense for C users and hence the reason.
-
-* Undersanding the decorated member functions (like: ?input@CA)
-
-  | syntax    | meaning                                                                                         |
-  | --------- | ----------------------------------------------------------------------------------------------- |
-  | ?input@CA | 'input' is a member function of class CA                                                        |
-  | Q         | Indicates the access-specifier [Q means public], whether 'public' (or) 'private' (or) protected |
-  | A         | Indicates whether the method is a const method or non-const method ['A' means non-const method] |
-  | E         | Indicates the calling convention employed [E means it is using the def. calling convention]     |
-  | X         | return type is void                                                                             |
-  | X         | input to the function is also void                                                              |
-  | Z         | Z is the de-limiting character.                                                                 |
+* It contains the memory addresses of the virtual functions for that specific class.
+* There is only one vtable per class, regardless of how many objects of that class you create.
+* If a class has no virtual functions, the compiler doesn't create a vtable.
 
 <br>
 <br>
 
-## C Naming Convention
+### Virtual pointer
 
-- There is no such name mangling in C (hence no support for polymorphic functions)
-- Hence if C++ developper need to support C users, they have to mitigate the name mangling done by the compiler (else the names would look right in text files h and cpp but under the hood they are decorated and when the C user calls the functions, it is not found in the binary!)
-- This is done by using C naming convention
+The "vptr" is a hidden pointer added to every instance of a class that has a [vtable](#virtual-method-table).
 
-* Here, we can see that the function names are not decorated
+* It points to the [vtable](#virtual-method-table) of the class that created the object.
+* Every polymorphic class has it's own "vptr".
 
-  ```cpp
-  #include <iostream>
-
-  extern "C" void fun()
-  {
-    std::cout << __FUNCDNAME__ << std::endl; //fun
-  }
-
-
-  int main()
-  {
-    fun();
-  }
-  ```
-
-<br>
-
-> <br> C++ naming convention facilitates decoration, thereby supports function overloading (and polymorphism).
-> C naming convention does not facilitate decoration, thereby does not support function overloading (and polymorphism) <br> <br>
-
-<br>
-
-- Some nuances are listed here
-
-  ```cpp
-  //OK, can overload
-  void fun();            // ===> extern "C++" void fun();      ===>  _Z3funv (g++),  ?fun@@YAXXZ
-  void fun(int x);       // ===> extern "C++" void fun(int x); ===>  _Z3funi,  ?fun@@YAXH@Z
-
-  //CANNOT OVERLOAD, AMBIGUITY ERROR
-  extern "C" void fun();      // ===>  fun
-  extern "C" void fun(int x); // ===>  fun
-
-  //OK, CAN BE OVERLOADED
-  extern "C" void fun();        // ===>  fun
-  extern "C++" void fun(int x); // ===>  _Z3funi,  ?fun@@YAXH@Z
-
-  extern "C" void fun();    //  ===>  fun
-  extern "C++" void fun();  // ===>  _Z3funV, ?fun@@YAXXZ
-
-  //CALL STATEMENT, leads to ambiguity error
-  fun();  //will lead to ambiguity error, compiler has too many options, does not know which function to bind to.
-  ```
-
-* As a library developper we can group all the functions in both h and cpp files and make them extern "C" (check syntax online if needed)
 
 <br>
 <br>
 
-## Run Time Polymorphism
+### RTTI
 
-Run time polymorphism is closely tied to [inheritance](./08-cpp-inheritence.md).
+RTTI is a language mechanism that provides information about an object's data type at runtime.
+
+* This is necessary because, in a [polymorphic class]() hierarchy, a pointer of type `Base*` might point to an object of type `Derived1`, `Derived2`, or even a further subclass. Without RTTI, the program would only see the "interface" (the Base) and not the "identity" (the Derived).
+* RTTI stands for Run-Time Type Information.
+* In most compilers, a pointer to a Type Information Object (`std::type_info`) is stored inside the vtable (usually at the very beginning).
+
+<br>
+
+#### Criteria for RTTI
+
+RTTI is not available for all data types. The criteria for RTTI :
+
+1. Polymorphic classes only: The class must contain at least one virtual function. This forces the compiler to generate a [vtable](#virtual-method-table), which acts as the storage header for RTTI data.
+1. Compiler support : Compiler must support it. Optionally it also can be turned off using `-fno-rtti` flag to save memory and performance.
+
+<br>
+
+#### Core operators for RTTI
+
+RTTI is accessed through two primary C++ operators:
+
+1. `dynamic_cast<T>` : Check the working of [dynamic cast](../data-types/casting.md#dynamic-casting).
+1. `typeid` : Used to retrieve the actual type of an object. It returns a reference to a constant `std::type_info object`.

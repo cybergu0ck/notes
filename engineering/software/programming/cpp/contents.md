@@ -144,6 +144,17 @@
 <br>
 <br>
 <br>
+
+## [Name mangling](fundamentals/name-mangling.md#name-mangling)
+- [C++ naming convention](fundamentals/name-mangling.md#cpp-naming-convention)
+- [Raw names and decorated names](fundamentals/name-mangling.md#raw-names-and-decorated-names)
+- [C naming convention](fundamentals/name-mangling.md#c-naming-convention)
+- [Nauances naming convention](fundamentals/name-mangling.md#nuances-with-naming-conventions)
+
+
+<br>
+<br>
+<br>
 <br>
 
 # Data types
@@ -151,6 +162,19 @@
 - [Characters](data-types/characters.md#characters)
 
   - [Character encoding](data-types/characters.md#character-encoding)
+
+- [Casting](data-types/casting.md)
+
+  - [Type conversions (Coersions)](data-types/casting.md)
+  - [Explicit casting](data-types/casting.md)
+    - [static_cast](data-types/casting.md)
+    - [dynamic_cast](data-types/casting.md)
+    - [reinterpret_cast](data-types/casting.md)
+    - [const_cast](data-types/casting.md)
+
+
+
+
 
 <br>
 <br>
@@ -313,15 +337,8 @@
 ## [Polymorphism](oops/02-cpp-polymorphism.md#polymorphism)
 
 - [Types of Polymorphism in C++](oops/02-cpp-polymorphism.md#types-of-polymorphism-in-c)
-
 - [Compile Time Polymorphism](oops/02-cpp-polymorphism.md#compile-time-polymorphism)
-
-- [Naming Convention](oops/02-cpp-polymorphism.md#naming-convention)
-
-  - [C++ Naming Convention](oops/02-cpp-polymorphism.md#c-naming-convention)
-  - [Raw names and understanding decorated names](oops/02-cpp-polymorphism.md#raw-names-and-understanding-decorated-names)
-  - [C Naming Convention](oops/02-cpp-polymorphism.md#c-naming-convention)
-  - [Run Time Polymorphism](oops/02-cpp-polymorphism.md#run-time-polymorphism)
+- [Polymorphic internals](oops/02-cpp-polymorphism.md#polymorphic-internals)
 
 <br>
 <br>
@@ -330,7 +347,6 @@
 ## [Special functions](oops/special-functions.md#special-functions)
 
 - [Constructors](oops/special-functions.md#constructors)
-
   - [Overloaded Constructors](oops/special-functions.md#overloaded-constructors)
   - [Compiler Synthesised Constructors](oops/special-functions.md#compiler-synthesised-constructors)
     - [Initialisation of Class Data Members](oops/special-functions.md#initialisation-of-class-data-members)
@@ -338,14 +354,10 @@
       - [Constructor Initialiser List](oops/special-functions.md#constructor-initialiser-list)
   - [Delegated Constructors](oops/special-functions.md#delegated-constructors)
   - [Explicit Constructor](oops/special-functions.md#explicit-constructor)
-
 - [Destructor](oops/special-functions.md#destructor)
-
 - [Copy Constructors](oops/special-functions.md#copy-constructors)
-
   - [Shallow Copy Constructor](oops/special-functions.md#shallow-copy-constructor)
   - [Deep Copy Constructor](oops/special-functions.md#deep-copy-constructor)
-
 - [Move Constructors](oops/special-functions.md#move-constructors)
 
 <br>
@@ -355,16 +367,12 @@
 ## [Operator Overloading](oops/04-operator-overloading.md#operator-overloading)
 
 - [Assignment Operator Overloading](oops/04-operator-overloading.md#assignment-operator-overloading)
-
   - [Copy Assignment Operator](oops/04-operator-overloading.md#copy-assignment-operator)
     - [Strong Exception Guarantee](oops/04-operator-overloading.md#strong-exception-guarantee)
     - [Copy and Swap Idiom](oops/04-operator-overloading.md#copy-and-swap-idiom)
   - [Move Assignment Operator](oops/04-operator-overloading.md#move-assignment-operator)
-
 - [Stream Operator Overloading](oops/04-operator-overloading.md#stream-operator-overloading)
-
 - [Unary Operator Overloading //REVIEW - Needs Review](oops/04-operator-overloading.md#unary-operator-overloading-review---needs-review)
-
 - [Arrow Assignment Overloading //REVIEW - Needs Review](oops/04-operator-overloading.md#arrow-assignment-overloading-review---needs-review)
 
 <br>
@@ -398,29 +406,19 @@
 - [Copy Control in Inheritance](oops/05-cpp-inheritence.md#copy-control-in-inheritance)
 - [Multiple Inheritance](oops/05-cpp-inheritence.md#multiple-inheritance)
 - [Virtual Inheritance](oops/05-cpp-inheritence.md#virtual-inheritance)
-
 - [Miscallaneous](oops/05-cpp-inheritence.md#miscallaneous)
-
   - [Override specifier](oops/05-cpp-inheritence.md#override-specifier)
   - [Constructors in the context of Inheritance](oops/05-cpp-inheritence.md#constructors-in-the-context-of-inheritance)
   - [Base Class](oops/05-cpp-inheritence.md#base-class)
-
 - [Constructors and Destructors in the context of Inheritence](oops/05-cpp-inheritence.md#constructors-and-destructors-in-the-context-of-inheritence)
-
 - [Illustration for concept clarity](oops/05-cpp-inheritence.md#illustration-for-concept-clarity)
-
   - [Invoking Overloaded Base Class Constructors](oops/05-cpp-inheritence.md#invoking-overloaded-base-class-constructors)
-
 - [Compiler generating constructors](oops/05-cpp-inheritence.md#compiler-generating-constructors)
-
   - [In the context of Inheritance](oops/05-cpp-inheritence.md#in-the-context-of-inheritance)
   - [In the context of containment](oops/05-cpp-inheritence.md#in-the-context-of-containment)
   - [In the context of Hybrid Inheritance](oops/05-cpp-inheritence.md#in-the-context-of-hybrid-inheritance)
-
 - [Copy/Move constructors and overloaded assignment operator in context of inheritance](oops/05-cpp-inheritence.md#copymove-constructors-and-overloaded-assignment-operator-in-context-of-inheritance)
-
 - [Redefining Base Class Methods](oops/05-cpp-inheritence.md#redefining-base-class-methods)
-
   - [Virtual Destructors](oops/05-cpp-inheritence.md#virtual-destructors)
 
 <br>
@@ -726,14 +724,6 @@
   - [Auto Type Specifier](depricate/02-data-types/old/06-type-specifiers.md#auto-type-specifier)
   - [Decltype Type Specifier](depricate/02-data-types/old/06-type-specifiers.md#decltype-type-specifier)
 
-- [Casting](depricate/02-data-types/old/07-type-conversion.md#casting)
-
-  - [Type conversions (Coersions)](depricate/02-data-types/old/07-type-conversion.md#type-conversions-coersions)
-  - [Explicit casting](depricate/02-data-types/old/07-type-conversion.md#explicit-casting)
-    - [reinterpret_cast](depricate/02-data-types/old/07-type-conversion.md#reinterpretcast)
-    - [static_cast](depricate/02-data-types/old/07-type-conversion.md#staticcast)
-    - [dynamic_cast](depricate/02-data-types/old/07-type-conversion.md#dynamiccast)
-    - [const_cast](depricate/02-data-types/old/07-type-conversion.md#constcast)
 
 - [Enumeration](depricate/02-data-types/old/09-cpp-enumerations.md#enumeration)
 
