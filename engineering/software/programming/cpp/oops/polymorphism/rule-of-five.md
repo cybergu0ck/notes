@@ -1,343 +1,4 @@
-# Special Functions
-
-<br>
-<br>
-<br>
-
-## Constructors
-
-**_Constructor is a special member function of a class that is invoked automatically whenever an object is created._**
-
-- It must have the same name as the class.
-- It does not have any return type associated.
-
-  ```cpp
-  #include <iostream>
-
-  class MyClass
-  {
-  private:
-      int a;
-
-  public:
-      MyClass();	//constructor declaration
-  };
-
-  MyClass::MyClass()
-  {
-      std::cout << "constructor is called" << std::endl;
-  }
-
-  int main()
-  {
-      MyClass obj;	//object created on stack
-      MyClass* obj_ptr = new MyClass; //object created on heap
-  }
-
-  //constructor is called
-  //constructor is called
-  ```
-
-  - The data members of the above class are not initialised here, we should always initialise the data members.
-
-<br>
-
-Some important points about constructors:
-
-- Constructors donot create objects for that class nor initialises class members, the programmer has to initialise them.
-- However they are mostly used for initialisating data members but can perform anything the programmer desires.
-- Constructors can be overloaded.
-
-<br>
-<br>
-
-### Overloaded Constructors
-
-```cpp
-#include <iostream>
-
-class MyClass
-{
-private:
-    int num;
-    int *num_ptr;
-
-public:
-    MyClass();	            //default constructor, also known as the no-arg constructor
-    MyClass(int);	        //overloaded one-arg constructor
-    MyClass(int, int);      //overloaded two-arg constructor
-};
-
-MyClass::MyClass()
-{
-    std::cout << "default constructor is called" << std::endl;
-}
-
-MyClass::MyClass(int x)
-{
-    std::cout << "overloaded one arg constructor is called" << std::endl;
-}
-
-MyClass::MyClass(int x, int y)
-{
-    std::cout << "overloaded two arg constructor is called" << std::endl;
-}
-
-int main()
-{
-    MyClass obj1;				//  obj1.MyClass::MyClass(&obj1);
-    MyClass obj2{ 100 };		//  obj1.MyClass::MyClass(&obj1, 100);
-    MyClass obj3{ 100,1 };	    //  obj1.MyClass::MyClass(&obj1, 100, 1);
-
-}
-
-//default constructor is called
-//overloaded one arg constructor is called
-//overloaded two arg constructor is called
-```
-
-<br>
-<br>
-
-### Compiler Synthesised Constructors
-
-The compiler generates a default constructor by itself only if a class declares no constructors.
-
-```cpp
-#include <iostream>
-
-class MyClass {
-public:
-    int member;
-
-    //no constructors are declared. Hence the compiler will synthesize a default constructor.
-};
-
-int main() {
-    MyClass object;
-    std::cout << object.member; //will have garbage value
-}
-
-//4200987
-```
-
-```cpp
-#include <iostream>
-
-class MyClass {
-public:
-    int member;
-    MyClass(int num):member{num}{};
-
-    //default constructor is not declared but one-arg constructor declared.
-};
-
-int main() {
-    MyClass object;
-    std::cout << object.member;
-}
-
-//Compiler Error: no default constructor exists for class "MyClass"
-```
-
-<br>
-<br>
-
-#### Initialisation of Class Data Members
-
-```cpp
-#include <iostream>
-
-class MyClass
-{
-public:
-    int num;
-    int *num_ptr;
-
-public:
-    MyClass();	            //default constructor, also known as the no-arg constructor
-};
-
-MyClass::MyClass()
-{
-    std::cout << "default constructor is called" << std::endl;
-
-    num = 0;                //This is not initialisation but assignment
-    num_ptr = new int(0);   //This is not initialisation but assignment
-}
-
-int main()
-{
-    MyClass obj1;
-
-    std::cout << obj1.num << '\n';
-}
-
-//default constructor is called
-//0
-```
-
-- In the above code, we are actually _assigning the values to the data members inside the constructor and not technically initialising._ When a MyClass object is created, it invokes the constructor. In the prolog phase of the constructor, the data members (whose size in known as type is known to the compiler) initialises them with garbage values. Then in the business logic of the constructor, they are assigned the given values.
-
-<br>
-
-##### In-class Initialisation
-
-```cpp
-class MyClass {
-public:
-	int num{10};
-};
-```
-
-<br>
-
-##### Constructor Initialiser List
-
-//TODO - Link the initialisation notes and prolog notes here
-
-- We can initialise the data members using constructor initialiser list, this will initialise the data members in the prolog phase itself. (check out the meaning of initialise in 01-introduction.md).
-- The order in which the parameters are initilaised is the order in which they are written in the class and not the paramter initialisation list in the constructor definition.
-
-  ```cpp
-  #include <iostream>
-
-  class MyClass
-  {
-  public:
-      int num;
-      int *num_ptr;
-
-  public:
-      MyClass();	            //default constructor, also known as the no-arg constructor
-  };
-
-  MyClass::MyClass():num{0}, num_ptr{new int(0)}
-  {
-      std::cout << "default constructor is called" << std::endl;
-  }
-
-  int main()
-  {
-      MyClass obj1;
-      std::cout << obj1.num << '\n';
-  }
-
-  //default constructor is called
-  //0
-  ```
-
-<br>
-<br>
-
-### Delegated Constructors
-
-- Delegated constructors in C++ are a feature introduced in C++11 that allow a constructor to call another constructor of the same class.
-- Instead of initialising the data attributes in every constructor, we can use the constructor that has most args as delegated constructor.
-- This can be useful for reducing code duplication and improving readability but at the cost of performance.
-- _Delegated constructors should not be preffered as it introduces additional function calls_, hence affecting performace.
-
-  ```cpp
-  #include <iostream>
-
-  class MyClass {
-  private:
-      int num;
-      int* num_ptr;
-  public:
-      MyClass();				//default constructor
-      MyClass(int);			//1 arg constructor
-      MyClass(int, int);	    //2 arg constructor
-  };
-
-  MyClass::MyClass(int x, int y) : num{ x }, num_ptr{ new int(y)}{
-      //This overloaded 2 arg constructor will be used for delegated constructors
-      std::cout << "The overloaded 2 arg constructor called and the value of num = " << num << std::endl;
-  }
-
-  MyClass::MyClass(int x) : MyClass(x, 0) {
-      //Initialising num with x and num_ptr to point to an int with value 0 in the prolog phase of this function.
-      std::cout << "The overloaded 1 arg constructor is called and the value of num = " << num << std::endl;
-  }
-
-  MyClass::MyClass() : MyClass(0, 0) {
-      //Initialising num with 0 and num_ptr to point to an int with value 0 in the prolog phase of this function.
-      std::cout << "default constructor called." << std::endl;
-  }
-
-  int main() {
-      MyClass obj1{};
-      MyClass obj2{ 1 };
-      MyClass obj3{ 10,10 };
-  }
-
-  //The overloaded 2 arg constructor called and the value of num = 0
-  //default constructor called.
-  //The overloaded 2 arg constructor called and the value of num = 1
-  //The overloaded 1 arg constructor is called and the value of num = 1
-  //The overloaded 2 arg constructor called and the value of num = 10
-  ```
-
-  - In the above code, note that the delagted constructor is called first (in prolog phase itself) before the actual constructor is called.
-
-<br>
-<br>
-
-### Explicit Constructor
-
-- A constructor that is tagged with `explicit` keyword is an explicit constructor, as such it is used to prevent implicit conversions during object construction.
-
-* Illustration to understand implicit conversion. In the following code when x is assigned to obj, the one arg constructor of MyClass assists the compiler for implicitley conversion (we can see it being called in the debugger) and the data attribute is now set to the value of x i.e. 10.
-
-  ```cpp
-  #include <iostream>
-
-  class MyClass
-  {
-  private:
-      int a;
-
-  public:
-      MyClass(int = 1);
-  };
-
-  MyClass::MyClass(int x): a{x}
-  {}
-
-  int main()
-  {
-      int x{ 10 };
-      MyClass obj;
-      obj = x;        //compiler allows this as an implicit conversion is made
-  }
-  ```
-
-> one arg constructors are generally called as conversion constructors as they facilitate implicit conversion. <br> <br>
-
-- We can use `explicit` to avoid this
-
-  ```cpp
-  #include <iostream>
-
-  class MyClass
-  {
-  private:
-      int a;
-
-  public:
-      explicit MyClass(int = 1);
-  };
-
-  MyClass::MyClass(int x): a{x}
-  {}
-
-  int main()
-  {
-      int x{ 10 };
-      MyClass obj;
-      obj = x;        //compiler raises error
-  }
-  ```
+# Rule of five
 
 <br>
 <br>
@@ -395,7 +56,7 @@ public:
 <br>
 <br>
 
-## Copy Constructors
+## Copy constructors
 
 **_A copy constructor is a constructor which can be called with an argument of the same class type and copies the content of the argument without mutating the argument._**
 
@@ -578,7 +239,189 @@ MyClass::~MyClass(){
 <br>
 <br>
 
-## Move Constructors
+## Copy assignment
+
+```cpp
+#include <iostream>
+
+class MyClass {
+public:
+    int num;
+    int* num_ptr;
+public:
+    MyClass();		                        //default constructor
+    MyClass(int, int);		                //two-arg constructor
+    MyClass(const MyClass& source);         //copy constructor
+    MyClass& operator=(const MyClass& rhs); //copy assignment or assignment operator overloading for copy
+    MyClass(MyClass&& source) noexcept;     //move constructor
+    ~MyClass();                             //destructor
+};
+
+MyClass::MyClass() : num{ 0 }, num_ptr{ new int(0) }{
+    std::cout << "The default constructor is called" << std::endl;
+}
+
+MyClass::MyClass(int x, int y) : num{ x }, num_ptr{ new int(y) }{
+    std::cout << "The two-arg constructor is called" << std::endl;
+}
+
+MyClass::MyClass(const MyClass& source) : num{ source.num } {
+    std::cout << "The copy constructor is called" << std::endl;
+
+    num_ptr = new int(*source.num_ptr);  //Deep Copy
+}
+
+MyClass& MyClass::operator=(const MyClass& rhs)
+{
+    std::cout << "copy assignment operator is called." << "\n";
+
+    if (this != &rhs)
+    {
+        delete num_ptr;                   //Delete the existing data
+
+        num_ptr = new int(*rhs.num_ptr);  //Perform the deep copy
+        num = rhs.num;
+    }
+    return *this;                       //This is for chaining of copy assignments (ig)
+}
+
+
+MyClass::MyClass(MyClass&& source) noexcept : num{ source.num }, num_ptr{ source.num_ptr }{
+    std::cout << "The move constructor is called" << std::endl;
+    source.num = 0;             //Leave the original object in a default kind of a state.
+    source.num_ptr = nullptr;   //Null out the source's pointer to avoid double deletion.
+}
+
+MyClass::~MyClass() {
+    std::cout << "The destructor is called" << std::endl;
+    delete num_ptr;  //Clean Up
+}
+```
+
+```cpp
+int main()
+{
+    MyClass obj1{1,10};
+    MyClass obj2{2,20};
+    obj1 = obj1;        //self assignment
+    obj2 = obj1;        //obj2.operator=(obj1);
+
+    std::cout << obj1.num << " " << *obj1.num_ptr << "\n";
+    std::cout << obj2.num << " " << *obj2.num_ptr << "\n";
+}
+
+//The two - arg constructor is called
+//The two - arg constructor is called
+//copy assignment operator is called.
+//copy assignment operator is called.
+//1 10
+//1 10
+//The destructor is called
+//The destructor is called
+```
+
+- An assignment occurs when an object is already initialised and we want to assign another object to it. See below:
+
+  ```cpp
+  MyClass obj1{1,1};
+  MyClass obj2 = obj1;  //NOT ASSIGNMENT; equivalent to MyClass obj2{obj1};
+  ```
+
+  ```cpp
+  MyClass obj1, obj2;
+  obj2 = obj1;	//ASSIGNMENT; as obj2 has already been initialised and obj1 is an l value!
+  ```
+
+- Chainging of assignments will work only if the return type of the copy assignment is by referance. Otherwise, the subsequent assignments in the chaining would perform copy assignment on temporaries.
+
+  ```cpp
+  int main()
+  {
+      MyClass obj1{1,10};
+      MyClass obj2{2,20};
+      MyClass obj3{3,30};
+
+      obj3 = obj2 = obj1;  //obj3.operator=(obj2.operator=(obj1))
+
+      std::cout << obj1.num << " " << *obj1.num_ptr << "\n";
+      std::cout << obj2.num << " " << *obj2.num_ptr << "\n";
+      std::cout << obj3.num << " " << *obj3.num_ptr << "\n";
+  }
+
+  //The two - arg constructor is called
+  //The two - arg constructor is called
+  //The two - arg constructor is called
+  //copy assignment operator is called.
+  //copy assignment operator is called.
+  //1 10
+  //1 10
+  //1 10
+  //The destructor is called
+  //The destructor is called
+  //The destructor is called
+  ```
+
+<br>
+<br>
+
+### Strong Exception Guarantee
+
+- This is the basic implmentation of the copy assignment operator. This doesn't provide strong exception guarantee: Suppose the `new` operation fails, in this case the `*this` object is already modified (`num_ptr` is deleted).
+
+  ```cpp
+  MyClass& MyClass::operator=(const MyClass& rhs)
+  {
+      std::cout << "copy assignment operator is called." << "\n";
+
+      if (this != &rhs)
+      {
+          delete num_ptr;                   //Delete the existing data
+
+          num_ptr = new int(*rhs.num_ptr);  //Perform the deep copy
+          num = rhs.num;
+      }
+      return *this;                       //This is for chaining of copy assignments (ig)
+  }
+  ```
+
+- The following implementation facilitates strong exception guarantee, In this case even if the `new` operation fails, The `*this` object is not modified. We donot need to check for self assignment aswell, becase of the temporaries.
+
+  ```cpp
+  MyClass& MyClass::operator=(const MyClass& rhs)
+  {
+      std::cout << "copy assignment operator is called." << "\n";
+
+      //Create temporaries
+      int new_num = rhs.num;
+      int* new_num_ptr = new int(*rhs.num_ptr);
+
+      //Delete exisiting
+      delete num_ptr;
+
+      //Create copies
+      num = new_num;
+      num_ptr = new_num_ptr;
+
+      return *this;
+  }
+  ```
+
+<br>
+
+### Copy and Swap Idiom
+
+- Copy and swap Idiom decreases code duplication.
+
+  ```cpp
+
+  ```
+
+//TODO - Learn this stuff; use this video link (https://www.youtube.com/watch?v=7Qgd9B1KuMQ); basically there is a point he mentions in this video saying std::swap uses move constructor and hence when iplementing swap function, we shouldn't use the std::swap or something.
+
+<br>
+<br>
+
+## Move constructors
 
 **_A move constructor is a constructor which can be called with an argument of the same class type and copies the content of the argument, possibly mutating the argument._**
 
@@ -714,3 +557,135 @@ This is from Mr Ganesh's (trainer) notes, Looks contradictory from the standard 
   - in the context of polymorphic classes.
 
   - -->
+
+<br>
+<br>
+<br>
+
+## Move assignment
+
+```cpp
+#include <iostream>
+
+class MyClass {
+public:
+    int num;
+    int* num_ptr;
+public:
+    MyClass();		                            //default constructor
+    MyClass(int, int);		                    //two-arg constructor
+    MyClass(const MyClass& source);             //copy constructor
+    MyClass& operator=(const MyClass& rhs);     //copy assignment or assignment operator overloading for copy
+    MyClass(MyClass&& source) noexcept;         //move constructor
+    MyClass& operator=(MyClass&& rhs) noexcept; //move assignment or assignment operator overloading for move
+    ~MyClass();                                 //destructor
+};
+
+MyClass::MyClass() : num{ 0 }, num_ptr{ new int(0) }{
+    std::cout << "The default constructor is called" << std::endl;
+}
+
+MyClass::MyClass(int x, int y) : num{ x }, num_ptr{ new int(y) }{
+    std::cout << "The two-arg constructor is called" << std::endl;
+}
+
+MyClass::MyClass(const MyClass& source) : num{ source.num } {
+    std::cout << "The copy constructor is called" << std::endl;
+
+    num_ptr = new int(*source.num_ptr);  //Deep Copy
+}
+
+MyClass& MyClass::operator=(const MyClass& rhs)
+{
+    std::cout << "copy assignment operator is called." << "\n";
+
+    //Create temporaries
+    int new_num = rhs.num;
+    int* new_num_ptr = new int(*rhs.num_ptr);
+
+    //Delete exisiting
+    delete num_ptr;
+
+    //Create copies
+    num = new_num;
+    num_ptr = new_num_ptr;
+
+    return *this;
+}
+
+MyClass::MyClass(MyClass&& source) noexcept : num{ source.num }, num_ptr{ source.num_ptr }{
+    std::cout << "The move constructor is called" << std::endl;
+    source.num = 0;             //Leave the original object in a default kind of a state.
+    source.num_ptr = nullptr;   //Null out the source's pointer to avoid double deletion.
+}
+
+MyClass& MyClass::operator=(MyClass&& rhs) noexcept
+{
+    std::cout << "The move assignment is called" << "\n";
+
+    if (this != &rhs)
+    {
+        //Delete existing resources
+        delete num_ptr;
+
+        //Steal the resources
+        num_ptr = rhs.num_ptr;  //do not allocate a new memory!
+        num = rhs.num;
+
+        //Leave the rhs in a default like state
+        rhs.num_ptr = nullptr;
+        rhs.num = 0;
+    }
+    return *this;
+}
+
+MyClass::~MyClass() {
+    std::cout << "The destructor is called" << std::endl;
+    delete num_ptr;  //Clean Up
+}
+```
+
+- Assigning a temporary
+
+  ```cpp
+  int main()
+  {
+      MyClass obj1{1,10};
+      obj1 = MyClass{ 3,30 };
+
+      std::cout << obj1.num << " " << *obj1.num_ptr << "\n";
+  }
+
+  //The two - arg constructor is called
+  //The two - arg constructor is called
+  //The move assignment is called
+  //The destructor is called
+  //3 30
+  //The destructor is called
+  ```
+
+- Using std move
+
+  ```cpp
+  int main()
+  {
+      MyClass obj1{1,10};
+      MyClass obj2{3,30};
+
+      obj1 = std::move(obj2);
+
+      std::cout << obj1.num << " " << *obj1.num_ptr << "\n";
+      //std::cout << obj2.num << " " << *obj2.num_ptr << "\n";   //obj2's num_ptr will be a null pointer
+  }
+
+  //The two - arg constructor is called
+  //The two - arg constructor is called
+  //The move assignment is called
+  //3 30
+  //The destructor is called
+  //The destructor is called
+  ```
+
+<br>
+<br>
+<br>

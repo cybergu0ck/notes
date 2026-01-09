@@ -146,11 +146,40 @@
 <br>
 
 ## [Name mangling](fundamentals/name-mangling.md#name-mangling)
+
 - [C++ naming convention](fundamentals/name-mangling.md#cpp-naming-convention)
 - [Raw names and decorated names](fundamentals/name-mangling.md#raw-names-and-decorated-names)
 - [C naming convention](fundamentals/name-mangling.md#c-naming-convention)
 - [Nauances naming convention](fundamentals/name-mangling.md#nuances-with-naming-conventions)
 
+<br>
+<br>
+<br>
+
+## [Scope](oops/06-cpp-scope.md#scope)
+
+- [Type of Scopes](oops/06-cpp-scope.md#type-of-scopes)
+  - [Global Scope](oops/06-cpp-scope.md#global-scope)
+  - [Block Scope](oops/06-cpp-scope.md#block-scope)
+  - [Class Scope](oops/06-cpp-scope.md#class-scope)
+  - [Namespace Scope](oops/06-cpp-scope.md#namespace-scope)
+- [Name Resolution](oops/06-cpp-scope.md#name-resolution)
+- [Automatic Object Destruction](oops/06-cpp-scope.md#automatic-object-destruction)
+- [References](oops/06-cpp-scope.md#references)
+
+<br>
+<br>
+<br>
+
+## [Storage Class Specifiers](oops/07-storage-class-specifiers.md#storage-class-specifiers)
+
+- [`extern` specifier](oops/07-storage-class-specifiers.md#extern-specifier)
+- [`static` specifier](oops/07-storage-class-specifiers.md#static-specifier)
+  - [Local Static Variable](oops/07-storage-class-specifiers.md#local-static-variable)
+  - [Global Static Variable](oops/07-storage-class-specifiers.md#global-static-variable)
+  - [Global Static Function](oops/07-storage-class-specifiers.md#global-static-function)
+  - [Static Member Variable](oops/07-storage-class-specifiers.md#static-member-variable)
+  - [Static Member Function](oops/07-storage-class-specifiers.md#static-member-function)
 
 <br>
 <br>
@@ -160,21 +189,14 @@
 # Data types
 
 - [Characters](data-types/characters.md#characters)
-
   - [Character encoding](data-types/characters.md#character-encoding)
-
 - [Casting](data-types/casting.md)
-
   - [Type conversions (Coersions)](data-types/casting.md)
   - [Explicit casting](data-types/casting.md)
     - [static_cast](data-types/casting.md)
     - [dynamic_cast](data-types/casting.md)
     - [reinterpret_cast](data-types/casting.md)
     - [const_cast](data-types/casting.md)
-
-
-
-
 
 <br>
 <br>
@@ -315,50 +337,60 @@
 <br>
 <br>
 
-## [Encapsulation](oops/01-cpp-encapsulation.md#encapsulation)
+## [Encapsulation](oops/encapsulation.md#encapsulation)
 
-- [C Structs](oops/01-cpp-encapsulation.md#c-structs)
-- [C++ Structs](oops/01-cpp-encapsulation.md#c-structs)
-  - [Acess Modifiers](oops/01-cpp-encapsulation.md#acess-modifiers)
-  - [Differences between C structs and C++ structs](oops/01-cpp-encapsulation.md#differences-between-c-structs-and-c-structs)
-- [Class](oops/01-cpp-encapsulation.md#class)
-- [C++ Object Model](oops/01-cpp-encapsulation.md#c-object-model)
-- [This Pointer](oops/01-cpp-encapsulation.md#this-pointer)
-  - [Use cases](oops/01-cpp-encapsulation.md#use-cases)
-- [Const Member Functions](oops/01-cpp-encapsulation.md#const-member-functions)
-- [Member Functions Returning This Object](oops/01-cpp-encapsulation.md#member-functions-returning-this-object)
-- [Mutable Keywords](oops/01-cpp-encapsulation.md#mutable-keywords)
-- [Seperation of Declaration and Implementation](oops/01-cpp-encapsulation.md#seperation-of-declaration-and-implementation)
+- [C Structs](oops/encapsulation.md#c-structs)
+- [C++ Structs](oops/encapsulation.md#c-structs)
+- [Acess Modifiers](oops/encapsulation.md#acess-modifiers)
+- [Differences between C structs and C++ structs](oops/encapsulation.md#differences-between-c-structs-and-c-structs)
+- [Class](oops/encapsulation.md#class)
+  - [C++ Object Model](oops/encapsulation.md#c-object-model)
+- [This Pointer](oops/encapsulation.md#this-pointer)
+  - [Use cases](oops/encapsulation.md#use-cases)
+- [Member methods](oops/encapsulation.md#member-methods)
+  - [Const Member Functions](oops/encapsulation.md#const-member-functions)
+  - [Member Functions Returning This Object](oops/encapsulation.md#member-functions-returning-this-object)
+- [Constructors](oops/encapsulation.md#constructors)
+  - [Overloaded Constructors](oops/encapsulation.md#overloaded-constructors)
+  - [Compiler Synthesised Constructors](oops/encapsulation.md#compiler-synthesised-constructors)
+    - [Initialisation of Class Data Members](oops/encapsulation.md#initialisation-of-class-data-members)
+      - [In-class Initialisation](oops/encapsulation.md#in-class-initialisation)
+      - [Constructor Initialiser List](oops/encapsulation.md#constructor-initialiser-list)
+  - [Delegated Constructors](oops/encapsulation.md#delegated-constructors)
+  - [Explicit Constructor](oops/encapsulation.md#explicit-constructor)
+- [Mutable Keywords](oops/encapsulation.md#mutable-keywords)
+- [Seperation of Declaration and Implementation](oops/encapsulation.md#seperation-of-declaration-and-implementation)
 
 <br>
 <br>
 <br>
 
-## [Polymorphism](oops/02-cpp-polymorphism.md#polymorphism)
+## [Polymorphism](oops/polymorphism/polymorphism.md)
 
-- [Types of Polymorphism in C++](oops/02-cpp-polymorphism.md#types-of-polymorphism-in-c)
-- [Compile Time Polymorphism](oops/02-cpp-polymorphism.md#compile-time-polymorphism)
-- [Polymorphic internals](oops/02-cpp-polymorphism.md#polymorphic-internals)
+- [Types of Polymorphism in C++](oops/polymorphism/polymorphism.md#types-of-polymorphism-in-cpp)
 
 <br>
 <br>
+
+### [Compile time polymorphism](oops/polymorphism/polymorphism.md#compile-time-polymorphism)
+
+- [Function overloading](oops/polymorphism/polymorphism.md#function-overloading)
+- [Overloaded constructors](oops/polymorphism/polymorphism.md#overloaded-constructors)
+- [Rule of five](oops/polymorphism/rule-of-five.md)
+  - [Destructor](oops/special-functions.md#destructor)
+  - [Copy constructors](oops/special-functions.md#copy-constructors)
+    - [Shallow copy constructor](oops/special-functions.md#shallow-copy-constructor)
+    - [Deep copy constructor](oops/special-functions.md#deep-copy-constructor)
+  - [Copy assignment]()
+  - [Move constructors](oops/special-functions.md#move-constructors)
+  - [Move assignment]()
+
+<br>
 <br>
 
-## [Special functions](oops/special-functions.md#special-functions)
+### [Run time polymorphism](oops/polymorphism/run-time-polymorphism.md)
 
-- [Constructors](oops/special-functions.md#constructors)
-  - [Overloaded Constructors](oops/special-functions.md#overloaded-constructors)
-  - [Compiler Synthesised Constructors](oops/special-functions.md#compiler-synthesised-constructors)
-    - [Initialisation of Class Data Members](oops/special-functions.md#initialisation-of-class-data-members)
-      - [In-class Initialisation](oops/special-functions.md#in-class-initialisation)
-      - [Constructor Initialiser List](oops/special-functions.md#constructor-initialiser-list)
-  - [Delegated Constructors](oops/special-functions.md#delegated-constructors)
-  - [Explicit Constructor](oops/special-functions.md#explicit-constructor)
-- [Destructor](oops/special-functions.md#destructor)
-- [Copy Constructors](oops/special-functions.md#copy-constructors)
-  - [Shallow Copy Constructor](oops/special-functions.md#shallow-copy-constructor)
-  - [Deep Copy Constructor](oops/special-functions.md#deep-copy-constructor)
-- [Move Constructors](oops/special-functions.md#move-constructors)
+- [Polymorphic internals](oops/polymorphism/run-time-polymorphism.md#polymorphic-internals)
 
 <br>
 <br>
@@ -420,36 +452,6 @@
 - [Copy/Move constructors and overloaded assignment operator in context of inheritance](oops/05-cpp-inheritence.md#copymove-constructors-and-overloaded-assignment-operator-in-context-of-inheritance)
 - [Redefining Base Class Methods](oops/05-cpp-inheritence.md#redefining-base-class-methods)
   - [Virtual Destructors](oops/05-cpp-inheritence.md#virtual-destructors)
-
-<br>
-<br>
-<br>
-
-## [Scope](oops/06-cpp-scope.md#scope)
-
-- [Type of Scopes](oops/06-cpp-scope.md#type-of-scopes)
-  - [Global Scope](oops/06-cpp-scope.md#global-scope)
-  - [Block Scope](oops/06-cpp-scope.md#block-scope)
-  - [Class Scope](oops/06-cpp-scope.md#class-scope)
-  - [Namespace Scope](oops/06-cpp-scope.md#namespace-scope)
-- [Name Resolution](oops/06-cpp-scope.md#name-resolution)
-- [Automatic Object Destruction](oops/06-cpp-scope.md#automatic-object-destruction)
-- [References](oops/06-cpp-scope.md#references)
-
-<br>
-<br>
-<br>
-
-## [Storage Class Specifiers](oops/07-storage-class-specifiers.md#storage-class-specifiers)
-
-- [`extern` specifier](oops/07-storage-class-specifiers.md#extern-specifier)
-- [`static` specifier](oops/07-storage-class-specifiers.md#static-specifier)
-
-  - [Local Static Variable](oops/07-storage-class-specifiers.md#local-static-variable)
-  - [Global Static Variable](oops/07-storage-class-specifiers.md#global-static-variable)
-  - [Global Static Function](oops/07-storage-class-specifiers.md#global-static-function)
-  - [Static Member Variable](oops/07-storage-class-specifiers.md#static-member-variable)
-  - [Static Member Function](oops/07-storage-class-specifiers.md#static-member-function)
 
 <br>
 <br>
@@ -723,7 +725,6 @@
   - [Type Alias](depricate/02-data-types/old/06-type-specifiers.md#type-alias)
   - [Auto Type Specifier](depricate/02-data-types/old/06-type-specifiers.md#auto-type-specifier)
   - [Decltype Type Specifier](depricate/02-data-types/old/06-type-specifiers.md#decltype-type-specifier)
-
 
 - [Enumeration](depricate/02-data-types/old/09-cpp-enumerations.md#enumeration)
 
