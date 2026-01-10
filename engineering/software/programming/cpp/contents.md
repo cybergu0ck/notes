@@ -434,9 +434,6 @@
   - [Base to Derived Conversion](oops/05-cpp-inheritence.md#base-to-derived-conversion)
   - [Object Slicing](oops/05-cpp-inheritence.md#object-slicing)
 - [Virtual Functions](oops/05-cpp-inheritence.md#virtual-functions)
-  - [Dynamic Binding](oops/05-cpp-inheritence.md#dynamic-binding)
-  - [Circumventing the Dynamic Binding of Virtual Functions](oops/05-cpp-inheritence.md#circumventing-the-dynamic-binding-of-virtual-functions)
-  - [Pure Virtual Function](oops/05-cpp-inheritence.md#pure-virtual-function)
 - [Final Specifier](oops/05-cpp-inheritence.md#final-specifier)
 - [Preventing Inheritance](oops/05-cpp-inheritence.md#preventing-inheritance)
 - [Abstract Base Class](oops/05-cpp-inheritence.md#abstract-base-class)
@@ -449,25 +446,33 @@
   - [Private Inheritance](oops/05-cpp-inheritence.md#private-inheritance)
   - [Accesssibility of Derived to Base Conversion](oops/05-cpp-inheritence.md#accesssibility-of-derived-to-base-conversion)
   - [Friendship and Inheritance](oops/05-cpp-inheritence.md#friendship-and-inheritance)
-- [Constructors in Inheritance](oops/05-cpp-inheritence.md#constructors-in-inheritance)
-- [Destructors in Inheritance](oops/05-cpp-inheritence.md#destructors-in-inheritance)
-- [Copy Control in Inheritance](oops/05-cpp-inheritence.md#copy-control-in-inheritance)
 - [Multiple Inheritance](oops/05-cpp-inheritence.md#multiple-inheritance)
 - [Virtual Inheritance](oops/05-cpp-inheritence.md#virtual-inheritance)
-- [Miscallaneous](oops/05-cpp-inheritence.md#miscallaneous)
-  - [Override specifier](oops/05-cpp-inheritence.md#override-specifier)
-  - [Constructors in the context of Inheritance](oops/05-cpp-inheritence.md#constructors-in-the-context-of-inheritance)
-  - [Base Class](oops/05-cpp-inheritence.md#base-class)
-- [Constructors and Destructors in the context of Inheritence](oops/05-cpp-inheritence.md#constructors-and-destructors-in-the-context-of-inheritence)
-- [Illustration for concept clarity](oops/05-cpp-inheritence.md#illustration-for-concept-clarity)
-  - [Invoking Overloaded Base Class Constructors](oops/05-cpp-inheritence.md#invoking-overloaded-base-class-constructors)
-- [Compiler generating constructors](oops/05-cpp-inheritence.md#compiler-generating-constructors)
-  - [In the context of Inheritance](oops/05-cpp-inheritence.md#in-the-context-of-inheritance)
-  - [In the context of containment](oops/05-cpp-inheritence.md#in-the-context-of-containment)
-  - [In the context of Hybrid Inheritance](oops/05-cpp-inheritence.md#in-the-context-of-hybrid-inheritance)
-- [Copy/Move constructors and overloaded assignment operator in context of inheritance](oops/05-cpp-inheritence.md#copymove-constructors-and-overloaded-assignment-operator-in-context-of-inheritance)
+
+
 - [Redefining Base Class Methods](oops/05-cpp-inheritence.md#redefining-base-class-methods)
   - [Virtual Destructors](oops/05-cpp-inheritence.md#virtual-destructors)
+
+- [Sort theses]()
+    - [Constructors in Inheritance](oops/05-cpp-inheritence.md#constructors-in-inheritance)
+    - [Destructors in Inheritance](oops/05-cpp-inheritence.md#destructors-in-inheritance)
+    - [Copy Control in Inheritance](oops/05-cpp-inheritence.md#copy-control-in-inheritance)
+    - [Constructors and Destructors in the context of Inheritence](oops/05-cpp-inheritence.md#constructors-and-destructors-in-the-context-of-inheritence)
+    - [Illustration for concept clarity](oops/05-cpp-inheritence.md#illustration-for-concept-clarity)
+    - [Invoking Overloaded Base Class Constructors](oops/05-cpp-inheritence.md#invoking-overloaded-base-class-constructors)
+    - [Compiler generating constructors](oops/05-cpp-inheritence.md#compiler-generating-constructors)
+    - [In the context of Inheritance](oops/05-cpp-inheritence.md#in-the-context-of-inheritance)
+    - [In the context of containment](oops/05-cpp-inheritence.md#in-the-context-of-containment)
+    - [In the context of Hybrid Inheritance](oops/05-cpp-inheritence.md#in-the-context-of-hybrid-inheritance)
+    - [Copy/Move constructors and overloaded assignment operator in context of inheritance](oops/05-cpp-inheritence.md#copymove-constructors-and-overloaded-assignment-operator-in-context-of-inheritance)
+
+    - [Miscallaneous](oops/05-cpp-inheritence.md#miscallaneous)
+    - [Override specifier](oops/05-cpp-inheritence.md#override-specifier)
+    - [Constructors in the context of Inheritance](oops/05-cpp-inheritence.md#constructors-in-the-context-of-inheritance)
+    - [Base Class](oops/05-cpp-inheritence.md#base-class)
+
+
+
 
 <br>
 <br>
