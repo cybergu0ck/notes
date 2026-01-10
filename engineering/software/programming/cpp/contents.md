@@ -402,6 +402,7 @@
 ### [Run time polymorphism](oops/polymorphism/run-time-polymorphism.md)
 
 - [Virtual methods](oops/polymorphism/run-time-polymorphism.md#virtual-methods)
+- [Polymorphic class](oops/polymorphism/run-time-polymorphism.md#polymorphic-class)
 - [Virtual method table](oops/polymorphism/run-time-polymorphism.md#virtual-method-table)
     - [Illustration for vtable](oops/polymorphism/run-time-polymorphism.md#illustration-for-vtable)
 - [Virtual pointer](oops/polymorphism/run-time-polymorphism.md#virtual-pointer)

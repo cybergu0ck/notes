@@ -101,14 +101,13 @@ A virtual method is a member function declared within a base class using the `vi
   //liner error: undefined reference to `vtable for MyClass'
   ```
 
-
 <br>
 <br>
 <br>
 
 ## Polymorphic class
 
-
+A class is considered polymorphic if it contains at least one [virtual method](#virtual-methods).
 
 <br>
 <br>
