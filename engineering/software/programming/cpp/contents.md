@@ -375,37 +375,52 @@
 ### [Compile time polymorphism](oops/polymorphism/polymorphism.md#compile-time-polymorphism)
 
 - [Function overloading](oops/polymorphism/polymorphism.md#function-overloading)
+    - [Function signature](oops/polymorphism/polymorphism.md#function-signature)
 - [Overloaded constructors](oops/polymorphism/polymorphism.md#overloaded-constructors)
 - [Rule of five](oops/polymorphism/rule-of-five.md)
-  - [Destructor](oops/special-functions.md#destructor)
-  - [Copy constructors](oops/special-functions.md#copy-constructors)
-    - [Shallow copy constructor](oops/special-functions.md#shallow-copy-constructor)
-    - [Deep copy constructor](oops/special-functions.md#deep-copy-constructor)
-  - [Copy assignment]()
-  - [Move constructors](oops/special-functions.md#move-constructors)
-  - [Move assignment]()
+  - [Destructor](oops/polymorphism/rule-of-five.md#destructor)
+  - [Copy constructors](oops/polymorphism/rule-of-five.md#copy-constructors)
+    - [Shallow copy constructor](oops/polymorphism/rule-of-five.md#shallow-copy-constructor)
+    - [Deep copy constructor](oops/polymorphism/rule-of-five.md#deep-copy-constructor)
+  - [Copy assignment](oops/polymorphism/rule-of-five.md#copy-assignment)
+    - [Strong exception guarantee](oops/polymorphism/rule-of-five.md#strong-exception-guarantee)
+    - [Copy and swap idiom](oops/polymorphism/rule-of-five.md#copy-and-swap-idiom)
+  - [Move constructors](oops/polymorphism/rule-of-five.md#move-constructors)
+  - [Move assignment](oops/polymorphism/rule-of-five.md#move-assignment)
+- [Operator overloading](oops/polymorphism/polymorphism.md#operator-overloading)
+    - [Assignment operator overloading](oops/polymorphism/polymorphism.md#assignment-operator-overloading)
+    - [Copy assignment operator](oops/polymorphism/polymorphism.md#copy-assignment-operator)
+    - [Move assignment operator](oops/polymorphism/polymorphism.md#move-assignment-operator)
+    - [Stream operator overloading](oops/polymorphism/polymorphism.md#stream-operator-overloading)
+    - [Unary operator overloading](oops/polymorphism/polymorphism.md#unary-operator-overloading)
+    - [Arrow assignment overloading](oops/polymorphism/polymorphism.md#arrow-assignment-overloading)
+
 
 <br>
 <br>
 
 ### [Run time polymorphism](oops/polymorphism/run-time-polymorphism.md)
 
-- [Polymorphic internals](oops/polymorphism/run-time-polymorphism.md#polymorphic-internals)
+- [Virtual methods](oops/polymorphism/run-time-polymorphism.md#virtual-methods)
+- [Virtual method table](oops/polymorphism/run-time-polymorphism.md#virtual-method-table)
+    - [Illustration for vtable](oops/polymorphism/run-time-polymorphism.md#illustration-for-vtable)
+- [Virtual pointer](oops/polymorphism/run-time-polymorphism.md#virtual-pointer)
+    - [Illustration for vptr](oops/polymorphism/run-time-polymorphism.md#illustration-for-vptr)
+- [Criteria for run time polymorphism ](oops/polymorphism/run-time-polymorphism.md#criteria-for-run-time-polymorphism)
+- [Run time polymorphism mechanism ](oops/polymorphism/run-time-polymorphism.md#run-time-polymorphism-mechanism)
+- [Circumventing run time polymorphism  ](oops/polymorphism/run-time-polymorphism.md#circumventing-run-time-polymorphism)
+- [Pure virtual function ](oops/polymorphism/run-time-polymorphism.md#pure-virtual-function)
+- [RTTI](oops/polymorphism/run-time-polymorphism.md#rtti)
+    - [Criteria for RTTI](oops/polymorphism/run-time-polymorphism.md#core-operators-for-rtti)
+    - [Core operators for RTTI](oops/polymorphism/run-time-polymorphism.md#core-operators-for-rtti)
+
+
 
 <br>
 <br>
 <br>
 
-## [Operator Overloading](oops/04-operator-overloading.md#operator-overloading)
 
-- [Assignment Operator Overloading](oops/04-operator-overloading.md#assignment-operator-overloading)
-  - [Copy Assignment Operator](oops/04-operator-overloading.md#copy-assignment-operator)
-    - [Strong Exception Guarantee](oops/04-operator-overloading.md#strong-exception-guarantee)
-    - [Copy and Swap Idiom](oops/04-operator-overloading.md#copy-and-swap-idiom)
-  - [Move Assignment Operator](oops/04-operator-overloading.md#move-assignment-operator)
-- [Stream Operator Overloading](oops/04-operator-overloading.md#stream-operator-overloading)
-- [Unary Operator Overloading //REVIEW - Needs Review](oops/04-operator-overloading.md#unary-operator-overloading-review---needs-review)
-- [Arrow Assignment Overloading //REVIEW - Needs Review](oops/04-operator-overloading.md#arrow-assignment-overloading-review---needs-review)
 
 <br>
 <br>

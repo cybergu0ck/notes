@@ -28,7 +28,23 @@ Compile-time polymorphism is the ability of a program to use a single name (inte
   1. Operator overlaoding
   1. Templates (parametric polymorphism)
 
+<br>
+<br>
+
 ### Function overloading
+
+<br>
+
+#### Function signature
+
+
+* In C++, the function signature consists only of:
+
+    * The function name.
+    * The parameter list (types and order).
+    * The cv-qualifiers (like const) and ref-qualifiers.
+
+* Note that the return type is not a part of the function signature, Hence functions cannot be overloaded based on it's return type.
 
 <br>
 <br>
@@ -82,7 +98,7 @@ int main()
 <br>
 <br>
 
-### Operator Overloading
+### Operator overloading
 
 - Operator overloading is a feature in C++ that allows programmers to redefine the meaning of operators for user-defined data types. This can make code more concise and readable, and can also improve the flexibility and expressiveness of a program.
 - The following operators cannot be overloaded

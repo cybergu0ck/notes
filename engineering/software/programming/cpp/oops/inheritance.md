@@ -26,7 +26,7 @@
 
 <br>
 
-### Is A Relationship
+## Is A Relationship
 
 The derived object contains all the data corresponsing to it's base class, Hence we can use a derived object as if it were a base object i.e. _Derived is a Base_.
 
@@ -111,197 +111,12 @@ int main() {
 <br>
 <br>
 
-## Virtual Functions
 
-A base class uses virtual functions to allow derived classes to override them, enabling dynamic binding when called through a pointer or reference.
+## Virtual methods
 
-- Any nonstatic member function, other than a constructor, may be virtual.
-
-- Virtual functions must always be defined because the version of the function that will be called may not be known until run time.
-
-  ```cpp
-  class MyClass
-  {
-  public:
-      virtual void declared_but_not_defined();
-  };
-
-  int main()
-  {
-      MyClass obj;
-  }
-
-  //liner error: undefined reference to `vtable for MyClass'
-  ```
-
-  - Non-virtual functions can be declared and not defined. There will be no errors as long as the undefined functions are not called. Although not a good practice.
-
-    ```cpp
-    class MyClass
-    {
-    public:
-        void hello();
-    };
-
-    int main()
-    {
-        MyClass obj;
-    }
-    ```
-
-- Few pointers about defining virtual functions.
-
-  - The `virtual` keyword is used only in the class declaration, not in the function definition outside the class body.
-  - A function that is declared as virtual in the base class is implicitly virtual in the derived classes as well.
-  - Derived classes need not always override the virtual functions that they inherit, in that case it inherits the version defined in the base class.
-
-- The virtual function signatures must be exactly same in both the base and derived classes (parameter types, specifiers, return type with one execption). Otherwise it will considered as a redefinition in the derived class.
-
-  ```cpp
-  #include <iostream>
-  using namespace std;
-
-  class Base {
-  public:
-      virtual void say_hello() const
-      {
-          cout << "Hello, I am a Base class object " << endl;
-      }
-  };
-
-  class Derived : public Base {
-  public:
-      virtual void say_hello()        //won't be overriden as
-      {
-          cout << "Hello, I am a Derived class object " << endl;
-      }
-  };
-
-
-  int main()
-  {
-      Base* b_ptr = new Base();
-      b_ptr->say_hello();
-
-      Base* d_ptr = new Derived();  //we can do this becuase Derived obj is a Base obj too (inheritance)
-      d_ptr->say_hello();
-
-      delete b_ptr;
-      delete d_ptr;
-  }
-
-  //Hello, I am a Base class object
-  //Hello, I am a Base class object
-  ```
-
-  - There is one exception to this, If D is derived from B, then a base class virtual can return a B* and the version in the derived can return a D*.
-  - Check this [stack overflow](https://stackoverflow.com/questions/9488168/virtual-function-const-vs-virtual-function-non-const)
+Find it in [runtime polymorphism](./polymorphism/run-time-polymorphism.md#virtual-methods)
 
 <br>
-
-### Dynamic Binding
-
-Dynamic binding is a run time polymorphism and in the context of inheritance is the process where the method to be invoked is determined at runtime based on the type of the object, typically using virtual functions.
-
-- Dynamic binding is also known as run time polymorphism or late binding.
-- A call to a virtual function is bound at compile time when it is made on an expression with a simple type, such as nonreference or nonpointer.
-
-  ```cpp
-  #include <iostream>
-
-  class Base
-  {
-  public:
-      virtual void hello()
-      {
-          std::cout << "Hello, World! from Base" << std::endl;
-      }
-  };
-
-  class Derived: public Base
-  {
-  public:
-      void hello()
-      {
-          std::cout << "Hello, World! from Derived" << std::endl;
-      }
-  };
-
-  int main()
-  {
-      Base obj = Base();
-      obj.hello();       //Static binding
-
-      Base* b = new Derived();
-      b->hello();       //Dynamic binding
-      delete b;
-  }
-
-  //Hello, World! from Base
-  //Hello, World! from Derived
-  ```
-
-- Virtual functions that have default arguments should use the same argument values in the base and derived classes.
-  - When a call is made through a reference or pointer to base, the default argument(s) will be those defined in the base class. The base-class arguments will be used even when the derived version of the function is run.
-
-<br>
-
-### Circumventing the Dynamic Binding of Virtual Functions
-
-Scope operator is used to prevent dynamic binding of virtual function and call a specific version.
-
-- If a derived virtual function that intended to call its base-class version omits the scope operator, the call will be resolved at run time as a call to the derived version itself, resulting in an infinite recursion.
-- The most common reason is when a derived-class virtual function calls the version from the base class.
-
-  ```cpp
-  #include <iostream>
-
-  class Base
-  {
-  public:
-      virtual void hello()
-      {
-          std::cout << "Hello, World! from Base" << std::endl;
-      }
-  };
-
-  class Derived: public Base
-  {
-  public:
-      void hello()
-      {
-          this->Base::hello();      //Use of scope operator
-      }
-  };
-
-  int main()
-  {
-      Base* b = new Derived();
-      b->hello();
-      delete b;
-  }
-
-  //Hello, World! from Base
-  ```
-
-<br>
-
-### Pure Virtual Function
-
-A pure virtual function is a virtual function that has no implementation in the base class and must be overridden by any derived class.
-
-- A pure virtual function is declared using following syntax.
-
-  ```cpp
-  class Base
-  {
-  public:
-      virtual void hello() = 0; //pure virtual function and thus Base is an abstract class
-  };
-  ```
-
-- Unlike virtual functions which must be defined, pure virtual functions can be left undefined or can be defined.
-
 <br>
 <br>
 
