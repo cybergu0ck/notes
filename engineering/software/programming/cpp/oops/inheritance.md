@@ -20,7 +20,74 @@ Inheritance is the mechanism by which a class can acquire properties and behavio
   };
   ```
 
+* A class must be defined, not just declared, before we can use it as a base class. Because the derived class must have the information of the members of the base class.
+
+  ```cpp
+  class Base;  //Forward declaration
+
+  class Derived:public Base{  //Error
+  };
+
+  class Base{ //Class Definiton
+  };
+  ```
+
 - The construction of an derived class object will always be the sum of the sizes of all non-static data members of the base class and the sum size of all non-static data members of the derived class. It does not matter which access specifier we are using at the time of inheritance, _the access specifier deals with only access to those data_.
+
+<br>
+<br>
+<br>
+
+## Derived class
+
+- A derived class doesn't inherit
+
+  - Base class constructor
+  - Base class destructor
+  - Base class overloaded assignment operators
+  - Base class friend functions
+
+<br>
+<br>
+
+### Redefining base class methods in derived class
+
+- Derived classes can not only invoke Base class methods but also override or redefine base class methods.
+
+  ```cpp
+  #pragma once
+  #include <iostream>
+  using namespace std;
+
+  class Account {
+
+  public:
+      double balance;
+      Account() :balance{ 0 }
+      {
+      }
+      void deposit(double amount)
+      {
+          balance += amount;
+      }
+  };
+
+  class SavingsAccount : public Account {
+  public:
+      void deposit(double amount)
+      {
+          amount += (amount * 0.1);
+          Account::deposit(amount);
+      }
+  };
+
+  int main()
+  {
+      SavingsAccount mine;
+      mine.deposit(100);
+      cout << mine.balance << endl;		//110 because deposite of SavingsAccount class is executed
+  }
+  ```
 
 <br>
 <br>
@@ -69,6 +136,9 @@ int main() {
 - The automatic derived-to-base conversion applies only for conversions to a _reference or pointer type_. There is no such conversion from a derived-class type to the base-class type.
 - Checkout [accessibility of derived to base conversion](#accesssibility-of-derived-to-base-conversion) in the context of different types of inheritance based on access specifier.
 
+* For any given point in the code, if a public member of the base class would be accessible, then the derived-to-base conversion is also accessible, and not otherwise.
+* Checkout [virtual desctructors](./polymorphism/run-time-polymorphism.md#virtual-destructors).
+
 <br>
 <br>
 
@@ -94,7 +164,7 @@ Derived *derived_ptr = base_ptr; //Still an error even if the base_ptr is bound 
 
 Object slicing occurs when a base class object is initialised or assigned with a derived class object, resulting in the loss of the derived class-specific attributes and methods.
 
-- In the following code, the `display` method of `Base` class is called.
+- In the following code, object is sliced and the `display` method of `Base` class is called.
 
   ```cpp
   #include <iostream>
@@ -207,6 +277,8 @@ class Derived: public Base {
 
 ## Access Control in Inheritance
 
+- For any given point in the code, if a public member of the base class would be accessible, then the derived-to-base conversion is also accessible, and not otherwise.
+
 ### Protected Members
 
 - Like public, protected members are accessible to members and friends of classes derived from this class.
@@ -235,6 +307,13 @@ class Derived: public Base {
   ```
 
 <br>
+<br>
+<br>
+
+## Types of inheritance
+
+<br>
+<br>
 
 ### Public Inheritance
 
@@ -260,197 +339,46 @@ class Derived: public Base {
 2. Private members of the base class remain inaccessible in the derived class, for all types of inheritance.
 
 <br>
-
-### Accesssibility of Derived to Base Conversion
-
-_For any given point in the code, if a public member of the base class would be accessible, then the derived-to-base conversion is also accessible, and not otherwise._
-
-//TODO - Learn this
-
+<br>
 <br>
 
-### Friendship and Inheritance
+### Multiple Inheritance
 
 //STUB - Learn these when needed. Knowledge available in textbook.
 
 <br>
 <br>
 
-## Constructors in Inheritance
+### Virtual Inheritance
+
+//STUB - Learn these when needed. Knowledge available in textbook.
+
+<br>
+<br>
+<br>
+
+## Friendship and Inheritance
+
+//STUB - Learn these when needed. Knowledge available in textbook.
+
+<br>
+<br>
+<br>
+
+## Special methods in the case of inheritance
+
+<br>
+<br>
+
+### Constructors in Inheritance
 
 //TODO - Learn this; Inherited constructors
-
-<br>
-<br>
-
-## Destructors in Inheritance
-
-//TODO - Learn this; Virtual Destructors; Derived Class destructor; Calls to Virtuals in Constructors and Destructors
-
-<br>
-<br>
-
-## Copy Control in Inheritance
-
-//STUB - Learn these when needed. Knowledge available in textbook.
-
-<br>
-<br>
-
-## Multiple Inheritance
-
-//STUB - Learn these when needed. Knowledge available in textbook.
-
-<br>
-<br>
-
-## Virtual Inheritance
-
-//STUB - Learn these when needed. Knowledge available in textbook.
-
-<br>
-<br>
-<br>
-
-## Abstract Base Class
-
-**An abstract class in C++ is a class that cannot be instantiated directly and is designed to be a base class for other classes.**
-
-- An abstract class contains _at least one pure virtual function_.
-- Abstract base classes are typically used to define a common interface for derived classes.
-- We cannot (directly) create objects of a type that is an abstract base class.
-
-  ```cpp
-  class Base
-  {
-  public:
-      virtual void hello() = 0; //pure virtual function and thus Base is an abstract class
-  };
-
-  int main()
-  {
-      Base obj;
-  }
-
-  //compilation error: cannot declare variable 'obj' to be of abstract type 'Base'
-  ```
-
-  ```cpp
-  void foo(Base obj)
-  {
-      //cannot use Base object as parameter as it is an abstract class
-  }
-  //compilation error
-  ```
-
-<br>
-
-### Concrete Class
-
-- In C++, a concrete class is a class that can be instantiated directly, unlike an abstract class. It provides complete implementations for all of its member functions, including any virtual functions inherited from base classes.
-
-<br>
-
-### Interface in C++
-
-- Unlike languages like Java or C#, interfaces in C++ are achieved using Abstract classes.
-- It is convention to use precede the name of the abstract class using 'I\_' if we intend to use it as an interface. example: I_Shape
-
-<br>
-<br>
-<br>
-
-# Miscallaneous
-
-//TODO - Clean the rest of the notes
-
-### Override specifier
-
-- C++ 11 presented the `override` keyword to explicitely define the overriding behaviour.
-
-- As mentioned above, the function signatures (in base and derived classes) must be exactly same for overriding, any change in the signature will be considered as redifinition (which is not overridable)
-- The override specifier introduced in C++ 11 standard, when used in the derived class functions which we intend to override the base class function, it'll throw an error if there are changes in the signatures.
-- Checkout the following illustration, We would want the say_hello function in the derived classes to override, however there is change in the function signature (which we may forget) since we used `override` in derived class's say_hello, the compiler throws an error, reminds us.
-
-  ```cpp
-  #include <iostream>
-  using namespace std;
-
-  class Base {
-  public:
-      virtual void say_hello() const
-      {
-          cout << "Hello, I am a Base class object " << endl;
-      }
-
-      virtual ~Base()
-      {
-          cout << "Base class destructor" << endl;
-      }
-  };
-
-  class Derived: public Base {
-  public:
-      void say_hello() override
-      {
-          cout << "Hello, I am a Derived class object " << endl;
-      }
-
-       ~Derived()
-      {
-          cout << "Derived class destructor" << endl;
-      }
-  };
-
-
-  int main()
-  {
-      Base* b_ptr = new Base();
-      b_ptr->say_hello();
-
-      Base* d_ptr = new Derived();  //we can do this becuase Derived obj is a Base obj too (inheritance)
-      d_ptr->say_hello();
-
-      delete b_ptr;
-      delete d_ptr;
-  }
-
-  //ERROR: 'Derived::say_hello' method with override specifier 'override' did not override any base class methods.
-  ```
-
-## Constructors in the context of Inheritance
 
 - Although, the base class constructor is called before the derived class constructor is called. The derived class cannot intialise the class members of the base class without explicitley using a base class constructor.
 - The base class is initialised first and then the derived class, in the order in which they are declared in the class.
 - The constructor body of a derived constructor can assign values to its public or protected base-class members. Although it can assign to those members, it generally should not do so. Like any other user of the base class, a derived class should respect the interface of its base class by using a constructor to initialize its inherited members.
 
-<br>
-<br>
-
-## Base Class
-
-- **_Base classes should define a virtual destructor._** Virtual destructors are needed even if they do no work.
-
-- A class must be defined, not just declared, before we can use it as a base class. Because the derived class must have the information of the members of the base class.
-
-  ```cpp
-  class Base;  //Forward declaration
-
-  class Derived:public Base{  //Error
-  };
-
-  class Base{ //Class Definiton
-  };
-  ```
-
-<br>
-<br>
-<br>
-
-# Constructors and Destructors in the context of Inheritence
-
 - When a derived object is created the base class constructor executes first and then the derived class constructor executes.
-- When a derived object is destroyed, the derived class destructor executes then the base class destructor executes, each destructor should free resources allocated in it's own constructors.
 
   ```cpp
   #include <iostream>
@@ -493,20 +421,6 @@ _For any given point in the code, if a public member of the base class would be 
   destructor of base class is executing...
   */
   ```
-
-- A derived class doesn't inherit
-
-  - Base class constructor
-  - Base class destructor
-  - Base class overloaded assignment operators
-  - Base class friend functions
-
-- If
-
-<br>
-<br>
-
-# Illustration for concept clarity
 
 - Consider the following class declaration to understand constructors in the context of inheritance.
 
@@ -584,8 +498,9 @@ _For any given point in the code, if a public member of the base class would be 
   ```
 
 <br>
+<br>
 
-## Invoking Overloaded Base Class Constructors
+#### Invoking Overloaded Base Class Constructors
 
 - However,the derived class constructors, destructors and overloaded assignment operators can invoke the base-class versions and arguments can also be passed.
 
@@ -621,9 +536,11 @@ _For any given point in the code, if a public member of the base class would be 
 <br>
 <br>
 
-# Compiler generating constructors
+#### Compiler generating constructors
 
-## In the context of Inheritance
+<br>
+
+##### In the context of Inheritance
 
 - If the derived class doesnt have any constructor and the base class has one, then the compiler will generate one for the derived class.
 
@@ -654,7 +571,7 @@ _For any given point in the code, if a public member of the base class would be 
 
 <br>
 
-## In the context of containment
+##### In the context of containment
 
 - If the derived class has a Base class object as a data attribute, The compiler will generate a constructor if we have not defined one.
 
@@ -687,12 +604,70 @@ _For any given point in the code, if a public member of the base class would be 
 
 <br>
 
-## In the context of Hybrid Inheritance
+##### In the context of Hybrid Inheritance
 
 <br>
 <br>
 
-# Copy/Move constructors and overloaded assignment operator in context of inheritance
+<br>
+<br>
+
+### Destructors in Inheritance
+
+//TODO - Learn this; Virtual Destructors; Derived Class destructor; Calls to Virtuals in Constructors and Destructors
+
+- Base classes should define a [virtual destructor](./polymorphism/run-time-polymorphism.md#virtual-destructors).
+
+- When a derived object is destroyed, the derived class destructor executes then the base class destructor executes, each destructor should free resources allocated in it's own constructors.
+
+  ```cpp
+  #include <iostream>
+  using namespace std;
+  class Base
+  {
+  public:
+      Base() {
+          cout << "constructor of base class is executing..." << endl;
+  }
+      ~Base() {
+          cout << "destructor of base class is executing..." << endl;
+      }
+  };
+  class Derived : public Base
+  {
+  public:
+      Derived() {
+          cout << "constructor of derived class is executing..." << endl;
+      }
+      ~Derived() {
+          cout << "destructor of derived class is executing..." << endl;
+      }
+  };
+  int main()
+  {
+      {
+          Base base_obj;
+      }
+      {
+          Derived derived_obj;
+      }
+  }
+  /*
+  constructor of base class is executing...
+  destructor of base class is executing...
+  constructor of base class is executing...
+  constructor of derived class is executing...
+  destructor of derived class is executing...
+  destructor of base class is executing...
+  */
+  ```
+
+<br>
+<br>
+
+### Copy and move in Inheritance
+
+//STUB - Learn these when needed. Knowledge available in textbook.
 
 - Consider the following class definition for the illustration
 
@@ -795,7 +770,12 @@ _For any given point in the code, if a public member of the base class would be 
   //90
   ```
 
-* Now consider the case of overloaded assignment operator
+<br>
+<br>
+
+### Overloaded assignment operator in inheritance
+
+- Now consider the case of overloaded assignment operator
 
   ```cpp
   int main()
@@ -839,104 +819,52 @@ _For any given point in the code, if a public member of the base class would be 
 
 <br>
 <br>
+<br>
 
-# Redefining Base Class Methods
+## Abstract Base Class
 
-- Derived classes can not only invoke Base class methods but also override or redefine base class methods.
+**An abstract class in C++ is a class that cannot be instantiated directly and is designed to be a base class for other classes.**
+
+- An abstract class contains _at least one pure virtual function_.
+- Abstract base classes are typically used to define a common interface for derived classes.
+- We cannot (directly) create objects of a type that is an abstract base class.
 
   ```cpp
-  #pragma once
-  #include <iostream>
-  using namespace std;
-
-  class Account {
-
+  class Base
+  {
   public:
-      double balance;
-      Account() :balance{ 0 }
-      {
-      }
-      void deposit(double amount)
-      {
-          balance += amount;
-      }
-  };
-
-  class SavingsAccount : public Account {
-  public:
-      void deposit(double amount)
-      {
-          amount += (amount * 0.1);
-          Account::deposit(amount);
-      }
+      virtual void hello() = 0; //pure virtual function and thus Base is an abstract class
   };
 
   int main()
   {
-      SavingsAccount mine;
-      mine.deposit(100);
-      cout << mine.balance << endl;		//110 because deposite of SavingsAccount class is executed
+      Base obj;
   }
+
+  //compilation error: cannot declare variable 'obj' to be of abstract type 'Base'
   ```
-
-<br>
-<br>
-
-## Virtual Destructors
-
-- In the above illustration, we can see that the base class destructor is called even for the pointer (of Base type) storing Derived class objects. This can be addressed using virtual destructors.
-- Make it a rule to **_provide public virtual destructors for every class that contains virtual functions._**
-- If the base class destructor is virtual then all derived class destructors are also virtual.
-- For the curious, virtual **constructors** make no sense and it is not allowed in C++.
-
-* In the following illustration, we make the destructor functions virtual and the run the same code as above.
 
   ```cpp
-  #include <iostream>
-  using namespace std;
-
-  class Base {
-  public:
-      virtual void say_hello()
-      {
-          cout << "Hello, I am a Base class object " << endl;
-      }
-
-      virtual ~Base()
-      {
-          cout << "Base class destructor" << endl;
-      }
-  };
-
-  class Derived : public Base {
-  public:
-      void say_hello()
-      {
-          cout << "Hello, I am a Derived class object " << endl;
-      }
-
-      ~Derived()
-      {
-          cout << "Derived class destructor" << endl;
-      }
-  };
-
-
-  int main()
+  void foo(Base obj)
   {
-      Base* b_ptr = new Base();
-      b_ptr->say_hello();
-
-      Base* d_ptr = new Derived();  //we can do this becuase Derived obj is a Base obj too (inheritance)
-      d_ptr->say_hello();
-
-      delete b_ptr;
-      delete d_ptr;
+      //cannot use Base object as parameter as it is an abstract class
   }
-
-  //Hello, I am a Base class object
-  //Hello, I am a Derived class object
-  //Base class destructor
-  //Derived class destructor
-  //Base class destructor
+  //compilation error
   ```
+
+<br>
+
+### Concrete Class
+
+- In C++, a concrete class is a class that can be instantiated directly, unlike an abstract class. It provides complete implementations for all of its member functions, including any virtual functions inherited from base classes.
+
+<br>
+
+### Interface in C++
+
+- Unlike languages like Java or C#, interfaces in C++ are achieved using Abstract classes.
+- It is convention to use precede the name of the abstract class using 'I\_' if we intend to use it as an interface. example: I_Shape
+
+<br>
+<br>
+<br>

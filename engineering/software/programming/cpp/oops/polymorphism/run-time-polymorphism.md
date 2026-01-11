@@ -4,67 +4,24 @@ Run-time polymorphism is the ability of a program to use a single name (interfac
 
 - It is also known as dynamic binding or late binding in C++.
 
+* [Inheritance](../inheritance.md) and polymorphism have interlinking topics, go through it once to understand this topic.
+
 <br>
 <br>
 <br>
 
 ## Virtual methods
 
-A virtual method is a member function declared within a base class using the `virtual` keyword, intended to be overridden by derived classes.
+A virtual method is a member function declared within a [base class](../inheritance.md#inheritance) using the `virtual` keyword, intended to be overridden by [derived classes](../inheritance.md#inheritance).
 
 - Virtual method is also known as polymorphic method.
-
-* Understand [inheritance](../inheritance.md) to understand this topic.
-
-<br>
-
 - Virtual methods enable dynamic binding when called through a pointer or reference.
 - Any nonstatic member function, other than a constructor, can be a virtual method.
 - The `virtual` keyword is used only in the class declaration, not in the function definition outside the class body.
-- A method that is declared as virtual in the base class is implicitly virtual in the derived classes as well.
+- A method that is declared as virtual in the base class is implicitly virtual in all the derived classes.
+  - In modern C++, it is bad practice to use `virtual` keyword in derived classes as typos may create brand new virtual functions. It is highly recommended to use [override](#override-specifier) specifier as it catches typos and logical errors in compile time.
 - Derived classes need not always override the virtual methods that they inherit, in such cases it inherits the version defined in the base class.
-
-* The function signatures of the virtual methods must be same in both base class and derived class for the derived class to override the base. If signatures are different, then it is considered as a redefiniton in the derived class i.e. considered as a fresh new method.
-
-  ```cpp
-  #include <iostream>
-  using namespace std;
-
-  class Base {
-  public:
-      virtual void say_hello() const
-      {
-          cout << "Hello, I am a Base class object " << endl;
-      }
-  };
-
-  class Derived : public Base {
-  public:
-      virtual void say_hello()        //won't be overriden as
-      {
-          cout << "Hello, I am a Derived class object " << endl;
-      }
-  };
-
-
-  int main()
-  {
-      Base* b_ptr = new Base();
-      b_ptr->say_hello();
-
-      Base* d_ptr = new Derived();  //we can do this becuase Derived obj is a Base obj too (inheritance)
-      d_ptr->say_hello();
-
-      delete b_ptr;
-      delete d_ptr;
-  }
-
-  //Hello, I am a Base class object
-  //Hello, I am a Base class object
-
-  //Check this [stack overflow](https://stackoverflow.com/questions/9488168/virtual-function-const-vs-virtual-function-non-const)
-  ```
-
+- Virtual method declared in base class must have a function in the derived class with exactly same [function signature](../polymorphism/polymorphism.md#function-signature) for run time polymorphism.
 - Virtual methods that have default arguments should use the same argument values in the base and derived classes.
 
   - When a call is made through a reference or pointer to base, the default argument(s) will be those defined in the base class. The base-class arguments will be used even when the derived version of the function is run.
@@ -224,10 +181,46 @@ int main() {
 ## Criteria for run time polymorphism
 
 1. Inheritance : A hierarchical relationship must exist between a base class and a derived class.
-1. Virtual method : Base class should declare virtual method and the derived class must override it.
+1. Virtual method : Base class should declare the method `virtual` and the derived classes should have same [function signature](../polymorphism/polymorphism.md#function-signature).
+
+   - The [override](#override-specifier) specifier is recommended but is not mandatory.
+
+   ```cpp
+   #include <iostream>
+   using namespace std;
+   class Base {
+   public:
+       virtual void say_hello()
+       {
+           cout << "Hello, I am a Base class object " << endl;
+       }
+   };
+
+   class Derived : public Base {
+   public:
+       void say_hello() override
+       {
+           cout << "Hello, I am a Derived class object " << endl;
+       }
+   };
+
+   int main()
+   {
+       Base* obj1 = new Base();
+       obj1->say_hello();
+       Base* obj2 = new Derived();
+       obj2->say_hello();
+       delete obj1;
+       delete obj2;
+   }
+
+   //Hello, I am a Base class object
+   //Hello, I am a Derived class object
+   ```
+
 1. Pointer or Reference : The function must be invoked through a pointer or reference to the base class that points to an object of a derived class.
 
-   - A call to a virtual function is bound at compile time when it is made on an expression with a simple type, such as nonreference or nonpointer.
+   - A call to a virtual function is bound at compile time (static binding) when it is made on an expression with a simple type, such as nonreference or nonpointer.
 
      ```cpp
      #include <iostream>
@@ -263,6 +256,123 @@ int main() {
      //Hello, World! from Base
      //Hello, World! from Derived
      ```
+
+- Following code shows how function is not overriden because of change in [function signature](../polymorphism/polymorphism.md#function-signature).
+
+  ```cpp
+  #include <iostream>
+  using namespace std;
+  class Base {
+  public:
+      virtual void say_hello()
+      {
+          cout << "Hello, I am a Base class object " << endl;
+      }
+  };
+
+  class Derived : public Base {
+  public:
+      void say_hello() const
+      {
+          cout << "Hello, I am a Derived class object " << endl;
+      }
+  };
+
+  int main()
+  {
+      Base* obj1 = new Base();
+      obj1->say_hello();
+      Base* obj2 = new Derived();
+      obj2->say_hello();
+      delete obj1;
+      delete obj2;
+  }
+
+  //Hello, I am a Base class object
+  //Hello, I am a Base class object
+  //Check this [stack overflow](https://stackoverflow.com/questions/9488168/virtual-function-const-vs-virtual-function-non-const)
+  ```
+
+* Following code shows function not being overriden because of static binding due to base class not using `virtual` keyword.
+
+  ```cpp
+  #include <iostream>
+  using namespace std;
+  class Base {
+  public:
+      void say_hello()
+      {
+          cout << "Hello, I am a Base class object " << endl;
+      }
+  };
+
+  class Derived : public Base {
+  public:
+      void say_hello()
+      {
+          cout << "Hello, I am a Derived class object " << endl;
+      }
+  };
+
+  int main()
+  {
+      Base* obj1 = new Base();
+      obj1->say_hello();
+      Base* obj2 = new Derived();
+      obj2->say_hello();
+      delete obj1;
+      delete obj2;
+  }
+
+  //Hello, I am a Base class object
+  //Hello, I am a Base class object
+  ```
+
+  - When the compiler encounters `obj2->say_hello();` it knows that `obj2` is a `Base*` type on the stack pointing to a `Derived` type object allocated on the heap. But it doesn't follow [run time polymorphism mechanism](#run-time-polymorphism-mechanism) as `say_hello` is not made `virtual` in `Base` class. It simply executes `Base` class's `say_hello` method. This is static binding.
+
+<br>
+<br>
+<br>
+
+## Override specifier
+
+The `override` specifier is a C++11 feature that explicitly indicates that a virtual member function in a derived class is intended to override a virtual function from a base class.
+
+- It instructs the compiler to verify (and throw an error if not)
+  - The function is overlaoding a virtual method from a base class.
+  - The function signatures match exactly.
+
+* Checkout the following illustration, We would want the say_hello function in the derived class to override, however there is change in the function signature (which we may forget) since we used `override` in derived class's say_hello, the compiler throws an error, reminds us.
+
+  ```cpp
+  #include <iostream>
+  using namespace std;
+
+  class Base {
+  public:
+      virtual void say_hello() const{
+      }
+  };
+
+  class Derived: public Base {
+  public:
+      void say_hello() override{
+      }
+  };
+
+  int main()
+  {
+  }
+
+  //ERROR: 'Derived::say_hello' method with override specifier 'override' did not override any base class methods.
+  ```
+
+* `override` is a specifier and not a C++ keyword. As it is a contextual keyword, it is a specifier.
+
+  - A C++ keyword is a reserved everywhere in the langauge.
+  - A specifier is valid only in specific contexts.
+
+* Note that `override` specifier is completely optional. If the base class method is marked as `virtual` and the derived class has the same funciton signature it will be overrided when called through a pointer even if the `override` keyword is not used. However it is highly suggested to use the specifier to follow good programming practice.
 
 <br>
 <br>
@@ -306,13 +416,13 @@ int main() {
   //Car engine roars to life!
   ```
 
-- `myVehicle` is a `Vehicle*` type. `myVehicle` is a pointer stored on the stack that points to an object in heap. In the heap, a `Car` object is allocated. This object contains all the data from both `Vehicle` and `Car` classses and a "vptr" pointing to the "vtable" for the `Car` class.
+- It sees that `myVehicle` is a `myVehicle*` type on the stack pointing to a `Car` type object allocated on the heap. This object contains all the data from both `Vehicle` and `Car` classses and a "vptr" pointing to the "vtable" for the `Car` class.
 
   ```cpp
   Vehicle* myVehicle = new Car();
   ```
 
-- When the program encounters `myVehicle->startEngine()` during compile time, The compiler notes that `startEngine` method is marked `virtual`. Instead of compiling the function implementation, it generates the code that says "Go to the object pointed to by `myVehicle`, follow it's vptr to the vtable and call the function at the specified index reserved for `startEngine`". At run time, the program just executes these instructions.
+- When the program encounters `myVehicle->startEngine()` during compile time, The compiler notes that `startEngine` method is marked `virtual`. Instead of compiling the function implementation, it generates the code that says "Go to the object pointed to by `myVehicle` (pointer derefence), follow it's vptr to the vtable and call the function at the specified index reserved for `startEngine`". At run time, the program just executes these instructions.
 
 - The compiler get's the index of startEngine from the myVehicle class's vtable, since all the subsequent derived classes also maintain the same index in their vtables the function is correctly executed. See [vtable notes](#virtual-method-table).
 
@@ -387,6 +497,109 @@ Scope operator can be used to prevent dynamic binding of virtual method and call
   //Hello, World! from Base
   ```
 
+<br>
+<br>
+<br>
+
+## Virtual destructors
+
+Virtual destructors are required for [polymorphic classes](#polymorphic-class) to ensure correct object destruction when an object of a derived class is deleted through a base-class pointer.
+
+- Make the destructor virtual :
+
+  1. If the class is [polymorphic](#polymorphic-class) i.e. it has atleast one virtual function.
+  1. If a class is intended to be inherited from (a base class).
+
+- As with any [virtual method](#virtual-methods), If the base class destructor is virtual then all derived class destructors are also virtual.
+- For the curious, virtual **constructors** make no sense and it is not allowed in C++.
+
+- In the following code the destructor in `Base` is not a virtual destructor. If a base class destructor is not virtual, deleting a derived object through a base-class pointer results in only the base-class destructor being executed, because the destructor call is resolved using static binding. This is similar to illustration shown in [criteria for function override](#criteria-for-function-override).
+
+  ```cpp
+  #include <iostream>
+  using namespace std;
+
+
+  class Base {
+  public:
+      virtual void say_hello(){
+      }
+
+      ~Base()
+      {
+          cout << "Base class destructor" << endl;
+      }
+  };
+
+  class Derived : public Base {
+  public:
+      void say_hello() override {
+      }
+
+      ~Derived()
+      {
+          cout << "Derived class destructor" << endl;
+      }
+  };
+
+
+  int main()
+  {
+      Base* obj1 = new Base();
+      Base* obj2 = new Derived();
+      delete obj1;
+      delete obj2;
+  }
+
+  //Base class destructor
+  //Base class destructor
+  ```
+
+* Declaring the base class destructor as virtual makes destructor calls dynamically dispatched, ensuring that the derived class destructor is executed first, followed by base class destructors, thus correctly releasing all resources.
+
+  ```cpp
+  #include <iostream>
+  using namespace std;
+
+
+  class Base {
+  public:
+      virtual void say_hello(){
+      }
+
+      virtual ~Base()
+      {
+          cout << "Base class destructor" << endl;
+      }
+  };
+
+  class Derived : public Base {
+  public:
+      void say_hello() override {
+      }
+
+      ~Derived()
+      {
+          cout << "Derived class destructor" << endl;
+      }
+  };
+
+
+  int main()
+  {
+      Base* obj1 = new Base();
+      Base* obj2 = new Derived();
+      delete obj1;
+      delete obj2;
+  }
+
+
+  //Base class destructor
+  //Derived class destructor
+  //Base class destructor
+  ```
+
+<br>
 <br>
 <br>
 
