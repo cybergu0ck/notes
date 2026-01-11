@@ -375,7 +375,7 @@
 ### [Compile time polymorphism](oops/polymorphism/polymorphism.md#compile-time-polymorphism)
 
 - [Function overloading](oops/polymorphism/polymorphism.md#function-overloading)
-    - [Function signature](oops/polymorphism/polymorphism.md#function-signature)
+  - [Function signature](oops/polymorphism/polymorphism.md#function-signature)
 - [Overloaded constructors](oops/polymorphism/polymorphism.md#overloaded-constructors)
 - [Rule of five](oops/polymorphism/rule-of-five.md)
   - [Destructor](oops/polymorphism/rule-of-five.md#destructor)
@@ -388,13 +388,12 @@
   - [Move constructors](oops/polymorphism/rule-of-five.md#move-constructors)
   - [Move assignment](oops/polymorphism/rule-of-five.md#move-assignment)
 - [Operator overloading](oops/polymorphism/polymorphism.md#operator-overloading)
-    - [Assignment operator overloading](oops/polymorphism/polymorphism.md#assignment-operator-overloading)
-    - [Copy assignment operator](oops/polymorphism/polymorphism.md#copy-assignment-operator)
-    - [Move assignment operator](oops/polymorphism/polymorphism.md#move-assignment-operator)
-    - [Stream operator overloading](oops/polymorphism/polymorphism.md#stream-operator-overloading)
-    - [Unary operator overloading](oops/polymorphism/polymorphism.md#unary-operator-overloading)
-    - [Arrow assignment overloading](oops/polymorphism/polymorphism.md#arrow-assignment-overloading)
-
+  - [Assignment operator overloading](oops/polymorphism/polymorphism.md#assignment-operator-overloading)
+  - [Copy assignment operator](oops/polymorphism/polymorphism.md#copy-assignment-operator)
+  - [Move assignment operator](oops/polymorphism/polymorphism.md#move-assignment-operator)
+  - [Stream operator overloading](oops/polymorphism/polymorphism.md#stream-operator-overloading)
+  - [Unary operator overloading](oops/polymorphism/polymorphism.md#unary-operator-overloading)
+  - [Arrow assignment overloading](oops/polymorphism/polymorphism.md#arrow-assignment-overloading)
 
 <br>
 <br>
@@ -404,75 +403,65 @@
 - [Virtual methods](oops/polymorphism/run-time-polymorphism.md#virtual-methods)
 - [Polymorphic class](oops/polymorphism/run-time-polymorphism.md#polymorphic-class)
 - [Virtual method table](oops/polymorphism/run-time-polymorphism.md#virtual-method-table)
-    - [Illustration for vtable](oops/polymorphism/run-time-polymorphism.md#illustration-for-vtable)
+  - [Illustration for vtable](oops/polymorphism/run-time-polymorphism.md#illustration-for-vtable)
 - [Virtual pointer](oops/polymorphism/run-time-polymorphism.md#virtual-pointer)
-    - [Illustration for vptr](oops/polymorphism/run-time-polymorphism.md#illustration-for-vptr)
+  - [Illustration for vptr](oops/polymorphism/run-time-polymorphism.md#illustration-for-vptr)
 - [Criteria for run time polymorphism ](oops/polymorphism/run-time-polymorphism.md#criteria-for-run-time-polymorphism)
 - [Run time polymorphism mechanism ](oops/polymorphism/run-time-polymorphism.md#run-time-polymorphism-mechanism)
-- [Circumventing run time polymorphism  ](oops/polymorphism/run-time-polymorphism.md#circumventing-run-time-polymorphism)
+- [Circumventing run time polymorphism ](oops/polymorphism/run-time-polymorphism.md#circumventing-run-time-polymorphism)
 - [Pure virtual function ](oops/polymorphism/run-time-polymorphism.md#pure-virtual-function)
 - [RTTI](oops/polymorphism/run-time-polymorphism.md#rtti)
-    - [Criteria for RTTI](oops/polymorphism/run-time-polymorphism.md#core-operators-for-rtti)
-    - [Core operators for RTTI](oops/polymorphism/run-time-polymorphism.md#core-operators-for-rtti)
-
-
+  - [Criteria for RTTI](oops/polymorphism/run-time-polymorphism.md#core-operators-for-rtti)
+  - [Core operators for RTTI](oops/polymorphism/run-time-polymorphism.md#core-operators-for-rtti)
 
 <br>
 <br>
 <br>
 
+## [Inheritance](oops/inheritance.md#inheritance)
 
+- [Is A Relationship](oops/inheritance.md#is-a-relationship)
+  - [Derived to Base Conversion](oops/inheritance.md#derived-to-base-conversion)
+  - [Base to Derived Conversion](oops/inheritance.md#base-to-derived-conversion)
+  - [Object Slicing](oops/inheritance.md#object-slicing)
+- [Virtual Functions](oops/inheritance.md#virtual-functions)
+- [Final Specifier](oops/inheritance.md#final-specifier)
+- [Preventing Inheritance](oops/inheritance.md#preventing-inheritance)
+- [Abstract Base Class](oops/inheritance.md#abstract-base-class)
+  - [Concrete Class](oops/inheritance.md#concrete-class)
+  - [Interface in C++](oops/inheritance.md#interface-in-c)
+- [Access Control in Inheritance](oops/inheritance.md#access-control-in-inheritance)
+  - [Protected Members](oops/inheritance.md#protected-members)
+  - [Public Inheritance](oops/inheritance.md#public-inheritance)
+  - [Protected Inheritance](oops/inheritance.md#protected-inheritance)
+  - [Private Inheritance](oops/inheritance.md#private-inheritance)
+  - [Accesssibility of Derived to Base Conversion](oops/inheritance.md#accesssibility-of-derived-to-base-conversion)
+  - [Friendship and Inheritance](oops/inheritance.md#friendship-and-inheritance)
+- [Multiple Inheritance](oops/inheritance.md#multiple-inheritance)
+- [Virtual Inheritance](oops/inheritance.md#virtual-inheritance)
 
-<br>
-<br>
-<br>
+- [Redefining Base Class Methods](oops/inheritance.md#redefining-base-class-methods)
 
-## [Inheritance](oops/05-cpp-inheritence.md#inheritance)
-
-- [Is A Relationship](oops/05-cpp-inheritence.md#is-a-relationship)
-  - [Derived to Base Conversion](oops/05-cpp-inheritence.md#derived-to-base-conversion)
-  - [Base to Derived Conversion](oops/05-cpp-inheritence.md#base-to-derived-conversion)
-  - [Object Slicing](oops/05-cpp-inheritence.md#object-slicing)
-- [Virtual Functions](oops/05-cpp-inheritence.md#virtual-functions)
-- [Final Specifier](oops/05-cpp-inheritence.md#final-specifier)
-- [Preventing Inheritance](oops/05-cpp-inheritence.md#preventing-inheritance)
-- [Abstract Base Class](oops/05-cpp-inheritence.md#abstract-base-class)
-  - [Concrete Class](oops/05-cpp-inheritence.md#concrete-class)
-  - [Interface in C++](oops/05-cpp-inheritence.md#interface-in-c)
-- [Access Control in Inheritance](oops/05-cpp-inheritence.md#access-control-in-inheritance)
-  - [Protected Members](oops/05-cpp-inheritence.md#protected-members)
-  - [Public Inheritance](oops/05-cpp-inheritence.md#public-inheritance)
-  - [Protected Inheritance](oops/05-cpp-inheritence.md#protected-inheritance)
-  - [Private Inheritance](oops/05-cpp-inheritence.md#private-inheritance)
-  - [Accesssibility of Derived to Base Conversion](oops/05-cpp-inheritence.md#accesssibility-of-derived-to-base-conversion)
-  - [Friendship and Inheritance](oops/05-cpp-inheritence.md#friendship-and-inheritance)
-- [Multiple Inheritance](oops/05-cpp-inheritence.md#multiple-inheritance)
-- [Virtual Inheritance](oops/05-cpp-inheritence.md#virtual-inheritance)
-
-
-- [Redefining Base Class Methods](oops/05-cpp-inheritence.md#redefining-base-class-methods)
-  - [Virtual Destructors](oops/05-cpp-inheritence.md#virtual-destructors)
+  - [Virtual Destructors](oops/inheritance.md#virtual-destructors)
 
 - [Sort theses]()
-    - [Constructors in Inheritance](oops/05-cpp-inheritence.md#constructors-in-inheritance)
-    - [Destructors in Inheritance](oops/05-cpp-inheritence.md#destructors-in-inheritance)
-    - [Copy Control in Inheritance](oops/05-cpp-inheritence.md#copy-control-in-inheritance)
-    - [Constructors and Destructors in the context of Inheritence](oops/05-cpp-inheritence.md#constructors-and-destructors-in-the-context-of-inheritence)
-    - [Illustration for concept clarity](oops/05-cpp-inheritence.md#illustration-for-concept-clarity)
-    - [Invoking Overloaded Base Class Constructors](oops/05-cpp-inheritence.md#invoking-overloaded-base-class-constructors)
-    - [Compiler generating constructors](oops/05-cpp-inheritence.md#compiler-generating-constructors)
-    - [In the context of Inheritance](oops/05-cpp-inheritence.md#in-the-context-of-inheritance)
-    - [In the context of containment](oops/05-cpp-inheritence.md#in-the-context-of-containment)
-    - [In the context of Hybrid Inheritance](oops/05-cpp-inheritence.md#in-the-context-of-hybrid-inheritance)
-    - [Copy/Move constructors and overloaded assignment operator in context of inheritance](oops/05-cpp-inheritence.md#copymove-constructors-and-overloaded-assignment-operator-in-context-of-inheritance)
 
-    - [Miscallaneous](oops/05-cpp-inheritence.md#miscallaneous)
-    - [Override specifier](oops/05-cpp-inheritence.md#override-specifier)
-    - [Constructors in the context of Inheritance](oops/05-cpp-inheritence.md#constructors-in-the-context-of-inheritance)
-    - [Base Class](oops/05-cpp-inheritence.md#base-class)
+  - [Constructors in Inheritance](oops/inheritance.md#constructors-in-inheritance)
+  - [Destructors in Inheritance](oops/inheritance.md#destructors-in-inheritance)
+  - [Copy Control in Inheritance](oops/inheritance.md#copy-control-in-inheritance)
+  - [Constructors and Destructors in the context of Inheritence](oops/inheritance.md#constructors-and-destructors-in-the-context-of-inheritence)
+  - [Illustration for concept clarity](oops/inheritance.md#illustration-for-concept-clarity)
+  - [Invoking Overloaded Base Class Constructors](oops/inheritance.md#invoking-overloaded-base-class-constructors)
+  - [Compiler generating constructors](oops/inheritance.md#compiler-generating-constructors)
+  - [In the context of Inheritance](oops/inheritance.md#in-the-context-of-inheritance)
+  - [In the context of containment](oops/inheritance.md#in-the-context-of-containment)
+  - [In the context of Hybrid Inheritance](oops/inheritance.md#in-the-context-of-hybrid-inheritance)
+  - [Copy/Move constructors and overloaded assignment operator in context of inheritance](oops/inheritance.md#copymove-constructors-and-overloaded-assignment-operator-in-context-of-inheritance)
 
-
-
+  - [Miscallaneous](oops/inheritance.md#miscallaneous)
+  - [Override specifier](oops/inheritance.md#override-specifier)
+  - [Constructors in the context of Inheritance](oops/inheritance.md#constructors-in-the-context-of-inheritance)
+  - [Base Class](oops/inheritance.md#base-class)
 
 <br>
 <br>

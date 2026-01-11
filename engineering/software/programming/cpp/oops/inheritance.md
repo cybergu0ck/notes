@@ -1,6 +1,6 @@
 # Inheritance
 
-**Inheritance is the mechanism by which a class can acquire properties and behaviors from another class.**
+Inheritance is the mechanism by which a class can acquire properties and behaviors from another class.
 
 - **Base Class** is the class from which other classes inherit properties and behaviors. They are also known as Super Class or Parent Class.
 - **Derived Class** is the class that inherits properties and behaviors from a base class and can also extend or modify them. They are also called as Sub Class or Child Class.
@@ -20,97 +20,11 @@
   };
   ```
 
-- Inheritance can be Single or Multiple based on the number of classes it inherits from.
-- Inheritance can be public, protected and private based on the access specifier.
 - The construction of an derived class object will always be the sum of the sizes of all non-static data members of the base class and the sum size of all non-static data members of the derived class. It does not matter which access specifier we are using at the time of inheritance, _the access specifier deals with only access to those data_.
 
 <br>
-
-## Is A Relationship
-
-The derived object contains all the data corresponsing to it's base class, Hence we can use a derived object as if it were a base object i.e. _Derived is a Base_.
-
-- The base and the derived parts of an object are not guaranteed to be stored contiguously. The standard doesn't specify how the derived objects are laid out in memory.
-
-<br>
-
-#### Derived to Base Conversion
-
-Derived-to-base conversion is the implicit conversion which allows the binding a base class referance or pointer to the base class part of a derived object. Derived IS-A Base.
-
-```cpp
-Derived derived_obj;
-
-Base *ptr = &derived_obj;
-Base &ref = derived_obj;
-```
-
-- The automatic derived-to-base conversion applies only for conversions to a _reference or pointer type_. There is no such conversion from a derived-class type to the base-class type.
-- Checkout [accessibility of derived to base conversion](#accesssibility-of-derived-to-base-conversion) in the context of different types of inheritance based on access specifier.
-
-<br>
-
-#### Base to Derived Conversion
-
-There is no implicit conversion from base to derived.
-
-```cpp
-Base base_obj;
-Derived derived_obj;
-
-Derived *ptr = &base_obj;
-Derived &ref = base_obj;
-
-Base *base_ptr = &derived_obj;
-Derived *derived_ptr = base_ptr; //Still an error even if the base_ptr is bound to a derived object!
-```
-
-- //REVIEW - Add about dynamic_cast and static_cast of Base to derived.
-
-<br>
-
-#### Object Slicing
-
-Object slicing occurs when a base class object is initialised or assigned with a derived class object, resulting in the loss of the derived class-specific attributes and methods.
-
-```cpp
-#include <iostream>
-
-class Base {
-public:
-    int baseValue;
-    virtual void display() const {
-        std::cout << "Base value: " << baseValue << std::endl;
-    }
-};
-
-class Derived : public Base {
-public:
-    int derivedValue;
-    void display() const override {
-        std::cout << "Base value: " << baseValue << ", Derived value: " << derivedValue << std::endl;
-    }
-};
-
-int main() {
-    Derived derivedObj;
-    derivedObj.baseValue = 1;
-    derivedObj.derivedValue = 2;
-
-    // Object slicing occurs here
-    Base baseObj1{derivedObj};  //calls the compiler synthesised copy constructor
-    Base baseObj2 = derivedObj; //calls the compiler synthesised copy assignment
-    baseObj.display();          // Base value: 1
-
-    return 0;
-}
-```
-
-- It is not a good practice and hence pointers or references to the base class objects must be preferred.
-
 <br>
 <br>
-
 
 ## Virtual methods
 
@@ -120,23 +34,154 @@ Find it in [runtime polymorphism](./polymorphism/run-time-polymorphism.md#virtua
 <br>
 <br>
 
-## Final Specifier
+## Is a relationship
 
-- `final` specifier when used with a class will not let any other class to be derived from it.
+The derived object contains all the data corresponsing to it's base class, Hence we can use a derived object as if it were a base object i.e. _Derived is a Base_.
+
+<br>
+<br>
+
+### Derived to base conversion
+
+Derived-to-base conversion is the implicit conversion which allows the binding a base class referance or pointer to the base class part of a derived object. Derived "IS-A" Base.
+
+```cpp
+#include <iostream>
+class Vehicle {
+public:
+    virtual ~Vehicle() {} //Virtual destructor for safe deletion
+};
+
+class Car : public Vehicle {
+};
+
+int main() {
+    Car* myCar = new Car();
+    Vehicle* myFavVehicle = myCar; // Base pointer points directly to the derived object
+    Vehicle& myFav = *myCar; // Base reference binds to the dereferenced pointer (the object)
+
+    delete myFavVehicle; // Works correctly because of the virtual destructor
+    return 0;
+}
+```
+
+- `myFavVehicle` is a pointer type (`Vehicle*`) in stack. It points to a `Car` object created in the heap.
+- The automatic derived-to-base conversion applies only for conversions to a _reference or pointer type_. There is no such conversion from a derived-class type to the base-class type.
+- Checkout [accessibility of derived to base conversion](#accesssibility-of-derived-to-base-conversion) in the context of different types of inheritance based on access specifier.
+
+<br>
+<br>
+
+### Base to derived conversion
+
+There is no implicit conversion from base to derived.
+
+```cpp
+Base base_obj;
+Derived derived_obj;
+
+Base *base_ptr = &derived_obj;
+Derived *derived_ptr = base_ptr; //Still an error even if the base_ptr is bound to a derived object!
+```
+
+- Checkout [down casting](../data-types/casting.md#down-casting).
+
+<br>
+<br>
+<br>
+
+## Object Slicing
+
+Object slicing occurs when a base class object is initialised or assigned with a derived class object, resulting in the loss of the derived class-specific attributes and methods.
+
+- In the following code, the `display` method of `Base` class is called.
 
   ```cpp
-  class Base final {
+  #include <iostream>
 
+  class Base {
+  public:
+      int baseValue;
+      virtual void display() const {
+          std::cout << "Base value: " << baseValue << std::endl;
+      }
   };
 
-  class Derived: public Base {
-
+  class Derived : public Base {
+  public:
+      int derivedValue;
+      void display() const override {
+          std::cout << "Base value: " << baseValue << ", Derived value: " << derivedValue << std::endl;
+      }
   };
 
-  //'Derived': cannot inherit from 'Base' as it has been declared as 'final'
+  int main() {
+      Derived derivedObj;
+      derivedObj.baseValue = 1;
+      derivedObj.derivedValue = 2;
+
+      // Object slicing occurs here
+      Base baseObj1{derivedObj};  //calls the compiler synthesised copy constructor
+      Base baseObj2 = derivedObj; //calls the compiler synthesised copy assignment
+      baseObj.display();          // Base value: 1
+
+      return 0;
+  }
   ```
 
-* `final` specifier when used with virtual functions will not let any derived class function to override it.
+- When pointers are used, we invoke polymorphism i.e. [derived to base conversion](#derived-to-base-conversion).
+
+  ```cpp
+  #include <iostream>
+
+  class Base {
+  public:
+      int baseValue;
+      virtual void display() const {
+          std::cout << "Base value: " << baseValue << std::endl;
+      }
+  };
+
+  class Derived : public Base {
+  public:
+      int derivedValue;
+      void display() const override {
+          std::cout << "Base value: " << baseValue << ", Derived value: " << derivedValue << std::endl;
+      }
+  };
+
+  int main() {
+      Derived derivedObj;
+      derivedObj.baseValue = 1;
+      derivedObj.derivedValue = 2;
+
+      Base* baseObj2 = &derivedObj;
+      baseObj2->display();          //Base value: 1, Derived value: 2
+      return 0;
+  }
+  ```
+
+<br>
+<br>
+<br>
+
+## Preventing inheritance
+
+`final` keyword is to be used to prevent a class from being used as a base class.
+
+```cpp
+class Base final {
+
+};
+
+class Derived: public Base {
+
+};
+
+//'Derived': cannot inherit from 'Base' as it has been declared as 'final'
+```
+
+- `final` specifier when used with virtual functions will not let any derived class function to override it.
 
   ```cpp
   class Base {
@@ -157,59 +202,6 @@ Find it in [runtime polymorphism](./polymorphism/run-time-polymorphism.md#virtua
   ```
 
 <br>
-<br>
-
-## Preventing Inheritance
-
-C++ 11 pressented the [`final`](#final-specifier) keyword to prevent a class from being used as a base class.
-
-<br>
-<br>
-
-## Abstract Base Class
-
-**An abstract class in C++ is a class that cannot be instantiated directly and is designed to be a base class for other classes.**
-
-- An abstract class contains _at least one pure virtual function_.
-- Abstract base classes are typically used to define a common interface for derived classes.
-- We cannot (directly) create objects of a type that is an abstract base class.
-
-  ```cpp
-  class Base
-  {
-  public:
-      virtual void hello() = 0; //pure virtual function and thus Base is an abstract class
-  };
-
-  int main()
-  {
-      Base obj;
-  }
-
-  //compilation error: cannot declare variable 'obj' to be of abstract type 'Base'
-  ```
-
-  ```cpp
-  void foo(Base obj)
-  {
-      //cannot use Base object as parameter as it is an abstract class
-  }
-  //compilation error
-  ```
-
-<br>
-
-### Concrete Class
-
-- In C++, a concrete class is a class that can be instantiated directly, unlike an abstract class. It provides complete implementations for all of its member functions, including any virtual functions inherited from base classes.
-
-<br>
-
-### Interface in C++
-
-- Unlike languages like Java or C#, interfaces in C++ are achieved using Abstract classes.
-- It is convention to use precede the name of the abstract class using 'I\_' if we intend to use it as an interface. example: I_Shape
-
 <br>
 <br>
 
@@ -316,6 +308,55 @@ _For any given point in the code, if a public member of the base class would be 
 
 //STUB - Learn these when needed. Knowledge available in textbook.
 
+<br>
+<br>
+<br>
+
+## Abstract Base Class
+
+**An abstract class in C++ is a class that cannot be instantiated directly and is designed to be a base class for other classes.**
+
+- An abstract class contains _at least one pure virtual function_.
+- Abstract base classes are typically used to define a common interface for derived classes.
+- We cannot (directly) create objects of a type that is an abstract base class.
+
+  ```cpp
+  class Base
+  {
+  public:
+      virtual void hello() = 0; //pure virtual function and thus Base is an abstract class
+  };
+
+  int main()
+  {
+      Base obj;
+  }
+
+  //compilation error: cannot declare variable 'obj' to be of abstract type 'Base'
+  ```
+
+  ```cpp
+  void foo(Base obj)
+  {
+      //cannot use Base object as parameter as it is an abstract class
+  }
+  //compilation error
+  ```
+
+<br>
+
+### Concrete Class
+
+- In C++, a concrete class is a class that can be instantiated directly, unlike an abstract class. It provides complete implementations for all of its member functions, including any virtual functions inherited from base classes.
+
+<br>
+
+### Interface in C++
+
+- Unlike languages like Java or C#, interfaces in C++ are achieved using Abstract classes.
+- It is convention to use precede the name of the abstract class using 'I\_' if we intend to use it as an interface. example: I_Shape
+
+<br>
 <br>
 <br>
 
