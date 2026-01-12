@@ -84,14 +84,13 @@
 - [Arithmetic Operators](fundamentals/operators.md#arithmetic-operators)
 - [Assigment Operators](fundamentals/operators.md#assigment-operators)
   - [Compound Assignment Operators](fundamentals/operators.md#compound-assignment-operators)
-- [Relational Operators (Comparsion Operators)](fundamentals/operators.md#relational-operators-comparsion-operators)
+- [Relational operators](fundamentals/operators.md#relational-operators)
 - [Increment and Decrement Operators](fundamentals/operators.md#increment-and-decrement-operators)
   - [prefix](fundamentals/operators.md#prefix)
   - [postfix](fundamentals/operators.md#postfix)
 - [Logical Operators](fundamentals/operators.md#logical-operators)
 - [Bitwise Operators](fundamentals/operators.md#bitwise-operators)
-- [Address of Operator (&)](fundamentals/operators.md#address-of-operator)
-
+- [Address of Operator](fundamentals/operators.md#address-of-operator)
 - [Operator Precedence](fundamentals/operators.md#operator-precedence)
 
 <br>

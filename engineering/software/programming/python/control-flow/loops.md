@@ -1,19 +1,27 @@
-# For Loops
+# Loops
 
-## looping over a collection
+<br>
+<br>
+<br>
 
-- Python’s `for` statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence.
+## For Loops
 
-  ```python
-  # Measure some strings:
-  words = ['cat', 'window', 'defenestrate']
-  for w in words:
-      print(w, end = '\t')
+<br>
+<br>
 
-  #> cat  window  defenestrate
-  ```
+### looping over a collection
 
-- Iterating using more than 1 variable
+Python’s `for` statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence.
+
+```python
+words = ['cat', 'window', 'defenestrate']
+for w in words:
+    print(w, end = '\t')
+
+#> cat  window  defenestrate
+```
+
+- For loop with unpacking.
 
   ```python
   results = [('ramesh',100), ('tate',69), ('bil',0)]
@@ -28,7 +36,7 @@
 
 <br>
 
-## Iterating over collections while modifying it
+#### Looping over a collection with modification
 
 - Code that modifies a collection while iterating over that same collection can be tricky to get right. Instead, it is usually more straight-forward to loop over a **_copy of the collection_** or to **_create a new collection_**.
 
@@ -59,8 +67,9 @@
   ```
 
 <br>
+<br>
 
-## For loops using **`range()`** and **`len()`**
+### For loop using range and len function
 
 - The syntax of `range()`
 
@@ -72,27 +81,26 @@
   - stop: The value of the stop parameter
   - step: The value of the step parameter (or `1` if the parameter was not supplied)
 
-- ```python
-  nums = [1,2,3,4,5]
+- Examples :
 
+  ```python
+  nums = [1,2,3,4,5]
   for index in range(len(nums)):
       print(nums[index], end='\t')
 
   #> 1   2   3   4   5
   ```
 
-- ```python
+  ```python
   nums = [0,1,2,3,4,5]
-
   for index in range(2,4):             #It is exclusive of 'stop' parameter in range
       print(nums[index], end='\t')
 
   #> 2   3
   ```
 
-- ```python
+  ```python
   nums = [0,1,2,3,4,5]
-
   for index in range(len(nums)-1, -1, -1):   #Reverse order
       print(nums[index], end='\t')
 
@@ -100,8 +108,9 @@
   ```
 
 <br>
+<br>
 
-## Enumerated for loops
+### Enumerated for loops
 
 - ```python
   seasons = ['Spring', 'Summer', 'Fall', 'Winter']
@@ -138,58 +147,61 @@
 
 <br>
 <br>
+<br>
 
-# While loops
+## While loops
 
 <br>
 <br>
 
-# Break statement
+## Break statement
 
-- `break` is used to terminate an ongoing loop.
+`break` is used to terminate an ongoing loop.
 
-  ```python
-  users = {'Éléonore': 'inactive','Hans': 'active', '景太郎': 'active'}
+```python
+users = {'Éléonore': 'inactive','Hans': 'active', '景太郎': 'active'}
 
-  inactive_count = 0
+inactive_count = 0
 
-  for user, status in users.items():
-      if status == 'active':
-          print("active users found, do not perform maintainence")
-          break                           #breaks entirely out of the for loop
-      else:
-          inactive_count += 1
+for user, status in users.items():
+    if status == 'active':
+        print("active users found, do not perform maintainence")
+        break                           #breaks entirely out of the for loop
+    else:
+        inactive_count += 1
 
-  if inactive_count == len(users):
-      print("All users are inasctive, perform maintenance.")
+if inactive_count == len(users):
+    print("All users are inasctive, perform maintenance.")
 
-  #>active users found, do not perform maintainence
-  ```
-
-<br>
-<br>
-
-# Continue statement
-
-- `continue` is used to skip an interation in an ongoing loop.
-
-  ```python
-  odd_nums = []
-
-  for num in range(10):
-      if num%2 ==0:
-          continue          #skips this iteration and starts the next iteration.
-      odd_nums.append(num)
-
-  print(odd_nums)
-
-  #> [1, 3, 5, 7, 9]
-  ```
+#>active users found, do not perform maintainence
+```
 
 <br>
 <br>
+<br>
 
-# **`else`** after loops
+## Continue statement
+
+`continue` is used to skip an interation in an ongoing loop.
+
+```python
+odd_nums = []
+
+for num in range(10):
+    if num%2 ==0:
+        continue          #skips this iteration and starts the next iteration.
+    odd_nums.append(num)
+
+print(odd_nums)
+
+#> [1, 3, 5, 7, 9]
+```
+
+<br>
+<br>
+<br>
+
+## Else after loops
 
 - The `else` block just after for/while is executed only when the loop is NOT terminated by a `break` statement.
 

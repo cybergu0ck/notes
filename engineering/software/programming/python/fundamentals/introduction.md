@@ -1,4 +1,28 @@
-# Interizmo coding style
+# Introuction
+
+<br>
+<br>
+<br>
+
+## Comments
+
+- Single line comments using `#`.
+- Multi line comments.
+
+  ```py
+  """
+  This is
+  a
+  long
+  comment
+  """
+  ```
+
+<br>
+<br>
+<br>
+
+## Interizmo coding style
 
 For Python, [**PEP 8**](https://peps.python.org/pep-0008/) has emerged as the style guide that most projects adhere to; it promotes a very readable and eye-pleasing coding style. Every Python developer should read it at some point; here are the most important points extracted for you:
 
