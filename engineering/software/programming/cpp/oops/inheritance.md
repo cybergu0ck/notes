@@ -355,14 +355,14 @@ class Derived: public Base {
 
 ### Multiple Inheritance
 
-//STUB - Learn these when needed. Knowledge available in textbook.
+<!-- //STUB - Learn these when needed. Knowledge available in textbook. -->
 
 <br>
 <br>
 
 ### Virtual Inheritance
 
-//STUB - Learn these when needed. Knowledge available in textbook.
+<!-- //STUB - Learn these when needed. Knowledge available in textbook. -->
 
 <br>
 <br>
@@ -375,7 +375,7 @@ class Derived: public Base {
 
 ### Constructors in Inheritance
 
-//TODO - Learn this; Inherited constructors
+<!-- //TODO - Rework this topic : Constructors in Inheritance -->
 
 - Although, the base class constructor is called before the derived class constructor is called. The derived class cannot intialise the class members of the base class without explicitley using a base class constructor.
 - The base class is initialised first and then the derived class, in the order in which they are declared in the class.
@@ -617,7 +617,7 @@ class Derived: public Base {
 
 ### Destructors in Inheritance
 
-//TODO - Learn this; Virtual Destructors; Derived Class destructor; Calls to Virtuals in Constructors and Destructors
+<!-- //TODO - Rework this topic : Destructors in Inheritance -->
 
 - Base classes should define a [virtual destructor](./polymorphism/run-time-polymorphism.md#virtual-destructors).
 
@@ -670,7 +670,7 @@ class Derived: public Base {
 
 ### Copy and move in Inheritance
 
-//STUB - Learn these when needed. Knowledge available in textbook.
+<!-- //TODO - Rework this when needed. Check textbook : Copy and move in Inheritance -->
 
 - Consider the following class definition for the illustration
 
@@ -778,6 +778,8 @@ class Derived: public Base {
 
 ### Overloaded assignment operator in inheritance
 
+<!-- //TODO - Rework this topic : Overloaded assignment operator in inheritance -->
+
 - Now consider the case of overloaded assignment operator
 
   ```cpp
@@ -826,7 +828,7 @@ class Derived: public Base {
 
 ## Friendship in inheritance
 
-//STUB - Learn these when needed. Knowledge available in textbook.
+<!-- //STUB - Learn these when needed. Knowledge available in textbook. -->
 
 <br>
 <br>
