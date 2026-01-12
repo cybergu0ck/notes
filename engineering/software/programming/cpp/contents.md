@@ -19,7 +19,7 @@
 <br>
 <br>
 
-## [Build Process](fundamentals/build-process.md#build-process)
+## [Build process](fundamentals/build-process.md#build-process)
 
 - [Preprocessing](fundamentals/build-process.md#preprocessing)
   - [Preprocessor Directive](fundamentals/build-process.md#preprocessor-directive)
@@ -171,7 +171,7 @@
 <br>
 <br>
 
-## [Storage Class Specifiers](oops/07-storage-class-specifiers.md#storage-class-specifiers)
+## [Storage class specifiers](oops/07-storage-class-specifiers.md#storage-class-specifiers)
 
 - [`extern` specifier](oops/07-storage-class-specifiers.md#extern-specifier)
 - [`static` specifier](oops/07-storage-class-specifiers.md#static-specifier)
@@ -203,7 +203,7 @@
 <br>
 <br>
 
-# Control Flow
+# Control flow
 
 <br>
 <br>
@@ -276,7 +276,7 @@
 <br>
 <br>
 
-## [Function Pointers](control-flow/function-pointers.md#function-pointers)
+## [Function pointers](control-flow/function-pointers.md#function-pointers)
 
 - [Function pointers with class member functions](control-flow/function-pointers.md#function-pointers-with-class-member-functions)
 
@@ -287,13 +287,13 @@
 <br>
 <br>
 
-# Resource Management
+# Resource management
 
 <br>
 <br>
 <br>
 
-## [Dynamic Memory Allocation](resource-management/dynamic-memory-allocation.md#dynamic-memory-allocation)
+## [Dynamic memory allocation](resource-management/dynamic-memory-allocation.md#dynamic-memory-allocation)
 
 - [Dynamic Memory Allocation in C vs C++](resource-management/dynamic-memory-allocation.md#dynamic-memory-allocation-in-c-vs-c)
 - [Allocating Stack Memory](resource-management/dynamic-memory-allocation.md#allocating-stack-memory)
@@ -313,15 +313,15 @@
 <br>
 <br>
 
-## [Smart Pointer](resource-management/smart-pointers.md#smart-pointer)
+## [Smart pointers](resource-management/smart-pointers.md#smart-pointer)
 
-- [Unique Pointer](resource-management/smart-pointers.md#unique-pointer)
+- [Unique pointer](resource-management/smart-pointers.md#unique-pointer)
 
-- [Shared Pointer](resource-management/smart-pointers.md#shared-pointer)
+- [Shared pointer](resource-management/smart-pointers.md#shared-pointer)
 
-- [Weak Pointers](resource-management/smart-pointers.md#weak-pointers)
+- [Weak pointers](resource-management/smart-pointers.md#weak-pointers)
 
-- [Custom Deleter](resource-management/smart-pointers.md#custom-deleter)
+- [Custom deleter](resource-management/smart-pointers.md#custom-deleter)
 
   - [Using a function](resource-management/smart-pointers.md#using-a-function)
   - [Resources](resource-management/smart-pointers.md#resources)
@@ -331,7 +331,7 @@
 <br>
 <br>
 
-# Object Oriented Programming
+# Object oriented programming
 
 <br>
 <br>
@@ -467,19 +467,6 @@
 <br>
 <br>
 
-# Optimisation
-
-<br>
-<br>
-<br>
-
-## [Copy Elision](optimisation/copy-elision.md#copy-elision)
-
-<br>
-<br>
-<br>
-<br>
-
 # STL
 
 - [STL](stl/stl.md#stl)
@@ -588,6 +575,19 @@
   - [Sorting](stl/containers/vectors.md#sorting)
     - [Comparator function](stl/containers/vectors.md#comparator-function)
   - [Miscallaneous](stl/containers/vectors.md#miscallaneous)
+
+<br>
+<br>
+<br>
+<br>
+
+# Optimisation
+
+<br>
+<br>
+<br>
+
+## [Copy Elision](optimisation/copy-elision.md#copy-elision)
 
 <br>
 <br>
