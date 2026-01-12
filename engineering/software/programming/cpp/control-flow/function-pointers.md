@@ -181,9 +181,12 @@
 
 # Function Objects (functor)
 
-- In C++, a function object, also known as a functor, is an object that can be invoked as if it were a function. It is an instance of a class or a struct that overloads the function call operator operator().
-- The functor (MyClass object here) acts like a wrapper for the function (fun here)
-- we can essentially add logic in the biz logic of the overloaded function operator function and this will wrap the original function.
+A functor is a function object that can be invoked as if it were a function.
+
+- It is an instance of a class or a struct that overloads the function call operator operator().
+
+* The functor (MyClass object here) acts like a wrapper for the function (fun here)
+* we can essentially add logic in the biz logic of the overloaded function operator function and this will wrap the original function.
 
   ```cpp
   #include <iostream>

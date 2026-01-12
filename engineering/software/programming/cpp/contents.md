@@ -66,16 +66,13 @@
 ## [Syntax constructs](fundamentals/syntax-constructs.md#syntax-constructs)
 
 - [Expressions](fundamentals/syntax-constructs.md#expressions)
-
   - [glvalue](fundamentals/syntax-constructs.md#glvalue)
   - [rvalue](fundamentals/syntax-constructs.md#rvalue)
   - [lvalue](fundamentals/syntax-constructs.md#lvalue)
   - [prvalue](fundamentals/syntax-constructs.md#prvalue)
   - [xvalue](fundamentals/syntax-constructs.md#xvalue)
   - [Temporary Materialisation Conversion](fundamentals/syntax-constructs.md#temporary-materialisation-conversion)
-
 - [Statements](fundamentals/syntax-constructs.md#statements)
-
 - [Declaration and Defintion](fundamentals/syntax-constructs.md#declaration-and-defintion)
 
 <br>
@@ -254,19 +251,12 @@
 ## [Lambdas](control-flow/lambdas.md#lambdas)
 
 - [Instatiation and Call](control-flow/lambdas.md#instatiation-and-call)
-
 - [Parameter list](control-flow/lambdas.md#parameter-list)
-
 - [Internal Implementation of Lambdas](control-flow/lambdas.md#internal-implementation-of-lambdas)
-
 - [Lambas in functions](control-flow/lambdas.md#lambas-in-functions)
-
 - [Predicate Lambda](control-flow/lambdas.md#predicate-lambda)
-
 - [Stateless lambda](control-flow/lambdas.md#stateless-lambda)
-
 - [Statefull lambda](control-flow/lambdas.md#statefull-lambda)
-
   - [Capturing variables by value](control-flow/lambdas.md#capturing-variables-by-value)
   - [Capturing variables by reference](control-flow/lambdas.md#capturing-variables-by-reference)
   - [Default Captures](control-flow/lambdas.md#default-captures)
@@ -279,7 +269,6 @@
 ## [Function pointers](control-flow/function-pointers.md#function-pointers)
 
 - [Function pointers with class member functions](control-flow/function-pointers.md#function-pointers-with-class-member-functions)
-
 - [Function Objects (functor)](control-flow/function-pointers.md#function-objects-functor)
 
 <br>
@@ -303,7 +292,6 @@
   - [Passing Dynamically Allocated Memory by reference](resource-management/dynamic-memory-allocation.md#passing-dynamically-allocated-memory-by-reference)
 - [Dynamically Allocated Memory as Return Type](resource-management/dynamic-memory-allocation.md#dynamically-allocated-memory-as-return-type)
 - [Common Pitfalls with Dynmically Allocated Memory](resource-management/dynamic-memory-allocation.md#common-pitfalls-with-dynmically-allocated-memory)
-
   - [Dangling Pointers](resource-management/dynamic-memory-allocation.md#dangling-pointers)
   - [Memory Leaks](resource-management/dynamic-memory-allocation.md#memory-leaks)
   - [double delete](resource-management/dynamic-memory-allocation.md#double-delete)
@@ -316,13 +304,9 @@
 ## [Smart pointers](resource-management/smart-pointers.md#smart-pointer)
 
 - [Unique pointer](resource-management/smart-pointers.md#unique-pointer)
-
 - [Shared pointer](resource-management/smart-pointers.md#shared-pointer)
-
 - [Weak pointers](resource-management/smart-pointers.md#weak-pointers)
-
 - [Custom deleter](resource-management/smart-pointers.md#custom-deleter)
-
   - [Using a function](resource-management/smart-pointers.md#using-a-function)
   - [Resources](resource-management/smart-pointers.md#resources)
 
