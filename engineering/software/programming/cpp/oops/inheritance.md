@@ -286,41 +286,6 @@ class Derived: public Base {
 <br>
 <br>
 
-## Access Control in Inheritance
-
-- For any given point in the code, if a public member of the base class would be accessible, then the derived-to-base conversion is also accessible, and not otherwise.
-
-### Protected Members
-
-- Like public, protected members are accessible to members and friends of classes derived from this class.
-- Like private, protected members are inaccessible to users of the class.
-- _A derived class member or friend may access the protected members of the base class only through a derived object. The derived class has no special access to the protected members of base-class objects_
-
-  ```cpp
-  class Base
-  {
-  protected:
-      int protected_member;
-  };
-
-  class Derived: public Base
-  {
-  public:
-      friend void access_protected_member(Derived &obj)
-      {
-          obj.protected_member = 10;  //No Error because access_protected_member can access protected member in Derived class.
-      }
-      friend void access_protected_member(Base &obj)
-      {
-          obj.protected_member = 10; //Error because access_protected_member cannot access protected member of Base class.
-      }
-  };
-  ```
-
-<br>
-<br>
-<br>
-
 ## Types of inheritance
 
 <br>
@@ -363,6 +328,60 @@ class Derived: public Base {
 ### Virtual Inheritance
 
 <!-- //STUB - Learn these when needed. Knowledge available in textbook. -->
+
+<br>
+<br>
+<br>
+
+## Access Control in Inheritance
+
+Access control in inheritance is based on the type of inheritance. However there is one special case of restriction of protected members irespective of the type of inheritance.
+
+- No special case in case of public member access.
+
+  - Public members are already accessible to everyone, so there's no restriction based on object type.
+  - Any code that can see a Base object can access its public members.
+
+- No special case in case of private member access.
+  - Private members are not accessible to derived classes at all, regardless of object type.
+  - The derived class simply cannot access private base class members, period.
+
+<br>
+<br>
+
+### Protected member access restriction
+
+A derived class can access protected members of its base class only through objects of the derived class (or its subclasses), not through objects of the base class itself.
+
+```cpp
+class Base {
+protected:
+    int value;
+};
+
+class Derived : public Base {
+public:
+    void foo(Derived& d, Base& b) {
+        value = 10;        // OK: accessing protected member of *this
+        d.value = 20;      // OK: accessing protected member of another Derived object
+        b.value = 30;      // ERROR: cannot access protected member of Base object
+    }
+};
+```
+
+- This prevents a derived class from violating encapsulation of unrelated base class objects. If Derived could access protected members of any Base object, it could manipulate objects of completely different derived classes
+
+  ```cpp
+  class Derived1 : public Base { /* ... */ };
+  class Derived2 : public Base {
+  public:
+      void break_encapsulation(Base& b) {
+          // Without this rule, Derived2 could mess with Derived1's internals
+          b.value = 999;  // This is prevented by the rule
+      }
+  };
+
+  ```
 
 <br>
 <br>
