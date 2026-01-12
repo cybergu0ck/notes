@@ -293,26 +293,33 @@ class Derived: public Base {
 
 ### Public Inheritance
 
-1. All public and protected members of the base class, if any, are accessible in the derived class as 'public' and 'protected' respectively.
-2. Private members of the base class remain inaccessible in the derived class, for all types of inheritance.
+1. All public members of the base class are accessible as public members in the derived class.
+1. All protected members of the base class are accessible as protected in the derived class.
+1. All private members of the base class remain inaccessible in the derived class.
+
+- In this case, since public and protected members of the base class are accessible as public members in the derived class, all the classes deriving from this derived class will also have access to it based on the type of inheritance.
 
 <br>
 <br>
 
 ### Protected Inheritance
 
-1. The public and protected members of the base class, if any, are accessible in the derived class as 'protected' members.
-   - The derived class and its derived classes can access these members.
-2. Private members of the base class remain inaccessible in the derived class, for all types of inheritance.
+1. All public members of the base class are accessible as protected members in the derived class.
+1. All protected members of the base class are accessible as protected in the derived class.
+1. All private members of the base class remain inaccessible in the derived class.
+
+- In this case, since public and protected members of the base class are accessible as protected members in the derived class, all the classes deriving from this derived class will also have access to it based on the type of inheritance.
 
 <br>
 <br>
 
 ### Private Inheritance
 
-1. The public and protected members of the base class, if any, are accessible in the derived class as 'private' members.
-   - Only the derived class can access these members; any class deriving from it won't have access.
-2. Private members of the base class remain inaccessible in the derived class, for all types of inheritance.
+1. All public members of the base class are accessible as privarte members in the derived class.
+1. All protected members of the base class are accessible as private in the derived class.
+1. All private members of the base class remain inaccessible in the derived class.
+
+- In this case, since public and protected members of the base class are accessible as private members in the derived class,only the derived class can access these members; any class deriving from it won't have access.
 
 <br>
 <br>
