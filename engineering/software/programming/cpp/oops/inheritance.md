@@ -2,8 +2,6 @@
 
 Inheritance is the mechanism by which a class can acquire properties and behaviors from another class.
 
-- **Base Class** is the class from which other classes inherit properties and behaviors. They are also known as Super Class or Parent Class.
-- **Derived Class** is the class that inherits properties and behaviors from a base class and can also extend or modify them. They are also called as Sub Class or Child Class.
 - Inheritance facilitates [Is A realtion](#is-a-relationship).
 
 - The syntax for inheritance is as shown, The access specifiers can be public, private and protected. _If no access specifier is defined then by default private is considered._
@@ -32,7 +30,15 @@ Inheritance is the mechanism by which a class can acquire properties and behavio
   };
   ```
 
-- The construction of an derived class object will always be the sum of the sizes of all non-static data members of the base class and the sum size of all non-static data members of the derived class. It does not matter which access specifier we are using at the time of inheritance, _the access specifier deals with only access to those data_.
+<br>
+<br>
+<br>
+
+## Base class
+
+Base Class is the class from which other classes inherit properties and behaviors.
+
+- They are also known as Super Class or Parent Class.
 
 <br>
 <br>
@@ -40,7 +46,12 @@ Inheritance is the mechanism by which a class can acquire properties and behavio
 
 ## Derived class
 
-- A derived class doesn't inherit
+Derived Class is the class that inherits properties and behaviors from a base class and can also extend or modify them.
+
+- They are also called as Sub Class or Child Class.
+- The construction of an derived class object will always be the sum of the sizes of all non-static data members of the base class and the sum size of all non-static data members of the derived class. It does not matter which access specifier we are using at the time of inheritance, _the access specifier deals with only access to those data_.
+
+* A derived class doesn't inherit
 
   - Base class constructor
   - Base class destructor
@@ -50,7 +61,7 @@ Inheritance is the mechanism by which a class can acquire properties and behavio
 <br>
 <br>
 
-### Redefining base class methods in derived class
+### Overriding base class methods in derived class
 
 - Derived classes can not only invoke Base class methods but also override or redefine base class methods.
 
@@ -350,14 +361,6 @@ class Derived: public Base {
 <br>
 
 ### Virtual Inheritance
-
-//STUB - Learn these when needed. Knowledge available in textbook.
-
-<br>
-<br>
-<br>
-
-## Friendship and Inheritance
 
 //STUB - Learn these when needed. Knowledge available in textbook.
 
@@ -821,7 +824,15 @@ class Derived: public Base {
 <br>
 <br>
 
-## Abstract Base Class
+## Friendship in inheritance
+
+//STUB - Learn these when needed. Knowledge available in textbook.
+
+<br>
+<br>
+<br>
+
+## Abstract base class
 
 **An abstract class in C++ is a class that cannot be instantiated directly and is designed to be a base class for other classes.**
 
@@ -854,13 +865,13 @@ class Derived: public Base {
 
 <br>
 
-### Concrete Class
+### Concrete class
 
 - In C++, a concrete class is a class that can be instantiated directly, unlike an abstract class. It provides complete implementations for all of its member functions, including any virtual functions inherited from base classes.
 
 <br>
 
-### Interface in C++
+### Interface in cpp
 
 - Unlike languages like Java or C#, interfaces in C++ are achieved using Abstract classes.
 - It is convention to use precede the name of the abstract class using 'I\_' if we intend to use it as an interface. example: I_Shape
