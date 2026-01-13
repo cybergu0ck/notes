@@ -52,7 +52,156 @@
   - [Block Scope]()
   - [Class Scope]()
 
+<br>
+<br>
+<br>
+<br>
+
 # Datatypes
+
+<br> 
+<br> 
+<br>
+
+## Numeric types
+
+<br>
+<br>
+
+### [Integers]()
+
+- [Integer literals]()
+- [Integer Notation]()
+- [Integer Operations]()
+
+<br>
+<br>
+
+### [Floating points]()
+
+- [Float precision]()
+- [Scientific Notation]()
+- [Float Operations]()
+- [Special values]() //inf, -inf, nan etc
+
+<br>
+<br>
+
+### [Complex numbers]()
+
+<br> 
+<br> 
+<br>
+
+## Boolean types
+
+- [True and false values]()
+- [Truthy and falsy values]()
+- [Short circuit evaluation]()
+
+<br> 
+<br> 
+<br>
+
+## Sequence types
+
+<br>
+<br>
+
+### [Strings]()
+
+- [String creation]()
+- [String indexing]()
+- [String formatting]()
+- [Multiline strings]()
+- [String methods]()
+
+<br>
+<br>
+
+### [Lists]()
+
+- [List creation]()
+- [List indexing]()
+- [List comprehension]()
+- [Nested lists]()
+- [Copying lists]()
+- [Shallow copying lists]()
+- [Deep copying lists]()
+- [List methods]()
+  - [Access](stl/containers/maps.md#access)
+  - [Search](stl/containers/maps.md#search)
+  - [Insertion](stl/containers/maps.md#insertion)
+  - [Deletion](stl/containers/maps.md#deletion)
+  - [Modification](stl/containers/maps.md#modification)
+  - [Sorting](stl/containers/maps.md#sorting)
+
+<br>
+<br>
+
+### [Tuples]()
+
+- [Tuple creation]()
+- [Tuple unpacking]()
+- [Tuple methods]()
+
+<br>
+<br>
+
+### [Ranges]()
+
+- [Range creation]()
+
+<br> 
+<br> 
+<br>
+
+## Set types
+
+<br>
+<br>
+
+### [Sets]()
+
+- [Set creation]()
+- [Set comprehension]()
+- [Set methods]()
+  - [Access](stl/containers/maps.md#access)
+  - [Search](stl/containers/maps.md#search)
+  - [Insertion](stl/containers/maps.md#insertion)
+  - [Deletion](stl/containers/maps.md#deletion)
+
+<br>
+<br>
+
+### [Frozen sets]()
+
+<br>
+<br>
+<br>
+
+## Map types
+
+<br>
+<br>
+
+### [Dictionaries]()
+
+- [Dictionary creation]()
+- [Dictionary comprehension]()
+- [Nested dictionary]()
+- [Dictionary methods]()
+  - [Access](stl/containers/maps.md#access)
+  - [Search](stl/containers/maps.md#search)
+  - [Insertion](stl/containers/maps.md#insertion)
+  - [Deletion](stl/containers/maps.md#deletion)
+  - [Sorting](stl/containers/maps.md#sorting)
+- [Default dictionary]()
+
+<br>
+<br>
+<br>
+<br>
 
 # Control flow
 
