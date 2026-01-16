@@ -4,7 +4,7 @@
 <br>
 <br>
 
-## Introduction(fundamentals/introduction.md)
+## [Introduction](fundamentals/introduction.md)
 
 - [Comments](fundamentals/introduction.md#comments)
 - [Interizmo coding style](fundamentals/introduction.md#interizmo-coding-style)
@@ -13,7 +13,7 @@
 <br>
 <br>
 
-## Variables(fundamentals/variables.md#variables)
+## [Variables](fundamentals/variables.md#variables)
 
 - [Creation of variables](fundamentals/variables.md#creation-of-variables)
 - [Naming rules](fundamentals/variables.md#naming-rules)
@@ -24,7 +24,7 @@
 <br>
 <br>
 
-## Operators(fundamentals/operators.md)
+## [Operators](fundamentals/operators.md)
 
 - [Arithmetic Operators](fundamentals/operators.md#arithmetic-operators)
 - [Assigment Operators](fundamentals/operators.md#assigment-operators)
@@ -161,15 +161,26 @@
 <br>
 <br>
 
-### [Sets]()
+### [Sets](datatypes/set-types/sets.md)
 
-- [Set creation]()
-- [Set comprehension]()
-- [Set methods]()
-  - [Access](stl/containers/maps.md#access)
-  - [Search](stl/containers/maps.md#search)
-  - [Insertion](stl/containers/maps.md#insertion)
-  - [Deletion](stl/containers/maps.md#deletion)
+- [Set creation](datatypes/set-types/sets.md#set-creation)
+- [Criteria for set item](datatypes/set-types/sets.md#criteria-for-set-item)
+  - [Hashability](datatypes/set-types/sets.md#hashability)
+- [Set comprehension](datatypes/set-types/sets.md#set-comprehension)
+- [Set operators](datatypes/set-types/sets.md#set-operators)
+  - [Union](datatypes/set-types/sets.md#union)
+  - [Intersecton](datatypes/set-types/sets.md#intersection)
+  - [Difference](datatypes/set-types/sets.md#difference)
+  - [Symmetric difference](datatypes/set-types/sets.md#symmetric-difference)
+  - [Subset](datatypes/set-types/sets.md#subset)
+  - [Superset](datatypes/set-types/sets.md#superset)
+  - [Disjoint](datatypes/set-types/sets.md#disjoint)
+  - [In-place operators](datatypes/set-types/sets.md#inplace-operators)
+- [Set methods](datatypes/set-types/sets.md#set-methods)
+  - [Insertion](datatypes/set-types/sets.md#insertion)
+  - [Search](datatypes/set-types/sets.md#search)
+  - [Access](datatypes/set-types/sets.md#access)
+  - [Deletion](datatypes/set-types/sets.md#deletion)
 
 <br>
 <br>
