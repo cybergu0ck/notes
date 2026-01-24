@@ -2,6 +2,12 @@
 
 A node is a fundamental ROS 2 element that serves a single, modular purpose in a robotics system.
 
+<br>
+<br>
+<br>
+
+## Executing an executable
+
 - Example, [running the executable](./introduction#running-executables) `turtlesim_node` from the package `turtlesim` :
 
   ```bash
@@ -18,7 +24,7 @@ A node is a fundamental ROS 2 element that serves a single, modular purpose in a
 ros2 node list
 ```
 
-- If we run the above command (after runnin the above executable, i.e. the Node must be active), we get the name of the node as "/turtlesim"
+- If we run the above command (after running the above executable, i.e. the Node must be active), we get the name of the node as "/turtlesim"
 
   ```bash
   /turtlesim
@@ -54,6 +60,8 @@ ros2 run <package_name> <excutable> --ros-args --remap __node:= <new_node_name>
 <br/>
 
 ## Getting node info
+
+The node info contains list of subscribers, publishers, services and actions.
 
 ```bash
 ros2 node info <node_name>
