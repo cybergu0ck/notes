@@ -119,7 +119,7 @@
 <br>
 <br>
 
-### [Lists]()
+### [Lists](./datatypes/sequence-types/lists.md)
 
 - [List creation]()
 - [List indexing]()
