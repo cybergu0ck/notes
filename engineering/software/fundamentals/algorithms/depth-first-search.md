@@ -79,16 +79,42 @@ def dfs_iterative(start_node, graph):
 
 ## DFS on a 2d matrix
 
-```py
-def dfs(r, c, grid, visited):
-    # Boundary and Base Cases
-    if (r < 0 or c < 0 or r >= len(grid) or c >= len(grid[0]) or (r, c) in visited or grid[r][c] == "0"):
-        return
+- A simpler DFS based on target value of the nodes.
 
-    visited.add((r, c))
+  ```py
+  rows = len(grid)
+  cols = len(grid[0])
 
-    # Standard 4-directional moves
-    directions = [[1, 0], [-1, 0], [0, 1], [0, -1]]
-    for dr, dc in directions:
-        dfs(r + dr, c + dc, grid, visited)
-```
+  def dfs(r, c, grid, visited):
+      # Boundary and Base Cases
+      if (r < 0 or c < 0 or r >= rows or c >= cols or (r, c) in visited):
+          return
+
+      visited.add((r, c))
+
+      # Standard 4-directional moves
+      directions = [[1, 0], [-1, 0], [0, 1], [0, -1]]
+      for dr, dc in directions:
+          if grid[r][c] == "1":
+              dfs(r + dr, c + dc, grid, visited)
+  ```
+
+* A DFS with sense of direction.
+
+  ```py
+  rows = len(grid)
+  cols = len(grid[0])
+
+  def dfs(r, c, grid, visited):
+      # Boundary and Base Cases
+      if (r < 0 or c < 0 or r >= rows or c >= cols or (r, c) in visited):
+          return
+
+      visited.add((r, c))
+
+      # Standard 4-directional moves with sense of direction
+      directions = [[1, 0], [-1, 0], [0, 1], [0, -1]]
+      for dr, dc in directions:
+          if (r+dr >= 0 and c+dc >= 0 and r+dr < rows and c+dc < cols) and grid[r+dr][c+dc] >= grid[r][c]:
+              dfs(r + dr, c + dc, grid, visited)
+  ```
