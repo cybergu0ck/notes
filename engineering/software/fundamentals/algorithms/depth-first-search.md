@@ -6,7 +6,6 @@ DFS explores as far as possible along each branch before backtracking.
 - DFS algorithm can be implemented either [recursively](#recursive-dfs) or [iteratively](#iterative-dfs).
   - Recursion uses call stack and if the graph is extremely deep, there is always a chance of "StackflowError".
   - Iterative approach is the best one.
-
 - DFS algorithm can be used to solve:
   1. Path finding : "Source to target" or "Find all paths"
   1. Cycle detection
