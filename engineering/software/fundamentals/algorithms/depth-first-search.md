@@ -3,6 +3,10 @@
 DFS explores as far as possible along each branch before backtracking.
 
 - A golden rule for DFS is to never visit the same node twice (to avoid infinite loops).
+- DFS algorithm can be implemented either [recursively](#recursive-dfs) or [iteratively](#iterative-dfs).
+  - Recursion uses call stack and if the graph is extremely deep, there is always a chance of "StackflowError".
+  - Iterative approach is the best one.
+
 - DFS algorithm can be used to solve:
   1. Path finding : "Source to target" or "Find all paths"
   1. Cycle detection
@@ -36,7 +40,7 @@ def dfs_recursive(node, visited):
 ```
 
 - A general template of recursive DFS algorithm would look like the above, this works for 90% of dfs approaches.
-- Recursion uses call stack and if the graph is extremely deep, there is always a chance of "StackflowError".
+- The algorithm uses a set type of datastructure to keep track of visited nodes. The backtracking happens naturally because of recursion. Note that there is no use of stack!
 - Time complexity : $O(n)$, where $n$ is the number of nodes as each node is visited only once.
 - Space complexity : $O(n)$ because of the recursion stack.
 
@@ -67,7 +71,7 @@ def dfs_iterative(start_node, graph):
 ```
 
 - A general template of iterative DFS algorithm would look like the above.
-- Iterative approches are better over the recursive ones.
+- The algorithm uses a set type of datastructure to keep track of visited nodes. The backtracking happens manually using a stack!
 - Time complexity : $O(n)$, where $n$ is the number of nodes as each node is visited only once.
 - Space complexity : $O(n)$ for the stack, example: A skewed graph (like a linked list)
 
