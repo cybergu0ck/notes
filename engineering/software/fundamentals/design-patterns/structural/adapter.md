@@ -11,11 +11,11 @@ _The Adapter design pattern is a structural pattern that allows objects with inc
 
 1. Adapter can be implemented as a class adapter using multiple inheritance.
 
-   ![img](./_assets/class-adapter.png)
+   ![img](./_resources/images/class-adapter.png)
 
 1. Adapter can be implemented as an object adapter using composition instead of multiple inheritance.
 
-   ![img](./_assets/object-adapter.png)
+   ![img](./_resources/images/object-adapter.png)
 
 <br>
 
@@ -63,7 +63,7 @@ Object adapter has the following consequences:
 
 ## Illustration
 
-![img](./_assets/adapter-illus.png)
+![img](./_resources/images/adapter-illus.png)
 
 ```cpp
 #include <iostream>
