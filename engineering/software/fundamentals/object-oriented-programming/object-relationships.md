@@ -1,30 +1,34 @@
-# object relationships
+# Object relationships
 
 <br>
 <br>
+<br>
 
-## association
+## Association
 
 A relationship where objects are connected but exist independently.
 
 <br>
 <br>
+<br>
 
-## aggregation
+## Aggregation
 
 A "has-a" relationship where one object contains references to other independent objects.
 
 <br>
 <br>
+<br>
 
-## composition
+## Composition
 
 A strong "owns-a" relationship where contained objects cannot exist without the container
 
 <br>
 <br>
+<br>
 
-## differences
+## Differences
 
 | feature               | association   | aggregation                                               | composition                                             |
 | --------------------- | ------------- | --------------------------------------------------------- | ------------------------------------------------------- |
@@ -33,6 +37,16 @@ A strong "owns-a" relationship where contained objects cannot exist without the 
 | relationship type     | "knows about" | "has a"                                                   | "owns a"                                                |
 | uml notation          | simple line   | line with hollow diamond                                  | line with filled diamond                                |
 
+<br>
+<br>
+<br>
+
+## UML
+
 - uml for illustrating relationshis
 
-  ![uml](./uml/_assets/uml-lines.png)
+  ![uml](./_resources/images/uml-lines.png)
+
+- The arrows point from bottom to top i.e. from child to parent.
+
+  ![uml](./_resources/images/uml-direction.png)
