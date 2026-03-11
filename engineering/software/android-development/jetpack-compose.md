@@ -14,7 +14,6 @@ Jetpack Compose is a modern toolkit for building Android UIs.
 Composable functions are the basic building block of a UI in Compose.
 
 - A composable function:
-
   - Describes some part of your UI.
   - Doesn't return anything.
   - Takes some input and generates what's shown on the screen.
@@ -83,10 +82,46 @@ fun Greeting(name: String) {
 - It should have `@Composable` annotation.
 - It must be named in Pascal case. (not camelCase).
 - The name must be a noun and not a verb, preposition, adjective, adverb but may be prefixed by adjectives.
-
   - `DoneButton()` is valid as it is a noun.
   - `RoundIcon()` is valid as it a noun prefixed by an adjective.
   - `DrawTextField()` is invalid name as it is a verb.
   - `TextFieldWithLink()` is invalid as it has preposition.
   - `Bright()` is invalid as it is an adjective.
   - `Outside()` is invalid as it is an adverb.
+
+<br>
+<br>
+<br>
+
+## State
+
+State refers to any data that can change and affect the UI.
+
+<br>
+<br>
+
+### Composition
+
+The Composition is a description of the UI built by Compose when it executes composables.
+
+- Compose apps call composable functions to transform data into UI.
+
+<br>
+<br>
+
+### Recomposition
+
+Recomposition is a process where upon a state change Compose re-executes the affected composable functions and updates the UI.
+
+- The only way to modify the Composition is through recomposition.
+- To achieve this Compose needs to know the states to be tracked so that it can schedule the recomposition when it receives an upate. The trackable state is known as [Observable state](#observable-state).
+
+<br>
+<br>
+
+### Observable state
+
+Observable state is a state that is tracked by Compose.
+
+- Observable state can be immutable (read only).
+- Observable state can be mutable, Example : `mutableStateOf()`, t receives an initial value as a parameter that is wrapped in a State object, which then makes its value observable.
