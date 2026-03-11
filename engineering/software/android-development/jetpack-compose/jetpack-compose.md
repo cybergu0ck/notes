@@ -92,36 +92,4 @@ fun Greeting(name: String) {
 <br>
 <br>
 <br>
-
-## State
-
-State refers to any data that can change and affect the UI.
-
-<br>
-<br>
-
-### Composition
-
-The Composition is a description of the UI built by Compose when it executes composables.
-
-- Compose apps call composable functions to transform data into UI.
-
-<br>
-<br>
-
-### Recomposition
-
-Recomposition is a process where upon a state change Compose re-executes the affected composable functions and updates the UI.
-
-- The only way to modify the Composition is through recomposition.
-- To achieve this Compose needs to know the states to be tracked so that it can schedule the recomposition when it receives an upate. The trackable state is known as [Observable state](#observable-state).
-
-<br>
-<br>
-
-### Observable state
-
-Observable state is a state that is tracked by Compose.
-
-- Observable state can be immutable (read only).
-- Observable state can be mutable, Example : `mutableStateOf()`, t receives an initial value as a parameter that is wrapped in a State object, which then makes its value observable.
+onSelectedBillOption
