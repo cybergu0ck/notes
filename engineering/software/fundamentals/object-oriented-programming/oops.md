@@ -12,7 +12,7 @@ Encapsulation is the concept of wrapping up information and behaviour and managi
 
 ## Abstraction
 
-Abstraction is the concept of hiding complexity and exposing the necessary.
+Abstraction is the concept of hiding internal implementation logic and exposing only the necessary.
 
 <br>
 <br>
@@ -20,7 +20,15 @@ Abstraction is the concept of hiding complexity and exposing the necessary.
 
 ## Inheritance
 
-Inheritance is the mechanism by which a class can acquire and extends properties and behaviors from another class.
+Inheritance is the concept of building classes upon the characteristics and behavior of other classes by establishing a parent-child relationship.
+
+<br>
+<br>
+<br>
+
+## Polymorphism
+
+Polymorphism is the concept of using different objects in a single, common way.
 
 <br>
 <br>

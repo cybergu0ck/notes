@@ -1,4 +1,6 @@
-_**Function** are reusable logically self-contained code that facilitates modularization of program._
+# Function
+
+Function are reusable logically self-contained code that facilitates modularization of program.
 
 - Code execution begins from `main` function in kotlin.
 
@@ -19,9 +21,8 @@ _**Function** are reusable logically self-contained code that facilitates modula
 <br>
 <br>
 <br>
-<br>
 
-# Return value
+## Return value
 
 - By default kotlin returns `Uint`, it is equivalent to `void` keyword in C++/Java.
 
@@ -43,9 +44,8 @@ _**Function** are reusable logically self-contained code that facilitates modula
 
 <br>
 <br>
-<br>
 
-## Single expression function
+### Single expression function
 
 Assignment opeartor `=` can be used instead of curly braces and explicit return keyword.
 
@@ -62,19 +62,17 @@ fun myFunction(greeting : String, name : String) = "$greeting $name!"
 <br>
 <br>
 <br>
-<br>
 
-# Function Parameters
+## Function Parameters
 
-_**Parameters** refer to the data that is passed into a funciton when it is called._
+Parameters refer to the data that is passed into a funciton when it is called.
 
 - parameters and arguments must match in _number, order and type_.
 
 <br>
 <br>
-<br>
 
-## Variable arguments
+### Variable arguments
 
 `vararg` keyword is used to pass variable number of arguments of same type.
 
@@ -98,11 +96,10 @@ fun getMax(vararg numbers: Int) : Int {
 
 <br>
 <br>
-<br>
 
-## Default Argument Values
+### Default Argument Values
 
-_**Default arguments** are values that are assigned to function parameters if no arguments are passed to the function when it is called._
+Default arguments are values that are assigned to function parameters if no arguments are passed to the function when it is called.
 
 ```kt
 fun main()
@@ -117,9 +114,268 @@ fun searchFor(search : String, searchEngine : String = "Google"){
 <br>
 <br>
 <br>
+
+## Storing functions in variables
+
+To refer to a function as a value, the function reference operator (`::`) must be used.
+
+```kt
+fun main() {
+    val trickFunction = ::trick
+    trickFunction()
+}
+
+fun trick() {
+    println("No treats!")
+}
+
+//No treats!
+```
+
+- The following code when executed will give an error.
+
+  ```kt
+  fun main() {
+      val trickFunction = trick
+  }
+
+  fun trick() {
+      println("No treats!")
+  }
+
+  //Function invocation 'trick()' expected
+  ```
+
+<br>
+<br>
 <br>
 
-# Extension function
+## Lambda expression
+
+Lambda expressions provide a concise syntax to define a function without the `fun` keyword.
+
+- Lambda expressions can be directly stored in a variable without the function reference operator.
+
+- The syntax of a lambda expression
+
+  ```
+  val variableName = {
+      //function body
+  }
+  ```
+
+- The `trick` function from the above example can be converted to a lambda expression as follows
+
+  ```kt
+  fun main() {
+      val trickFunction = trick
+      trick()
+      trickFunction()
+  }
+
+  val trick = {
+      println("No treats!")
+  }
+
+  //No treats!
+  //No treats!
+  ```
+
+- Lambda expression with parameters
+
+  ```kt
+  val greetLambda = { name:String, greet:String ->
+      println("$greet, $name")
+  }
+
+  fun main() {
+  greetLambda("Bill", "Hi")
+  }
+
+  //Hi, Bill
+  ```
+
+<br>
+<br>
+<br>
+
+## Function as data type
+
+Kotlin supports explicit type inference, The syntax to express this for function types
+
+```
+(parameters(optional)) -> return_type
+```
+
+- The following is an illustration for data type of standard kotlin function with no parameters and no return type.
+
+  ```kt
+  fun conventionalTrick(){
+      println("No treats!")
+  }
+
+  fun main() {
+      val standardtrickFunction: () -> Unit = ::conventionalTrick
+  }
+  ```
+
+- The following is an illustration for data type of lambda expression with no parameters and no return type.
+
+  ```kt
+  val trick = {
+      println("No treats!")
+  }
+
+  fun main() {
+      val lambdaTrickFunction: () -> Unit = trick
+  }
+  ```
+
+* The following is an illustration for data type of lambda expression with parameters and return type.
+
+  ```kt
+  val greet = {name: String, greet: String ->
+      "$greet, $name"
+  }
+
+  fun main() {
+      val greetFunction: (String, String) -> String = greet
+  }
+  ```
+
+<br>
+<br>
+
+### Shorthand syntax
+
+When a function has a single parameter, Kotlin implicitly assigns it the it name, so the parameter name and `->` symbol can be omitted, which makes your lambda expressions more concise.
+
+- The following is a conventioanl lambda expression which accepts a single parameter.
+
+  ```kt
+  val printString : (String)->Unit = { input ->
+      println(input)
+  }
+
+  fun main() {
+  printString("This is a very long string")
+  }
+
+  //This is a very long string
+  ```
+
+- The following is the shorthand syntax for the above lambda expression.
+
+  ```kt
+  val printString : (String)->Unit = {
+      println(it)
+  }
+
+  fun main() {
+  printString("This is a very long string")
+  }
+  ```
+
+<br>
+<br>
+
+### Trailing lambda syntax
+
+The lamda expression can be placed aftet the closing parenthesis to call the function when the function type is the last parameter of that function.
+
+```
+functionName(parameter, lambdaExpression)
+functionName(parameter) lambdaExpression
+```
+
+- Illustration of conventional lamda syntax
+
+  ```kt
+  val printString : (String)->Unit = {
+      println(it)
+  }
+
+  fun printSomething(isDefault:Boolean, func:(String)->Unit){
+      if(isDefault) {
+          println("This is default print")
+      } else {
+          func("This is special print")
+      }
+  }
+
+  fun main() {
+  printSomething(false, printString)
+  }
+  //This is special print
+  ```
+
+- Using the trailing lambda syntax
+
+  ```kt
+  fun printSomething(isDefault:Boolean, func:(String)->Unit){
+      if(isDefault) {
+          println("This is default print")
+      } else {
+          func("This is special print")
+      }
+  }
+
+  fun main() {
+  printSomething(false) {println(it)}
+  }
+  //This is special print
+  ```
+
+- The composable functions in Jetpack Compose are typically called using trailing lambda syntax. Example :
+
+  ```kt
+  Column(modifier = Modifier.fillMaxSize()){
+            Text(
+                text = "Start billing",
+                modifier = modifier,
+                style = TextStyle(
+                    fontSize = 24.sp
+                )
+            )
+            Spacer(modifier = Modifier.height(24.dp))
+            Button(onClick = { /* Your action here */ }) {
+                Text(text = "Start")
+            }
+        }
+  ```
+
+<br>
+<br>
+<br>
+
+## Nullable function types
+
+Like other data types, function types can be declared as nullable. In these cases, a variable could contain a function or it could be null.
+
+```
+((parameters(opetional))->returnType?)
+```
+
+- Illustration
+
+  ```kt
+  fun callFunc(func : (()->Unit)?) {
+      if(func != null){
+          func()
+      }
+  }
+
+  fun main() {
+      val myLambda = { println("ho") }
+      callFunc(null)
+  }
+  ```
+
+<br>
+<br>
+<br>
+
+## Extension function
 
 They are functions that add new functionality to existing classes without modifying their source code or using inheritance.
 

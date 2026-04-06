@@ -1,4 +1,10 @@
-# If
+# Conditionals
+
+<br>
+<br>
+<br>
+
+## If
 
 ```kt
 if(age <= 18){
@@ -15,9 +21,8 @@ if(age <= 18){
 <br>
 <br>
 <br>
-<br>
 
-# Else if
+## Else if
 
 ```kt
 if(age <= 18){
@@ -30,9 +35,8 @@ if(age <= 18){
 <br>
 <br>
 <br>
-<br>
 
-# Else
+## Else
 
 ```kt
 if(age <= 18){
@@ -47,9 +51,8 @@ if(age <= 18){
 <br>
 <br>
 <br>
-<br>
 
-# When
+## When
 
 ```kt
 when (dayNumber) {

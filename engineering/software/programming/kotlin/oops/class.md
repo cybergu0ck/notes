@@ -1,37 +1,41 @@
+# Classes
+
 Classes are blueprints or templates for creating objects in object-oriented programming.
 
+- The following is an example for Kotlin `Car` class.
+
+  ```kt
+  class Car(
+      val brand: String,
+      val model: String,
+      var fuel: Double,
+  ){
+      init {
+          //automatically executed when an object of this class is instantiated
+          println("$brand $model is being manufactured.")
+      }
+
+      fun showFuel(): Double {
+          return fuel
+      }
+
+      fun addFuel(fuel : Double){
+          this.fuel += fuel
+      }
+  }
+
+  ```
+
+* A class consists of three major parts:
+  - Properties. Variables that specify the attributes of the class's objects.
+  - Methods. Functions that contain the class's behaviors and actions.
+  - Constructors. A special member function that creates instances of the class throughout the program in which it's defined.
+
+<br>
+<br>
 <br>
 
-The following is an example for Kotlin `Car` class.
-
-```kt
-class Car(
-    val brand: String,
-    val model: String,
-    var fuel: Double,
-){
-    init {
-        //automatically executed when an object of this class is instantiated
-        println("$brand $model is being manufactured.")
-    }
-
-    fun showFuel(): Double {
-        return fuel
-    }
-
-    fun addFuel(fuel : Double){
-        this.fuel += fuel
-    }
-}
-
-```
-
-<br>
-<br>
-<br>
-<br>
-
-# Properties
+## Properties
 
 Properties are variables that belong to a class and store data/state for objects.
 
@@ -40,9 +44,8 @@ Properties are variables that belong to a class and store data/state for objects
 <br>
 <br>
 <br>
-<br>
 
-# Methods
+## Methods
 
 Methods are functions that belong to a class and define behaviors/actions objects can perform.
 
@@ -51,9 +54,8 @@ Methods are functions that belong to a class and define behaviors/actions object
 <br>
 <br>
 <br>
-<br>
 
-# Constructor
+## Constructor
 
 Constructor defines the parameters needed to create an object. It's the signature for object creation.
 
@@ -74,7 +76,7 @@ val car = Car("Toyota", "Camry", 50.0)  // Calling constructor
 <br>
 <br>
 
-# Init
+## Init
 
 init is a special block that runs automatically when an object is created. It executes initialization logic right after the constructor.
 
@@ -98,7 +100,6 @@ class Car(
 - `init` is not a method, it is a an initializer block in Kotlin.
 
 * The execution order is as follows :
-
   1. Primary constructor parameters are assigned
   1. Property initializations
   1. init blocks run (in order if multiple)
@@ -109,7 +110,7 @@ class Car(
 <br>
 <br>
 
-# Instantiation
+## Instantiation
 
 ```kt
 fun main() {
