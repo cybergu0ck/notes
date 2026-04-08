@@ -42,7 +42,8 @@ Observable state is a state that is tracked by Compose.
 
 State hoisting is a pattern of moving state to its caller to make a component stateless.
 
-When a state needs to be shared by composables to be used in them, The state must be hoisted higher in the hierarchy.
+- When a state needs to be shared by composables to be used in them, The state must be hoisted higher in the hierarchy.
+- In Compose, data flows down (from parent to child) and events flow up (from child to parent).
 
 ![image](./_resources/images/state-hoisting-animated.gif)
 
@@ -58,88 +59,103 @@ When applied to composables, this often means introducing two parameters to the 
 
 ### Illustration
 
-The following illustration showcases state hoisting. Here, the `BillDetailsScreen` contains all the state and UI components coded directly inside it. To modularise this, It is better to break the whole UI to seperate composables. However these children composables need access to the state i.e. `selectedBillOption` here.
+Here, the tip is dynamically updated when the user inputs the data.
+
+- `TipCalculator` acts as a parent, holding a Column which stacks the `UserInput` and `TipCalculated` vertically.
+- The value entered by the user in the UserInput component is needed in the TipCalculated component, hence the state `amountInput` must be hoisted.
 
 ```kt
-@Composable
-fun BillDetailsScreen(modifier: Modifier) {
-    val billOptions = listOf("Quotation", "Invoice")
-    var selectedBillOption by remember { mutableStateOf(billOptions[0]) }  //state
+package com.example.notes
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(start = 40.dp, top = 80.dp, end = 40.dp, bottom = 40.dp)
-            .verticalScroll(rememberScrollState()), // Allows scrolling if keyboard covers fields
-        verticalArrangement = Arrangement.spacedBy(16.dp)
-    ) {
-        Text(text = "Select Document Type:", style = MaterialTheme.typography.labelLarge)
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            billOptions.forEach { text ->
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.padding(end = 16.dp)
-                ) {
-                    RadioButton(
-                        selected = (text == selectedBillOption),    //state hoisting to be done here
-                        onClick = { selectedBillOption = it }       //state hoisting to be done here
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import com.example.notes.ui.theme.NotesTheme
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent {
+            NotesTheme {
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    TipCalculator(
+                        modifier = Modifier.padding(innerPadding)
                     )
-                    Text(text = text, modifier = Modifier.padding(start = 4.dp))
                 }
             }
         }
     }
 }
-```
-
-<br>
-<br>
-
-`BillTypeSelector` is a composable which is used in `BillDetailsScreen`. The state is hoisted in the parent composable and the child composable accepts the state data as parameters. `selectedBillOption` is passed as is and `onSelectedBillOption` is passed as a lambda function.
-
-```kt
 @Composable
-fun BillDetailsScreen(modifier: Modifier) {
-    val billOptions = listOf("Quotation", "Invoice")
-    var selectedBillOption by remember { mutableStateOf(billOptions[0]) }
+fun TipCalculator(modifier: Modifier = Modifier) {
+    // 1. STATE IS HOISTED HERE (The Parent)
+    var amountInput by remember { mutableStateOf("") }
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(start = 40.dp, top = 80.dp, end = 40.dp, bottom = 40.dp)
-            .verticalScroll(rememberScrollState()), // Allows scrolling if keyboard covers fields
-        verticalArrangement = Arrangement.spacedBy(16.dp)
-    ) {
-        BillTypeSelector(
-            billOptions,
-            selectedBillOption,
-            onSelectedBillOption = { selection ->
-                selectedBillOption = selection
-        })
+    Column(modifier = modifier.fillMaxSize().padding(16.dp)) {
+        // 2. Pass the state DOWN and the event UP
+        UserInput(
+            value = amountInput,
+            onValueChange = { amountInput = it }
+        )
+
+        // 3. Pass the state DOWN to the consumer
+        TipCalculated(tip = amountInput)
     }
 }
 
+@Composable
+fun UserInput(
+    value: String,                    // State flows down
+    onValueChange: (String) -> Unit,  // Event flows up
+    modifier: Modifier = Modifier
+) {
+    TextField(
+        value = value,
+        onValueChange = onValueChange,
+        label = { Text("Enter bill amount") },
+        modifier = modifier.fillMaxWidth(),
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+        singleLine = true
+    )
+}
 
 @Composable
-fun BillTypeSelector(
-    billOptions : List<String>,
-    selectedBillOption : String,
-    onSelectedBillOption : (String)-> Unit
-) {
-    Text(text = "Select Document Type:", style = MaterialTheme.typography.labelLarge)
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        billOptions.forEach { text ->
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.padding(end = 16.dp)
-            ) {
-                RadioButton(
-                    selected = (text == selectedBillOption),
-                    onClick = { onSelectedBillOption(text) }
-                )
-                Text(text = text, modifier = Modifier.padding(start = 4.dp))
-            }
-        }
+fun TipCalculated(tip: String, modifier: Modifier = Modifier) {
+    val amount = tip.toFloatOrNull() ?: 0f
+    val calculatedTip = amount * 0.25
+
+    Text(
+        text = "Tip (25%): $${String.format("%.2f", calculatedTip)}",
+        style = MaterialTheme.typography.headlineSmall
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun TipCalculatorPreview() {
+    NotesTheme {
+        TipCalculator()
     }
 }
 ```
