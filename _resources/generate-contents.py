@@ -163,31 +163,34 @@ def build_index_for_directory(current_path, root_path, level=2):
     except PermissionError:
         return ""
 
+    # Updated suffix for consistency
+    suffix = "-contents.md"
+
     # Backlink to parent (if not root)
     if current_path != root_path:
         parent = current_path.parent
-        if parent == root_path:
-            parent_index = f"../{root_path.name}.md"
-        else:
-            parent_index = f"../{parent.name}.md"
+        # Links now point to the parent's -contents.md file
+        parent_index = f"../{parent.name}{suffix}"
         lines.append(f"[← Back to {parent.name}]({parent_index})\n")
 
     lines.append(f"# {current_path.name}\n")
 
     # List .md files directly in this directory (excluding the index file itself)
-    index_filename = f"{current_path.name}.md"
-    direct_md_files = [f for f in md_files if f.name != index_filename]
+    current_index_filename = f"{current_path.name}{suffix}"
+    direct_md_files = [f for f in md_files if f.name != current_index_filename]
+    
     if direct_md_files:
         lines.append("## Files\n")
         for md_file in direct_md_files:
             lines.append(f"- [{md_file.name}]({md_file.name})\n")
 
-    # List subdirectories with links to their index files
+    # List subdirectories with links to their -contents.md files
     visible_subdirs = [d for d in subdirs if d.name not in EXCLUDE_DIRECTORY]
     if visible_subdirs:
         lines.append("## Subdirectories\n")
         for subdir in visible_subdirs:
-            subdir_index = f"{subdir.name}/{subdir.name}.md"
+            # Link points to subdir/subdir-contents.md
+            subdir_index = f"{subdir.name}/{subdir.name}{suffix}"
             lines.append(f"- [{subdir.name}]({subdir_index})\n")
 
     return "\n".join(lines)
@@ -203,8 +206,8 @@ def create_index_files(root_dir):
         except PermissionError:
             return
 
-        # Write index file for current directory
-        index_filename = f"{current_path.name}.md"
+        # Write index file with the new naming convention
+        index_filename = f"{current_path.name}-contents.md"
         output_file = current_path / index_filename
         content = build_index_for_directory(current_path, root_path)
 
