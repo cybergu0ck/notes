@@ -56,7 +56,7 @@ When applied to composables, this often means introducing two parameters to the 
 <br>
 <br>
 
-### illustration
+### Illustration
 
 The following illustration showcases state hoisting. Here, the `BillDetailsScreen` contains all the state and UI components coded directly inside it. To modularise this, It is better to break the whole UI to seperate composables. However these children composables need access to the state i.e. `selectedBillOption` here.
 

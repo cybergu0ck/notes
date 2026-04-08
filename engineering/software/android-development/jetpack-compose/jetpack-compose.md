@@ -20,6 +20,22 @@ Composable functions are the basic building block of a UI in Compose.
 
 <br>
 <br>
+
+### Composable function rules
+
+- Compose function should return nothing.
+- It should have `@Composable` annotation.
+- It must be named in Pascal case. (not camelCase).
+- The name must be a noun and not a verb, preposition, adjective, adverb but may be prefixed by adjectives.
+  - `DoneButton()` is valid as it is a noun.
+  - `RoundIcon()` is valid as it a noun prefixed by an adjective.
+  - `DrawTextField()` is invalid name as it is a verb.
+  - `TextFieldWithLink()` is invalid as it has preposition.
+  - `Bright()` is invalid as it is an adjective.
+  - `Outside()` is invalid as it is an adverb.
+
+<br>
+<br>
 <br>
 
 ## Annotations
@@ -57,9 +73,8 @@ Annotations are means of attaching extra information to code.
 
 <br>
 <br>
-<br>
 
-## Composable annotation
+### Composable annotation
 
 Composable annotation annotation informs the Compose compiler that this function is intended to convert data into UI.
 
@@ -75,21 +90,3 @@ fun Greeting(name: String) {
 
 <br>
 <br>
-
-### Composable function rules
-
-- Compose function should return nothing.
-- It should have `@Composable` annotation.
-- It must be named in Pascal case. (not camelCase).
-- The name must be a noun and not a verb, preposition, adjective, adverb but may be prefixed by adjectives.
-  - `DoneButton()` is valid as it is a noun.
-  - `RoundIcon()` is valid as it a noun prefixed by an adjective.
-  - `DrawTextField()` is invalid name as it is a verb.
-  - `TextFieldWithLink()` is invalid as it has preposition.
-  - `Bright()` is invalid as it is an adjective.
-  - `Outside()` is invalid as it is an adverb.
-
-<br>
-<br>
-<br>
-onSelectedBillOption
