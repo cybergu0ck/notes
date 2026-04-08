@@ -1,5 +1,12 @@
 # Recursion
 
+- Theoretically, there is no problem that can only be solved with recursion. According to the "Church-Turing" Thesis, recursion and iteration are computationally equivalent; any recursive algorithm can be converted into an iterative one by manually managing a stack.
+  - However, some problems are "inherently recursive," meaning an iterative version would be significantly more complex, less readable, or would simply "manualize" the recursion by using an explicit stack
+
+<br>
+<br>
+<br>
+
 ## Recurrance Relations
 
 $T(n) = T(n-1) + n = O(n^2)$
@@ -21,7 +28,7 @@ $$ O(n^2)$$
 
 ## Tail recursion
 
-Tail recursion is when a function's recursive call is the very last thing it does, No work happens after it returns.
+Tail recursion is a specialized form of recursion where the recursive call is the final operation performed by a function.
 
 - Regular recursion
 
