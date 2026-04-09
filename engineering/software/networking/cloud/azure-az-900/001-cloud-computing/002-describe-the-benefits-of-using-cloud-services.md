@@ -16,10 +16,6 @@
 
 
 
-
-
-When building or deploying a cloud application, two of the biggest considerations are uptime (or availability) and the ability to handle demand (or scale).
-
 ## High availability
 
  High availability focuses on ensuring maximum availability, regardless of disruptions or events that may occur.

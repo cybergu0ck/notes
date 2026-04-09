@@ -12,7 +12,6 @@
 
 
 
-
 # Creating databases using `models.py`
 
 ```python

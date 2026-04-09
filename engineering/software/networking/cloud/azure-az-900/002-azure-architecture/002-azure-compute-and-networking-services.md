@@ -40,25 +40,6 @@
 
 
 
-
-
-You’ll learn about three of the compute options (virtual machines, containers, and Azure functions). You’ll also learn about some of the networking features, such as Azure virtual networks, Azure DNS, and Azure ExpressRoute.
-
--   VMs provide infrastructure as a service (IaaS) in the form of a virtualized server and can be used in many ways. Just like a physical computer, you can customize all of the software running on your VM.
-
--   However, as an IaaS offering, you still need to configure, update, and maintain the software that runs on the VM.
-
--   VMs are an ideal choice when you need:
-
--   Total control over the operating system (OS).
--   The ability to run custom software.
--   To use custom hosting configurations.
-
--   An image is a template used to create a VM and may already include an OS and other software, like development tools or web hosting environments.
--   You can create and provision a VM in minutes when you select a preconfigured VM image.
-
-
-
 # Scale VMs in Azure
 
  VMs can be grouped together to provide high availability, scalability, and redundancy. Azure can also manage the grouping of VMs for you with features such as scale sets and availability sets.

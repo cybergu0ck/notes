@@ -10,4 +10,6 @@
 
 - [03-binary-search-tree.md](03-binary-search-tree.md)
 
-- [06-heap.md](06-heap.md)
+- [04-heap.md](04-heap.md)
+
+- [05-trie.md](05-trie.md)

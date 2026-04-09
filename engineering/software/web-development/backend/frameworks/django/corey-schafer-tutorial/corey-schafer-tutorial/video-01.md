@@ -12,9 +12,6 @@
 
 
 
-
-<br/>
-
 ## Installing django
 
 - Create a virtual environment for the django project and install django using

@@ -16,8 +16,6 @@
 
 
 
-//NOTE - Review this notes after having reviewd oops
-
 # Storage Class Specifiers
 
 <br>

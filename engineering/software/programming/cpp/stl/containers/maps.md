@@ -25,13 +25,6 @@
 
 
 
-stl maps are associative containers that store key value pairs.
-
-<br>
-<br>
-<br>
-<br>
-
 # Criteria for key
 
 <br>

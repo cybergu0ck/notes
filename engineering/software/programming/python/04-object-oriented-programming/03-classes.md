@@ -19,10 +19,6 @@
 
 
 
-- classes and types are same in Python3.
-
-<br/>
-
 ## Class definition syntax
 
 ```python

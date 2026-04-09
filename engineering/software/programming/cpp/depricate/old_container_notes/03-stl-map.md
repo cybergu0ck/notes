@@ -27,15 +27,6 @@
 
 
 
-A std::map is an associative STL container that stores key-value pairs in a sorted order by key.
-
-- Defined in the `<map>` header.
-
-<br>
-<br>
-<br>
-<br>
-
 # Initialisation
 
 ```cpp

@@ -10,13 +10,6 @@
 
 
 
-Polymorphism is the ability to use the same code to operate on different types of objects. This makes the code more flexible.
-
-<br>
-<br>
-<br>
-<br>
-
 # Function overloading
 
 Function overloading means having multiple functions with the same name but different function signatures.

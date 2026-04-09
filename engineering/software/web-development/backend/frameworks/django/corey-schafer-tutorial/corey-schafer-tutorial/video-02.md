@@ -10,9 +10,6 @@
 
 
 
-
-<br/>
-
 # Creating App
 
 In a django project we can create multiple apps. This creates modularity.

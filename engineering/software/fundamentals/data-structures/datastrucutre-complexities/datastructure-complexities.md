@@ -10,7 +10,6 @@
 
 
 
-
 # Basic Operations of a data structure
 
 1. **Access**   : Retrieving a value from the data structure.

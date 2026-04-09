@@ -13,7 +13,6 @@
 
 
 
-
 # Name mangling
 
 Name mangling is the process by which a compiler transforms a human-readable symbol name into a unique, encoded identifier that includes additional information required for correct linking.

@@ -11,10 +11,6 @@
 
 
 
-Inheritance is when a class (child/subclass) acquires properties and methods from another class (parent/superclass).
-
-<br>
-
 # Super class
 
 Superclass is the class that is being inherited from. It contains common properties and methods shared by its subclasses.

@@ -15,8 +15,6 @@
 
 
 
-
-
 ## Introduction to cloud computing
 ---
 

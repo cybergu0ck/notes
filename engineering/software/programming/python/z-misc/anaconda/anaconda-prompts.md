@@ -10,11 +10,6 @@
 
 
 
-
-
-Check [official anaconda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for more information.
-
-
 #### Creating an environment using anaconda prompt
 ---
 

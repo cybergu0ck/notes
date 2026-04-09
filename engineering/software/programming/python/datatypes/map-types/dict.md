@@ -20,18 +20,6 @@
 
 
 
-`dict` is Python datastructure that stores key value pairs.
-
-- Dicts are mutable
-- Dictionaries are used to store data values in key:value pairs
-- Dictionaries cannot have duplicate keys and the keys must be immutable.
-  - Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key.
-
-<br>
-<br>
-<br>
-<br>
-
 # Creating Dictionaries
 
 - Using {}

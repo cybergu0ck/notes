@@ -20,11 +20,6 @@
 
 
 
-- While primitive datatype's values have only one thing, objects are used to store keyed collections of various data and more complex entities.
-
-<br>
-<br>
-
 # Creating Objects using Literals
 
 - An object can be created with figure brackets {…} with an optional list of **properties**. A property is a _“key: value” pair_, where key is a string (also called a “property name”), and value can be anything.

@@ -10,13 +10,6 @@
 
 
 
-
-Android Studio is the official Integrated Development Environment (IDE), for Android app development built and distributed by Google. It is a specialized workshop with tools to make it easy for software developers to use to design, build, run, and test apps for the Android platform. 
-
-Android Studio uses IntelliJ IDEA as its foundation and includes the Android plugin pre-installed along with some tweaks specifically for the Android platform, so it will feel very familiar to you.
-
-
-
 #### Basic Workflow
 ---
 - To create a new project, start Android Studio, click **+ Start a new Android Studio project**, name your project, choose a template, and fill in the details.

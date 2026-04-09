@@ -17,9 +17,6 @@
 
 
 
-
-<br/>
-
 ## Templates
 ---
 - django looks for templates in all installed apps.
