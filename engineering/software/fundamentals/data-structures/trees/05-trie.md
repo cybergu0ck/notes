@@ -91,10 +91,9 @@ class Trie:
   - Startswith :This is a linear, $O(m)$ solution in terms of time, where $m$ is the length of the word.
   - In every case the algorithm runs for each character of the word throught the Trie-based tree.
 
-- Space Complexity : This is a bi-linear, $O(N)$ solution in terms of space, where $N$ is the number of nodes in the Trie tree.
-  - If all words have completely unique characters and no common prefixes, every character of every word will require a new `TrieNode`.
-  - The strength of a Trie is prefix sharing. "apple", "apply", and "applied", all share the same first four nodes (a -> p -> p -> l). This significantly reduces the space needed compared to a hash set if many words share common beginnings.
-  - In a simple list using linear search, it will be $O(m*l)$ where $m$ is the number of words and $l$ is the average length of the words. However, This is incorrect in the case of Trie because of preffix sharing.
+- Space Complexity : This is a bi-linear, $O(m*l)$ solution in terms of space, where $m$ is the number of words added and $l$ is the average length of the words.
+  - This is the worst case where all words have completely unique characters and no common prefixes, every character of every word will require a new `TrieNode`.
+  - Reallistically, The strength of a Trie is prefix sharing. "apple", "apply", and "applied", all share the same first four nodes (a -> p -> p -> l). This significantly reduces the space needed compared to a hash set if many words share common beginnings.
 
 <br>
 <br>
