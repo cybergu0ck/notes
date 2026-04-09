@@ -6,6 +6,8 @@
 
 - [computer-architecture](computer-architecture/computer-architecture-contents.md)
 
+- [deletethis](deletethis/deletethis-contents.md)
+
 - [excel](excel/excel-contents.md)
 
 - [sop](sop/sop-contents.md)
