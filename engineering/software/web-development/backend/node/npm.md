@@ -1,3 +1,16 @@
+# Contents
+
+- [NPM](#npm)
+- [List the installed packages](#list-the-installed-packages)
+- [Uninstall packages](#uninstall-packages)
+
+<br>
+<br>
+<br>
+
+
+
+
 # NPM
 
 <br>

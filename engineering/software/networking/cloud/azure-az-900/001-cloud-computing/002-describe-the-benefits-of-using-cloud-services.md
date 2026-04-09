@@ -1,3 +1,21 @@
+# Contents
+
+- [High availability](#high-availability)
+- [Scalability](#scalability)
+- [Reliability](#reliability)
+- [Predictability](#predictability)
+- [Governance](#governance)
+- [Security](#security)
+- [Management of the cloud](#management-of-the-cloud)
+- [Management in the cloud](#management-in-the-cloud)
+
+<br>
+<br>
+<br>
+
+
+
+
 
 
 When building or deploying a cloud application, two of the biggest considerations are uptime (or availability) and the ability to handle demand (or scale).

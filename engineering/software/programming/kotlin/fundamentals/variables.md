@@ -1,3 +1,18 @@
+# Contents
+
+- [Initialization](#initialization)
+- [Immutable variables](#immutable-variables)
+- [Mutable variables](#mutable-variables)
+- [Null safety](#null-safety)
+- [Few rules](#few-rules)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Initialization
 
 ```

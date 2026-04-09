@@ -1,3 +1,15 @@
+# Contents
+
+- [useReducer hook](#usereducer-hook)
+  - [Creating a state using useReducer](#creating-a-state-using-usereducer)
+
+<br>
+<br>
+<br>
+
+
+
+
 # useReducer hook
 
 _**useReducer** facilitates an alternate way of setting state, ideally when component has a lot of states._

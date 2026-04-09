@@ -1,3 +1,20 @@
+# Contents
+
+- [Promise](#promise)
+- [Handling Reject](#handling-reject)
+  - [Second parameter in the `then` method](#second-parameter-in-the-then-method)
+  - [catch method](#catch-method)
+- [Chaining](#chaining)
+- [finally method](#finally-method)
+- [Advantages of promises over callbacks](#advantages-of-promises-over-callbacks)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Promise
 
 Promise is a built-in object that represents the eventual completion (or failure) of an asynchronous operation and allows the handling of its result when it becomes available.

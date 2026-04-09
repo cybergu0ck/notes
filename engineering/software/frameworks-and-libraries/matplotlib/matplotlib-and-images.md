@@ -1,3 +1,17 @@
+# Contents
+
+- [Images using Matplotlib](#images-using-matplotlib)
+  - [cmap](#cmap)
+  - [Gray Images](#gray-images)
+  - [RGB Images](#rgb-images)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Images using Matplotlib
 
 - We can use matplotlib to show images as they are multidimensional arrays.

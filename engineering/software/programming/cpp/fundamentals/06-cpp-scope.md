@@ -1,3 +1,22 @@
+# Contents
+
+- [Scope](#scope)
+  - [Type of Scopes](#type-of-scopes)
+    - [Global Scope](#global-scope)
+    - [Block Scope](#block-scope)
+    - [Class Scope](#class-scope)
+    - [Namespace Scope](#namespace-scope)
+  - [Name Resolution](#name-resolution)
+  - [Automatic Object Destruction](#automatic-object-destruction)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Scope
 
 _**Scope** is the region in the program where a name is visible._

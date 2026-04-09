@@ -1,3 +1,31 @@
+# Contents
+
+- [STL List](#stl-list)
+- [Useful Functions](#useful-functions)
+  - [size() and max_size()](#size-and-max_size)
+  - [front() and back()](#front-and-back)
+  - [push_back() and push_front()](#push_back-and-push_front)
+  - [pop_back() and pop_front()](#pop_back-and-pop_front)
+  - [emplace_back() and emplace_front()](#emplace_back-and-emplace_front)
+  - [insert()](#insert)
+  - [erase()](#erase)
+  - [resize()](#resize)
+- [STL Forward list](#stl-forward-list)
+- [Useful Functions](#useful-functions)
+  - [max_size()](#max_size)
+  - [front()](#front)
+  - [insert_after()](#insert_after)
+  - [emplace_after()](#emplace_after)
+  - [erase_after()](#erase_after)
+  - [resize()](#resize)
+
+<br>
+<br>
+<br>
+
+
+
+
 # STL List
 
 - list is a doubly-linked list container in C++. It is a linear data structure that allows efficient insertion and deletion of elements at both ends (front and back) as well as in the middle.

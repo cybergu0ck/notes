@@ -1,3 +1,17 @@
+# Contents
+
+- [Installing django](#installing-django)
+- [django admin](#django-admin)
+- [Starting a django project](#starting-a-django-project)
+- [Running a local server](#running-a-local-server)
+
+<br>
+<br>
+<br>
+
+
+
+
 
 <br/>
 

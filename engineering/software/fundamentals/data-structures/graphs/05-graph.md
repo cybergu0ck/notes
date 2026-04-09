@@ -1,3 +1,23 @@
+# Contents
+
+- [Implementation](#implementation)
+  - [1.Instantiating from `Node` objects:](#1instantiating-from-node-objects)
+  - [2.Instantiating from dict objects that represent directed graphs:](#2instantiating-from-dict-objects-that-represent-directed-graphs)
+  - [3.Instantiating from list objects that represent un-directed graphs:](#3instantiating-from-list-objects-that-represent-un-directed-graphs)
+- [Traversals](#traversals)
+  - [Breadth First Search](#breadth-first-search)
+  - [Depth First Search](#depth-first-search)
+- [`has_path` function](#has_path-function)
+- [Finding number of connected components in a graph](#finding-number-of-connected-components-in-a-graph)
+- [Finding the longest connected component in the graph](#finding-the-longest-connected-component-in-the-graph)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Implementation
 
 In the below implementation Node.nodes will have all the instances of the Node. i.e. list of all nodes that are created.

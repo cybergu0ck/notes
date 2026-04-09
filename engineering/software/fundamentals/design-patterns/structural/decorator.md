@@ -1,3 +1,22 @@
+# Contents
+
+- [Decorator pattern](#decorator-pattern)
+  - [Components](#components)
+  - [Implementation](#implementation)
+  - [Applicability](#applicability)
+    - [Avoid class explosion](#avoid-class-explosion)
+    - [Temporary behaviour](#temporary-behaviour)
+    - [Object specific behaviour](#object-specific-behaviour)
+  - [Advantages](#advantages)
+  - [Disadvantages](#disadvantages)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Decorator pattern
 
 The Decorator design pattern is a structural pattern that dynamically adds new behaviors to an object by wrapping it, without altering its original class or affecting other instances.

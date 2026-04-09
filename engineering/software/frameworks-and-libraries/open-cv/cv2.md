@@ -1,3 +1,22 @@
+# Contents
+
+- [Open CV](#open-cv)
+  - [Basic Open CV Operations](#basic-open-cv-operations)
+    - [Reading an image](#reading-an-image)
+    - [Displaying the image](#displaying-the-image)
+    - [Writing the image](#writing-the-image)
+  - [Basic Image Operations](#basic-image-operations)
+    - [Resizing the image](#resizing-the-image)
+    - [Rotating the image](#rotating-the-image)
+    - [Getting the shape of an image](#getting-the-shape-of-an-image)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Open CV
 
 <br>

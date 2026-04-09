@@ -1,3 +1,16 @@
+# Contents
+
+- [Super class](#super-class)
+- [Visibility Modifiers](#visibility-modifiers)
+- [Abstract class](#abstract-class)
+
+<br>
+<br>
+<br>
+
+
+
+
 Inheritance is when a class (child/subclass) acquires properties and methods from another class (parent/superclass).
 
 <br>

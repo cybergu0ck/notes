@@ -1,3 +1,18 @@
+# Contents
+
+- [Variables](#variables)
+  - [Creation of variables](#creation-of-variables)
+  - [Naming rules](#naming-rules)
+  - [Multiple assignment](#multiple-assignment)
+  - [Scope of variables](#scope-of-variables)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Variables
 
 Variables are named containers to store data values.

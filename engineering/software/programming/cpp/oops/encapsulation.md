@@ -1,3 +1,35 @@
+# Contents
+
+- [Encapsulation](#encapsulation)
+  - [C structs](#c-structs)
+  - [C++ structs](#c-structs)
+  - [Acess modifiers](#acess-modifiers)
+  - [Differences between C structs and C++ structs](#differences-between-c-structs-and-c-structs)
+  - [Class](#class)
+    - [C++ Object Model](#c-object-model)
+  - [This pointer](#this-pointer)
+    - [Use cases](#use-cases)
+  - [Member methods](#member-methods)
+    - [Const member methods](#const-member-methods)
+    - [Member Functions Returning This Object](#member-functions-returning-this-object)
+  - [Constructors](#constructors)
+    - [Overloaded Constructors](#overloaded-constructors)
+    - [Compiler Synthesised Constructors](#compiler-synthesised-constructors)
+      - [Initialisation of Class Data Members](#initialisation-of-class-data-members)
+        - [In-class Initialisation](#in-class-initialisation)
+        - [Constructor Initialiser List](#constructor-initialiser-list)
+    - [Delegated Constructors](#delegated-constructors)
+    - [Explicit Constructor](#explicit-constructor)
+  - [Mutable Keywords](#mutable-keywords)
+  - [Seperation of Declaration and Implementation](#seperation-of-declaration-and-implementation)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Encapsulation
 
 Encapsulation is a method of wrapping up the data and code acting on the data into a single unit.

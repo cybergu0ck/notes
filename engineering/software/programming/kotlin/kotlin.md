@@ -1,3 +1,19 @@
+# Contents
+
+- [Function](#function)
+- [if Expressions](#if-expressions)
+- [String Templates](#string-templates)
+- [Repetition with while](#repetition-with-while)
+- [Looping & Ranges](#looping-ranges)
+- [The in Keyword](#the-in-keyword)
+
+<br>
+<br>
+<br>
+
+
+
+
 ### Function
 
 ---

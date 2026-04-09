@@ -1,3 +1,30 @@
+# Contents
+
+- [Criteria for key](#criteria-for-key)
+  - [Criteria for a key in map](#criteria-for-a-key-in-map)
+  - [Criteria for a key in unordered map](#criteria-for-a-key-in-unordered-map)
+- [Types](#types)
+  - [Time complexities](#time-complexities)
+  - [Space Complexities](#space-complexities)
+- [Initialisation](#initialisation)
+- [Methods](#methods)
+  - [Access](#access)
+  - [Search](#search)
+  - [Insertion](#insertion)
+  - [Deletion](#deletion)
+  - [Sorting](#sorting)
+  - [Get the size](#get-the-size)
+  - [Check emptyness](#check-emptyness)
+  - [Check equality](#check-equality)
+  - [Get the count of keys](#get-the-count-of-keys)
+
+<br>
+<br>
+<br>
+
+
+
+
 stl maps are associative containers that store key value pairs.
 
 <br>

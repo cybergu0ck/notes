@@ -1,3 +1,24 @@
+# Contents
+
+- [File and Data Manipulation](#file-and-data-manipulation)
+  - [Files, Streams and IO](#files-streams-and-io)
+  - [Manipulating Booleans](#manipulating-booleans)
+  - [Manipulating integers](#manipulating-integers)
+  - [Manipulating floating point numbers](#manipulating-floating-point-numbers)
+  - [Modifying allignment](#modifying-allignment)
+  - [Reading from text file](#reading-from-text-file)
+  - [Writing to files](#writing-to-files)
+    - [Making sure the file is opened correctly](#making-sure-the-file-is-opened-correctly)
+    - [Always close the file](#always-close-the-file)
+    - [Illustration](#illustration)
+
+<br>
+<br>
+<br>
+
+
+
+
 # File and Data Manipulation
 
 <br>

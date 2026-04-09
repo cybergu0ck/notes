@@ -1,3 +1,17 @@
+# Contents
+
+- [i2wm](#i2wm)
+  - [Configuration](#configuration)
+  - [Shortcut keys](#shortcut-keys)
+  - [Applications](#applications)
+
+<br>
+<br>
+<br>
+
+
+
+
 # i2wm
 
 <br>

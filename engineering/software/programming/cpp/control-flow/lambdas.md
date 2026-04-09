@@ -1,3 +1,25 @@
+# Contents
+
+- [Lambdas](#lambdas)
+- [Instatiation and Call](#instatiation-and-call)
+- [Parameter list](#parameter-list)
+- [Internal Implementation of Lambdas](#internal-implementation-of-lambdas)
+- [Lambas in functions](#lambas-in-functions)
+- [Predicate Lambda](#predicate-lambda)
+- [Stateless lambda](#stateless-lambda)
+- [Statefull lambda](#statefull-lambda)
+  - [Capturing variables by value](#capturing-variables-by-value)
+  - [Capturing variables by reference](#capturing-variables-by-reference)
+  - [Default Captures](#default-captures)
+  - [Explicit Captures along with default captures](#explicit-captures-along-with-default-captures)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Lambdas
 
 Lambdas in C++ are a way to define anonymous functions inline, often used for short, one-off functions that don't need to be named separately.

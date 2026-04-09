@@ -1,3 +1,22 @@
+# Contents
+
+- [Lists](#lists)
+- [Adding Elements to the list](#adding-elements-to-the-list)
+    - [`rpush` and `lpush` [ O(1) ]](#rpush-and-lpush-o1)
+- [Removing Elements to the list](#removing-elements-to-the-list)
+    - [`rpop` and `lpop` [ O(1) ]](#rpop-and-lpop-o1)
+- [Reading/ Traversing the list](#reading-traversing-the-list)
+    - [`lrange` [ O(s + n) ]](#lrange-os-n)
+- [Get the number of elements from the list](#get-the-number-of-elements-from-the-list)
+    - [`llen` [ O(1) ]](#llen-o1)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Lists
 
 - Lists are ordered sequence of strings.

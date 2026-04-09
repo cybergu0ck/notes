@@ -1,3 +1,27 @@
+# Contents
+
+- [Function](#function)
+  - [Function Definition](#function-definition)
+  - [Function Prototype (Forward Declaration)](#function-prototype-forward-declaration)
+  - [Function Call](#function-call)
+  - [Activation Records (Function Stack Frame)](#activation-records-function-stack-frame)
+  - [Function Parameters](#function-parameters)
+    - [Formal and Actual parameters](#formal-and-actual-parameters)
+    - [Pass by Value](#pass-by-value)
+    - [Pass by Reference](#pass-by-reference)
+    - [Default Argument Values](#default-argument-values)
+  - [Passing Arrays to Functions](#passing-arrays-to-functions)
+  - [Passing Vectors into functions](#passing-vectors-into-functions)
+  - [Function Overloading](#function-overloading)
+  - [Inline Functions](#inline-functions)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Function
 
 _**Function** are reusable logically self-contained code that facilitates modularization of program._

@@ -1,3 +1,25 @@
+# Contents
+
+- [Creating Objects using Literals](#creating-objects-using-literals)
+  - [Setting Properties](#setting-properties)
+  - [Accessing Properties](#accessing-properties)
+  - [Deleting Properties](#deleting-properties)
+- [Creating objects using Constructors](#creating-objects-using-constructors)
+- [Property Value shorthand](#property-value-shorthand)
+- [Property names limitations](#property-names-limitations)
+- [Property existence test, `in` opertaor](#property-existence-test-in-opertaor)
+- [The "for..in" loop](#the-forin-loop)
+- [Object references and copying](#object-references-and-copying)
+  - [Illustration](#illustration)
+  - [Object Destructuring](#object-destructuring)
+
+<br>
+<br>
+<br>
+
+
+
+
 - While primitive datatype's values have only one thing, objects are used to store keyed collections of various data and more complex entities.
 
 <br>

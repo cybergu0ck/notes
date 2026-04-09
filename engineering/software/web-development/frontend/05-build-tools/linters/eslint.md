@@ -1,3 +1,23 @@
+# Contents
+
+- [ESLint](#eslint)
+  - [ESLint setup for VSCode (Not Globally)](#eslint-setup-for-vscode-not-globally)
+  - [Triggering Formatting](#triggering-formatting)
+    - [Formatting manually using script](#formatting-manually-using-script)
+    - [Formatting on save](#formatting-on-save)
+  - [Customizing ESLint rules](#customizing-eslint-rules)
+    - [Disabling props validation during linting for react](#disabling-props-validation-during-linting-for-react)
+    - [Supressing warning for unused variables](#supressing-warning-for-unused-variables)
+    - [Supressing key prop missing warning](#supressing-key-prop-missing-warning)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
 # ESLint
 
 Linters are tools that scan code for bugs and errors, check for subjective, stylisitic preferences and report any errors that they find.

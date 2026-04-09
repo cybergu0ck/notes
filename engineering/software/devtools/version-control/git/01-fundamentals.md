@@ -1,3 +1,24 @@
+# Contents
+
+- [Git Fundamentals](#git-fundamentals)
+  - [Git Command Syntax](#git-command-syntax)
+  - [Git Commit](#git-commit)
+    - [Git SHA-1](#git-sha-1)
+  - [Datastructures in Git](#datastructures-in-git)
+    - [DAG](#dag)
+  - [Reference](#reference)
+    - [HEAD](#head)
+    - [Relative References](#relative-references)
+  - [Configuring Git](#configuring-git)
+  - [Git Help](#git-help)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Git Fundamentals
 
 **_Git is a distributed version control system (VCS) that is widely used for software development and collaboration._**

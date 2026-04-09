@@ -1,3 +1,22 @@
+# Contents
+
+- [Enumeration](#enumeration)
+  - [Enumeration Syntax](#enumeration-syntax)
+  - [Initialisation of enumerators](#initialisation-of-enumerators)
+  - [Type Safety of Enumerations](#type-safety-of-enumerations)
+    - [Un-Named Enumeration](#un-named-enumeration)
+    - [Named Enumeration](#named-enumeration)
+  - [Scoping of Enumerations](#scoping-of-enumerations)
+    - [Unscoped Enumeration](#unscoped-enumeration)
+    - [Scoped Enumeration](#scoped-enumeration)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Enumeration
 
 _**Enumeration** is a user defined type that consists of a set of named integral constants._

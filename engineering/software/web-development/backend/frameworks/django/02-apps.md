@@ -1,3 +1,17 @@
+# Contents
+
+- [Django app](#django-app)
+  - [Creating App](#creating-app)
+  - [Include the App](#include-the-app)
+  - [Views](#views)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Django app
 
 <br>

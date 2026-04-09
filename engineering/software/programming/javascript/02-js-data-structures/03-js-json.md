@@ -1,3 +1,17 @@
+# Contents
+
+- [JSON](#json)
+- [JSON data types](#json-data-types)
+- [JSON.stringify()](#jsonstringify)
+- [JSON.pasrse()](#jsonpasrse)
+
+<br>
+<br>
+<br>
+
+
+
+
 # JSON
 
 - JSON stands for _Javascript Object Notation_ and is one of the data representation format (similar to xml or yaml)

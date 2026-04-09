@@ -1,3 +1,24 @@
+# Contents
+
+- [Character](#character)
+  - [Useful Functions Related to Characters](#useful-functions-related-to-characters)
+- [C Style String](#c-style-string)
+  - [Initialising a C Style String](#initialising-a-c-style-string)
+  - [Basic Functions](#basic-functions)
+  - [Useful Functions Related to C Style String](#useful-functions-related-to-c-style-string)
+  - [Array Decay](#array-decay)
+  - [Pointer to String Literal](#pointer-to-string-literal)
+- [C++ string](#c-string)
+  - [Useful Functions Related to std::string](#useful-functions-related-to-stdstring)
+  - [Concatenation](#concatenation)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Character
 
 **_A character is a built-in type used to represent a single character._**

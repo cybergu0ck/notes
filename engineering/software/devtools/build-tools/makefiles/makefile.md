@@ -1,3 +1,27 @@
+# Contents
+
+- [Makefile](#makefile)
+  - [Alternatives](#alternatives)
+  - [Makefile Syntax](#makefile-syntax)
+    - [Rule](#rule)
+    - [Command](#command)
+    - [Target](#target)
+    - [Prerequisites](#prerequisites)
+  - [Working Principle of make](#working-principle-of-make)
+    - [Illustartion](#illustartion)
+  - [Make Clean](#make-clean)
+  - [Variables](#variables)
+  - [Wildcard](#wildcard)
+    - [`*` Wildcard](#wildcard)
+    - [`%` wildcard](#wildcard)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Makefile
 
 makefile is a script used to automate the build process of a software project.

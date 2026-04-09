@@ -1,3 +1,17 @@
+# Contents
+
+- [Singly Linked List](#singly-linked-list)
+  - [Complexity](#complexity)
+  - [Implementation](#implementation)
+  - [The Runner Technique](#the-runner-technique)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Singly Linked List
 
 _A linked list is a data structure consisting of nodes where each node contains a value and a reference (or link) to the next node in the sequence._

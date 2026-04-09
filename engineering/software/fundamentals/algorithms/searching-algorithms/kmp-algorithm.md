@@ -1,3 +1,22 @@
+# Contents
+
+- [The Problem](#the-problem)
+- [Brute Force Method](#brute-force-method)
+- [KMP Algorithm](#kmp-algorithm)
+  - [1. Preprocessing (Computing LPS)](#1-preprocessing-computing-lps)
+    - [Illustration](#illustration)
+  - [2. Searching](#2-searching)
+- [Time complexity](#time-complexity)
+- [Usefullness of KMP](#usefullness-of-kmp)
+- [Reference](#reference)
+
+<br>
+<br>
+<br>
+
+
+
+
 # The Problem
 
 - We are trying to find if the given string (we call haystack) is made up of repeating substring (we call needle).

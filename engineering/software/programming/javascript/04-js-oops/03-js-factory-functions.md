@@ -1,3 +1,17 @@
+# Contents
+
+- [Factory Functions](#factory-functions)
+- [Closure](#closure)
+- [Inheritence with Factories](#inheritence-with-factories)
+- [The module pattern](#the-module-pattern)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Factory Functions
 
 The factory function pattern is similar to constructors, but instead of using `new` to create an object, factory functions simply set up and return the new object when you call the function.

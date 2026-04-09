@@ -1,3 +1,18 @@
+# Contents
+
+- [Exposure](#exposure)
+  - [Shutter Speed](#shutter-speed)
+  - [Aperture](#aperture)
+  - [ISO](#iso)
+  - [Priority](#priority)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Exposure
 
 Exposure is the amount of light that is captured by camera's sensor, creating visual data over a period of time.

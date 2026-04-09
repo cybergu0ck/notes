@@ -1,3 +1,24 @@
+# Contents
+
+- [Setting up Debian machine](#setting-up-debian-machine)
+  - [Add current user to sudoers file](#add-current-user-to-sudoers-file)
+  - [Usage of external monitor](#usage-of-external-monitor)
+  - [Configure git](#configure-git)
+    - [Setup SSH keys](#setup-ssh-keys)
+  - [Install vscode](#install-vscode)
+  - [Install programs](#install-programs)
+  - [Stow the dotfiles](#stow-the-dotfiles)
+  - [Configure lightdm](#configure-lightdm)
+  - [Enabling touchpad for i3wm](#enabling-touchpad-for-i3wm)
+  - [Launching volume control panel](#launching-volume-control-panel)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Setting up Debian machine
 
 <br>

@@ -1,3 +1,33 @@
+# Contents
+
+- [Introduction](#introduction)
+  - [Motivation](#motivation)
+  - [Tests](#tests)
+  - [Automated Testing](#automated-testing)
+    - [Benefits of Automated Testing](#benefits-of-automated-testing)
+  - [Test Suites](#test-suites)
+  - [Designing Test Suites](#designing-test-suites)
+    - [Test Size](#test-size)
+      - [Small Tests](#small-tests)
+      - [Medium Tests](#medium-tests)
+      - [Large Tests](#large-tests)
+    - [Test Scope](#test-scope)
+      - [Unit tests](#unit-tests)
+      - [Integration tests](#integration-tests)
+      - [End-to-End tests](#end-to-end-tests)
+  - [Testing Strategy](#testing-strategy)
+    - [Anti-Patterns](#anti-patterns)
+  - [Flaky Tests](#flaky-tests)
+  - [The Beyoncé Rule](#the-beyoncé-rule)
+  - [Code Coverage](#code-coverage)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Introduction
 
 <br>

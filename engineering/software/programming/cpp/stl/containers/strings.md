@@ -1,3 +1,23 @@
+# Contents
+
+- [std::string](#stdstring)
+  - [initialisation](#initialisation)
+  - [string literal vs std::string](#string-literal-vs-stdstring)
+  - [methods](#methods)
+    - [access](#access)
+    - [search](#search)
+    - [insertion](#insertion)
+    - [deletion](#deletion)
+    - [modification](#modification)
+    - [miscallaneous](#miscallaneous)
+
+<br>
+<br>
+<br>
+
+
+
+
 # std::string
 
 _std::string_ is a class that represents a sequence of characters.

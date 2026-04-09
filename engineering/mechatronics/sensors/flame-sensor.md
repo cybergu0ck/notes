@@ -1,3 +1,20 @@
+# Contents
+
+- [Flame Sensor](#flame-sensor)
+  - [Types of Flame Sensors](#types-of-flame-sensors)
+  - [IR Flame Sensor](#ir-flame-sensor)
+    - [Working Principle of IR Flame Sensor](#working-principle-of-ir-flame-sensor)
+    - [Hardware Details of IR Flame Sensor](#hardware-details-of-ir-flame-sensor)
+      - [Pins](#pins)
+      - [Pot](#pot)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Flame Sensor
 
 A sensor to detect flame.

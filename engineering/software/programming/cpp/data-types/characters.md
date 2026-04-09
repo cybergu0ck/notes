@@ -1,3 +1,15 @@
+# Contents
+
+- [Characters](#characters)
+  - [Character encoding](#character-encoding)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Characters
 
 <br>

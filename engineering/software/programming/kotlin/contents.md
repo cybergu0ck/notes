@@ -1,3 +1,21 @@
+# Contents
+
+- [Fundamentals](#fundamentals)
+  - [[Variables](fundamentals/variables.md)](#variablesfundamentalsvariablesmd)
+  - [[Datatypes](datatypes/datatypes.md)](#datatypesdatatypesdatatypesmd)
+- [Control Flow](#control-flow)
+  - [[Conditionals](control-flow/conditionals.md#conditional-branching)](#conditionalscontrol-flowconditionalsmdconditional-branching)
+  - [[Loops](control-flow/loops.md#loops)](#loopscontrol-flowloopsmdloops)
+  - [[Function](control-flow/functions.md#function)](#functioncontrol-flowfunctionsmdfunction)
+- [Object Oriented Programming](#object-oriented-programming)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Fundamentals
 
 <br>

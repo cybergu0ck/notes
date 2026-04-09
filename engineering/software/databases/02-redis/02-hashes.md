@@ -1,3 +1,22 @@
+# Contents
+
+- [Hashs](#hashs)
+- [Create Fields](#create-fields)
+    - [`hset` [ O(1) ]](#hset-o1)
+- [Read Field Values](#read-field-values)
+    - [`hget` [ O(1) ]](#hget-o1)
+    - [`hgetall` [ O(n) ]](#hgetall-on)
+- [Update Fields](#update-fields)
+- [Delete fields](#delete-fields)
+    - [`hdel` [ O(1) ]](#hdel-o1)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Hashs
 
 - hashes are collections of filed-value pairs.

@@ -1,3 +1,20 @@
+# Contents
+
+- [Remote Repo](#remote-repo)
+  - [Connecting to remote repo](#connecting-to-remote-repo)
+  - [Viewing the associated remote repo](#viewing-the-associated-remote-repo)
+  - [Fetching updates from the remote repo](#fetching-updates-from-the-remote-repo)
+  - [Pulling the updates from the remote repo](#pulling-the-updates-from-the-remote-repo)
+  - [Working with remote branches](#working-with-remote-branches)
+    - [pull options](#pull-options)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Remote Repo
 
 <br>

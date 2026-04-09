@@ -1,3 +1,32 @@
+# Contents
+
+- [Single Page Application](#single-page-application)
+  - [Routing](#routing)
+- [React Router](#react-router)
+  - [Installing the Package](#installing-the-package)
+  - [Pages](#pages)
+  - [Routes](#routes)
+  - [Links](#links)
+    - [`to` prop](#to-prop)
+  - [Nested Routes](#nested-routes)
+  - [Route with Parameters](#route-with-parameters)
+    - [Setting up the Route](#setting-up-the-route)
+    - [Linking to the Route containg Parameters](#linking-to-the-route-containg-parameters)
+    - [Accessing the Parameters](#accessing-the-parameters)
+  - [Route with Queries](#route-with-queries)
+    - [Linking the Query](#linking-the-query)
+    - [Accessing and Setting the queries](#accessing-and-setting-the-queries)
+  - [Programmatic Navigation](#programmatic-navigation)
+    - [Imperative Method](#imperative-method)
+    - [Declarative Method](#declarative-method)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Single Page Application
 
 A single page application (SPA) is a web application that interacts with the user by dynamically rewriting the current page rather than loading entire new pages from the server.

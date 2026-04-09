@@ -1,3 +1,25 @@
+# Contents
+
+- [Keys](#keys)
+- [Creating Keys](#creating-keys)
+    - [SET command](#set-command)
+    - [TTL command](#ttl-command)
+- [Getting Values](#getting-values)
+    - [GET command](#get-command)
+- [Checking if Key Exists](#checking-if-key-exists)
+    - [EXISTS command](#exists-command)
+- [Getting Keys](#getting-keys)
+- [Deleting Keys](#deleting-keys)
+    - [DEL command](#del-command)
+    - [UNLINK command](#unlink-command)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Keys
 
 - keys are unique

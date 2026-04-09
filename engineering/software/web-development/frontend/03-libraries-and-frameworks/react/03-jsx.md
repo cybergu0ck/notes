@@ -1,3 +1,27 @@
+# Contents
+
+- [JSX](#jsx)
+  - [JSX Rules](#jsx-rules)
+  - [Using javascript in JSX](#using-javascript-in-jsx)
+    - [Using conditional statements in JSX.](#using-conditional-statements-in-jsx)
+  - [Using CSS in JSX](#using-css-in-jsx)
+  - [Setting classes conditionally in JSX](#setting-classes-conditionally-in-jsx)
+  - [Setting text conditionally in JSX](#setting-text-conditionally-in-jsx)
+  - [React fragment](#react-fragment)
+  - [Displaying a list of elements in JSX](#displaying-a-list-of-elements-in-jsx)
+  - [Conditional Rendering](#conditional-rendering)
+    - [Conditional rendering using the ternary operator](#conditional-rendering-using-the-ternary-operator)
+    - [Conditional rendering using the `&&` operator](#conditional-rendering-using-the-operator)
+    - [Conditional rendering using `if`, `if/else` and `switch` statments](#conditional-rendering-using-if-ifelse-and-switch-statments)
+    - [Falsy values in JSX (A common pitfall)](#falsy-values-in-jsx-a-common-pitfall)
+
+<br>
+<br>
+<br>
+
+
+
+
 # JSX
 
 _"JSX" is a syntax extension for javascript that allows HTML-like markup within javascript._

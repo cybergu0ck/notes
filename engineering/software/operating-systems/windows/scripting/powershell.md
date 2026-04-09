@@ -1,3 +1,18 @@
+# Contents
+
+- [Powershell](#powershell)
+  - [Powershell Scripting](#powershell-scripting)
+    - [Adding multi line commands in a script](#adding-multi-line-commands-in-a-script)
+    - [Adding multiple commands in a single line in a script](#adding-multiple-commands-in-a-single-line-in-a-script)
+    - [Getting Date and time](#getting-date-and-time)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Powershell
 
 <br>

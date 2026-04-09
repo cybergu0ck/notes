@@ -1,3 +1,19 @@
+# Contents
+
+- [NVM](#nvm)
+  - [Installing Node](#installing-node)
+  - [Using Node](#using-node)
+  - [Viewing List of Nodes](#viewing-list-of-nodes)
+  - [Unstalling Node](#unstalling-node)
+  - [Turning NVM off](#turning-nvm-off)
+
+<br>
+<br>
+<br>
+
+
+
+
 # NVM
 
 NVM stands for "Node Version Manager." It's a tool that allows you to manage multiple versions of Node.js on a single machine. NVM makes it easy to install, switch between, and manage different versions of Node.js for different projects or use cases.

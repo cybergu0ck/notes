@@ -1,3 +1,18 @@
+# Contents
+
+- [Context API](#context-api)
+  - [Creating the Context](#creating-the-context)
+  - [Providing the value to the Context](#providing-the-value-to-the-context)
+  - [Consuming the Context](#consuming-the-context)
+  - [Illustration](#illustration)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Context API
 
 The Context API provides a way to pass data through the component tree without having to pass props down manually at every level.

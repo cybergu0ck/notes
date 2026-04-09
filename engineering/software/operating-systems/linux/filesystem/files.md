@@ -1,3 +1,21 @@
+# Contents
+
+- [Files](#files)
+  - [File command](#file-command)
+  - [Less command](#less-command)
+  - [Links](#links)
+    - [Hard links](#hard-links)
+    - [Symbolic links](#symbolic-links)
+    - [Ln command](#ln-command)
+  - [Wildcards](#wildcards)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Files
 
 Note on file names in linux,

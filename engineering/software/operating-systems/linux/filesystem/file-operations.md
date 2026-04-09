@@ -1,3 +1,26 @@
+# Contents
+
+- [File operations](#file-operations)
+  - [Cat command](#cat-command)
+    - [Displaying the Contents of a File](#displaying-the-contents-of-a-file)
+    - [Concatenating Multiple Files](#concatenating-multiple-files)
+    - [Creating a New File](#creating-a-new-file)
+    - [Appending to a File](#appending-to-a-file)
+    - [Overwriting a File](#overwriting-a-file)
+    - [Combining Existing Files into another File](#combining-existing-files-into-another-file)
+  - [Tee command](#tee-command)
+  - [Cp command](#cp-command)
+  - [Mv command](#mv-command)
+  - [Mkdir command](#mkdir-command)
+  - [Rm command](#rm-command)
+
+<br>
+<br>
+<br>
+
+
+
+
 # File operations
 
 <br>

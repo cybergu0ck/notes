@@ -1,3 +1,32 @@
+# Contents
+
+- [Sets](#sets)
+  - [Set creation](#set-creation)
+  - [Criteria for set item](#criteria-for-set-item)
+    - [Hashability](#hashability)
+  - [Set comprehension](#set-comprehension)
+  - [Set operators](#set-operators)
+    - [Union](#union)
+    - [Intersection](#intersection)
+    - [Difference](#difference)
+    - [Symmetric difference](#symmetric-difference)
+    - [Subset](#subset)
+    - [Superset](#superset)
+    - [Disjoint](#disjoint)
+    - [Inplace operators](#inplace-operators)
+  - [Set methods](#set-methods)
+    - [Insertion](#insertion)
+    - [Search](#search)
+    - [Access](#access)
+    - [Deletion](#deletion)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Sets
 
 A set is an unordered collection of unique elements in Python.

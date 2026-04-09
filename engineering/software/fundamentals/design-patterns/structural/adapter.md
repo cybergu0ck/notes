@@ -1,3 +1,22 @@
+# Contents
+
+- [Adapter Pattern](#adapter-pattern)
+  - [About the Adapter Pattern](#about-the-adapter-pattern)
+    - [Implementations](#implementations)
+    - [Components](#components)
+    - [Applicability](#applicability)
+    - [Benefits](#benefits)
+    - [Consequences](#consequences)
+  - [Illustration](#illustration)
+    - [Illustration about components](#illustration-about-components)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Adapter Pattern
 
 _The Adapter design pattern is a structural pattern that allows objects with incompatible interfaces to work together._

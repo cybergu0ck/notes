@@ -1,3 +1,18 @@
+# Contents
+
+- [The `class` syntax](#the-class-syntax)
+- [Not just syntactic sugar](#not-just-syntactic-sugar)
+- [Class Expressions](#class-expressions)
+- [Class Fields](#class-fields)
+- [Making bound methods with class fields](#making-bound-methods-with-class-fields)
+
+<br>
+<br>
+<br>
+
+
+
+
 # The `class` syntax
 
 - The basic syntax is

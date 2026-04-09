@@ -1,3 +1,16 @@
+# Contents
+
+  - [Understanding super()](#understanding-super)
+- [Multiple Inheritance](#multiple-inheritance)
+  - [Method Resolution Order (MRO)](#method-resolution-order-mro)
+
+<br>
+<br>
+<br>
+
+
+
+
 
 - Inheritance allows one class (aka child class / subclass / derivedclass) to inherit the attributes and behaviour from another class (aka parentclass/s superclass /baseclass).
 - This powerful language feature helps us avoid writing a lot of the same code twice. It allows us to ***DRY (don't repeat yourself)*** up our code.

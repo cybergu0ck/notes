@@ -1,3 +1,19 @@
+# Contents
+
+- [Count Color](#count-color)
+  - [Enable Developer Tab in the Ribbon](#enable-developer-tab-in-the-ribbon)
+  - [Enter VBA mode](#enter-vba-mode)
+  - [Add the functions in VB](#add-the-functions-in-vb)
+  - [Using the function](#using-the-function)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Count Color
 
 Use case is to count the number of cells based on color (fill).

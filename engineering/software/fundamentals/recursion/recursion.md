@@ -1,3 +1,16 @@
+# Contents
+
+- [Recursion](#recursion)
+  - [Recurrance Relations](#recurrance-relations)
+  - [Tail recursion](#tail-recursion)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Recursion
 
 - Theoretically, there is no problem that can only be solved with recursion. According to the "Church-Turing" Thesis, recursion and iteration are computationally equivalent; any recursive algorithm can be converted into an iterative one by manually managing a stack.

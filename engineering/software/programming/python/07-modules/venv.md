@@ -1,3 +1,21 @@
+# Contents
+
+- [Venv](#venv)
+  - [Creating the virtual environment](#creating-the-virtual-environment)
+  - [Activate the virtual environment](#activate-the-virtual-environment)
+  - [Deactivate the virtual environment](#deactivate-the-virtual-environment)
+  - [Delete the virtual environment](#delete-the-virtual-environment)
+  - [requirements.txt](#requirementstxt)
+  - [Good Practice](#good-practice)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Venv
 
 _The venv module supports creating lightweight “virtual environments”, each with their own independent set of Python packages installed._

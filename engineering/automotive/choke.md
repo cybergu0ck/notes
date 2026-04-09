@@ -1,3 +1,17 @@
+# Contents
+
+- [Choke](#choke)
+  - [Need for a choke](#need-for-a-choke)
+  - [How does temperature affect the engine.](#how-does-temperature-affect-the-engine)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Choke
 
 Choke is a valve that "chokes" the engine by limiting the air supply thus enriching the air-fuel ratio (fuel rich mixture).

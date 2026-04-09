@@ -1,3 +1,17 @@
+# Contents
+
+- [const correctness](#const-correctness)
+  - [1. read only member functions must be `const` qualified](#1-read-only-member-functions-must-be-const-qualified)
+  - [2. parameter of copy constructor must be `const` qualified](#2-parameter-of-copy-constructor-must-be-const-qualified)
+  - [3. parameters of member functions that performs only read operations on the parameter must be `const` qualified](#3-parameters-of-member-functions-that-performs-only-read-operations-on-the-parameter-must-be-const-qualified)
+
+<br>
+<br>
+<br>
+
+
+
+
 # const correctness
 
 <br>

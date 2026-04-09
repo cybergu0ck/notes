@@ -1,3 +1,17 @@
+# Contents
+
+- [Prettier](#prettier)
+  - [Setting up Prettier for VS Code Editor](#setting-up-prettier-for-vs-code-editor)
+  - [Using ESLint with Prettier](#using-eslint-with-prettier)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Prettier
 
 Prettier automatically formats javascript code to a set of rules.

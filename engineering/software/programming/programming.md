@@ -1,3 +1,25 @@
+# Contents
+
+- [Programming Paradigms](#programming-paradigms)
+  - [Procedural Programming](#procedural-programming)
+  - [Object Oriented Programming](#object-oriented-programming)
+  - [Generic Programming](#generic-programming)
+- [Websites ranking programming langauages](#websites-ranking-programming-langauages)
+- [Developer-Consumer Approach](#developer-consumer-approach)
+  - [Difference between Error and Exception](#difference-between-error-and-exception)
+- [Naming conventions](#naming-conventions)
+  - [Hungarian Notation](#hungarian-notation)
+  - [Camel Case](#camel-case)
+  - [Pascal Case](#pascal-case)
+  - [Snake Case](#snake-case)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Programming Paradigms
 
 <br>

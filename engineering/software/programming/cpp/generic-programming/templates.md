@@ -1,3 +1,16 @@
+# Contents
+
+- [Generic Programming with macros](#generic-programming-with-macros)
+- [Generic Programming with Function Templates](#generic-programming-with-function-templates)
+- [Generic programming with class templates](#generic-programming-with-class-templates)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Generic Programming with macros
 
 - This is not a good practice but must be known to deal with legacy C++ code (a lot of it is out there)

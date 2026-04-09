@@ -1,3 +1,25 @@
+# Contents
+
+- [Observer pattern](#observer-pattern)
+  - [Theory](#theory)
+    - [Components](#components)
+    - [Applicability](#applicability)
+    - [Advantages](#advantages)
+    - [Disadvantages](#disadvantages)
+    - [Implementations](#implementations)
+  - [Application](#application)
+    - [Components](#components)
+    - [Applicability](#applicability)
+    - [Advantages](#advantages)
+    - [Disadvantages](#disadvantages)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Observer pattern
 
 <br>

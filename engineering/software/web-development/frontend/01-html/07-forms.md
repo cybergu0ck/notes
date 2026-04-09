@@ -1,3 +1,24 @@
+# Contents
+
+- [HTML Forms](#html-forms)
+  - [`<label>`](#label)
+  - [`<input>`](#input)
+    - [`type` attribute](#type-attribute)
+    - [`name` attribute](#name-attribute)
+    - [`value` attribute](#value-attribute)
+    - [`placeholder` attributre](#placeholder-attributre)
+    - [`disabled` attribute](#disabled-attribute)
+  - [`<textarea>`](#textarea)
+    - [`name`, `id`, `placeholder`, `disabled` attributes](#name-id-placeholder-disabled-attributes)
+  - [`rows` and `cols`](#rows-and-cols)
+
+<br>
+<br>
+<br>
+
+
+
+
 # HTML Forms
 
 <br>

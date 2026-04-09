@@ -1,3 +1,32 @@
+# Contents
+
+- [Forms](#forms)
+- [Form control elements](#form-control-elements)
+  - [The input element](#the-input-element)
+    - [email input](#email-input)
+    - [password input](#password-input)
+    - [date input](#date-input)
+  - [Labels](#labels)
+  - [Using httpbin](#using-httpbin)
+  - [Text Area](#text-area)
+  - [Select Dropdown](#select-dropdown)
+- [Organising form elements](#organising-form-elements)
+  - [Fieldset Element](#fieldset-element)
+  - [Legend](#legend)
+- [Form Validation](#form-validation)
+  - [Required Validation](#required-validation)
+  - [Text Length Validations](#text-length-validations)
+  - [Number Range Validation](#number-range-validation)
+  - [Pattern Validations](#pattern-validations)
+  - [Styling Vaidation](#styling-vaidation)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Forms
 
 - The _form_ element wraps all of the inputs a user will interact with on a form.

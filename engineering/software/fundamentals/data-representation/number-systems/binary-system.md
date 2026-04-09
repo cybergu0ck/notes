@@ -1,3 +1,30 @@
+# Contents
+
+- [Bit](#bit)
+- [Binary Numbers](#binary-numbers)
+  - [Types of binary numbers](#types-of-binary-numbers)
+    - [Unsigned binary numbers](#unsigned-binary-numbers)
+    - [Signed binary numbers](#signed-binary-numbers)
+      - [Sign-Magnitude](#sign-magnitude)
+      - [One’s Complement](#ones-complement)
+      - [Two’s Complement](#twos-complement)
+  - [The total number of unique values represented by n bit binary number.](#the-total-number-of-unique-values-represented-by-n-bit-binary-number)
+  - [The range of numbers represented by n bit binary number.](#the-range-of-numbers-represented-by-n-bit-binary-number)
+  - [The number of bits required to represent an integer](#the-number-of-bits-required-to-represent-an-integer)
+  - [Each additional bit doubles the range of distinct values that can be represented](#each-additional-bit-doubles-the-range-of-distinct-values-that-can-be-represented)
+  - [Binary Arithmetic](#binary-arithmetic)
+  - [Bitwise Operations](#bitwise-operations)
+  - [Endianness](#endianness)
+  - [Floating Point Representation](#floating-point-representation)
+  - [Binary Coding Systems](#binary-coding-systems)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Bit
 
 The term "bit" is short for "binary digit" and represents a single binary value, either 0 or 1.

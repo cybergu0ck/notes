@@ -1,3 +1,25 @@
+# Contents
+
+- [Creating Dictionaries](#creating-dictionaries)
+- [Criteria for key](#criteria-for-key)
+- [Methods](#methods)
+  - [Inserting items](#inserting-items)
+  - [Accessing list of key value pairs](#accessing-list-of-key-value-pairs)
+  - [Accessing Keys](#accessing-keys)
+  - [Accessing Values](#accessing-values)
+  - [Deleting items from a dictionary](#deleting-items-from-a-dictionary)
+  - [Sorting dicts](#sorting-dicts)
+    - [Difference between sorted() and sort()](#difference-between-sorted-and-sort)
+- [Default Dict](#default-dict)
+  - [Default dict methods](#default-dict-methods)
+
+<br>
+<br>
+<br>
+
+
+
+
 `dict` is Python datastructure that stores key value pairs.
 
 - Dicts are mutable

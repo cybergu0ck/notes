@@ -1,3 +1,19 @@
+# Contents
+
+- [heapq](#heapq)
+- [Useful Functions](#useful-functions)
+  - [`heapify(iterable)`](#heapifyiterable)
+  - [`heappush(heap, item)`](#heappushheap-item)
+  - [`heappop(heap)`](#heappopheap)
+  - [Illustatration](#illustatration)
+
+<br>
+<br>
+<br>
+
+
+
+
 # heapq
 
 The heapq module provides functions to create and manipulate heaps, making it easy to manage collections of elements with varying priorities.

@@ -1,3 +1,36 @@
+# Contents
+
+- [Arrays](#arrays)
+  - [Declaring Arrays](#declaring-arrays)
+  - [Initialising Arrays](#initialising-arrays)
+  - [Accessing array elements](#accessing-array-elements)
+  - [Array Decay](#array-decay)
+- [Multi-dimensional arrays](#multi-dimensional-arrays)
+  - [declaring multidimensional arrays](#declaring-multidimensional-arrays)
+  - [Initialising multidimensional array](#initialising-multidimensional-array)
+  - [Accessing multidimensional array](#accessing-multidimensional-array)
+- [Vectors](#vectors)
+  - [Declaring vectors](#declaring-vectors)
+  - [Initialising vectors](#initialising-vectors)
+  - [Accessing elements of vectors](#accessing-elements-of-vectors)
+  - [Vector methods](#vector-methods)
+    - [Getting the Number of Elements](#getting-the-number-of-elements)
+    - [Appending an element](#appending-an-element)
+    - [Inserting an element](#inserting-an-element)
+    - [Poping the last element](#poping-the-last-element)
+    - [Removing a specific element](#removing-a-specific-element)
+  - [Clear the vector](#clear-the-vector)
+  - [Swap two vectors](#swap-two-vectors)
+- [Multi-dimensional vectors](#multi-dimensional-vectors)
+  - [Declaration](#declaration)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Arrays
 
 Characteristics of arrays are:

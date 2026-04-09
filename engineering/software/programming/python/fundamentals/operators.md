@@ -1,3 +1,28 @@
+# Contents
+
+- [Operators](#operators)
+  - [Arithmetic operators](#arithmetic-operators)
+  - [Assignment operators](#assignment-operators)
+    - [Compound assignment operators](#compound-assignment-operators)
+  - [Relational Operators](#relational-operators)
+  - [Logical Operators](#logical-operators)
+  - [Bitwise Operators](#bitwise-operators)
+    - [Bitwise and](#bitwise-and)
+    - [Bitwise or](#bitwise-or)
+    - [Bitwise not](#bitwise-not)
+    - [Bitwise xor](#bitwise-xor)
+    - [Bitwise left shift](#bitwise-left-shift)
+    - [Bitwise right shift](#bitwise-right-shift)
+  - [Operator precedence](#operator-precedence)
+    - [Associativity](#associativity)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Operators
 
 <br>

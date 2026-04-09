@@ -1,3 +1,22 @@
+# Contents
+
+- [Templates](#templates)
+- [Using dictionary data as variables and adding control statements in html](#using-dictionary-data-as-variables-and-adding-control-statements-in-html)
+- [Passing titles](#passing-titles)
+- [Template Inheritance](#template-inheritance)
+- [Using bootstrap for styling](#using-bootstrap-for-styling)
+  - [Adding navigation bar](#adding-navigation-bar)
+  - [Creating a `static` folder in our app](#creating-a-static-folder-in-our-app)
+  - [Adding css to our home view](#adding-css-to-our-home-view)
+  - [Adding url name tags instead of hard coding](#adding-url-name-tags-instead-of-hard-coding)
+
+<br>
+<br>
+<br>
+
+
+
+
 
 <br/>
 

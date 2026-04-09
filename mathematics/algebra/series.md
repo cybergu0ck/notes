@@ -1,3 +1,15 @@
+# Contents
+
+- [Series](#series)
+  - [Geometric series](#geometric-series)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Series
 
 <br>

@@ -1,8 +1,21 @@
 # Contents
 
+- [Basics](#basics)
+- [Filesystem](#filesystem)
+- [Storage](#storage)
+- [Processes](#processes)
+- [Scripting](#scripting)
+- [Networking](#networking)
+- [Security](#security)
+- [User Management](#user-management)
+- [Package Management](#package-management)
+
 <br>
 <br>
 <br>
+
+
+
 
 ## Basics
 

@@ -1,3 +1,17 @@
+# Contents
+
+- [`dir()`](#dir)
+- [`isinstance()`](#isinstance)
+- [`Counter()`](#counter)
+- [`divmod()`](#divmod)
+
+<br>
+<br>
+<br>
+
+
+
+
 # `dir()`
 
 ---

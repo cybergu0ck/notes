@@ -1,3 +1,35 @@
+# Contents
+
+- [Binary Tree](#binary-tree)
+  - [Equations related to Binary Tree](#equations-related-to-binary-tree)
+    - [Maximum number of nodes for a given depth](#maximum-number-of-nodes-for-a-given-depth)
+    - [Depth of the tree for number of nodes](#depth-of-the-tree-for-number-of-nodes)
+    - [Indices when represented as an array](#indices-when-represented-as-an-array)
+  - [Types of Binary Tree](#types-of-binary-tree)
+    - [Types of Binary Tree based on number of children](#types-of-binary-tree-based-on-number-of-children)
+      - [Full Binary Tree](#full-binary-tree)
+      - [Degenerate Binary Tree](#degenerate-binary-tree)
+    - [Types of Binary Tree based on completion levels](#types-of-binary-tree-based-on-completion-levels)
+      - [Balanced Binary Tree](#balanced-binary-tree)
+      - [Complete Binary Tree](#complete-binary-tree)
+      - [Perfect Binary Tree](#perfect-binary-tree)
+  - [Tree Traversal Algorithms](#tree-traversal-algorithms)
+      - [In Order Traversal](#in-order-traversal)
+      - [Pre Order Traversal](#pre-order-traversal)
+      - [Post Order Traversal](#post-order-traversal)
+      - [Level Order Traversal](#level-order-traversal)
+    - [Implementation](#implementation)
+  - [Refernces](#refernces)
+    - [In Order Traversal wihout Infinite Loop](#in-order-traversal-wihout-infinite-loop)
+    - [Implementation using Arrays](#implementation-using-arrays)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Binary Tree
 
 _Binary Tree is a [tree](./01-trees.md) where each node can have at most two children._

@@ -1,3 +1,21 @@
+# Contents
+
+- [Stream](#stream)
+  - [Input Streams](#input-streams)
+    - [Standard Input Stream](#standard-input-stream)
+    - [String Input Stream](#string-input-stream)
+    - [File Input Stream](#file-input-stream)
+    - [Getline Function](#getline-function)
+  - [Output Streams](#output-streams)
+  - [Bidirectional Streams](#bidirectional-streams)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Stream
 
 **Stream is an abstraction that represents flow of data.**

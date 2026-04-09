@@ -1,3 +1,23 @@
+# Contents
+
+- [Type inference](#type-inference)
+- [Explicit typing](#explicit-typing)
+- [Data types](#data-types)
+  - [Nullability](#nullability)
+    - [Nullable types](#nullable-types)
+    - [Non-nullable types](#non-nullable-types)
+  - [Handling nullable variables](#handling-nullable-variables)
+    - [Safe call operator](#safe-call-operator)
+    - [Not null assertion operator](#not-null-assertion-operator)
+    - [Elvis operator](#elvis-operator)
+
+<br>
+<br>
+<br>
+
+
+
+
 A **_type_** (also called data type) tells Kotlin how you intend to use that data.
 
 - type provides the set of values that the expression can take.

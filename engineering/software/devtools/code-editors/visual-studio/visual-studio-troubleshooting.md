@@ -1,3 +1,17 @@
+# Contents
+
+- [Visual Studio Troubleshooting](#visual-studio-troubleshooting)
+  - [How to toggle between solution view and Folder view in VS](#how-to-toggle-between-solution-view-and-folder-view-in-vs)
+  - [Disable specific warning](#disable-specific-warning)
+    - [Using the VS IDE and solution explorer](#using-the-vs-ide-and-solution-explorer)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Visual Studio Troubleshooting
 
 <br>

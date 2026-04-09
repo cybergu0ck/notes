@@ -1,3 +1,45 @@
+# Contents
+
+- [Scale VMs in Azure](#scale-vms-in-azure)
+  - [Virtual machine scale sets](#virtual-machine-scale-sets)
+  - [Virtual machine availability sets](#virtual-machine-availability-sets)
+  - [Examples of when to use VMs](#examples-of-when-to-use-vms)
+  - [Move to the cloud with VMs (Lift and Shift)](#move-to-the-cloud-with-vms-lift-and-shift)
+  - [VM Resources](#vm-resources)
+- [Create an Azure Virtual Machine](#create-an-azure-virtual-machine)
+- [Azure Virtual Desktop](#azure-virtual-desktop)
+- [Azure Containers](#azure-containers)
+  - [What are containers?](#what-are-containers)
+  - [Azure Container Instances](#azure-container-instances)
+- [Azure Functions](#azure-functions)
+  - [Benefits of Azure Functions](#benefits-of-azure-functions)
+- [Application hosting options](#application-hosting-options)
+- [Azure Virtual Networking](#azure-virtual-networking)
+  - [Isolation and segmentation](#isolation-and-segmentation)
+  - [Internet communications](#internet-communications)
+  - [Communicate between Azure resources](#communicate-between-azure-resources)
+  - [Communicate with on-premises resources](#communicate-with-on-premises-resources)
+  - [Route network traffic](#route-network-traffic)
+  - [Filter network traffic](#filter-network-traffic)
+  - [Connect virtual networks](#connect-virtual-networks)
+- [Azure Virtual Private Networks](#azure-virtual-private-networks)
+  - [VPN gateways](#vpn-gateways)
+    - [High-availability scenarios](#high-availability-scenarios)
+    - [Active/standby](#activestandby)
+    - [Active/active](#activeactive)
+    - [ExpressRoute failover](#expressroute-failover)
+    - [Zone-redundant gateways](#zone-redundant-gateways)
+- [Azure ExpressRoute](#azure-expressroute)
+- [Azure DNS](#azure-dns)
+  - [Benefits of Azure DNS](#benefits-of-azure-dns)
+
+<br>
+<br>
+<br>
+
+
+
+
 
 
 You’ll learn about three of the compute options (virtual machines, containers, and Azure functions). You’ll also learn about some of the networking features, such as Azure virtual networks, Azure DNS, and Azure ExpressRoute.

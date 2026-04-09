@@ -1,3 +1,22 @@
+# Contents
+
+- [Variables](#variables)
+  - [Variable naming](#variable-naming)
+  - [The old `var`](#the-old-var)
+    - [1. `var` has no block scope](#1-var-has-no-block-scope)
+    - [2. `var` tolerates redeclarations](#2-var-tolerates-redeclarations)
+    - [3. `var` is Hoisted](#3-var-is-hoisted)
+- [Constants](#constants)
+  - [Uppercase constants](#uppercase-constants)
+- [Scope](#scope)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Variables
 
 - A variable is a “named storage” for data and are defined using the `let` keyword.

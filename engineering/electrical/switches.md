@@ -1,3 +1,18 @@
+# Contents
+
+- [Types of switches](#types-of-switches)
+  - [SPST Switch](#spst-switch)
+  - [SPDT Switch](#spdt-switch)
+  - [DPST Switch](#dpst-switch)
+  - [DPDT Switch](#dpdt-switch)
+
+<br>
+<br>
+<br>
+
+
+
+
 ## Types of switches
 
 Important terminology:

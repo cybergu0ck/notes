@@ -1,3 +1,28 @@
+# Contents
+
+- [Git Recording changes](#git-recording-changes)
+  - [Vewing changes](#vewing-changes)
+    - [States of a file](#states-of-a-file)
+  - [Staging the changes](#staging-the-changes)
+  - [Commiting the changes](#commiting-the-changes)
+    - [Ammending previous commits](#ammending-previous-commits)
+  - [Stashing the Changes](#stashing-the-changes)
+    - [Multiple Stashes](#multiple-stashes)
+    - [View the list of stash](#view-the-list-of-stash)
+    - [View particular stash](#view-particular-stash)
+    - [Reapplying the Stashed Changes](#reapplying-the-stashed-changes)
+    - [Dropping Stashed Changes](#dropping-stashed-changes)
+  - [Tags](#tags)
+    - [Creating a light weight tag](#creating-a-light-weight-tag)
+    - [Viewing tags](#viewing-tags)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Git Recording changes
 
 <br>

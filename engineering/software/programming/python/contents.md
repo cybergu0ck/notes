@@ -1,3 +1,41 @@
+# Contents
+
+- [Fundamentals](#fundamentals)
+  - [[Introduction](fundamentals/introduction.md)](#introductionfundamentalsintroductionmd)
+  - [[Variables](fundamentals/variables.md#variables)](#variablesfundamentalsvariablesmdvariables)
+  - [[Operators](fundamentals/operators.md)](#operatorsfundamentalsoperatorsmd)
+  - [Scope](#scope)
+- [Datatypes](#datatypes)
+  - [Numeric types](#numeric-types)
+    - [[Integers]()](#integers)
+    - [[Floating points]()](#floating-points)
+    - [[Complex numbers]()](#complex-numbers)
+  - [Boolean types](#boolean-types)
+  - [Sequence types](#sequence-types)
+    - [[Strings]()](#strings)
+    - [[Lists](./datatypes/sequence-types/lists.md)](#listsdatatypessequence-typeslistsmd)
+    - [[Tuples]()](#tuples)
+    - [[Ranges]()](#ranges)
+  - [Set types](#set-types)
+    - [[Sets](datatypes/set-types/sets.md)](#setsdatatypesset-typessetsmd)
+    - [[Frozen sets]()](#frozen-sets)
+  - [Map types](#map-types)
+    - [[Dictionaries]()](#dictionaries)
+- [Control flow](#control-flow)
+  - [[Conditional branching](control-flow/conditionals.md#conditional-branching)](#conditional-branchingcontrol-flowconditionalsmdconditional-branching)
+  - [[Loops](control-flow/loops.md#loops)](#loopscontrol-flowloopsmdloops)
+  - [[Function](control-flow/functions.md#function)](#functioncontrol-flowfunctionsmdfunction)
+- [Object oriented programming](#object-oriented-programming)
+- [IO](#io)
+- [Exception handling](#exception-handling)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Fundamentals
 
 <br>

@@ -1,3 +1,19 @@
+# Contents
+
+- [The Basics](#the-basics)
+  - [ndarray.ndim](#ndarrayndim)
+  - [ndarray.shape](#ndarrayshape)
+  - [ndarray.size](#ndarraysize)
+- [Creating Arrays](#creating-arrays)
+  - [From a Python List](#from-a-python-list)
+
+<br>
+<br>
+<br>
+
+
+
+
 # The Basics
 
 - NumPy’s main object is the homogeneous multidimensional array. It is a table of elements (usually numbers), all of the same type, indexed by a tuple of non-negative integers.

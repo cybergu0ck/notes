@@ -1,3 +1,18 @@
+# Contents
+
+- [Introduction](#introduction)
+- [Redis rudimentary commands](#redis-rudimentary-commands)
+- [Strings](#strings)
+- [Hashes](#hashes)
+- [Lists](#lists)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Introduction
 
 - Redis is an open-source in-memory data structure store that can be used as a database, cache, and message broker.

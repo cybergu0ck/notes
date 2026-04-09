@@ -1,3 +1,25 @@
+# Contents
+
+- [Git Merging](#git-merging)
+  - [Types of merges](#types-of-merges)
+    - [Fast Forward Merge](#fast-forward-merge)
+    - [Merge Commit](#merge-commit)
+    - [Squash Merge](#squash-merge)
+    - [Rebase](#rebase)
+  - [Merge Conflicts](#merge-conflicts)
+    - [Resolving merge conflicts using merge tool](#resolving-merge-conflicts-using-merge-tool)
+    - [Resolving merge conflicts without merge tool](#resolving-merge-conflicts-without-merge-tool)
+  - [Abort a merge](#abort-a-merge)
+  - [Undoing a merge](#undoing-a-merge)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Git Merging
 
 Merging refers to the process of incorporating the changes made in one branch into another.

@@ -1,3 +1,23 @@
+# Contents
+
+- [Dynamic programming](#dynamic-programming)
+  - [Optimal substrucutre](#optimal-substrucutre)
+  - [Overlapping subproblems](#overlapping-subproblems)
+  - [Framework for DP](#framework-for-dp)
+  - [Concept Grilling](#concept-grilling)
+    - [Number of permutations to make change](#number-of-permutations-to-make-change)
+      - [Using Recursion](#using-recursion)
+      - [Using Recursion with Memoization](#using-recursion-with-memoization)
+      - [Using Dynamic Programming](#using-dynamic-programming)
+    - [Number of combinations to make change](#number-of-combinations-to-make-change)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Dynamic programming
 
 <br>

@@ -1,3 +1,18 @@
+# Contents
+
+- [Depth first search](#depth-first-search)
+  - [General template](#general-template)
+    - [Recursive DFS](#recursive-dfs)
+    - [Iterative DFS](#iterative-dfs)
+  - [DFS on a 2d matrix](#dfs-on-a-2d-matrix)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Depth first search
 
 DFS explores as far as possible along each branch before backtracking.

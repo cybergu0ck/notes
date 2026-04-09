@@ -1,3 +1,24 @@
+# Contents
+
+- [Undoing changes in git](#undoing-changes-in-git)
+  - [Discarding changes in working directory](#discarding-changes-in-working-directory)
+  - [Unstaging files](#unstaging-files)
+  - [Ammend Commit](#ammend-commit)
+  - [Reset](#reset)
+    - [Soft Reset](#soft-reset)
+    - [Hard Reset](#hard-reset)
+  - [Revert](#revert)
+  - [Undoing a branch delete](#undoing-a-branch-delete)
+  - [Undoing a merge](#undoing-a-merge)
+    - [Undoing a merge pushed in remote](#undoing-a-merge-pushed-in-remote)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Undoing changes in git
 
 <br>

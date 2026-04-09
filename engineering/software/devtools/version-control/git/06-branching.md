@@ -1,3 +1,24 @@
+# Contents
+
+- [Git Branching](#git-branching)
+  - [Creating branch](#creating-branch)
+  - [Viewing branches](#viewing-branches)
+  - [Switch branch](#switch-branch)
+  - [Renaming branches](#renaming-branches)
+  - [Deleting branches](#deleting-branches)
+  - [Undoing a branch delete](#undoing-a-branch-delete)
+  - [Working with remote branches](#working-with-remote-branches)
+  - [Cherrypicking](#cherrypicking)
+  - [Comparing branches](#comparing-branches)
+    - [Illustration](#illustration)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Git Branching
 
 Branching allows multiple lines of development to coexist independently, making it easier to work on new features, fix bugs, and collaborate on projects without disrupting the main codebase.

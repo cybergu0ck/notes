@@ -1,3 +1,19 @@
+# Contents
+
+- [Loops](#loops)
+  - [For Loops](#for-loops)
+    - [looping over a collection](#looping-over-a-collection)
+      - [Looping over a collection with modification](#looping-over-a-collection-with-modification)
+    - [For loop using range and len function](#for-loop-using-range-and-len-function)
+    - [Enumerated for loops](#enumerated-for-loops)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Loops
 
 <br>

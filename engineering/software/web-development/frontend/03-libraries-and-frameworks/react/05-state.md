@@ -1,3 +1,27 @@
+# Contents
+
+- [Hook](#hook)
+    - [Rules for utilizing hooks.](#rules-for-utilizing-hooks)
+- [State](#state)
+  - [Creating state](#creating-state)
+    - [A. Creating state using data](#a-creating-state-using-data)
+    - [B. Lazy Evaluation (Creating state using a callback)](#b-lazy-evaluation-creating-state-using-a-callback)
+    - [`useState` runs only once!](#usestate-runs-only-once)
+  - [Updating state](#updating-state)
+    - [state updates are asynchronous!](#state-updates-are-asynchronous)
+    - [Using callback to update state](#using-callback-to-update-state)
+  - [Derived State](#derived-state)
+  - [Lifting Up State](#lifting-up-state)
+  - [Inverse data flow](#inverse-data-flow)
+  - [State vs Prop](#state-vs-prop)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Hook
 
 _"**Hook**" is a special function that allows addition of stateful logic to functional components._

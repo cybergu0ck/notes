@@ -1,3 +1,22 @@
+# Contents
+
+- [VS Code](#vs-code)
+  - [VS Code Key Bindings](#vs-code-key-bindings)
+  - [Snippets](#snippets)
+  - [Extensions](#extensions)
+    - [Prettier](#prettier)
+  - [Miscallaneous](#miscallaneous)
+    - [Setting default shell for integrated terminal](#setting-default-shell-for-integrated-terminal)
+    - [Setting custom font size for the Integrated Terminal](#setting-custom-font-size-for-the-integrated-terminal)
+    - [Configuring default C++ formatter](#configuring-default-c-formatter)
+
+<br>
+<br>
+<br>
+
+
+
+
 # VS Code
 
 <br>

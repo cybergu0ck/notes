@@ -1,3 +1,18 @@
+# Contents
+
+- [About current users on the system](#about-current-users-on-the-system)
+- [Adding a user](#adding-a-user)
+- [Deleting a user](#deleting-a-user)
+- [Setting user passwords](#setting-user-passwords)
+- [Switching users](#switching-users)
+
+<br>
+<br>
+<br>
+
+
+
+
 ## About current users on the system
 
 ---

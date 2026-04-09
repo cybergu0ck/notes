@@ -1,3 +1,25 @@
+# Contents
+
+- [Binary Numbers](#binary-numbers)
+  - [Binary Addition](#binary-addition)
+  - [Word Size](#word-size)
+  - [Representing Unsigned Integers using Binary Numbers](#representing-unsigned-integers-using-binary-numbers)
+  - [Representing Signed Integers using Binary Numbers](#representing-signed-integers-using-binary-numbers)
+    - [Two's compliment](#twos-compliment)
+      - [Calculating Decimal for a given Two's Compliment Binary](#calculating-decimal-for-a-given-twos-compliment-binary)
+      - [Calculating Two's Compliment Binary for a given Decimal](#calculating-twos-compliment-binary-for-a-given-decimal)
+  - [Adders](#adders)
+    - [Half Adder](#half-adder)
+    - [Full Adder](#full-adder)
+    - [Adder (Add 16)](#adder-add-16)
+
+<br>
+<br>
+<br>
+
+
+
+
 <style TYPE="text/css">
 code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
 </style>

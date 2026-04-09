@@ -1,3 +1,27 @@
+# Contents
+
+- [Computer Vision Problems](#computer-vision-problems)
+- [Input Features](#input-features)
+- [Convolution Operation](#convolution-operation)
+  - [Vertical Edge Detector](#vertical-edge-detector)
+  - [Padding](#padding)
+    - [Why do we need padding?](#why-do-we-need-padding)
+  - [Stride](#stride)
+  - [Technical Note on cross-correlation vs convolution](#technical-note-on-cross-correlation-vs-convolution)
+- [Convolution over volume](#convolution-over-volume)
+- [Convolution with multiple filters](#convolution-with-multiple-filters)
+- [Convolutional Neural Network with Single Layer](#convolutional-neural-network-with-single-layer)
+      - [Question : If we have 10 filters that are 3\*3\*3 in one layer of a neural network, how many parameters does that layer have.](#question-if-we-have-10-filters-that-are-333-in-one-layer-of-a-neural-network-how-many-parameters-does-that-layer-have)
+- [Pooling layers](#pooling-layers)
+- [Simple Convolutional Neural Network](#simple-convolutional-neural-network)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Computer Vision Problems
 
 1. Image Classification

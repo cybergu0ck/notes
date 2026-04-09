@@ -1,3 +1,23 @@
+# Contents
+
+- [Good practice](#good-practice)
+  - [Responsibility of the Function](#responsibility-of-the-function)
+  - [Enforce Explicity](#enforce-explicity)
+    - [Using this keyword in c++](#using-this-keyword-in-c)
+    - [Variable naming](#variable-naming)
+  - [Single Return vs Multiple Return](#single-return-vs-multiple-return)
+  - [Avoiding Deep Nests](#avoiding-deep-nests)
+  - [Paths in code](#paths-in-code)
+  - [UI development](#ui-development)
+  - [Elegantly clever](#elegantly-clever)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Good practice
 
 <br>

@@ -1,3 +1,29 @@
+# Contents
+
+- [Run time polymorphism](#run-time-polymorphism)
+  - [Virtual methods](#virtual-methods)
+  - [Polymorphic class](#polymorphic-class)
+  - [Virtual method table](#virtual-method-table)
+    - [Illustration for vtable](#illustration-for-vtable)
+  - [Virtual pointer](#virtual-pointer)
+    - [Illustration for vptr](#illustration-for-vptr)
+  - [Criteria for run time polymorphism](#criteria-for-run-time-polymorphism)
+  - [Override specifier](#override-specifier)
+  - [Run time polymorphism mechanism](#run-time-polymorphism-mechanism)
+  - [Circumventing run time polymorphism](#circumventing-run-time-polymorphism)
+  - [Virtual destructors](#virtual-destructors)
+  - [Pure Virtual Function](#pure-virtual-function)
+  - [RTTI](#rtti)
+    - [Criteria for RTTI](#criteria-for-rtti)
+    - [Core operators for RTTI](#core-operators-for-rtti)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Run time polymorphism
 
 Run-time polymorphism is the ability of a program to use a single name (interface) to represent multiple behaviors, where the exact (implementation) is resolved at run time.

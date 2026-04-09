@@ -1,3 +1,27 @@
+# Contents
+
+- [printing a float with specified number of digits after decimal point](#printing-a-float-with-specified-number-of-digits-after-decimal-point)
+- [string methods](#string-methods)
+  - [`title()` or `capitalize()` converts the first character of the string to upper case.](#title-or-capitalize-converts-the-first-character-of-the-string-to-upper-case)
+  - [`lower() `/ `upper()` converts the string to lower case or upper case respectively.](#lower-upper-converts-the-string-to-lower-case-or-upper-case-respectively)
+  - [`islower()` / `isupper()` returns true if the string characters are in lower case or uppercase respectively.](#islower-isupper-returns-true-if-the-string-characters-are-in-lower-case-or-uppercase-respectively)
+  - [`isalpha()` returns True if all characters in the string are in the alphabet](#isalpha-returns-true-if-all-characters-in-the-string-are-in-the-alphabet)
+  - [`isdigit()` returns True if all characters in the string are digits](#isdigit-returns-true-if-all-characters-in-the-string-are-digits)
+  - [`lstrip()` removes any leading characters](#lstrip-removes-any-leading-characters)
+  - [`count()` method returns the number of times a specified value appears in the string](#count-method-returns-the-number-of-times-a-specified-value-appears-in-the-string)
+  - [`endswith()` method returns True if the string ends with the specified value, otherwise False.](#endswith-method-returns-true-if-the-string-ends-with-the-specified-value-otherwise-false)
+  - [`find()` method finds the first occurrence of the specified value.](#find-method-finds-the-first-occurrence-of-the-specified-value)
+  - [Character encoding](#character-encoding)
+    - [`ord()`](#ord)
+    - [`chr()`](#chr)
+
+<br>
+<br>
+<br>
+
+
+
+
 # printing a float with specified number of digits after decimal point
 
 ```python

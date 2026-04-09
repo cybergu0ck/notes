@@ -1,3 +1,20 @@
+# Contents
+
+- [Tuples](#tuples)
+  - [Creating tuples](#creating-tuples)
+  - [Inserting items into a tuple](#inserting-items-into-a-tuple)
+  - [Accesing items in tuple](#accesing-items-in-tuple)
+  - [Deleting Items from a tuple](#deleting-items-from-a-tuple)
+  - [Unpacking tuples](#unpacking-tuples)
+  - [\* Operator](#operator)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Tuples
 
 One among the 4 built in data types to store collection of data. (Other 3 are set, list and dict)

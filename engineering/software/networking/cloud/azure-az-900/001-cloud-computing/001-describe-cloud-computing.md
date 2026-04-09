@@ -1,3 +1,20 @@
+# Contents
+
+- [Introduction to cloud computing](#introduction-to-cloud-computing)
+- [The shared responsibility model](#the-shared-responsibility-model)
+- [The Cloud Models](#the-cloud-models)
+  - [Private cloud](#private-cloud)
+  - [Public cloud](#public-cloud)
+  - [Hybrid clo0ud](#hybrid-clo0ud)
+- [Consumption Based Models](#consumption-based-models)
+
+<br>
+<br>
+<br>
+
+
+
+
 
 
 ## Introduction to cloud computing

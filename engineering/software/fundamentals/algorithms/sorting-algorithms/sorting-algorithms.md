@@ -1,3 +1,18 @@
+# Contents
+
+- [Array Sorting Algorithms](#array-sorting-algorithms)
+  - [Insertion Sort](#insertion-sort)
+  - [Merge Sort](#merge-sort)
+  - [Heap Sort](#heap-sort)
+  - [Quick Sort](#quick-sort)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Array Sorting Algorithms
 
 | Algorithm      | Big Omega (Best Case/Lower Bound) | Big Theta (Average Case/Tight Bound) | Big O, Time Complexity | Big O, Space Complexity |

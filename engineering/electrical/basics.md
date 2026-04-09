@@ -1,3 +1,17 @@
+# Contents
+
+- [Live, Neutral and Ground](#live-neutral-and-ground)
+  - [Why is the Ground Pin in electrical plugs are longer than Live and Neutral pins?](#why-is-the-ground-pin-in-electrical-plugs-are-longer-than-live-and-neutral-pins)
+  - [Why is Neutral wire relatively safer than Live wire](#why-is-neutral-wire-relatively-safer-than-live-wire)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Live, Neutral and Ground
 
 - The Live wire is either at high posivite or negative voltage.

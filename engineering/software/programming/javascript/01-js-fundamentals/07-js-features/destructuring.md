@@ -1,3 +1,16 @@
+# Contents
+
+- [Destructuring](#destructuring)
+  - [Array Destructuring](#array-destructuring)
+  - [Object Destructing](#object-destructing)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Destructuring
 
 It is a way to extract values from arrays and objects and assign them to variables in a more convinient way.

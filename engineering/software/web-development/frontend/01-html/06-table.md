@@ -1,3 +1,15 @@
+# Contents
+
+- [HTML Table](#html-table)
+  - [Headers, Rows and Columns](#headers-rows-and-columns)
+
+<br>
+<br>
+<br>
+
+
+
+
 # HTML Table
 
 All the contents of the table must be enclosed within `<table>` tags.

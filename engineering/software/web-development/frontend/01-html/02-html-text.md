@@ -1,3 +1,24 @@
+# Contents
+
+- [HTML Text Fundamentals](#html-text-fundamentals)
+  - [Paragraph](#paragraph)
+  - [Headings](#headings)
+  - [Lists using `<ul>`, `<ol>`, `<li>`](#lists-using-ul-ol-li)
+    - [Unordererd](#unordererd)
+    - [Ordererd](#ordererd)
+    - [Nested Lists](#nested-lists)
+  - [Emphasis](#emphasis)
+    - [italicize using `<em>`](#italicize-using-em)
+    - [Bold using `<strong>`](#bold-using-strong)
+  - [Advanced text formatting](#advanced-text-formatting)
+
+<br>
+<br>
+<br>
+
+
+
+
 # HTML Text Fundamentals
 
 <br>

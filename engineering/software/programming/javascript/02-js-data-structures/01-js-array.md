@@ -1,3 +1,24 @@
+# Contents
+
+- [Creating arrays](#creating-arrays)
+- [Inserting elements into array](#inserting-elements-into-array)
+- [Accesing array elements](#accesing-array-elements)
+- [Deleting array elements](#deleting-array-elements)
+- [Modifying elements in array](#modifying-elements-in-array)
+- [Sorting arrays](#sorting-arrays)
+  - [Array's `map` method](#arrays-map-method)
+  - [Array's `filter` method](#arrays-filter-method)
+    - [Concept Clarity](#concept-clarity)
+  - [Array's `reduce` method](#arrays-reduce-method)
+- [Other array methods](#other-array-methods)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Creating arrays
 
 ```js

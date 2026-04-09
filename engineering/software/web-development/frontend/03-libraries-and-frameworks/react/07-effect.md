@@ -1,3 +1,21 @@
+# Contents
+
+- [Effect](#effect)
+  - [Difference between State and Effect](#difference-between-state-and-effect)
+  - [`useEffect` hook](#useeffect-hook)
+    - [Callback in useEffect](#callback-in-useeffect)
+    - [Dependency Array in useEffect](#dependency-array-in-useeffect)
+- [Data Fetching](#data-fetching)
+  - [Handling loading while data fetching](#handling-loading-while-data-fetching)
+  - [Handling errors while data fetching](#handling-errors-while-data-fetching)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Effect
 
 Effect is an action (which is not directly related to rendering) that can be performed in response to rendering (changes in the component's state or props.)

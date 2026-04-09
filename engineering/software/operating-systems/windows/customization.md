@@ -1,3 +1,18 @@
+# Contents
+
+- [To create a custom shortcut key](#to-create-a-custom-shortcut-key)
+- [Custom powershell script to push git](#custom-powershell-script-to-push-git)
+- [How to Make Microsoft Edge Always Start in InPrivate Mode](#how-to-make-microsoft-edge-always-start-in-inprivate-mode)
+- [Set the default startup location in git bash terminal](#set-the-default-startup-location-in-git-bash-terminal)
+- [Restore old right click context menu](#restore-old-right-click-context-menu)
+
+<br>
+<br>
+<br>
+
+
+
+
 # To create a custom shortcut key
 
 - Use the following as shortcut value in the properties tab of an custom made exe. (My exe was in `C:\Windows\System32`)

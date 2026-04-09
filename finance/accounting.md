@@ -1,3 +1,19 @@
+# Contents
+
+- [Accounting for credit card payments](#accounting-for-credit-card-payments)
+  - [Illustration](#illustration)
+      - [Expenses](#expenses)
+      - [Liabilites](#liabilites)
+      - [Expenses](#expenses)
+      - [Liabilites](#liabilites)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Accounting for credit card payments
 
 1. Account for the expenses when they occur, not when they are paid for.

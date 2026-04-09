@@ -1,3 +1,21 @@
+# Contents
+
+- [Storage Class Specifiers](#storage-class-specifiers)
+  - [`extern` specifier](#extern-specifier)
+  - [`static` specifier](#static-specifier)
+    - [Local Static Variable](#local-static-variable)
+    - [Global Static Variable](#global-static-variable)
+    - [Global Static Function](#global-static-function)
+    - [Static Member Variable](#static-member-variable)
+    - [Static Member Function](#static-member-function)
+
+<br>
+<br>
+<br>
+
+
+
+
 //NOTE - Review this notes after having reviewd oops
 
 # Storage Class Specifiers

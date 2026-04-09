@@ -1,3 +1,23 @@
+# Contents
+
+- [FlexBox](#flexbox)
+- [Growing and Shrinking](#growing-and-shrinking)
+  - [`flex-grow`](#flex-grow)
+  - [`flex-shrink`](#flex-shrink)
+  - [`flex-basis`](#flex-basis)
+- [Axes (Orientation)](#axes-orientation)
+- [Allignment](#allignment)
+  - [`justify-content`](#justify-content)
+  - [`align-items`](#align-items)
+- [Gap](#gap)
+
+<br>
+<br>
+<br>
+
+
+
+
 # FlexBox
 
 - Flexbox is a way to arrange items into rows or columns. These items will flex (i.e. grow or shrink) based on some simple rules that you can define.

@@ -1,3 +1,18 @@
+# Contents
+
+- [Rest Operator](#rest-operator)
+  - [Rest operator in destructuring](#rest-operator-in-destructuring)
+- [Spread Operator](#spread-operator)
+  - [Spreading Arrays](#spreading-arrays)
+  - [Spreading Objects](#spreading-objects)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Rest Operator
 
 - `...` can be either the rest operator or spread operator based on how it is used.

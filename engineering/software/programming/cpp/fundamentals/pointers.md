@@ -1,3 +1,35 @@
+# Contents
+
+- [Pointers](#pointers)
+  - [Basics of Pointers](#basics-of-pointers)
+    - [Declaring Pointers](#declaring-pointers)
+    - [Initialising Pointers](#initialising-pointers)
+    - [Pointers and Addresses](#pointers-and-addresses)
+    - [Dereferencing Pointers](#dereferencing-pointers)
+    - [Pointers to Pointers](#pointers-to-pointers)
+    - [Size of Pointers](#size-of-pointers)
+  - [Const Correctness with pointers](#const-correctness-with-pointers)
+    - [Pointers to Constants](#pointers-to-constants)
+    - [Constant Pointers](#constant-pointers)
+    - [Constant Pointers to Constants](#constant-pointers-to-constants)
+  - [Pointers as Function Arguments](#pointers-as-function-arguments)
+    - [Passing Pointers by Value](#passing-pointers-by-value)
+    - [Passing Pointers by Reference](#passing-pointers-by-reference)
+  - [Pointers as Return Type](#pointers-as-return-type)
+  - [Pointer Arithmetic](#pointer-arithmetic)
+    - [`++` and `--`](#and)
+    - [`+` and `-`](#and)
+    - [Subracting two pointers pointing to same datatype](#subracting-two-pointers-pointing-to-same-datatype)
+  - [Pointers and Arrays](#pointers-and-arrays)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Pointers
 
 _**Pointers** are variables that store the memory addresses of other variables._
