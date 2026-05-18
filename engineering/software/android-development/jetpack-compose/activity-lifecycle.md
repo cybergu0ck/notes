@@ -25,6 +25,74 @@ Activity lifecycle consists of the different states that an activity can go thro
 
 <br>
 <br>
+
+### Illustration
+
+The following code is a Android studio starter code with few additions especially the overriden `onStart` method.
+
+```kt
+package com.example.lifecycle_concept  
+  
+import android.os.Bundle  
+import androidx.activity.ComponentActivity  
+import androidx.activity.compose.setContent  
+import androidx.activity.enableEdgeToEdge  
+import androidx.compose.foundation.layout.fillMaxSize  
+import androidx.compose.foundation.layout.padding  
+import androidx.compose.material3.Scaffold  
+import androidx.compose.material3.Text  
+import androidx.compose.runtime.Composable  
+import androidx.compose.ui.Modifier  
+import androidx.compose.ui.tooling.preview.Preview  
+import com.example.lifecycle_concept.ui.theme.LifecycleconceptTheme  
+import android.util.Log  
+
+private const val TAG = "MainActivity"  
+
+class MainActivity : ComponentActivity() {  
+    override fun onStart() {  
+        super.onStart()  
+        Log.d(TAG, "OnStart Called")  
+    }  
+  
+    override fun onCreate(savedInstanceState: Bundle?) {  
+        super.onCreate(savedInstanceState)  
+        enableEdgeToEdge()  
+        setContent {  
+            LifecycleconceptTheme {  
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->  
+                    Greeting(  
+                        name = "Android",  
+                        modifier = Modifier.padding(innerPadding)  
+                    )  
+                }  
+            }        }    }  
+}  
+  
+@Composable  
+fun Greeting(name: String, modifier: Modifier = Modifier) {  
+    Text(  
+        text = "Hello $name!",  
+        modifier = modifier  
+    )  
+}  
+  
+@Preview(showBackground = true)  
+@Composable  
+fun GreetingPreview() {  
+    LifecycleconceptTheme {  
+        Greeting("Android")  
+    }  
+}
+```
+
+- Enable the logcat window in Android studio from the View > Tool Windows menu.
+- In Logcat's filter add `tag:MainActivity` along with `package:mine`.
+- Now when the app is run in the emulator, the logs are populated.
+- Add override's for other lifecycle methods to play around.
+
+<br>
+<br>
 <br>
 
 ## Configuration changes
