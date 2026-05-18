@@ -31,8 +31,9 @@ Recomposition is a process where upon a state change Compose re-executes the aff
 
 Observable state is a state that is tracked by Compose.
 
-- Observable state can be immutable (read only).
-- Observable state can be mutable, Example : `mutableStateOf()`, t receives an initial value as a parameter that is wrapped in a State object, which then makes its value observable.
+- Observable state can be `State` which is immutable (read only).
+- Observable state can be `MutableState` which is mutable (read and write).
+  - `mutableStateOf` is used to create `MutableState`.
 
 <br>
 <br>
