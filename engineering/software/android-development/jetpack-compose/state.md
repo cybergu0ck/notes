@@ -160,3 +160,16 @@ fun TipCalculatorPreview() {
     }
 }
 ```
+
+<br>
+
+- Composables can accept state and expose events. For example, a `TextField`/`OutlinedTextField` accepts a value and exposes a callback `onValueChange` that requests the callback handler to change the value.
+
+	```kt
+	var name by remember { mutableStateOf("") }
+	OutlinedTextField(    
+		value = name,    
+		onValueChange = { name = it },    
+		label = { Text("Name") }
+		)
+	```
