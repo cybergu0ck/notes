@@ -106,6 +106,15 @@ The `ViewModel` component holds and exposes the state the UI consumes.
 
 <br>
 
+
+The following line needs to be added in the "build.gradle.kts" file's dependencies in the app directory. 
+
+```kt
+implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
+```
+
+<br>
+
 ```kt
 package com.example.simple_todo  
   
