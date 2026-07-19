@@ -68,6 +68,14 @@ An intent is a request for the system to perform some action, commonly presentin
 
 ## Illustration
 
+
+The following implementation is required in the "build.gradle.kts" file inside the app directory.
+
+```
+implementation("androidx.navigation:navigation-compose:2.7.4")
+```
+
+
 The following is Screens.kt file in the "ui" directory containing the UI code.
 
 ```kt
