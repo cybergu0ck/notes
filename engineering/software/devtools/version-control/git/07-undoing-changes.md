@@ -2,44 +2,71 @@
 
 <br>
 <br>
+<br>
 
-## Discarding changes in working directory
+## Unstage staged changes in working directory
 
-The changes in this context are unstaged. Follow these steps:
+- To unstage all the staged changes.
 
-1. Discard the changes in working directory for all tracked files. It will revert the working directory to match the previous commit.
+  ```
+  git restore --staged .
+  ```
 
-   ```bash
-   git checkout .
-   ```
+- To unstage a specific change.
 
-1. The above command will not delete the changes, it will make them untracked. To delete them use :
-
-   ```bash
-   git clean -f
-   ```
-
-   <br>
-
-> Ideally use VS code and discard all the changes in GUI.
+  ```
+  git restore --staged <filepath>
+  ```
 
 <br>
 <br>
+<br>
 
-## Unstaging files
+## Discarding unstaged changes in working directory
 
-- Unstaging individual staged (but not yet commited) files:
+- To delete all the unstaged changes.
 
-  ```bash
-  git reset <file>
+  ```
+  git restore .
   ```
 
-- Unstaging all staged (but not yet commited) files:
+- To delete specific unstaged file
 
-  ```bash
-  git reset
+  ```
+  git restore  <filepath>
   ```
 
+<br>
+<br>
+<br>
+
+## Discarding untracked changes in working directory
+
+- Run the following to do a safe dry run.
+
+  ```bash
+  git clean -nd
+  ```
+
+- Run the following for delete
+
+  ```bash
+  git clean -fd
+  ```
+
+<br>
+<br>
+<br>
+
+## Discard all staged, unstaged and untracked changes
+
+```
+git restore --staged .
+git restore .
+git clean -fd
+```
+
+<br>
 <br>
 <br>
 
@@ -48,7 +75,6 @@ The changes in this context are unstaged. Follow these steps:
 The following command allows us to make changes to the commit message. add or remove changes only from the most recent commit (HEAD~1).
 
 - Follow these steps to change only the commit messge:
-
   1. The following command will open the text editor set in git config.
 
   ```bash
