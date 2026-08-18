@@ -74,37 +74,46 @@ CONTENTS_PATTERN = re.compile(r"^#{1,2}\s+(Contents|Table of Contents|TOC)\s*$",
 
 def has_contents_section(lines):
     return any(CONTENTS_PATTERN.match(l) for l in lines)
-def remove_existing_contents(lines):
-    start = None
-    end = None
-
+    
+def remove_existing_backlink_and_contents(lines):
+    """
+    Strips existing top backlink (if present) and existing table of contents section.
+    """
     backlink_re = re.compile(r'^\[← Back')
-    header_re = CONTENTS_PATTERN  # assumes this matches the contents header line
+    header_re = CONTENTS_PATTERN
 
+    # 1. Strip top backlink if present at the very beginning
+    if lines and backlink_re.match(lines[0]):
+        lines = lines[1:]
+        # Strip trailing blank lines left immediately after the backlink
+        while lines and not lines[0].strip():
+            lines.pop(0)
+
+    # 2. Locate and strip the contents section
+    start = None
     for i, line in enumerate(lines):
         if header_re.match(line):
             start = i
-
-            # If the line right before the header is a backlink, include it
-            if i > 0 and backlink_re.match(lines[i - 1]):
-                start = i - 1
-
             break
 
     if start is None:
         return lines
 
-    # Remove until the next header (same logic as yours)
+    # Find the end of the contents section (the next Markdown heading)
+    end = len(lines)
     for j in range(start + 1, len(lines)):
         if re.match(r"^#{1,6}\s+", lines[j]):
             end = j
             break
 
-    if end is None:
-        end = len(lines)
+    # Rejoin parts around the removed contents section
+    remaining_lines = lines[:start] + lines[end:]
 
-    return lines[:start] + lines[end:]
+    # Clean up leading empty lines remaining at the top
+    while remaining_lines and not remaining_lines[0].strip():
+        remaining_lines.pop(0)
 
+    return remaining_lines
 
 
 def inject_contents(file_path, root_path):
@@ -113,9 +122,8 @@ def inject_contents(file_path, root_path):
     original_content = path.read_text(encoding="utf-8")
     lines = original_content.split("\n")
 
-    # Remove existing contents section if present, preserving all other lines
-    if has_contents_section(lines):
-        lines = remove_existing_contents(lines)
+    # Clean out both existing top backlink and existing contents section
+    lines = remove_existing_backlink_and_contents(lines)
 
     content_for_headings = "\n".join(lines)
     headings = extract_headings(content_for_headings)
@@ -128,20 +136,26 @@ def inject_contents(file_path, root_path):
     if not contents_section:
         return
 
-    # Always insert backlink and contents at the very top, before everything else
-
-    # Backlink to parent (if not root)
+    # Build fresh backlink section
     backlink = []
     if file_path != root_path:
         parent = file_path.parent
-        # Links now point to the parent's contents.md file
-        parent_index = f"./contents.md"
-        backlink.append(f"[← Back to {parent.name}]({parent_index})\n")
+        parent_index = "./contents.md"
+        backlink.append(f"[← Back to {parent.name}]({parent_index})")
 
     contents_lines = contents_section.split("\n")
-    lines = backlink + contents_lines + ["", "", ""] + lines
+    
+    # Combine everything at the top cleanly
+    new_lines = []
+    if backlink:
+        new_lines.extend(backlink)
+        new_lines.append("")  # Spacing after backlink
 
-    new_content = "\n".join(lines)
+    new_lines.extend(contents_lines)
+    new_lines.extend(["", ""])  # Spacing before original body content
+    new_lines.extend(lines)
+
+    new_content = "\n".join(new_lines)
 
     if new_content != original_content:
         path.write_text(new_content, encoding="utf-8")
