@@ -14,6 +14,48 @@
 
 
 
+# Contents
+
+- [QGridLayouts](#qgridlayouts)
+  - [Constraining the Size of the Layouts](#constraining-the-size-of-the-layouts)
+  - [Spacing in QGridLayout](#spacing-in-qgridlayout)
+  - [Troubleshooting](#troubleshooting)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [QGridLayouts](#qgridlayouts)
+  - [Constraining the Size of the Layouts](#constraining-the-size-of-the-layouts)
+  - [Spacing in QGridLayout](#spacing-in-qgridlayout)
+  - [Troubleshooting](#troubleshooting)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [QGridLayouts](#qgridlayouts)
+  - [Constraining the Size of the Layouts](#constraining-the-size-of-the-layouts)
+  - [Spacing in QGridLayout](#spacing-in-qgridlayout)
+  - [Troubleshooting](#troubleshooting)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to qt](./contents.md)
 
 # QGridLayouts

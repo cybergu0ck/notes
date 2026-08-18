@@ -14,6 +14,48 @@
 
 
 
+# Contents
+
+- [Creating databases using `models.py`](#creating-databases-using-modelspy)
+- [The `makemigration` command](#the-makemigration-command)
+- [To check the actual sql commands that will be run by django](#to-check-the-actual-sql-commands-that-will-be-run-by-django)
+- [The `migrate` command](#the-migrate-command)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Creating databases using `models.py`](#creating-databases-using-modelspy)
+- [The `makemigration` command](#the-makemigration-command)
+- [To check the actual sql commands that will be run by django](#to-check-the-actual-sql-commands-that-will-be-run-by-django)
+- [The `migrate` command](#the-migrate-command)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Creating databases using `models.py`](#creating-databases-using-modelspy)
+- [The `makemigration` command](#the-makemigration-command)
+- [To check the actual sql commands that will be run by django](#to-check-the-actual-sql-commands-that-will-be-run-by-django)
+- [The `migrate` command](#the-migrate-command)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to corey-schafer-tutorial](./contents.md)
 
 # Creating databases using `models.py`

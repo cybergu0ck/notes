@@ -15,6 +15,51 @@
 
 
 
+# Contents
+
+- [Rest Operator](#rest-operator)
+  - [Rest operator in destructuring](#rest-operator-in-destructuring)
+- [Spread Operator](#spread-operator)
+  - [Spreading Arrays](#spreading-arrays)
+  - [Spreading Objects](#spreading-objects)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Rest Operator](#rest-operator)
+  - [Rest operator in destructuring](#rest-operator-in-destructuring)
+- [Spread Operator](#spread-operator)
+  - [Spreading Arrays](#spreading-arrays)
+  - [Spreading Objects](#spreading-objects)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Rest Operator](#rest-operator)
+  - [Rest operator in destructuring](#rest-operator-in-destructuring)
+- [Spread Operator](#spread-operator)
+  - [Spreading Arrays](#spreading-arrays)
+  - [Spreading Objects](#spreading-objects)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to 06-operators](./contents.md)
 
 # Rest Operator

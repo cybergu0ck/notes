@@ -16,6 +16,54 @@
 
 
 
+# Contents
+
+- [Accounting for credit card payments](#accounting-for-credit-card-payments)
+  - [Illustration](#illustration)
+      - [Expenses](#expenses)
+      - [Liabilites](#liabilites)
+      - [Expenses](#expenses)
+      - [Liabilites](#liabilites)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Accounting for credit card payments](#accounting-for-credit-card-payments)
+  - [Illustration](#illustration)
+      - [Expenses](#expenses)
+      - [Liabilites](#liabilites)
+      - [Expenses](#expenses)
+      - [Liabilites](#liabilites)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Accounting for credit card payments](#accounting-for-credit-card-payments)
+  - [Illustration](#illustration)
+      - [Expenses](#expenses)
+      - [Liabilites](#liabilites)
+      - [Expenses](#expenses)
+      - [Liabilites](#liabilites)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to finance](./contents.md)
 
 # Accounting for credit card payments

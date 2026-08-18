@@ -18,6 +18,60 @@
 
 
 
+# Contents
+
+- [Effect](#effect)
+  - [Difference between State and Effect](#difference-between-state-and-effect)
+  - [`useEffect` hook](#useeffect-hook)
+    - [Callback in useEffect](#callback-in-useeffect)
+    - [Dependency Array in useEffect](#dependency-array-in-useeffect)
+- [Data Fetching](#data-fetching)
+  - [Handling loading while data fetching](#handling-loading-while-data-fetching)
+  - [Handling errors while data fetching](#handling-errors-while-data-fetching)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Effect](#effect)
+  - [Difference between State and Effect](#difference-between-state-and-effect)
+  - [`useEffect` hook](#useeffect-hook)
+    - [Callback in useEffect](#callback-in-useeffect)
+    - [Dependency Array in useEffect](#dependency-array-in-useeffect)
+- [Data Fetching](#data-fetching)
+  - [Handling loading while data fetching](#handling-loading-while-data-fetching)
+  - [Handling errors while data fetching](#handling-errors-while-data-fetching)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Effect](#effect)
+  - [Difference between State and Effect](#difference-between-state-and-effect)
+  - [`useEffect` hook](#useeffect-hook)
+    - [Callback in useEffect](#callback-in-useeffect)
+    - [Dependency Array in useEffect](#dependency-array-in-useeffect)
+- [Data Fetching](#data-fetching)
+  - [Handling loading while data fetching](#handling-loading-while-data-fetching)
+  - [Handling errors while data fetching](#handling-errors-while-data-fetching)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to react](./contents.md)
 
 # Effect

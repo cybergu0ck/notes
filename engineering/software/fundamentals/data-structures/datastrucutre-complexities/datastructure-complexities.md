@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Basic Operations of a data structure](#basic-operations-of-a-data-structure)
+- [Comaprision of datastructures based on time complexity](#comaprision-of-datastructures-based-on-time-complexity)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Basic Operations of a data structure](#basic-operations-of-a-data-structure)
+- [Comaprision of datastructures based on time complexity](#comaprision-of-datastructures-based-on-time-complexity)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Basic Operations of a data structure](#basic-operations-of-a-data-structure)
+- [Comaprision of datastructures based on time complexity](#comaprision-of-datastructures-based-on-time-complexity)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to datastrucutre-complexities](./contents.md)
 
 # Basic Operations of a data structure

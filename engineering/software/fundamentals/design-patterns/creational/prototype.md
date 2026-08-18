@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Prototype](#prototype)
+  - [Theory](#theory)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Prototype](#prototype)
+  - [Theory](#theory)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Prototype](#prototype)
+  - [Theory](#theory)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to creational](./contents.md)
 
 # Prototype

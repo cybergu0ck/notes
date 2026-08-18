@@ -15,6 +15,51 @@
 
 
 
+# Contents
+
+- [padding](#padding)
+- [Syntax Errors](#syntax-errors)
+- [Semantic Errors](#semantic-errors)
+- [Linker Errors](#linker-errors)
+- [Logic Errors](#logic-errors)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [padding](#padding)
+- [Syntax Errors](#syntax-errors)
+- [Semantic Errors](#semantic-errors)
+- [Linker Errors](#linker-errors)
+- [Logic Errors](#logic-errors)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [padding](#padding)
+- [Syntax Errors](#syntax-errors)
+- [Semantic Errors](#semantic-errors)
+- [Linker Errors](#linker-errors)
+- [Logic Errors](#logic-errors)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to cpp-specific-features(tobedepricated)](./contents.md)
 
 # padding

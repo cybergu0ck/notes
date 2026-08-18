@@ -14,6 +14,48 @@
 
 
 
+# Contents
+
+- [Type Specifiers](#type-specifiers)
+  - [Type Alias](#type-alias)
+  - [Auto Type Specifier](#auto-type-specifier)
+  - [Decltype Type Specifier](#decltype-type-specifier)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Type Specifiers](#type-specifiers)
+  - [Type Alias](#type-alias)
+  - [Auto Type Specifier](#auto-type-specifier)
+  - [Decltype Type Specifier](#decltype-type-specifier)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Type Specifiers](#type-specifiers)
+  - [Type Alias](#type-alias)
+  - [Auto Type Specifier](#auto-type-specifier)
+  - [Decltype Type Specifier](#decltype-type-specifier)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to old](./contents.md)
 
 # Type Specifiers

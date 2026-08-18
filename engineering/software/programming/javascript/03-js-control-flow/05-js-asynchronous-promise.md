@@ -17,6 +17,57 @@
 
 
 
+# Contents
+
+- [Promise](#promise)
+- [Handling Reject](#handling-reject)
+  - [Second parameter in the `then` method](#second-parameter-in-the-then-method)
+  - [catch method](#catch-method)
+- [Chaining](#chaining)
+- [finally method](#finally-method)
+- [Advantages of promises over callbacks](#advantages-of-promises-over-callbacks)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Promise](#promise)
+- [Handling Reject](#handling-reject)
+  - [Second parameter in the `then` method](#second-parameter-in-the-then-method)
+  - [catch method](#catch-method)
+- [Chaining](#chaining)
+- [finally method](#finally-method)
+- [Advantages of promises over callbacks](#advantages-of-promises-over-callbacks)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Promise](#promise)
+- [Handling Reject](#handling-reject)
+  - [Second parameter in the `then` method](#second-parameter-in-the-then-method)
+  - [catch method](#catch-method)
+- [Chaining](#chaining)
+- [finally method](#finally-method)
+- [Advantages of promises over callbacks](#advantages-of-promises-over-callbacks)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to 03-js-control-flow](./contents.md)
 
 # Promise

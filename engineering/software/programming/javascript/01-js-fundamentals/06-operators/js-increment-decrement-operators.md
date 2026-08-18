@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Increment and Decrement operators](#increment-and-decrement-operators)
+  - [Prefix and Postfix](#prefix-and-postfix)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Increment and Decrement operators](#increment-and-decrement-operators)
+  - [Prefix and Postfix](#prefix-and-postfix)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Increment and Decrement operators](#increment-and-decrement-operators)
+  - [Prefix and Postfix](#prefix-and-postfix)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to 06-operators](./contents.md)
 
 # Increment and Decrement operators

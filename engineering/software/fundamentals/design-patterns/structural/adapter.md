@@ -19,6 +19,63 @@
 
 
 
+# Contents
+
+- [Adapter Pattern](#adapter-pattern)
+  - [About the Adapter Pattern](#about-the-adapter-pattern)
+    - [Implementations](#implementations)
+    - [Components](#components)
+    - [Applicability](#applicability)
+    - [Benefits](#benefits)
+    - [Consequences](#consequences)
+  - [Illustration](#illustration)
+    - [Illustration about components](#illustration-about-components)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Adapter Pattern](#adapter-pattern)
+  - [About the Adapter Pattern](#about-the-adapter-pattern)
+    - [Implementations](#implementations)
+    - [Components](#components)
+    - [Applicability](#applicability)
+    - [Benefits](#benefits)
+    - [Consequences](#consequences)
+  - [Illustration](#illustration)
+    - [Illustration about components](#illustration-about-components)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Adapter Pattern](#adapter-pattern)
+  - [About the Adapter Pattern](#about-the-adapter-pattern)
+    - [Implementations](#implementations)
+    - [Components](#components)
+    - [Applicability](#applicability)
+    - [Benefits](#benefits)
+    - [Consequences](#consequences)
+  - [Illustration](#illustration)
+    - [Illustration about components](#illustration-about-components)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to structural](./contents.md)
 
 # Adapter Pattern

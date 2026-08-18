@@ -14,6 +14,48 @@
 
 
 
+# Contents
+
+- [Trie](#trie)
+  - [Implementation](#implementation)
+  - [Complexity](#complexity)
+  - [Resources](#resources)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Trie](#trie)
+  - [Implementation](#implementation)
+  - [Complexity](#complexity)
+  - [Resources](#resources)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Trie](#trie)
+  - [Implementation](#implementation)
+  - [Complexity](#complexity)
+  - [Resources](#resources)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to trees](./contents.md)
 
 # Trie

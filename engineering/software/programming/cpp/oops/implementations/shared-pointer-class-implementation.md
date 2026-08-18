@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Implementations](#implementations)
+  - [Shared pointer class implementation](#shared-pointer-class-implementation)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Implementations](#implementations)
+  - [Shared pointer class implementation](#shared-pointer-class-implementation)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Implementations](#implementations)
+  - [Shared pointer class implementation](#shared-pointer-class-implementation)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to implementations](./contents.md)
 
 # Implementations

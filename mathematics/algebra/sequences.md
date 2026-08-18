@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Sequenes](#sequenes)
+  - [Geometric sequence](#geometric-sequence)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Sequenes](#sequenes)
+  - [Geometric sequence](#geometric-sequence)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Sequenes](#sequenes)
+  - [Geometric sequence](#geometric-sequence)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to algebra](./contents.md)
 
 # Sequenes

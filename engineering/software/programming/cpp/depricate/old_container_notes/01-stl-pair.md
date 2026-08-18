@@ -14,6 +14,48 @@
 
 
 
+# Contents
+
+- [STL Pair](#stl-pair)
+  - [Initialisation](#initialisation)
+  - [Methods](#methods)
+    - [Reading and Writing](#reading-and-writing)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [STL Pair](#stl-pair)
+  - [Initialisation](#initialisation)
+  - [Methods](#methods)
+    - [Reading and Writing](#reading-and-writing)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [STL Pair](#stl-pair)
+  - [Initialisation](#initialisation)
+  - [Methods](#methods)
+    - [Reading and Writing](#reading-and-writing)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to old_container_notes](./contents.md)
 
 # STL Pair

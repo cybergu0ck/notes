@@ -14,6 +14,48 @@
 
 
 
+# Contents
+
+- [Factory Functions](#factory-functions)
+- [Closure](#closure)
+- [Inheritence with Factories](#inheritence-with-factories)
+- [The module pattern](#the-module-pattern)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Factory Functions](#factory-functions)
+- [Closure](#closure)
+- [Inheritence with Factories](#inheritence-with-factories)
+- [The module pattern](#the-module-pattern)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Factory Functions](#factory-functions)
+- [Closure](#closure)
+- [Inheritence with Factories](#inheritence-with-factories)
+- [The module pattern](#the-module-pattern)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to 04-js-oops](./contents.md)
 
 # Factory Functions

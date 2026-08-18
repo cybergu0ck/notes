@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Characters](#characters)
+  - [Character encoding](#character-encoding)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Characters](#characters)
+  - [Character encoding](#character-encoding)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Characters](#characters)
+  - [Character encoding](#character-encoding)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to data-types](./contents.md)
 
 # Characters

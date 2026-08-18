@@ -19,6 +19,63 @@
 
 
 
+# Contents
+
+- [Decorator pattern](#decorator-pattern)
+  - [Components](#components)
+  - [Implementation](#implementation)
+  - [Applicability](#applicability)
+    - [Avoid class explosion](#avoid-class-explosion)
+    - [Temporary behaviour](#temporary-behaviour)
+    - [Object specific behaviour](#object-specific-behaviour)
+  - [Advantages](#advantages)
+  - [Disadvantages](#disadvantages)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Decorator pattern](#decorator-pattern)
+  - [Components](#components)
+  - [Implementation](#implementation)
+  - [Applicability](#applicability)
+    - [Avoid class explosion](#avoid-class-explosion)
+    - [Temporary behaviour](#temporary-behaviour)
+    - [Object specific behaviour](#object-specific-behaviour)
+  - [Advantages](#advantages)
+  - [Disadvantages](#disadvantages)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Decorator pattern](#decorator-pattern)
+  - [Components](#components)
+  - [Implementation](#implementation)
+  - [Applicability](#applicability)
+    - [Avoid class explosion](#avoid-class-explosion)
+    - [Temporary behaviour](#temporary-behaviour)
+    - [Object specific behaviour](#object-specific-behaviour)
+  - [Advantages](#advantages)
+  - [Disadvantages](#disadvantages)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to structural](./contents.md)
 
 # Decorator pattern

@@ -16,6 +16,54 @@
 
 
 
+# Contents
+
+- [For loop](#for-loop)
+- [Functional looping](#functional-looping)
+- [While loop](#while-loop)
+- [Do while](#do-while)
+- [Break and continue](#break-and-continue)
+  - [Labels](#labels)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [For loop](#for-loop)
+- [Functional looping](#functional-looping)
+- [While loop](#while-loop)
+- [Do while](#do-while)
+- [Break and continue](#break-and-continue)
+  - [Labels](#labels)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [For loop](#for-loop)
+- [Functional looping](#functional-looping)
+- [While loop](#while-loop)
+- [Do while](#do-while)
+- [Break and continue](#break-and-continue)
+  - [Labels](#labels)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to control-flow](./contents.md)
 
 # For loop

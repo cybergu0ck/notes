@@ -23,6 +23,75 @@
 
 
 
+# Contents
+
+- [Function](#function)
+  - [Return value](#return-value)
+    - [Single expression function](#single-expression-function)
+  - [Function Parameters](#function-parameters)
+    - [Variable arguments](#variable-arguments)
+    - [Default Argument Values](#default-argument-values)
+  - [Storing functions in variables](#storing-functions-in-variables)
+  - [Lambda expression](#lambda-expression)
+  - [Function as data type](#function-as-data-type)
+    - [Shorthand syntax](#shorthand-syntax)
+    - [Trailing lambda syntax](#trailing-lambda-syntax)
+  - [Nullable function types](#nullable-function-types)
+  - [Extension function](#extension-function)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Function](#function)
+  - [Return value](#return-value)
+    - [Single expression function](#single-expression-function)
+  - [Function Parameters](#function-parameters)
+    - [Variable arguments](#variable-arguments)
+    - [Default Argument Values](#default-argument-values)
+  - [Storing functions in variables](#storing-functions-in-variables)
+  - [Lambda expression](#lambda-expression)
+  - [Function as data type](#function-as-data-type)
+    - [Shorthand syntax](#shorthand-syntax)
+    - [Trailing lambda syntax](#trailing-lambda-syntax)
+  - [Nullable function types](#nullable-function-types)
+  - [Extension function](#extension-function)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Function](#function)
+  - [Return value](#return-value)
+    - [Single expression function](#single-expression-function)
+  - [Function Parameters](#function-parameters)
+    - [Variable arguments](#variable-arguments)
+    - [Default Argument Values](#default-argument-values)
+  - [Storing functions in variables](#storing-functions-in-variables)
+  - [Lambda expression](#lambda-expression)
+  - [Function as data type](#function-as-data-type)
+    - [Shorthand syntax](#shorthand-syntax)
+    - [Trailing lambda syntax](#trailing-lambda-syntax)
+  - [Nullable function types](#nullable-function-types)
+  - [Extension function](#extension-function)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to control-flow](./contents.md)
 
 # Function

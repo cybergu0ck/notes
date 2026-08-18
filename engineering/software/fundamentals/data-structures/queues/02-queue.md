@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Queue](#queue)
+  - [Implementation](#implementation)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Queue](#queue)
+  - [Implementation](#implementation)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Queue](#queue)
+  - [Implementation](#implementation)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to queues](./contents.md)
 
 # Queue

@@ -14,6 +14,48 @@
 
 
 
+# Contents
+
+- [Fastening](#fastening)
+  - [Adhesives](#adhesives)
+    - [Cyanoacrylate adhesive](#cyanoacrylate-adhesive)
+      - [Limitations](#limitations)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Fastening](#fastening)
+  - [Adhesives](#adhesives)
+    - [Cyanoacrylate adhesive](#cyanoacrylate-adhesive)
+      - [Limitations](#limitations)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Fastening](#fastening)
+  - [Adhesives](#adhesives)
+    - [Cyanoacrylate adhesive](#cyanoacrylate-adhesive)
+      - [Limitations](#limitations)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to manufacturing](./contents.md)
 
 # Fastening

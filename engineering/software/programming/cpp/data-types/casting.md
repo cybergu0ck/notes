@@ -23,6 +23,75 @@
 
 
 
+# Contents
+
+- [Casting](#casting)
+  - [Types of casting](#types-of-casting)
+    - [Based on explicitness](#based-on-explicitness)
+      - [Implicit casting](#implicit-casting)
+      - [Explicit casting](#explicit-casting)
+    - [Based on direction](#based-on-direction)
+      - [Up casting](#up-casting)
+      - [Down casting](#down-casting)
+  - [Types of named explicit casting operators.](#types-of-named-explicit-casting-operators)
+    - [Static casting](#static-casting)
+    - [Dynamic casting](#dynamic-casting)
+    - [Reinterpret casting](#reinterpret-casting)
+    - [Const casting](#const-casting)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Casting](#casting)
+  - [Types of casting](#types-of-casting)
+    - [Based on explicitness](#based-on-explicitness)
+      - [Implicit casting](#implicit-casting)
+      - [Explicit casting](#explicit-casting)
+    - [Based on direction](#based-on-direction)
+      - [Up casting](#up-casting)
+      - [Down casting](#down-casting)
+  - [Types of named explicit casting operators.](#types-of-named-explicit-casting-operators)
+    - [Static casting](#static-casting)
+    - [Dynamic casting](#dynamic-casting)
+    - [Reinterpret casting](#reinterpret-casting)
+    - [Const casting](#const-casting)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Casting](#casting)
+  - [Types of casting](#types-of-casting)
+    - [Based on explicitness](#based-on-explicitness)
+      - [Implicit casting](#implicit-casting)
+      - [Explicit casting](#explicit-casting)
+    - [Based on direction](#based-on-direction)
+      - [Up casting](#up-casting)
+      - [Down casting](#down-casting)
+  - [Types of named explicit casting operators.](#types-of-named-explicit-casting-operators)
+    - [Static casting](#static-casting)
+    - [Dynamic casting](#dynamic-casting)
+    - [Reinterpret casting](#reinterpret-casting)
+    - [Const casting](#const-casting)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to data-types](./contents.md)
 
 # Casting

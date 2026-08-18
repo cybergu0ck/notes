@@ -15,6 +15,51 @@
 
 
 
+# Contents
+
+- [Variables](#variables)
+  - [Creation of variables](#creation-of-variables)
+  - [Naming rules](#naming-rules)
+  - [Multiple assignment](#multiple-assignment)
+  - [Scope of variables](#scope-of-variables)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Variables](#variables)
+  - [Creation of variables](#creation-of-variables)
+  - [Naming rules](#naming-rules)
+  - [Multiple assignment](#multiple-assignment)
+  - [Scope of variables](#scope-of-variables)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Variables](#variables)
+  - [Creation of variables](#creation-of-variables)
+  - [Naming rules](#naming-rules)
+  - [Multiple assignment](#multiple-assignment)
+  - [Scope of variables](#scope-of-variables)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to fundamentals](./contents.md)
 
 # Variables

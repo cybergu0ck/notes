@@ -18,6 +18,60 @@
 
 
 
+# Contents
+
+- [Files](#files)
+  - [File command](#file-command)
+  - [Less command](#less-command)
+  - [Links](#links)
+    - [Hard links](#hard-links)
+    - [Symbolic links](#symbolic-links)
+    - [Ln command](#ln-command)
+  - [Wildcards](#wildcards)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Files](#files)
+  - [File command](#file-command)
+  - [Less command](#less-command)
+  - [Links](#links)
+    - [Hard links](#hard-links)
+    - [Symbolic links](#symbolic-links)
+    - [Ln command](#ln-command)
+  - [Wildcards](#wildcards)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Files](#files)
+  - [File command](#file-command)
+  - [Less command](#less-command)
+  - [Links](#links)
+    - [Hard links](#hard-links)
+    - [Symbolic links](#symbolic-links)
+    - [Ln command](#ln-command)
+  - [Wildcards](#wildcards)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to filesystem](./contents.md)
 
 # Files

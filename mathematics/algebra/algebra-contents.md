@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [algebra](#algebra)
+  - [Files](#files)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [algebra](#algebra)
+  - [Files](#files)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [algebra](#algebra)
+  - [Files](#files)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to algebra](./contents.md)
 
 # algebra

@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Firefox Customizations](#firefox-customizations)
+- [Disable Fullscreen Animations](#disable-fullscreen-animations)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Firefox Customizations](#firefox-customizations)
+- [Disable Fullscreen Animations](#disable-fullscreen-animations)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Firefox Customizations](#firefox-customizations)
+- [Disable Fullscreen Animations](#disable-fullscreen-animations)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to firefox](./contents.md)
 
 # Firefox Customizations

@@ -14,6 +14,48 @@
 
 
 
+# Contents
+
+- [Eculidean Division (Integer Division)](#eculidean-division-integer-division)
+  - [Terminology](#terminology)
+  - [Illustration](#illustration)
+- [Decimal Devision](#decimal-devision)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Eculidean Division (Integer Division)](#eculidean-division-integer-division)
+  - [Terminology](#terminology)
+  - [Illustration](#illustration)
+- [Decimal Devision](#decimal-devision)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Eculidean Division (Integer Division)](#eculidean-division-integer-division)
+  - [Terminology](#terminology)
+  - [Illustration](#illustration)
+- [Decimal Devision](#decimal-devision)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to arithmetics](./contents.md)
 
 # Eculidean Division (Integer Division)

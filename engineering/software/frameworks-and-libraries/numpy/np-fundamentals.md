@@ -16,6 +16,54 @@
 
 
 
+# Contents
+
+- [The Basics](#the-basics)
+  - [ndarray.ndim](#ndarrayndim)
+  - [ndarray.shape](#ndarrayshape)
+  - [ndarray.size](#ndarraysize)
+- [Creating Arrays](#creating-arrays)
+  - [From a Python List](#from-a-python-list)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [The Basics](#the-basics)
+  - [ndarray.ndim](#ndarrayndim)
+  - [ndarray.shape](#ndarrayshape)
+  - [ndarray.size](#ndarraysize)
+- [Creating Arrays](#creating-arrays)
+  - [From a Python List](#from-a-python-list)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [The Basics](#the-basics)
+  - [ndarray.ndim](#ndarrayndim)
+  - [ndarray.shape](#ndarrayshape)
+  - [ndarray.size](#ndarraysize)
+- [Creating Arrays](#creating-arrays)
+  - [From a Python List](#from-a-python-list)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to numpy](./contents.md)
 
 # The Basics

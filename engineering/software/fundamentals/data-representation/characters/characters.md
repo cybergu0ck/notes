@@ -17,6 +17,57 @@
 
 
 
+# Contents
+
+- [Characters](#characters)
+  - [Types](#types)
+    - [Alphabetic characters](#alphabetic-characters)
+    - [Numeric characters](#numeric-characters)
+    - [Alphanumeric characters](#alphanumeric-characters)
+    - [Special characters](#special-characters)
+    - [Control characters](#control-characters)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Characters](#characters)
+  - [Types](#types)
+    - [Alphabetic characters](#alphabetic-characters)
+    - [Numeric characters](#numeric-characters)
+    - [Alphanumeric characters](#alphanumeric-characters)
+    - [Special characters](#special-characters)
+    - [Control characters](#control-characters)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Characters](#characters)
+  - [Types](#types)
+    - [Alphabetic characters](#alphabetic-characters)
+    - [Numeric characters](#numeric-characters)
+    - [Alphanumeric characters](#alphanumeric-characters)
+    - [Special characters](#special-characters)
+    - [Control characters](#control-characters)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to characters](./contents.md)
 
 # Characters

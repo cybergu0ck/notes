@@ -26,6 +26,84 @@
 
 
 
+# Contents
+
+- [Function definiton and call](#function-definiton-and-call)
+- [Simplified version of how python treats variables and parameters](#simplified-version-of-how-python-treats-variables-and-parameters)
+- [Parameters](#parameters)
+  - [Default parameters](#default-parameters)
+- [Arguments](#arguments)
+  - [1. Positional Arguments](#1-positional-arguments)
+  - [2. Keyword Arguments](#2-keyword-arguments)
+  - [Convention](#convention)
+  - [3. Arbitrary Argument Lists (\*args  and \**kwargs)](#3-arbitrary-argument-lists-args-and-kwargs)
+  - [\*args](#args)
+  - [\*\*kwargs](#kwargs)
+- [Scope](#scope)
+- [Lambda Expressions](#lambda-expressions)
+- [Functions using match statements](#functions-using-match-statements)
+- [Docstrings](#docstrings)
+- [Function Annotations](#function-annotations)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Function definiton and call](#function-definiton-and-call)
+- [Simplified version of how python treats variables and parameters](#simplified-version-of-how-python-treats-variables-and-parameters)
+- [Parameters](#parameters)
+  - [Default parameters](#default-parameters)
+- [Arguments](#arguments)
+  - [1. Positional Arguments](#1-positional-arguments)
+  - [2. Keyword Arguments](#2-keyword-arguments)
+  - [Convention](#convention)
+  - [3. Arbitrary Argument Lists (\*args  and \**kwargs)](#3-arbitrary-argument-lists-args-and-kwargs)
+  - [\*args](#args)
+  - [\*\*kwargs](#kwargs)
+- [Scope](#scope)
+- [Lambda Expressions](#lambda-expressions)
+- [Functions using match statements](#functions-using-match-statements)
+- [Docstrings](#docstrings)
+- [Function Annotations](#function-annotations)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Function definiton and call](#function-definiton-and-call)
+- [Simplified version of how python treats variables and parameters](#simplified-version-of-how-python-treats-variables-and-parameters)
+- [Parameters](#parameters)
+  - [Default parameters](#default-parameters)
+- [Arguments](#arguments)
+  - [1. Positional Arguments](#1-positional-arguments)
+  - [2. Keyword Arguments](#2-keyword-arguments)
+  - [Convention](#convention)
+  - [3. Arbitrary Argument Lists (\*args  and \**kwargs)](#3-arbitrary-argument-lists-args-and-kwargs)
+  - [\*args](#args)
+  - [\*\*kwargs](#kwargs)
+- [Scope](#scope)
+- [Lambda Expressions](#lambda-expressions)
+- [Functions using match statements](#functions-using-match-statements)
+- [Docstrings](#docstrings)
+- [Function Annotations](#function-annotations)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to control-flow](./contents.md)
 
 # Function definiton and call

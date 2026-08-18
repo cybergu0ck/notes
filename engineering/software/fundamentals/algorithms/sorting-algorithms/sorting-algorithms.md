@@ -15,6 +15,51 @@
 
 
 
+# Contents
+
+- [Array Sorting Algorithms](#array-sorting-algorithms)
+  - [Insertion Sort](#insertion-sort)
+  - [Merge Sort](#merge-sort)
+  - [Heap Sort](#heap-sort)
+  - [Quick Sort](#quick-sort)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Array Sorting Algorithms](#array-sorting-algorithms)
+  - [Insertion Sort](#insertion-sort)
+  - [Merge Sort](#merge-sort)
+  - [Heap Sort](#heap-sort)
+  - [Quick Sort](#quick-sort)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Array Sorting Algorithms](#array-sorting-algorithms)
+  - [Insertion Sort](#insertion-sort)
+  - [Merge Sort](#merge-sort)
+  - [Heap Sort](#heap-sort)
+  - [Quick Sort](#quick-sort)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to sorting-algorithms](./contents.md)
 
 # Array Sorting Algorithms

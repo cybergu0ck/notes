@@ -22,6 +22,72 @@
 
 
 
+# Contents
+
+- [Abstract Factory Pattern](#abstract-factory-pattern)
+  - [Theory](#theory)
+    - [Components](#components)
+    - [Applicability](#applicability)
+    - [Advantages](#advantages)
+    - [Disadvantages](#disadvantages)
+  - [Application](#application)
+    - [Components](#components)
+    - [Applicability](#applicability)
+    - [Advantages](#advantages)
+    - [Disadvantages](#disadvantages)
+  - [Abstract factory vs Builder](#abstract-factory-vs-builder)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Abstract Factory Pattern](#abstract-factory-pattern)
+  - [Theory](#theory)
+    - [Components](#components)
+    - [Applicability](#applicability)
+    - [Advantages](#advantages)
+    - [Disadvantages](#disadvantages)
+  - [Application](#application)
+    - [Components](#components)
+    - [Applicability](#applicability)
+    - [Advantages](#advantages)
+    - [Disadvantages](#disadvantages)
+  - [Abstract factory vs Builder](#abstract-factory-vs-builder)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Abstract Factory Pattern](#abstract-factory-pattern)
+  - [Theory](#theory)
+    - [Components](#components)
+    - [Applicability](#applicability)
+    - [Advantages](#advantages)
+    - [Disadvantages](#disadvantages)
+  - [Application](#application)
+    - [Components](#components)
+    - [Applicability](#applicability)
+    - [Advantages](#advantages)
+    - [Disadvantages](#disadvantages)
+  - [Abstract factory vs Builder](#abstract-factory-vs-builder)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to creational](./contents.md)
 
 # Abstract Factory Pattern

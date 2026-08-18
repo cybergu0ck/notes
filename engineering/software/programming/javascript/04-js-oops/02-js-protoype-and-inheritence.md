@@ -21,6 +21,69 @@
 
 
 
+# Contents
+
+- [Prototype](#prototype)
+  - [`[[Prototype]]`](#prototype)
+    - [`__proto__`](#__proto__)
+    - [`Object.getPrototypeOf()`](#objectgetprototypeof)
+  - [**F.prototype** or `prototype` property](#fprototype-or-prototype-property)
+  - [Illustration](#illustration)
+- [Setting protoypes](#setting-protoypes)
+  - [using `Object.create()`](#using-objectcreate)
+  - [using `Object.setProtoOf()`](#using-objectsetprotoof)
+  - [using `__proto__`](#using-__proto__)
+- [Prototypal Inheritence](#prototypal-inheritence)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Prototype](#prototype)
+  - [`[[Prototype]]`](#prototype)
+    - [`__proto__`](#__proto__)
+    - [`Object.getPrototypeOf()`](#objectgetprototypeof)
+  - [**F.prototype** or `prototype` property](#fprototype-or-prototype-property)
+  - [Illustration](#illustration)
+- [Setting protoypes](#setting-protoypes)
+  - [using `Object.create()`](#using-objectcreate)
+  - [using `Object.setProtoOf()`](#using-objectsetprotoof)
+  - [using `__proto__`](#using-__proto__)
+- [Prototypal Inheritence](#prototypal-inheritence)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Prototype](#prototype)
+  - [`[[Prototype]]`](#prototype)
+    - [`__proto__`](#__proto__)
+    - [`Object.getPrototypeOf()`](#objectgetprototypeof)
+  - [**F.prototype** or `prototype` property](#fprototype-or-prototype-property)
+  - [Illustration](#illustration)
+- [Setting protoypes](#setting-protoypes)
+  - [using `Object.create()`](#using-objectcreate)
+  - [using `Object.setProtoOf()`](#using-objectsetprotoof)
+  - [using `__proto__`](#using-__proto__)
+- [Prototypal Inheritence](#prototypal-inheritence)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to 04-js-oops](./contents.md)
 
 # Prototype

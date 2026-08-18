@@ -20,6 +20,66 @@
 
 
 
+# Contents
+
+- [Syntax constructs](#syntax-constructs)
+  - [Expressions](#expressions)
+    - [glvalue](#glvalue)
+    - [rvalue](#rvalue)
+    - [lvalue](#lvalue)
+    - [prvalue](#prvalue)
+    - [xvalue](#xvalue)
+    - [Temporary Materialisation Conversion](#temporary-materialisation-conversion)
+  - [Statements](#statements)
+  - [Declaration and Defintion](#declaration-and-defintion)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Syntax constructs](#syntax-constructs)
+  - [Expressions](#expressions)
+    - [glvalue](#glvalue)
+    - [rvalue](#rvalue)
+    - [lvalue](#lvalue)
+    - [prvalue](#prvalue)
+    - [xvalue](#xvalue)
+    - [Temporary Materialisation Conversion](#temporary-materialisation-conversion)
+  - [Statements](#statements)
+  - [Declaration and Defintion](#declaration-and-defintion)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Syntax constructs](#syntax-constructs)
+  - [Expressions](#expressions)
+    - [glvalue](#glvalue)
+    - [rvalue](#rvalue)
+    - [lvalue](#lvalue)
+    - [prvalue](#prvalue)
+    - [xvalue](#xvalue)
+    - [Temporary Materialisation Conversion](#temporary-materialisation-conversion)
+  - [Statements](#statements)
+  - [Declaration and Defintion](#declaration-and-defintion)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to fundamentals](./contents.md)
 
 # Syntax constructs

@@ -75,15 +75,19 @@ CONTENTS_PATTERN = re.compile(r"^#{1,2}\s+(Contents|Table of Contents|TOC)\s*$",
 def has_contents_section(lines):
     return any(CONTENTS_PATTERN.match(l) for l in lines)
 
-
 def remove_existing_contents(lines):
     start = None
     end = None
 
+    backlink_re = re.compile(r'^\[← Back')
+
     for i, line in enumerate(lines):
-        if CONTENTS_PATTERN.match(line):
+        # start removing at contents section OR a backlink line
+        if start is None and (CONTENTS_PATTERN.match(line) or backlink_re.match(line)):
             start = i
             continue
+
+        # once we're removing, stop when we hit the next header
         if start is not None and end is None:
             if re.match(r"^#{1,6}\s+", line):
                 end = i
@@ -94,6 +98,7 @@ def remove_existing_contents(lines):
         return lines[:start] + lines[end:]
 
     return lines
+
 
 
 def inject_contents(file_path, root_path):

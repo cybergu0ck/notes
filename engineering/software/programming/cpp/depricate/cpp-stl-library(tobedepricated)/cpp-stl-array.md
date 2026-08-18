@@ -18,6 +18,60 @@
 
 
 
+# Contents
+
+- [stl array](#stl-array)
+- [useful functions](#useful-functions)
+  - [using [ ] to get the value at the index](#using-to-get-the-value-at-the-index)
+  - [at() to get the value at the index](#at-to-get-the-value-at-the-index)
+  - [fill()](#fill)
+  - [swap()](#swap)
+  - [data()](#data)
+  - [begin() and end()](#begin-and-end)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [stl array](#stl-array)
+- [useful functions](#useful-functions)
+  - [using [ ] to get the value at the index](#using-to-get-the-value-at-the-index)
+  - [at() to get the value at the index](#at-to-get-the-value-at-the-index)
+  - [fill()](#fill)
+  - [swap()](#swap)
+  - [data()](#data)
+  - [begin() and end()](#begin-and-end)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [stl array](#stl-array)
+- [useful functions](#useful-functions)
+  - [using [ ] to get the value at the index](#using-to-get-the-value-at-the-index)
+  - [at() to get the value at the index](#at-to-get-the-value-at-the-index)
+  - [fill()](#fill)
+  - [swap()](#swap)
+  - [data()](#data)
+  - [begin() and end()](#begin-and-end)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to cpp-stl-library(tobedepricated)](./contents.md)
 
 # stl array

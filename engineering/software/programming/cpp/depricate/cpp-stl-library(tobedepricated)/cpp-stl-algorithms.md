@@ -13,6 +13,45 @@
 
 
 
+# Contents
+
+- [stl algorithms](#stl-algorithms)
+  - [copy_if() and back_inserter()](#copy_if-and-back_inserter)
+  - [transform()](#transform)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [stl algorithms](#stl-algorithms)
+  - [copy_if() and back_inserter()](#copy_if-and-back_inserter)
+  - [transform()](#transform)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [stl algorithms](#stl-algorithms)
+  - [copy_if() and back_inserter()](#copy_if-and-back_inserter)
+  - [transform()](#transform)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to cpp-stl-library(tobedepricated)](./contents.md)
 
 # stl algorithms

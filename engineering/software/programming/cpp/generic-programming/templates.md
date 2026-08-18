@@ -13,6 +13,45 @@
 
 
 
+# Contents
+
+- [Generic Programming with macros](#generic-programming-with-macros)
+- [Generic Programming with Function Templates](#generic-programming-with-function-templates)
+- [Generic programming with class templates](#generic-programming-with-class-templates)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Generic Programming with macros](#generic-programming-with-macros)
+- [Generic Programming with Function Templates](#generic-programming-with-function-templates)
+- [Generic programming with class templates](#generic-programming-with-class-templates)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Generic Programming with macros](#generic-programming-with-macros)
+- [Generic Programming with Function Templates](#generic-programming-with-function-templates)
+- [Generic programming with class templates](#generic-programming-with-class-templates)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to generic-programming](./contents.md)
 
 # Generic Programming with macros

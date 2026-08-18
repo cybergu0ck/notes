@@ -19,6 +19,63 @@
 
 
 
+# Contents
+
+- [STL deque](#stl-deque)
+- [Useful Functions](#useful-functions)
+  - [size() and max_size()](#size-and-max_size)
+  - [using [ ] to get the value at the index](#using-to-get-the-value-at-the-index)
+  - [at() to get the value at the index](#at-to-get-the-value-at-the-index)
+  - [front() and back()](#front-and-back)
+  - [push_back() and push_front()](#push_back-and-push_front)
+  - [pop_back() and pop_front()](#pop_back-and-pop_front)
+  - [emplace_back() and emplace_front()](#emplace_back-and-emplace_front)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [STL deque](#stl-deque)
+- [Useful Functions](#useful-functions)
+  - [size() and max_size()](#size-and-max_size)
+  - [using [ ] to get the value at the index](#using-to-get-the-value-at-the-index)
+  - [at() to get the value at the index](#at-to-get-the-value-at-the-index)
+  - [front() and back()](#front-and-back)
+  - [push_back() and push_front()](#push_back-and-push_front)
+  - [pop_back() and pop_front()](#pop_back-and-pop_front)
+  - [emplace_back() and emplace_front()](#emplace_back-and-emplace_front)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [STL deque](#stl-deque)
+- [Useful Functions](#useful-functions)
+  - [size() and max_size()](#size-and-max_size)
+  - [using [ ] to get the value at the index](#using-to-get-the-value-at-the-index)
+  - [at() to get the value at the index](#at-to-get-the-value-at-the-index)
+  - [front() and back()](#front-and-back)
+  - [push_back() and push_front()](#push_back-and-push_front)
+  - [pop_back() and pop_front()](#pop_back-and-pop_front)
+  - [emplace_back() and emplace_front()](#emplace_back-and-emplace_front)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to cpp-stl-library(tobedepricated)](./contents.md)
 
 # STL deque

@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Create a user account](#create-a-user-account)
+- [Delete a user account](#delete-a-user-account)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Create a user account](#create-a-user-account)
+- [Delete a user account](#delete-a-user-account)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Create a user account](#create-a-user-account)
+- [Delete a user account](#delete-a-user-account)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to raspberry-pi](./contents.md)
 
 # Create a user account

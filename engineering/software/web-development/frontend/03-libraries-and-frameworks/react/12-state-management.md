@@ -14,6 +14,48 @@
 
 
 
+# Contents
+
+- [State Management](#state-management)
+  - [Types of State](#types-of-state)
+  - [State Placement Options](#state-placement-options)
+  - [Storing State in URL](#storing-state-in-url)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [State Management](#state-management)
+  - [Types of State](#types-of-state)
+  - [State Placement Options](#state-placement-options)
+  - [Storing State in URL](#storing-state-in-url)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [State Management](#state-management)
+  - [Types of State](#types-of-state)
+  - [State Placement Options](#state-placement-options)
+  - [Storing State in URL](#storing-state-in-url)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to react](./contents.md)
 
 # State Management

@@ -13,6 +13,45 @@
 
 
 
+# Contents
+
+- [Function Pointers](#function-pointers)
+- [Function pointers with class member functions](#function-pointers-with-class-member-functions)
+- [Function Objects (functor)](#function-objects-functor)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Function Pointers](#function-pointers)
+- [Function pointers with class member functions](#function-pointers-with-class-member-functions)
+- [Function Objects (functor)](#function-objects-functor)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Function Pointers](#function-pointers)
+- [Function pointers with class member functions](#function-pointers-with-class-member-functions)
+- [Function Objects (functor)](#function-objects-functor)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to control-flow](./contents.md)
 
 # Function Pointers

@@ -18,6 +18,60 @@
 
 
 
+# Contents
+
+- [Figure](#figure)
+  - [Anatomy of figure](#anatomy-of-figure)
+  - [Axes](#axes)
+  - [Spines](#spines)
+  - [Axis](#axis)
+  - [Artist](#artist)
+  - [Zorder](#zorder)
+  - [Backends](#backends)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Figure](#figure)
+  - [Anatomy of figure](#anatomy-of-figure)
+  - [Axes](#axes)
+  - [Spines](#spines)
+  - [Axis](#axis)
+  - [Artist](#artist)
+  - [Zorder](#zorder)
+  - [Backends](#backends)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Figure](#figure)
+  - [Anatomy of figure](#anatomy-of-figure)
+  - [Axes](#axes)
+  - [Spines](#spines)
+  - [Axis](#axis)
+  - [Artist](#artist)
+  - [Zorder](#zorder)
+  - [Backends](#backends)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to matplotlib](./contents.md)
 
 # Figure

@@ -13,6 +13,45 @@
 
 
 
+# Contents
+
+- [Linux Shell](#linux-shell)
+  - [Terminal Emulators](#terminal-emulators)
+  - [About mouse and focus](#about-mouse-and-focus)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Linux Shell](#linux-shell)
+  - [Terminal Emulators](#terminal-emulators)
+  - [About mouse and focus](#about-mouse-and-focus)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Linux Shell](#linux-shell)
+  - [Terminal Emulators](#terminal-emulators)
+  - [About mouse and focus](#about-mouse-and-focus)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to basics](./contents.md)
 
 # Linux Shell

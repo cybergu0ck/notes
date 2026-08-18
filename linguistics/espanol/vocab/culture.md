@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Culture](#culture)
+  - [Food](#food)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Culture](#culture)
+  - [Food](#food)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Culture](#culture)
+  - [Food](#food)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to vocab](./contents.md)
 
 # Culture

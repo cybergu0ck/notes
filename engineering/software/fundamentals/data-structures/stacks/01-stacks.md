@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Stacks](#stacks)
+  - [Implementation](#implementation)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Stacks](#stacks)
+  - [Implementation](#implementation)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Stacks](#stacks)
+  - [Implementation](#implementation)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to stacks](./contents.md)
 
 # Stacks

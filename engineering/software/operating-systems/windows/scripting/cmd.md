@@ -15,6 +15,51 @@
 
 
 
+# Contents
+
+- [Cmd](#cmd)
+  - [Usecases](#usecases)
+    - [Find all python installations](#find-all-python-installations)
+  - [Commands](#commands)
+    - [tree command](#tree-command)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Cmd](#cmd)
+  - [Usecases](#usecases)
+    - [Find all python installations](#find-all-python-installations)
+  - [Commands](#commands)
+    - [tree command](#tree-command)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Cmd](#cmd)
+  - [Usecases](#usecases)
+    - [Find all python installations](#find-all-python-installations)
+  - [Commands](#commands)
+    - [tree command](#tree-command)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to scripting](./contents.md)
 
 # Cmd

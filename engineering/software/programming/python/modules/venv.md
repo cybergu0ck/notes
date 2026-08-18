@@ -18,6 +18,60 @@
 
 
 
+# Contents
+
+- [Venv](#venv)
+  - [Creating the virtual environment](#creating-the-virtual-environment)
+  - [Activate the virtual environment](#activate-the-virtual-environment)
+  - [Deactivate the virtual environment](#deactivate-the-virtual-environment)
+  - [Delete the virtual environment](#delete-the-virtual-environment)
+  - [requirements.txt](#requirementstxt)
+  - [Good Practice](#good-practice)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Venv](#venv)
+  - [Creating the virtual environment](#creating-the-virtual-environment)
+  - [Activate the virtual environment](#activate-the-virtual-environment)
+  - [Deactivate the virtual environment](#deactivate-the-virtual-environment)
+  - [Delete the virtual environment](#delete-the-virtual-environment)
+  - [requirements.txt](#requirementstxt)
+  - [Good Practice](#good-practice)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Venv](#venv)
+  - [Creating the virtual environment](#creating-the-virtual-environment)
+  - [Activate the virtual environment](#activate-the-virtual-environment)
+  - [Deactivate the virtual environment](#deactivate-the-virtual-environment)
+  - [Delete the virtual environment](#delete-the-virtual-environment)
+  - [requirements.txt](#requirementstxt)
+  - [Good Practice](#good-practice)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to modules](./contents.md)
 
 # Venv

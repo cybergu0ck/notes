@@ -20,6 +20,66 @@
 
 
 
+# Contents
+
+- [Boolean Logic](#boolean-logic)
+  - [Logic Gates](#logic-gates)
+    - [Nand Gate](#nand-gate)
+    - [Not Gate (Inverter)](#not-gate-inverter)
+    - [And Gate](#and-gate)
+      - [Or Gate](#or-gate)
+    - [Xor Gate](#xor-gate)
+    - [Multiplexer (Mux)](#multiplexer-mux)
+    - [DeMultiplexer (Dmux)](#demultiplexer-dmux)
+  - [Multi-Bit versions of basic gates](#multi-bit-versions-of-basic-gates)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Boolean Logic](#boolean-logic)
+  - [Logic Gates](#logic-gates)
+    - [Nand Gate](#nand-gate)
+    - [Not Gate (Inverter)](#not-gate-inverter)
+    - [And Gate](#and-gate)
+      - [Or Gate](#or-gate)
+    - [Xor Gate](#xor-gate)
+    - [Multiplexer (Mux)](#multiplexer-mux)
+    - [DeMultiplexer (Dmux)](#demultiplexer-dmux)
+  - [Multi-Bit versions of basic gates](#multi-bit-versions-of-basic-gates)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Boolean Logic](#boolean-logic)
+  - [Logic Gates](#logic-gates)
+    - [Nand Gate](#nand-gate)
+    - [Not Gate (Inverter)](#not-gate-inverter)
+    - [And Gate](#and-gate)
+      - [Or Gate](#or-gate)
+    - [Xor Gate](#xor-gate)
+    - [Multiplexer (Mux)](#multiplexer-mux)
+    - [DeMultiplexer (Dmux)](#demultiplexer-dmux)
+  - [Multi-Bit versions of basic gates](#multi-bit-versions-of-basic-gates)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to nand2tetris](./contents.md)
 
 # Boolean Logic

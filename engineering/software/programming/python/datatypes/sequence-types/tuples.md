@@ -17,6 +17,57 @@
 
 
 
+# Contents
+
+- [Tuples](#tuples)
+  - [Creating tuples](#creating-tuples)
+  - [Inserting items into a tuple](#inserting-items-into-a-tuple)
+  - [Accesing items in tuple](#accesing-items-in-tuple)
+  - [Deleting Items from a tuple](#deleting-items-from-a-tuple)
+  - [Unpacking tuples](#unpacking-tuples)
+  - [\* Operator](#operator)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Tuples](#tuples)
+  - [Creating tuples](#creating-tuples)
+  - [Inserting items into a tuple](#inserting-items-into-a-tuple)
+  - [Accesing items in tuple](#accesing-items-in-tuple)
+  - [Deleting Items from a tuple](#deleting-items-from-a-tuple)
+  - [Unpacking tuples](#unpacking-tuples)
+  - [\* Operator](#operator)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Tuples](#tuples)
+  - [Creating tuples](#creating-tuples)
+  - [Inserting items into a tuple](#inserting-items-into-a-tuple)
+  - [Accesing items in tuple](#accesing-items-in-tuple)
+  - [Deleting Items from a tuple](#deleting-items-from-a-tuple)
+  - [Unpacking tuples](#unpacking-tuples)
+  - [\* Operator](#operator)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to sequence-types](./contents.md)
 
 # Tuples

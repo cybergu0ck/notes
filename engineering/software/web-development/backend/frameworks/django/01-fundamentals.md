@@ -16,6 +16,54 @@
 
 
 
+# Contents
+
+- [Django](#django)
+    - [Batteries Included philosophy](#batteries-included-philosophy)
+  - [Installing django](#installing-django)
+  - [Starting a django project](#starting-a-django-project)
+  - [Directory Structure](#directory-structure)
+  - [Running a local server](#running-a-local-server)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Django](#django)
+    - [Batteries Included philosophy](#batteries-included-philosophy)
+  - [Installing django](#installing-django)
+  - [Starting a django project](#starting-a-django-project)
+  - [Directory Structure](#directory-structure)
+  - [Running a local server](#running-a-local-server)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Django](#django)
+    - [Batteries Included philosophy](#batteries-included-philosophy)
+  - [Installing django](#installing-django)
+  - [Starting a django project](#starting-a-django-project)
+  - [Directory Structure](#directory-structure)
+  - [Running a local server](#running-a-local-server)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to django](./contents.md)
 
 # Django

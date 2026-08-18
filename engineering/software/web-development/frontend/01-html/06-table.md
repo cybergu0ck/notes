@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [HTML Table](#html-table)
+  - [Headers, Rows and Columns](#headers-rows-and-columns)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [HTML Table](#html-table)
+  - [Headers, Rows and Columns](#headers-rows-and-columns)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [HTML Table](#html-table)
+  - [Headers, Rows and Columns](#headers-rows-and-columns)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to 01-html](./contents.md)
 
 # HTML Table

@@ -22,6 +22,72 @@
 
 
 
+# Contents
+
+- [Lambdas](#lambdas)
+- [Instatiation and Call](#instatiation-and-call)
+- [Parameter list](#parameter-list)
+- [Internal Implementation of Lambdas](#internal-implementation-of-lambdas)
+- [Lambas in functions](#lambas-in-functions)
+- [Predicate Lambda](#predicate-lambda)
+- [Stateless lambda](#stateless-lambda)
+- [Statefull lambda](#statefull-lambda)
+  - [Capturing variables by value](#capturing-variables-by-value)
+  - [Capturing variables by reference](#capturing-variables-by-reference)
+  - [Default Captures](#default-captures)
+  - [Explicit Captures along with default captures](#explicit-captures-along-with-default-captures)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Lambdas](#lambdas)
+- [Instatiation and Call](#instatiation-and-call)
+- [Parameter list](#parameter-list)
+- [Internal Implementation of Lambdas](#internal-implementation-of-lambdas)
+- [Lambas in functions](#lambas-in-functions)
+- [Predicate Lambda](#predicate-lambda)
+- [Stateless lambda](#stateless-lambda)
+- [Statefull lambda](#statefull-lambda)
+  - [Capturing variables by value](#capturing-variables-by-value)
+  - [Capturing variables by reference](#capturing-variables-by-reference)
+  - [Default Captures](#default-captures)
+  - [Explicit Captures along with default captures](#explicit-captures-along-with-default-captures)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Lambdas](#lambdas)
+- [Instatiation and Call](#instatiation-and-call)
+- [Parameter list](#parameter-list)
+- [Internal Implementation of Lambdas](#internal-implementation-of-lambdas)
+- [Lambas in functions](#lambas-in-functions)
+- [Predicate Lambda](#predicate-lambda)
+- [Stateless lambda](#stateless-lambda)
+- [Statefull lambda](#statefull-lambda)
+  - [Capturing variables by value](#capturing-variables-by-value)
+  - [Capturing variables by reference](#capturing-variables-by-reference)
+  - [Default Captures](#default-captures)
+  - [Explicit Captures along with default captures](#explicit-captures-along-with-default-captures)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to control-flow](./contents.md)
 
 # Lambdas

@@ -13,6 +13,45 @@
 
 
 
+# Contents
+
+- [oop principles](#oop-principles)
+  - [open close principle](#open-close-principle)
+  - [coupling](#coupling)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [oop principles](#oop-principles)
+  - [open close principle](#open-close-principle)
+  - [coupling](#coupling)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [oop principles](#oop-principles)
+  - [open close principle](#open-close-principle)
+  - [coupling](#coupling)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to object-oriented-programming](./contents.md)
 
 # oop principles

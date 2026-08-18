@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [philosophy](#philosophy)
+  - [Files](#files)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [philosophy](#philosophy)
+  - [Files](#files)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [philosophy](#philosophy)
+  - [Files](#files)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to philosophy](./contents.md)
 
 # philosophy

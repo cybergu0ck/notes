@@ -16,6 +16,54 @@
 
 
 
+# Contents
+
+- [Customizations](#customizations)
+  - [git config](#git-config)
+  - [Alias](#alias)
+    - [Creating alias](#creating-alias)
+    - [Using alias](#using-alias)
+    - [Deleting alias](#deleting-alias)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Customizations](#customizations)
+  - [git config](#git-config)
+  - [Alias](#alias)
+    - [Creating alias](#creating-alias)
+    - [Using alias](#using-alias)
+    - [Deleting alias](#deleting-alias)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Customizations](#customizations)
+  - [git config](#git-config)
+  - [Alias](#alias)
+    - [Creating alias](#creating-alias)
+    - [Using alias](#using-alias)
+    - [Deleting alias](#deleting-alias)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to git](./contents.md)
 
 # Customizations

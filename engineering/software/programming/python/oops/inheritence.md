@@ -2,6 +2,45 @@
 
 # Contents
 
+    - [Understanding super()](#understanding-super)
+  - [Multiple Inheritance](#multiple-inheritance)
+    - [Method Resolution Order (MRO)](#method-resolution-order-mro)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+    - [Understanding super()](#understanding-super)
+  - [Multiple Inheritance](#multiple-inheritance)
+    - [Method Resolution Order (MRO)](#method-resolution-order-mro)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+    - [Understanding super()](#understanding-super)
+  - [Multiple Inheritance](#multiple-inheritance)
+    - [Method Resolution Order (MRO)](#method-resolution-order-mro)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
   - [Understanding super()](#understanding-super)
 - [Multiple Inheritance](#multiple-inheritance)
   - [Method Resolution Order (MRO)](#method-resolution-order-mro)

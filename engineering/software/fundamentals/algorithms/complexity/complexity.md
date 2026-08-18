@@ -13,6 +13,45 @@
 
 
 
+# Contents
+
+- [Complexity](#complexity)
+    - [Why halving algorithms have logarithmic runtime](#why-halving-algorithms-have-logarithmic-runtime)
+      - [proof](#proof)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Complexity](#complexity)
+    - [Why halving algorithms have logarithmic runtime](#why-halving-algorithms-have-logarithmic-runtime)
+      - [proof](#proof)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Complexity](#complexity)
+    - [Why halving algorithms have logarithmic runtime](#why-halving-algorithms-have-logarithmic-runtime)
+      - [proof](#proof)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to complexity](./contents.md)
 
 # Complexity

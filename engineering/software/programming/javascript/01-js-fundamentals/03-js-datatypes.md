@@ -14,6 +14,48 @@
 
 
 
+# Contents
+
+- [Data Types](#data-types)
+- [string](#string)
+  - [String concatenation](#string-concatenation)
+  - [String methods](#string-methods)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Data Types](#data-types)
+- [string](#string)
+  - [String concatenation](#string-concatenation)
+  - [String methods](#string-methods)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Data Types](#data-types)
+- [string](#string)
+  - [String concatenation](#string-concatenation)
+  - [String methods](#string-methods)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to 01-js-fundamentals](./contents.md)
 
 # Data Types

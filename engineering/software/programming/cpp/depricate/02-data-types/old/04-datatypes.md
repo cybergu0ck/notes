@@ -13,6 +13,45 @@
 
 
 
+# Contents
+
+- [C++ Primitive datatypes](#c-primitive-datatypes)
+  - [character datatype](#character-datatype)
+  - [Integer datatype](#integer-datatype)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [C++ Primitive datatypes](#c-primitive-datatypes)
+  - [character datatype](#character-datatype)
+  - [Integer datatype](#integer-datatype)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [C++ Primitive datatypes](#c-primitive-datatypes)
+  - [character datatype](#character-datatype)
+  - [Integer datatype](#integer-datatype)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to old](./contents.md)
 
 # C++ Primitive datatypes

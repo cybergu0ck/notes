@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Shortcut Keys](#shortcut-keys)
+- [Shortcut Keys For Youtube](#shortcut-keys-for-youtube)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Shortcut Keys](#shortcut-keys)
+- [Shortcut Keys For Youtube](#shortcut-keys-for-youtube)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Shortcut Keys](#shortcut-keys)
+- [Shortcut Keys For Youtube](#shortcut-keys-for-youtube)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to browsers](./contents.md)
 
 # Shortcut Keys

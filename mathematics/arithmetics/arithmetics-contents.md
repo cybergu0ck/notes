@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [arithmetics](#arithmetics)
+  - [Files](#files)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [arithmetics](#arithmetics)
+  - [Files](#files)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [arithmetics](#arithmetics)
+  - [Files](#files)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to arithmetics](./contents.md)
 
 # arithmetics

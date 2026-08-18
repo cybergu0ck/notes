@@ -16,6 +16,54 @@
 
 
 
+# Contents
+
+- [Variables](#variables)
+  - [Variable Declaration](#variable-declaration)
+  - [Variable Initialization](#variable-initialization)
+    - [Default Initialization](#default-initialization)
+  - [Variable Assignment](#variable-assignment)
+  - [Global Variables](#global-variables)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Variables](#variables)
+  - [Variable Declaration](#variable-declaration)
+  - [Variable Initialization](#variable-initialization)
+    - [Default Initialization](#default-initialization)
+  - [Variable Assignment](#variable-assignment)
+  - [Global Variables](#global-variables)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Variables](#variables)
+  - [Variable Declaration](#variable-declaration)
+  - [Variable Initialization](#variable-initialization)
+    - [Default Initialization](#default-initialization)
+  - [Variable Assignment](#variable-assignment)
+  - [Global Variables](#global-variables)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to fundamentals](./contents.md)
 
 # Variables

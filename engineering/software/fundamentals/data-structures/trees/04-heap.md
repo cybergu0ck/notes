@@ -21,6 +21,69 @@
 
 
 
+# Contents
+
+- [Heap](#heap)
+  - [Max Heap](#max-heap)
+  - [Min Heap](#min-heap)
+  - [Implementation](#implementation)
+    - [Sift up algorithm](#sift-up-algorithm)
+    - [Sift down algorithm](#sift-down-algorithm)
+    - [Floyds construction algorithm](#floyds-construction-algorithm)
+  - [Python's Heapq Module](#pythons-heapq-module)
+    - [Using heapq module for max heap](#using-heapq-module-for-max-heap)
+  - [Complexity](#complexity)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Heap](#heap)
+  - [Max Heap](#max-heap)
+  - [Min Heap](#min-heap)
+  - [Implementation](#implementation)
+    - [Sift up algorithm](#sift-up-algorithm)
+    - [Sift down algorithm](#sift-down-algorithm)
+    - [Floyds construction algorithm](#floyds-construction-algorithm)
+  - [Python's Heapq Module](#pythons-heapq-module)
+    - [Using heapq module for max heap](#using-heapq-module-for-max-heap)
+  - [Complexity](#complexity)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Heap](#heap)
+  - [Max Heap](#max-heap)
+  - [Min Heap](#min-heap)
+  - [Implementation](#implementation)
+    - [Sift up algorithm](#sift-up-algorithm)
+    - [Sift down algorithm](#sift-down-algorithm)
+    - [Floyds construction algorithm](#floyds-construction-algorithm)
+  - [Python's Heapq Module](#pythons-heapq-module)
+    - [Using heapq module for max heap](#using-heapq-module-for-max-heap)
+  - [Complexity](#complexity)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to trees](./contents.md)
 
 # Heap

@@ -16,6 +16,54 @@
 
 
 
+# Contents
+
+- [heapq](#heapq)
+- [Useful Functions](#useful-functions)
+  - [`heapify(iterable)`](#heapifyiterable)
+  - [`heappush(heap, item)`](#heappushheap-item)
+  - [`heappop(heap)`](#heappopheap)
+  - [Illustatration](#illustatration)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [heapq](#heapq)
+- [Useful Functions](#useful-functions)
+  - [`heapify(iterable)`](#heapifyiterable)
+  - [`heappush(heap, item)`](#heappushheap-item)
+  - [`heappop(heap)`](#heappopheap)
+  - [Illustatration](#illustatration)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [heapq](#heapq)
+- [Useful Functions](#useful-functions)
+  - [`heapify(iterable)`](#heapifyiterable)
+  - [`heappush(heap, item)`](#heappushheap-item)
+  - [`heappop(heap)`](#heappopheap)
+  - [Illustatration](#illustatration)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to modules](./contents.md)
 
 # heapq

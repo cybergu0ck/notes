@@ -13,6 +13,45 @@
 
 
 
+# Contents
+
+- [Standard](#standard)
+  - [Headings](#headings)
+  - [Storing resource files](#storing-resource-files)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Standard](#standard)
+  - [Headings](#headings)
+  - [Storing resource files](#storing-resource-files)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Standard](#standard)
+  - [Headings](#headings)
+  - [Storing resource files](#storing-resource-files)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to notes](./contents.md)
 
 # Standard

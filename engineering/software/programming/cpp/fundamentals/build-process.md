@@ -20,6 +20,66 @@
 
 
 
+# Contents
+
+- [Build Process](#build-process)
+  - [Preprocessing](#preprocessing)
+      - [Preprocessor Directive](#preprocessor-directive)
+  - [Compilation](#compilation)
+  - [Linking](#linking)
+  - [Library Linking](#library-linking)
+    - [Static Linking](#static-linking)
+    - [Implicit dynamic linking](#implicit-dynamic-linking)
+    - [Explicit dynamic linking](#explicit-dynamic-linking)
+    - [Types of lib files](#types-of-lib-files)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Build Process](#build-process)
+  - [Preprocessing](#preprocessing)
+      - [Preprocessor Directive](#preprocessor-directive)
+  - [Compilation](#compilation)
+  - [Linking](#linking)
+  - [Library Linking](#library-linking)
+    - [Static Linking](#static-linking)
+    - [Implicit dynamic linking](#implicit-dynamic-linking)
+    - [Explicit dynamic linking](#explicit-dynamic-linking)
+    - [Types of lib files](#types-of-lib-files)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Build Process](#build-process)
+  - [Preprocessing](#preprocessing)
+      - [Preprocessor Directive](#preprocessor-directive)
+  - [Compilation](#compilation)
+  - [Linking](#linking)
+  - [Library Linking](#library-linking)
+    - [Static Linking](#static-linking)
+    - [Implicit dynamic linking](#implicit-dynamic-linking)
+    - [Explicit dynamic linking](#explicit-dynamic-linking)
+    - [Types of lib files](#types-of-lib-files)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to fundamentals](./contents.md)
 
 # Build Process

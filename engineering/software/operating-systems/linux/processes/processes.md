@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Managing processes](#managing-processes)
+  - [Kill command](#kill-command)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Managing processes](#managing-processes)
+  - [Kill command](#kill-command)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Managing processes](#managing-processes)
+  - [Kill command](#kill-command)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to processes](./contents.md)
 
 # Managing processes

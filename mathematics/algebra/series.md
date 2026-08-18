@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Series](#series)
+  - [Geometric series](#geometric-series)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Series](#series)
+  - [Geometric series](#geometric-series)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Series](#series)
+  - [Geometric series](#geometric-series)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to algebra](./contents.md)
 
 # Series

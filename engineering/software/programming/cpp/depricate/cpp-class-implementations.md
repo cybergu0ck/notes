@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [From old notes](#from-old-notes)
+- [Overloading the assignment operator (move)](#overloading-the-assignment-operator-move)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [From old notes](#from-old-notes)
+- [Overloading the assignment operator (move)](#overloading-the-assignment-operator-move)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [From old notes](#from-old-notes)
+- [Overloading the assignment operator (move)](#overloading-the-assignment-operator-move)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to depricate](./contents.md)
 
 # From old notes

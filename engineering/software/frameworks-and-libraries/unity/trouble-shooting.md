@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Troubleshooting](#troubleshooting)
+  - [Red pixels on scene area](#red-pixels-on-scene-area)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Troubleshooting](#troubleshooting)
+  - [Red pixels on scene area](#red-pixels-on-scene-area)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Troubleshooting](#troubleshooting)
+  - [Red pixels on scene area](#red-pixels-on-scene-area)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to unity](./contents.md)
 
 # Troubleshooting

@@ -20,6 +20,66 @@
 
 
 
+# Contents
+
+- [Rule of five](#rule-of-five)
+  - [Destructor](#destructor)
+  - [Copy constructors](#copy-constructors)
+    - [Shallow Copy Constructor](#shallow-copy-constructor)
+    - [Deep Copy Constructor](#deep-copy-constructor)
+  - [Copy assignment](#copy-assignment)
+    - [Strong Exception Guarantee](#strong-exception-guarantee)
+    - [Copy and Swap Idiom](#copy-and-swap-idiom)
+  - [Move constructors](#move-constructors)
+  - [Move assignment](#move-assignment)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Rule of five](#rule-of-five)
+  - [Destructor](#destructor)
+  - [Copy constructors](#copy-constructors)
+    - [Shallow Copy Constructor](#shallow-copy-constructor)
+    - [Deep Copy Constructor](#deep-copy-constructor)
+  - [Copy assignment](#copy-assignment)
+    - [Strong Exception Guarantee](#strong-exception-guarantee)
+    - [Copy and Swap Idiom](#copy-and-swap-idiom)
+  - [Move constructors](#move-constructors)
+  - [Move assignment](#move-assignment)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Rule of five](#rule-of-five)
+  - [Destructor](#destructor)
+  - [Copy constructors](#copy-constructors)
+    - [Shallow Copy Constructor](#shallow-copy-constructor)
+    - [Deep Copy Constructor](#deep-copy-constructor)
+  - [Copy assignment](#copy-assignment)
+    - [Strong Exception Guarantee](#strong-exception-guarantee)
+    - [Copy and Swap Idiom](#copy-and-swap-idiom)
+  - [Move constructors](#move-constructors)
+  - [Move assignment](#move-assignment)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to polymorphism](./contents.md)
 
 # Rule of five

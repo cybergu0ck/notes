@@ -17,6 +17,57 @@
 
 
 
+# Contents
+
+- [Git Versions](#git-versions)
+  - [Viewing Git History](#viewing-git-history)
+    - [`git log`](#git-log)
+    - [`git show`](#git-show)
+    - [`git reflog`](#git-reflog)
+  - [Inspecting changes](#inspecting-changes)
+    - [Git Diff Command](#git-diff-command)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Git Versions](#git-versions)
+  - [Viewing Git History](#viewing-git-history)
+    - [`git log`](#git-log)
+    - [`git show`](#git-show)
+    - [`git reflog`](#git-reflog)
+  - [Inspecting changes](#inspecting-changes)
+    - [Git Diff Command](#git-diff-command)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Git Versions](#git-versions)
+  - [Viewing Git History](#viewing-git-history)
+    - [`git log`](#git-log)
+    - [`git show`](#git-show)
+    - [`git reflog`](#git-reflog)
+  - [Inspecting changes](#inspecting-changes)
+    - [Git Diff Command](#git-diff-command)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to git](./contents.md)
 
 # Git Versions

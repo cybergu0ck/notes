@@ -13,6 +13,45 @@
 
 
 
+# Contents
+
+- [linguistics](#linguistics)
+  - [Files](#files)
+  - [Subdirectories](#subdirectories)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [linguistics](#linguistics)
+  - [Files](#files)
+  - [Subdirectories](#subdirectories)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [linguistics](#linguistics)
+  - [Files](#files)
+  - [Subdirectories](#subdirectories)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to linguistics](./contents.md)
 
 # linguistics

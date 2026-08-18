@@ -14,6 +14,48 @@
 
 
 
+# Contents
+
+- [Permissions](#permissions)
+  - [Chmod command](#chmod-command)
+    - [Permissions in the form of bits](#permissions-in-the-form-of-bits)
+  - [Chown command](#chown-command)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Permissions](#permissions)
+  - [Chmod command](#chmod-command)
+    - [Permissions in the form of bits](#permissions-in-the-form-of-bits)
+  - [Chown command](#chown-command)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Permissions](#permissions)
+  - [Chmod command](#chmod-command)
+    - [Permissions in the form of bits](#permissions-in-the-form-of-bits)
+  - [Chown command](#chown-command)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to filesystem](./contents.md)
 
 # Permissions

@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [useReducer hook](#usereducer-hook)
+  - [Creating a state using useReducer](#creating-a-state-using-usereducer)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [useReducer hook](#usereducer-hook)
+  - [Creating a state using useReducer](#creating-a-state-using-usereducer)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [useReducer hook](#usereducer-hook)
+  - [Creating a state using useReducer](#creating-a-state-using-usereducer)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to react](./contents.md)
 
 # useReducer hook

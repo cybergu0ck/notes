@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Encapsulation](#encapsulation)
+    - [Name Mangling](#name-mangling)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Encapsulation](#encapsulation)
+    - [Name Mangling](#name-mangling)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Encapsulation](#encapsulation)
+    - [Name Mangling](#name-mangling)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to oops](./contents.md)
 
 # Encapsulation

@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Linux customisations](#linux-customisations)
+  - [Modifying default directory paths](#modifying-default-directory-paths)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Linux customisations](#linux-customisations)
+  - [Modifying default directory paths](#modifying-default-directory-paths)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Linux customisations](#linux-customisations)
+  - [Modifying default directory paths](#modifying-default-directory-paths)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to linux](./contents.md)
 
 # Linux customisations

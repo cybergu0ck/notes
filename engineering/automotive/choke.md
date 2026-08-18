@@ -14,6 +14,48 @@
 
 
 
+# Contents
+
+- [Choke](#choke)
+  - [Need for a choke](#need-for-a-choke)
+  - [How does temperature affect the engine.](#how-does-temperature-affect-the-engine)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Choke](#choke)
+  - [Need for a choke](#need-for-a-choke)
+  - [How does temperature affect the engine.](#how-does-temperature-affect-the-engine)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Choke](#choke)
+  - [Need for a choke](#need-for-a-choke)
+  - [How does temperature affect the engine.](#how-does-temperature-affect-the-engine)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to automotive](./contents.md)
 
 # Choke

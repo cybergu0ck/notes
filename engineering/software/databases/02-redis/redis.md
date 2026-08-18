@@ -15,6 +15,51 @@
 
 
 
+# Contents
+
+- [Introduction](#introduction)
+- [Redis rudimentary commands](#redis-rudimentary-commands)
+- [Strings](#strings)
+- [Hashes](#hashes)
+- [Lists](#lists)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Introduction](#introduction)
+- [Redis rudimentary commands](#redis-rudimentary-commands)
+- [Strings](#strings)
+- [Hashes](#hashes)
+- [Lists](#lists)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Introduction](#introduction)
+- [Redis rudimentary commands](#redis-rudimentary-commands)
+- [Strings](#strings)
+- [Hashes](#hashes)
+- [Lists](#lists)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to 02-redis](./contents.md)
 
 # Introduction

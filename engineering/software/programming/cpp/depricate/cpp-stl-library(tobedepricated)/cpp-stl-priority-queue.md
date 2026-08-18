@@ -18,6 +18,60 @@
 
 
 
+# Contents
+
+- [STL Priority Queue](#stl-priority-queue)
+- [Initialisation](#initialisation)
+- [Useful Functions](#useful-functions)
+  - [push()](#push)
+  - [pop()](#pop)
+  - [top()](#top)
+  - [empty()](#empty)
+  - [size()](#size)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [STL Priority Queue](#stl-priority-queue)
+- [Initialisation](#initialisation)
+- [Useful Functions](#useful-functions)
+  - [push()](#push)
+  - [pop()](#pop)
+  - [top()](#top)
+  - [empty()](#empty)
+  - [size()](#size)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [STL Priority Queue](#stl-priority-queue)
+- [Initialisation](#initialisation)
+- [Useful Functions](#useful-functions)
+  - [push()](#push)
+  - [pop()](#pop)
+  - [top()](#top)
+  - [empty()](#empty)
+  - [size()](#size)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to cpp-stl-library(tobedepricated)](./contents.md)
 
 # STL Priority Queue

@@ -13,6 +13,45 @@
 
 
 
+# Contents
+
+- [Float](#float)
+    - [`math.ceil()`](#mathceil)
+    - [`math.floor()`](#mathfloor)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Float](#float)
+    - [`math.ceil()`](#mathceil)
+    - [`math.floor()`](#mathfloor)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Float](#float)
+    - [`math.ceil()`](#mathceil)
+    - [`math.floor()`](#mathfloor)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to numeric-types](./contents.md)
 
 # Float

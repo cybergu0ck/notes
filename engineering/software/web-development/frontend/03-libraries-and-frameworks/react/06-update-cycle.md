@@ -23,6 +23,75 @@
 
 
 
+# Contents
+
+- [React's Update Cycle](#reacts-update-cycle)
+  - [1. Rendering](#1-rendering)
+    - [Virtual DOM](#virtual-dom)
+    - [Triggering renders](#triggering-renders)
+  - [2. Reconciliation](#2-reconciliation)
+    - [Diffing](#diffing)
+      - [Diffing Rules](#diffing-rules)
+      - [Diffing Concept Clarity](#diffing-concept-clarity)
+  - [3. Commiting](#3-commiting)
+  - [Key](#key)
+  - [Batching of State Updates](#batching-of-state-updates)
+    - [Batching Concept Clarity](#batching-concept-clarity)
+  - [Asynchronous nature of state updates](#asynchronous-nature-of-state-updates)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [React's Update Cycle](#reacts-update-cycle)
+  - [1. Rendering](#1-rendering)
+    - [Virtual DOM](#virtual-dom)
+    - [Triggering renders](#triggering-renders)
+  - [2. Reconciliation](#2-reconciliation)
+    - [Diffing](#diffing)
+      - [Diffing Rules](#diffing-rules)
+      - [Diffing Concept Clarity](#diffing-concept-clarity)
+  - [3. Commiting](#3-commiting)
+  - [Key](#key)
+  - [Batching of State Updates](#batching-of-state-updates)
+    - [Batching Concept Clarity](#batching-concept-clarity)
+  - [Asynchronous nature of state updates](#asynchronous-nature-of-state-updates)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [React's Update Cycle](#reacts-update-cycle)
+  - [1. Rendering](#1-rendering)
+    - [Virtual DOM](#virtual-dom)
+    - [Triggering renders](#triggering-renders)
+  - [2. Reconciliation](#2-reconciliation)
+    - [Diffing](#diffing)
+      - [Diffing Rules](#diffing-rules)
+      - [Diffing Concept Clarity](#diffing-concept-clarity)
+  - [3. Commiting](#3-commiting)
+  - [Key](#key)
+  - [Batching of State Updates](#batching-of-state-updates)
+    - [Batching Concept Clarity](#batching-concept-clarity)
+  - [Asynchronous nature of state updates](#asynchronous-nature-of-state-updates)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to react](./contents.md)
 
 # React's Update Cycle

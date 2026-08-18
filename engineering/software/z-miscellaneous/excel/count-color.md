@@ -16,6 +16,54 @@
 
 
 
+# Contents
+
+- [Count Color](#count-color)
+  - [Enable Developer Tab in the Ribbon](#enable-developer-tab-in-the-ribbon)
+  - [Enter VBA mode](#enter-vba-mode)
+  - [Add the functions in VB](#add-the-functions-in-vb)
+  - [Using the function](#using-the-function)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Count Color](#count-color)
+  - [Enable Developer Tab in the Ribbon](#enable-developer-tab-in-the-ribbon)
+  - [Enter VBA mode](#enter-vba-mode)
+  - [Add the functions in VB](#add-the-functions-in-vb)
+  - [Using the function](#using-the-function)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Count Color](#count-color)
+  - [Enable Developer Tab in the Ribbon](#enable-developer-tab-in-the-ribbon)
+  - [Enter VBA mode](#enter-vba-mode)
+  - [Add the functions in VB](#add-the-functions-in-vb)
+  - [Using the function](#using-the-function)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to excel](./contents.md)
 
 # Count Color

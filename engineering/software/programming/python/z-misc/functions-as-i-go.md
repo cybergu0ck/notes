@@ -14,6 +14,48 @@
 
 
 
+# Contents
+
+- [`dir()`](#dir)
+- [`isinstance()`](#isinstance)
+- [`Counter()`](#counter)
+- [`divmod()`](#divmod)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [`dir()`](#dir)
+- [`isinstance()`](#isinstance)
+- [`Counter()`](#counter)
+- [`divmod()`](#divmod)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [`dir()`](#dir)
+- [`isinstance()`](#isinstance)
+- [`Counter()`](#counter)
+- [`divmod()`](#divmod)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to z-misc](./contents.md)
 
 # `dir()`

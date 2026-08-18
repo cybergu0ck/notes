@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Installation](#installation)
+  - [To change Pi-Hole web interface password](#to-change-pi-hole-web-interface-password)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Installation](#installation)
+  - [To change Pi-Hole web interface password](#to-change-pi-hole-web-interface-password)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Installation](#installation)
+  - [To change Pi-Hole web interface password](#to-change-pi-hole-web-interface-password)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to home-server](./contents.md)
 
 # Installation

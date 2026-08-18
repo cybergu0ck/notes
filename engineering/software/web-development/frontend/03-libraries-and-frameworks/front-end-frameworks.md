@@ -18,6 +18,60 @@
 
 
 
+# Contents
+
+  - [Front-end Terminology](#front-end-terminology)
+    - [Declarative Approach](#declarative-approach)
+    - [Opinionated](#opinionated)
+    - [Batteries included](#batteries-included)
+  - [Front-end Framework](#front-end-framework)
+  - [Front-end Library](#front-end-library)
+    - [Need for front-end frameworks and libraries](#need-for-front-end-frameworks-and-libraries)
+- [Single Page Application](#single-page-application)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+  - [Front-end Terminology](#front-end-terminology)
+    - [Declarative Approach](#declarative-approach)
+    - [Opinionated](#opinionated)
+    - [Batteries included](#batteries-included)
+  - [Front-end Framework](#front-end-framework)
+  - [Front-end Library](#front-end-library)
+    - [Need for front-end frameworks and libraries](#need-for-front-end-frameworks-and-libraries)
+- [Single Page Application](#single-page-application)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+  - [Front-end Terminology](#front-end-terminology)
+    - [Declarative Approach](#declarative-approach)
+    - [Opinionated](#opinionated)
+    - [Batteries included](#batteries-included)
+  - [Front-end Framework](#front-end-framework)
+  - [Front-end Library](#front-end-library)
+    - [Need for front-end frameworks and libraries](#need-for-front-end-frameworks-and-libraries)
+- [Single Page Application](#single-page-application)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to 03-libraries-and-frameworks](./contents.md)
 
 ## Front-end Terminology

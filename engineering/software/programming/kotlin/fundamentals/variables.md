@@ -15,6 +15,51 @@
 
 
 
+# Contents
+
+- [Initialization](#initialization)
+- [Immutable variables](#immutable-variables)
+- [Mutable variables](#mutable-variables)
+- [Null safety](#null-safety)
+- [Few rules](#few-rules)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Initialization](#initialization)
+- [Immutable variables](#immutable-variables)
+- [Mutable variables](#mutable-variables)
+- [Null safety](#null-safety)
+- [Few rules](#few-rules)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Initialization](#initialization)
+- [Immutable variables](#immutable-variables)
+- [Mutable variables](#mutable-variables)
+- [Null safety](#null-safety)
+- [Few rules](#few-rules)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to fundamentals](./contents.md)
 
 # Initialization

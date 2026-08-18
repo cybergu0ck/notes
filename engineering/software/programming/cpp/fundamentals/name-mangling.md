@@ -15,6 +15,51 @@
 
 
 
+# Contents
+
+- [Name mangling](#name-mangling)
+  - [Cpp naming convention](#cpp-naming-convention)
+  - [Raw names and decorated names](#raw-names-and-decorated-names)
+  - [C naming convention](#c-naming-convention)
+  - [Nuances with naming conventions](#nuances-with-naming-conventions)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Name mangling](#name-mangling)
+  - [Cpp naming convention](#cpp-naming-convention)
+  - [Raw names and decorated names](#raw-names-and-decorated-names)
+  - [C naming convention](#c-naming-convention)
+  - [Nuances with naming conventions](#nuances-with-naming-conventions)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Name mangling](#name-mangling)
+  - [Cpp naming convention](#cpp-naming-convention)
+  - [Raw names and decorated names](#raw-names-and-decorated-names)
+  - [C naming convention](#c-naming-convention)
+  - [Nuances with naming conventions](#nuances-with-naming-conventions)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to fundamentals](./contents.md)
 
 # Name mangling

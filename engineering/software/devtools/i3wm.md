@@ -14,6 +14,48 @@
 
 
 
+# Contents
+
+- [i2wm](#i2wm)
+  - [Configuration](#configuration)
+  - [Shortcut keys](#shortcut-keys)
+  - [Applications](#applications)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [i2wm](#i2wm)
+  - [Configuration](#configuration)
+  - [Shortcut keys](#shortcut-keys)
+  - [Applications](#applications)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [i2wm](#i2wm)
+  - [Configuration](#configuration)
+  - [Shortcut keys](#shortcut-keys)
+  - [Applications](#applications)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to devtools](./contents.md)
 
 # i2wm

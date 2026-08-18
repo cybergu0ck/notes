@@ -22,6 +22,72 @@
 
 
 
+# Contents
+
+- [Creating Objects using Literals](#creating-objects-using-literals)
+  - [Setting Properties](#setting-properties)
+  - [Accessing Properties](#accessing-properties)
+  - [Deleting Properties](#deleting-properties)
+- [Creating objects using Constructors](#creating-objects-using-constructors)
+- [Property Value shorthand](#property-value-shorthand)
+- [Property names limitations](#property-names-limitations)
+- [Property existence test, `in` opertaor](#property-existence-test-in-opertaor)
+- [The "for..in" loop](#the-forin-loop)
+- [Object references and copying](#object-references-and-copying)
+  - [Illustration](#illustration)
+  - [Object Destructuring](#object-destructuring)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Creating Objects using Literals](#creating-objects-using-literals)
+  - [Setting Properties](#setting-properties)
+  - [Accessing Properties](#accessing-properties)
+  - [Deleting Properties](#deleting-properties)
+- [Creating objects using Constructors](#creating-objects-using-constructors)
+- [Property Value shorthand](#property-value-shorthand)
+- [Property names limitations](#property-names-limitations)
+- [Property existence test, `in` opertaor](#property-existence-test-in-opertaor)
+- [The "for..in" loop](#the-forin-loop)
+- [Object references and copying](#object-references-and-copying)
+  - [Illustration](#illustration)
+  - [Object Destructuring](#object-destructuring)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Creating Objects using Literals](#creating-objects-using-literals)
+  - [Setting Properties](#setting-properties)
+  - [Accessing Properties](#accessing-properties)
+  - [Deleting Properties](#deleting-properties)
+- [Creating objects using Constructors](#creating-objects-using-constructors)
+- [Property Value shorthand](#property-value-shorthand)
+- [Property names limitations](#property-names-limitations)
+- [Property existence test, `in` opertaor](#property-existence-test-in-opertaor)
+- [The "for..in" loop](#the-forin-loop)
+- [Object references and copying](#object-references-and-copying)
+  - [Illustration](#illustration)
+  - [Object Destructuring](#object-destructuring)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to 04-js-oops](./contents.md)
 
 # Creating Objects using Literals

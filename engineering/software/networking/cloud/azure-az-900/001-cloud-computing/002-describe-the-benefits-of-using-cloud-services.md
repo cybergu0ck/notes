@@ -2,6 +2,60 @@
 
 # Contents
 
+  - [High availability](#high-availability)
+  - [Scalability](#scalability)
+  - [Reliability](#reliability)
+  - [Predictability](#predictability)
+  - [Governance](#governance)
+  - [Security](#security)
+  - [Management of the cloud](#management-of-the-cloud)
+  - [Management in the cloud](#management-in-the-cloud)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+  - [High availability](#high-availability)
+  - [Scalability](#scalability)
+  - [Reliability](#reliability)
+  - [Predictability](#predictability)
+  - [Governance](#governance)
+  - [Security](#security)
+  - [Management of the cloud](#management-of-the-cloud)
+  - [Management in the cloud](#management-in-the-cloud)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+  - [High availability](#high-availability)
+  - [Scalability](#scalability)
+  - [Reliability](#reliability)
+  - [Predictability](#predictability)
+  - [Governance](#governance)
+  - [Security](#security)
+  - [Management of the cloud](#management-of-the-cloud)
+  - [Management in the cloud](#management-in-the-cloud)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
 - [High availability](#high-availability)
 - [Scalability](#scalability)
 - [Reliability](#reliability)

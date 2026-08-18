@@ -18,6 +18,60 @@
 
 
 
+# Contents
+
+- [Errors in Python](#errors-in-python)
+  - [Syntax Errors](#syntax-errors)
+  - [Logical errors (Exceptions)](#logical-errors-exceptions)
+      - ["*We can handle these built-in and user-defined exceptions in Python*"](#we-can-handle-these-built-in-and-user-defined-exceptions-in-python)
+    - [B. Built in Exceptions](#b-built-in-exceptions)
+    - [Raising Exceptions in Python](#raising-exceptions-in-python)
+    - [The "Else" with Try Except](#the-else-with-try-except)
+    - [The "finally" block in try except](#the-finally-block-in-try-except)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Errors in Python](#errors-in-python)
+  - [Syntax Errors](#syntax-errors)
+  - [Logical errors (Exceptions)](#logical-errors-exceptions)
+      - ["*We can handle these built-in and user-defined exceptions in Python*"](#we-can-handle-these-built-in-and-user-defined-exceptions-in-python)
+    - [B. Built in Exceptions](#b-built-in-exceptions)
+    - [Raising Exceptions in Python](#raising-exceptions-in-python)
+    - [The "Else" with Try Except](#the-else-with-try-except)
+    - [The "finally" block in try except](#the-finally-block-in-try-except)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Errors in Python](#errors-in-python)
+  - [Syntax Errors](#syntax-errors)
+  - [Logical errors (Exceptions)](#logical-errors-exceptions)
+      - ["*We can handle these built-in and user-defined exceptions in Python*"](#we-can-handle-these-built-in-and-user-defined-exceptions-in-python)
+    - [B. Built in Exceptions](#b-built-in-exceptions)
+    - [Raising Exceptions in Python](#raising-exceptions-in-python)
+    - [The "Else" with Try Except](#the-else-with-try-except)
+    - [The "finally" block in try except](#the-finally-block-in-try-except)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to exception-handling](./contents.md)
 
 # Errors in Python

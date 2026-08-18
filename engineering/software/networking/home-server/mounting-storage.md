@@ -18,6 +18,60 @@
 
 
 
+# Contents
+
+- [Find the Disk Identifier](#find-the-disk-identifier)
+- [Check for partion](#check-for-partion)
+- [Create GPT partition](#create-gpt-partition)
+- [Make a ext4 File System](#make-a-ext4-file-system)
+- [Check the filesystem (can get UUID of disk)](#check-the-filesystem-can-get-uuid-of-disk)
+- [Making mount persistant (mount on boot)](#making-mount-persistant-mount-on-boot)
+- [Moutning the disk](#moutning-the-disk)
+- [Unmounting a disk](#unmounting-a-disk)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Find the Disk Identifier](#find-the-disk-identifier)
+- [Check for partion](#check-for-partion)
+- [Create GPT partition](#create-gpt-partition)
+- [Make a ext4 File System](#make-a-ext4-file-system)
+- [Check the filesystem (can get UUID of disk)](#check-the-filesystem-can-get-uuid-of-disk)
+- [Making mount persistant (mount on boot)](#making-mount-persistant-mount-on-boot)
+- [Moutning the disk](#moutning-the-disk)
+- [Unmounting a disk](#unmounting-a-disk)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Find the Disk Identifier](#find-the-disk-identifier)
+- [Check for partion](#check-for-partion)
+- [Create GPT partition](#create-gpt-partition)
+- [Make a ext4 File System](#make-a-ext4-file-system)
+- [Check the filesystem (can get UUID of disk)](#check-the-filesystem-can-get-uuid-of-disk)
+- [Making mount persistant (mount on boot)](#making-mount-persistant-mount-on-boot)
+- [Moutning the disk](#moutning-the-disk)
+- [Unmounting a disk](#unmounting-a-disk)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to home-server](./contents.md)
 
 # Find the Disk Identifier

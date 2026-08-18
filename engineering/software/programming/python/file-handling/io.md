@@ -13,6 +13,45 @@
 
 
 
+# Contents
+
+- [Reading from files](#reading-from-files)
+- [File Paths](#file-paths)
+- [Reading line by line](#reading-line-by-line)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Reading from files](#reading-from-files)
+- [File Paths](#file-paths)
+- [Reading line by line](#reading-line-by-line)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Reading from files](#reading-from-files)
+- [File Paths](#file-paths)
+- [Reading line by line](#reading-line-by-line)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to file-handling](./contents.md)
 
 # Reading from files

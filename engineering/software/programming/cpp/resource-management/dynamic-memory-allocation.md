@@ -23,6 +23,75 @@
 
 
 
+# Contents
+
+- [Dynamic Memory Allocation](#dynamic-memory-allocation)
+  - [Dynamic Memory Allocation in C vs C++](#dynamic-memory-allocation-in-c-vs-c)
+  - [Allocating Stack Memory](#allocating-stack-memory)
+  - [Allocating Heap Memory](#allocating-heap-memory)
+  - [Dynamically Allocated Memory as Function Arguments](#dynamically-allocated-memory-as-function-arguments)
+    - [Passing Dynamically Allocated Memory by Value](#passing-dynamically-allocated-memory-by-value)
+    - [Passing Dynamically Allocated Memory by reference](#passing-dynamically-allocated-memory-by-reference)
+  - [Dynamically Allocated Memory as Return Type](#dynamically-allocated-memory-as-return-type)
+  - [Common Pitfalls with Dynmically Allocated Memory](#common-pitfalls-with-dynmically-allocated-memory)
+    - [Dangling Pointers](#dangling-pointers)
+    - [Memory Leaks](#memory-leaks)
+    - [double delete](#double-delete)
+    - [Not checking if `new` failed](#not-checking-if-new-failed)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Dynamic Memory Allocation](#dynamic-memory-allocation)
+  - [Dynamic Memory Allocation in C vs C++](#dynamic-memory-allocation-in-c-vs-c)
+  - [Allocating Stack Memory](#allocating-stack-memory)
+  - [Allocating Heap Memory](#allocating-heap-memory)
+  - [Dynamically Allocated Memory as Function Arguments](#dynamically-allocated-memory-as-function-arguments)
+    - [Passing Dynamically Allocated Memory by Value](#passing-dynamically-allocated-memory-by-value)
+    - [Passing Dynamically Allocated Memory by reference](#passing-dynamically-allocated-memory-by-reference)
+  - [Dynamically Allocated Memory as Return Type](#dynamically-allocated-memory-as-return-type)
+  - [Common Pitfalls with Dynmically Allocated Memory](#common-pitfalls-with-dynmically-allocated-memory)
+    - [Dangling Pointers](#dangling-pointers)
+    - [Memory Leaks](#memory-leaks)
+    - [double delete](#double-delete)
+    - [Not checking if `new` failed](#not-checking-if-new-failed)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Dynamic Memory Allocation](#dynamic-memory-allocation)
+  - [Dynamic Memory Allocation in C vs C++](#dynamic-memory-allocation-in-c-vs-c)
+  - [Allocating Stack Memory](#allocating-stack-memory)
+  - [Allocating Heap Memory](#allocating-heap-memory)
+  - [Dynamically Allocated Memory as Function Arguments](#dynamically-allocated-memory-as-function-arguments)
+    - [Passing Dynamically Allocated Memory by Value](#passing-dynamically-allocated-memory-by-value)
+    - [Passing Dynamically Allocated Memory by reference](#passing-dynamically-allocated-memory-by-reference)
+  - [Dynamically Allocated Memory as Return Type](#dynamically-allocated-memory-as-return-type)
+  - [Common Pitfalls with Dynmically Allocated Memory](#common-pitfalls-with-dynmically-allocated-memory)
+    - [Dangling Pointers](#dangling-pointers)
+    - [Memory Leaks](#memory-leaks)
+    - [double delete](#double-delete)
+    - [Not checking if `new` failed](#not-checking-if-new-failed)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to resource-management](./contents.md)
 
 # Dynamic Memory Allocation

@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Generators](#generators)
+  - [Generator expressions](#generator-expressions)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Generators](#generators)
+  - [Generator expressions](#generator-expressions)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Generators](#generators)
+  - [Generator expressions](#generator-expressions)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to oops](./contents.md)
 
 # Generators

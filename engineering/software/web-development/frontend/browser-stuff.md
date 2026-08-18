@@ -12,6 +12,42 @@
 
 
 
+# Contents
+
+- [Browser Stuff](#browser-stuff)
+  - [Reloading the HTML in browser](#reloading-the-html-in-browser)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Browser Stuff](#browser-stuff)
+  - [Reloading the HTML in browser](#reloading-the-html-in-browser)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Browser Stuff](#browser-stuff)
+  - [Reloading the HTML in browser](#reloading-the-html-in-browser)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to frontend](./contents.md)
 
 # Browser Stuff

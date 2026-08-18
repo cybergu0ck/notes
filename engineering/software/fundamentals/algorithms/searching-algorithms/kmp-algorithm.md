@@ -19,6 +19,63 @@
 
 
 
+# Contents
+
+- [The Problem](#the-problem)
+- [Brute Force Method](#brute-force-method)
+- [KMP Algorithm](#kmp-algorithm)
+  - [1. Preprocessing (Computing LPS)](#1-preprocessing-computing-lps)
+    - [Illustration](#illustration)
+  - [2. Searching](#2-searching)
+- [Time complexity](#time-complexity)
+- [Usefullness of KMP](#usefullness-of-kmp)
+- [Reference](#reference)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [The Problem](#the-problem)
+- [Brute Force Method](#brute-force-method)
+- [KMP Algorithm](#kmp-algorithm)
+  - [1. Preprocessing (Computing LPS)](#1-preprocessing-computing-lps)
+    - [Illustration](#illustration)
+  - [2. Searching](#2-searching)
+- [Time complexity](#time-complexity)
+- [Usefullness of KMP](#usefullness-of-kmp)
+- [Reference](#reference)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [The Problem](#the-problem)
+- [Brute Force Method](#brute-force-method)
+- [KMP Algorithm](#kmp-algorithm)
+  - [1. Preprocessing (Computing LPS)](#1-preprocessing-computing-lps)
+    - [Illustration](#illustration)
+  - [2. Searching](#2-searching)
+- [Time complexity](#time-complexity)
+- [Usefullness of KMP](#usefullness-of-kmp)
+- [Reference](#reference)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to searching-algorithms](./contents.md)
 
 # The Problem

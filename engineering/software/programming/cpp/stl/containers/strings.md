@@ -20,6 +20,66 @@
 
 
 
+# Contents
+
+- [std::string](#stdstring)
+  - [initialisation](#initialisation)
+  - [string literal vs std::string](#string-literal-vs-stdstring)
+  - [methods](#methods)
+    - [access](#access)
+    - [search](#search)
+    - [insertion](#insertion)
+    - [deletion](#deletion)
+    - [modification](#modification)
+    - [miscallaneous](#miscallaneous)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [std::string](#stdstring)
+  - [initialisation](#initialisation)
+  - [string literal vs std::string](#string-literal-vs-stdstring)
+  - [methods](#methods)
+    - [access](#access)
+    - [search](#search)
+    - [insertion](#insertion)
+    - [deletion](#deletion)
+    - [modification](#modification)
+    - [miscallaneous](#miscallaneous)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [std::string](#stdstring)
+  - [initialisation](#initialisation)
+  - [string literal vs std::string](#string-literal-vs-stdstring)
+  - [methods](#methods)
+    - [access](#access)
+    - [search](#search)
+    - [insertion](#insertion)
+    - [deletion](#deletion)
+    - [modification](#modification)
+    - [miscallaneous](#miscallaneous)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to containers](./contents.md)
 
 # std::string

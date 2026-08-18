@@ -13,6 +13,45 @@
 
 
 
+# Contents
+
+- [Polymorphism](#polymorphism)
+  - [2.a Polymorphisim of Operators](#2a-polymorphisim-of-operators)
+  - [2.b Polymorphism of Functions (Overloading Functions)](#2b-polymorphism-of-functions-overloading-functions)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Polymorphism](#polymorphism)
+  - [2.a Polymorphisim of Operators](#2a-polymorphisim-of-operators)
+  - [2.b Polymorphism of Functions (Overloading Functions)](#2b-polymorphism-of-functions-overloading-functions)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [Polymorphism](#polymorphism)
+  - [2.a Polymorphisim of Operators](#2a-polymorphisim-of-operators)
+  - [2.b Polymorphism of Functions (Overloading Functions)](#2b-polymorphism-of-functions-overloading-functions)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to oops](./contents.md)
 
 # Polymorphism

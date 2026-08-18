@@ -15,6 +15,51 @@
 
 
 
+# Contents
+
+- [ASCII](#ascii)
+  - [Character set](#character-set)
+  - [Limitations](#limitations)
+  - [Resources](#resources)
+- [UTF-8](#utf-8)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [ASCII](#ascii)
+  - [Character set](#character-set)
+  - [Limitations](#limitations)
+  - [Resources](#resources)
+- [UTF-8](#utf-8)
+
+<br>
+<br>
+<br>
+
+
+
+
+# Contents
+
+- [ASCII](#ascii)
+  - [Character set](#character-set)
+  - [Limitations](#limitations)
+  - [Resources](#resources)
+- [UTF-8](#utf-8)
+
+<br>
+<br>
+<br>
+
+
+
+
 [← Back to characters](./contents.md)
 
 # ASCII
