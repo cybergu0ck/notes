@@ -1,4 +1,14 @@
-[← Back to mathematics](../mathematics-contents.md)
+# Contents
+
+- [statistics](#statistics)
+  - [Files](#files)
+
+<br>
+<br>
+<br>
+
+
+
 
 # statistics
 

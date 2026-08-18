@@ -1,7 +1,21 @@
+# Contents
+
+- [Seperation of concerns](#seperation-of-concerns)
+- [Model driven UI](#model-driven-ui)
+- [Unidirectional data flow](#unidirectional-data-flow)
+- [Data Layer](#data-layer)
+- [UI Layer](#ui-layer)
+  - [UI State](#ui-state)
+  - [View Model](#view-model)
+- [UI Elements](#ui-elements)
+- [Illustration](#illustration)
 
 <br>
 <br>
 <br>
+
+
+
 
 ## Seperation of concerns
 

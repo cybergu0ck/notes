@@ -1,4 +1,14 @@
-[← Back to z-misc](../z-misc-contents.md)
+# Contents
+
+- [anaconda](#anaconda)
+  - [Files](#files)
+
+<br>
+<br>
+<br>
+
+
+
 
 # anaconda
 

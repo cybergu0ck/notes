@@ -1,4 +1,14 @@
-[← Back to notes](../notes-contents.md)
+# Contents
+
+- [mathematics](#mathematics)
+  - [Subdirectories](#subdirectories)
+
+<br>
+<br>
+<br>
+
+
+
 
 # mathematics
 

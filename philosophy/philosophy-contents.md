@@ -1,4 +1,14 @@
-[← Back to notes](../notes-contents.md)
+# Contents
+
+- [philosophy](#philosophy)
+  - [Files](#files)
+
+<br>
+<br>
+<br>
+
+
+
 
 # philosophy
 

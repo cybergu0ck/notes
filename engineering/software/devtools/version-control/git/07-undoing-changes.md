@@ -1,8 +1,10 @@
 # Contents
 
 - [Undoing changes in git](#undoing-changes-in-git)
-  - [Discarding changes in working directory](#discarding-changes-in-working-directory)
-  - [Unstaging files](#unstaging-files)
+  - [Unstage staged changes in working directory](#unstage-staged-changes-in-working-directory)
+  - [Discarding unstaged changes in working directory](#discarding-unstaged-changes-in-working-directory)
+  - [Discarding untracked changes in working directory](#discarding-untracked-changes-in-working-directory)
+  - [Discard all staged, unstaged and untracked changes](#discard-all-staged-unstaged-and-untracked-changes)
   - [Ammend Commit](#ammend-commit)
   - [Reset](#reset)
     - [Soft Reset](#soft-reset)

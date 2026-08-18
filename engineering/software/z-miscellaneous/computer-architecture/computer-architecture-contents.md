@@ -1,4 +1,14 @@
-[← Back to z-miscellaneous](../z-miscellaneous-contents.md)
+# Contents
+
+- [computer-architecture](#computer-architecture)
+  - [Subdirectories](#subdirectories)
+
+<br>
+<br>
+<br>
+
+
+
 
 # computer-architecture
 

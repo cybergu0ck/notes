@@ -211,8 +211,10 @@ def create_index_files(root_dir):
         output_file = current_path / index_filename
         content = build_index_for_directory(current_path, root_path)
 
-        with open(output_file, "w", encoding="utf-8") as f:
-            f.write(content)
+
+        # os.remove(output_file)
+        # with open(output_file, "w", encoding="utf-8") as f:
+        #     f.write(content)
 
         print(f"Created: {output_file}")
 

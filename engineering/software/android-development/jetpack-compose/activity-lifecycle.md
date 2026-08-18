@@ -1,3 +1,17 @@
+# Contents
+
+- [Activity Lifecycle](#activity-lifecycle)
+  - [Callbacks](#callbacks)
+    - [Illustration](#illustration)
+  - [Configuration changes](#configuration-changes)
+
+<br>
+<br>
+<br>
+
+
+
+
 # Activity Lifecycle
 
 Activity lifecycle consists of the different states that an activity can go through, from when the activity first initializes to its destruction, at which time the operating system (OS) reclaims its memory.

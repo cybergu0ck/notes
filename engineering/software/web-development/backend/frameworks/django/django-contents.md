@@ -1,4 +1,15 @@
-[← Back to frameworks](../frameworks-contents.md)
+# Contents
+
+- [django](#django)
+  - [Files](#files)
+  - [Subdirectories](#subdirectories)
+
+<br>
+<br>
+<br>
+
+
+
 
 # django
 

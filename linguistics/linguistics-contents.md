@@ -1,4 +1,15 @@
-[← Back to notes](../notes-contents.md)
+# Contents
+
+- [linguistics](#linguistics)
+  - [Files](#files)
+  - [Subdirectories](#subdirectories)
+
+<br>
+<br>
+<br>
+
+
+
 
 # linguistics
 
