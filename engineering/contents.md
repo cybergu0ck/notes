@@ -2,20 +2,14 @@
 
 # engineering
 
-## Files
+- [software](software/contents.md)
 
-- [contents.md](contents.md)
+- [mechatronics](mechatronics/contents.md)
 
-## Subdirectories
+- [mechanical](mechanical/contents.md)
 
-- [automotive](automotive/automotive)
+- [electrical](electrical/contents.md)
 
-- [electrical](electrical/electrical)
+- [electronics](electronics/contents.md)
 
-- [electronics](electronics/electronics)
-
-- [mechanical](mechanical/mechanical)
-
-- [mechatronics](mechatronics/mechatronics)
-
-- [software](software/software)
+- [automotive](automotive/contents.md)
