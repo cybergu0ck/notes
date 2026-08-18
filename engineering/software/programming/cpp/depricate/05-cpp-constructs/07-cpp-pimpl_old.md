@@ -1,3 +1,5 @@
+[← Back to 05-cpp-constructs](./contents)
+
 # Contents
 
 - [PIMPL (Pointer to IMPLementation)](#pimpl-pointer-to-implementation)

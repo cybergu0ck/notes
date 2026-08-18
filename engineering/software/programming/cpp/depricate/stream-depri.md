@@ -1,3 +1,5 @@
+[← Back to depricate](./contents)
+
 # Contents
 
 - [Depricate](#depricate)

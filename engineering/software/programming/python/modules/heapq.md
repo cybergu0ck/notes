@@ -1,3 +1,5 @@
+[← Back to modules](./contents)
+
 # Contents
 
 - [heapq](#heapq)

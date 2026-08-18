@@ -1,3 +1,5 @@
+[← Back to arithmetics](./contents)
+
 # Contents
 
 - [Eculidean Division (Integer Division)](#eculidean-division-integer-division)

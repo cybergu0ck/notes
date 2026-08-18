@@ -1,3 +1,5 @@
+[← Back to wsl](./contents)
+
 # Contents
 
 - [Installing WSL on Windows 11](#installing-wsl-on-windows-11)

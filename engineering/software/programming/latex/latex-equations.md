@@ -1,3 +1,5 @@
+[← Back to latex](./contents)
+
 # Contents
 
 - [Equations](#equations)

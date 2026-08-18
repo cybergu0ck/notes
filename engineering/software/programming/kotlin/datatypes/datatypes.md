@@ -1,3 +1,5 @@
+[← Back to datatypes](./contents)
+
 # Contents
 
 - [Type inference](#type-inference)

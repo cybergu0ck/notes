@@ -1,3 +1,5 @@
+[← Back to resource-management](./contents)
+
 # Contents
 
 - [Dynamic Memory Allocation](#dynamic-memory-allocation)

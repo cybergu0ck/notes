@@ -1,3 +1,5 @@
+[← Back to electrical](./contents)
+
 # Contents
 
 - [Types of switches](#types-of-switches)

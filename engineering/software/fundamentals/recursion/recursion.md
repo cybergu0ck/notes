@@ -1,3 +1,5 @@
+[← Back to recursion](./contents)
+
 # Contents
 
 - [Recursion](#recursion)

@@ -1,3 +1,5 @@
+[← Back to formatters](./contents)
+
 # Contents
 
 - [Prettier](#prettier)

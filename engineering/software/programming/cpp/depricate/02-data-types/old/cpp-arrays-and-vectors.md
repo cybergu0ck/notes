@@ -1,3 +1,5 @@
+[← Back to old](./contents)
+
 # Contents
 
 - [Arrays](#arrays)

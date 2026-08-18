@@ -1,3 +1,5 @@
+[← Back to map-types](./contents)
+
 # Contents
 
 - [Creating Dictionaries](#creating-dictionaries)

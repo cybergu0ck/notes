@@ -1,3 +1,5 @@
+[← Back to sensors](./contents)
+
 # Contents
 
 - [Flame Sensor](#flame-sensor)

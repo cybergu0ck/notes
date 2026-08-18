@@ -1,3 +1,5 @@
+[← Back to linked-lists](./contents)
+
 # Contents
 
 - [Singly Linked List](#singly-linked-list)

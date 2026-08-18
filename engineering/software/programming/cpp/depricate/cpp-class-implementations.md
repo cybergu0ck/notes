@@ -1,3 +1,5 @@
+[← Back to depricate](./contents)
+
 # Contents
 
 - [From old notes](#from-old-notes)

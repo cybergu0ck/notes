@@ -1,3 +1,5 @@
+[← Back to old](./contents)
+
 # Contents
 
 - [Type Specifiers](#type-specifiers)

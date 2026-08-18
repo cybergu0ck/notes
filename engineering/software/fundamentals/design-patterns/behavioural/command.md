@@ -1,3 +1,5 @@
+[← Back to behavioural](./contents)
+
 # Contents
 
 - [Command Pattern](#command-pattern)

@@ -1,3 +1,5 @@
+[← Back to file-handling](./contents)
+
 # Contents
 
 - [Reading from files](#reading-from-files)

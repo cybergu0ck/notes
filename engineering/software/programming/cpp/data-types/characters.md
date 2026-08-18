@@ -1,3 +1,5 @@
+[← Back to data-types](./contents)
+
 # Contents
 
 - [Characters](#characters)

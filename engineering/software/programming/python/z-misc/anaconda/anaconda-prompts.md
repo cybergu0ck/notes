@@ -1,3 +1,5 @@
+[← Back to anaconda](./contents)
+
 # Contents
 
 - [Creating an environment using anaconda prompt](#creating-an-environment-using-anaconda-prompt)

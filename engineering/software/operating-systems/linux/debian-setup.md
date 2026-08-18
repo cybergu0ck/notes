@@ -1,3 +1,5 @@
+[← Back to linux](./contents)
+
 # Contents
 
 - [Setting up Debian machine](#setting-up-debian-machine)

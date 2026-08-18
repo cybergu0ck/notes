@@ -1,3 +1,5 @@
+[← Back to mathematics](./contents)
+
 # Contents
 
 - [mathematics](#mathematics)

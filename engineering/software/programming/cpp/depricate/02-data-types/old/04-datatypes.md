@@ -1,3 +1,5 @@
+[← Back to old](./contents)
+
 # Contents
 
 - [C++ Primitive datatypes](#c-primitive-datatypes)

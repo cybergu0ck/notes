@@ -96,7 +96,7 @@ def remove_existing_contents(lines):
     return lines
 
 
-def inject_contents(file_path):
+def inject_contents(file_path, root_path):
     """Inject a contents section into a markdown file."""
     path = Path(file_path)
     original_content = path.read_text(encoding="utf-8")
@@ -117,9 +117,18 @@ def inject_contents(file_path):
     if not contents_section:
         return
 
-    # Always insert contents at the very top, before everything else
+    # Always insert backlink and contents at the very top, before everything else
+
+    # Backlink to parent (if not root)
+    backlink = []
+    if file_path != root_path:
+        parent = file_path.parent
+        # Links now point to the parent's contents.md file
+        parent_index = f"./contents"
+        backlink.append(f"[← Back to {parent.name}]({parent_index})\n")
+
     contents_lines = contents_section.split("\n")
-    lines = contents_lines + ["", "", ""] + lines
+    lines = backlink + contents_lines + ["", "", ""] + lines
 
     new_content = "\n".join(lines)
 
@@ -142,7 +151,7 @@ def process_directory(root_dir):
 
     print(f"Found {len(md_files)} markdown file(s):\n")
     for md_file in md_files:
-        inject_contents(md_file)
+        inject_contents(md_file, root_path)
 
     print(f"\nDone! Processed {len(md_files)} file(s).")
 

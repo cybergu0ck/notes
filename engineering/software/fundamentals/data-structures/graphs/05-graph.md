@@ -1,3 +1,5 @@
+[← Back to graphs](./contents)
+
 # Contents
 
 - [Implementation](#implementation)

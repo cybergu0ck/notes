@@ -1,3 +1,5 @@
+[← Back to characters](./contents)
+
 # Contents
 
 - [Characters](#characters)

@@ -1,3 +1,5 @@
+[← Back to z-misc](./contents)
+
 # Contents
 
 - [z-misc](#z-misc)

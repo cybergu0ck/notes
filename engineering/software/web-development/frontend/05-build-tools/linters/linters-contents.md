@@ -1,3 +1,5 @@
+[← Back to linters](./contents)
+
 # Contents
 
 - [linters](#linters)

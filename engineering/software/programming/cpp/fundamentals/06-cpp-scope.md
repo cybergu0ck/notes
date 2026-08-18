@@ -1,3 +1,5 @@
+[← Back to fundamentals](./contents)
+
 # Contents
 
 - [Scope](#scope)

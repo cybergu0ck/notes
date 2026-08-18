@@ -1,3 +1,5 @@
+[← Back to trees](./contents)
+
 # Contents
 
 - [Trie](#trie)

@@ -1,3 +1,5 @@
+[← Back to github](./contents)
+
 # Contents
 
 - [Linking in github markdown files](#linking-in-github-markdown-files)

@@ -1,3 +1,5 @@
+[← Back to numeric-types](./contents)
+
 # Contents
 
 - [Float](#float)

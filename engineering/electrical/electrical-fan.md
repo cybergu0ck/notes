@@ -1,3 +1,5 @@
+[← Back to electrical](./contents)
+
 # Contents
 
 - [Electrical Fan](#electrical-fan)

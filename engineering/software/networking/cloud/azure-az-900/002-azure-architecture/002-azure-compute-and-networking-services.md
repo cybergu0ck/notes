@@ -1,3 +1,5 @@
+[← Back to 002-azure-architecture](./contents)
+
 # Contents
 
 - [Scale VMs in Azure](#scale-vms-in-azure)

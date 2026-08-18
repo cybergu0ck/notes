@@ -1,3 +1,5 @@
+[← Back to vocab](./contents)
+
 # Contents
 
 - [Miscallaneous](#miscallaneous)

@@ -1,3 +1,5 @@
+[← Back to searching-algorithms](./contents)
+
 # Contents
 
 - [The Problem](#the-problem)

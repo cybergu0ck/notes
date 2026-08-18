@@ -1,3 +1,5 @@
+[← Back to matplotlib](./contents)
+
 # Contents
 
 - [Images using Matplotlib](#images-using-matplotlib)

@@ -1,3 +1,5 @@
+[← Back to resource-management](./contents)
+
 # Contents
 
 - [Smart Pointer](#smart-pointer)

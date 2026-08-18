@@ -1,3 +1,5 @@
+[← Back to polymorphism](./contents)
+
 # Contents
 
 - [Run time polymorphism](#run-time-polymorphism)

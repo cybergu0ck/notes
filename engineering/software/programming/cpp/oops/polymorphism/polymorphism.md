@@ -1,3 +1,5 @@
+[← Back to polymorphism](./contents)
+
 # Contents
 
 - [Polymorphism](#polymorphism)

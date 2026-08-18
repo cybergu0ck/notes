@@ -1,3 +1,5 @@
+[← Back to philosophy](./contents)
+
 # Contents
 
 - [Philosophies of being](#philosophies-of-being)

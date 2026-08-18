@@ -1,3 +1,5 @@
+[← Back to statistics](./contents)
+
 # Contents
 
 - [statistics](#statistics)

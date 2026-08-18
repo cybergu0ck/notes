@@ -1,3 +1,5 @@
+[← Back to algebra](./contents)
+
 # Contents
 
 - [Series](#series)

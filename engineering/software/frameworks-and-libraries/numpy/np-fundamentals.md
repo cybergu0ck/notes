@@ -1,3 +1,5 @@
+[← Back to numpy](./contents)
+
 # Contents
 
 - [The Basics](#the-basics)

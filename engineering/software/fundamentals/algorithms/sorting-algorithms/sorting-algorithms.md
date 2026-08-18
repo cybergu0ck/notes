@@ -1,3 +1,5 @@
+[← Back to sorting-algorithms](./contents)
+
 # Contents
 
 - [Array Sorting Algorithms](#array-sorting-algorithms)

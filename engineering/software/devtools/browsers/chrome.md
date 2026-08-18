@@ -1,3 +1,5 @@
+[← Back to browsers](./contents)
+
 # Contents
 
 - [Shortcut Keys](#shortcut-keys)

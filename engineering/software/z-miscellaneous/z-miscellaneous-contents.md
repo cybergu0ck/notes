@@ -1,3 +1,5 @@
+[← Back to z-miscellaneous](./contents)
+
 # Contents
 
 - [z-miscellaneous](#z-miscellaneous)

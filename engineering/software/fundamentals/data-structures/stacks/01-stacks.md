@@ -1,3 +1,5 @@
+[← Back to stacks](./contents)
+
 # Contents
 
 - [Stacks](#stacks)

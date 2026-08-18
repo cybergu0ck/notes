@@ -1,3 +1,5 @@
+[← Back to 04-js-oops](./contents)
+
 # Contents
 
 - [Prototype](#prototype)

@@ -1,3 +1,5 @@
+[← Back to searching-algorithms](./contents)
+
 # Contents
 
 - [Depth first search](#depth-first-search)

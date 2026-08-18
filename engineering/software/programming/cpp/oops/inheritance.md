@@ -1,3 +1,5 @@
+[← Back to oops](./contents)
+
 # Contents
 
 - [Inheritance](#inheritance)

@@ -1,3 +1,5 @@
+[← Back to old](./contents)
+
 # Contents
 
 - [Explicit casting](#explicit-casting)

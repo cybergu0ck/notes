@@ -1,3 +1,5 @@
+[← Back to markdown](./contents)
+
 # Contents
 
 - [Headings](#headings)

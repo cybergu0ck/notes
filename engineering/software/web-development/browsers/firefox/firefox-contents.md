@@ -1,3 +1,5 @@
+[← Back to firefox](./contents)
+
 # Contents
 
 - [firefox](#firefox)

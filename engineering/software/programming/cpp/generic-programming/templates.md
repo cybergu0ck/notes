@@ -1,3 +1,5 @@
+[← Back to generic-programming](./contents)
+
 # Contents
 
 - [Generic Programming with macros](#generic-programming-with-macros)

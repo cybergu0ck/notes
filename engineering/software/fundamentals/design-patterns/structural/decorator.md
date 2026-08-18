@@ -1,3 +1,5 @@
+[← Back to structural](./contents)
+
 # Contents
 
 - [Decorator pattern](#decorator-pattern)

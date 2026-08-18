@@ -1,3 +1,5 @@
+[← Back to behavioural](./contents)
+
 # Contents
 
 - [Observer pattern](#observer-pattern)

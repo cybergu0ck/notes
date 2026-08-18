@@ -1,3 +1,5 @@
+[← Back to 02-js-data-structures](./contents)
+
 # Contents
 
 - [Creating arrays](#creating-arrays)

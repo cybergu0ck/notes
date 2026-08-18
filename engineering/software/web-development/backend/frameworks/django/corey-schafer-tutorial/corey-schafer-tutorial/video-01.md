@@ -1,3 +1,5 @@
+[← Back to corey-schafer-tutorial](./contents)
+
 # Contents
 
 - [Installing django](#installing-django)

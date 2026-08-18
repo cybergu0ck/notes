@@ -1,3 +1,5 @@
+[← Back to linguistics](./contents)
+
 # Contents
 
 - [linguistics](#linguistics)

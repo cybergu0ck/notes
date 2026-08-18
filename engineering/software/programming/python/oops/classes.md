@@ -1,3 +1,5 @@
+[← Back to oops](./contents)
+
 # Contents
 
   - [Class definition syntax](#class-definition-syntax)

@@ -1,3 +1,5 @@
+[← Back to 01-primitive-data-types](./contents)
+
 # Contents
 
 - [String](#string)

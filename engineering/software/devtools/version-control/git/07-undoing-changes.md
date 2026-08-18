@@ -1,3 +1,5 @@
+[← Back to git](./contents)
+
 # Contents
 
 - [Undoing changes in git](#undoing-changes-in-git)
