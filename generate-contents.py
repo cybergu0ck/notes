@@ -74,30 +74,36 @@ CONTENTS_PATTERN = re.compile(r"^#{1,2}\s+(Contents|Table of Contents|TOC)\s*$",
 
 def has_contents_section(lines):
     return any(CONTENTS_PATTERN.match(l) for l in lines)
-
 def remove_existing_contents(lines):
     start = None
     end = None
 
     backlink_re = re.compile(r'^\[← Back')
+    header_re = CONTENTS_PATTERN  # assumes this matches the contents header line
 
     for i, line in enumerate(lines):
-        # start removing at contents section OR a backlink line
-        if start is None and (CONTENTS_PATTERN.match(line) or backlink_re.match(line)):
+        if header_re.match(line):
             start = i
-            continue
 
-        # once we're removing, stop when we hit the next header
-        if start is not None and end is None:
-            if re.match(r"^#{1,6}\s+", line):
-                end = i
-                break
+            # If the line right before the header is a backlink, include it
+            if i > 0 and backlink_re.match(lines[i - 1]):
+                start = i - 1
 
-    if start is not None:
-        end = end or len(lines)
-        return lines[:start] + lines[end:]
+            break
 
-    return lines
+    if start is None:
+        return lines
+
+    # Remove until the next header (same logic as yours)
+    for j in range(start + 1, len(lines)):
+        if re.match(r"^#{1,6}\s+", lines[j]):
+            end = j
+            break
+
+    if end is None:
+        end = len(lines)
+
+    return lines[:start] + lines[end:]
 
 
 
