@@ -163,35 +163,71 @@ def build_index_for_directory(current_path, root_path, level=2):
     except PermissionError:
         return ""
 
-    # Updated suffix for consistency
-    suffix = "-contents.md"
 
     # Backlink to parent (if not root)
     if current_path != root_path:
         parent = current_path.parent
         # Links now point to the parent's -contents.md file
-        parent_index = f"../{parent.name}{suffix}"
+        parent_index = f"../{parent.name}"
         lines.append(f"[← Back to {parent.name}]({parent_index})\n")
 
     lines.append(f"# {current_path.name}\n")
 
-    # List .md files directly in this directory (excluding the index file itself)
-    current_index_filename = f"{current_path.name}{suffix}"
-    direct_md_files = [f for f in md_files if f.name != current_index_filename]
-    
-    if direct_md_files:
-        lines.append("## Files\n")
-        for md_file in direct_md_files:
-            lines.append(f"- [{md_file.name}]({md_file.name})\n")
+    if (current_path / ".order").is_file():
+        order_path = current_path / ".order"
 
-    # List subdirectories with links to their -contents.md files
-    visible_subdirs = [d for d in subdirs if d.name not in EXCLUDE_DIRECTORY]
-    if visible_subdirs:
-        lines.append("## Subdirectories\n")
-        for subdir in visible_subdirs:
-            # Link points to subdir/subdir-contents.md
-            subdir_index = f"{subdir.name}/{subdir.name}{suffix}"
-            lines.append(f"- [{subdir.name}]({subdir_index})\n")
+        # Read ordered names
+        ordered_names = []
+        with order_path.open("r", encoding="utf-8") as f:
+            for line in f:
+                name = line.strip()
+                if name:
+                    ordered_names.append(name)
+
+        md_by_name = {f.name: f for f in md_files}      # expects names like "filex.md"
+        subdir_by_name = {d.name: d for d in subdirs}   # expects names like "dir1"
+
+        # Emit a single ordered list (files + subdirs mixed)
+
+        emitted_any = False
+        for name in ordered_names:
+            # file entry
+            if name+".md" in md_by_name:
+                md_file = md_by_name[name+".md"]
+                emitted_any = True
+                lines.append(f"- [{md_file.stem}]({md_file.name})\n")
+                continue
+
+            # directory entry
+            if name in subdir_by_name:
+                subdir = subdir_by_name[name]
+                emitted_any = True
+                subdir_index = f"{subdir.name}/{subdir.name}"
+                lines.append(f"- [{subdir.name}]({subdir_index})\n")
+                continue
+
+            # else: ignore names that don't exist in this folder
+
+        # If you truly want no header when empty, uncomment:
+        # if not emitted_any: lines.pop()  # remove last "## Files\n"
+    else:
+        # List .md files directly in this directory (excluding the index file itself)
+        current_index_filename = f"{current_path.name}"
+        direct_md_files = [f for f in md_files if f.name != current_index_filename]
+
+        if direct_md_files:
+            lines.append("## Files\n")
+            for md_file in direct_md_files:
+                lines.append(f"- [{md_file.name}]({md_file.name})\n")
+
+        # List subdirectories with links to their -contents.md files
+        visible_subdirs = [d for d in subdirs if d.name not in EXCLUDE_DIRECTORY]
+        if visible_subdirs:
+            lines.append("## Subdirectories\n")
+            for subdir in visible_subdirs:
+                # Link points to subdir/subdir-contents.md
+                subdir_index = f"{subdir.name}/{subdir.name}"
+                lines.append(f"- [{subdir.name}]({subdir_index})\n")                    
 
     return "\n".join(lines)
 
@@ -207,14 +243,14 @@ def create_index_files(root_dir):
             return
 
         # Write index file with the new naming convention
-        index_filename = f"{current_path.name}-contents.md"
+        index_filename = "contents.md"
         output_file = current_path / index_filename
         content = build_index_for_directory(current_path, root_path)
 
 
         # os.remove(output_file)
-        # with open(output_file, "w", encoding="utf-8") as f:
-        #     f.write(content)
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write(content)
 
         print(f"Created: {output_file}")
 
