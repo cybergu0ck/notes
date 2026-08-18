@@ -1,4 +1,4 @@
-[← Back to databases](../contents)
+[← Back to databases](../contents.md)
 
 # 01-sql
 

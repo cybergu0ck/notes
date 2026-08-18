@@ -1,4 +1,4 @@
-[← Back to sensors](./contents)
+[← Back to sensors](./contents.md)
 
 # Contents
 
@@ -16,6 +16,8 @@
 
 
 
+
+[← Back to sensors](./contents.md)
 
 # Flame Sensor
 

@@ -1,4 +1,4 @@
-[← Back to version-control](../contents)
+[← Back to version-control](../contents.md)
 
 # git
 

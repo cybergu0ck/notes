@@ -1,4 +1,4 @@
-[← Back to mathematics](../contents)
+[← Back to mathematics](../contents.md)
 
 # algebra
 

@@ -1,4 +1,4 @@
-[← Back to computer-architecture](./contents)
+[← Back to computer-architecture](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to computer-architecture](./contents.md)
 
 # computer-architecture
 

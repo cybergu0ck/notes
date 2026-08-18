@@ -1,4 +1,4 @@
-[← Back to sequence-types](./contents)
+[← Back to sequence-types](./contents.md)
 
 # Contents
 
@@ -19,6 +19,8 @@
 
 
 
+
+[← Back to sequence-types](./contents.md)
 
 # Lists
 

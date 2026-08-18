@@ -1,4 +1,4 @@
-[← Back to resource-management](./contents)
+[← Back to resource-management](./contents.md)
 
 # Contents
 
@@ -16,6 +16,8 @@
 
 
 
+
+[← Back to resource-management](./contents.md)
 
 # Smart Pointer
 

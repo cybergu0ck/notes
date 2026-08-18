@@ -1,4 +1,4 @@
-[← Back to git](./contents)
+[← Back to git](./contents.md)
 
 # Contents
 
@@ -17,6 +17,8 @@
 
 
 
+
+[← Back to git](./contents.md)
 
 # Git Repositories
 

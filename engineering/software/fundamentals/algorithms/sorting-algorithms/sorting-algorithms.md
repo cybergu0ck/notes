@@ -1,4 +1,4 @@
-[← Back to sorting-algorithms](./contents)
+[← Back to sorting-algorithms](./contents.md)
 
 # Contents
 
@@ -14,6 +14,8 @@
 
 
 
+
+[← Back to sorting-algorithms](./contents.md)
 
 # Array Sorting Algorithms
 

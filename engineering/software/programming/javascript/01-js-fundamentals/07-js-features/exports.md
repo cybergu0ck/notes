@@ -1,4 +1,4 @@
-[← Back to 07-js-features](./contents)
+[← Back to 07-js-features](./contents.md)
 
 # Contents
 
@@ -18,6 +18,8 @@
 
 
 
+
+[← Back to 07-js-features](./contents.md)
 
 # Exports
 

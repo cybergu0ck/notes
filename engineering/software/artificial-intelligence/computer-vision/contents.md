@@ -1,4 +1,4 @@
-[← Back to artificial-intelligence](../contents)
+[← Back to artificial-intelligence](../contents.md)
 
 # computer-vision
 

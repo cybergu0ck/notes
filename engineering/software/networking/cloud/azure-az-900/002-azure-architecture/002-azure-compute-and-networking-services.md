@@ -1,4 +1,4 @@
-[← Back to 002-azure-architecture](./contents)
+[← Back to 002-azure-architecture](./contents.md)
 
 # Contents
 
@@ -41,6 +41,8 @@
 
 
 
+
+[← Back to 002-azure-architecture](./contents.md)
 
 # Scale VMs in Azure
 

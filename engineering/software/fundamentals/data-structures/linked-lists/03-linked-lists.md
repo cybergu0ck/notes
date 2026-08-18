@@ -1,4 +1,4 @@
-[← Back to linked-lists](./contents)
+[← Back to linked-lists](./contents.md)
 
 # Contents
 
@@ -13,6 +13,8 @@
 
 
 
+
+[← Back to linked-lists](./contents.md)
 
 # Singly Linked List
 

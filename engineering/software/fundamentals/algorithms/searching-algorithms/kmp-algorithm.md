@@ -1,4 +1,4 @@
-[← Back to searching-algorithms](./contents)
+[← Back to searching-algorithms](./contents.md)
 
 # Contents
 
@@ -18,6 +18,8 @@
 
 
 
+
+[← Back to searching-algorithms](./contents.md)
 
 # The Problem
 

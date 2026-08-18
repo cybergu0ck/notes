@@ -1,4 +1,4 @@
-[← Back to old](../contents)
+[← Back to old](../contents.md)
 
 # 01-primitive-data-types
 

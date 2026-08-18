@@ -1,4 +1,4 @@
-[← Back to z-misc](./contents)
+[← Back to z-misc](./contents.md)
 
 # Contents
 
@@ -13,6 +13,8 @@
 
 
 
+
+[← Back to z-misc](./contents.md)
 
 # `dir()`
 

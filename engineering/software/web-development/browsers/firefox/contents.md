@@ -1,4 +1,4 @@
-[← Back to browsers](../contents)
+[← Back to browsers](../contents.md)
 
 # firefox
 

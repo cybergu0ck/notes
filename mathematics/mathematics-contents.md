@@ -1,4 +1,4 @@
-[← Back to mathematics](./contents)
+[← Back to mathematics](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to mathematics](./contents.md)
 
 # mathematics
 

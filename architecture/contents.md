@@ -1,4 +1,4 @@
-[← Back to notes](../contents)
+[← Back to notes](../contents.md)
 
 # architecture
 

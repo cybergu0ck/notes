@@ -1,4 +1,4 @@
-[← Back to electrical](./contents)
+[← Back to electrical](./contents.md)
 
 # Contents
 
@@ -12,6 +12,8 @@
 
 
 
+
+[← Back to electrical](./contents.md)
 
 # Electrical Fan
 

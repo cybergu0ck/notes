@@ -1,4 +1,4 @@
-[← Back to assets](../contents)
+[← Back to assets](../contents.md)
 
 # images
 

@@ -1,4 +1,4 @@
-[← Back to z-miscellaneous](../contents)
+[← Back to z-miscellaneous](../contents.md)
 
 # computer-architecture
 

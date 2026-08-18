@@ -1,4 +1,4 @@
-[← Back to data-structures](../contents)
+[← Back to data-structures](../contents.md)
 
 # trees
 

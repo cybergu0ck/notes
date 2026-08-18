@@ -1,4 +1,4 @@
-[← Back to visual-studio](./contents)
+[← Back to visual-studio](./contents.md)
 
 # Contents
 
@@ -13,6 +13,8 @@
 
 
 
+
+[← Back to visual-studio](./contents.md)
 
 # Visual Studio Troubleshooting
 

@@ -1,4 +1,4 @@
-[← Back to stacks](./contents)
+[← Back to stacks](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to stacks](./contents.md)
 
 # Stacks
 

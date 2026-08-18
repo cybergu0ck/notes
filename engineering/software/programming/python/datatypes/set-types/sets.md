@@ -1,4 +1,4 @@
-[← Back to set-types](./contents)
+[← Back to set-types](./contents.md)
 
 # Contents
 
@@ -28,6 +28,8 @@
 
 
 
+
+[← Back to set-types](./contents.md)
 
 # Sets
 

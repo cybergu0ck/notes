@@ -1,4 +1,4 @@
-[← Back to 01-js-fundamentals](./contents)
+[← Back to 01-js-fundamentals](./contents.md)
 
 # Contents
 
@@ -13,6 +13,8 @@
 
 
 
+
+[← Back to 01-js-fundamentals](./contents.md)
 
 # Data Types
 

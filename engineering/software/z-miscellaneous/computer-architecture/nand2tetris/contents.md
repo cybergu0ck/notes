@@ -1,4 +1,4 @@
-[← Back to computer-architecture](../contents)
+[← Back to computer-architecture](../contents.md)
 
 # nand2tetris
 

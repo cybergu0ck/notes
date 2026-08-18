@@ -1,4 +1,4 @@
-[← Back to computer-vision](./contents)
+[← Back to computer-vision](./contents.md)
 
 # Contents
 
@@ -12,6 +12,8 @@
 
 
 
+
+[← Back to computer-vision](./contents.md)
 
 # Morphological Operations
 

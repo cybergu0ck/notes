@@ -1,4 +1,4 @@
-[← Back to 01-sql](./contents)
+[← Back to 01-sql](./contents.md)
 
 # Contents
 
@@ -15,6 +15,8 @@
 
 
 
+
+[← Back to 01-sql](./contents.md)
 
 # Comments in SQL
 

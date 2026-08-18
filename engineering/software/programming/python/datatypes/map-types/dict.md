@@ -1,4 +1,4 @@
-[← Back to map-types](./contents)
+[← Back to map-types](./contents.md)
 
 # Contents
 
@@ -21,6 +21,8 @@
 
 
 
+
+[← Back to map-types](./contents.md)
 
 # Creating Dictionaries
 

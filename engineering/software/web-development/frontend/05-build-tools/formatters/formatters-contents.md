@@ -1,4 +1,4 @@
-[← Back to formatters](./contents)
+[← Back to formatters](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to formatters](./contents.md)
 
 # formatters
 

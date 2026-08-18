@@ -1,4 +1,4 @@
-[← Back to django](../contents)
+[← Back to django](../contents.md)
 
 # corey-schafer-tutorial
 

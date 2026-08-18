@@ -1,4 +1,4 @@
-[← Back to polymorphism](./contents)
+[← Back to polymorphism](./contents.md)
 
 # Contents
 
@@ -25,6 +25,8 @@
 
 
 
+
+[← Back to polymorphism](./contents.md)
 
 # Run time polymorphism
 

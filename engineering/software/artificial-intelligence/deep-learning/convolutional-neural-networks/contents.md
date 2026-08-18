@@ -1,4 +1,4 @@
-[← Back to deep-learning](../contents)
+[← Back to deep-learning](../contents.md)
 
 # convolutional-neural-networks
 

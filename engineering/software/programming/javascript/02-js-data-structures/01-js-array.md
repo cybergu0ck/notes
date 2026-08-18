@@ -1,4 +1,4 @@
-[← Back to 02-js-data-structures](./contents)
+[← Back to 02-js-data-structures](./contents.md)
 
 # Contents
 
@@ -20,6 +20,8 @@
 
 
 
+
+[← Back to 02-js-data-structures](./contents.md)
 
 # Creating arrays
 

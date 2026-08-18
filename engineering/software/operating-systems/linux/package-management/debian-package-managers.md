@@ -1,4 +1,4 @@
-[← Back to package-management](./contents)
+[← Back to package-management](./contents.md)
 
 # Contents
 
@@ -15,6 +15,8 @@
 
 
 
+
+[← Back to package-management](./contents.md)
 
 # Debian package managers
 

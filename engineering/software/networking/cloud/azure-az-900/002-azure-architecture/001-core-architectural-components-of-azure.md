@@ -1,4 +1,4 @@
-[← Back to 002-azure-architecture](./contents)
+[← Back to 002-azure-architecture](./contents.md)
 
 # Contents
 
@@ -17,6 +17,8 @@
 
 
 
+
+[← Back to 002-azure-architecture](./contents.md)
 
 ## What can I do with Azure?
 

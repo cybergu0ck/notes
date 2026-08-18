@@ -1,4 +1,4 @@
-[← Back to electrical](./contents)
+[← Back to electrical](./contents.md)
 
 # Contents
 
@@ -13,6 +13,8 @@
 
 
 
+
+[← Back to electrical](./contents.md)
 
 # Live, Neutral and Ground
 

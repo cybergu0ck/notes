@@ -1,4 +1,4 @@
-[← Back to nand2tetris](./contents)
+[← Back to nand2tetris](./contents.md)
 
 # Contents
 
@@ -19,6 +19,8 @@
 
 
 
+
+[← Back to nand2tetris](./contents.md)
 
 # Boolean Logic
 

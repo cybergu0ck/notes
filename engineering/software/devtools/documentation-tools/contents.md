@@ -1,4 +1,4 @@
-[← Back to devtools](../contents)
+[← Back to devtools](../contents.md)
 
 # documentation-tools
 

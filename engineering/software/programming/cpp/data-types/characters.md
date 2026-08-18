@@ -1,4 +1,4 @@
-[← Back to data-types](./contents)
+[← Back to data-types](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to data-types](./contents.md)
 
 # Characters
 

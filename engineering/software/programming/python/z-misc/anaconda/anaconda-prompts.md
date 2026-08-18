@@ -1,4 +1,4 @@
-[← Back to anaconda](./contents)
+[← Back to anaconda](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to anaconda](./contents.md)
 
 #### Creating an environment using anaconda prompt
 ---

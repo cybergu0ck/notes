@@ -1,4 +1,4 @@
-[← Back to design-patterns](../contents)
+[← Back to design-patterns](../contents.md)
 
 # behavioural
 

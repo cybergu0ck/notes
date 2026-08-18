@@ -1,4 +1,4 @@
-[← Back to scripting](./contents)
+[← Back to scripting](./contents.md)
 
 # Contents
 
@@ -14,6 +14,8 @@
 
 
 
+
+[← Back to scripting](./contents.md)
 
 # Cmd
 

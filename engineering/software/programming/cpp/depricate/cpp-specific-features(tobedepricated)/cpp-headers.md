@@ -1,4 +1,4 @@
-[← Back to cpp-specific-features(tobedepricated)](./contents)
+[← Back to cpp-specific-features(tobedepricated)](./contents.md)
 
 # Contents
 
@@ -15,6 +15,8 @@
 
 
 
+
+[← Back to cpp-specific-features(tobedepricated)](./contents.md)
 
 # Header Files
 

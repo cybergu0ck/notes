@@ -1,4 +1,4 @@
-[← Back to datatypes](../contents)
+[← Back to datatypes](../contents.md)
 
 # set-types
 

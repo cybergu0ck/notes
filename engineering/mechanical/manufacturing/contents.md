@@ -1,4 +1,4 @@
-[← Back to mechanical](../contents)
+[← Back to mechanical](../contents.md)
 
 # manufacturing
 

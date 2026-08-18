@@ -1,4 +1,4 @@
-[← Back to 04-js-oops](./contents)
+[← Back to 04-js-oops](./contents.md)
 
 # Contents
 
@@ -21,6 +21,8 @@
 
 
 
+
+[← Back to 04-js-oops](./contents.md)
 
 # Creating Objects using Literals
 

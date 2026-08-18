@@ -1,4 +1,4 @@
-[← Back to convolutional-neural-networks](./contents)
+[← Back to convolutional-neural-networks](./contents.md)
 
 # Contents
 
@@ -23,6 +23,8 @@
 
 
 
+
+[← Back to convolutional-neural-networks](./contents.md)
 
 # Computer Vision Problems
 

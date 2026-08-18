@@ -1,4 +1,4 @@
-[← Back to 01-js-fundamentals](../contents)
+[← Back to 01-js-fundamentals](../contents.md)
 
 # 07-js-features
 

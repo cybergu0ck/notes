@@ -1,4 +1,4 @@
-[← Back to azure-az-900](../contents)
+[← Back to azure-az-900](../contents.md)
 
 # 002-azure-architecture
 

@@ -1,4 +1,4 @@
-[← Back to z-miscellaneous](./contents)
+[← Back to z-miscellaneous](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to z-miscellaneous](./contents.md)
 
 # z-miscellaneous
 

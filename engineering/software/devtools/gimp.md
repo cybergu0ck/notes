@@ -1,4 +1,4 @@
-[← Back to devtools](./contents)
+[← Back to devtools](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to devtools](./contents.md)
 
 # Gimp
 

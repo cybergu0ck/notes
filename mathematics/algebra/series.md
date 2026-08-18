@@ -1,4 +1,4 @@
-[← Back to algebra](./contents)
+[← Back to algebra](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to algebra](./contents.md)
 
 # Series
 

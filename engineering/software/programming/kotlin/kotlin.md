@@ -1,4 +1,4 @@
-[← Back to kotlin](./contents)
+[← Back to kotlin](./contents.md)
 
 # Contents
 
@@ -15,6 +15,8 @@
 
 
 
+
+[← Back to kotlin](./contents.md)
 
 ### Function
 

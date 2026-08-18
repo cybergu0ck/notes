@@ -1,4 +1,4 @@
-[← Back to sequence-types](./contents)
+[← Back to sequence-types](./contents.md)
 
 # Contents
 
@@ -23,6 +23,8 @@
 
 
 
+
+[← Back to sequence-types](./contents.md)
 
 # printing a float with specified number of digits after decimal point
 

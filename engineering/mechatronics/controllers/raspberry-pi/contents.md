@@ -1,4 +1,4 @@
-[← Back to controllers](../contents)
+[← Back to controllers](../contents.md)
 
 # raspberry-pi
 

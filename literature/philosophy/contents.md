@@ -1,4 +1,4 @@
-[← Back to literature](../contents)
+[← Back to literature](../contents.md)
 
 # philosophy
 

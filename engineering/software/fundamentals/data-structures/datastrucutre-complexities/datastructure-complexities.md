@@ -1,4 +1,4 @@
-[← Back to datastrucutre-complexities](./contents)
+[← Back to datastrucutre-complexities](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to datastrucutre-complexities](./contents.md)
 
 # Basic Operations of a data structure
 

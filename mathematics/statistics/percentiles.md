@@ -1,4 +1,4 @@
-[← Back to statistics](./contents)
+[← Back to statistics](./contents.md)
 
 # Contents
 
@@ -15,6 +15,8 @@
 
 
 
+
+[← Back to statistics](./contents.md)
 
 # Percentiles
 

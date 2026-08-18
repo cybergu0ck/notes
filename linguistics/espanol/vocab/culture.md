@@ -1,4 +1,4 @@
-[← Back to vocab](./contents)
+[← Back to vocab](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to vocab](./contents.md)
 
 # Culture
 

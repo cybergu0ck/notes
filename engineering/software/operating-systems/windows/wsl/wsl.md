@@ -1,4 +1,4 @@
-[← Back to wsl](./contents)
+[← Back to wsl](./contents.md)
 
 # Contents
 
@@ -12,6 +12,8 @@
 
 
 
+
+[← Back to wsl](./contents.md)
 
 # Installing WSL on Windows 11
 

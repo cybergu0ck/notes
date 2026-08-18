@@ -1,4 +1,4 @@
-[← Back to finance](../contents)
+[← Back to finance](../contents.md)
 
 # excel
 

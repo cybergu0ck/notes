@@ -1,4 +1,4 @@
-[← Back to numpy](./contents)
+[← Back to numpy](./contents.md)
 
 # Contents
 
@@ -15,6 +15,8 @@
 
 
 
+
+[← Back to numpy](./contents.md)
 
 # The Basics
 

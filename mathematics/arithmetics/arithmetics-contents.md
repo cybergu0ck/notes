@@ -1,4 +1,4 @@
-[← Back to arithmetics](./contents)
+[← Back to arithmetics](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to arithmetics](./contents.md)
 
 # arithmetics
 

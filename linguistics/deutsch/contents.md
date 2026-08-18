@@ -1,4 +1,4 @@
-[← Back to linguistics](../contents)
+[← Back to linguistics](../contents.md)
 
 # deutsch
 

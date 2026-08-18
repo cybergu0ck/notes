@@ -1,4 +1,4 @@
-[← Back to corey-schafer-tutorial](./contents)
+[← Back to corey-schafer-tutorial](./contents.md)
 
 # Contents
 
@@ -13,6 +13,8 @@
 
 
 
+
+[← Back to corey-schafer-tutorial](./contents.md)
 
 # Creating databases using `models.py`
 

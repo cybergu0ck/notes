@@ -1,4 +1,4 @@
-[← Back to qt](./contents)
+[← Back to qt](./contents.md)
 
 # Contents
 
@@ -13,6 +13,8 @@
 
 
 
+
+[← Back to qt](./contents.md)
 
 # QGridLayouts
 

@@ -124,7 +124,7 @@ def inject_contents(file_path, root_path):
     if file_path != root_path:
         parent = file_path.parent
         # Links now point to the parent's contents.md file
-        parent_index = f"./contents"
+        parent_index = f"./contents.md"
         backlink.append(f"[← Back to {parent.name}]({parent_index})\n")
 
     contents_lines = contents_section.split("\n")
@@ -177,7 +177,7 @@ def build_index_for_directory(current_path, root_path, level=2):
     if current_path != root_path:
         parent = current_path.parent
         # Links now point to the parent's -contents.md file
-        parent_index = f"../contents"
+        parent_index = f"../contents.md"
         lines.append(f"[← Back to {parent.name}]({parent_index})\n")
 
     lines.append(f"# {current_path.name}\n")

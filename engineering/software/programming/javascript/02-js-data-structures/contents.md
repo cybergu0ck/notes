@@ -1,4 +1,4 @@
-[← Back to javascript](../contents)
+[← Back to javascript](../contents.md)
 
 # 02-js-data-structures
 

@@ -1,4 +1,4 @@
-[← Back to graphs](./contents)
+[← Back to graphs](./contents.md)
 
 # Contents
 
@@ -19,6 +19,8 @@
 
 
 
+
+[← Back to graphs](./contents.md)
 
 # Implementation
 

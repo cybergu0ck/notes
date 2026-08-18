@@ -1,4 +1,4 @@
-[← Back to corey-schafer-tutorial](../contents)
+[← Back to corey-schafer-tutorial](../contents.md)
 
 # corey-schafer-tutorial
 

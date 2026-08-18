@@ -1,4 +1,4 @@
-[← Back to 01-primitive-data-types](./contents)
+[← Back to 01-primitive-data-types](./contents.md)
 
 # Contents
 
@@ -20,6 +20,8 @@
 
 
 
+
+[← Back to 01-primitive-data-types](./contents.md)
 
 # Character
 

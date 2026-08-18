@@ -1,4 +1,4 @@
-[← Back to firefox](./contents)
+[← Back to firefox](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to firefox](./contents.md)
 
 # Firefox Customizations
 

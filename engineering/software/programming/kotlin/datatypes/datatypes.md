@@ -1,4 +1,4 @@
-[← Back to datatypes](./contents)
+[← Back to datatypes](./contents.md)
 
 # Contents
 
@@ -19,6 +19,8 @@
 
 
 
+
+[← Back to datatypes](./contents.md)
 
 # Type inference
 

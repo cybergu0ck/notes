@@ -1,4 +1,4 @@
-[← Back to fundamentals](../contents)
+[← Back to fundamentals](../contents.md)
 
 # algorithms
 

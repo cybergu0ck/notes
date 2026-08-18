@@ -1,4 +1,4 @@
-[← Back to windows](./contents)
+[← Back to windows](./contents.md)
 
 # Contents
 
@@ -14,6 +14,8 @@
 
 
 
+
+[← Back to windows](./contents.md)
 
 # To create a custom shortcut key
 

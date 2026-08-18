@@ -1,4 +1,4 @@
-[← Back to dynamic-programming](./contents)
+[← Back to dynamic-programming](./contents.md)
 
 # Contents
 
@@ -19,6 +19,8 @@
 
 
 
+
+[← Back to dynamic-programming](./contents.md)
 
 # Dynamic programming
 

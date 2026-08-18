@@ -1,4 +1,4 @@
-[← Back to old](./contents)
+[← Back to old](./contents.md)
 
 # Contents
 
@@ -12,6 +12,8 @@
 
 
 
+
+[← Back to old](./contents.md)
 
 # C++ Primitive datatypes
 

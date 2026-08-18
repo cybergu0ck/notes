@@ -1,4 +1,4 @@
-[← Back to manufacturing](./contents)
+[← Back to manufacturing](./contents.md)
 
 # Contents
 
@@ -13,6 +13,8 @@
 
 
 
+
+[← Back to manufacturing](./contents.md)
 
 # Fastening
 

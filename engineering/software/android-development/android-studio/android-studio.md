@@ -1,4 +1,4 @@
-[← Back to android-studio](./contents)
+[← Back to android-studio](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to android-studio](./contents.md)
 
 #### Basic Workflow
 ---

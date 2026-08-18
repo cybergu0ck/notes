@@ -1,4 +1,4 @@
-[← Back to depricate](./contents)
+[← Back to depricate](./contents.md)
 
 # Contents
 
@@ -13,6 +13,8 @@
 
 
 
+
+[← Back to depricate](./contents.md)
 
 # Depricate
 

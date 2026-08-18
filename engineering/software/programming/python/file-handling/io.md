@@ -1,4 +1,4 @@
-[← Back to file-handling](./contents)
+[← Back to file-handling](./contents.md)
 
 # Contents
 
@@ -12,6 +12,8 @@
 
 
 
+
+[← Back to file-handling](./contents.md)
 
 # Reading from files
 

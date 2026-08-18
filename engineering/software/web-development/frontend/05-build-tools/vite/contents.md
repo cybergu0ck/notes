@@ -1,4 +1,4 @@
-[← Back to 05-build-tools](../contents)
+[← Back to 05-build-tools](../contents.md)
 
 # vite
 

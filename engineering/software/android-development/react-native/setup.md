@@ -1,4 +1,4 @@
-[← Back to react-native](./contents)
+[← Back to react-native](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to react-native](./contents.md)
 
 # Setup
 

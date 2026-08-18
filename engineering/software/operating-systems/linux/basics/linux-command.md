@@ -1,4 +1,4 @@
-[← Back to basics](./contents)
+[← Back to basics](./contents.md)
 
 # Contents
 
@@ -15,6 +15,8 @@
 
 
 
+
+[← Back to basics](./contents.md)
 
 # Linux Command
 

@@ -1,4 +1,4 @@
-[← Back to javascript](../contents)
+[← Back to javascript](../contents.md)
 
 # 03-js-control-flow
 

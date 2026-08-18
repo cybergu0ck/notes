@@ -1,4 +1,4 @@
-[← Back to architecture](../contents)
+[← Back to architecture](../contents.md)
 
 # home-design
 

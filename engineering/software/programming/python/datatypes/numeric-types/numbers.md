@@ -1,4 +1,4 @@
-[← Back to numeric-types](./contents)
+[← Back to numeric-types](./contents.md)
 
 # Contents
 
@@ -12,6 +12,8 @@
 
 
 
+
+[← Back to numeric-types](./contents.md)
 
 # Float
 

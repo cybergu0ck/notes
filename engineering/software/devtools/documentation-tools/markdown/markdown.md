@@ -1,4 +1,4 @@
-[← Back to markdown](./contents)
+[← Back to markdown](./contents.md)
 
 # Contents
 
@@ -17,6 +17,8 @@
 
 
 
+
+[← Back to markdown](./contents.md)
 
 ## Headings
 

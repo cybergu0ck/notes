@@ -1,4 +1,4 @@
-[← Back to matplotlib](./contents)
+[← Back to matplotlib](./contents.md)
 
 # Contents
 
@@ -13,6 +13,8 @@
 
 
 
+
+[← Back to matplotlib](./contents.md)
 
 # Images using Matplotlib
 

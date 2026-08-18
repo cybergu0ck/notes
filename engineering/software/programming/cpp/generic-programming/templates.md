@@ -1,4 +1,4 @@
-[← Back to generic-programming](./contents)
+[← Back to generic-programming](./contents.md)
 
 # Contents
 
@@ -12,6 +12,8 @@
 
 
 
+
+[← Back to generic-programming](./contents.md)
 
 # Generic Programming with macros
 

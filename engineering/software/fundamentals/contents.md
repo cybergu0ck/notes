@@ -1,4 +1,4 @@
-[← Back to software](../contents)
+[← Back to software](../contents.md)
 
 # fundamentals
 

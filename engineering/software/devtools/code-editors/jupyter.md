@@ -1,4 +1,4 @@
-[← Back to code-editors](./contents)
+[← Back to code-editors](./contents.md)
 
 # Contents
 
@@ -12,6 +12,8 @@
 
 
 
+
+[← Back to code-editors](./contents.md)
 
 # Jupyter Notebook
 ---

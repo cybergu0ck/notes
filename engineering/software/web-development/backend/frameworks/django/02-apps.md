@@ -1,4 +1,4 @@
-[← Back to django](./contents)
+[← Back to django](./contents.md)
 
 # Contents
 
@@ -13,6 +13,8 @@
 
 
 
+
+[← Back to django](./contents.md)
 
 # Django app
 

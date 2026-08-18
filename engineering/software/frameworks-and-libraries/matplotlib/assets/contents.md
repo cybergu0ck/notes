@@ -1,4 +1,4 @@
-[← Back to matplotlib](../contents)
+[← Back to matplotlib](../contents.md)
 
 # assets
 

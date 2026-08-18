@@ -1,4 +1,4 @@
-[← Back to behavioural](./contents)
+[← Back to behavioural](./contents.md)
 
 # Contents
 
@@ -21,6 +21,8 @@
 
 
 
+
+[← Back to behavioural](./contents.md)
 
 # Observer pattern
 

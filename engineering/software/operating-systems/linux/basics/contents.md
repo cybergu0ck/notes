@@ -1,4 +1,4 @@
-[← Back to linux](../contents)
+[← Back to linux](../contents.md)
 
 # basics
 

@@ -1,4 +1,4 @@
-[← Back to version-control](./contents)
+[← Back to version-control](./contents.md)
 
 # Contents
 
@@ -12,6 +12,8 @@
 
 
 
+
+[← Back to version-control](./contents.md)
 
 # Version Control Systems
 

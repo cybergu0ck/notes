@@ -1,4 +1,4 @@
-[← Back to trees](./contents)
+[← Back to trees](./contents.md)
 
 # Contents
 
@@ -12,6 +12,8 @@
 
 
 
+
+[← Back to trees](./contents.md)
 
 # Trie
 

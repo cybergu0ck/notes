@@ -1,4 +1,4 @@
-[← Back to windows](../contents)
+[← Back to windows](../contents.md)
 
 # wsl
 

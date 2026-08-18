@@ -1,4 +1,4 @@
-[← Back to philosophy](./contents)
+[← Back to philosophy](./contents.md)
 
 # Contents
 
@@ -18,6 +18,8 @@
 
 
 
+
+[← Back to philosophy](./contents.md)
 
 # Philosophies of being
 

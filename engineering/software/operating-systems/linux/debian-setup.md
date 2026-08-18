@@ -1,4 +1,4 @@
-[← Back to linux](./contents)
+[← Back to linux](./contents.md)
 
 # Contents
 
@@ -20,6 +20,8 @@
 
 
 
+
+[← Back to linux](./contents.md)
 
 # Setting up Debian machine
 

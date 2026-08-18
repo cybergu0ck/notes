@@ -1,4 +1,4 @@
-[← Back to 02-data-types](../contents)
+[← Back to 02-data-types](../contents.md)
 
 # old
 

@@ -1,4 +1,4 @@
-[← Back to structural](./contents)
+[← Back to structural](./contents.md)
 
 # Contents
 
@@ -18,6 +18,8 @@
 
 
 
+
+[← Back to structural](./contents.md)
 
 # Decorator pattern
 

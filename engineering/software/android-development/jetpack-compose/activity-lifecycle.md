@@ -1,4 +1,4 @@
-[← Back to jetpack-compose](./contents)
+[← Back to jetpack-compose](./contents.md)
 
 # Contents
 
@@ -13,6 +13,8 @@
 
 
 
+
+[← Back to jetpack-compose](./contents.md)
 
 # Activity Lifecycle
 

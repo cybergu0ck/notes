@@ -1,4 +1,4 @@
-[← Back to algorithms](../contents)
+[← Back to algorithms](../contents.md)
 
 # searching-algorithms
 

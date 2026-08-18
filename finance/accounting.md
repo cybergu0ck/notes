@@ -1,4 +1,4 @@
-[← Back to finance](./contents)
+[← Back to finance](./contents.md)
 
 # Contents
 
@@ -15,6 +15,8 @@
 
 
 
+
+[← Back to finance](./contents.md)
 
 # Accounting for credit card payments
 

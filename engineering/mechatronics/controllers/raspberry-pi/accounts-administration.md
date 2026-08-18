@@ -1,4 +1,4 @@
-[← Back to raspberry-pi](./contents)
+[← Back to raspberry-pi](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to raspberry-pi](./contents.md)
 
 # Create a user account
 

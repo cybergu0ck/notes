@@ -1,4 +1,4 @@
-[← Back to home-server](./contents)
+[← Back to home-server](./contents.md)
 
 # Contents
 
@@ -11,6 +11,8 @@
 
 
 
+
+[← Back to home-server](./contents.md)
 
 # Installation
 

@@ -1,4 +1,4 @@
-[← Back to home-design](./contents)
+[← Back to home-design](./contents.md)
 
 # Contents
 
@@ -12,6 +12,8 @@
 
 
 
+
+[← Back to home-design](./contents.md)
 
 # Home Design
 

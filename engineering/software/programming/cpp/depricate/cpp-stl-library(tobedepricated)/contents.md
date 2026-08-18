@@ -1,4 +1,4 @@
-[← Back to depricate](../contents)
+[← Back to depricate](../contents.md)
 
 # cpp-stl-library(tobedepricated)
 

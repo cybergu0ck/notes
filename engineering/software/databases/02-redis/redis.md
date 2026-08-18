@@ -1,4 +1,4 @@
-[← Back to 02-redis](./contents)
+[← Back to 02-redis](./contents.md)
 
 # Contents
 
@@ -14,6 +14,8 @@
 
 
 
+
+[← Back to 02-redis](./contents.md)
 
 # Introduction
 

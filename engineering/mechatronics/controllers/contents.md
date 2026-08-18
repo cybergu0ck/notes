@@ -1,4 +1,4 @@
-[← Back to mechatronics](../contents)
+[← Back to mechatronics](../contents.md)
 
 # controllers
 

@@ -1,4 +1,4 @@
-[← Back to github](./contents)
+[← Back to github](./contents.md)
 
 # Contents
 
@@ -12,6 +12,8 @@
 
 
 
+
+[← Back to github](./contents.md)
 
 # Linking in github markdown files
 

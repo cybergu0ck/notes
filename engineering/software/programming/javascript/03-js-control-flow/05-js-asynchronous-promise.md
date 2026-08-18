@@ -1,4 +1,4 @@
-[← Back to 03-js-control-flow](./contents)
+[← Back to 03-js-control-flow](./contents.md)
 
 # Contents
 
@@ -16,6 +16,8 @@
 
 
 
+
+[← Back to 03-js-control-flow](./contents.md)
 
 # Promise
 

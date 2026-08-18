@@ -1,4 +1,4 @@
-[← Back to user-management](./contents)
+[← Back to user-management](./contents.md)
 
 # Contents
 
@@ -14,6 +14,8 @@
 
 
 
+
+[← Back to user-management](./contents.md)
 
 ## About current users on the system
 
