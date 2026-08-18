@@ -211,7 +211,7 @@ def build_index_for_directory(current_path, root_path, level=2):
             if name in subdir_by_name:
                 subdir = subdir_by_name[name]
                 emitted_any = True
-                subdir_index = f"{subdir.name}/contents"
+                subdir_index = f"{subdir.name}/contents.md"
                 lines.append(f"- [{subdir.name}]({subdir_index})\n")
                 continue
 

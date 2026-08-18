@@ -6,12 +6,12 @@
 
 - [good-practices](good-practices.md)
 
-- [cpp](cpp/contents)
+- [cpp](cpp/contents.md)
 
-- [python](python/contents)
+- [python](python/contents.md)
 
-- [javascript](javascript/contents)
+- [javascript](javascript/contents.md)
 
-- [kotlin](kotlin/contents)
+- [kotlin](kotlin/contents.md)
 
-- [latex](latex/contents)
+- [latex](latex/contents.md)

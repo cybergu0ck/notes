@@ -2,16 +2,16 @@
 
 # python
 
-- [fundamentals](fundamentals/contents)
+- [fundamentals](fundamentals/contents.md)
 
-- [datatypes](datatypes/contents)
+- [datatypes](datatypes/contents.md)
 
-- [control-flow](control-flow/contents)
+- [control-flow](control-flow/contents.md)
 
-- [oops](oops/contents)
+- [oops](oops/contents.md)
 
-- [modules](modules/contents)
+- [modules](modules/contents.md)
 
-- [exception-handling](exception-handling/contents)
+- [exception-handling](exception-handling/contents.md)
 
-- [file-handling](file-handling/contents)
+- [file-handling](file-handling/contents.md)

@@ -2,10 +2,10 @@
 
 # datatypes
 
-- [numeric-types](numeric-types/contents)
+- [numeric-types](numeric-types/contents.md)
 
-- [set-types](set-types/contents)
+- [set-types](set-types/contents.md)
 
-- [sequence-types](sequence-types/contents)
+- [sequence-types](sequence-types/contents.md)
 
-- [map-types](map-types/contents)
+- [map-types](map-types/contents.md)
