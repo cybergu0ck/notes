@@ -1,55 +1,3 @@
-[← Back to corey-schafer-tutorial](./contents.md)
-
-# Contents
-
-- [Creating App](#creating-app)
-  - [Creating Views](#creating-views)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Creating App](#creating-app)
-  - [Creating Views](#creating-views)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Creating App](#creating-app)
-  - [Creating Views](#creating-views)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Creating App](#creating-app)
-  - [Creating Views](#creating-views)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to corey-schafer-tutorial](./contents.md)
-
 # Creating App
 
 In a django project we can create multiple apps. This creates modularity.
@@ -88,7 +36,6 @@ D:.
 
 <br/>
 
-
 ## Creating Views
 
 views.py file present in our app handles the views.
@@ -117,13 +64,11 @@ urlpatterns = [
 ```
 This module routing inside the `blog` app. Here, we are importing the views module to get the `home` function. Therefore whenever we access the blog app, a home view can be seen. The empty string in path function is explained down.
 
-
 Now we have to make changes in the `urls.py` present in project level i.e. `django_project` as follows:
 ```python
 #urls.py present in django_project
 from django.contrib import admin
 from django.urls import path, include  #New
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -132,9 +77,7 @@ urlpatterns = [
 ```
 the  `path('blog/',include('blog.urls'))` routes the `blog/` to the `urls.py` present in `blog` app, we use `include` function for this.
 
-
 > the `include` function in path() in urls.py present in django_project processes everything until blog/ and returns the remaining string to the path() present in blog. Since there is nothing after blog/ in n urls.py present in django_project, we have empty string '' in path() present in blog!
-
 
 When we run the local server and hit localhost:8000/blog we must see,
 
@@ -150,7 +93,6 @@ from django.http import HttpResponse
 def home(request):
     """This is the Home page for our blog app."""
     return HttpResponse('<h1>Blog Home</h1>')
-
 
 def about(request):                                      #New
     """This is the About page for our blog app."""
@@ -180,14 +122,12 @@ if we want our blog app (the home view to be specific) to be shown in the localh
 from django.contrib import admin
 from django.urls import path, include
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('blog.urls') )     #New, make it as empty string!
 ]
 
 ```
-
 
 <br/>
 <br/>

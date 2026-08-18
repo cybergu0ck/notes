@@ -1,59 +1,3 @@
-[← Back to 001-cloud-computing](./contents.md)
-
-# Contents
-
-  - [Infrastructure as a Service](#infrastructure-as-a-service)
-  - [Platform as a Service](#platform-as-a-service)
-  - [Software as a Service](#software-as-a-service)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-  - [Infrastructure as a Service](#infrastructure-as-a-service)
-  - [Platform as a Service](#platform-as-a-service)
-  - [Software as a Service](#software-as-a-service)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-  - [Infrastructure as a Service](#infrastructure-as-a-service)
-  - [Platform as a Service](#platform-as-a-service)
-  - [Software as a Service](#software-as-a-service)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Infrastructure as a Service](#infrastructure-as-a-service)
-- [Platform as a Service](#platform-as-a-service)
-- [Software as a Service](#software-as-a-service)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to 001-cloud-computing](./contents.md)
-
 ## Infrastructure as a Service
 ---
 
@@ -96,8 +40,4 @@
 1.  Email and messaging.
 2.  Business productivity applications.
 3.  Finance and expense tracking.
-
-
-
-
 

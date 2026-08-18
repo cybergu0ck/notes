@@ -1,55 +1,3 @@
-[← Back to depricate](./contents.md)
-
-# Contents
-
-- [From old notes](#from-old-notes)
-- [Overloading the assignment operator (move)](#overloading-the-assignment-operator-move)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [From old notes](#from-old-notes)
-- [Overloading the assignment operator (move)](#overloading-the-assignment-operator-move)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [From old notes](#from-old-notes)
-- [Overloading the assignment operator (move)](#overloading-the-assignment-operator-move)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [From old notes](#from-old-notes)
-- [Overloading the assignment operator (move)](#overloading-the-assignment-operator-move)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to depricate](./contents.md)
-
 # From old notes
 
 - The following class will be used for illustration
@@ -96,12 +44,10 @@
     cout << "copy constuctor called" << endl;
   }
 
-
   Mystring::~Mystring()
   {
     delete[] str;
   }
-
 
   void Mystring::display() const
   {
@@ -112,7 +58,6 @@
   {
     return std::strlen(str);
   }
-
 
   const char* Mystring::get_str() const
   {

@@ -1,99 +1,3 @@
-[← Back to trees](./contents.md)
-
-# Contents
-
-- [Binary Search Tree](#binary-search-tree)
-  - [Binary Search Tree Property](#binary-search-tree-property)
-  - [Implementation](#implementation)
-    - [Insertion of a Node](#insertion-of-a-node)
-    - [Searching of a Node](#searching-of-a-node)
-    - [Node with the Minimum Value](#node-with-the-minimum-value)
-    - [Node with the Maximum Value](#node-with-the-maximum-value)
-    - [Successor of a Node](#successor-of-a-node)
-    - [Predecessor of a Node](#predecessor-of-a-node)
-    - [Parent of a Node](#parent-of-a-node)
-    - [Deletion of a Node](#deletion-of-a-node)
-    - [Traversal Algorithms](#traversal-algorithms)
-  - [Complexity](#complexity)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Binary Search Tree](#binary-search-tree)
-  - [Binary Search Tree Property](#binary-search-tree-property)
-  - [Implementation](#implementation)
-    - [Insertion of a Node](#insertion-of-a-node)
-    - [Searching of a Node](#searching-of-a-node)
-    - [Node with the Minimum Value](#node-with-the-minimum-value)
-    - [Node with the Maximum Value](#node-with-the-maximum-value)
-    - [Successor of a Node](#successor-of-a-node)
-    - [Predecessor of a Node](#predecessor-of-a-node)
-    - [Parent of a Node](#parent-of-a-node)
-    - [Deletion of a Node](#deletion-of-a-node)
-    - [Traversal Algorithms](#traversal-algorithms)
-  - [Complexity](#complexity)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Binary Search Tree](#binary-search-tree)
-  - [Binary Search Tree Property](#binary-search-tree-property)
-  - [Implementation](#implementation)
-    - [Insertion of a Node](#insertion-of-a-node)
-    - [Searching of a Node](#searching-of-a-node)
-    - [Node with the Minimum Value](#node-with-the-minimum-value)
-    - [Node with the Maximum Value](#node-with-the-maximum-value)
-    - [Successor of a Node](#successor-of-a-node)
-    - [Predecessor of a Node](#predecessor-of-a-node)
-    - [Parent of a Node](#parent-of-a-node)
-    - [Deletion of a Node](#deletion-of-a-node)
-    - [Traversal Algorithms](#traversal-algorithms)
-  - [Complexity](#complexity)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Binary Search Tree](#binary-search-tree)
-  - [Binary Search Tree Property](#binary-search-tree-property)
-  - [Implementation](#implementation)
-    - [Insertion of a Node](#insertion-of-a-node)
-    - [Searching of a Node](#searching-of-a-node)
-    - [Node with the Minimum Value](#node-with-the-minimum-value)
-    - [Node with the Maximum Value](#node-with-the-maximum-value)
-    - [Successor of a Node](#successor-of-a-node)
-    - [Predecessor of a Node](#predecessor-of-a-node)
-    - [Parent of a Node](#parent-of-a-node)
-    - [Deletion of a Node](#deletion-of-a-node)
-    - [Traversal Algorithms](#traversal-algorithms)
-  - [Complexity](#complexity)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to trees](./contents.md)
-
 # Binary Search Tree
 
 _Binary Search Tree is a Binary Tree where at any given node, the value in the left subtree is less than the node and the value in the right subtree is greater than the node._
@@ -122,7 +26,6 @@ class Node:
         self.left = left
         self.right = right
 
-
 class BinarySearchTree:
     def __init__(self):
         self.root = Node()
@@ -150,7 +53,6 @@ class BinarySearchTree:
                 else:
                     print("duplicates are ignored")
                     break
-
 
     def search_node(self, value: float, root: Node = None) -> Node:
         res = None

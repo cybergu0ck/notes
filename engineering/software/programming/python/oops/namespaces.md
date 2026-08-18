@@ -1,12 +1,3 @@
-# Contents
-
-- [Python Namespaces](#python-namespaces)
-- [Python Scope](#python-scope)
-
-<br>
-<br>
-<br>
-
 # Python Namespaces
 
 **_A namespace is a mapping from names to objects._**

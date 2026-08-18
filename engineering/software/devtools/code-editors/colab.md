@@ -1,11 +1,8 @@
-
-
 ```python 
 from psutil import *
 
 cpu_count()
 ```
-
 
 ```python
 #cpu model and speed
@@ -20,7 +17,6 @@ cpu_count()
 ```python
 !nvidea-smi
 ```
-
 
 ### Importing a library that is not in Colaboratory
 ---

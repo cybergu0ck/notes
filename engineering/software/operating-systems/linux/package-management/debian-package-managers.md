@@ -1,71 +1,3 @@
-[← Back to package-management](./contents.md)
-
-# Contents
-
-- [Debian package managers](#debian-package-managers)
-  - [Apt](#apt)
-    - [Update and upgrade](#update-and-upgrade)
-    - [Installing a package](#installing-a-package)
-      - [Installing a deb file](#installing-a-deb-file)
-    - [Uninstalling a package](#uninstalling-a-package)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Debian package managers](#debian-package-managers)
-  - [Apt](#apt)
-    - [Update and upgrade](#update-and-upgrade)
-    - [Installing a package](#installing-a-package)
-      - [Installing a deb file](#installing-a-deb-file)
-    - [Uninstalling a package](#uninstalling-a-package)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Debian package managers](#debian-package-managers)
-  - [Apt](#apt)
-    - [Update and upgrade](#update-and-upgrade)
-    - [Installing a package](#installing-a-package)
-      - [Installing a deb file](#installing-a-deb-file)
-    - [Uninstalling a package](#uninstalling-a-package)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Debian package managers](#debian-package-managers)
-  - [Apt](#apt)
-    - [Update and upgrade](#update-and-upgrade)
-    - [Installing a package](#installing-a-package)
-      - [Installing a deb file](#installing-a-deb-file)
-    - [Uninstalling a package](#uninstalling-a-package)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to package-management](./contents.md)
-
 # Debian package managers
 
 <br>
@@ -112,7 +44,6 @@ sudo apt install <package>
 	sudo apt install ./<debfile.deb>
 	```
 
-
 <br>
 <br>
 
@@ -143,7 +74,6 @@ sudo apt install <package>
 	rm -rf ~/.cache/<package_name>
 	rm -rf ~/.local/share/<package_name>
 	```
-
 
 <br>
 <br>

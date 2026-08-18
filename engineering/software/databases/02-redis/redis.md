@@ -1,73 +1,8 @@
-[← Back to 02-redis](./contents.md)
-
-# Contents
-
-- [Introduction](#introduction)
-- [Redis rudimentary commands](#redis-rudimentary-commands)
-- [Strings](#strings)
-- [Hashes](#hashes)
-- [Lists](#lists)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Introduction](#introduction)
-- [Redis rudimentary commands](#redis-rudimentary-commands)
-- [Strings](#strings)
-- [Hashes](#hashes)
-- [Lists](#lists)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Introduction](#introduction)
-- [Redis rudimentary commands](#redis-rudimentary-commands)
-- [Strings](#strings)
-- [Hashes](#hashes)
-- [Lists](#lists)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Introduction](#introduction)
-- [Redis rudimentary commands](#redis-rudimentary-commands)
-- [Strings](#strings)
-- [Hashes](#hashes)
-- [Lists](#lists)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to 02-redis](./contents.md)
-
 # Introduction
 
 - Redis is an open-source in-memory data structure store that can be used as a database, cache, and message broker.
 
 - Redis is designed to be fast, efficient, and scalable, making it a popular choice for high-performance applications.
-
 
 <br/>
 <br/>
@@ -84,7 +19,6 @@
 <br/>
 <br/>
 
-
 # Strings
 
 | Operation | Syntax | Example | 
@@ -95,15 +29,12 @@
 | Increment by 1 integer value of a key | `incr <key>` | |
 | Increment by specific value for a integer value of a key | `incrby <key><value>` | |
 
-
-
 <br/>
 <br/>
 
 # Hashes
 
 - hashes are like strings. The important difference is that they provide an extra level of indirection: a field.
-
 
     | Operation | Syntax | Example | 
     |----------|----------|----|
@@ -113,7 +44,6 @@
     | Get values for multiple fields of a key | `hmget <key> <field> [<field>...]` | | 
     | List all the fields of a key | `hkeys <key>` | |
     | delete a specific field of a key | `hdel <field>` | |
-
 
 <br/>
 <br/>

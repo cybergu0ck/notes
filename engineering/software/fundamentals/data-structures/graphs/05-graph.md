@@ -1,87 +1,3 @@
-[← Back to graphs](./contents.md)
-
-# Contents
-
-- [Implementation](#implementation)
-  - [1.Instantiating from `Node` objects:](#1instantiating-from-node-objects)
-  - [2.Instantiating from dict objects that represent directed graphs:](#2instantiating-from-dict-objects-that-represent-directed-graphs)
-  - [3.Instantiating from list objects that represent un-directed graphs:](#3instantiating-from-list-objects-that-represent-un-directed-graphs)
-- [Traversals](#traversals)
-  - [Breadth First Search](#breadth-first-search)
-  - [Depth First Search](#depth-first-search)
-- [`has_path` function](#has_path-function)
-- [Finding number of connected components in a graph](#finding-number-of-connected-components-in-a-graph)
-- [Finding the longest connected component in the graph](#finding-the-longest-connected-component-in-the-graph)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Implementation](#implementation)
-  - [1.Instantiating from `Node` objects:](#1instantiating-from-node-objects)
-  - [2.Instantiating from dict objects that represent directed graphs:](#2instantiating-from-dict-objects-that-represent-directed-graphs)
-  - [3.Instantiating from list objects that represent un-directed graphs:](#3instantiating-from-list-objects-that-represent-un-directed-graphs)
-- [Traversals](#traversals)
-  - [Breadth First Search](#breadth-first-search)
-  - [Depth First Search](#depth-first-search)
-- [`has_path` function](#has_path-function)
-- [Finding number of connected components in a graph](#finding-number-of-connected-components-in-a-graph)
-- [Finding the longest connected component in the graph](#finding-the-longest-connected-component-in-the-graph)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Implementation](#implementation)
-  - [1.Instantiating from `Node` objects:](#1instantiating-from-node-objects)
-  - [2.Instantiating from dict objects that represent directed graphs:](#2instantiating-from-dict-objects-that-represent-directed-graphs)
-  - [3.Instantiating from list objects that represent un-directed graphs:](#3instantiating-from-list-objects-that-represent-un-directed-graphs)
-- [Traversals](#traversals)
-  - [Breadth First Search](#breadth-first-search)
-  - [Depth First Search](#depth-first-search)
-- [`has_path` function](#has_path-function)
-- [Finding number of connected components in a graph](#finding-number-of-connected-components-in-a-graph)
-- [Finding the longest connected component in the graph](#finding-the-longest-connected-component-in-the-graph)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Implementation](#implementation)
-  - [1.Instantiating from `Node` objects:](#1instantiating-from-node-objects)
-  - [2.Instantiating from dict objects that represent directed graphs:](#2instantiating-from-dict-objects-that-represent-directed-graphs)
-  - [3.Instantiating from list objects that represent un-directed graphs:](#3instantiating-from-list-objects-that-represent-un-directed-graphs)
-- [Traversals](#traversals)
-  - [Breadth First Search](#breadth-first-search)
-  - [Depth First Search](#depth-first-search)
-- [`has_path` function](#has_path-function)
-- [Finding number of connected components in a graph](#finding-number-of-connected-components-in-a-graph)
-- [Finding the longest connected component in the graph](#finding-the-longest-connected-component-in-the-graph)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to graphs](./contents.md)
-
 # Implementation
 
 In the below implementation Node.nodes will have all the instances of the Node. i.e. list of all nodes that are created.
@@ -94,7 +10,6 @@ class Node:
         self.neighbours = neighbours if neighbours is not None else []
         self.nodes.append(self)
 ```
-
 
 - Graphs can be created using Node objects, dict objects representing directed graphs or list objects representing un-directed graphs. 
 
@@ -117,8 +32,6 @@ class Graph:
             #means an undirected graph, got to convert to a directed graph.
             self.undirected_graph = nodes
             self.directed_graph = self.get_directed_graph(nodes)
-
-
 
     def get_directed_graph(self, undirected_graph):
         from collections import defaultdict             #this is convinient.
@@ -187,7 +100,6 @@ graph = {
     2 : [1] 
 }
 
-
 #Instantiate Graph with dict object as a parameter
 my_graph = Graph(graph)
 
@@ -240,18 +152,15 @@ graph2 = {
     3 : [],
 }
 
-
 graph_with_no_cycle = Graph(graph1)
 graph_with_cycle = Graph(graph2)
 ```
 
 <br/>
 
-
 ## Breadth First Search
 
 > Add BFS image!
-
 
 - BFS uses Queues.
 - BFS cannot be implemented recursively (I Think)
@@ -335,13 +244,10 @@ def recursivedepthfirstsearch(graph, source):
     return res
 ```
 
-
 <br/>
 <br/>
-
 
 # `has_path` function
-
 
 - BFS or DFS can be used, I prefer BFS!!
 - Better to avoid recursive implementations as it will complicate coding up for cyclic graphs!
@@ -414,7 +320,6 @@ print(graph_with_cycle.number_of_components())
 <br/>
 
 # Finding the longest connected component in the graph
-
 
 ```python
 # this is a method of class Graph

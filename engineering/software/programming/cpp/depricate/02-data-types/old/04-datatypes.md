@@ -1,59 +1,3 @@
-[← Back to old](./contents.md)
-
-# Contents
-
-- [C++ Primitive datatypes](#c-primitive-datatypes)
-  - [character datatype](#character-datatype)
-  - [Integer datatype](#integer-datatype)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [C++ Primitive datatypes](#c-primitive-datatypes)
-  - [character datatype](#character-datatype)
-  - [Integer datatype](#integer-datatype)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [C++ Primitive datatypes](#c-primitive-datatypes)
-  - [character datatype](#character-datatype)
-  - [Integer datatype](#integer-datatype)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [C++ Primitive datatypes](#c-primitive-datatypes)
-  - [character datatype](#character-datatype)
-  - [Integer datatype](#integer-datatype)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to old](./contents.md)
-
 # C++ Primitive datatypes
 
 size and precision of a data type is dependent on the platform and the compiler.
@@ -76,8 +20,4 @@ size and precision of a data type is dependent on the platform and the compiler.
 <br>
 <br>
 <br>
-
-
-
-
 

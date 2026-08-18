@@ -1,4 +1,3 @@
-
 Objects have individuality, and multiple names (in multiple scopes) can be bound to the same object. ***This is known as aliasing in other languages.***
 
 - This can be safely ignored when dealing with immutable basic types (numbers, strings, tuples). 
@@ -15,7 +14,6 @@ a = 2
 
 - Hence, `a` starts as a reference to an object with the value 1, then gets reassigned as a reference to an object with the value 2. Those two objects may continue to coexist even though `a` doesn't refer to the first one anymore; in fact they may be shared by any number of other references within the program.
 
-
 Two different objects can have the same name!
 ```python
 #use built in function id() which gives the identity of the object.
@@ -30,8 +28,6 @@ print(id(a))
 1429903638768  
 1429903638800
 ```
-
-
 
 Conversly, same object can have multiple names!
 ```python

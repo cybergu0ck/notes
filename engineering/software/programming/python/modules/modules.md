@@ -1,75 +1,3 @@
-[← Back to modules](./contents.md)
-
-# Contents
-
-- [Module](#module)
-- [Package](#package)
-  - [Regular Package](#regular-package)
-  - [Namespace Package](#namespace-package)
-- [Namespaces](#namespaces)
-- [Relative Imports](#relative-imports)
-- [Import module from different directory using the sys module](#import-module-from-different-directory-using-the-sys-module)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Module](#module)
-- [Package](#package)
-  - [Regular Package](#regular-package)
-  - [Namespace Package](#namespace-package)
-- [Namespaces](#namespaces)
-- [Relative Imports](#relative-imports)
-- [Import module from different directory using the sys module](#import-module-from-different-directory-using-the-sys-module)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Module](#module)
-- [Package](#package)
-  - [Regular Package](#regular-package)
-  - [Namespace Package](#namespace-package)
-- [Namespaces](#namespaces)
-- [Relative Imports](#relative-imports)
-- [Import module from different directory using the sys module](#import-module-from-different-directory-using-the-sys-module)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Module](#module)
-- [Package](#package)
-  - [Regular Package](#regular-package)
-  - [Namespace Package](#namespace-package)
-- [Namespaces](#namespaces)
-- [Relative Imports](#relative-imports)
-- [Import module from different directory using the sys module](#import-module-from-different-directory-using-the-sys-module)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to modules](./contents.md)
-
 # Module
 
 * Every single python file is called a module.  
@@ -108,7 +36,6 @@
         return result
     ```
 
-
 * Import the entire module and use dot notation to access functions
     ```python
     #myCode.py (import v1)
@@ -118,7 +45,6 @@
 
     #>0 1 1 2 3 
     ```
-
 
 * Import particular functions from a module.
     ```python
@@ -130,7 +56,6 @@
     #>0 1 1 2 3 
     ```
 
-
 * Import everything from a module. (Not ideal as may result in namespace errors)
     ```python
     #myCode.py (import v3)
@@ -140,7 +65,6 @@
 
     #>0 1 1 2 3 
     ```
-
 
 * Import the module with an alias.
     ```python
@@ -152,7 +76,6 @@
     #>0 1 1 2 3 
     ```
 
-
 * Import a function with alias from a module.
     ```python
     #myCode.py (import v5)
@@ -163,9 +86,7 @@
     #>0 1 1 2 3 
     ```
 
-
 >  For efficiency reasons, each module is only imported once per interpreter session. ___Therefore, if you change your modules, you must restart the interpreter___ – or, if it’s just one module you want to test interactively, use importlib.reload(), e.g. import importlib; importlib.reload(modulename).
-
 
 <br>
 <br>
@@ -175,9 +96,7 @@
 - Packages are a way of structuring Python’s module namespace by using “dotted module names”. ___Package is essentially a collection of modules.___
 - Technically, a package is a Python module with a ```__path__``` attribute.
 
-
  * ***It’s important to keep in mind that all packages are modules, but not all modules are packages.*** Or put another way, packages are just a special kind of module. Specifically, any module that contains a ```__path__``` attribute is considered a package.
-
 
 > * When importing the package, Python searches through the directories on sys.path looking for the package subdirectory.
 > * The ```__init__```.py files are required to make Python treat directories containing the file as packages. 
@@ -229,7 +148,6 @@ A traditional package, such as a directory containing an ```__init__```.py file.
             │   __init__.py
         
     ```
-
 
     ```python
     #functions module present in calc subpackage
@@ -291,7 +209,6 @@ A traditional package, such as a directory containing an ```__init__```.py file.
     >AttributeError: module 'greet.functions' has no attribute 'sum'
     ```
 
-
 * Importing the desired function or variable directly:
     ```python 
     ##myCode.py  (alternate import)
@@ -317,7 +234,6 @@ Just don't use it, refer [stack overflow- how to do relative imports in python](
 <br>
 
 # Import module from different directory using the sys module
-
 
 * Consider that we want to import something from module.py in main.py from the illustration below:
 
@@ -349,7 +265,6 @@ Just don't use it, refer [stack overflow- how to do relative imports in python](
     import sys
     #print(sys.path)
     #print('\n\n')
-
 
     sys.path.append('D:\\Code\\Python\\PythonLearning\\Modules\\anotherPackage\\subPackage1')
     #print(sys.path)

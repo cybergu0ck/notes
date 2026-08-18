@@ -1,59 +1,3 @@
-[← Back to generic-programming](./contents.md)
-
-# Contents
-
-- [Generic Programming with macros](#generic-programming-with-macros)
-- [Generic Programming with Function Templates](#generic-programming-with-function-templates)
-- [Generic programming with class templates](#generic-programming-with-class-templates)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Generic Programming with macros](#generic-programming-with-macros)
-- [Generic Programming with Function Templates](#generic-programming-with-function-templates)
-- [Generic programming with class templates](#generic-programming-with-class-templates)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Generic Programming with macros](#generic-programming-with-macros)
-- [Generic Programming with Function Templates](#generic-programming-with-function-templates)
-- [Generic programming with class templates](#generic-programming-with-class-templates)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Generic Programming with macros](#generic-programming-with-macros)
-- [Generic Programming with Function Templates](#generic-programming-with-function-templates)
-- [Generic programming with class templates](#generic-programming-with-class-templates)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to generic-programming](./contents.md)
-
 # Generic Programming with macros
 
 - This is not a good practice but must be known to deal with legacy C++ code (a lot of it is out there)
@@ -132,7 +76,6 @@
     Add(1.1f, 1.1f);	//float parameters
     Add(1, 1.2);		//An int and a double
   }
-
 
   //10 + 20 = 30
   //1.1 + 1.1 = 2.2
@@ -230,7 +173,6 @@
       return (a < b) ? a : b;  //return a if a < b else return b
   }
 
-
   struct Person
   {
       std::string name;
@@ -242,7 +184,6 @@
           return this->age < rhs.age; //this takes care of the (a<b) in the template function!
       }
   };
-
 
   int main()
   {
@@ -282,7 +223,6 @@
   {
     std::cout << "The data attribute " << a  << " is of type " << typeid(T).name() << ". Adding 1 results in " << a + 1 << std::endl;
   }
-
 
   int main()
   {
@@ -326,13 +266,11 @@
     std::cout << "The data attribute " << a  << " is of type " << typeid(T).name() << ". Adding 1 results in " << a + 1 << std::endl;
   }
 
-
   //specialised member function for char type
   template<> void MyClass<char>::add_one()
   {
     std::cout << " Cannot use this method for char type" << std::endl;
   }
-
 
   int main()
   {
@@ -395,7 +333,6 @@
     }
   };
 
-
   int main()
   {
     MyClass<double> obj1{ 69.69 };
@@ -434,7 +371,6 @@
     std::cout << "The data attribute " << a  << " is of type " << typeid(T).name() << ". Adding 1 results in " << a + 1 << std::endl;
   }
 
-
   template <>
   class MyClass<char>
   {
@@ -442,7 +378,6 @@
   public:
     MyClass() = delete;   //This is Modern C++
   };
-
 
   int main()
   {

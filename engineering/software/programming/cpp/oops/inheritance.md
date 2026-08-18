@@ -1,175 +1,3 @@
-[← Back to oops](./contents.md)
-
-# Contents
-
-- [Inheritance](#inheritance)
-  - [Base class](#base-class)
-  - [Derived class](#derived-class)
-    - [Overriding base class methods in derived class](#overriding-base-class-methods-in-derived-class)
-  - [Virtual methods](#virtual-methods)
-  - [Is a relationship](#is-a-relationship)
-    - [Derived to base conversion](#derived-to-base-conversion)
-    - [Base to derived conversion](#base-to-derived-conversion)
-  - [Object Slicing](#object-slicing)
-  - [Preventing inheritance](#preventing-inheritance)
-  - [Types of inheritance](#types-of-inheritance)
-    - [Public Inheritance](#public-inheritance)
-    - [Protected Inheritance](#protected-inheritance)
-    - [Private Inheritance](#private-inheritance)
-    - [Multiple Inheritance](#multiple-inheritance)
-    - [Virtual Inheritance](#virtual-inheritance)
-  - [Access Control in Inheritance](#access-control-in-inheritance)
-    - [Protected member access restriction](#protected-member-access-restriction)
-  - [Special methods in the case of inheritance](#special-methods-in-the-case-of-inheritance)
-    - [Constructors in Inheritance](#constructors-in-inheritance)
-      - [Invoking Overloaded Base Class Constructors](#invoking-overloaded-base-class-constructors)
-      - [Compiler generating constructors](#compiler-generating-constructors)
-        - [In the context of Inheritance](#in-the-context-of-inheritance)
-        - [In the context of containment](#in-the-context-of-containment)
-        - [In the context of Hybrid Inheritance](#in-the-context-of-hybrid-inheritance)
-    - [Destructors in Inheritance](#destructors-in-inheritance)
-    - [Copy and move in Inheritance](#copy-and-move-in-inheritance)
-    - [Overloaded assignment operator in inheritance](#overloaded-assignment-operator-in-inheritance)
-  - [Friendship in inheritance](#friendship-in-inheritance)
-  - [Abstract base class](#abstract-base-class)
-    - [Concrete class](#concrete-class)
-    - [Interface in cpp](#interface-in-cpp)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Inheritance](#inheritance)
-  - [Base class](#base-class)
-  - [Derived class](#derived-class)
-    - [Overriding base class methods in derived class](#overriding-base-class-methods-in-derived-class)
-  - [Virtual methods](#virtual-methods)
-  - [Is a relationship](#is-a-relationship)
-    - [Derived to base conversion](#derived-to-base-conversion)
-    - [Base to derived conversion](#base-to-derived-conversion)
-  - [Object Slicing](#object-slicing)
-  - [Preventing inheritance](#preventing-inheritance)
-  - [Types of inheritance](#types-of-inheritance)
-    - [Public Inheritance](#public-inheritance)
-    - [Protected Inheritance](#protected-inheritance)
-    - [Private Inheritance](#private-inheritance)
-    - [Multiple Inheritance](#multiple-inheritance)
-    - [Virtual Inheritance](#virtual-inheritance)
-  - [Access Control in Inheritance](#access-control-in-inheritance)
-    - [Protected member access restriction](#protected-member-access-restriction)
-  - [Special methods in the case of inheritance](#special-methods-in-the-case-of-inheritance)
-    - [Constructors in Inheritance](#constructors-in-inheritance)
-      - [Invoking Overloaded Base Class Constructors](#invoking-overloaded-base-class-constructors)
-      - [Compiler generating constructors](#compiler-generating-constructors)
-        - [In the context of Inheritance](#in-the-context-of-inheritance)
-        - [In the context of containment](#in-the-context-of-containment)
-        - [In the context of Hybrid Inheritance](#in-the-context-of-hybrid-inheritance)
-    - [Destructors in Inheritance](#destructors-in-inheritance)
-    - [Copy and move in Inheritance](#copy-and-move-in-inheritance)
-    - [Overloaded assignment operator in inheritance](#overloaded-assignment-operator-in-inheritance)
-  - [Friendship in inheritance](#friendship-in-inheritance)
-  - [Abstract base class](#abstract-base-class)
-    - [Concrete class](#concrete-class)
-    - [Interface in cpp](#interface-in-cpp)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Inheritance](#inheritance)
-  - [Base class](#base-class)
-  - [Derived class](#derived-class)
-    - [Overriding base class methods in derived class](#overriding-base-class-methods-in-derived-class)
-  - [Virtual methods](#virtual-methods)
-  - [Is a relationship](#is-a-relationship)
-    - [Derived to base conversion](#derived-to-base-conversion)
-    - [Base to derived conversion](#base-to-derived-conversion)
-  - [Object Slicing](#object-slicing)
-  - [Preventing inheritance](#preventing-inheritance)
-  - [Types of inheritance](#types-of-inheritance)
-    - [Public Inheritance](#public-inheritance)
-    - [Protected Inheritance](#protected-inheritance)
-    - [Private Inheritance](#private-inheritance)
-    - [Multiple Inheritance](#multiple-inheritance)
-    - [Virtual Inheritance](#virtual-inheritance)
-  - [Access Control in Inheritance](#access-control-in-inheritance)
-    - [Protected member access restriction](#protected-member-access-restriction)
-  - [Special methods in the case of inheritance](#special-methods-in-the-case-of-inheritance)
-    - [Constructors in Inheritance](#constructors-in-inheritance)
-      - [Invoking Overloaded Base Class Constructors](#invoking-overloaded-base-class-constructors)
-      - [Compiler generating constructors](#compiler-generating-constructors)
-        - [In the context of Inheritance](#in-the-context-of-inheritance)
-        - [In the context of containment](#in-the-context-of-containment)
-        - [In the context of Hybrid Inheritance](#in-the-context-of-hybrid-inheritance)
-    - [Destructors in Inheritance](#destructors-in-inheritance)
-    - [Copy and move in Inheritance](#copy-and-move-in-inheritance)
-    - [Overloaded assignment operator in inheritance](#overloaded-assignment-operator-in-inheritance)
-  - [Friendship in inheritance](#friendship-in-inheritance)
-  - [Abstract base class](#abstract-base-class)
-    - [Concrete class](#concrete-class)
-    - [Interface in cpp](#interface-in-cpp)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Inheritance](#inheritance)
-  - [Base class](#base-class)
-  - [Derived class](#derived-class)
-    - [Overriding base class methods in derived class](#overriding-base-class-methods-in-derived-class)
-  - [Virtual methods](#virtual-methods)
-  - [Is a relationship](#is-a-relationship)
-    - [Derived to base conversion](#derived-to-base-conversion)
-    - [Base to derived conversion](#base-to-derived-conversion)
-  - [Object Slicing](#object-slicing)
-  - [Preventing inheritance](#preventing-inheritance)
-  - [Types of inheritance](#types-of-inheritance)
-    - [Public Inheritance](#public-inheritance)
-    - [Protected Inheritance](#protected-inheritance)
-    - [Private Inheritance](#private-inheritance)
-    - [Multiple Inheritance](#multiple-inheritance)
-    - [Virtual Inheritance](#virtual-inheritance)
-  - [Access Control in Inheritance](#access-control-in-inheritance)
-    - [Protected member access restriction](#protected-member-access-restriction)
-  - [Special methods in the case of inheritance](#special-methods-in-the-case-of-inheritance)
-    - [Constructors in Inheritance](#constructors-in-inheritance)
-      - [Invoking Overloaded Base Class Constructors](#invoking-overloaded-base-class-constructors)
-      - [Compiler generating constructors](#compiler-generating-constructors)
-        - [In the context of Inheritance](#in-the-context-of-inheritance)
-        - [In the context of containment](#in-the-context-of-containment)
-        - [In the context of Hybrid Inheritance](#in-the-context-of-hybrid-inheritance)
-    - [Destructors in Inheritance](#destructors-in-inheritance)
-    - [Copy and move in Inheritance](#copy-and-move-in-inheritance)
-    - [Overloaded assignment operator in inheritance](#overloaded-assignment-operator-in-inheritance)
-  - [Friendship in inheritance](#friendship-in-inheritance)
-  - [Abstract base class](#abstract-base-class)
-    - [Concrete class](#concrete-class)
-    - [Interface in cpp](#interface-in-cpp)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to oops](./contents.md)
-
 # Inheritance
 
 Inheritance is the mechanism by which a class can acquire properties and behaviors from another class.
@@ -645,7 +473,6 @@ public:
       }
   };
 
-
   class Derived : public Base
   {
   public:
@@ -716,7 +543,6 @@ public:
       cout << "overloaded constructor of derived class with one arg" << endl;
   }
   */
-
 
   int main()
   {
@@ -908,7 +734,6 @@ public:
       }
   };
 
-
   class Derived : public Base
   {
   public:
@@ -950,7 +775,6 @@ public:
       cout << obj.doubled_value << endl;  //60
       cout << obj.trippled_value << endl; //90
 
-
       Derived obj2{ obj };        //copy constructor
       cout << obj2.value << endl;
       cout << obj2.doubled_value << endl;
@@ -988,12 +812,10 @@ public:
       cout << obj.doubled_value << endl;  //60
       cout << obj.trippled_value << endl; //90
 
-
       Derived obj2{ obj };        //copy constructor
       cout << obj2.value << endl;
       cout << obj2.doubled_value << endl;
       cout << obj2.trippled_value << endl;
-
 
       obj = obj2;  //overloaded copy assignment
       cout << obj.value << endl;          //30

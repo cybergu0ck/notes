@@ -1,79 +1,3 @@
-[← Back to exception-handling](./contents.md)
-
-# Contents
-
-- [Errors in Python](#errors-in-python)
-  - [Syntax Errors](#syntax-errors)
-  - [Logical errors (Exceptions)](#logical-errors-exceptions)
-      - ["*We can handle these built-in and user-defined exceptions in Python*"](#we-can-handle-these-built-in-and-user-defined-exceptions-in-python)
-    - [B. Built in Exceptions](#b-built-in-exceptions)
-    - [Raising Exceptions in Python](#raising-exceptions-in-python)
-    - [The "Else" with Try Except](#the-else-with-try-except)
-    - [The "finally" block in try except](#the-finally-block-in-try-except)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Errors in Python](#errors-in-python)
-  - [Syntax Errors](#syntax-errors)
-  - [Logical errors (Exceptions)](#logical-errors-exceptions)
-      - ["*We can handle these built-in and user-defined exceptions in Python*"](#we-can-handle-these-built-in-and-user-defined-exceptions-in-python)
-    - [B. Built in Exceptions](#b-built-in-exceptions)
-    - [Raising Exceptions in Python](#raising-exceptions-in-python)
-    - [The "Else" with Try Except](#the-else-with-try-except)
-    - [The "finally" block in try except](#the-finally-block-in-try-except)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Errors in Python](#errors-in-python)
-  - [Syntax Errors](#syntax-errors)
-  - [Logical errors (Exceptions)](#logical-errors-exceptions)
-      - ["*We can handle these built-in and user-defined exceptions in Python*"](#we-can-handle-these-built-in-and-user-defined-exceptions-in-python)
-    - [B. Built in Exceptions](#b-built-in-exceptions)
-    - [Raising Exceptions in Python](#raising-exceptions-in-python)
-    - [The "Else" with Try Except](#the-else-with-try-except)
-    - [The "finally" block in try except](#the-finally-block-in-try-except)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Errors in Python](#errors-in-python)
-  - [Syntax Errors](#syntax-errors)
-  - [Logical errors (Exceptions)](#logical-errors-exceptions)
-      - ["*We can handle these built-in and user-defined exceptions in Python*"](#we-can-handle-these-built-in-and-user-defined-exceptions-in-python)
-    - [B. Built in Exceptions](#b-built-in-exceptions)
-    - [Raising Exceptions in Python](#raising-exceptions-in-python)
-    - [The "Else" with Try Except](#the-else-with-try-except)
-    - [The "finally" block in try except](#the-finally-block-in-try-except)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to exception-handling](./contents.md)
-
 # Errors in Python
 
 A python program terminates as soon as it encounters an unhandled error. These errors can be broadly classified into two classes:
@@ -86,7 +10,6 @@ A python program terminates as soon as it encounters an unhandled error. These e
 
 Error caused by not following the proper structure (syntax) of the language is called syntax error or parsing error.
 
-
 ## Logical errors (Exceptions)
 ---
 
@@ -97,13 +20,10 @@ Examples are
 - FileNotFoundError
 - KeyError
 
-
 Check out this website to know about all the built in exceptions  
 https://www.programiz.com/python-programming/exceptions
 
-
 #### "*We can handle these built-in and user-defined exceptions in Python*"
-
 
 ### B. Built in Exceptions
 
@@ -119,7 +39,6 @@ try:
 except Exception:
     block
 ```
-
 
 ```python
 try :
@@ -176,8 +95,6 @@ except:
 ValueError has occured, check the values of the parameters being passed in your functions
 ```
 
-
-
 ```
 ### Raising Exceptions in Python
 ---
@@ -197,7 +114,6 @@ except Exception:
 >Not my fren, shoo off
 ```
 
-
 ```python
 try:
      a = -10
@@ -209,8 +125,6 @@ except ValueError as ve:
 >That is not a positive number!
 
 ```
-
-
 
 ### The "Else" with Try Except
 ---
@@ -268,8 +182,6 @@ Cell In [29], line 9
 
 ZeroDivisionError: division by zero
 ```
-
-
 
 ### The "finally" block in try except
 ---

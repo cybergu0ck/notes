@@ -1,59 +1,3 @@
-[← Back to oops](./contents.md)
-
-# Contents
-
-- [Polymorphism](#polymorphism)
-  - [2.a Polymorphisim of Operators](#2a-polymorphisim-of-operators)
-  - [2.b Polymorphism of Functions (Overloading Functions)](#2b-polymorphism-of-functions-overloading-functions)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Polymorphism](#polymorphism)
-  - [2.a Polymorphisim of Operators](#2a-polymorphisim-of-operators)
-  - [2.b Polymorphism of Functions (Overloading Functions)](#2b-polymorphism-of-functions-overloading-functions)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Polymorphism](#polymorphism)
-  - [2.a Polymorphisim of Operators](#2a-polymorphisim-of-operators)
-  - [2.b Polymorphism of Functions (Overloading Functions)](#2b-polymorphism-of-functions-overloading-functions)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Polymorphism](#polymorphism)
-  - [2.a Polymorphisim of Operators](#2a-polymorphisim-of-operators)
-  - [2.b Polymorphism of Functions (Overloading Functions)](#2b-polymorphism-of-functions-overloading-functions)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to oops](./contents.md)
-
 # Polymorphism
 
 - Polymorphism is the ability of a variable, function, or object to take on multiple forms.
@@ -87,7 +31,6 @@ Overloading User Defined Functions :
                   print('Hey ' + name)
               else:
                   print('Hey ')
-
 
       std = Student()
 

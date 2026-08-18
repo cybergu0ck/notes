@@ -1,55 +1,3 @@
-[← Back to datastrucutre-complexities](./contents.md)
-
-# Contents
-
-- [Basic Operations of a data structure](#basic-operations-of-a-data-structure)
-- [Comaprision of datastructures based on time complexity](#comaprision-of-datastructures-based-on-time-complexity)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Basic Operations of a data structure](#basic-operations-of-a-data-structure)
-- [Comaprision of datastructures based on time complexity](#comaprision-of-datastructures-based-on-time-complexity)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Basic Operations of a data structure](#basic-operations-of-a-data-structure)
-- [Comaprision of datastructures based on time complexity](#comaprision-of-datastructures-based-on-time-complexity)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Basic Operations of a data structure](#basic-operations-of-a-data-structure)
-- [Comaprision of datastructures based on time complexity](#comaprision-of-datastructures-based-on-time-complexity)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to datastrucutre-complexities](./contents.md)
-
 # Basic Operations of a data structure
 
 1. **Access**   : Retrieving a value from the data structure.
@@ -80,7 +28,6 @@
 | Binary Search Tree |         | O(N) *5  |  O(N) *5   |           |  O(N) *5  |            |            |           |
 | Min Heap           |         | O(N)     |  O(logN)   |           |           |            |  O(1)      |  O(logN)  |
 | Max Heap           |         |          |            |           |           |            |            |           |
-
 
 4. The insertion operation takes O(1) but finding the index at which we want to insert takes O(N)
 5. In the worst case, BST is a linked list! and will number of nodes = number of levels = N.

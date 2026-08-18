@@ -1,71 +1,3 @@
-[← Back to jetpack-compose](./contents.md)
-
-# Contents
-
-- [Navigation](#navigation)
-  - [Route](#route)
-  - [NavHost](#navhost)
-  - [Sharing externally](#sharing-externally)
-    - [Intent](#intent)
-  - [Illustration](#illustration)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Navigation](#navigation)
-  - [Route](#route)
-  - [NavHost](#navhost)
-  - [Sharing externally](#sharing-externally)
-    - [Intent](#intent)
-  - [Illustration](#illustration)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Navigation](#navigation)
-  - [Route](#route)
-  - [NavHost](#navhost)
-  - [Sharing externally](#sharing-externally)
-    - [Intent](#intent)
-  - [Illustration](#illustration)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Navigation](#navigation)
-  - [Route](#route)
-  - [NavHost](#navhost)
-  - [Sharing externally](#sharing-externally)
-    - [Intent](#intent)
-  - [Illustration](#illustration)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to jetpack-compose](./contents.md)
-
 # Navigation
 
 The Navigation component has three main parts:
@@ -113,7 +45,6 @@ NavHost(
 - `navController`: An instance of the `NavHostController` class used to navigate between screens using it's `navigate()` method. 
 - `startDestination`: A string route defining the destination shown by default when the app first displays the `NavHost`. 
 
-
 <br>
 <br>
 <br>
@@ -122,7 +53,6 @@ NavHost(
 
 <br>
 <br>
-
 
 ### Intent
 
@@ -135,13 +65,11 @@ An intent is a request for the system to perform some action, commonly presentin
 
 ## Illustration
 
-
 The following implementation is required in the "build.gradle.kts" file inside the app directory.
 
 ```
 implementation("androidx.navigation:navigation-compose:2.7.4")
 ```
-
 
 The following is Screens.kt file in the "ui" directory containing the UI code.
 
@@ -223,7 +151,6 @@ fun SecondScreen(onBackClick: () -> Unit, onSubmitClick: () -> Unit) {
         }  
     }}
 ```
-
 
 The following is the main app, also contains the navigation code.
 ```kt

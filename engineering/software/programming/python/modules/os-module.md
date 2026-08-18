@@ -1,55 +1,3 @@
-[← Back to modules](./contents.md)
-
-# Contents
-
-- [OS Module](#os-module)
-  - [walk() function](#walk-function)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [OS Module](#os-module)
-  - [walk() function](#walk-function)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [OS Module](#os-module)
-  - [walk() function](#walk-function)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [OS Module](#os-module)
-  - [walk() function](#walk-function)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to modules](./contents.md)
-
 # OS Module
 
 ## walk() function
@@ -83,7 +31,6 @@ for obj in os.walk('D:\PC\ProgramFiles\VSCode\Python\PyLearning\Modules\os Modul
     print(obj)
     print('\n')
 
-
 """
 ('D:\\PC\\ProgramFiles\\VSCode\\Python\\PyLearning\\Modules\\os Module', ['Folder1', 'Folder2'], ['osModule.ipynb'])
 
@@ -103,7 +50,6 @@ The type of second item in the tuple is {type(item[1])} \n
 The type of third item in the tuple is {type(item[2])} \n
     """)
     break
-
 
 """
 <class 'tuple'>

@@ -1,99 +1,3 @@
-[← Back to polymorphism](./contents.md)
-
-# Contents
-
-- [Polymorphism](#polymorphism)
-  - [Types of polymorphism in cpp](#types-of-polymorphism-in-cpp)
-  - [Compile Time Polymorphism](#compile-time-polymorphism)
-    - [Function overloading](#function-overloading)
-      - [Function signature](#function-signature)
-    - [Overloaded constructors](#overloaded-constructors)
-    - [Operator overloading](#operator-overloading)
-      - [Assignment Operator Overloading](#assignment-operator-overloading)
-      - [Copy Assignment](#copy-assignment)
-      - [Move Assignment](#move-assignment)
-      - [Stream Operator Overloading](#stream-operator-overloading)
-      - [Unary Operator Overloading](#unary-operator-overloading)
-      - [Arrow Assignment Overloading](#arrow-assignment-overloading)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Polymorphism](#polymorphism)
-  - [Types of polymorphism in cpp](#types-of-polymorphism-in-cpp)
-  - [Compile Time Polymorphism](#compile-time-polymorphism)
-    - [Function overloading](#function-overloading)
-      - [Function signature](#function-signature)
-    - [Overloaded constructors](#overloaded-constructors)
-    - [Operator overloading](#operator-overloading)
-      - [Assignment Operator Overloading](#assignment-operator-overloading)
-      - [Copy Assignment](#copy-assignment)
-      - [Move Assignment](#move-assignment)
-      - [Stream Operator Overloading](#stream-operator-overloading)
-      - [Unary Operator Overloading](#unary-operator-overloading)
-      - [Arrow Assignment Overloading](#arrow-assignment-overloading)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Polymorphism](#polymorphism)
-  - [Types of polymorphism in cpp](#types-of-polymorphism-in-cpp)
-  - [Compile Time Polymorphism](#compile-time-polymorphism)
-    - [Function overloading](#function-overloading)
-      - [Function signature](#function-signature)
-    - [Overloaded constructors](#overloaded-constructors)
-    - [Operator overloading](#operator-overloading)
-      - [Assignment Operator Overloading](#assignment-operator-overloading)
-      - [Copy Assignment](#copy-assignment)
-      - [Move Assignment](#move-assignment)
-      - [Stream Operator Overloading](#stream-operator-overloading)
-      - [Unary Operator Overloading](#unary-operator-overloading)
-      - [Arrow Assignment Overloading](#arrow-assignment-overloading)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Polymorphism](#polymorphism)
-  - [Types of polymorphism in cpp](#types-of-polymorphism-in-cpp)
-  - [Compile Time Polymorphism](#compile-time-polymorphism)
-    - [Function overloading](#function-overloading)
-      - [Function signature](#function-signature)
-    - [Overloaded constructors](#overloaded-constructors)
-    - [Operator overloading](#operator-overloading)
-      - [Assignment Operator Overloading](#assignment-operator-overloading)
-      - [Copy Assignment](#copy-assignment)
-      - [Move Assignment](#move-assignment)
-      - [Stream Operator Overloading](#stream-operator-overloading)
-      - [Unary Operator Overloading](#unary-operator-overloading)
-      - [Arrow Assignment Overloading](#arrow-assignment-overloading)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to polymorphism](./contents.md)
-
 # Polymorphism
 
 Polymorphism is the ability to use the same code to operate on different types of objects. This makes the code more flexible.
@@ -132,7 +36,6 @@ Compile-time polymorphism is the ability of a program to use a single name (inte
 <br>
 
 #### Function signature
-
 
 * In C++, the function signature consists only of:
 
@@ -251,7 +154,6 @@ Checkout [rule of five](../polymorphism/rule-of-five.md#move-assignment)
       friend std::ostream& operator<<(std::ostream& output, MyClass& obj);
   };
 
-
   std::istream& operator>>(std::istream & input, MyClass & obj)
   {
       std::cout << "Enter a number for data attribute a" << std::endl;
@@ -264,7 +166,6 @@ Checkout [rule of five](../polymorphism/rule-of-five.md#move-assignment)
       output << obj.a;
       return output;
   }
-
 
   int main()
   {
@@ -310,8 +211,6 @@ Checkout [rule of five](../polymorphism/rule-of-five.md#move-assignment)
       ++a;
       return *this;
   }
-
-
 
   MyClass MyClass::operator++(int)   //return by value as the object being returned is local object
   {
@@ -377,7 +276,6 @@ Checkout [rule of five](../polymorphism/rule-of-five.md#move-assignment)
   {
       return this;
   }
-
 
   int main()
   {

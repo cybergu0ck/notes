@@ -1,67 +1,3 @@
-[← Back to fundamentals](./contents.md)
-
-# Contents
-
-- [Name mangling](#name-mangling)
-  - [Cpp naming convention](#cpp-naming-convention)
-  - [Raw names and decorated names](#raw-names-and-decorated-names)
-  - [C naming convention](#c-naming-convention)
-  - [Nuances with naming conventions](#nuances-with-naming-conventions)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Name mangling](#name-mangling)
-  - [Cpp naming convention](#cpp-naming-convention)
-  - [Raw names and decorated names](#raw-names-and-decorated-names)
-  - [C naming convention](#c-naming-convention)
-  - [Nuances with naming conventions](#nuances-with-naming-conventions)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Name mangling](#name-mangling)
-  - [Cpp naming convention](#cpp-naming-convention)
-  - [Raw names and decorated names](#raw-names-and-decorated-names)
-  - [C naming convention](#c-naming-convention)
-  - [Nuances with naming conventions](#nuances-with-naming-conventions)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Name mangling](#name-mangling)
-  - [Cpp naming convention](#cpp-naming-convention)
-  - [Raw names and decorated names](#raw-names-and-decorated-names)
-  - [C naming convention](#c-naming-convention)
-  - [Nuances with naming conventions](#nuances-with-naming-conventions)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to fundamentals](./contents.md)
-
 # Name mangling
 
 Name mangling is the process by which a compiler transforms a human-readable symbol name into a unique, encoded identifier that includes additional information required for correct linking.
@@ -140,7 +76,6 @@ This is the default naming convention in C++. Here the function names are subjec
 
 ## Raw names and decorated names
 
-
 In order to decorate the compiler uses 'raw-names'.
 
 * `typeid(char).raw_name()` is the syntax to cout raw name of char data type.
@@ -199,7 +134,6 @@ In order to decorate the compiler uses 'raw-names'.
   {
     std::cout << __FUNCDNAME__ << std::endl; //fun i.e undecorated
   }
-
 
   int main()
   {

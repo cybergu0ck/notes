@@ -1,79 +1,3 @@
-[← Back to 03-js-control-flow](./contents.md)
-
-# Contents
-
-- [Looping through a collection](#looping-through-a-collection)
-  - [1.for...of loop](#1forof-loop)
-  - [2.map](#2map)
-  - [3.filter](#3filter)
-- [Standard for loop](#standard-for-loop)
-- [Break statement](#break-statement)
-- [Continue statement](#continue-statement)
-- [While and do-while](#while-and-do-while)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Looping through a collection](#looping-through-a-collection)
-  - [1.for...of loop](#1forof-loop)
-  - [2.map](#2map)
-  - [3.filter](#3filter)
-- [Standard for loop](#standard-for-loop)
-- [Break statement](#break-statement)
-- [Continue statement](#continue-statement)
-- [While and do-while](#while-and-do-while)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Looping through a collection](#looping-through-a-collection)
-  - [1.for...of loop](#1forof-loop)
-  - [2.map](#2map)
-  - [3.filter](#3filter)
-- [Standard for loop](#standard-for-loop)
-- [Break statement](#break-statement)
-- [Continue statement](#continue-statement)
-- [While and do-while](#while-and-do-while)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Looping through a collection](#looping-through-a-collection)
-  - [1.for...of loop](#1forof-loop)
-  - [2.map](#2map)
-  - [3.filter](#3filter)
-- [Standard for loop](#standard-for-loop)
-- [Break statement](#break-statement)
-- [Continue statement](#continue-statement)
-- [While and do-while](#while-and-do-while)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to 03-js-control-flow](./contents.md)
-
 # Looping through a collection
 
 ## 1.for...of loop
@@ -217,7 +141,6 @@
     final-expression
     }
     ```
-
 
     ```js
     const fruits = ['mangoes','bananas', 'lemon', 'berries'];

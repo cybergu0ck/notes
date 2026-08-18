@@ -1,83 +1,3 @@
-[← Back to structural](./contents.md)
-
-# Contents
-
-- [Decorator pattern](#decorator-pattern)
-  - [Components](#components)
-  - [Implementation](#implementation)
-  - [Applicability](#applicability)
-    - [Avoid class explosion](#avoid-class-explosion)
-    - [Temporary behaviour](#temporary-behaviour)
-    - [Object specific behaviour](#object-specific-behaviour)
-  - [Advantages](#advantages)
-  - [Disadvantages](#disadvantages)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Decorator pattern](#decorator-pattern)
-  - [Components](#components)
-  - [Implementation](#implementation)
-  - [Applicability](#applicability)
-    - [Avoid class explosion](#avoid-class-explosion)
-    - [Temporary behaviour](#temporary-behaviour)
-    - [Object specific behaviour](#object-specific-behaviour)
-  - [Advantages](#advantages)
-  - [Disadvantages](#disadvantages)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Decorator pattern](#decorator-pattern)
-  - [Components](#components)
-  - [Implementation](#implementation)
-  - [Applicability](#applicability)
-    - [Avoid class explosion](#avoid-class-explosion)
-    - [Temporary behaviour](#temporary-behaviour)
-    - [Object specific behaviour](#object-specific-behaviour)
-  - [Advantages](#advantages)
-  - [Disadvantages](#disadvantages)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Decorator pattern](#decorator-pattern)
-  - [Components](#components)
-  - [Implementation](#implementation)
-  - [Applicability](#applicability)
-    - [Avoid class explosion](#avoid-class-explosion)
-    - [Temporary behaviour](#temporary-behaviour)
-    - [Object specific behaviour](#object-specific-behaviour)
-  - [Advantages](#advantages)
-  - [Disadvantages](#disadvantages)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to structural](./contents.md)
-
 # Decorator pattern
 
 The Decorator design pattern is a structural pattern that dynamically adds new behaviors to an object by wrapping it, without altering its original class or affecting other instances.
@@ -279,7 +199,6 @@ The Decorator design pattern is a structural pattern that dynamically adds new b
           return std::chrono::steady_clock::now() > expiry;
       }
   };
-
 
   // Client code
   int main(){

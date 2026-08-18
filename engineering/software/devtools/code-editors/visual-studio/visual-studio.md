@@ -1,75 +1,3 @@
-[← Back to visual-studio](./contents.md)
-
-# Contents
-
-- [Visual Studio](#visual-studio)
-  - [Memory viewer panel](#memory-viewer-panel)
-    - [Illustrations](#illustrations)
-  - [C++ project configuration](#c-project-configuration)
-    - [Include directories](#include-directories)
-    - [Library directories](#library-directories)
-    - [Additional dependencies](#additional-dependencies)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Visual Studio](#visual-studio)
-  - [Memory viewer panel](#memory-viewer-panel)
-    - [Illustrations](#illustrations)
-  - [C++ project configuration](#c-project-configuration)
-    - [Include directories](#include-directories)
-    - [Library directories](#library-directories)
-    - [Additional dependencies](#additional-dependencies)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Visual Studio](#visual-studio)
-  - [Memory viewer panel](#memory-viewer-panel)
-    - [Illustrations](#illustrations)
-  - [C++ project configuration](#c-project-configuration)
-    - [Include directories](#include-directories)
-    - [Library directories](#library-directories)
-    - [Additional dependencies](#additional-dependencies)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Visual Studio](#visual-studio)
-  - [Memory viewer panel](#memory-viewer-panel)
-    - [Illustrations](#illustrations)
-  - [C++ project configuration](#c-project-configuration)
-    - [Include directories](#include-directories)
-    - [Library directories](#library-directories)
-    - [Additional dependencies](#additional-dependencies)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to visual-studio](./contents.md)
-
 # Visual Studio
 
 <br>
@@ -140,7 +68,6 @@
 
   - If we observe the value stored in the address of the pointer ptr (0x00AFF7C4), we see the address of _num_ but kinda backwards (d0 f7 af 00), not aware more than this!
 
-
 <br>
 <br>
 <br>
@@ -177,5 +104,4 @@
 <br>
 <br>
 <br>
-
 

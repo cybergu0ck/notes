@@ -1,67 +1,3 @@
-[← Back to 05-cpp-constructs](./contents.md)
-
-# Contents
-
-- [PIMPL (Pointer to IMPLementation)](#pimpl-pointer-to-implementation)
-- [Using Overloaded Arrow Operator for PIMPL design](#using-overloaded-arrow-operator-for-pimpl-design)
-- [PIMPL relying on compiler generated copy constructor](#pimpl-relying-on-compiler-generated-copy-constructor)
-- [PIMPL relying on compiler generated overloaded assignment operator](#pimpl-relying-on-compiler-generated-overloaded-assignment-operator)
-- [Rule of 3](#rule-of-3)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [PIMPL (Pointer to IMPLementation)](#pimpl-pointer-to-implementation)
-- [Using Overloaded Arrow Operator for PIMPL design](#using-overloaded-arrow-operator-for-pimpl-design)
-- [PIMPL relying on compiler generated copy constructor](#pimpl-relying-on-compiler-generated-copy-constructor)
-- [PIMPL relying on compiler generated overloaded assignment operator](#pimpl-relying-on-compiler-generated-overloaded-assignment-operator)
-- [Rule of 3](#rule-of-3)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [PIMPL (Pointer to IMPLementation)](#pimpl-pointer-to-implementation)
-- [Using Overloaded Arrow Operator for PIMPL design](#using-overloaded-arrow-operator-for-pimpl-design)
-- [PIMPL relying on compiler generated copy constructor](#pimpl-relying-on-compiler-generated-copy-constructor)
-- [PIMPL relying on compiler generated overloaded assignment operator](#pimpl-relying-on-compiler-generated-overloaded-assignment-operator)
-- [Rule of 3](#rule-of-3)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [PIMPL (Pointer to IMPLementation)](#pimpl-pointer-to-implementation)
-- [Using Overloaded Arrow Operator for PIMPL design](#using-overloaded-arrow-operator-for-pimpl-design)
-- [PIMPL relying on compiler generated copy constructor](#pimpl-relying-on-compiler-generated-copy-constructor)
-- [PIMPL relying on compiler generated overloaded assignment operator](#pimpl-relying-on-compiler-generated-overloaded-assignment-operator)
-- [Rule of 3](#rule-of-3)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to 05-cpp-constructs](./contents.md)
-
 # PIMPL (Pointer to IMPLementation)
 
 - PIMPL is a design pattern in C++ that aims to reduce coupling and improve encapsulation by hiding implementation details of a class from its clients.
@@ -91,7 +27,6 @@
           cout << "The data attribute a = " << a << endl;
       }
   };
-
 
   class Manager
   {
@@ -157,7 +92,6 @@
       }
   };
 
-
   class Manager
   {
       //This is a wrapper class for MyClass, This is a PIMPL model and a RAII
@@ -221,7 +155,6 @@
           cout << "The data attribute a = " << a << endl;
       }
   };
-
 
   class Manager
   {
@@ -291,7 +224,6 @@
       }
   };
 
-
   class Manager
   {
       //This is a wrapper class for MyClass, This is a PIMPL model and a RAII
@@ -326,7 +258,6 @@
       obj1->print_a();
       Manager obj2{ obj1 };	//compiles but doesnt link (linker error/ run time error)
   }
-
 
   //MyClass's 1 arg constructor called
   //The data attribute a = 21

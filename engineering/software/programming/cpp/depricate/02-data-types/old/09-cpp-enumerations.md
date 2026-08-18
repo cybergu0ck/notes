@@ -1,83 +1,3 @@
-[← Back to old](./contents.md)
-
-# Contents
-
-- [Enumeration](#enumeration)
-  - [Enumeration Syntax](#enumeration-syntax)
-  - [Initialisation of enumerators](#initialisation-of-enumerators)
-  - [Type Safety of Enumerations](#type-safety-of-enumerations)
-    - [Un-Named Enumeration](#un-named-enumeration)
-    - [Named Enumeration](#named-enumeration)
-  - [Scoping of Enumerations](#scoping-of-enumerations)
-    - [Unscoped Enumeration](#unscoped-enumeration)
-    - [Scoped Enumeration](#scoped-enumeration)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Enumeration](#enumeration)
-  - [Enumeration Syntax](#enumeration-syntax)
-  - [Initialisation of enumerators](#initialisation-of-enumerators)
-  - [Type Safety of Enumerations](#type-safety-of-enumerations)
-    - [Un-Named Enumeration](#un-named-enumeration)
-    - [Named Enumeration](#named-enumeration)
-  - [Scoping of Enumerations](#scoping-of-enumerations)
-    - [Unscoped Enumeration](#unscoped-enumeration)
-    - [Scoped Enumeration](#scoped-enumeration)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Enumeration](#enumeration)
-  - [Enumeration Syntax](#enumeration-syntax)
-  - [Initialisation of enumerators](#initialisation-of-enumerators)
-  - [Type Safety of Enumerations](#type-safety-of-enumerations)
-    - [Un-Named Enumeration](#un-named-enumeration)
-    - [Named Enumeration](#named-enumeration)
-  - [Scoping of Enumerations](#scoping-of-enumerations)
-    - [Unscoped Enumeration](#unscoped-enumeration)
-    - [Scoped Enumeration](#scoped-enumeration)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Enumeration](#enumeration)
-  - [Enumeration Syntax](#enumeration-syntax)
-  - [Initialisation of enumerators](#initialisation-of-enumerators)
-  - [Type Safety of Enumerations](#type-safety-of-enumerations)
-    - [Un-Named Enumeration](#un-named-enumeration)
-    - [Named Enumeration](#named-enumeration)
-  - [Scoping of Enumerations](#scoping-of-enumerations)
-    - [Unscoped Enumeration](#unscoped-enumeration)
-    - [Scoped Enumeration](#scoped-enumeration)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to old](./contents.md)
-
 # Enumeration
 
 _**Enumeration** is a user defined type that consists of a set of named integral constants._
@@ -188,7 +108,6 @@ int main(){
 
   enum Whale{Blue, Beluga, Gray};
   enum Shark{Greatwhite, Hammerhead, Bull};
-
 
   int main() {
     if (Beluga == Hammerhead) {

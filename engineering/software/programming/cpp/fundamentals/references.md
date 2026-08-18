@@ -1,79 +1,3 @@
-[← Back to fundamentals](./contents.md)
-
-# Contents
-
-- [References](#references)
-  - [Lvalue Reference](#lvalue-reference)
-    - [Basics of Lvalue Reference](#basics-of-lvalue-reference)
-    - [Const Correctness with Lvalue References](#const-correctness-with-lvalue-references)
-      - [Reference to const](#reference-to-const)
-    - [Lvalue References as Function Arguments](#lvalue-references-as-function-arguments)
-    - [Lvalue References as Return Type](#lvalue-references-as-return-type)
-  - [Rvalue Reference](#rvalue-reference)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [References](#references)
-  - [Lvalue Reference](#lvalue-reference)
-    - [Basics of Lvalue Reference](#basics-of-lvalue-reference)
-    - [Const Correctness with Lvalue References](#const-correctness-with-lvalue-references)
-      - [Reference to const](#reference-to-const)
-    - [Lvalue References as Function Arguments](#lvalue-references-as-function-arguments)
-    - [Lvalue References as Return Type](#lvalue-references-as-return-type)
-  - [Rvalue Reference](#rvalue-reference)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [References](#references)
-  - [Lvalue Reference](#lvalue-reference)
-    - [Basics of Lvalue Reference](#basics-of-lvalue-reference)
-    - [Const Correctness with Lvalue References](#const-correctness-with-lvalue-references)
-      - [Reference to const](#reference-to-const)
-    - [Lvalue References as Function Arguments](#lvalue-references-as-function-arguments)
-    - [Lvalue References as Return Type](#lvalue-references-as-return-type)
-  - [Rvalue Reference](#rvalue-reference)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [References](#references)
-  - [Lvalue Reference](#lvalue-reference)
-    - [Basics of Lvalue Reference](#basics-of-lvalue-reference)
-    - [Const Correctness with Lvalue References](#const-correctness-with-lvalue-references)
-      - [Reference to const](#reference-to-const)
-    - [Lvalue References as Function Arguments](#lvalue-references-as-function-arguments)
-    - [Lvalue References as Return Type](#lvalue-references-as-return-type)
-  - [Rvalue Reference](#rvalue-reference)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to fundamentals](./contents.md)
-
 # References
 
 <br>
@@ -296,7 +220,6 @@ _An lvalue reference defines an alternative name (Alias) for an object._
       cout << &para << endl;    //0039FD88
       cout << &&para << endl;   //error
   }
-
 
   int main()
   {

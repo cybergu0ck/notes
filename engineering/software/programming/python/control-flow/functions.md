@@ -1,111 +1,3 @@
-[← Back to control-flow](./contents.md)
-
-# Contents
-
-- [Function definiton and call](#function-definiton-and-call)
-- [Simplified version of how python treats variables and parameters](#simplified-version-of-how-python-treats-variables-and-parameters)
-- [Parameters](#parameters)
-  - [Default parameters](#default-parameters)
-- [Arguments](#arguments)
-  - [1. Positional Arguments](#1-positional-arguments)
-  - [2. Keyword Arguments](#2-keyword-arguments)
-  - [Convention](#convention)
-  - [3. Arbitrary Argument Lists (\*args  and \**kwargs)](#3-arbitrary-argument-lists-args-and-kwargs)
-  - [\*args](#args)
-  - [\*\*kwargs](#kwargs)
-- [Scope](#scope)
-- [Lambda Expressions](#lambda-expressions)
-- [Functions using match statements](#functions-using-match-statements)
-- [Docstrings](#docstrings)
-- [Function Annotations](#function-annotations)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Function definiton and call](#function-definiton-and-call)
-- [Simplified version of how python treats variables and parameters](#simplified-version-of-how-python-treats-variables-and-parameters)
-- [Parameters](#parameters)
-  - [Default parameters](#default-parameters)
-- [Arguments](#arguments)
-  - [1. Positional Arguments](#1-positional-arguments)
-  - [2. Keyword Arguments](#2-keyword-arguments)
-  - [Convention](#convention)
-  - [3. Arbitrary Argument Lists (\*args  and \**kwargs)](#3-arbitrary-argument-lists-args-and-kwargs)
-  - [\*args](#args)
-  - [\*\*kwargs](#kwargs)
-- [Scope](#scope)
-- [Lambda Expressions](#lambda-expressions)
-- [Functions using match statements](#functions-using-match-statements)
-- [Docstrings](#docstrings)
-- [Function Annotations](#function-annotations)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Function definiton and call](#function-definiton-and-call)
-- [Simplified version of how python treats variables and parameters](#simplified-version-of-how-python-treats-variables-and-parameters)
-- [Parameters](#parameters)
-  - [Default parameters](#default-parameters)
-- [Arguments](#arguments)
-  - [1. Positional Arguments](#1-positional-arguments)
-  - [2. Keyword Arguments](#2-keyword-arguments)
-  - [Convention](#convention)
-  - [3. Arbitrary Argument Lists (\*args  and \**kwargs)](#3-arbitrary-argument-lists-args-and-kwargs)
-  - [\*args](#args)
-  - [\*\*kwargs](#kwargs)
-- [Scope](#scope)
-- [Lambda Expressions](#lambda-expressions)
-- [Functions using match statements](#functions-using-match-statements)
-- [Docstrings](#docstrings)
-- [Function Annotations](#function-annotations)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Function definiton and call](#function-definiton-and-call)
-- [Simplified version of how python treats variables and parameters](#simplified-version-of-how-python-treats-variables-and-parameters)
-- [Parameters](#parameters)
-  - [Default parameters](#default-parameters)
-- [Arguments](#arguments)
-  - [1. Positional Arguments](#1-positional-arguments)
-  - [2. Keyword Arguments](#2-keyword-arguments)
-  - [Convention](#convention)
-  - [3. Arbitrary Argument Lists (\*args  and \**kwargs)](#3-arbitrary-argument-lists-args-and-kwargs)
-  - [\*args](#args)
-  - [\*\*kwargs](#kwargs)
-- [Scope](#scope)
-- [Lambda Expressions](#lambda-expressions)
-- [Functions using match statements](#functions-using-match-statements)
-- [Docstrings](#docstrings)
-- [Function Annotations](#function-annotations)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to control-flow](./contents.md)
-
 # Function definiton and call
 
 ```py
@@ -264,7 +156,6 @@ Remember! Parameters show up in function definiton.
     ```
 * We can mix positional arguments with keyword arguments during a function call. ___In a function call, keyword arguments must follow positional arguments.___
 
-
     ```python
     def greet(name, msg, department):
         print (f'Hello, {name} from {department} says {msg}')
@@ -281,7 +172,6 @@ Remember! Parameters show up in function definiton.
 ## Convention
 
 * The following convention must be followed for readability and clean code.
-
 
     ```
     def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
@@ -387,7 +277,6 @@ Remember! Parameters show up in function definiton.
 
     intro(Firstname="Sita", Lastname="Sharma", Age=22, Phone=1234567890)
 
-
     #> Firstname is Sita 
     #> Lastname is Sharma 
     #> Age is 22 
@@ -462,9 +351,7 @@ Remember! Parameters show up in function definiton.
 <br>
 <br>
 
-
 # Functions using match statements
-
 
 ```python
 def http_error(status):
@@ -487,8 +374,6 @@ print(http_error(400))
 <br>
 <br>
 
-
-
 # Docstrings
 
 Here are some conventions about the content and formatting of documentation strings.
@@ -505,7 +390,6 @@ Here are some conventions about the content and formatting of documentation stri
         pass
 
     print(my_function.__doc__)
-
 
     > Do nothing, but document it.
         No, really, it doesn't do anything.

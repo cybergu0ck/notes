@@ -1,63 +1,3 @@
-[← Back to corey-schafer-tutorial](./contents.md)
-
-# Contents
-
-  - [Installing django](#installing-django)
-  - [django admin](#django-admin)
-  - [Starting a django project](#starting-a-django-project)
-  - [Running a local server](#running-a-local-server)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-  - [Installing django](#installing-django)
-  - [django admin](#django-admin)
-  - [Starting a django project](#starting-a-django-project)
-  - [Running a local server](#running-a-local-server)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-  - [Installing django](#installing-django)
-  - [django admin](#django-admin)
-  - [Starting a django project](#starting-a-django-project)
-  - [Running a local server](#running-a-local-server)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Installing django](#installing-django)
-- [django admin](#django-admin)
-- [Starting a django project](#starting-a-django-project)
-- [Running a local server](#running-a-local-server)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to corey-schafer-tutorial](./contents.md)
-
 ## Installing django
 
 - Create a virtual environment for the django project and install django using
@@ -110,7 +50,6 @@ Available subcommands:
     testserver
 ```
 
-
 <br/>
 
 ## Starting a django project
@@ -146,7 +85,6 @@ D:.
 
 - The manage.py file is not part of `django_project` but is used to execute various Django commands such as running the local web server or creating a new app.
 
-
 <br/>
 
 ## Running a local server
@@ -158,7 +96,6 @@ python manage.py runserver
 It runs a local server at http://127.0.0.1:8000 which is `localhost:8000` and we should see this page :
 
 ![image](./_assets/localhost.png)
-
 
 <br/>
 <br/>

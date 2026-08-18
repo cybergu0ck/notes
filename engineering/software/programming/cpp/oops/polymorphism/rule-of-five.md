@@ -1,87 +1,3 @@
-[← Back to polymorphism](./contents.md)
-
-# Contents
-
-- [Rule of five](#rule-of-five)
-  - [Destructor](#destructor)
-  - [Copy constructors](#copy-constructors)
-    - [Shallow Copy Constructor](#shallow-copy-constructor)
-    - [Deep Copy Constructor](#deep-copy-constructor)
-  - [Copy assignment](#copy-assignment)
-    - [Strong Exception Guarantee](#strong-exception-guarantee)
-    - [Copy and Swap Idiom](#copy-and-swap-idiom)
-  - [Move constructors](#move-constructors)
-  - [Move assignment](#move-assignment)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Rule of five](#rule-of-five)
-  - [Destructor](#destructor)
-  - [Copy constructors](#copy-constructors)
-    - [Shallow Copy Constructor](#shallow-copy-constructor)
-    - [Deep Copy Constructor](#deep-copy-constructor)
-  - [Copy assignment](#copy-assignment)
-    - [Strong Exception Guarantee](#strong-exception-guarantee)
-    - [Copy and Swap Idiom](#copy-and-swap-idiom)
-  - [Move constructors](#move-constructors)
-  - [Move assignment](#move-assignment)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Rule of five](#rule-of-five)
-  - [Destructor](#destructor)
-  - [Copy constructors](#copy-constructors)
-    - [Shallow Copy Constructor](#shallow-copy-constructor)
-    - [Deep Copy Constructor](#deep-copy-constructor)
-  - [Copy assignment](#copy-assignment)
-    - [Strong Exception Guarantee](#strong-exception-guarantee)
-    - [Copy and Swap Idiom](#copy-and-swap-idiom)
-  - [Move constructors](#move-constructors)
-  - [Move assignment](#move-assignment)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Rule of five](#rule-of-five)
-  - [Destructor](#destructor)
-  - [Copy constructors](#copy-constructors)
-    - [Shallow Copy Constructor](#shallow-copy-constructor)
-    - [Deep Copy Constructor](#deep-copy-constructor)
-  - [Copy assignment](#copy-assignment)
-    - [Strong Exception Guarantee](#strong-exception-guarantee)
-    - [Copy and Swap Idiom](#copy-and-swap-idiom)
-  - [Move constructors](#move-constructors)
-  - [Move assignment](#move-assignment)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to polymorphism](./contents.md)
-
 # Rule of five
 
 <br>
@@ -368,7 +284,6 @@ MyClass& MyClass::operator=(const MyClass& rhs)
     }
     return *this;                       //This is for chaining of copy assignments (ig)
 }
-
 
 MyClass::MyClass(MyClass&& source) noexcept : num{ source.num }, num_ptr{ source.num_ptr }{
     std::cout << "The move constructor is called" << std::endl;

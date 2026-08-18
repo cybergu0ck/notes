@@ -1,83 +1,3 @@
-[← Back to corey-schafer-tutorial](./contents.md)
-
-# Contents
-
-  - [Templates](#templates)
-  - [Using dictionary data as variables and adding control statements in html](#using-dictionary-data-as-variables-and-adding-control-statements-in-html)
-  - [Passing titles](#passing-titles)
-  - [Template Inheritance](#template-inheritance)
-  - [Using bootstrap for styling](#using-bootstrap-for-styling)
-    - [Adding navigation bar](#adding-navigation-bar)
-    - [Creating a `static` folder in our app](#creating-a-static-folder-in-our-app)
-    - [Adding css to our home view](#adding-css-to-our-home-view)
-    - [Adding url name tags instead of hard coding](#adding-url-name-tags-instead-of-hard-coding)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-  - [Templates](#templates)
-  - [Using dictionary data as variables and adding control statements in html](#using-dictionary-data-as-variables-and-adding-control-statements-in-html)
-  - [Passing titles](#passing-titles)
-  - [Template Inheritance](#template-inheritance)
-  - [Using bootstrap for styling](#using-bootstrap-for-styling)
-    - [Adding navigation bar](#adding-navigation-bar)
-    - [Creating a `static` folder in our app](#creating-a-static-folder-in-our-app)
-    - [Adding css to our home view](#adding-css-to-our-home-view)
-    - [Adding url name tags instead of hard coding](#adding-url-name-tags-instead-of-hard-coding)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-  - [Templates](#templates)
-  - [Using dictionary data as variables and adding control statements in html](#using-dictionary-data-as-variables-and-adding-control-statements-in-html)
-  - [Passing titles](#passing-titles)
-  - [Template Inheritance](#template-inheritance)
-  - [Using bootstrap for styling](#using-bootstrap-for-styling)
-    - [Adding navigation bar](#adding-navigation-bar)
-    - [Creating a `static` folder in our app](#creating-a-static-folder-in-our-app)
-    - [Adding css to our home view](#adding-css-to-our-home-view)
-    - [Adding url name tags instead of hard coding](#adding-url-name-tags-instead-of-hard-coding)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Templates](#templates)
-- [Using dictionary data as variables and adding control statements in html](#using-dictionary-data-as-variables-and-adding-control-statements-in-html)
-- [Passing titles](#passing-titles)
-- [Template Inheritance](#template-inheritance)
-- [Using bootstrap for styling](#using-bootstrap-for-styling)
-  - [Adding navigation bar](#adding-navigation-bar)
-  - [Creating a `static` folder in our app](#creating-a-static-folder-in-our-app)
-  - [Adding css to our home view](#adding-css-to-our-home-view)
-  - [Adding url name tags instead of hard coding](#adding-url-name-tags-instead-of-hard-coding)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to corey-schafer-tutorial](./contents.md)
-
 ## Templates
 ---
 - django looks for templates in all installed apps.
@@ -109,7 +29,6 @@ Now we have to route :
 #apps.py in blog dir
 from django.apps import AppConfig
 
-
 class BlogConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'blog'
@@ -134,8 +53,6 @@ INSTALLED_APPS = [
 ]
 ...
 ```
-
-
 
 the home.html contains the necessary html code 
 ```html
@@ -186,7 +103,6 @@ We can do similar thing for blog/about using about.html.
 from django.shortcuts import render
 from django.http import HttpResponse
 
-
 #New
 posts = [
     {
@@ -203,7 +119,6 @@ posts = [
         
     }
 ]
-
 
 def home(request):
     """This is the Home page for our blog app."""
@@ -304,12 +219,8 @@ Similarly we have modified the home.html as shown here
 </html>
 ```
 
-
-
 <br/>
 <br/>
-
-
 
 ## Template Inheritance
 ---
@@ -417,7 +328,6 @@ Now we use the above bootstrap code in our base.html,
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
         {% if title%}
             <title>Django Blog - {{title}} </title>
         {% else %}
@@ -446,7 +356,6 @@ Now our home and about pages in local server would look like
 
 ![image](./_assets/8.png)
 
-
 <br/>
 <br/>
 
@@ -463,7 +372,6 @@ Now we can view the page source of localhost:8000/blog/ (i.e. the home page of o
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 
         
             <title>Django Blog </title>
@@ -761,7 +669,6 @@ Finally our base.html should look like this
 </html>
 ```
 
-
 ### Adding css to our home view 
 
 We replace the for loop in our home.html file with the following code and the home.html should look like this
@@ -791,7 +698,6 @@ We replace the for loop in our home.html file with the following code and the ho
 
 <br/>
 
-
 Our local pages will look like this,
 
 ![image](./_assets/9.png)
@@ -799,7 +705,6 @@ Our local pages will look like this,
 <br/>
 
 ![image](./_assets/10.png)
-
 
 <br/>
 <br/>

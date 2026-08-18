@@ -1,59 +1,3 @@
-[← Back to expressions](./contents.md)
-
-# Contents
-
-- [Infix expressions](#infix-expressions)
-- [Postfix expressions](#postfix-expressions)
-- [Conversion of infix to postfix expression](#conversion-of-infix-to-postfix-expression)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Infix expressions](#infix-expressions)
-- [Postfix expressions](#postfix-expressions)
-- [Conversion of infix to postfix expression](#conversion-of-infix-to-postfix-expression)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Infix expressions](#infix-expressions)
-- [Postfix expressions](#postfix-expressions)
-- [Conversion of infix to postfix expression](#conversion-of-infix-to-postfix-expression)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Infix expressions](#infix-expressions)
-- [Postfix expressions](#postfix-expressions)
-- [Conversion of infix to postfix expression](#conversion-of-infix-to-postfix-expression)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to expressions](./contents.md)
-
 # Infix expressions
 
 * Infix notation is how expressions are written and recognised by humans and is generally how expressions are entered in programs.
@@ -124,8 +68,6 @@
             post_fix_expression += stack.pop()
 
         return post_fix_expression
-
-
 
     print(to_post_fix("a + b*(c^d-e)^(f+g*h)-i"))
 

@@ -1,5 +1,3 @@
-
-
 This guy explains the focal length formula neatly https://youtu.be/7U5k96MPm5A
 
 <br/>

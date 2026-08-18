@@ -1,75 +1,3 @@
-[← Back to resource-management](./contents.md)
-
-# Contents
-
-- [Smart Pointer](#smart-pointer)
-- [Unique Pointer](#unique-pointer)
-- [Shared Pointer](#shared-pointer)
-- [Weak Pointers](#weak-pointers)
-- [Custom Deleter](#custom-deleter)
-  - [Using a function](#using-a-function)
-  - [Resources](#resources)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Smart Pointer](#smart-pointer)
-- [Unique Pointer](#unique-pointer)
-- [Shared Pointer](#shared-pointer)
-- [Weak Pointers](#weak-pointers)
-- [Custom Deleter](#custom-deleter)
-  - [Using a function](#using-a-function)
-  - [Resources](#resources)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Smart Pointer](#smart-pointer)
-- [Unique Pointer](#unique-pointer)
-- [Shared Pointer](#shared-pointer)
-- [Weak Pointers](#weak-pointers)
-- [Custom Deleter](#custom-deleter)
-  - [Using a function](#using-a-function)
-  - [Resources](#resources)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Smart Pointer](#smart-pointer)
-- [Unique Pointer](#unique-pointer)
-- [Shared Pointer](#shared-pointer)
-- [Weak Pointers](#weak-pointers)
-- [Custom Deleter](#custom-deleter)
-  - [Using a function](#using-a-function)
-  - [Resources](#resources)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to resource-management](./contents.md)
-
 # Smart Pointer
 
 - They are objects that can only point to heap-allocated memory.
@@ -241,7 +169,6 @@
   #include <vector>
   using namespace std;
 
-
   class B;   //forward declaration; a forward declaration is a way to declare a class, function, or variable before providing its complete definition.
 
   class A {
@@ -258,7 +185,6 @@
           cout << "destructor of A" << endl;
       }
   };
-
 
   class B {
 
@@ -330,7 +256,6 @@
   {
       std::shared_ptr<Test> s_ptr{new Test{69}, my_custom_deleter};
   }
-
 
   //Test object with the data value of 69 has been instatiated
   //my_custom_deleter function is run

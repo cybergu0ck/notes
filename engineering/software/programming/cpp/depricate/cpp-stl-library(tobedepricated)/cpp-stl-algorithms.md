@@ -1,59 +1,3 @@
-[← Back to cpp-stl-library(tobedepricated)](./contents.md)
-
-# Contents
-
-- [stl algorithms](#stl-algorithms)
-  - [copy_if() and back_inserter()](#copy_if-and-back_inserter)
-  - [transform()](#transform)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [stl algorithms](#stl-algorithms)
-  - [copy_if() and back_inserter()](#copy_if-and-back_inserter)
-  - [transform()](#transform)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [stl algorithms](#stl-algorithms)
-  - [copy_if() and back_inserter()](#copy_if-and-back_inserter)
-  - [transform()](#transform)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [stl algorithms](#stl-algorithms)
-  - [copy_if() and back_inserter()](#copy_if-and-back_inserter)
-  - [transform()](#transform)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to cpp-stl-library(tobedepricated)](./contents.md)
-
 # stl algorithms
 
 ## copy_if() and back_inserter()
@@ -75,7 +19,6 @@ int main() {
 	display(vec1);
 	display(vec2);
 }
-
 
 //1 2 3 4 5 6 7 8 9 10
 //2 4 6 8 10
@@ -106,7 +49,6 @@ int main() {
 	display(vec2);
 	display(vec3);
 }
-
 
 //1 2 3
 //2 2 2 2 2

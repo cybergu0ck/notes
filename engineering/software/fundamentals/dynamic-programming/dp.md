@@ -1,87 +1,3 @@
-[← Back to dynamic-programming](./contents.md)
-
-# Contents
-
-- [Dynamic programming](#dynamic-programming)
-  - [Optimal substrucutre](#optimal-substrucutre)
-  - [Overlapping subproblems](#overlapping-subproblems)
-  - [Framework for DP](#framework-for-dp)
-  - [Concept Grilling](#concept-grilling)
-    - [Number of permutations to make change](#number-of-permutations-to-make-change)
-      - [Using Recursion](#using-recursion)
-      - [Using Recursion with Memoization](#using-recursion-with-memoization)
-      - [Using Dynamic Programming](#using-dynamic-programming)
-    - [Number of combinations to make change](#number-of-combinations-to-make-change)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Dynamic programming](#dynamic-programming)
-  - [Optimal substrucutre](#optimal-substrucutre)
-  - [Overlapping subproblems](#overlapping-subproblems)
-  - [Framework for DP](#framework-for-dp)
-  - [Concept Grilling](#concept-grilling)
-    - [Number of permutations to make change](#number-of-permutations-to-make-change)
-      - [Using Recursion](#using-recursion)
-      - [Using Recursion with Memoization](#using-recursion-with-memoization)
-      - [Using Dynamic Programming](#using-dynamic-programming)
-    - [Number of combinations to make change](#number-of-combinations-to-make-change)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Dynamic programming](#dynamic-programming)
-  - [Optimal substrucutre](#optimal-substrucutre)
-  - [Overlapping subproblems](#overlapping-subproblems)
-  - [Framework for DP](#framework-for-dp)
-  - [Concept Grilling](#concept-grilling)
-    - [Number of permutations to make change](#number-of-permutations-to-make-change)
-      - [Using Recursion](#using-recursion)
-      - [Using Recursion with Memoization](#using-recursion-with-memoization)
-      - [Using Dynamic Programming](#using-dynamic-programming)
-    - [Number of combinations to make change](#number-of-combinations-to-make-change)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Dynamic programming](#dynamic-programming)
-  - [Optimal substrucutre](#optimal-substrucutre)
-  - [Overlapping subproblems](#overlapping-subproblems)
-  - [Framework for DP](#framework-for-dp)
-  - [Concept Grilling](#concept-grilling)
-    - [Number of permutations to make change](#number-of-permutations-to-make-change)
-      - [Using Recursion](#using-recursion)
-      - [Using Recursion with Memoization](#using-recursion-with-memoization)
-      - [Using Dynamic Programming](#using-dynamic-programming)
-    - [Number of combinations to make change](#number-of-combinations-to-make-change)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to dynamic-programming](./contents.md)
-
 # Dynamic programming
 
 <br>
@@ -147,7 +63,6 @@ def makeChange(target, coins):
 
     return dfs(target)
 
-
 coins = [1,3,5,10]
 target = 4
 print(makeChange(target, coins))
@@ -179,7 +94,6 @@ print(makeChange(target, coins))
 
       return dfs(target)
 
-
   coins = [1,3,5,10]
   target = 4
   print(makeChange(target, coins))
@@ -202,7 +116,6 @@ print(makeChange(target, coins))
               if amount >= coin:
                   dp[amount] += dp[amount-coin]
       return dp[target]
-
 
   coins = [1,3,5,10]
   target = 4
@@ -230,7 +143,6 @@ def makeChange(target, coins):
         return num_ways
 
     return dfs(target, len(coins)-1)
-
 
 coins = [1, 2, 3, 5]
 target = 75

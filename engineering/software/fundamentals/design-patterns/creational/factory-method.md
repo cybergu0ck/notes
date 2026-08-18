@@ -1,91 +1,3 @@
-[← Back to creational](./contents.md)
-
-# Contents
-
-- [Factory Method](#factory-method)
-  - [Theory](#theory)
-    - [Components](#components)
-    - [Applicability](#applicability)
-    - [Advantages](#advantages)
-    - [Disadvantages](#disadvantages)
-  - [Application](#application)
-    - [Components](#components)
-    - [Applicability](#applicability)
-    - [Advantages](#advantages)
-    - [Disadvantages](#disadvantages)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Factory Method](#factory-method)
-  - [Theory](#theory)
-    - [Components](#components)
-    - [Applicability](#applicability)
-    - [Advantages](#advantages)
-    - [Disadvantages](#disadvantages)
-  - [Application](#application)
-    - [Components](#components)
-    - [Applicability](#applicability)
-    - [Advantages](#advantages)
-    - [Disadvantages](#disadvantages)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Factory Method](#factory-method)
-  - [Theory](#theory)
-    - [Components](#components)
-    - [Applicability](#applicability)
-    - [Advantages](#advantages)
-    - [Disadvantages](#disadvantages)
-  - [Application](#application)
-    - [Components](#components)
-    - [Applicability](#applicability)
-    - [Advantages](#advantages)
-    - [Disadvantages](#disadvantages)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Factory Method](#factory-method)
-  - [Theory](#theory)
-    - [Components](#components)
-    - [Applicability](#applicability)
-    - [Advantages](#advantages)
-    - [Disadvantages](#disadvantages)
-  - [Application](#application)
-    - [Components](#components)
-    - [Applicability](#applicability)
-    - [Advantages](#advantages)
-    - [Disadvantages](#disadvantages)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to creational](./contents.md)
-
 # Factory Method
 
 <br>
@@ -155,7 +67,6 @@ public:
 
 };
 
-
 //concrete product
 class PDFDocument : public IDocument{
 public:
@@ -168,14 +79,12 @@ public:
     }
 };
 
-
 //interface of factory
 class IDocumentFactory{
 public:
     virtual ~IDocumentFactory() = default;
     virtual std::shared_ptr<IDocument> make_document() = 0;
 };
-
 
 //concrete factory
 class PDFDocumentFactory : public IDocumentFactory{
@@ -185,7 +94,6 @@ public:
         return std::make_shared<PDFDocument>();
     }
 };
-
 
 //client
 int main(){

@@ -1,59 +1,3 @@
-[← Back to control-flow](./contents.md)
-
-# Contents
-
-- [Function Pointers](#function-pointers)
-- [Function pointers with class member functions](#function-pointers-with-class-member-functions)
-- [Function Objects (functor)](#function-objects-functor)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Function Pointers](#function-pointers)
-- [Function pointers with class member functions](#function-pointers-with-class-member-functions)
-- [Function Objects (functor)](#function-objects-functor)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Function Pointers](#function-pointers)
-- [Function pointers with class member functions](#function-pointers-with-class-member-functions)
-- [Function Objects (functor)](#function-objects-functor)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Function Pointers](#function-pointers)
-- [Function pointers with class member functions](#function-pointers-with-class-member-functions)
-- [Function Objects (functor)](#function-objects-functor)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to control-flow](./contents.md)
-
 # Function Pointers
 
 - Function pointers are variables that can store the address of a function in a programming language. In other words, they are pointers that point to executable code, specifically functions.
@@ -110,7 +54,6 @@
       (*para)(x, y);
   }
 
-
   int main()
   {
       FPTR fptr_to_compute{ &compute };  //Syntax for using typedef function pointers
@@ -120,7 +63,6 @@
       (*fptr_to_compute)(1.2, { 1.2,2.2 });	//Syntax for function call
       just_call(fptr_to_compute, 1.2, { 1.2,2.2 });         //passing function pointers as arguments
   }
-
 
   //The result of computation is 2.2
   //The result of computation is 2.2
@@ -158,7 +100,6 @@
       MyClass* obj2_ptr = new MyClass;    //created on the heap
       (obj2_ptr->*fp)(21);    //the syntax uses ->* operator
       delete obj2_ptr;
-
 
       //static member functions
       void (*f)(int) = &MyClass::fun2;  //As the member function is static, we initialise the function pointer as if it were global!

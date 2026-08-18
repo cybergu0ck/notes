@@ -1,61 +1,4 @@
-[← Back to github](./contents.md)
-
-# Contents
-
-- [Linking in github markdown files](#linking-in-github-markdown-files)
-  - [Same-file anchors](#same-file-anchors)
-  - [Cross-file anchors](#cross-file-anchors)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Linking in github markdown files](#linking-in-github-markdown-files)
-  - [Same-file anchors](#same-file-anchors)
-  - [Cross-file anchors](#cross-file-anchors)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Linking in github markdown files](#linking-in-github-markdown-files)
-  - [Same-file anchors](#same-file-anchors)
-  - [Cross-file anchors](#cross-file-anchors)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Linking in github markdown files](#linking-in-github-markdown-files)
-  - [Same-file anchors](#same-file-anchors)
-  - [Cross-file anchors](#cross-file-anchors)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to github](./contents.md)
-
 # Linking in github markdown files
-
 
 ## Same-file anchors
 
@@ -95,13 +38,10 @@
 <br/>
 <br/>
 
-
 ## Cross-file anchors  
 
 * See [official-docs](https://gist.github.com/TobiasPalludan/5948533e97d260a04ea47e44ea7cc6b0) else see below:
 
     - Add filename.md in font of the header link. (i.e. `[text](filename.md#header)`)
     - Use linux's `cd` command if files are present in other directory (i.e. `[text](../prev-folder/filename.md#header)`)
-
-
 

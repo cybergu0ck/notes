@@ -29,7 +29,6 @@ print(next(my_iterator))
 print(next(my_iterator))
 print(next(my_iterator))  # This line raises the error
 
-
 #>a
 #>b
 #>c
@@ -64,7 +63,6 @@ print(next(obj))
 print(next(obj))
 
 # Or we can also use `for char in obj: print char`
-
 
 #>c
 #>b

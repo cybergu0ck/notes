@@ -1,99 +1,3 @@
-[← Back to data-types](./contents.md)
-
-# Contents
-
-- [Casting](#casting)
-  - [Types of casting](#types-of-casting)
-    - [Based on explicitness](#based-on-explicitness)
-      - [Implicit casting](#implicit-casting)
-      - [Explicit casting](#explicit-casting)
-    - [Based on direction](#based-on-direction)
-      - [Up casting](#up-casting)
-      - [Down casting](#down-casting)
-  - [Types of named explicit casting operators.](#types-of-named-explicit-casting-operators)
-    - [Static casting](#static-casting)
-    - [Dynamic casting](#dynamic-casting)
-    - [Reinterpret casting](#reinterpret-casting)
-    - [Const casting](#const-casting)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Casting](#casting)
-  - [Types of casting](#types-of-casting)
-    - [Based on explicitness](#based-on-explicitness)
-      - [Implicit casting](#implicit-casting)
-      - [Explicit casting](#explicit-casting)
-    - [Based on direction](#based-on-direction)
-      - [Up casting](#up-casting)
-      - [Down casting](#down-casting)
-  - [Types of named explicit casting operators.](#types-of-named-explicit-casting-operators)
-    - [Static casting](#static-casting)
-    - [Dynamic casting](#dynamic-casting)
-    - [Reinterpret casting](#reinterpret-casting)
-    - [Const casting](#const-casting)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Casting](#casting)
-  - [Types of casting](#types-of-casting)
-    - [Based on explicitness](#based-on-explicitness)
-      - [Implicit casting](#implicit-casting)
-      - [Explicit casting](#explicit-casting)
-    - [Based on direction](#based-on-direction)
-      - [Up casting](#up-casting)
-      - [Down casting](#down-casting)
-  - [Types of named explicit casting operators.](#types-of-named-explicit-casting-operators)
-    - [Static casting](#static-casting)
-    - [Dynamic casting](#dynamic-casting)
-    - [Reinterpret casting](#reinterpret-casting)
-    - [Const casting](#const-casting)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Casting](#casting)
-  - [Types of casting](#types-of-casting)
-    - [Based on explicitness](#based-on-explicitness)
-      - [Implicit casting](#implicit-casting)
-      - [Explicit casting](#explicit-casting)
-    - [Based on direction](#based-on-direction)
-      - [Up casting](#up-casting)
-      - [Down casting](#down-casting)
-  - [Types of named explicit casting operators.](#types-of-named-explicit-casting-operators)
-    - [Static casting](#static-casting)
-    - [Dynamic casting](#dynamic-casting)
-    - [Reinterpret casting](#reinterpret-casting)
-    - [Const casting](#const-casting)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to data-types](./contents.md)
-
 # Casting
 
 Casting is the process of converting a value or a variable from one data type to another.
@@ -180,7 +84,6 @@ Is used for performing conversions that are known at compile-time and can be che
   #include <bits/stdc++.h>
   using namespace std;
 
-
   class Vehicle{
       std::string brand;
       std::string make;
@@ -203,7 +106,6 @@ Is used for performing conversions that are known at compile-time and can be che
   #include <bits/stdc++.h>
   using namespace std;
 
-
   class Vehicle{;
   };
 
@@ -212,7 +114,6 @@ Is used for performing conversions that are known at compile-time and can be che
 
   class Bus : public Vehicle{
   };
-
 
   int main() {
 

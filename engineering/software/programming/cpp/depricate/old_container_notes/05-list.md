@@ -1,83 +1,3 @@
-[← Back to old_container_notes](./contents.md)
-
-# Contents
-
-- [STL List](#stl-list)
-  - [Initialisation](#initialisation)
-  - [Methods](#methods)
-    - [Adding Elements](#adding-elements)
-    - [Accessing Elements](#accessing-elements)
-    - [Finding Elements](#finding-elements)
-    - [Removing Elements](#removing-elements)
-    - [Number of Elements](#number-of-elements)
-    - [Emptyness](#emptyness)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [STL List](#stl-list)
-  - [Initialisation](#initialisation)
-  - [Methods](#methods)
-    - [Adding Elements](#adding-elements)
-    - [Accessing Elements](#accessing-elements)
-    - [Finding Elements](#finding-elements)
-    - [Removing Elements](#removing-elements)
-    - [Number of Elements](#number-of-elements)
-    - [Emptyness](#emptyness)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [STL List](#stl-list)
-  - [Initialisation](#initialisation)
-  - [Methods](#methods)
-    - [Adding Elements](#adding-elements)
-    - [Accessing Elements](#accessing-elements)
-    - [Finding Elements](#finding-elements)
-    - [Removing Elements](#removing-elements)
-    - [Number of Elements](#number-of-elements)
-    - [Emptyness](#emptyness)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [STL List](#stl-list)
-  - [Initialisation](#initialisation)
-  - [Methods](#methods)
-    - [Adding Elements](#adding-elements)
-    - [Accessing Elements](#accessing-elements)
-    - [Finding Elements](#finding-elements)
-    - [Removing Elements](#removing-elements)
-    - [Number of Elements](#number-of-elements)
-    - [Emptyness](#emptyness)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to old_container_notes](./contents.md)
-
 # STL List
 
 A std::list is a sequence container that allows non-contiguous memory allocation.
@@ -105,7 +25,6 @@ int main() {
     std::list<int> list6(vec.begin(), vec.end());   // Range Initialization
 
     std::list<int> list7(std::move(originalList));  // Move Initialization
-
 
     std::list<int> list8;
     list8.assign(5, 10);    // Using `assign` Method

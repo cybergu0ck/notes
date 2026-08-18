@@ -1,55 +1,3 @@
-[← Back to anaconda](./contents.md)
-
-# Contents
-
-      - [Creating an environment using anaconda prompt](#creating-an-environment-using-anaconda-prompt)
-      - [Activating an environment](#activating-an-environment)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-      - [Creating an environment using anaconda prompt](#creating-an-environment-using-anaconda-prompt)
-      - [Activating an environment](#activating-an-environment)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-      - [Creating an environment using anaconda prompt](#creating-an-environment-using-anaconda-prompt)
-      - [Activating an environment](#activating-an-environment)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Creating an environment using anaconda prompt](#creating-an-environment-using-anaconda-prompt)
-- [Activating an environment](#activating-an-environment)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to anaconda](./contents.md)
-
 #### Creating an environment using anaconda prompt
 ---
 
@@ -58,7 +6,6 @@ conda create --name myenv
 
 #Replace myenv with the environment name
 ```
-
 
 #### Activating an environment
 ---

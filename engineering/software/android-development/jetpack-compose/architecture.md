@@ -1,83 +1,3 @@
-[← Back to jetpack-compose](./contents.md)
-
-# Contents
-
-  - [Seperation of concerns](#seperation-of-concerns)
-  - [Model driven UI](#model-driven-ui)
-  - [Unidirectional data flow](#unidirectional-data-flow)
-  - [Data Layer](#data-layer)
-  - [UI Layer](#ui-layer)
-    - [UI State](#ui-state)
-    - [View Model](#view-model)
-  - [UI Elements](#ui-elements)
-  - [Illustration](#illustration)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-  - [Seperation of concerns](#seperation-of-concerns)
-  - [Model driven UI](#model-driven-ui)
-  - [Unidirectional data flow](#unidirectional-data-flow)
-  - [Data Layer](#data-layer)
-  - [UI Layer](#ui-layer)
-    - [UI State](#ui-state)
-    - [View Model](#view-model)
-  - [UI Elements](#ui-elements)
-  - [Illustration](#illustration)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-  - [Seperation of concerns](#seperation-of-concerns)
-  - [Model driven UI](#model-driven-ui)
-  - [Unidirectional data flow](#unidirectional-data-flow)
-  - [Data Layer](#data-layer)
-  - [UI Layer](#ui-layer)
-    - [UI State](#ui-state)
-    - [View Model](#view-model)
-  - [UI Elements](#ui-elements)
-  - [Illustration](#illustration)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Seperation of concerns](#seperation-of-concerns)
-- [Model driven UI](#model-driven-ui)
-- [Unidirectional data flow](#unidirectional-data-flow)
-- [Data Layer](#data-layer)
-- [UI Layer](#ui-layer)
-  - [UI State](#ui-state)
-  - [View Model](#view-model)
-- [UI Elements](#ui-elements)
-- [Illustration](#illustration)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to jetpack-compose](./contents.md)
-
 ## Seperation of concerns
 
 The separation of concerns is a design principle where the app is divided into classes, files, packages, modules and layers that have clearly defined responsibilities and boundaries.
@@ -101,8 +21,6 @@ Model driven UI is a concept where the UI is driven by a persistent model.
 <br>
 <br>
 
-
-
 ## Unidirectional data flow
 
 A  unidirectional data flow (UDF) is a design pattern in which state flows down and events flow up.
@@ -122,7 +40,6 @@ The UI update loop for an app using unidirectional data flow looks like the foll
 <br>
 <br>
 <br>
-
 
 ## Data Layer
 
@@ -168,7 +85,6 @@ data class AppState(
 - In the above example, when the AppState changes it triggers recomposition of the UI.
 - The UI state definition in the example above is immutable. Immutable objects provide guarantees that multiple sources do not alter the state of the app at an instant in time. This protection frees the UI to focus on a single role: reading state and updating UI elements accordingly. Violating this principle results in multiple sources of truth for the same piece of information, leading to data inconsistencies and subtle bugs.
 
-
 <br>
 <br>
 
@@ -180,7 +96,6 @@ The `ViewModel` component holds and exposes the state the UI consumes.
 - Unlike the activity instance, `ViewModel` objects are not destroyed. The app automatically retains `ViewModel` objects during configuration changes so that the data they hold is immediately available after the recomposition.
 
 <br>
-
 
 The following line needs to be added in the "build.gradle.kts" file's dependencies in the app directory. 
 
@@ -245,7 +160,6 @@ class AppModel : ViewModel() {
 }
 ```
 
-
 <br>
 
 - [`StateFlow`](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-state-flow/) is a data holder observable flow that emits the current and new state updates. 
@@ -253,10 +167,6 @@ class AppModel : ViewModel() {
 	 -  `update(transform: (T) -> T)` atomically replaces the current value with the result of transform. This is data write but there is no modification in the state object, the old state object is completely replaced with a brand new one.
 - `MutableStateFlow` is A mutable, read-write implementation of **`StateFlow`** that allows direct modification of its underlying value.
 - `asStateFlow()` is an extension function that converts a mutable `MutableStateFlow` into a read-only `StateFlow`.`
-
-
-
-
 
 <br>
 <br>

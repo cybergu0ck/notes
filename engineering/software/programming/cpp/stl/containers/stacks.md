@@ -1,83 +1,3 @@
-[← Back to containers](./contents.md)
-
-# Contents
-
-- [Stacks](#stacks)
-  - [Initialisation](#initialisation)
-  - [Methods](#methods)
-    - [Access](#access)
-    - [Search](#search)
-    - [Insertion](#insertion)
-    - [Deletion](#deletion)
-    - [Modification](#modification)
-    - [Miscallaneous](#miscallaneous)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Stacks](#stacks)
-  - [Initialisation](#initialisation)
-  - [Methods](#methods)
-    - [Access](#access)
-    - [Search](#search)
-    - [Insertion](#insertion)
-    - [Deletion](#deletion)
-    - [Modification](#modification)
-    - [Miscallaneous](#miscallaneous)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Stacks](#stacks)
-  - [Initialisation](#initialisation)
-  - [Methods](#methods)
-    - [Access](#access)
-    - [Search](#search)
-    - [Insertion](#insertion)
-    - [Deletion](#deletion)
-    - [Modification](#modification)
-    - [Miscallaneous](#miscallaneous)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Stacks](#stacks)
-  - [Initialisation](#initialisation)
-  - [Methods](#methods)
-    - [Access](#access)
-    - [Search](#search)
-    - [Insertion](#insertion)
-    - [Deletion](#deletion)
-    - [Modification](#modification)
-    - [Miscallaneous](#miscallaneous)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to containers](./contents.md)
-
 # Stacks
 
 A std::stack is a container adapter that provides stack functionality.
@@ -107,7 +27,6 @@ std::deque<int> myDeque = {6, 7, 8};
 std::stack<int, std::deque<int>> stack3(myDeque); // Initialize with a deque
 std::list<int> myList = {9, 10};
 std::stack<int, std::list<int>> stack4(myList); //Initialize with a list
-
 
 //uniform initialisation is NOT supported!
 std::stack <int> test_score{98,88,60,30};

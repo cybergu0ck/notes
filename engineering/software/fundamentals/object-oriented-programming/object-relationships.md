@@ -1,71 +1,3 @@
-[← Back to object-oriented-programming](./contents.md)
-
-# Contents
-
-- [Object relationships](#object-relationships)
-  - [Association](#association)
-  - [Aggregation](#aggregation)
-  - [Composition](#composition)
-  - [Differences](#differences)
-  - [UML](#uml)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Object relationships](#object-relationships)
-  - [Association](#association)
-  - [Aggregation](#aggregation)
-  - [Composition](#composition)
-  - [Differences](#differences)
-  - [UML](#uml)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Object relationships](#object-relationships)
-  - [Association](#association)
-  - [Aggregation](#aggregation)
-  - [Composition](#composition)
-  - [Differences](#differences)
-  - [UML](#uml)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Object relationships](#object-relationships)
-  - [Association](#association)
-  - [Aggregation](#aggregation)
-  - [Composition](#composition)
-  - [Differences](#differences)
-  - [UML](#uml)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to object-oriented-programming](./contents.md)
-
 # Object relationships
 
 <br>
@@ -136,7 +68,6 @@ It represents a whole/part relationship where one independent class acts as a co
         }
     };
     ``` 
-
 
 <br>
 <br>

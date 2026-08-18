@@ -1,59 +1,3 @@
-[← Back to oops](./contents.md)
-
-# Contents
-
-    - [Understanding super()](#understanding-super)
-  - [Multiple Inheritance](#multiple-inheritance)
-    - [Method Resolution Order (MRO)](#method-resolution-order-mro)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-    - [Understanding super()](#understanding-super)
-  - [Multiple Inheritance](#multiple-inheritance)
-    - [Method Resolution Order (MRO)](#method-resolution-order-mro)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-    - [Understanding super()](#understanding-super)
-  - [Multiple Inheritance](#multiple-inheritance)
-    - [Method Resolution Order (MRO)](#method-resolution-order-mro)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-  - [Understanding super()](#understanding-super)
-- [Multiple Inheritance](#multiple-inheritance)
-  - [Method Resolution Order (MRO)](#method-resolution-order-mro)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to oops](./contents.md)
-
 ### Understanding super() 
 
 The super() builtin returns a proxy object (temporary object of the superclass) that allows us to access methods of the base class.
@@ -143,7 +87,6 @@ d = Dog()
 print('')
 bat = NonMarineMammal('Bat')
 
-
 #>Dog has 4 legs.
 #>Dog can't swim.
 #>Dog can't fly.
@@ -159,7 +102,6 @@ bat = NonMarineMammal('Bat')
 <br/>
 
 ### Method Resolution Order (MRO)
-
 
 Method Resolution Order (MRO) is the order in which methods should be inherited in the presence of multiple inheritance. You can view the MRO by using the __mro__ attribute.
 
@@ -192,7 +134,6 @@ class Dog(NonMarineMammal, NonWingedMammal):
     super().__init__('Dog')
 
 print(Dog.__mro__)
-
 
 #>(__main__.Dog, __main__.NonMarineMammal,__main__.NonWingedMammal,__main__.Mammal,__main__.Animal,object)
 ```

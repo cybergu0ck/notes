@@ -1,91 +1,3 @@
-[← Back to linux](./contents.md)
-
-# Contents
-
-- [Setting up Debian machine](#setting-up-debian-machine)
-  - [Add current user to sudoers file](#add-current-user-to-sudoers-file)
-  - [Usage of external monitor](#usage-of-external-monitor)
-  - [Configure git](#configure-git)
-    - [Setup SSH keys](#setup-ssh-keys)
-  - [Install vscode](#install-vscode)
-  - [Install programs](#install-programs)
-  - [Stow the dotfiles](#stow-the-dotfiles)
-  - [Configure lightdm](#configure-lightdm)
-  - [Enabling touchpad for i3wm](#enabling-touchpad-for-i3wm)
-  - [Launching volume control panel](#launching-volume-control-panel)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Setting up Debian machine](#setting-up-debian-machine)
-  - [Add current user to sudoers file](#add-current-user-to-sudoers-file)
-  - [Usage of external monitor](#usage-of-external-monitor)
-  - [Configure git](#configure-git)
-    - [Setup SSH keys](#setup-ssh-keys)
-  - [Install vscode](#install-vscode)
-  - [Install programs](#install-programs)
-  - [Stow the dotfiles](#stow-the-dotfiles)
-  - [Configure lightdm](#configure-lightdm)
-  - [Enabling touchpad for i3wm](#enabling-touchpad-for-i3wm)
-  - [Launching volume control panel](#launching-volume-control-panel)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Setting up Debian machine](#setting-up-debian-machine)
-  - [Add current user to sudoers file](#add-current-user-to-sudoers-file)
-  - [Usage of external monitor](#usage-of-external-monitor)
-  - [Configure git](#configure-git)
-    - [Setup SSH keys](#setup-ssh-keys)
-  - [Install vscode](#install-vscode)
-  - [Install programs](#install-programs)
-  - [Stow the dotfiles](#stow-the-dotfiles)
-  - [Configure lightdm](#configure-lightdm)
-  - [Enabling touchpad for i3wm](#enabling-touchpad-for-i3wm)
-  - [Launching volume control panel](#launching-volume-control-panel)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Setting up Debian machine](#setting-up-debian-machine)
-  - [Add current user to sudoers file](#add-current-user-to-sudoers-file)
-  - [Usage of external monitor](#usage-of-external-monitor)
-  - [Configure git](#configure-git)
-    - [Setup SSH keys](#setup-ssh-keys)
-  - [Install vscode](#install-vscode)
-  - [Install programs](#install-programs)
-  - [Stow the dotfiles](#stow-the-dotfiles)
-  - [Configure lightdm](#configure-lightdm)
-  - [Enabling touchpad for i3wm](#enabling-touchpad-for-i3wm)
-  - [Launching volume control panel](#launching-volume-control-panel)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to linux](./contents.md)
-
 # Setting up Debian machine
 
 <br>
@@ -122,7 +34,6 @@ Follow this to close the laptop lid and only use the external monitor as main di
   # The script will automatically use secondary monitor and turn off the primary laptop monitor if secondary monitor is connected
   # Modify the following script with correct names for displays.
   # Determine the name of the displays (ex eDP-1, HDMI-1-1 etc) using `xrandr` command.
-
 
   if xrandr | grep "HDMI-1-1 connected"; then
       echo "HDMI-1-1 is connected. Switching display to HDMI-1-1 and turning off eDP-1."

@@ -1,69 +1,4 @@
-[← Back to old](./contents.md)
-
-# Contents
-
-  - [Explicit casting](#explicit-casting)
-    - [reinterpret_cast](#reinterpret_cast)
-    - [static_cast](#static_cast)
-    - [dynamic_cast](#dynamic_cast)
-    - [const_cast](#const_cast)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-  - [Explicit casting](#explicit-casting)
-    - [reinterpret_cast](#reinterpret_cast)
-    - [static_cast](#static_cast)
-    - [dynamic_cast](#dynamic_cast)
-    - [const_cast](#const_cast)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-  - [Explicit casting](#explicit-casting)
-    - [reinterpret_cast](#reinterpret_cast)
-    - [static_cast](#static_cast)
-    - [dynamic_cast](#dynamic_cast)
-    - [const_cast](#const_cast)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Explicit casting](#explicit-casting)
-  - [reinterpret_cast](#reinterpret_cast)
-  - [static_cast](#static_cast)
-  - [dynamic_cast](#dynamic_cast)
-  - [const_cast](#const_cast)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to old](./contents.md)
-
 ## Explicit casting
-
 
 ### reinterpret_cast
 
@@ -75,7 +10,6 @@
 <br>
 
 ### static_cast
-
 
 <br>
 <br>

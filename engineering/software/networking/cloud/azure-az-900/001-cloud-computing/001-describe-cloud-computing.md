@@ -1,75 +1,3 @@
-[← Back to 001-cloud-computing](./contents.md)
-
-# Contents
-
-  - [Introduction to cloud computing](#introduction-to-cloud-computing)
-  - [The shared responsibility model](#the-shared-responsibility-model)
-  - [The Cloud Models](#the-cloud-models)
-    - [Private cloud](#private-cloud)
-    - [Public cloud](#public-cloud)
-    - [Hybrid clo0ud](#hybrid-clo0ud)
-  - [Consumption Based Models](#consumption-based-models)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-  - [Introduction to cloud computing](#introduction-to-cloud-computing)
-  - [The shared responsibility model](#the-shared-responsibility-model)
-  - [The Cloud Models](#the-cloud-models)
-    - [Private cloud](#private-cloud)
-    - [Public cloud](#public-cloud)
-    - [Hybrid clo0ud](#hybrid-clo0ud)
-  - [Consumption Based Models](#consumption-based-models)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-  - [Introduction to cloud computing](#introduction-to-cloud-computing)
-  - [The shared responsibility model](#the-shared-responsibility-model)
-  - [The Cloud Models](#the-cloud-models)
-    - [Private cloud](#private-cloud)
-    - [Public cloud](#public-cloud)
-    - [Hybrid clo0ud](#hybrid-clo0ud)
-  - [Consumption Based Models](#consumption-based-models)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Introduction to cloud computing](#introduction-to-cloud-computing)
-- [The shared responsibility model](#the-shared-responsibility-model)
-- [The Cloud Models](#the-cloud-models)
-  - [Private cloud](#private-cloud)
-  - [Public cloud](#public-cloud)
-  - [Hybrid clo0ud](#hybrid-clo0ud)
-- [Consumption Based Models](#consumption-based-models)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to 001-cloud-computing](./contents.md)
-
 ## Introduction to cloud computing
 ---
 
@@ -88,13 +16,9 @@ Cloud services also expand the traditional IT offerings to include things like
 -   machine learning (ML)
 -   artificial intelligence (AI)
 
-
-
 Introductory Video:
 
 [What is cloud computing - Training | Microsoft Learn](https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/3-what-cloud-compute)
-
-
 
 > Microsoft Azure is a cloud computing platform with an ever-expanding set of services to help you build solutions to meet your business goals.
 
@@ -114,8 +38,6 @@ Then, for some things, the responsibility depends on the situation. If you’re 
 1.  IaaS places the most responsibility on the consumer, with the cloud provider being responsible for the basics of physical security, power, and connectivity.
 2.  On the other end of the spectrum, SaaS places most of the responsibility with the cloud provider.
 3.  PaaS, being a middle ground between IaaS and SaaS, rests somewhere in the middle and evenly distributes responsibility between the cloud provider and the consumer.
-
-
 
 ![[Pasted image 20221210142802.png]]
 
@@ -150,7 +72,6 @@ A hybrid cloud environment can be used to allow a private cloud to surge for inc
 
 For example, users can flexibly choose which services to keep in public cloud and which to deploy to their private cloud infrastructure.
 
-
 ## Consumption Based Models
 ---
 
@@ -176,7 +97,5 @@ This consumption-based model has many benefits, including:
 -   The ability to stop paying for resources that are no longer needed.
 
 To put it another way, cloud computing is a way to rent compute power and storage from someone else’s datacenter.
-
-
 
 [[2. Describe the benefits of using cloud services]]

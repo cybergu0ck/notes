@@ -1,175 +1,3 @@
-[← Back to 002-azure-architecture](./contents.md)
-
-# Contents
-
-- [Scale VMs in Azure](#scale-vms-in-azure)
-  - [Virtual machine scale sets](#virtual-machine-scale-sets)
-  - [Virtual machine availability sets](#virtual-machine-availability-sets)
-  - [Examples of when to use VMs](#examples-of-when-to-use-vms)
-  - [Move to the cloud with VMs (Lift and Shift)](#move-to-the-cloud-with-vms-lift-and-shift)
-  - [VM Resources](#vm-resources)
-- [Create an Azure Virtual Machine](#create-an-azure-virtual-machine)
-- [Azure Virtual Desktop](#azure-virtual-desktop)
-- [Azure Containers](#azure-containers)
-  - [What are containers?](#what-are-containers)
-  - [Azure Container Instances](#azure-container-instances)
-- [Azure Functions](#azure-functions)
-  - [Benefits of Azure Functions](#benefits-of-azure-functions)
-- [Application hosting options](#application-hosting-options)
-- [Azure Virtual Networking](#azure-virtual-networking)
-  - [Isolation and segmentation](#isolation-and-segmentation)
-  - [Internet communications](#internet-communications)
-  - [Communicate between Azure resources](#communicate-between-azure-resources)
-  - [Communicate with on-premises resources](#communicate-with-on-premises-resources)
-  - [Route network traffic](#route-network-traffic)
-  - [Filter network traffic](#filter-network-traffic)
-  - [Connect virtual networks](#connect-virtual-networks)
-- [Azure Virtual Private Networks](#azure-virtual-private-networks)
-  - [VPN gateways](#vpn-gateways)
-    - [High-availability scenarios](#high-availability-scenarios)
-    - [Active/standby](#activestandby)
-    - [Active/active](#activeactive)
-    - [ExpressRoute failover](#expressroute-failover)
-    - [Zone-redundant gateways](#zone-redundant-gateways)
-- [Azure ExpressRoute](#azure-expressroute)
-- [Azure DNS](#azure-dns)
-  - [Benefits of Azure DNS](#benefits-of-azure-dns)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Scale VMs in Azure](#scale-vms-in-azure)
-  - [Virtual machine scale sets](#virtual-machine-scale-sets)
-  - [Virtual machine availability sets](#virtual-machine-availability-sets)
-  - [Examples of when to use VMs](#examples-of-when-to-use-vms)
-  - [Move to the cloud with VMs (Lift and Shift)](#move-to-the-cloud-with-vms-lift-and-shift)
-  - [VM Resources](#vm-resources)
-- [Create an Azure Virtual Machine](#create-an-azure-virtual-machine)
-- [Azure Virtual Desktop](#azure-virtual-desktop)
-- [Azure Containers](#azure-containers)
-  - [What are containers?](#what-are-containers)
-  - [Azure Container Instances](#azure-container-instances)
-- [Azure Functions](#azure-functions)
-  - [Benefits of Azure Functions](#benefits-of-azure-functions)
-- [Application hosting options](#application-hosting-options)
-- [Azure Virtual Networking](#azure-virtual-networking)
-  - [Isolation and segmentation](#isolation-and-segmentation)
-  - [Internet communications](#internet-communications)
-  - [Communicate between Azure resources](#communicate-between-azure-resources)
-  - [Communicate with on-premises resources](#communicate-with-on-premises-resources)
-  - [Route network traffic](#route-network-traffic)
-  - [Filter network traffic](#filter-network-traffic)
-  - [Connect virtual networks](#connect-virtual-networks)
-- [Azure Virtual Private Networks](#azure-virtual-private-networks)
-  - [VPN gateways](#vpn-gateways)
-    - [High-availability scenarios](#high-availability-scenarios)
-    - [Active/standby](#activestandby)
-    - [Active/active](#activeactive)
-    - [ExpressRoute failover](#expressroute-failover)
-    - [Zone-redundant gateways](#zone-redundant-gateways)
-- [Azure ExpressRoute](#azure-expressroute)
-- [Azure DNS](#azure-dns)
-  - [Benefits of Azure DNS](#benefits-of-azure-dns)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Scale VMs in Azure](#scale-vms-in-azure)
-  - [Virtual machine scale sets](#virtual-machine-scale-sets)
-  - [Virtual machine availability sets](#virtual-machine-availability-sets)
-  - [Examples of when to use VMs](#examples-of-when-to-use-vms)
-  - [Move to the cloud with VMs (Lift and Shift)](#move-to-the-cloud-with-vms-lift-and-shift)
-  - [VM Resources](#vm-resources)
-- [Create an Azure Virtual Machine](#create-an-azure-virtual-machine)
-- [Azure Virtual Desktop](#azure-virtual-desktop)
-- [Azure Containers](#azure-containers)
-  - [What are containers?](#what-are-containers)
-  - [Azure Container Instances](#azure-container-instances)
-- [Azure Functions](#azure-functions)
-  - [Benefits of Azure Functions](#benefits-of-azure-functions)
-- [Application hosting options](#application-hosting-options)
-- [Azure Virtual Networking](#azure-virtual-networking)
-  - [Isolation and segmentation](#isolation-and-segmentation)
-  - [Internet communications](#internet-communications)
-  - [Communicate between Azure resources](#communicate-between-azure-resources)
-  - [Communicate with on-premises resources](#communicate-with-on-premises-resources)
-  - [Route network traffic](#route-network-traffic)
-  - [Filter network traffic](#filter-network-traffic)
-  - [Connect virtual networks](#connect-virtual-networks)
-- [Azure Virtual Private Networks](#azure-virtual-private-networks)
-  - [VPN gateways](#vpn-gateways)
-    - [High-availability scenarios](#high-availability-scenarios)
-    - [Active/standby](#activestandby)
-    - [Active/active](#activeactive)
-    - [ExpressRoute failover](#expressroute-failover)
-    - [Zone-redundant gateways](#zone-redundant-gateways)
-- [Azure ExpressRoute](#azure-expressroute)
-- [Azure DNS](#azure-dns)
-  - [Benefits of Azure DNS](#benefits-of-azure-dns)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Scale VMs in Azure](#scale-vms-in-azure)
-  - [Virtual machine scale sets](#virtual-machine-scale-sets)
-  - [Virtual machine availability sets](#virtual-machine-availability-sets)
-  - [Examples of when to use VMs](#examples-of-when-to-use-vms)
-  - [Move to the cloud with VMs (Lift and Shift)](#move-to-the-cloud-with-vms-lift-and-shift)
-  - [VM Resources](#vm-resources)
-- [Create an Azure Virtual Machine](#create-an-azure-virtual-machine)
-- [Azure Virtual Desktop](#azure-virtual-desktop)
-- [Azure Containers](#azure-containers)
-  - [What are containers?](#what-are-containers)
-  - [Azure Container Instances](#azure-container-instances)
-- [Azure Functions](#azure-functions)
-  - [Benefits of Azure Functions](#benefits-of-azure-functions)
-- [Application hosting options](#application-hosting-options)
-- [Azure Virtual Networking](#azure-virtual-networking)
-  - [Isolation and segmentation](#isolation-and-segmentation)
-  - [Internet communications](#internet-communications)
-  - [Communicate between Azure resources](#communicate-between-azure-resources)
-  - [Communicate with on-premises resources](#communicate-with-on-premises-resources)
-  - [Route network traffic](#route-network-traffic)
-  - [Filter network traffic](#filter-network-traffic)
-  - [Connect virtual networks](#connect-virtual-networks)
-- [Azure Virtual Private Networks](#azure-virtual-private-networks)
-  - [VPN gateways](#vpn-gateways)
-    - [High-availability scenarios](#high-availability-scenarios)
-    - [Active/standby](#activestandby)
-    - [Active/active](#activeactive)
-    - [ExpressRoute failover](#expressroute-failover)
-    - [Zone-redundant gateways](#zone-redundant-gateways)
-- [Azure ExpressRoute](#azure-expressroute)
-- [Azure DNS](#azure-dns)
-  - [Benefits of Azure DNS](#benefits-of-azure-dns)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to 002-azure-architecture](./contents.md)
-
 # Scale VMs in Azure
 
  VMs can be grouped together to provide high availability, scalability, and redundancy. Azure can also manage the grouping of VMs for you with features such as scale sets and availability sets.
@@ -211,9 +39,6 @@ When you provision a VM, you’ll also have the chance to pick the resources tha
 -   Storage disks (hard disk drives, solid state drives, etc.)
 -   Networking (virtual network, public IP address, and port configuration)
 
-
-
-
 # Create an Azure Virtual Machine
 
 You could use the Azure portal, the Azure CLI, Azure PowerShell, or an Azure Resource Manager (ARM) template. In this instance, azure cli is used
@@ -250,19 +75,11 @@ You could use the Azure portal, the Azure CLI, Azure PowerShell, or an Azure Res
 
   `--protected-settings '{"commandToExecute": "./configure-nginx.sh
 
-
-
-
-
-
 # Azure Virtual Desktop
 
 Another type of virtual machine is the Azure Virtual Desktop. Azure Virtual Desktop is a desktop and application virtualization service that runs on the cloud. It enables you to use a cloud-hosted version of Windows from any location.
 
 Check out this video [https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/4-virtual-desktop](https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/4-virtual-desktop) to get it's overview.
-
-
-
 
 # Azure Containers
 
@@ -280,8 +97,6 @@ The following video highlights several of the important differences between virt
 ## Azure Container Instances
 
 Azure Container Instances offer the fastest and simplest way to run a container in Azure; without having to manage any virtual machines or adopt any additional services. Azure Container Instances are a platform as a service (PaaS) offering. Azure Container Instances allow you to upload your containers and then the service will run the containers for you.
-
-
 
 # Azure Functions
 
@@ -309,8 +124,6 @@ Azure Container Instances offer the fastest and simplest way to run a container 
 -   There are other hosting options that you can use with Azure, including Azure App Service.
 
 Azure App Service is a robust hosting option that you can use to host your apps in Azure. Azure App Service lets you focus on building and maintaining your app, and Azure focuses on keeping the environment up and running. Azure App Service is an HTTP-based service for hosting web applications, REST APIs, and mobile back ends. It supports multiple languages, including .NET, .NET Core, Java, Ruby, Node.js, PHP, or Python. It also supports both Windows and Linux environments.
-
-
 
 # Azure Virtual Networking
 
@@ -376,8 +189,6 @@ You can link virtual networks together by using virtual network peering. Peering
 
 User-defined routes (UDR) allow you to control the routing tables between subnets within a virtual network or between virtual networks. This allows for greater control over network traffic flow.
 
-
-
 # Azure Virtual Private Networks
 
 A virtual private network (VPN) uses an encrypted tunnel within another network. VPNs are typically deployed to connect two or more trusted private networks to one another over an untrusted network (typically the public internet). Traffic is encrypted while traveling over the untrusted network to prevent eavesdropping or other attacks. VPNs can enable networks to safely and securely share sensitive information.
@@ -415,9 +226,6 @@ Another high-availability option is to configure a VPN gateway as a secure failo
 
 In regions that support availability zones, VPN gateways and ExpressRoute gateways can be deployed in a zone-redundant configuration. This configuration brings resiliency, scalability, and higher availability to virtual network gateways.
 
-
-
-
 # Azure ExpressRoute
 
 Azure ExpressRoute lets you extend your on-premises networks into the Microsoft cloud over a private connection, with the help of a connectivity provider. This connection is called an ExpressRoute Circuit. With ExpressRoute, you can establish connections to Microsoft cloud services, such as Microsoft Azure and Microsoft 365. This allows you to connect offices, datacenters, or other facilities to the Microsoft cloud. Each location would have its own ExpressRoute circuit.
@@ -425,10 +233,6 @@ Azure ExpressRoute lets you extend your on-premises networks into the Microsoft 
 ExpressRoute connections don't go over the public Internet. This allows ExpressRoute connections to offer more reliability, faster speeds, consistent latencies, and higher security than typical connections over the Internet.
 
 There's lot more about it, checkout [https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/11-expressroute](https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/11-expressroute)
-
-
-
-
 
 # Azure DNS
 

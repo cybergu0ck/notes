@@ -1,63 +1,3 @@
-[← Back to trees](./contents.md)
-
-# Contents
-
-- [Trie](#trie)
-  - [Implementation](#implementation)
-  - [Complexity](#complexity)
-  - [Resources](#resources)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Trie](#trie)
-  - [Implementation](#implementation)
-  - [Complexity](#complexity)
-  - [Resources](#resources)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Trie](#trie)
-  - [Implementation](#implementation)
-  - [Complexity](#complexity)
-  - [Resources](#resources)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Trie](#trie)
-  - [Implementation](#implementation)
-  - [Complexity](#complexity)
-  - [Resources](#resources)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to trees](./contents.md)
-
 # Trie
 
 Trie is a specialized, tree-based data structure used to efficiently store and retrieve keys, usually strings.
@@ -96,7 +36,6 @@ class Trie:
             cur = cur.children[c]
         return cur.isEnd
 
-
     def startsWith(self, prefix: str) -> bool:
         cur = self.root
         for c in prefix:
@@ -104,7 +43,6 @@ class Trie:
                 return False
             cur = cur.children[c]
         return True
-
 
 # Your Trie object will be instantiated and called as such:
 # obj = Trie()

@@ -1,55 +1,3 @@
-[← Back to scripting](./contents.md)
-
-# Contents
-
-- [ZSH](#zsh)
-  - [My ZSH Customisations](#my-zsh-customisations)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [ZSH](#zsh)
-  - [My ZSH Customisations](#my-zsh-customisations)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [ZSH](#zsh)
-  - [My ZSH Customisations](#my-zsh-customisations)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [ZSH](#zsh)
-  - [My ZSH Customisations](#my-zsh-customisations)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to scripting](./contents.md)
-
 # ZSH
 
 <br>
@@ -77,7 +25,6 @@
   PROMPT=$'%F{green}%1~/ ${vcs_info_msg_0_} → %f'
 
   # PROMPT="%1~  ${vcs_info_msg_0_}  -> "
-
 
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

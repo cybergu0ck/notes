@@ -1,135 +1,3 @@
-[← Back to oops](./contents.md)
-
-# Contents
-
-- [Encapsulation](#encapsulation)
-  - [C structs](#c-structs)
-  - [C++ structs](#c-structs)
-  - [Acess modifiers](#acess-modifiers)
-  - [Differences between C structs and C++ structs](#differences-between-c-structs-and-c-structs)
-  - [Class](#class)
-    - [C++ Object Model](#c-object-model)
-  - [This pointer](#this-pointer)
-    - [Use cases](#use-cases)
-  - [Member methods](#member-methods)
-    - [Const member methods](#const-member-methods)
-    - [Member Functions Returning This Object](#member-functions-returning-this-object)
-  - [Constructors](#constructors)
-    - [Overloaded Constructors](#overloaded-constructors)
-    - [Compiler Synthesised Constructors](#compiler-synthesised-constructors)
-      - [Initialisation of Class Data Members](#initialisation-of-class-data-members)
-        - [In-class Initialisation](#in-class-initialisation)
-        - [Constructor Initialiser List](#constructor-initialiser-list)
-    - [Delegated Constructors](#delegated-constructors)
-    - [Explicit Constructor](#explicit-constructor)
-  - [Mutable Keywords](#mutable-keywords)
-  - [Seperation of Declaration and Implementation](#seperation-of-declaration-and-implementation)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Encapsulation](#encapsulation)
-  - [C structs](#c-structs)
-  - [C++ structs](#c-structs)
-  - [Acess modifiers](#acess-modifiers)
-  - [Differences between C structs and C++ structs](#differences-between-c-structs-and-c-structs)
-  - [Class](#class)
-    - [C++ Object Model](#c-object-model)
-  - [This pointer](#this-pointer)
-    - [Use cases](#use-cases)
-  - [Member methods](#member-methods)
-    - [Const member methods](#const-member-methods)
-    - [Member Functions Returning This Object](#member-functions-returning-this-object)
-  - [Constructors](#constructors)
-    - [Overloaded Constructors](#overloaded-constructors)
-    - [Compiler Synthesised Constructors](#compiler-synthesised-constructors)
-      - [Initialisation of Class Data Members](#initialisation-of-class-data-members)
-        - [In-class Initialisation](#in-class-initialisation)
-        - [Constructor Initialiser List](#constructor-initialiser-list)
-    - [Delegated Constructors](#delegated-constructors)
-    - [Explicit Constructor](#explicit-constructor)
-  - [Mutable Keywords](#mutable-keywords)
-  - [Seperation of Declaration and Implementation](#seperation-of-declaration-and-implementation)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Encapsulation](#encapsulation)
-  - [C structs](#c-structs)
-  - [C++ structs](#c-structs)
-  - [Acess modifiers](#acess-modifiers)
-  - [Differences between C structs and C++ structs](#differences-between-c-structs-and-c-structs)
-  - [Class](#class)
-    - [C++ Object Model](#c-object-model)
-  - [This pointer](#this-pointer)
-    - [Use cases](#use-cases)
-  - [Member methods](#member-methods)
-    - [Const member methods](#const-member-methods)
-    - [Member Functions Returning This Object](#member-functions-returning-this-object)
-  - [Constructors](#constructors)
-    - [Overloaded Constructors](#overloaded-constructors)
-    - [Compiler Synthesised Constructors](#compiler-synthesised-constructors)
-      - [Initialisation of Class Data Members](#initialisation-of-class-data-members)
-        - [In-class Initialisation](#in-class-initialisation)
-        - [Constructor Initialiser List](#constructor-initialiser-list)
-    - [Delegated Constructors](#delegated-constructors)
-    - [Explicit Constructor](#explicit-constructor)
-  - [Mutable Keywords](#mutable-keywords)
-  - [Seperation of Declaration and Implementation](#seperation-of-declaration-and-implementation)
-
-<br>
-<br>
-<br>
-
-
-
-
-# Contents
-
-- [Encapsulation](#encapsulation)
-  - [C structs](#c-structs)
-  - [C++ structs](#c-structs)
-  - [Acess modifiers](#acess-modifiers)
-  - [Differences between C structs and C++ structs](#differences-between-c-structs-and-c-structs)
-  - [Class](#class)
-    - [C++ Object Model](#c-object-model)
-  - [This pointer](#this-pointer)
-    - [Use cases](#use-cases)
-  - [Member methods](#member-methods)
-    - [Const member methods](#const-member-methods)
-    - [Member Functions Returning This Object](#member-functions-returning-this-object)
-  - [Constructors](#constructors)
-    - [Overloaded Constructors](#overloaded-constructors)
-    - [Compiler Synthesised Constructors](#compiler-synthesised-constructors)
-      - [Initialisation of Class Data Members](#initialisation-of-class-data-members)
-        - [In-class Initialisation](#in-class-initialisation)
-        - [Constructor Initialiser List](#constructor-initialiser-list)
-    - [Delegated Constructors](#delegated-constructors)
-    - [Explicit Constructor](#explicit-constructor)
-  - [Mutable Keywords](#mutable-keywords)
-  - [Seperation of Declaration and Implementation](#seperation-of-declaration-and-implementation)
-
-<br>
-<br>
-<br>
-
-
-
-
-[← Back to oops](./contents.md)
-
 # Encapsulation
 
 Encapsulation is a method of wrapping up the data and code acting on the data into a single unit.
@@ -213,8 +81,6 @@ private:  //supports access specifier, it is "public" by default
 - C++ provides Encapsulation through extended structs.
 - C++ follows a **data centric approach** and lays more emphasis on data and cares less for functions.
 
-
-
 <br>
 <br>
 <br>
@@ -226,8 +92,6 @@ C++ provides three kinds of access modifiers:
 1. public : accessible anywhere
 1. private : accessible only by members or friends of the class.
 1. protected : accessible by members of the class and members of derived class and friends of the class.(not accesible by objects of base and derived classes!)
-
-
 
 - The member methods in the class declaration always has access to to the member attributes!
 
@@ -468,11 +332,9 @@ int main()
 //100
 ```
 
-
 <br>
 <br>
 <br>
-
 
 ## Constructors
 
@@ -866,7 +728,6 @@ _`mutable` keyword is used to modify the behavior of a non-static data member of
   #include "account.h"   //include the header!
   using namespace std;
 
-
   void Account::set_balance(double bal) {
       balance = bal;
   }
@@ -874,7 +735,6 @@ _`mutable` keyword is used to modify the behavior of a non-static data member of
   double Account::get_balance() {
       return balance;
   }
-
 
   int main()
   {
