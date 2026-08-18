@@ -1,3 +1,18 @@
+[← Back to corey-schafer-tutorial](./contents.md)
+
+# Contents
+
+- [Installing django](#installing-django)
+- [django admin](#django-admin)
+- [Starting a django project](#starting-a-django-project)
+- [Running a local server](#running-a-local-server)
+
+<br>
+<br>
+<br>
+
+
+
 ## Installing django
 
 - Create a virtual environment for the django project and install django using

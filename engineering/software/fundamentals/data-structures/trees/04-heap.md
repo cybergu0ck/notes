@@ -1,3 +1,25 @@
+[← Back to trees](./contents.md)
+
+# Contents
+
+- [Heap](#heap)
+  - [Max Heap](#max-heap)
+  - [Min Heap](#min-heap)
+  - [Implementation](#implementation)
+    - [Sift up algorithm](#sift-up-algorithm)
+    - [Sift down algorithm](#sift-down-algorithm)
+    - [Floyds construction algorithm](#floyds-construction-algorithm)
+  - [Python's Heapq Module](#pythons-heapq-module)
+    - [Using heapq module for max heap](#using-heapq-module-for-max-heap)
+  - [Complexity](#complexity)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
 # Heap
 
 _Heap is an array based datasructure visualised as a [complete binary tree](./binary-tree.md#complete-binary-tree) in which the parent nodes have values greater or lesser than the values of the children, based on wether it is max or min heap respectively._

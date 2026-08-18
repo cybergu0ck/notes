@@ -1,3 +1,16 @@
+[← Back to data-types](./contents.md)
+
+# Contents
+
+- [Characters](#characters)
+  - [Character encoding](#character-encoding)
+
+<br>
+<br>
+<br>
+
+
+
 # Characters
 
 <br>

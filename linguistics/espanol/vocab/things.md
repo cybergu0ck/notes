@@ -1,3 +1,16 @@
+[← Back to vocab](./contents.md)
+
+# Contents
+
+- [Miscallaneous](#miscallaneous)
+  - [Things](#things)
+
+<br>
+<br>
+<br>
+
+
+
 # Miscallaneous
 
 | English      | Espanol      |

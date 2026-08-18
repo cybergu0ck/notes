@@ -1,3 +1,26 @@
+[← Back to oops](./contents.md)
+
+# Contents
+
+  - [Class definition syntax](#class-definition-syntax)
+  - [Class Objects](#class-objects)
+  - [Instance Objects](#instance-objects)
+  - [Method Objects](#method-objects)
+  - [Class and Instance Variables](#class-and-instance-variables)
+- [Class methods, Instance methods and Static methods](#class-methods-instance-methods-and-static-methods)
+    - [1. Instance Methods](#1-instance-methods)
+    - [2. Class Methods](#2-class-methods)
+    - [3. Static Methods](#3-static-methods)
+    - [Difference between Static Method and Class Method](#difference-between-static-method-and-class-method)
+    - [dir function](#dir-function)
+  - [Random Remarks](#random-remarks)
+
+<br>
+<br>
+<br>
+
+
+
 ## Class definition syntax
 
 ```python

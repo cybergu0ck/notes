@@ -1,3 +1,17 @@
+[← Back to complexity](./contents.md)
+
+# Contents
+
+- [Complexity](#complexity)
+    - [Why halving algorithms have logarithmic runtime](#why-halving-algorithms-have-logarithmic-runtime)
+      - [proof](#proof)
+
+<br>
+<br>
+<br>
+
+
+
 # Complexity
 
 ### Why halving algorithms have logarithmic runtime

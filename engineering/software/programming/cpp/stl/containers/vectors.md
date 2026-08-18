@@ -1,3 +1,26 @@
+[← Back to containers](./contents.md)
+
+# Contents
+
+- [Vectors](#vectors)
+  - [Initialization](#initialization)
+  - [Arrays vs std::vetors](#arrays-vs-stdvetors)
+  - [Methods](#methods)
+    - [Access](#access)
+    - [Search](#search)
+    - [Insertion](#insertion)
+    - [Deletion](#deletion)
+    - [Modification](#modification)
+    - [Sorting](#sorting)
+      - [Comparator function](#comparator-function)
+    - [Miscallaneous](#miscallaneous)
+
+<br>
+<br>
+<br>
+
+
+
 # Vectors
 
 A std::vector is a class that represents a dynamic arrays.

@@ -1,3 +1,24 @@
+[← Back to sequence-types](./contents.md)
+
+# Contents
+
+- [Lists](#lists)
+  - [Creating lists](#creating-lists)
+  - [Inserting Items](#inserting-items)
+  - [Accessing Items](#accessing-items)
+  - [Deleting list Items](#deleting-list-items)
+  - [Sorting lists](#sorting-lists)
+  - [Unpacking list](#unpacking-list)
+  - [List comphrehension](#list-comphrehension)
+  - [List replication](#list-replication)
+  - [List methods](#list-methods)
+
+<br>
+<br>
+<br>
+
+
+
 # Lists
 
 - lists are mutable.

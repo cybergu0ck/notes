@@ -1,3 +1,24 @@
+[← Back to fundamentals](./contents.md)
+
+# Contents
+
+- [Build Process](#build-process)
+  - [Preprocessing](#preprocessing)
+      - [Preprocessor Directive](#preprocessor-directive)
+  - [Compilation](#compilation)
+  - [Linking](#linking)
+  - [Library Linking](#library-linking)
+    - [Static Linking](#static-linking)
+    - [Implicit dynamic linking](#implicit-dynamic-linking)
+    - [Explicit dynamic linking](#explicit-dynamic-linking)
+    - [Types of lib files](#types-of-lib-files)
+
+<br>
+<br>
+<br>
+
+
+
 # Build Process
 
 [Header files](./cpp-specific-features/cpp-headers.md) typically contain declarations, including function prototypes, class definitions, constants, and type definitions.

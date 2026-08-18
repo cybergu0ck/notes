@@ -1,3 +1,18 @@
+[← Back to z-misc](./contents.md)
+
+# Contents
+
+- [`dir()`](#dir)
+- [`isinstance()`](#isinstance)
+- [`Counter()`](#counter)
+- [`divmod()`](#divmod)
+
+<br>
+<br>
+<br>
+
+
+
 # `dir()`
 
 ---

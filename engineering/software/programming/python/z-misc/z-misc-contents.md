@@ -1,3 +1,17 @@
+[← Back to z-misc](./contents.md)
+
+# Contents
+
+- [z-misc](#z-misc)
+  - [Files](#files)
+  - [Subdirectories](#subdirectories)
+
+<br>
+<br>
+<br>
+
+
+
 # z-misc
 
 ## Files

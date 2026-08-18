@@ -1,3 +1,21 @@
+[← Back to modules](./contents.md)
+
+# Contents
+
+- [Module](#module)
+- [Package](#package)
+  - [Regular Package](#regular-package)
+  - [Namespace Package](#namespace-package)
+- [Namespaces](#namespaces)
+- [Relative Imports](#relative-imports)
+- [Import module from different directory using the sys module](#import-module-from-different-directory-using-the-sys-module)
+
+<br>
+<br>
+<br>
+
+
+
 # Module
 
 * Every single python file is called a module.  

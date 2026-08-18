@@ -1,3 +1,17 @@
+[← Back to electrical](./contents.md)
+
+# Contents
+
+- [Electrical Fan](#electrical-fan)
+  - [Capacitor in Ceiling Fan](#capacitor-in-ceiling-fan)
+  - [References](#references)
+
+<br>
+<br>
+<br>
+
+
+
 # Electrical Fan
 
 <br>

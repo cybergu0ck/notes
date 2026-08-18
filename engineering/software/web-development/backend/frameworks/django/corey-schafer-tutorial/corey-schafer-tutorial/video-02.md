@@ -1,3 +1,16 @@
+[← Back to corey-schafer-tutorial](./contents.md)
+
+# Contents
+
+- [Creating App](#creating-app)
+  - [Creating Views](#creating-views)
+
+<br>
+<br>
+<br>
+
+
+
 # Creating App
 
 In a django project we can create multiple apps. This creates modularity.

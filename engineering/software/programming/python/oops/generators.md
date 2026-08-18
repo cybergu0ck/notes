@@ -1,3 +1,16 @@
+[← Back to oops](./contents.md)
+
+# Contents
+
+- [Generators](#generators)
+  - [Generator expressions](#generator-expressions)
+
+<br>
+<br>
+<br>
+
+
+
 # Generators
 
 [Generators](https://docs.python.org/3/glossary.html#term-generator) are a simple and powerful tool for creating iterators. They are written like regular functions but use the [`yield`](https://docs.python.org/3/reference/simple_stmts.html#yield) statement whenever they want to return data. Each time [`next()`](https://docs.python.org/3/library/functions.html#next "next") is called on it, the generator resumes where it left off (it remembers all the data values and which statement was last executed).

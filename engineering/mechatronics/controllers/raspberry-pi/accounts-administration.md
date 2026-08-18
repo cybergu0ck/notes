@@ -1,3 +1,16 @@
+[← Back to raspberry-pi](./contents.md)
+
+# Contents
+
+- [Create a user account](#create-a-user-account)
+- [Delete a user account](#delete-a-user-account)
+
+<br>
+<br>
+<br>
+
+
+
 # Create a user account
 
 - ```sh

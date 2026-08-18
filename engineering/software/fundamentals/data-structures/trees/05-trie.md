@@ -1,3 +1,18 @@
+[← Back to trees](./contents.md)
+
+# Contents
+
+- [Trie](#trie)
+  - [Implementation](#implementation)
+  - [Complexity](#complexity)
+  - [Resources](#resources)
+
+<br>
+<br>
+<br>
+
+
+
 # Trie
 
 Trie is a specialized, tree-based data structure used to efficiently store and retrieve keys, usually strings.

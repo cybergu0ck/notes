@@ -1,3 +1,18 @@
+[← Back to 01-primitive-data-types](./contents.md)
+
+# Contents
+
+- [String](#string)
+  - [Difference between string and character array](#difference-between-string-and-character-array)
+  - [Methods](#methods)
+    - [Element Access](#element-access)
+
+<br>
+<br>
+<br>
+
+
+
 # String
 
 ## Difference between string and character array

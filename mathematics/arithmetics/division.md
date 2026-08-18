@@ -1,3 +1,18 @@
+[← Back to arithmetics](./contents.md)
+
+# Contents
+
+- [Eculidean Division (Integer Division)](#eculidean-division-integer-division)
+  - [Terminology](#terminology)
+  - [Illustration](#illustration)
+- [Decimal Devision](#decimal-devision)
+
+<br>
+<br>
+<br>
+
+
+
 # Eculidean Division (Integer Division)
 
 <br>

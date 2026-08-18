@@ -1,3 +1,17 @@
+[← Back to oops](./contents.md)
+
+# Contents
+
+  - [Understanding super()](#understanding-super)
+- [Multiple Inheritance](#multiple-inheritance)
+  - [Method Resolution Order (MRO)](#method-resolution-order-mro)
+
+<br>
+<br>
+<br>
+
+
+
 ### Understanding super() 
 
 The super() builtin returns a proxy object (temporary object of the superclass) that allows us to access methods of the base class.

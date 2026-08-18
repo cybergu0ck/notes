@@ -1,3 +1,22 @@
+[← Back to 002-azure-architecture](./contents.md)
+
+# Contents
+
+  - [What can I do with Azure?](#what-can-i-do-with-azure)
+- [Azure Accounts](#azure-accounts)
+- [Azure physical infrastructure](#azure-physical-infrastructure)
+- [Azure Management Infrastructure](#azure-management-infrastructure)
+  - [Azure resources and resource groups](#azure-resources-and-resource-groups)
+  - [Azure subscriptions](#azure-subscriptions)
+  - [Create additional Azure subscriptions](#create-additional-azure-subscriptions)
+  - [Azure management groups](#azure-management-groups)
+
+<br>
+<br>
+<br>
+
+
+
 ## What can I do with Azure?
 
 -   Azure provides more than 100 services that enable you to do everything from running your existing applications on virtual machines to exploring new software paradigms, such as intelligent bots and mixed reality.

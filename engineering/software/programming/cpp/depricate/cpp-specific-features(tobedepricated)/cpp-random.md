@@ -1,3 +1,19 @@
+[← Back to cpp-specific-features(tobedepricated)](./contents.md)
+
+# Contents
+
+- [padding](#padding)
+- [Syntax Errors](#syntax-errors)
+- [Semantic Errors](#semantic-errors)
+- [Linker Errors](#linker-errors)
+- [Logic Errors](#logic-errors)
+
+<br>
+<br>
+<br>
+
+
+
 # padding
 
 - In C++, padding refers to the practice of adding extra bytes to a structure or class in order to align its members on specific memory boundaries.

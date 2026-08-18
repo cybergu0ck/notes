@@ -1,3 +1,23 @@
+[← Back to jetpack-compose](./contents.md)
+
+# Contents
+
+- [Seperation of concerns](#seperation-of-concerns)
+- [Model driven UI](#model-driven-ui)
+- [Unidirectional data flow](#unidirectional-data-flow)
+- [Data Layer](#data-layer)
+- [UI Layer](#ui-layer)
+  - [UI State](#ui-state)
+  - [View Model](#view-model)
+- [UI Elements](#ui-elements)
+- [Illustration](#illustration)
+
+<br>
+<br>
+<br>
+
+
+
 ## Seperation of concerns
 
 The separation of concerns is a design principle where the app is divided into classes, files, packages, modules and layers that have clearly defined responsibilities and boundaries.

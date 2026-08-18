@@ -1,3 +1,16 @@
+[← Back to oops](./contents.md)
+
+# Contents
+
+- [Encapsulation](#encapsulation)
+    - [Name Mangling](#name-mangling)
+
+<br>
+<br>
+<br>
+
+
+
 # Encapsulation
 
 - Using OOP in Python, we can restrict access to methods and variables. This prevents data from direct modification which is called encapsulation.

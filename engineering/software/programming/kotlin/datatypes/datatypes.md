@@ -1,3 +1,24 @@
+[← Back to datatypes](./contents.md)
+
+# Contents
+
+- [Type inference](#type-inference)
+- [Explicit typing](#explicit-typing)
+- [Data types](#data-types)
+  - [Nullability](#nullability)
+    - [Nullable types](#nullable-types)
+    - [Non-nullable types](#non-nullable-types)
+  - [Handling nullable variables](#handling-nullable-variables)
+    - [Safe call operator](#safe-call-operator)
+    - [Not null assertion operator](#not-null-assertion-operator)
+    - [Elvis operator](#elvis-operator)
+
+<br>
+<br>
+<br>
+
+
+
 # Type inference
 
 **_Type inference_** refers to the ability of the compiler to deduce the type of a value based on the context in which it is used.

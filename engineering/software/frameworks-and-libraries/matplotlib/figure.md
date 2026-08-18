@@ -1,3 +1,22 @@
+[← Back to matplotlib](./contents.md)
+
+# Contents
+
+- [Figure](#figure)
+  - [Anatomy of figure](#anatomy-of-figure)
+  - [Axes](#axes)
+  - [Spines](#spines)
+  - [Axis](#axis)
+  - [Artist](#artist)
+  - [Zorder](#zorder)
+  - [Backends](#backends)
+
+<br>
+<br>
+<br>
+
+
+
 # Figure
 
 Figure is the top level component for all the plot elements.

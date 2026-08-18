@@ -1,3 +1,33 @@
+[← Back to old_container_notes](./contents.md)
+
+# Contents
+
+- [Initialisation](#initialisation)
+- [Criteria for key](#criteria-for-key)
+  - [Criteria for a key in map](#criteria-for-a-key-in-map)
+  - [Criteria for a key in unordered map](#criteria-for-a-key-in-unordered-map)
+- [Methods](#methods)
+  - [Adding elements](#adding-elements)
+  - [Accessing elements](#accessing-elements)
+  - [Finding elements](#finding-elements)
+  - [Removing elements](#removing-elements)
+  - [Number of elements](#number-of-elements)
+  - [Emptyness](#emptyness)
+  - [Equality](#equality)
+  - [Sorting elements](#sorting-elements)
+  - [List of map's values](#list-of-maps-values)
+- [Types of STL Maps](#types-of-stl-maps)
+  - [Illustration](#illustration)
+  - [Implementation Details](#implementation-details)
+  - [Time Complexities](#time-complexities)
+  - [Space Complexities](#space-complexities)
+
+<br>
+<br>
+<br>
+
+
+
 # Initialisation
 
 ```cpp

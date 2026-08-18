@@ -1,3 +1,18 @@
+[← Back to 01-js-fundamentals](./contents.md)
+
+# Contents
+
+- [Data Types](#data-types)
+- [string](#string)
+  - [String concatenation](#string-concatenation)
+  - [String methods](#string-methods)
+
+<br>
+<br>
+<br>
+
+
+
 # Data Types
 
 - There are eight basic data types in js:

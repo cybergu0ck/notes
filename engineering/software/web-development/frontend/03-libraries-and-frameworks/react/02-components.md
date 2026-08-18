@@ -1,3 +1,21 @@
+[← Back to react](./contents.md)
+
+# Contents
+
+- [React Components](#react-components)
+  - [Component](#component)
+    - [Functional Component](#functional-component)
+  - [Component Instance](#component-instance)
+  - [React Element](#react-element)
+  - [Guidelines for creating components](#guidelines-for-creating-components)
+    - [Seperation of concerns](#seperation-of-concerns)
+
+<br>
+<br>
+<br>
+
+
+
 # React Components
 
 <br>

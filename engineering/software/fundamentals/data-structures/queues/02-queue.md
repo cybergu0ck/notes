@@ -1,3 +1,16 @@
+[← Back to queues](./contents.md)
+
+# Contents
+
+- [Queue](#queue)
+  - [Implementation](#implementation)
+
+<br>
+<br>
+<br>
+
+
+
 # Queue
 
 Queue follows the First In First Out (FIFO) rule - the item that goes in first is the item that comes out first.

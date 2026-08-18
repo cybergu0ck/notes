@@ -1,3 +1,25 @@
+[← Back to behavioural](./contents.md)
+
+# Contents
+
+- [Strategy Pattern](#strategy-pattern)
+  - [Theory](#theory)
+    - [Components](#components)
+    - [Applicability](#applicability)
+    - [Advantages](#advantages)
+    - [Disadvantages](#disadvantages)
+  - [Application](#application)
+    - [Components](#components)
+    - [Applicability](#applicability)
+    - [Advantages](#advantages)
+    - [Disadvantages](#disadvantages)
+
+<br>
+<br>
+<br>
+
+
+
 # Strategy Pattern
 
 <br>

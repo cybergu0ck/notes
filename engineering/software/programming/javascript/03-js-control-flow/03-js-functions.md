@@ -1,3 +1,21 @@
+[← Back to 03-js-control-flow](./contents.md)
+
+# Contents
+
+- [Syntax for writing functions in js](#syntax-for-writing-functions-in-js)
+- [Function parameters](#function-parameters)
+  - [Optional parameters](#optional-parameters)
+  - [Default paramters](#default-paramters)
+- [Anonymous functions](#anonymous-functions)
+    - [Illustration of using anonymous fucntions as parameters](#illustration-of-using-anonymous-fucntions-as-parameters)
+- [Arrow functions](#arrow-functions)
+
+<br>
+<br>
+<br>
+
+
+
 # Syntax for writing functions in js
 
 ```js

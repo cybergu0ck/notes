@@ -1,3 +1,20 @@
+[← Back to 01-sql](./contents.md)
+
+# Contents
+
+- [Comments in SQL](#comments-in-sql)
+- [Creating Database](#creating-database)
+- [Delete Database](#delete-database)
+- [Using the Databse](#using-the-databse)
+- [Create Tables](#create-tables)
+- [Inserting values into a table](#inserting-values-into-a-table)
+
+<br>
+<br>
+<br>
+
+
+
 # Comments in SQL
 
 - single line comments using `-- comment`

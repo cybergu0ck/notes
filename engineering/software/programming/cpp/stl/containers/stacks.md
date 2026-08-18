@@ -1,3 +1,23 @@
+[← Back to containers](./contents.md)
+
+# Contents
+
+- [Stacks](#stacks)
+  - [Initialisation](#initialisation)
+  - [Methods](#methods)
+    - [Access](#access)
+    - [Search](#search)
+    - [Insertion](#insertion)
+    - [Deletion](#deletion)
+    - [Modification](#modification)
+    - [Miscallaneous](#miscallaneous)
+
+<br>
+<br>
+<br>
+
+
+
 # Stacks
 
 A std::stack is a container adapter that provides stack functionality.

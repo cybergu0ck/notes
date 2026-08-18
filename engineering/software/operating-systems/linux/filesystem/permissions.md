@@ -1,3 +1,18 @@
+[← Back to filesystem](./contents.md)
+
+# Contents
+
+- [Permissions](#permissions)
+  - [Chmod command](#chmod-command)
+    - [Permissions in the form of bits](#permissions-in-the-form-of-bits)
+  - [Chown command](#chown-command)
+
+<br>
+<br>
+<br>
+
+
+
 # Permissions
 
 The first letter tells us if it is a directory or a file,

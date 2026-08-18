@@ -1,3 +1,16 @@
+[← Back to algebra](./contents.md)
+
+# Contents
+
+- [algebra](#algebra)
+  - [Files](#files)
+
+<br>
+<br>
+<br>
+
+
+
 # algebra
 
 ## Files

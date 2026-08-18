@@ -1,3 +1,17 @@
+[← Back to computer-vision](./contents.md)
+
+# Contents
+
+- [Morphological Operations](#morphological-operations)
+  - [Erosion](#erosion)
+  - [Dilation](#dilation)
+
+<br>
+<br>
+<br>
+
+
+
 # Morphological Operations
 
 Similar to spatial filtering, the structuring element is moved across every pixel in the original image to give a pixel in a new processed image.

@@ -1,3 +1,16 @@
+[← Back to latex](./contents.md)
+
+# Contents
+
+- [Equations](#equations)
+- [Equations with glossaries](#equations-with-glossaries)
+
+<br>
+<br>
+<br>
+
+
+
 # Equations
 
 - An example code showing the syntax to write equations.

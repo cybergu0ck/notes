@@ -1,3 +1,19 @@
+[← Back to fundamentals](./contents.md)
+
+# Contents
+
+- [Name mangling](#name-mangling)
+  - [Cpp naming convention](#cpp-naming-convention)
+  - [Raw names and decorated names](#raw-names-and-decorated-names)
+  - [C naming convention](#c-naming-convention)
+  - [Nuances with naming conventions](#nuances-with-naming-conventions)
+
+<br>
+<br>
+<br>
+
+
+
 # Name mangling
 
 Name mangling is the process by which a compiler transforms a human-readable symbol name into a unique, encoded identifier that includes additional information required for correct linking.

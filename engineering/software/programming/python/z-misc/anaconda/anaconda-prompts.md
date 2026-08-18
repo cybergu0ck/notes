@@ -1,3 +1,16 @@
+[← Back to anaconda](./contents.md)
+
+# Contents
+
+- [Creating an environment using anaconda prompt](#creating-an-environment-using-anaconda-prompt)
+- [Activating an environment](#activating-an-environment)
+
+<br>
+<br>
+<br>
+
+
+
 #### Creating an environment using anaconda prompt
 ---
 

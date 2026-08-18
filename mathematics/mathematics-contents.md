@@ -1,3 +1,16 @@
+[← Back to mathematics](./contents.md)
+
+# Contents
+
+- [mathematics](#mathematics)
+  - [Subdirectories](#subdirectories)
+
+<br>
+<br>
+<br>
+
+
+
 # mathematics
 
 ## Subdirectories

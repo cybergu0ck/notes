@@ -1,3 +1,17 @@
+[← Back to numeric-types](./contents.md)
+
+# Contents
+
+- [Float](#float)
+    - [`math.ceil()`](#mathceil)
+    - [`math.floor()`](#mathfloor)
+
+<br>
+<br>
+<br>
+
+
+
 # Float
 
 ### `math.ceil()`

@@ -1,3 +1,22 @@
+[← Back to 001-cloud-computing](./contents.md)
+
+# Contents
+
+- [High availability](#high-availability)
+- [Scalability](#scalability)
+- [Reliability](#reliability)
+- [Predictability](#predictability)
+- [Governance](#governance)
+- [Security](#security)
+- [Management of the cloud](#management-of-the-cloud)
+- [Management in the cloud](#management-in-the-cloud)
+
+<br>
+<br>
+<br>
+
+
+
 ## High availability
 
  High availability focuses on ensuring maximum availability, regardless of disruptions or events that may occur.

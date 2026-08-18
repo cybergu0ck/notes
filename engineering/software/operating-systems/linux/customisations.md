@@ -1,3 +1,16 @@
+[← Back to linux](./contents.md)
+
+# Contents
+
+- [Linux customisations](#linux-customisations)
+  - [Modifying default directory paths](#modifying-default-directory-paths)
+
+<br>
+<br>
+<br>
+
+
+
 # Linux customisations
 
 <br>

@@ -1,3 +1,18 @@
+[← Back to depricate](./contents.md)
+
+# Contents
+
+- [Depricate](#depricate)
+- [string streams](#string-streams)
+  - [Reading from string streams](#reading-from-string-streams)
+  - [Writing to string streams](#writing-to-string-streams)
+
+<br>
+<br>
+<br>
+
+
+
 # Depricate
 
 <!-- TODO - depricate the following notes -->
