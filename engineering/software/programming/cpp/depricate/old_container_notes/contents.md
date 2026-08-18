@@ -1,4 +1,4 @@
-[← Back to depricate](../depricate)
+[← Back to depricate](../contents)
 
 # old_container_notes
 
@@ -17,3 +17,5 @@
 - [07-queue.md](07-queue.md)
 
 - [08-priority-queue.md](08-priority-queue.md)
+
+- [contents.md](contents.md)

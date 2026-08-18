@@ -1,13 +1,11 @@
-[← Back to python](../python)
+[← Back to python](../contents)
 
 # datatypes
 
-## Subdirectories
+- [numeric-types](numeric-types/contents)
 
-- [map-types](map-types/map-types)
+- [set-types](set-types/contents)
 
-- [numeric-types](numeric-types/numeric-types)
+- [sequence-types](sequence-types/contents)
 
-- [sequence-types](sequence-types/sequence-types)
-
-- [set-types](set-types/set-types)
+- [map-types](map-types/contents)

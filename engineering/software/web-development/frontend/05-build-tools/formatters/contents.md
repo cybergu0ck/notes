@@ -1,8 +1,10 @@
-[← Back to 05-build-tools](../05-build-tools)
+[← Back to 05-build-tools](../contents)
 
 # formatters
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [formatters-contents.md](formatters-contents.md)
 

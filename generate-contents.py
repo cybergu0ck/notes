@@ -168,7 +168,7 @@ def build_index_for_directory(current_path, root_path, level=2):
     if current_path != root_path:
         parent = current_path.parent
         # Links now point to the parent's -contents.md file
-        parent_index = f"../{parent.name}"
+        parent_index = f"../contents"
         lines.append(f"[← Back to {parent.name}]({parent_index})\n")
 
     lines.append(f"# {current_path.name}\n")
@@ -202,7 +202,7 @@ def build_index_for_directory(current_path, root_path, level=2):
             if name in subdir_by_name:
                 subdir = subdir_by_name[name]
                 emitted_any = True
-                subdir_index = f"{subdir.name}/{subdir.name}"
+                subdir_index = f"{subdir.name}/contents"
                 lines.append(f"- [{subdir.name}]({subdir_index})\n")
                 continue
 

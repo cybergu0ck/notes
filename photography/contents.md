@@ -1,8 +1,10 @@
-[← Back to notes](../notes)
+[← Back to notes](../contents)
 
 # photography
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [exposure.md](exposure.md)
 

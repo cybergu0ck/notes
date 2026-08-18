@@ -1,6 +1,10 @@
-[← Back to software](../software)
+[← Back to software](../contents)
 
 # networking
+
+## Files
+
+- [contents.md](contents.md)
 
 ## Subdirectories
 

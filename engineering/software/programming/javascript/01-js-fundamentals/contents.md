@@ -1,4 +1,4 @@
-[← Back to javascript](../javascript)
+[← Back to javascript](../contents)
 
 # 01-js-fundamentals
 
@@ -11,6 +11,8 @@
 - [03-js-datatypes.md](03-js-datatypes.md)
 
 - [05-type-casating.md](05-type-casating.md)
+
+- [contents.md](contents.md)
 
 ## Subdirectories
 

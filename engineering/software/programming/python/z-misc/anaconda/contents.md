@@ -1,4 +1,4 @@
-[← Back to z-misc](../z-misc)
+[← Back to z-misc](../contents)
 
 # anaconda
 
@@ -7,3 +7,5 @@
 - [anaconda-contents.md](anaconda-contents.md)
 
 - [anaconda-prompts.md](anaconda-prompts.md)
+
+- [contents.md](contents.md)

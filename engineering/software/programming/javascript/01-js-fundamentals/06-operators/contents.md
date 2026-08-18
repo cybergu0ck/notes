@@ -1,8 +1,10 @@
-[← Back to 01-js-fundamentals](../01-js-fundamentals)
+[← Back to 01-js-fundamentals](../contents)
 
 # 06-operators
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [js-arithmetic-operators.md](js-arithmetic-operators.md)
 

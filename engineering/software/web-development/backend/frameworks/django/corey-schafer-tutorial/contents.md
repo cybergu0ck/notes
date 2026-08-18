@@ -1,8 +1,10 @@
-[← Back to django](../django)
+[← Back to django](../contents)
 
 # corey-schafer-tutorial
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [corey-schafer-tutorial-contents.md](corey-schafer-tutorial-contents.md)
 

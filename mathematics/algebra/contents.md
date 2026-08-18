@@ -1,10 +1,12 @@
-[← Back to mathematics](../mathematics)
+[← Back to mathematics](../contents)
 
 # algebra
 
 ## Files
 
 - [algebra-contents.md](algebra-contents.md)
+
+- [contents.md](contents.md)
 
 - [graphs.md](graphs.md)
 

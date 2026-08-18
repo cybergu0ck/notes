@@ -1,4 +1,4 @@
-[← Back to android-development](../android-development)
+[← Back to android-development](../contents)
 
 # jetpack-compose
 
@@ -7,6 +7,8 @@
 - [activity-lifecycle.md](activity-lifecycle.md)
 
 - [architecture.md](architecture.md)
+
+- [contents.md](contents.md)
 
 - [introduction.md](introduction.md)
 

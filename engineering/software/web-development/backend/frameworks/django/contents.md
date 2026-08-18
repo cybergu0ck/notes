@@ -1,4 +1,4 @@
-[← Back to frameworks](../frameworks)
+[← Back to frameworks](../contents)
 
 # django
 
@@ -7,6 +7,8 @@
 - [01-fundamentals.md](01-fundamentals.md)
 
 - [02-apps.md](02-apps.md)
+
+- [contents.md](contents.md)
 
 - [django-contents.md](django-contents.md)
 

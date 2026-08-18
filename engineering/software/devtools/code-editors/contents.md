@@ -1,10 +1,12 @@
-[← Back to devtools](../devtools)
+[← Back to devtools](../contents)
 
 # code-editors
 
 ## Files
 
 - [colab.md](colab.md)
+
+- [contents.md](contents.md)
 
 - [jupyter.md](jupyter.md)
 

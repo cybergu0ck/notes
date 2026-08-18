@@ -1,6 +1,10 @@
-[← Back to fundamentals](../fundamentals)
+[← Back to fundamentals](../contents)
 
 # design-patterns
+
+## Files
+
+- [contents.md](contents.md)
 
 ## Subdirectories
 

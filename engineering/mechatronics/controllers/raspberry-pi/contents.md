@@ -1,4 +1,4 @@
-[← Back to controllers](../controllers)
+[← Back to controllers](../contents)
 
 # raspberry-pi
 
@@ -7,5 +7,7 @@
 - [accounts-administration.md](accounts-administration.md)
 
 - [basic-commands.md](basic-commands.md)
+
+- [contents.md](contents.md)
 
 - [networking.md](networking.md)

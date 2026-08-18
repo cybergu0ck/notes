@@ -1,8 +1,10 @@
-[← Back to z-misc](../z-misc)
+[← Back to z-misc](../contents)
 
 # pip
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [pip-contents.md](pip-contents.md)
 

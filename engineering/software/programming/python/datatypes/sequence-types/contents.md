@@ -1,11 +1,9 @@
-[← Back to datatypes](../datatypes)
+[← Back to datatypes](../contents)
 
 # sequence-types
 
-## Files
+- [strings](strings.md)
 
-- [02-text-type.md](02-text-type.md)
+- [lists](lists.md)
 
-- [lists.md](lists.md)
-
-- [tuples.md](tuples.md)
+- [tuples](tuples.md)

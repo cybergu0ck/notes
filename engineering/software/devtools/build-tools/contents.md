@@ -1,6 +1,10 @@
-[← Back to devtools](../devtools)
+[← Back to devtools](../contents)
 
 # build-tools
+
+## Files
+
+- [contents.md](contents.md)
 
 ## Subdirectories
 

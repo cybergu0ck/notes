@@ -1,21 +1,17 @@
-[← Back to software](../software)
+[← Back to software](../contents)
 
 # programming
 
-## Files
+- [programming](programming.md)
 
-- [good-practices.md](good-practices.md)
+- [good-practices](good-practices.md)
 
-- [programming.md](programming.md)
+- [cpp](cpp/contents)
 
-## Subdirectories
+- [python](python/contents)
 
-- [cpp](cpp/cpp)
+- [javascript](javascript/contents)
 
-- [javascript](javascript/javascript)
+- [kotlin](kotlin/contents)
 
-- [kotlin](kotlin/kotlin)
-
-- [latex](latex/latex)
-
-- [python](python/python)
+- [latex](latex/contents)

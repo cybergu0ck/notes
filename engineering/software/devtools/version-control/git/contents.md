@@ -1,4 +1,4 @@
-[← Back to version-control](../version-control)
+[← Back to version-control](../contents)
 
 # git
 
@@ -23,3 +23,5 @@
 - [09-collaborative-work.md](09-collaborative-work.md)
 
 - [10-customizations.md](10-customizations.md)
+
+- [contents.md](contents.md)

@@ -1,8 +1,10 @@
-[← Back to linux](../linux)
+[← Back to linux](../contents)
 
 # basics
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [linux-command.md](linux-command.md)
 

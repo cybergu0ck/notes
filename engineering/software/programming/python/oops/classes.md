@@ -11,6 +11,7 @@
     - [3. Static Methods](#3-static-methods)
     - [Difference between Static Method and Class Method](#difference-between-static-method-and-class-method)
     - [dir function](#dir-function)
+  - [Random Remarks](#random-remarks)
 
 <br>
 <br>
@@ -91,7 +92,6 @@ The only operations understood by **_instance objects_** are **_attribute refere
    ```
 
 2. A **_method_** is a function that “belongs to” an object. (In Python, the term method is not unique to class instances: other object types can have methods as well. For example, list objects have methods called append, insert, remove, sort, and so on.
-
    - Valid method names of an instance object depend on its class. By definition, all attributes of a class that are function objects define corresponding methods of its instances.
 
    - So in our example, `x.f` is a valid method reference, since `MyClass.f` is a function, but `x.i` is not, since `MyClass.i` is not.
@@ -308,4 +308,65 @@ _The `dir` function in Python is a built-in function that returns a list of vali
   print(dir(num))
 
   # ['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'as_integer_ratio', 'bit_count', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']
+  ```
+
+<br>
+<br>
+<br>
+
+## Random Remarks
+
+- If the same attribute name occurs in both an instance and in a class, then attribute lookup prioritizes the instance:
+
+  ```python
+  class WareHouse:
+      region = 'West'
+
+  first_property = WareHouse()
+  print(f'first_property is a {first_property.__class__.__name__} in {first_property.region}')
+
+  second_propery = WareHouse()
+  second_propery.region = 'North'
+  print(f'second_propery is a {second_propery.__class__.__name__} in {second_propery.region}')
+
+  ```
+
+- Often, the first argument of a method is called self. **_This is nothing more than a convention: the name self has absolutely no special meaning to Python_**. Note, however, that by not following the convention your code may be less readable to other Python programmers, and it is also conceivable that a class browser program might be written that relies upon such a convention.
+
+- Any function object that is a class attribute defines a method for instances of that class. It is not necessary that the function definition is textually enclosed in the class definition: assigning a function object to a local variable in the class is also ok. For example:
+
+  ```python
+  def written_outside_the_class():
+  print("Printing something")
+
+  class NewsAgency:
+      printer = written_outside_the_class
+
+      printer()
+
+  fox_news = NewsAgency()
+
+  #>Printing something
+  ```
+
+  - Note that this practice usually only serves to confuse the reader of a program.
+
+* Methods may call other methods by using method attributes of the self argument:
+
+  ```python
+  class Elevator:
+  """Simulates an 2 floor elevator."""
+
+  def go_to_first_floor(self):
+      print("Reached first floor.")
+
+  def go_to_second_floor(self):
+      self.go_to_first_floor()
+      print("Reached second floor.")
+
+  mitsubishi = Elevator()
+  mitsubishi.go_to_second_floor()
+
+  #>Reached first floor.
+  #>Reached second floor.
   ```

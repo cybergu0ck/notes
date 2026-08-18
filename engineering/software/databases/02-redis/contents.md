@@ -1,4 +1,4 @@
-[← Back to databases](../databases)
+[← Back to databases](../contents)
 
 # 02-redis
 
@@ -11,6 +11,8 @@
 - [03-lists.md](03-lists.md)
 
 - [04-sets.md](04-sets.md)
+
+- [contents.md](contents.md)
 
 - [general.md](general.md)
 

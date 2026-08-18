@@ -1,13 +1,11 @@
-[← Back to python](../python)
+[← Back to python](../contents)
 
 # control-flow
 
-## Files
+- [conditionals](conditionals.md)
 
-- [04-py-decorators.md](04-py-decorators.md)
+- [loops](loops.md)
 
-- [conditionals.md](conditionals.md)
+- [functions](functions.md)
 
-- [functions.md](functions.md)
-
-- [loops.md](loops.md)
+- [decorators](decorators.md)

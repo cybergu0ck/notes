@@ -1,10 +1,12 @@
-[← Back to design-patterns](../design-patterns)
+[← Back to design-patterns](../contents)
 
 # behavioural
 
 ## Files
 
 - [command.md](command.md)
+
+- [contents.md](contents.md)
 
 - [observer.md](observer.md)
 

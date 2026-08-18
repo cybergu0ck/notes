@@ -1,25 +1,17 @@
-[← Back to programming](../programming)
+[← Back to programming](../contents)
 
 # python
 
-## Files
+- [fundamentals](fundamentals/contents)
 
-- [contents.md](contents.md)
+- [datatypes](datatypes/contents)
 
-## Subdirectories
+- [control-flow](control-flow/contents)
 
-- [04-object-oriented-programming](04-object-oriented-programming/04-object-oriented-programming)
+- [oops](oops/contents)
 
-- [05-exception-handling](05-exception-handling/05-exception-handling)
+- [modules](modules/contents)
 
-- [06-file-handling](06-file-handling/06-file-handling)
+- [exception-handling](exception-handling/contents)
 
-- [07-modules](07-modules/07-modules)
-
-- [control-flow](control-flow/control-flow)
-
-- [datatypes](datatypes/datatypes)
-
-- [fundamentals](fundamentals/fundamentals)
-
-- [z-misc](z-misc/z-misc)
+- [file-handling](file-handling/contents)

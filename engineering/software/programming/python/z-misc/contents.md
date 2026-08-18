@@ -1,8 +1,10 @@
-[← Back to python](../python)
+[← Back to python](../contents)
 
 # z-misc
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [functions-as-i-go.md](functions-as-i-go.md)
 

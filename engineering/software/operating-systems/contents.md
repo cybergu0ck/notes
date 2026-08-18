@@ -1,6 +1,10 @@
-[← Back to software](../software)
+[← Back to software](../contents)
 
 # operating-systems
+
+## Files
+
+- [contents.md](contents.md)
 
 ## Subdirectories
 

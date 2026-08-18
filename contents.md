@@ -4,6 +4,8 @@
 
 - [README.md](README.md)
 
+- [contents.md](contents.md)
+
 ## Subdirectories
 
 - [architecture](architecture/architecture)

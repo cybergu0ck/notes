@@ -1,8 +1,10 @@
-[← Back to z-miscellaneous](../z-miscellaneous)
+[← Back to z-miscellaneous](../contents)
 
 # excel
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [count-color.md](count-color.md)
 

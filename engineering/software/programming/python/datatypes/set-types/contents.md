@@ -1,7 +1,5 @@
-[← Back to datatypes](../datatypes)
+[← Back to datatypes](../contents)
 
 # set-types
 
-## Files
-
-- [sets.md](sets.md)
+- [sets](sets.md)

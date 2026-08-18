@@ -1,8 +1,10 @@
-[← Back to software](../software)
+[← Back to software](../contents)
 
 # z-miscellaneous
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [z-miscellaneous-contents.md](z-miscellaneous-contents.md)
 

@@ -1,8 +1,10 @@
-[← Back to linguistics](../linguistics)
+[← Back to linguistics](../contents)
 
 # espanol
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [espanol-contents.md](espanol-contents.md)
 

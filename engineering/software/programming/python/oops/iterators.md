@@ -8,6 +8,7 @@ for element in [1, 2, 3]:
 #>2
 #>3
 ```
+
 <br/>
 
 The use of iterators pervades and unifies Python. Behind the scenes, the [`for`](https://docs.python.org/3/reference/compound_stmts.html#for) statement calls [`iter()`](https://docs.python.org/3/library/functions.html#iter "iter") on the container object. The function returns an iterator object that defines the method [`__next__()`](https://docs.python.org/3/library/stdtypes.html#iterator.__next__ "iterator.__next__") which accesses elements in the container one at a time. When there are no more elements, [`__next__()`](https://docs.python.org/3/library/stdtypes.html#iterator.__next__ "iterator.__next__") raises a [`StopIteration`](https://docs.python.org/3/library/exceptions.html#StopIteration "StopIteration") exception which tells the `for` loop to terminate. You can call the [`__next__()`](https://docs.python.org/3/library/stdtypes.html#iterator.__next__ "iterator.__next__") method using the [`next()`](https://docs.python.org/3/library/functions.html#next "next") built-in function; this example shows how it all works:
@@ -38,10 +39,9 @@ print(next(my_iterator))  # This line raises the error
 # StopIteration
 ```
 
-
 <br/>
 
-> Having seen the mechanics behind the iterator protocol, it is easy to add iterator behavior to your classes. Define an __iter__() method which returns an object with a __next__() method. If the class defines __next__(), then __iter__() can just return self:
+> Having seen the mechanics behind the iterator protocol, it is easy to add iterator behavior to your classes. Define an **iter**() method which returns an object with a **next**() method. If the class defines **next**(), then **iter**() can just return self:
 
 ```python
 class Reverse:

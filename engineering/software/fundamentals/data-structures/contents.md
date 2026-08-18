@@ -1,6 +1,10 @@
-[← Back to fundamentals](../fundamentals)
+[← Back to fundamentals](../contents)
 
 # data-structures
+
+## Files
+
+- [contents.md](contents.md)
 
 ## Subdirectories
 

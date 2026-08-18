@@ -1,8 +1,10 @@
-[← Back to notes](../notes)
+[← Back to notes](../contents)
 
 # linguistics
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [linguistics-contents.md](linguistics-contents.md)
 

@@ -1,4 +1,4 @@
-[← Back to operating-systems](../operating-systems)
+[← Back to operating-systems](../contents)
 
 # linux
 

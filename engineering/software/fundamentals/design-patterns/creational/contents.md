@@ -1,4 +1,4 @@
-[← Back to design-patterns](../design-patterns)
+[← Back to design-patterns](../contents)
 
 # creational
 
@@ -7,6 +7,8 @@
 - [abstract-factory.md](abstract-factory.md)
 
 - [builder.md](builder.md)
+
+- [contents.md](contents.md)
 
 - [factory-method.md](factory-method.md)
 

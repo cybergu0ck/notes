@@ -1,7 +1,5 @@
-[← Back to datatypes](../datatypes)
+[← Back to datatypes](../contents)
 
 # map-types
 
-## Files
-
-- [dict.md](dict.md)
+- [dict](dict.md)

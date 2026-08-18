@@ -1,4 +1,4 @@
-[← Back to javascript](../javascript)
+[← Back to javascript](../contents)
 
 # 04-js-oops
 
@@ -9,6 +9,8 @@
 - [02-js-protoype-and-inheritence.md](02-js-protoype-and-inheritence.md)
 
 - [03-js-factory-functions.md](03-js-factory-functions.md)
+
+- [contents.md](contents.md)
 
 - [js-class-inheritence.md](js-class-inheritence.md)
 

@@ -1,6 +1,10 @@
-[← Back to software](../software)
+[← Back to software](../contents)
 
 # fundamentals
+
+## Files
+
+- [contents.md](contents.md)
 
 ## Subdirectories
 

@@ -1,8 +1,10 @@
-[← Back to linux](../linux)
+[← Back to linux](../contents)
 
 # filesystem
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [directory-hierarchy.md](directory-hierarchy.md)
 

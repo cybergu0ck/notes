@@ -1,7 +1,9 @@
-[← Back to linux](../linux)
+[← Back to linux](../contents)
 
 # scripting
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [zsh.md](zsh.md)

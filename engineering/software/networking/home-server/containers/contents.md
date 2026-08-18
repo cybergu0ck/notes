@@ -1,8 +1,10 @@
-[← Back to home-server](../home-server)
+[← Back to home-server](../contents)
 
 # containers
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [dashy.md](dashy.md)
 

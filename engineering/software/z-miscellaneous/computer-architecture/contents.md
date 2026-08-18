@@ -1,10 +1,12 @@
-[← Back to z-miscellaneous](../z-miscellaneous)
+[← Back to z-miscellaneous](../contents)
 
 # computer-architecture
 
 ## Files
 
 - [computer-architecture-contents.md](computer-architecture-contents.md)
+
+- [contents.md](contents.md)
 
 ## Subdirectories
 

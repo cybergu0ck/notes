@@ -1,6 +1,10 @@
-[← Back to notes](../notes)
+[← Back to notes](../contents)
 
 # architecture
+
+## Files
+
+- [contents.md](contents.md)
 
 ## Subdirectories
 

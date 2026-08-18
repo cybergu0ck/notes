@@ -1,15 +1,11 @@
-[← Back to python](../python)
+[← Back to python](../contents)
 
 # fundamentals
 
-## Files
+- [introduction](introduction.md)
 
-- [fundamentals-contents.md](fundamentals-contents.md)
+- [variables](variables.md)
 
-- [introduction.md](introduction.md)
+- [scope](scope.md)
 
-- [operators.md](operators.md)
-
-- [scope.md](scope.md)
-
-- [variables.md](variables.md)
+- [operators](operators.md)

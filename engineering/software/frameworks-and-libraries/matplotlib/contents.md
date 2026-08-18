@@ -1,8 +1,10 @@
-[← Back to frameworks-and-libraries](../frameworks-and-libraries)
+[← Back to frameworks-and-libraries](../contents)
 
 # matplotlib
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [figure.md](figure.md)
 

@@ -1,8 +1,10 @@
-[← Back to notes](../notes)
+[← Back to notes](../contents)
 
 # mathematics
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [mathematics-contents.md](mathematics-contents.md)
 

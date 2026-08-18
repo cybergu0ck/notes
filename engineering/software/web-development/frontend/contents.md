@@ -1,10 +1,12 @@
-[← Back to web-development](../web-development)
+[← Back to web-development](../contents)
 
 # frontend
 
 ## Files
 
 - [browser-stuff.md](browser-stuff.md)
+
+- [contents.md](contents.md)
 
 - [frontend-contents.md](frontend-contents.md)
 

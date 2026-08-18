@@ -1,7 +1,5 @@
-[← Back to datatypes](../datatypes)
+[← Back to datatypes](../contents)
 
 # numeric-types
 
-## Files
-
-- [01-numeric-type.md](01-numeric-type.md)
+- [numbers](numbers.md)

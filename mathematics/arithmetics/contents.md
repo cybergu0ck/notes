@@ -1,10 +1,12 @@
-[← Back to mathematics](../mathematics)
+[← Back to mathematics](../contents)
 
 # arithmetics
 
 ## Files
 
 - [arithmetics-contents.md](arithmetics-contents.md)
+
+- [contents.md](contents.md)
 
 - [division.md](division.md)
 

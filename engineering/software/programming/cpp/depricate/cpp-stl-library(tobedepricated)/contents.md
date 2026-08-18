@@ -1,8 +1,10 @@
-[← Back to depricate](../depricate)
+[← Back to depricate](../contents)
 
 # cpp-stl-library(tobedepricated)
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [cpp-stl-algorithms.md](cpp-stl-algorithms.md)
 

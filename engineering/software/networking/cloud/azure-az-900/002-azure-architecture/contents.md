@@ -1,4 +1,4 @@
-[← Back to azure-az-900](../azure-az-900)
+[← Back to azure-az-900](../contents)
 
 # 002-azure-architecture
 
@@ -7,3 +7,5 @@
 - [001-core-architectural-components-of-azure.md](001-core-architectural-components-of-azure.md)
 
 - [002-azure-compute-and-networking-services.md](002-azure-compute-and-networking-services.md)
+
+- [contents.md](contents.md)

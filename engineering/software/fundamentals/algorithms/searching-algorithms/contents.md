@@ -1,8 +1,10 @@
-[← Back to algorithms](../algorithms)
+[← Back to algorithms](../contents)
 
 # searching-algorithms
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [depth-first-search.md](depth-first-search.md)
 

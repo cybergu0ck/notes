@@ -1,8 +1,10 @@
-[← Back to software](../software)
+[← Back to software](../contents)
 
 # devtools
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [gimp.md](gimp.md)
 

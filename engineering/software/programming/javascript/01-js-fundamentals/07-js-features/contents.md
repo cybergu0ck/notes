@@ -1,8 +1,10 @@
-[← Back to 01-js-fundamentals](../01-js-fundamentals)
+[← Back to 01-js-fundamentals](../contents)
 
 # 07-js-features
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [destructuring.md](destructuring.md)
 

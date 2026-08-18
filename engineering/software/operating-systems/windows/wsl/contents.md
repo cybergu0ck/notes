@@ -1,7 +1,9 @@
-[← Back to windows](../windows)
+[← Back to windows](../contents)
 
 # wsl
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [wsl.md](wsl.md)

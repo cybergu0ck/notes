@@ -1,10 +1,12 @@
-[← Back to networking](../networking)
+[← Back to networking](../contents)
 
 # home-server
 
 ## Files
 
 - [about-icons.md](about-icons.md)
+
+- [contents.md](contents.md)
 
 - [docker.md](docker.md)
 

@@ -1,4 +1,4 @@
-[← Back to javascript](../javascript)
+[← Back to javascript](../contents)
 
 # 03-js-control-flow
 
@@ -15,3 +15,5 @@
 - [05-js-asynchronous-promise.md](05-js-asynchronous-promise.md)
 
 - [06-js-asynchronous-async-await.md](06-js-asynchronous-async-await.md)
+
+- [contents.md](contents.md)

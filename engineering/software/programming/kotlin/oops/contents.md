@@ -1,10 +1,12 @@
-[← Back to kotlin](../kotlin)
+[← Back to kotlin](../contents)
 
 # oops
 
 ## Files
 
 - [class.md](class.md)
+
+- [contents.md](contents.md)
 
 - [inheritance.md](inheritance.md)
 

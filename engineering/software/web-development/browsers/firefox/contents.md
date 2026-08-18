@@ -1,8 +1,10 @@
-[← Back to browsers](../browsers)
+[← Back to browsers](../contents)
 
 # firefox
 
 ## Files
+
+- [contents.md](contents.md)
 
 - [firefox-contents.md](firefox-contents.md)
 

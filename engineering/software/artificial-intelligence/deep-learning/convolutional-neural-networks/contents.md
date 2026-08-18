@@ -1,4 +1,4 @@
-[← Back to deep-learning](../deep-learning)
+[← Back to deep-learning](../contents)
 
 # convolutional-neural-networks
 
@@ -7,3 +7,5 @@
 - [cnn-architectures.md](cnn-architectures.md)
 
 - [cnn-fundamentals.md](cnn-fundamentals.md)
+
+- [contents.md](contents.md)

@@ -1,4 +1,4 @@
-[← Back to data-structures](../data-structures)
+[← Back to data-structures](../contents)
 
 # trees
 
@@ -13,5 +13,7 @@
 - [05-trie.md](05-trie.md)
 
 - [binary-tree.md](binary-tree.md)
+
+- [contents.md](contents.md)
 
 - [trie.md](trie.md)
