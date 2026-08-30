@@ -2,32 +2,22 @@
 
 # cpp
 
-## Files
+- [fundamentals](fundamentals/contents.md)
 
-- [contents.md](contents.md)
+- [data-types](data-types/contents.md)
 
-- [conventions.md](conventions.md)
+- [control-flow](control-flow/contents.md)
 
-## Subdirectories
+- [resource-management](resource-management/contents.md)
 
-- [control-flow](control-flow/control-flow)
+- [oops](oops/contents.md)
 
-- [data-types](data-types/data-types)
+- [stl](stl/contents.md)
 
-- [depricate](depricate/depricate)
+- [exception-handling](exception-handling/contents.md)
 
-- [exception-handling](exception-handling/exception-handling)
+- [generic-programming](generic-programming/contents.md)
 
-- [fundamentals](fundamentals/fundamentals)
+- [optimisation](optimisation/contents.md)
 
-- [generic-programming](generic-programming/generic-programming)
-
-- [io](io/io)
-
-- [oops](oops/oops)
-
-- [optimisation](optimisation/optimisation)
-
-- [resource-management](resource-management/resource-management)
-
-- [stl](stl/stl)
+- [io](io/contents.md)

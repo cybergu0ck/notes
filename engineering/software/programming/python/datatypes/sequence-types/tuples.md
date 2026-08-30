@@ -20,11 +20,6 @@
 
 
 
-<br/>
-<br/>
-<br/>
-<br/>
-
 # Tuples
 
 One among the 4 built in data types to store collection of data. (Other 3 are set, list and dict)
