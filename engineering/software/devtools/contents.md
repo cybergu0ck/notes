@@ -2,22 +2,16 @@
 
 # devtools
 
-## Files
+- [version-control](version-control/contents.md)
 
-- [contents.md](contents.md)
+- [code-editors](code-editors/contents.md)
 
-- [gimp.md](gimp.md)
+- [browsers](browsers/contents.md)
 
-- [i3wm.md](i3wm.md)
+- [build-tools](build-tools/contents.md)
 
-## Subdirectories
+- [documentation-tools](documentation-tools/contents.md)
 
-- [browsers](browsers/browsers)
+- [gimp](gimp.md)
 
-- [build-tools](build-tools/build-tools)
-
-- [code-editors](code-editors/code-editors)
-
-- [documentation-tools](documentation-tools/documentation-tools)
-
-- [version-control](version-control/version-control)
+- [i3wm](i3wm.md)
