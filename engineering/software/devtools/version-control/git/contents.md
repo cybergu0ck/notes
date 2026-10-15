@@ -2,26 +2,22 @@
 
 # git
 
-## Files
+- [fundamentals](fundamentals.md)
 
-- [01-fundamentals.md](01-fundamentals.md)
+- [repositories](repositories.md)
 
-- [02-repositories.md](02-repositories.md)
+- [changes](changes.md)
 
-- [03-recording-changes.md](03-recording-changes.md)
+- [remote](remote.md)
 
-- [04-remote-repositories.md](04-remote-repositories.md)
+- [versions](versions.md)
 
-- [05-versions.md](05-versions.md)
+- [branching](branching.md)
 
-- [06-branching.md](06-branching.md)
+- [undoing](undoing.md)
 
-- [07-undoing-changes.md](07-undoing-changes.md)
+- [merging](merging.md)
 
-- [08-merging.md](08-merging.md)
+- [collaboration](collaboration.md)
 
-- [09-collaborative-work.md](09-collaborative-work.md)
-
-- [10-customizations.md](10-customizations.md)
-
-- [contents.md](contents.md)
+- [customizations](customizations.md)

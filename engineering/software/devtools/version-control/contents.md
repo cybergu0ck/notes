@@ -2,14 +2,8 @@
 
 # version-control
 
-## Files
+- [fundamentals](fundamentals.md)
 
-- [contents.md](contents.md)
+- [git](git/contents.md)
 
-- [version-control-fundamentals.md](version-control-fundamentals.md)
-
-## Subdirectories
-
-- [git](git/git)
-
-- [github](github/github)
+- [github](github/contents.md)
